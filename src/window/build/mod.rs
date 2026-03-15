@@ -48,8 +48,7 @@ use super::preferences::{
 use super::tools::{register_open_tools_action, ToolsPageState};
 use crate::logging::log_info;
 use crate::support::runtime::{
-    git_network_operations_available, host_command_execution_available,
-    log_runtime_capabilities_once,
+    git_network_operations_available, log_runtime_capabilities_once,
 };
 
 const UI_SRC: &str = include_str!(concat!(env!("OUT_DIR"), "/window.ui"));
@@ -94,9 +93,7 @@ fn register_platform_log_actions(
 }
 
 fn initialize_backend_preferences(widgets: &WindowWidgets, preferences: &Preferences) {
-    widgets
-        .backend_preferences
-        .set_visible(host_command_execution_available());
+    widgets.backend_preferences.set_visible(true);
     initialize_backend_row(&widgets.backend_row, &widgets.pass_command_row, preferences);
 }
 

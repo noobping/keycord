@@ -3,6 +3,7 @@ use crate::password::generation::{PasswordGenerationControls, PasswordGeneration
 use crate::preferences::{BackendKind, Preferences, UsernameFallbackMode};
 use crate::store::management::{rebuild_store_list, StoreRecipientsPageState};
 use crate::support::actions::register_window_action;
+use crate::support::runtime::host_command_execution_available;
 use crate::support::ui::push_navigation_page_if_needed;
 use crate::window::navigation::{
     show_secondary_page_chrome, HasWindowChrome, WindowPageState, APP_WINDOW_TITLE,
@@ -19,11 +20,13 @@ fn sync_backend_preferences_rows(
     pass_row: &EntryRow,
     preferences: &Preferences,
 ) {
+    let host_available = host_command_execution_available();
     let backend = preferences.backend_kind();
     if backend_row.selected() != backend.combo_position() {
         backend_row.set_selected(backend.combo_position());
     }
-    pass_row.set_visible(preferences.uses_host_command_backend());
+    backend_row.set_sensitive(host_available);
+    pass_row.set_visible(host_available && preferences.uses_host_command_backend());
 }
 
 fn backend_row_model() -> adw::gtk::StringList {
@@ -76,6 +79,13 @@ pub fn connect_backend_row(
     let pass_row = pass_row.clone();
     let on_changed = Rc::new(on_changed);
     backend_row.connect_selected_notify(move |row| {
+        if !host_command_execution_available() {
+            pass_row.set_visible(false);
+            row.set_selected(preferences.backend_kind().combo_position());
+            row.set_sensitive(false);
+            return;
+        }
+
         let selected_backend = BackendKind::from_combo_position(row.selected());
         let current_backend = preferences.backend_kind();
         if selected_backend == current_backend {
