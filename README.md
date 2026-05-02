@@ -1,7 +1,7 @@
 # Keycord
 
 ![License](https://img.shields.io/badge/license-GPLv3+-blue.svg)
-[![Flathub version](https://img.shields.io/flathub/v/io.github.noobping.keycord)](https://flathub.org/apps/details/io.github.noobping.keycord)
+[![Flathub version](https://img.shields.io/flathub/v/io.github.noobping.keycord?color=blue)](https://flathub.org/apps/details/io.github.noobping.keycord)
 [![Linux](https://github.com/noobping/keycord/actions/workflows/linux.yml/badge.svg)](https://github.com/noobping/keycord/actions/workflows/linux.yml)
 [![Windows](https://github.com/noobping/keycord/actions/workflows/win.yml/badge.svg)](https://github.com/noobping/keycord/actions/workflows/win.yml)
 
