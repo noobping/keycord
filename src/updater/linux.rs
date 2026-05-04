@@ -2,7 +2,10 @@ use super::common::DownloadedUpdate;
 use super::logic::{select_update_release_by, ReleaseCandidate, SelectedRelease};
 use crate::i18n::gettext;
 use crate::logging::log_error;
-use crate::setup::{install_locally, is_current_executable_installed_locally};
+use crate::setup::{
+    install_locally, installed_local_binary_path, is_current_executable_installed_locally,
+};
+use adw::gio::resources_register_include;
 use adw::glib;
 use adw::prelude::*;
 use adw::AlertDialog;
@@ -112,7 +115,7 @@ fn auto_install_cleanup_dir(args: &[OsString]) -> Option<PathBuf> {
 fn run_auto_install(cleanup_dir: &Path) -> glib::ExitCode {
     crate::i18n::init();
 
-    let result = auto_install_update(cleanup_dir);
+    let result = register_auto_install_resources().and_then(|()| auto_install_update(cleanup_dir));
     match result {
         Ok(()) => 0.into(),
         Err(error) => {
@@ -122,6 +125,12 @@ fn run_auto_install(cleanup_dir: &Path) -> glib::ExitCode {
             1.into()
         }
     }
+}
+
+fn register_auto_install_resources() -> Result<(), String> {
+    resources_register_include!("compiled.gresource")
+        .map(|_| ())
+        .map_err(|error| format!("Failed to register resources for Linux update install: {error}"))
 }
 
 fn auto_install_update(cleanup_dir: &Path) -> Result<(), String> {
@@ -145,7 +154,22 @@ fn auto_install_update(cleanup_dir: &Path) -> Result<(), String> {
             cleanup_dir.display()
         );
     }
+    restart_installed_app();
     Ok(())
+}
+
+fn restart_installed_app() {
+    let Some(installed_exe) = installed_local_binary_path() else {
+        eprintln!("Keycord update restart skipped: no local executable directory found.");
+        return;
+    };
+
+    if let Err(error) = process::Command::new(&installed_exe).spawn() {
+        eprintln!(
+            "Keycord update restart failed for '{}': {error}",
+            installed_exe.display()
+        );
+    }
 }
 
 fn release_arch() -> Option<&'static str> {
@@ -267,8 +291,8 @@ fn show_auto_install_error_dialog(error: &str) {
 #[cfg(test)]
 mod tests {
     use super::{
-        auto_install_cleanup_dir, create_update_dir_in, linux_release_asset_name, release_arch,
-        UpdateStagingRoot, UPDATE_STAGING_DIR_MODE,
+        auto_install_cleanup_dir, create_update_dir_in, linux_release_asset_name,
+        register_auto_install_resources, release_arch, UpdateStagingRoot, UPDATE_STAGING_DIR_MODE,
     };
     use std::ffi::OsString;
     use std::fs;
@@ -309,6 +333,19 @@ mod tests {
     fn non_auto_install_arguments_are_ignored() {
         let args = vec![OsString::from("keycord"), OsString::from("query")];
         assert!(auto_install_cleanup_dir(&args).is_none());
+    }
+
+    #[test]
+    fn auto_install_registers_embedded_resources() {
+        register_auto_install_resources().expect("register auto-install resources");
+        let icon_resource_path = format!(
+            "{}/scalable/apps/{}.svg",
+            env!("RESOURCE_ID"),
+            env!("APP_ID")
+        );
+
+        adw::gio::resources_lookup_data(&icon_resource_path, adw::gio::ResourceLookupFlags::NONE)
+            .expect("app icon resource should be available to local install");
     }
 
     #[test]

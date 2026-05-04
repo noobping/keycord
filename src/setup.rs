@@ -59,7 +59,7 @@ pub fn is_current_executable_installed_locally() -> bool {
     same_file_path(&current_exe, &installed_exe)
 }
 
-fn installed_local_binary_path() -> Option<PathBuf> {
+pub fn installed_local_binary_path() -> Option<PathBuf> {
     let Some(bin) = dirs_next::executable_dir() else {
         return None;
     };
