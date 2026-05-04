@@ -94,8 +94,8 @@ impl UsernameFallbackMode {
 #[serde(rename_all = "kebab-case")]
 pub enum PasswordListSortMode {
     Filename,
-    Hybrid,
     #[default]
+    Hybrid,
     StorePath,
 }
 
@@ -610,10 +610,10 @@ mod tests {
     }
 
     #[test]
-    fn password_list_sort_mode_defaults_to_store_path() {
+    fn password_list_sort_mode_defaults_to_hybrid() {
         assert_eq!(
             PasswordListSortMode::default(),
-            PasswordListSortMode::StorePath
+            PasswordListSortMode::Hybrid
         );
     }
 
@@ -670,10 +670,10 @@ mod tests {
     }
 
     #[test]
-    fn password_list_sort_mode_invalid_values_fall_back_to_store_path() {
+    fn password_list_sort_mode_invalid_values_fall_back_to_hybrid() {
         assert_eq!(
             PasswordListSortMode::from_stored("unexpected"),
-            PasswordListSortMode::StorePath
+            PasswordListSortMode::Hybrid
         );
     }
 
