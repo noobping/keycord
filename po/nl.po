@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: keycord 0.9.10\n"
-"PO-Revision-Date: 2026-05-02 14:00+0200\n"
+"Project-Id-Version: keycord 0.9.11\n"
+"PO-Revision-Date: 2026-05-04 14:41+0200\n"
 "Last-Translator: Codex\n"
 "Language-Team: none\n"
 "Language: nl\n"
@@ -287,6 +287,10 @@ msgstr "Mapspecifieke ontvangerbewerking toegevoegd voor .gpg-id-bestanden."
 #: data/metainfo.xml:83
 msgid "Added Git history inspection with commit verification details."
 msgstr "Git-geschiedenisinspectie toegevoegd met commitverificatiedetails."
+
+#: data/metainfo.xml:81
+msgid "Added hybrid sorting mode"
+msgstr "Hybride sorteermodus toegevoegd"
 
 #: src/password/page/mod.rs:601
 msgid "Added missing template fields."
@@ -2222,6 +2226,10 @@ msgstr "Herstel optionele Git-synchronisatie"
 msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
 msgstr ""
 "OTP-fout opgelost waarbij geldige geheimen onterecht ongeldig werden gemaakt."
+
+#: data/metainfo.xml:82
+msgid "Fixed permissions for smartcards"
+msgstr "Machtigingen voor smartcards hersteld"
 
 #: data/metainfo.xml:74
 msgid "Fixed the GNOME search provider."
