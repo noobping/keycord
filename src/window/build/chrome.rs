@@ -83,6 +83,10 @@ fn preferences_page_detail_widgets(widgets: &WindowWidgets) -> Vec<Widget> {
             .clone()
             .upcast(),
         widgets
+            .preferences_password_list_sort_hybrid_check
+            .clone()
+            .upcast(),
+        widgets
             .preferences_password_list_sort_store_path_check
             .clone()
             .upcast(),

@@ -417,6 +417,7 @@ fn refresh_open_preferences_state(state: &PreferencesActionState, settings: &Pre
     );
     sync_password_list_sort_checks(
         &state.password_list_sort_filename_check,
+        &state.password_list_sort_hybrid_check,
         &state.password_list_sort_store_path_check,
         settings.password_list_sort_mode(),
     );
@@ -491,6 +492,7 @@ pub struct PreferencesActionState {
     pub username_folder_check: CheckButton,
     pub username_filename_check: CheckButton,
     pub password_list_sort_filename_check: CheckButton,
+    pub password_list_sort_hybrid_check: CheckButton,
     pub password_list_sort_store_path_check: CheckButton,
     pub generator_controls: PasswordGenerationControls,
     pub stores_list: ListBox,
@@ -629,23 +631,27 @@ pub fn connect_username_fallback_autosave(
 
 fn sync_password_list_sort_checks(
     filename_check: &CheckButton,
+    hybrid_check: &CheckButton,
     store_path_check: &CheckButton,
     mode: PasswordListSortMode,
 ) {
-    let (filename_active, store_path_active) = password_list_sort_check_state(mode);
+    let (filename_active, hybrid_active, store_path_active) = password_list_sort_check_state(mode);
     filename_check.set_active(filename_active);
+    hybrid_check.set_active(hybrid_active);
     store_path_check.set_active(store_path_active);
 }
 
-const fn password_list_sort_check_state(mode: PasswordListSortMode) -> (bool, bool) {
+const fn password_list_sort_check_state(mode: PasswordListSortMode) -> (bool, bool, bool) {
     match mode {
-        PasswordListSortMode::Filename => (true, false),
-        PasswordListSortMode::StorePath => (false, true),
+        PasswordListSortMode::Filename => (true, false, false),
+        PasswordListSortMode::Hybrid => (false, true, false),
+        PasswordListSortMode::StorePath => (false, false, true),
     }
 }
 
 pub fn connect_password_list_sort_autosave(
     filename_check: &CheckButton,
+    hybrid_check: &CheckButton,
     store_path_check: &CheckButton,
     overlay: &ToastOverlay,
     window: &adw::ApplicationWindow,
@@ -653,6 +659,7 @@ pub fn connect_password_list_sort_autosave(
     let preferences = Preferences::new();
     sync_password_list_sort_checks(
         filename_check,
+        hybrid_check,
         store_path_check,
         preferences.password_list_sort_mode(),
     );
@@ -660,9 +667,11 @@ pub fn connect_password_list_sort_autosave(
     let syncing = Rc::new(Cell::new(false));
     for (button, mode) in [
         (filename_check.clone(), PasswordListSortMode::Filename),
+        (hybrid_check.clone(), PasswordListSortMode::Hybrid),
         (store_path_check.clone(), PasswordListSortMode::StorePath),
     ] {
         let filename_check = filename_check.clone();
+        let hybrid_check = hybrid_check.clone();
         let store_path_check = store_path_check.clone();
         let overlay = overlay.clone();
         let preferences = preferences.clone();
@@ -681,9 +690,19 @@ pub fn connect_password_list_sort_autosave(
             syncing.set(true);
             if let Err(err) = preferences.set_password_list_sort_mode(mode) {
                 toast_preferences_save_error(&overlay, "password list sort", &err);
-                sync_password_list_sort_checks(&filename_check, &store_path_check, stored);
+                sync_password_list_sort_checks(
+                    &filename_check,
+                    &hybrid_check,
+                    &store_path_check,
+                    stored,
+                );
             } else {
-                sync_password_list_sort_checks(&filename_check, &store_path_check, mode);
+                sync_password_list_sort_checks(
+                    &filename_check,
+                    &hybrid_check,
+                    &store_path_check,
+                    mode,
+                );
                 activate_widget_action(&window, "win.reload-password-list");
             }
             syncing.set(false);
@@ -780,11 +799,15 @@ mod tests {
     fn password_list_sort_sync_marks_only_the_selected_mode() {
         assert_eq!(
             password_list_sort_check_state(PasswordListSortMode::Filename),
-            (true, false)
+            (true, false, false)
+        );
+        assert_eq!(
+            password_list_sort_check_state(PasswordListSortMode::Hybrid),
+            (false, true, false)
         );
         assert_eq!(
             password_list_sort_check_state(PasswordListSortMode::StorePath),
-            (false, true)
+            (false, false, true)
         );
     }
 

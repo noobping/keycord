@@ -161,6 +161,7 @@ pub(in crate::window) struct WindowWidgets {
     pub(in crate::window) preferences_username_folder_check: CheckButton,
     pub(in crate::window) preferences_username_filename_check: CheckButton,
     pub(in crate::window) preferences_password_list_sort_filename_check: CheckButton,
+    pub(in crate::window) preferences_password_list_sort_hybrid_check: CheckButton,
     pub(in crate::window) preferences_password_list_sort_store_path_check: CheckButton,
     pub(in crate::window) password_stores: ListBox,
     pub(in crate::window) password_store_actions: ListBox,
@@ -213,6 +214,7 @@ pub(in crate::window) struct WindowWidgets {
     pub(in crate::window) preferences_username_filename_row: ActionRow,
     pub(in crate::window) preferences_username_folder_row: ActionRow,
     pub(in crate::window) preferences_password_list_sort_filename_row: ActionRow,
+    pub(in crate::window) preferences_password_list_sort_hybrid_row: ActionRow,
     pub(in crate::window) preferences_password_list_sort_store_path_row: ActionRow,
     pub(in crate::window) preferences_password_generator_length_row: ActionRow,
     pub(in crate::window) preferences_password_generator_min_lowercase_row: ActionRow,
@@ -409,6 +411,9 @@ impl WindowWidgets {
             preferences_password_list_sort_filename_check: required!(
                 "preferences_password_list_sort_filename_check"
             ),
+            preferences_password_list_sort_hybrid_check: required!(
+                "preferences_password_list_sort_hybrid_check"
+            ),
             preferences_password_list_sort_store_path_check: required!(
                 "preferences_password_list_sort_store_path_check"
             ),
@@ -482,6 +487,9 @@ impl WindowWidgets {
             preferences_username_folder_row: required!("preferences_username_folder_row"),
             preferences_password_list_sort_filename_row: required!(
                 "preferences_password_list_sort_filename_row"
+            ),
+            preferences_password_list_sort_hybrid_row: required!(
+                "preferences_password_list_sort_hybrid_row"
             ),
             preferences_password_list_sort_store_path_row: required!(
                 "preferences_password_list_sort_store_path_row"

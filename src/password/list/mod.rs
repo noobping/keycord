@@ -248,7 +248,9 @@ pub fn load_passwords_async(
     let settings = Preferences::new();
     prune_missing_store_dirs(&settings);
     let has_store_dirs = !settings.stores().is_empty();
-    let sort_mode = settings.password_list_sort_mode();
+    let sort_mode = settings
+        .password_list_sort_mode()
+        .render_mode(password_list_search_is_active(list));
     let store_labels = Rc::new(shortened_store_label_map(&settings.store_roots()));
     if let Some(controller) = search_controller_for_list(list) {
         controller.begin_reload(has_store_dirs);
@@ -273,7 +275,7 @@ pub fn load_passwords_async(
     let should_show_list_actions_for_disconnect = should_show_list_actions.clone();
     spawn_result_task(
         move || {
-            collect_all_password_items_with_options(collect_items_options(
+            let mut items = collect_all_password_items_with_options(collect_items_options(
                 show_hidden,
                 show_duplicates,
             ))
@@ -283,7 +285,9 @@ pub fn load_passwords_async(
                 let readable = password_entry_is_readable(&item.store_path, &label);
                 (item, readable)
             })
-            .collect::<Vec<_>>()
+            .collect::<Vec<_>>();
+            sort_password_list_items(&mut items, sort_mode);
+            items
         },
         move |items| {
             if !password_list_render_cycle_is_current(&list_clone, render_generation) {
@@ -446,7 +450,9 @@ fn build_password_list_rows(
                 depth: 0,
             })
             .collect(),
-        PasswordListSortMode::StorePath => build_store_path_password_list_rows(items),
+        PasswordListSortMode::Hybrid | PasswordListSortMode::StorePath => {
+            build_store_path_password_list_rows(items)
+        }
     }
 }
 
@@ -595,11 +601,38 @@ const fn should_append_clear_search_action_row(has_password_rows: bool) -> bool 
     has_password_rows
 }
 
+fn sort_password_list_items(items: &mut [(PassEntry, bool)], sort_mode: PasswordListSortMode) {
+    items.sort_by(|(left, _), (right, _)| match sort_mode {
+        PasswordListSortMode::Filename => left
+            .basename
+            .cmp(&right.basename)
+            .then_with(|| left.store_path.cmp(&right.store_path))
+            .then_with(|| left.relative_path.cmp(&right.relative_path)),
+        PasswordListSortMode::Hybrid | PasswordListSortMode::StorePath => left
+            .store_path
+            .cmp(&right.store_path)
+            .then_with(|| left.relative_path.cmp(&right.relative_path))
+            .then_with(|| left.basename.cmp(&right.basename)),
+    });
+}
+
 const fn collect_items_options(show_hidden: bool, show_duplicates: bool) -> CollectItemsOptions {
     CollectItemsOptions {
         show_hidden,
         show_duplicates,
     }
+}
+
+fn password_list_search_is_active(list: &ListBox) -> bool {
+    search_controller_for_list(list).is_some_and(|controller| !controller.query_is_empty())
+}
+
+const fn password_list_search_change_requires_reload(
+    mode: PasswordListSortMode,
+    was_empty: bool,
+    is_empty: bool,
+) -> bool {
+    matches!(mode, PasswordListSortMode::Hybrid) && was_empty != is_empty
 }
 
 pub fn setup_search_filter(
@@ -627,7 +660,21 @@ pub fn setup_search_filter(
     let controller_for_entry = controller;
     let list_for_entry = list.clone();
     search_entry.connect_search_changed(move |entry| {
+        let was_empty = controller_for_entry.query_is_empty();
         controller_for_entry.update_query(entry.text().as_str());
+        let is_empty = controller_for_entry.query_is_empty();
+        if was_empty != is_empty
+            && password_list_search_change_requires_reload(
+                Preferences::new().password_list_sort_mode(),
+                was_empty,
+                is_empty,
+            )
+            && list_for_entry
+                .activate_action("win.reload-password-list", None)
+                .is_ok()
+        {
+            return;
+        }
         controller_for_entry.refresh_row_visibility(&list_for_entry);
         controller_for_entry.start_indexing_if_needed(&list_for_entry);
         list_for_entry.invalidate_filter();
@@ -932,8 +979,9 @@ mod tests {
     use super::{
         build_password_list_rows, collect_items_options, list_action_visibility,
         next_password_list_render_generation, password_list_folder_segments,
-        selected_pass_file_shortcut_action, should_append_new_password_action_row,
-        should_show_root_git_button, should_show_root_store_button, GitAvailability,
+        password_list_search_change_requires_reload, selected_pass_file_shortcut_action,
+        should_append_new_password_action_row, should_show_root_git_button,
+        should_show_root_store_button, sort_password_list_items, GitAvailability,
         ListActionContext, ListActionVisibility, ListActionsMode, ListContents,
         RenderedPasswordListRow, StoreSetup, Visibility,
     };
@@ -1189,6 +1237,99 @@ mod tests {
                 },
             ]
         );
+    }
+
+    #[test]
+    fn hybrid_sort_rows_use_folder_rendering() {
+        let rows = build_password_list_rows(
+            vec![
+                (PassEntry::from_label("/tmp/personal", "github"), true),
+                (PassEntry::from_label("/tmp/personal", "work/email"), true),
+            ],
+            PasswordListSortMode::Hybrid,
+        );
+
+        assert_eq!(
+            rows,
+            vec![
+                RenderedPasswordListRow::Folder {
+                    store_path: "/tmp/personal".to_string(),
+                    folder_path: "work".to_string(),
+                    depth: 0,
+                },
+                RenderedPasswordListRow::Entry {
+                    item: PassEntry::from_label("/tmp/personal", "work/email"),
+                    readable: true,
+                    depth: 1,
+                },
+                RenderedPasswordListRow::Entry {
+                    item: PassEntry::from_label("/tmp/personal", "github"),
+                    readable: true,
+                    depth: 0,
+                },
+            ]
+        );
+    }
+
+    #[test]
+    fn password_list_items_can_be_sorted_by_filename_for_search_rendering() {
+        let mut items = vec![
+            (PassEntry::from_label("/tmp/work", "zulu/github"), true),
+            (
+                PassEntry::from_label("/tmp/personal", "accounts/email"),
+                true,
+            ),
+            (PassEntry::from_label("/tmp/archive", "alpha/github"), true),
+            (PassEntry::from_label("/tmp/personal", "github"), true),
+        ];
+
+        sort_password_list_items(&mut items, PasswordListSortMode::Filename);
+
+        let labels = items
+            .into_iter()
+            .map(|(item, _)| {
+                let label = item.label();
+                (item.store_path, label)
+            })
+            .collect::<Vec<_>>();
+        assert_eq!(
+            labels,
+            vec![
+                ("/tmp/personal".to_string(), "accounts/email".to_string()),
+                ("/tmp/archive".to_string(), "alpha/github".to_string()),
+                ("/tmp/personal".to_string(), "github".to_string()),
+                ("/tmp/work".to_string(), "zulu/github".to_string()),
+            ]
+        );
+    }
+
+    #[test]
+    fn hybrid_search_transitions_require_reload() {
+        assert!(password_list_search_change_requires_reload(
+            PasswordListSortMode::Hybrid,
+            true,
+            false
+        ));
+        assert!(password_list_search_change_requires_reload(
+            PasswordListSortMode::Hybrid,
+            false,
+            true
+        ));
+        assert!(!password_list_search_change_requires_reload(
+            PasswordListSortMode::Hybrid,
+            true,
+            true
+        ));
+        assert!(!password_list_search_change_requires_reload(
+            PasswordListSortMode::Filename,
+            true,
+            false
+        ));
+        assert!(!password_list_search_change_requires_reload(
+            PasswordListSortMode::StorePath,
+            false,
+            true
+        ));
     }
 
     #[test]

@@ -94,6 +94,7 @@ impl UsernameFallbackMode {
 #[serde(rename_all = "kebab-case")]
 pub enum PasswordListSortMode {
     Filename,
+    Hybrid,
     #[default]
     StorePath,
 }
@@ -102,6 +103,7 @@ impl PasswordListSortMode {
     pub const fn stored_value(self) -> &'static str {
         match self {
             Self::Filename => "filename",
+            Self::Hybrid => "hybrid",
             Self::StorePath => "store-path",
         }
     }
@@ -109,8 +111,17 @@ impl PasswordListSortMode {
     pub fn from_stored(value: &str) -> Self {
         match value.trim().to_ascii_lowercase().as_str() {
             "filename" | "file" | "name" => Self::Filename,
+            "hybrid" | "mixed" => Self::Hybrid,
             "store-path" | "store" | "path" | "folder" | "folders" => Self::StorePath,
             _ => Self::default(),
+        }
+    }
+
+    pub const fn render_mode(self, search_active: bool) -> Self {
+        match (self, search_active) {
+            (Self::Hybrid, true) => Self::Filename,
+            (Self::Hybrid, false) => Self::StorePath,
+            _ => self,
         }
     }
 }
@@ -609,13 +620,38 @@ mod tests {
     #[test]
     fn password_list_sort_mode_storage_accepts_current_names() {
         assert_eq!(PasswordListSortMode::Filename.stored_value(), "filename");
+        assert_eq!(PasswordListSortMode::Hybrid.stored_value(), "hybrid");
         assert_eq!(PasswordListSortMode::StorePath.stored_value(), "store-path");
         assert_eq!(
             PasswordListSortMode::from_stored("filename"),
             PasswordListSortMode::Filename
         );
         assert_eq!(
+            PasswordListSortMode::from_stored("hybrid"),
+            PasswordListSortMode::Hybrid
+        );
+        assert_eq!(
             PasswordListSortMode::from_stored("store-path"),
+            PasswordListSortMode::StorePath
+        );
+    }
+
+    #[test]
+    fn password_list_sort_mode_hybrid_renders_by_context() {
+        assert_eq!(
+            PasswordListSortMode::Hybrid.render_mode(false),
+            PasswordListSortMode::StorePath
+        );
+        assert_eq!(
+            PasswordListSortMode::Hybrid.render_mode(true),
+            PasswordListSortMode::Filename
+        );
+        assert_eq!(
+            PasswordListSortMode::Filename.render_mode(true),
+            PasswordListSortMode::Filename
+        );
+        assert_eq!(
+            PasswordListSortMode::StorePath.render_mode(true),
             PasswordListSortMode::StorePath
         );
     }

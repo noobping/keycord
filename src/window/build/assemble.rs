@@ -155,6 +155,7 @@ pub(super) fn assemble_preferences_page(
     );
     connect_password_list_sort_autosave(
         &widgets.preferences_password_list_sort_filename_check,
+        &widgets.preferences_password_list_sort_hybrid_check,
         &widgets.preferences_password_list_sort_store_path_check,
         &widgets.toast_overlay,
         &widgets.window,

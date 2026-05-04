@@ -504,6 +504,10 @@ pub(super) fn preferences_action_state(
                         .clone()
                         .upcast(),
                     widgets
+                        .preferences_password_list_sort_hybrid_row
+                        .clone()
+                        .upcast(),
+                    widgets
                         .preferences_password_list_sort_store_path_row
                         .clone()
                         .upcast(),
@@ -551,6 +555,9 @@ pub(super) fn preferences_action_state(
         username_filename_check: widgets.preferences_username_filename_check.clone(),
         password_list_sort_filename_check: widgets
             .preferences_password_list_sort_filename_check
+            .clone(),
+        password_list_sort_hybrid_check: widgets
+            .preferences_password_list_sort_hybrid_check
             .clone(),
         password_list_sort_store_path_check: widgets
             .preferences_password_list_sort_store_path_check

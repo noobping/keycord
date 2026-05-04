@@ -280,7 +280,7 @@ pub fn collect_all_password_items_with_options(options: CollectItemsOptions) -> 
 
 fn sort_password_items(items: &mut [PassEntry], mode: PasswordListSortMode) {
     items.sort_by(|left, right| match mode {
-        PasswordListSortMode::StorePath => left
+        PasswordListSortMode::Hybrid | PasswordListSortMode::StorePath => left
             .store_path
             .cmp(&right.store_path)
             .then_with(|| left.relative_path.cmp(&right.relative_path))

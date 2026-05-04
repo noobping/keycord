@@ -716,6 +716,19 @@
                                   </object>
                                 </child>
                                 <child>
+                                  <object class="AdwActionRow" id="preferences_password_list_sort_hybrid_row">
+                                    <property name="title" translatable="yes">Use folders with file name search</property>
+                                    <property name="subtitle" translatable="yes">Keep folders in the list, but sort search results by pass file name.</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton"
+                                        id="preferences_password_list_sort_hybrid_check">
+                                        <property name="group">preferences_password_list_sort_filename_check</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
                                   <object class="AdwActionRow" id="preferences_password_list_sort_store_path_row">
                                     <property name="title" translatable="yes">Use store, folders, and file name</property>
                                     <property name="subtitle" translatable="yes">Keep entries grouped by store and folder before the file name.</property>

@@ -80,6 +80,10 @@ impl SearchFilterController {
         *self.state.query.borrow_mut() = parse_search_query(query);
     }
 
+    pub(super) fn query_is_empty(&self) -> bool {
+        self.state.query.borrow().is_empty()
+    }
+
     pub(super) fn refresh_row_visibility(&self, list: &ListBox) {
         let query = self.state.query.borrow().clone();
         let query_is_empty = query.is_empty();
