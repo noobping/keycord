@@ -1476,7 +1476,7 @@ fn all_keys_mode_uses_a_nonstandard_layered_entry_format() {
 
     let outer_layer = IntegratedCryptoContext::load_for_fingerprint(&key_a.fingerprint)
         .expect("load first-layer decrypt context")
-        .decrypt_entry_with_progress(&store.join("team/service.gpg"), None)
+        .decrypt_entry(&store.join("team/service.gpg"))
         .expect("decrypt only the first layer");
 
     assert!(outer_layer.starts_with("keycord-require-all-private-keys-v1\n"));

@@ -334,7 +334,8 @@ fn decode_hex(value: &str) -> Result<Vec<u8>, String> {
 
 fn password_entry_error_to_string(err: PasswordEntryError) -> String {
     match err {
-        PasswordEntryError::LockedPrivateKey(message)
+        PasswordEntryError::EntryNotFound(message)
+        | PasswordEntryError::LockedPrivateKey(message)
         | PasswordEntryError::MissingPrivateKey(message)
         | PasswordEntryError::IncompatiblePrivateKey(message)
         | PasswordEntryError::Other(message) => message,
@@ -350,6 +351,6 @@ fn encrypt_password_entry_with_crypto(
         return Err("No recipients were found for this password entry.".to_string());
     }
     crypto
-        .encrypt_string(recipients, contents)
+        .encrypt_string(contents, recipients)
         .map_err(|err| err.to_string())
 }

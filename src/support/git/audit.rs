@@ -1363,7 +1363,6 @@ mod tests {
             StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients,
             true,
         ));
-        assert!(should_retry_with_commit_history_recipients(true,));
         assert!(!should_retry_with_commit_history_recipients(
             StoreGitAuditUnverifiedReason::InvalidSignature,
             true,
