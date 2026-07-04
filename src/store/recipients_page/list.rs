@@ -16,10 +16,6 @@ use crate::backend::{
 #[cfg(target_os = "linux")]
 use crate::backend::{list_host_gpg_private_keys, HostGpgPrivateKeySummary};
 use crate::clipboard::set_clipboard_text;
-use crate::fido2_recipient::{
-    fido2_recipient_subtitle, fido2_recipient_title, is_fido2_recipient_string,
-    same_fido2_recipient,
-};
 use crate::i18n::gettext;
 use crate::logging::log_error;
 use crate::preferences::Preferences;
@@ -74,7 +70,6 @@ enum PrivateKeyVerificationWarning {
 }
 
 const HOST_GPG_WARNING_NOTICE_ID: &str = "store-recipients-host-gpg-warning";
-const ALL_FIDO2_KEYS_REQUIRED_NOTICE_ID: &str = "store-recipients-all-fido2-keys-required";
 const STORE_RECIPIENTS_KEYS_GROUP_TITLE: &str = "Keys for this store";
 const STORE_RECIPIENTS_KEYS_GROUP_DESCRIPTION: &str =
     "Select the private keys that can unlock passwords in this store.";
@@ -148,9 +143,6 @@ fn inspect_private_key_lock_state(fingerprint: &str) -> (bool, bool) {
 
 fn recipient_matches_parts(recipient: &str, fingerprint: &str, user_ids: &[String]) -> bool {
     let recipient = recipient.trim();
-    if is_fido2_recipient_string(recipient) && is_fido2_recipient_string(fingerprint) {
-        return same_fido2_recipient(recipient, fingerprint);
-    }
     recipient.eq_ignore_ascii_case(fingerprint)
         || user_ids
             .iter()
@@ -210,31 +202,14 @@ fn set_private_key_recipient_values(
 fn selected_available_private_key_count(
     recipients: &[String],
     keys: &[AvailablePrivateKey],
-    count_fido2_recipients: bool,
 ) -> usize {
-    let available_private_keys = keys
-        .iter()
+    keys.iter()
         .filter(|key| {
             recipients
                 .iter()
                 .any(|recipient| recipient_matches_available_private_key(recipient, key))
         })
-        .count();
-    let available_fido2 = if count_fido2_recipients {
-        recipients
-            .iter()
-            .filter(|recipient| is_fido2_recipient_string(recipient))
-            .filter(|recipient| {
-                !keys
-                    .iter()
-                    .any(|key| recipient_matches_available_private_key(recipient, key))
-            })
-            .count()
-    } else {
-        0
-    };
-
-    available_private_keys + available_fido2
+        .count()
 }
 
 fn private_key_is_currently_usable(key: &AvailablePrivateKey) -> bool {
@@ -251,35 +226,15 @@ fn private_key_is_currently_usable(key: &AvailablePrivateKey) -> bool {
     }
 }
 
-fn selected_usable_private_key_count(
-    recipients: &[String],
-    keys: &[AvailablePrivateKey],
-    count_fido2_recipients: bool,
-) -> usize {
-    let usable_private_keys = keys
-        .iter()
+fn selected_usable_private_key_count(recipients: &[String], keys: &[AvailablePrivateKey]) -> usize {
+    keys.iter()
         .filter(|key| {
             recipients
                 .iter()
                 .any(|recipient| recipient_matches_available_private_key(recipient, key))
                 && private_key_is_currently_usable(key)
         })
-        .count();
-    let usable_fido2 = if count_fido2_recipients {
-        recipients
-            .iter()
-            .filter(|recipient| is_fido2_recipient_string(recipient))
-            .filter(|recipient| {
-                !keys
-                    .iter()
-                    .any(|key| recipient_matches_available_private_key(recipient, key))
-            })
-            .count()
-    } else {
-        0
-    };
-
-    usable_private_keys + usable_fido2
+        .count()
 }
 
 fn private_key_delete_block_message(
@@ -343,9 +298,6 @@ fn unresolved_private_key_recipients(
     let mut unresolved = Vec::new();
 
     for recipient in recipients {
-        if is_fido2_recipient_string(recipient) {
-            continue;
-        }
         if keys
             .iter()
             .any(|key| recipient_matches_available_private_key(recipient, key))
@@ -504,17 +456,10 @@ pub(super) fn refresh_recipient_scope_row(state: &StoreRecipientsPageState) {
 }
 
 fn show_require_all_private_keys_option(
-    selection_mode: StoreRecipientsSelectionMode,
+    _selection_mode: StoreRecipientsSelectionMode,
     has_keys: bool,
 ) -> bool {
-    has_keys && !matches!(selection_mode, StoreRecipientsSelectionMode::Fido2Only)
-}
-
-fn show_all_fido2_keys_required_info(
-    selection_mode: StoreRecipientsSelectionMode,
-    selected_fido2_keys: usize,
-) -> bool {
-    matches!(selection_mode, StoreRecipientsSelectionMode::Fido2Only) && selected_fido2_keys > 1
+    has_keys
 }
 
 fn show_store_options_title_above_git_row(show_options_group: bool, show_git: bool) -> bool {
@@ -525,14 +470,10 @@ fn sync_private_key_requirement_row(
     state: &StoreRecipientsPageState,
     selection_mode: StoreRecipientsSelectionMode,
     has_keys: bool,
-    selected_fido2_keys: usize,
 ) {
     let preferences = Preferences::new();
     let uses_integrated_backend = preferences.uses_integrated_backend();
     let show_require_all = show_require_all_private_keys_option(selection_mode, has_keys);
-    let show_all_fido2_required =
-        show_all_fido2_keys_required_info(selection_mode, selected_fido2_keys)
-            && !preferences.is_notice_hidden(ALL_FIDO2_KEYS_REQUIRED_NOTICE_ID);
     let show_store_options_title = show_store_options_title_above_git_row(
         show_require_all,
         state.platform.git_group.is_visible(),
@@ -545,15 +486,7 @@ fn sync_private_key_requirement_row(
 
     state.platform.options_group.set_visible(show_require_all);
     state.platform.git_group.set_title(&git_group_title);
-    state
-        .platform
-        .fido2_info_group
-        .set_visible(show_all_fido2_required);
     state.platform.require_all_row.set_visible(show_require_all);
-    state
-        .platform
-        .all_fido2_keys_required_row
-        .set_visible(show_all_fido2_required);
     state
         .platform
         .require_all_row
@@ -568,78 +501,11 @@ fn sync_private_key_requirement_row(
     ));
 }
 
-fn selected_fido2_recipients(recipients: &[String], keys: &[AvailablePrivateKey]) -> Vec<String> {
-    let mut selected = Vec::<String>::new();
-
-    for recipient in recipients {
-        if !is_fido2_recipient_string(recipient) {
-            continue;
-        }
-        if keys
-            .iter()
-            .any(|key| recipient_matches_available_private_key(recipient, key))
-        {
-            continue;
-        }
-        if selected
-            .iter()
-            .any(|existing| same_fido2_recipient(existing, recipient))
-        {
-            continue;
-        }
-        selected.push(recipient.clone());
-    }
-
-    selected
-}
-
-fn selected_fido2_key_count(recipients: &[String]) -> usize {
-    let mut selected = Vec::<String>::new();
-
-    for recipient in recipients {
-        if !is_fido2_recipient_string(recipient) {
-            continue;
-        }
-        if selected
-            .iter()
-            .any(|existing| same_fido2_recipient(existing, recipient))
-        {
-            continue;
-        }
-        selected.push(recipient.clone());
-    }
-
-    selected.len()
-}
-
-fn fido2_recipient_remove_block_message(
-    uses_integrated_backend: bool,
-    require_all_selected_keys: bool,
-    selected_available_keys: usize,
-    selected_usable_keys: usize,
-) -> Option<&'static str> {
-    if !uses_integrated_backend {
-        None
-    } else {
-        private_key_toggle_block_message(
-            true,
-            true,
-            require_all_selected_keys,
-            selected_available_keys,
-            selected_usable_keys,
-        )
-    }
-}
-
 fn effective_private_key_verification_warning(
-    selection_mode: StoreRecipientsSelectionMode,
+    _selection_mode: StoreRecipientsSelectionMode,
     warning: Option<PrivateKeyVerificationWarning>,
 ) -> Option<PrivateKeyVerificationWarning> {
-    if matches!(selection_mode, StoreRecipientsSelectionMode::Fido2Only) {
-        None
-    } else {
-        warning
-    }
+    warning
 }
 
 fn sync_private_key_verification_warning(
@@ -715,13 +581,6 @@ pub(super) fn connect_dismissible_notice_controls(state: &StoreRecipientsPageSta
         &state.platform.host_gpg_warning_row,
         HOST_GPG_WARNING_NOTICE_ID,
         move || host_warning_group.set_visible(false),
-    );
-
-    let fido2_info_group = state.platform.fido2_info_group.clone();
-    add_persistent_hide_button(
-        &state.platform.all_fido2_keys_required_row,
-        ALL_FIDO2_KEYS_REQUIRED_NOTICE_ID,
-        move || fido2_info_group.set_visible(false),
     );
 }
 
@@ -853,7 +712,7 @@ pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
         Ok(keys) => keys,
         Err(err) => {
             log_error(format!("Failed to load private keys for recipients: {err}"));
-            sync_private_key_requirement_row(state, selection_mode, false, 0);
+            sync_private_key_requirement_row(state, selection_mode, false);
             let row = append_info_group_row(
                 &state.list,
                 "Couldn't load private keys",
@@ -880,18 +739,13 @@ pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
     };
     let (keys, host_key_inspection_failed) =
         load_available_private_keys(managed_keys, connected_smartcards, uses_host_backend);
-    let fido2_recipients = selected_fido2_recipients(&current_recipients, &keys);
-    let selected_fido2_keys = selected_fido2_key_count(&current_recipients);
     let unresolved_recipients = unresolved_private_key_recipients(&current_recipients, &keys);
-    let selected_available_keys =
-        selected_available_private_key_count(&current_recipients, &keys, uses_integrated_backend);
-    let selected_usable_keys =
-        selected_usable_private_key_count(&current_recipients, &keys, uses_integrated_backend);
+    let selected_available_keys = selected_available_private_key_count(&current_recipients, &keys);
+    let selected_usable_keys = selected_usable_private_key_count(&current_recipients, &keys);
     sync_private_key_requirement_row(
         state,
         selection_mode,
-        managed_key_count > 0 || (uses_integrated_backend && selected_fido2_keys > 0),
-        selected_fido2_keys,
+        managed_key_count > 0 || !keys.is_empty(),
     );
     sync_private_key_verification_warning(
         state,
@@ -903,16 +757,12 @@ pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
         ),
     );
 
-    if keys.is_empty() && fido2_recipients.is_empty() {
+    if keys.is_empty() {
         if unresolved_recipients.is_empty() {
             let row = append_info_group_row(
                 &state.list,
                 "No recipients yet",
-                if uses_integrated_backend {
-                    "Generate or import a private key, or add a FIDO2 security key."
-                } else {
-                    "Generate or import a private key."
-                },
+                "Generate or import a private key.",
             );
             state.key_rows.borrow_mut().push(row.upcast());
         } else {
@@ -922,16 +772,6 @@ pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
     }
 
     append_unresolved_private_key_rows(state, &unresolved_recipients);
-    for recipient in &fido2_recipients {
-        append_fido2_recipient_row(
-            state,
-            recipient,
-            uses_integrated_backend,
-            selected_available_keys,
-            selected_usable_keys,
-        );
-    }
-
     for key in keys {
         let active = current_recipients
             .iter()
@@ -961,49 +801,6 @@ pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
             ),
         }
     }
-}
-
-fn append_fido2_recipient_row(
-    state: &StoreRecipientsPageState,
-    recipient: &str,
-    uses_integrated_backend: bool,
-    selected_available_keys: usize,
-    selected_usable_keys: usize,
-) {
-    let require_all_selected_keys = matches!(
-        state.private_key_requirement.get(),
-        StoreRecipientsPrivateKeyRequirement::AllManagedKeys
-    );
-    let remove_blocked_message = fido2_recipient_remove_block_message(
-        uses_integrated_backend,
-        require_all_selected_keys,
-        selected_available_keys,
-        selected_usable_keys,
-    );
-    let title = fido2_recipient_title(recipient).unwrap_or_else(|| gettext("FIDO2 security key"));
-    let subtitle =
-        fido2_recipient_subtitle(recipient).unwrap_or_else(|| gettext("FIDO2 recipient"));
-    let row = ActionRow::builder().title(title).subtitle(subtitle).build();
-    row.set_activatable(false);
-    row.add_prefix(&dim_label_icon("dialog-password-symbolic"));
-    let remove_button = flat_icon_button_with_tooltip("user-trash-symbolic", "Remove recipient");
-    sync_recipient_remove_button(&remove_button, remove_blocked_message);
-    row.add_suffix(&remove_button);
-    add_tracked_preferences_group_child(&state.list, state.key_rows.as_ref(), &row);
-
-    let state_for_remove = state.clone();
-    let recipient_for_remove = recipient.to_string();
-    remove_button.connect_clicked(move |_| {
-        let before = state_for_remove.recipients.borrow().clone();
-        state_for_remove
-            .recipients
-            .borrow_mut()
-            .retain(|value| !same_fido2_recipient(value, &recipient_for_remove));
-        super::rebuild_store_recipients_list(&state_for_remove);
-        if *state_for_remove.recipients.borrow() != before {
-            queue_store_recipients_autosave(&state_for_remove);
-        }
-    });
 }
 
 fn append_private_key_row_shell(
@@ -1081,7 +878,7 @@ fn append_managed_private_key_row(
             ManagedRipassoPrivateKeyProtection::HardwareOpenPgpCard => "Copy armored public key",
             #[cfg(feature = "fidokey")]
             ManagedRipassoPrivateKeyProtection::Fido2HmacSecret => {
-                "Copy FIDO2-protected private key"
+                "Copy experimental FIDO2-protected private key"
             }
         },
     );
@@ -1333,38 +1130,35 @@ fn append_connected_smartcard_row(
 #[cfg(test)]
 mod tests {
     use super::{
-        effective_private_key_verification_warning, fido2_recipient_remove_block_message,
-        merge_available_private_keys, private_key_delete_block_message,
-        private_key_toggle_block_message, private_key_verification_warning, recipient_scope_label,
-        selected_available_private_key_count, show_all_fido2_keys_required_info,
-        show_recipient_scope_selector, show_require_all_private_keys_option,
-        show_store_options_title_above_git_row, unresolved_private_key_recipients,
-        AvailablePrivateKey, HostGpgPrivateKeySummary, PrivateKeyVerificationWarning,
+        effective_private_key_verification_warning, merge_available_private_keys,
+        private_key_delete_block_message, private_key_toggle_block_message,
+        private_key_verification_warning, recipient_scope_label,
+        selected_available_private_key_count, show_recipient_scope_selector,
+        show_require_all_private_keys_option, show_store_options_title_above_git_row,
+        unresolved_private_key_recipients, AvailablePrivateKey, HostGpgPrivateKeySummary,
+        PrivateKeyVerificationWarning,
     };
     use crate::backend::{
         ConnectedSmartcardKey, ManagedRipassoHardwareKey, ManagedRipassoPrivateKey,
         ManagedRipassoPrivateKeyProtection,
     };
-    use crate::fido2_recipient::{build_fido2_recipient_string, derived_fido2_recipient_id};
     use crate::store::recipients_page::mode::StoreRecipientsSelectionMode;
 
-    fn test_fido2_recipient(label: &str, credential_id: &[u8]) -> String {
-        build_fido2_recipient_string(
-            &derived_fido2_recipient_id(credential_id),
-            label,
-            credential_id,
-        )
-        .expect("build recipient")
+    fn password_key(fingerprint: &str, user_id: &str) -> ManagedRipassoPrivateKey {
+        ManagedRipassoPrivateKey {
+            fingerprint: fingerprint.to_string(),
+            user_ids: vec![user_id.to_string()],
+            protection: ManagedRipassoPrivateKeyProtection::Password,
+            hardware: None,
+        }
     }
 
     #[test]
     fn merged_private_keys_prefer_managed_duplicates() {
-        let managed = ManagedRipassoPrivateKey {
-            fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-            user_ids: vec!["Managed User <managed@example.com>".to_string()],
-            protection: ManagedRipassoPrivateKeyProtection::Password,
-            hardware: None,
-        };
+        let managed = password_key(
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "Managed User <managed@example.com>",
+        );
         let connected = ConnectedSmartcardKey {
             fingerprint: managed.fingerprint.clone(),
             user_ids: vec!["Connected User <token@example.com>".to_string()],
@@ -1378,75 +1172,18 @@ mod tests {
         let merged = merge_available_private_keys(
             vec![managed.clone()],
             vec![connected],
-            vec![
-                HostGpgPrivateKeySummary {
-                    fingerprint: managed.fingerprint.clone(),
-                    user_ids: vec!["Host Duplicate <host@example.com>".to_string()],
-                },
-                HostGpgPrivateKeySummary {
-                    fingerprint: "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB".to_string(),
-                    user_ids: vec!["Host Only <host-only@example.com>".to_string()],
-                },
-            ],
-        );
-
-        assert_eq!(merged.len(), 2);
-        assert!(merged.iter().any(|key| matches!(
-            key,
-            AvailablePrivateKey::Managed(found) if found == &managed
-        )));
-        assert!(merged.iter().any(|key| matches!(
-            key,
-            AvailablePrivateKey::HostOnly(found)
-                if found.fingerprint == "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-        )));
-    }
-
-    #[test]
-    fn merged_private_keys_include_connected_smartcards_before_host_only_keys() {
-        let connected = ConnectedSmartcardKey {
-            fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-            user_ids: vec!["Token User <token@example.com>".to_string()],
-            hardware: ManagedRipassoHardwareKey {
-                ident: "token-a".to_string(),
-                signing_fingerprint: None,
-                decryption_fingerprint: None,
-                reader_hint: Some("Reader A".to_string()),
-            },
-        };
-        let merged = merge_available_private_keys(
-            Vec::new(),
-            vec![connected.clone()],
             vec![HostGpgPrivateKeySummary {
-                fingerprint: connected.fingerprint.clone(),
+                fingerprint: managed.fingerprint.clone(),
                 user_ids: vec!["Host Duplicate <host@example.com>".to_string()],
             }],
         );
 
-        assert_eq!(
-            merged,
-            vec![AvailablePrivateKey::ConnectedSmartcard(connected)]
-        );
+        assert_eq!(merged.len(), 1);
+        assert!(matches!(&merged[0], AvailablePrivateKey::Managed(found) if found == &managed));
     }
 
     #[test]
-    fn unresolved_recipients_consider_host_only_keys() {
-        let unresolved = unresolved_private_key_recipients(
-            &[
-                "Host User <host@example.com>".to_string(),
-                "missing@example.com".to_string(),
-            ],
-            &[AvailablePrivateKey::HostOnly(HostGpgPrivateKeySummary {
-                fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-                user_ids: vec!["Host User <host@example.com>".to_string()],
-            })],
-        );
-
-        assert_eq!(unresolved, vec!["missing@example.com".to_string()]);
-    }
-
-    #[test]
-    fn unresolved_recipients_consider_connected_smartcards() {
+    fn unresolved_recipients_consider_available_keys() {
         let unresolved = unresolved_private_key_recipients(
             &[
                 "Token User <token@example.com>".to_string(),
@@ -1481,28 +1218,17 @@ mod tests {
                 private_key_verification_warning(false, false, false),
                 Some(PrivateKeyVerificationWarning::SyncDisabled)
             );
-            assert_eq!(private_key_verification_warning(true, false, false), None);
-            assert_eq!(private_key_verification_warning(false, true, false), None);
         }
 
         #[cfg(not(target_os = "linux"))]
         {
             assert_eq!(private_key_verification_warning(true, false, true), None);
             assert_eq!(private_key_verification_warning(false, false, false), None);
-            assert_eq!(private_key_verification_warning(true, false, false), None);
-            assert_eq!(private_key_verification_warning(false, true, false), None);
         }
     }
 
     #[test]
-    fn fido_only_stores_hide_private_key_verification_warnings() {
-        assert_eq!(
-            effective_private_key_verification_warning(
-                StoreRecipientsSelectionMode::Fido2Only,
-                Some(PrivateKeyVerificationWarning::SyncDisabled),
-            ),
-            None
-        );
+    fn standard_stores_keep_private_key_verification_warnings() {
         assert_eq!(
             effective_private_key_verification_warning(
                 StoreRecipientsSelectionMode::StandardOnly,
@@ -1513,30 +1239,14 @@ mod tests {
     }
 
     #[test]
-    fn fido_only_stores_show_info_instead_of_require_all_toggle() {
+    fn require_all_option_is_available_when_keys_exist() {
         assert!(!show_require_all_private_keys_option(
-            StoreRecipientsSelectionMode::Fido2Only,
-            true
+            StoreRecipientsSelectionMode::Empty,
+            false
         ));
         assert!(show_require_all_private_keys_option(
             StoreRecipientsSelectionMode::StandardOnly,
             true
-        ));
-        assert!(show_require_all_private_keys_option(
-            StoreRecipientsSelectionMode::Mixed,
-            true
-        ));
-        assert!(!show_all_fido2_keys_required_info(
-            StoreRecipientsSelectionMode::Fido2Only,
-            1
-        ));
-        assert!(show_all_fido2_keys_required_info(
-            StoreRecipientsSelectionMode::Fido2Only,
-            2
-        ));
-        assert!(!show_all_fido2_keys_required_info(
-            StoreRecipientsSelectionMode::StandardOnly,
-            2
         ));
     }
 
@@ -1552,7 +1262,7 @@ mod tests {
         assert!(!show_recipient_scope_selector(&[".".to_string()]));
         assert!(show_recipient_scope_selector(&[
             ".".to_string(),
-            "team".to_string()
+            "team".to_string(),
         ]));
     }
 
@@ -1565,12 +1275,10 @@ mod tests {
     #[test]
     fn selected_available_private_key_count_only_tracks_matching_keys() {
         let keys = vec![
-            AvailablePrivateKey::Managed(ManagedRipassoPrivateKey {
-                fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-                user_ids: vec!["Alice <alice@example.com>".to_string()],
-                protection: ManagedRipassoPrivateKeyProtection::Password,
-                hardware: None,
-            }),
+            AvailablePrivateKey::Managed(password_key(
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "Alice <alice@example.com>",
+            )),
             AvailablePrivateKey::HostOnly(HostGpgPrivateKeySummary {
                 fingerprint: "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB".to_string(),
                 user_ids: vec!["Bob <bob@example.com>".to_string()],
@@ -1585,59 +1293,14 @@ mod tests {
                     "missing@example.com".to_string(),
                 ],
                 &keys,
-                true,
             ),
             2
         );
     }
 
-    #[test]
-    fn selected_available_private_key_count_treats_connected_smartcards_as_standard_keys() {
-        assert_eq!(
-            selected_available_private_key_count(
-                &["Token User <token@example.com>".to_string()],
-                &[AvailablePrivateKey::ConnectedSmartcard(
-                    ConnectedSmartcardKey {
-                        fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-                        user_ids: vec!["Token User <token@example.com>".to_string()],
-                        hardware: ManagedRipassoHardwareKey {
-                            ident: "token-a".to_string(),
-                            signing_fingerprint: None,
-                            decryption_fingerprint: None,
-                            reader_hint: Some("Reader A".to_string()),
-                        },
-                    }
-                )],
-                true,
-            ),
-            1
-        );
-    }
-
-    #[test]
-    fn selected_available_private_key_count_ignores_fido2_when_backend_cannot_use_it() {
-        let recipient = test_fido2_recipient("Desk Key", b"cred");
-        assert_eq!(
-            selected_available_private_key_count(
-                &[
-                    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-                    recipient,
-                ],
-                &[AvailablePrivateKey::Managed(ManagedRipassoPrivateKey {
-                    fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
-                    user_ids: vec!["Alice <alice@example.com>".to_string()],
-                    protection: ManagedRipassoPrivateKeyProtection::Password,
-                    hardware: None,
-                })],
-                false,
-            ),
-            1
-        );
-    }
-
     #[cfg(feature = "fidokey")]
     #[test]
-    fn selected_available_private_key_count_does_not_double_count_managed_fido2_keys() {
+    fn selected_available_private_key_count_handles_fido2_protected_private_keys_by_fingerprint() {
         let recipient = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB".to_string();
 
         assert_eq!(
@@ -1649,7 +1312,6 @@ mod tests {
                     protection: ManagedRipassoPrivateKeyProtection::Fido2HmacSecret,
                     hardware: None,
                 })],
-                true,
             ),
             1
         );
@@ -1693,14 +1355,6 @@ mod tests {
         );
         assert_eq!(
             private_key_toggle_block_message(true, false, false, 2, 0),
-            None
-        );
-    }
-
-    #[test]
-    fn host_backend_still_allows_removing_selected_fido2_recipients() {
-        assert_eq!(
-            fido2_recipient_remove_block_message(false, false, 0, 0),
             None
         );
     }

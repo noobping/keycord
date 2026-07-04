@@ -1,28 +1,20 @@
 use super::generate::connect_generation_autofill_rows;
-use super::guide::{present_additional_fido2_save_guidance_dialog, saved_fido2_recipient_exists};
 use super::list::rebuild_store_recipients_list;
-use super::mode::{
-    ensure_fido2_recipient_actions_allowed, ensure_standard_recipient_actions_allowed,
-};
+use super::mode::ensure_standard_recipient_actions_allowed;
 use super::sync::sync_private_keys_to_host_if_enabled;
 use super::{
     present_store_recipients_dialog, queue_store_recipients_autosave,
     sync_store_recipients_page_header, StoreRecipientsPageState,
 };
 use crate::backend::{
-    create_fido2_store_recipient, discover_ripasso_hardware_keys,
-    import_ripasso_hardware_key_bytes, import_ripasso_private_key_bytes,
-    ripasso_private_key_requires_passphrase, set_fido2_security_key_pin,
-    supports_first_time_fido2_pin_setup, DiscoveredHardwareToken, ManagedRipassoHardwareKey,
-    ManagedRipassoPrivateKey, PrivateKeyError, PrivateKeyUnlockKind,
+    discover_ripasso_hardware_keys, import_ripasso_hardware_key_bytes,
+    import_ripasso_private_key_bytes, ripasso_private_key_requires_passphrase,
+    DiscoveredHardwareToken, ManagedRipassoHardwareKey, ManagedRipassoPrivateKey, PrivateKeyError,
 };
 use crate::i18n::gettext;
 use crate::logging::log_error;
-use crate::preferences::Preferences;
 use crate::private_key::dialog::{
-    build_private_key_progress_dialog, present_fido2_pin_setup_dialog_with_close_handler,
-    present_private_key_password_dialog, present_private_key_unlock_dialog_with_close_handler,
-    PrivateKeyDialogHandle,
+    build_private_key_progress_dialog, present_private_key_password_dialog, PrivateKeyDialogHandle,
 };
 use crate::support::actions::activate_widget_action;
 use crate::support::background::spawn_result_task_with_finalizer;
@@ -54,41 +46,6 @@ fn finish_private_key_import(
         }
         Err(err) => {
             log_error(format!("Failed to import private key: {err}"));
-            state
-                .platform
-                .overlay
-                .add_toast(Toast::new(&gettext(err.import_message())));
-        }
-    }
-}
-
-fn finish_fido2_recipient_add(
-    state: &StoreRecipientsPageState,
-    result: Result<String, PrivateKeyError>,
-) {
-    match result {
-        Ok(recipient) => {
-            let requires_manual_save =
-                saved_fido2_recipient_exists(&state.saved_recipients.borrow());
-            let mut recipients = state.recipients.borrow_mut();
-            let mut added = false;
-            if !recipients.iter().any(|existing| existing == &recipient) {
-                recipients.push(recipient);
-                added = true;
-            }
-            drop(recipients);
-            if !added {
-                return;
-            }
-            rebuild_store_recipients_list(state);
-            if requires_manual_save {
-                present_additional_fido2_save_guidance_dialog(state);
-            } else {
-                queue_store_recipients_autosave(state);
-            }
-        }
-        Err(err) => {
-            log_error(format!("Failed to add FIDO2 security key: {err}"));
             state
                 .platform
                 .overlay
@@ -222,83 +179,6 @@ fn start_private_key_import(
                 .platform
                 .overlay
                 .add_toast(Toast::new(&gettext("Couldn't import the key.")));
-        },
-    );
-}
-
-fn start_fido2_recipient_add(state: &StoreRecipientsPageState, pin: Option<SecretString>) {
-    if !ensure_fido2_recipient_actions_allowed(state) {
-        return;
-    }
-
-    if !Preferences::new().uses_integrated_backend() {
-        state.platform.overlay.add_toast(Toast::new(&gettext(
-            "Switch to the Integrated backend to add a FIDO2 security key.",
-        )));
-        return;
-    }
-
-    let state = state.clone();
-    let progress_dialog = PrivateKeyDialogHandle::new(&build_private_key_progress_dialog(
-        &state.window,
-        "Adding FIDO2 security key",
-        None,
-        "Touch your key if it blinks.",
-    ));
-    let state_for_disconnect = state.clone();
-    let pin_was_supplied = pin.is_some();
-    spawn_result_task_with_finalizer(
-        move || create_fido2_store_recipient(pin.as_ref().map(|pin| pin.expose_secret())),
-        move || progress_dialog.force_close(),
-        move |result| match result {
-            Err(err)
-                if err.is_fido2_pin_not_set()
-                    && !pin_was_supplied
-                    && supports_first_time_fido2_pin_setup() =>
-            {
-                prompt_fido2_recipient_pin_setup(&state);
-            }
-            Err(err) if err.is_fido2_pin_required() && !pin_was_supplied => {
-                prompt_fido2_recipient_pin(&state);
-            }
-            other => finish_fido2_recipient_add(&state, other),
-        },
-        move || {
-            log_error("FIDO2 recipient worker disconnected unexpectedly.".to_string());
-            state_for_disconnect
-                .platform
-                .overlay
-                .add_toast(Toast::new(&gettext("Couldn't add the FIDO2 security key.")));
-        },
-    );
-}
-
-fn start_fido2_recipient_pin_setup(state: &StoreRecipientsPageState, pin: SecretString) {
-    if !ensure_fido2_recipient_actions_allowed(state) {
-        return;
-    }
-
-    let state = state.clone();
-    let progress_dialog = PrivateKeyDialogHandle::new(&build_private_key_progress_dialog(
-        &state.window,
-        "Set security key PIN",
-        None,
-        "Touch your key if it blinks.",
-    ));
-    let state_for_disconnect = state.clone();
-    spawn_result_task_with_finalizer(
-        move || {
-            set_fido2_security_key_pin(pin.expose_secret())?;
-            create_fido2_store_recipient(Some(pin.expose_secret()))
-        },
-        move || progress_dialog.force_close(),
-        move |result| finish_fido2_recipient_add(&state, result),
-        move || {
-            log_error("FIDO2 PIN setup worker disconnected unexpectedly.".to_string());
-            state_for_disconnect
-                .platform
-                .overlay
-                .add_toast(Toast::new(&gettext("Couldn't add the FIDO2 security key.")));
         },
     );
 }
@@ -673,43 +553,6 @@ fn import_private_key_from_clipboard(state: &StoreRecipientsPageState) {
     });
 }
 
-fn prompt_fido2_recipient_pin(state: &StoreRecipientsPageState) {
-    let window = state.window.clone();
-    let overlay = state.platform.overlay.clone();
-    let state = state.clone();
-    present_private_key_unlock_dialog_with_close_handler(
-        &window,
-        &overlay,
-        "Add FIDO2 security key",
-        None,
-        PrivateKeyUnlockKind::Fido2SecurityKey,
-        move |request| {
-            let pin = match request {
-                crate::backend::PrivateKeyUnlockRequest::Fido2(pin) => pin,
-                _ => None,
-            };
-            start_fido2_recipient_add(&state, pin);
-        },
-        || {},
-    );
-}
-
-fn prompt_fido2_recipient_pin_setup(state: &StoreRecipientsPageState) {
-    let window = state.window.clone();
-    let overlay = state.platform.overlay.clone();
-    let state = state.clone();
-    present_fido2_pin_setup_dialog_with_close_handler(
-        &window,
-        &overlay,
-        "Set security key PIN",
-        None,
-        move |pin| {
-            start_fido2_recipient_pin_setup(&state, pin);
-        },
-        || {},
-    );
-}
-
 pub(super) fn connect_hardware_key_generation_submit(state: &StoreRecipientsPageState) {
     let overlay_for_apply = state.platform.overlay.clone();
     let state_for_apply = state.clone();
@@ -817,12 +660,6 @@ pub(super) fn connect_private_key_import_controls(state: &StoreRecipientsPageSta
     let hardware_state = state.clone();
     connect_row_action(&hardware_row, move || {
         add_connected_hardware_key(&hardware_state);
-    });
-
-    let fido2_row = state.platform.add_fido2_key_row.clone();
-    let fido2_state = state.clone();
-    connect_row_action(&fido2_row, move || {
-        start_fido2_recipient_add(&fido2_state, None);
     });
 
     let import_hardware_row = state.platform.import_hardware_key_row.clone();

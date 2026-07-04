@@ -2,7 +2,6 @@ use super::super::cache::{
     borrow_cached_fido2_pin, cache_fido2_pin, cache_pending_fido2_enrollment,
 };
 use crate::backend::PrivateKeyError;
-use crate::fido2_recipient::{build_fido2_recipient_string, derived_fido2_recipient_id};
 use crate::support::toml_safety::{parse_toml_with_limits, FIDO2_TEXT_ENVELOPE_TOML_LIMITS};
 use base64::{engine::general_purpose::STANDARD as BASE64, Engine as _};
 use fido2_rs::{
@@ -29,9 +28,6 @@ use std::time::{Duration, Instant};
 use zeroize::Zeroizing;
 
 pub const FIDO2_RP_ID: &str = "io.github.noobping.keycord";
-pub(super) const FIDO2_STORE_UNSUPPORTED_MESSAGE: &str =
-    "This build doesn't support FIDO2-backed stores.";
-
 pub(super) const FIDO2_HMAC_SALT_LEN: usize = 32;
 const FIDO2_CLIENT_DATA_HASH_LEN: usize = 32;
 const FIDO2_USER_ID_LEN: usize = 32;
@@ -42,13 +38,8 @@ const FIDO2_MATCHING_KEY_RETRY_WINDOW: Duration = Duration::from_secs(4);
 const FIDO2_MATCHING_KEY_RETRY_INTERVAL: Duration = Duration::from_millis(150);
 
 pub(super) const FIDO2_DIRECT_ENTRY_FORMAT: u32 = 1;
-pub(super) const FIDO2_DIRECT_ANY_MANAGED_HEADER: &str = "keycord-fido2-any-managed-v1";
-pub(super) const FIDO2_DIRECT_ANY_MANAGED_KIND: &str = "fido2-any-managed";
 pub(super) const FIDO2_DIRECT_LAYER_HEADER: &str = "keycord-fido2-required-layer-v1";
 pub(super) const FIDO2_DIRECT_LAYER_KIND: &str = "fido2-required-layer";
-pub(super) const FIDO2_DIRECT_ANY_PAYLOAD_AAD: &[u8] = b"keycord/fido2-any-managed/payload/v1";
-pub(super) const FIDO2_DIRECT_ANY_WRAPPED_DEK_AAD_PREFIX: &[u8] =
-    b"keycord/fido2-any-managed/wrapped-dek/v1:";
 pub(super) const FIDO2_DIRECT_LAYER_AAD_PREFIX: &[u8] = b"keycord/fido2-required-layer/payload/v1:";
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -66,6 +57,34 @@ pub struct Fido2DirectBinding {
     pub label: String,
     pub rp_id: String,
     pub credential_id: Vec<u8>,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub(in crate::backend::integrated) struct Fido2DirectBindingDescriptor {
+    pub fingerprint: String,
+    pub label: String,
+    pub credential_id: Vec<u8>,
+}
+
+impl Fido2DirectBindingDescriptor {
+    pub(in crate::backend::integrated) fn binding(&self) -> Fido2DirectBinding {
+        Fido2DirectBinding {
+            fingerprint: self.fingerprint.clone(),
+            label: self.label.clone(),
+            rp_id: FIDO2_RP_ID.to_string(),
+            credential_id: self.credential_id.clone(),
+        }
+    }
+}
+
+fn derived_fido2_binding_fingerprint(credential_id: &[u8]) -> String {
+    let digest = Sha256::digest(credential_id);
+    let mut encoded = String::with_capacity(40);
+    for byte in &digest[..20] {
+        use std::fmt::Write as _;
+        write!(encoded, "{byte:02X}").expect("writing hex into a string should not fail");
+    }
+    encoded
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -123,26 +142,6 @@ pub struct Fido2Enrollment {
 pub struct Fido2AssertionOutput {
     pub hmac_secret: Vec<u8>,
     pub device: Option<Fido2DeviceLabel>,
-}
-
-#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-pub(super) struct Fido2DirectRecipientEnvelope {
-    pub(super) fingerprint: String,
-    pub(super) rp_id: String,
-    pub(super) credential_id: String,
-    pub(super) hmac_salt: String,
-    pub(super) wrapped_dek_nonce: String,
-    pub(super) wrapped_dek: String,
-}
-
-#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-pub(super) struct Fido2DirectAnyManagedEnvelope {
-    pub(super) format: u32,
-    pub(super) protection: String,
-    pub(super) payload_nonce: String,
-    pub(super) payload_ciphertext: String,
-    pub(super) pgp_wrapped_dek: Option<String>,
-    pub(super) fido2_recipients: Vec<Fido2DirectRecipientEnvelope>,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -251,32 +250,37 @@ pub(super) fn private_key_error_from_fido2_error(err: Fido2TransportError) -> Pr
     }
 }
 
-pub(super) fn create_fido2_binding(pin: Option<&str>) -> Result<String, PrivateKeyError> {
+pub(super) fn create_fido2_binding_descriptor(
+    pin: Option<&str>,
+) -> Result<Fido2DirectBindingDescriptor, PrivateKeyError> {
     let enrollment_salt = random_bytes::<FIDO2_HMAC_SALT_LEN>();
     let enrollment = with_fido2_transport_read(|transport| {
         transport.enroll_hmac_secret(
             FIDO2_RP_ID,
-            "keycord-fido2-recipient",
-            "Keycord FIDO2 recipient",
+            "keycord-fido2-private-key",
+            "Keycord FIDO2-protected private key",
             pin,
             &enrollment_salt,
         )
     })
     .map_err(private_key_error_from_fido2_error)?;
-    let id = derived_fido2_recipient_id(&enrollment.credential_id);
+    let fingerprint = derived_fido2_binding_fingerprint(&enrollment.credential_id);
     let label = direct_binding_label(&enrollment.device);
     cache_pending_fido2_enrollment(
-        &id,
+        &fingerprint,
         &enrollment.credential_id,
         enrollment_salt,
         &enrollment.hmac_secret,
     )
     .map_err(PrivateKeyError::other)?;
     if let Some(pin) = pin {
-        cache_fido2_pin(&id, pin).map_err(PrivateKeyError::other)?;
+        cache_fido2_pin(&fingerprint, pin).map_err(PrivateKeyError::other)?;
     }
-    build_fido2_recipient_string(&id, &label, &enrollment.credential_id)
-        .map_err(PrivateKeyError::other)
+    Ok(Fido2DirectBindingDescriptor {
+        fingerprint,
+        label,
+        credential_id: enrollment.credential_id,
+    })
 }
 
 #[cfg(feature = "fidopin")]
@@ -328,35 +332,6 @@ pub(super) fn parse_text_envelope<T: for<'de> Deserialize<'de>>(
     };
     let body = std::str::from_utf8(body).map_err(|err| err.to_string())?;
     parse_toml_with_limits(body, FIDO2_TEXT_ENVELOPE_TOML_LIMITS, "FIDO2 text envelope").map(Some)
-}
-
-pub(super) fn validate_direct_any_envelope(
-    envelope: &Fido2DirectAnyManagedEnvelope,
-) -> Result<(), String> {
-    if envelope.format != FIDO2_DIRECT_ENTRY_FORMAT {
-        return Err(format!(
-            "Unsupported FIDO2 password-entry format {}.",
-            envelope.format
-        ));
-    }
-    if envelope.protection != FIDO2_DIRECT_ANY_MANAGED_KIND {
-        return Err(format!(
-            "Unsupported FIDO2 password-entry protection '{}'.",
-            envelope.protection
-        ));
-    }
-    decode_base64(&envelope.payload_nonce)?;
-    decode_base64(&envelope.payload_ciphertext)?;
-    if let Some(pgp_wrapped_dek) = envelope.pgp_wrapped_dek.as_deref() {
-        decode_base64(pgp_wrapped_dek)?;
-    }
-    for recipient in &envelope.fido2_recipients {
-        decode_base64(&recipient.credential_id)?;
-        decode_base64(&recipient.hmac_salt)?;
-        decode_base64(&recipient.wrapped_dek_nonce)?;
-        decode_base64(&recipient.wrapped_dek)?;
-    }
-    Ok(())
 }
 
 pub(super) fn validate_direct_layer_envelope(
@@ -502,28 +477,6 @@ pub(super) fn decode_base64(value: &str) -> Result<Vec<u8>, String> {
 
 pub(super) fn random_bytes<const N: usize>() -> [u8; N] {
     random::<[u8; N]>()
-}
-
-pub(in crate::backend::integrated) fn ciphertext_is_any_managed_bundle(ciphertext: &[u8]) -> bool {
-    ciphertext.starts_with(text_envelope_prefix(FIDO2_DIRECT_ANY_MANAGED_HEADER).as_slice())
-}
-
-pub(in crate::backend::integrated) fn extract_pgp_wrapped_dek_from_any_managed_bundle(
-    ciphertext: &[u8],
-) -> Result<Option<Vec<u8>>, String> {
-    let Some(envelope) = parse_text_envelope::<Fido2DirectAnyManagedEnvelope>(
-        FIDO2_DIRECT_ANY_MANAGED_HEADER,
-        ciphertext,
-    )?
-    else {
-        return Ok(None);
-    };
-    validate_direct_any_envelope(&envelope)?;
-    envelope
-        .pgp_wrapped_dek
-        .as_deref()
-        .map(decode_base64)
-        .transpose()
 }
 
 fn text_envelope_prefix(header: &str) -> Vec<u8> {

@@ -197,7 +197,9 @@ fn finish_fido2_private_key_generation(
     match result {
         Ok(_) => finish_generated_key(state),
         Err(err) => {
-            log_error(format!("Failed to generate FIDO2-protected key: {err}"));
+            log_error(format!(
+                "Failed to generate experimental FIDO2-protected key: {err}"
+            ));
             state
                 .platform
                 .overlay
@@ -214,7 +216,7 @@ fn start_fido2_private_key_generation(state: &StoreRecipientsPageState, pin: Opt
     let state = state.clone();
     let progress_dialog = PrivateKeyDialogHandle::new(&build_private_key_progress_dialog(
         &state.window,
-        "Generating FIDO2-protected key",
+        "Generating FIDO2-protected key (Experimental)",
         None,
         "Touch your key if it blinks.",
     ));
@@ -238,7 +240,8 @@ fn start_fido2_private_key_generation(state: &StoreRecipientsPageState, pin: Opt
         },
         move || {
             log_error(
-                "FIDO2-protected key generation worker disconnected unexpectedly.".to_string(),
+                "Experimental FIDO2-protected key generation worker disconnected unexpectedly."
+                    .to_string(),
             );
             state_for_disconnect
                 .platform
@@ -256,7 +259,7 @@ fn start_fido2_private_key_pin_setup(state: &StoreRecipientsPageState, pin: Secr
     let state = state.clone();
     let progress_dialog = PrivateKeyDialogHandle::new(&build_private_key_progress_dialog(
         &state.window,
-        "Set security key PIN",
+        "Set security key PIN (Experimental FIDO2)",
         None,
         "Touch your key if it blinks.",
     ));
@@ -285,7 +288,7 @@ fn prompt_fido2_private_key_pin(state: &StoreRecipientsPageState) {
     present_private_key_unlock_dialog_with_close_handler(
         &window,
         &overlay,
-        "Generate FIDO2-protected key",
+        "Generate FIDO2-protected key (Experimental)",
         None,
         PrivateKeyUnlockKind::Fido2SecurityKey,
         move |request| {
@@ -306,7 +309,7 @@ fn prompt_fido2_private_key_pin_setup(state: &StoreRecipientsPageState) {
     present_fido2_pin_setup_dialog_with_close_handler(
         &window,
         &overlay,
-        "Set security key PIN",
+        "Set security key PIN (Experimental FIDO2)",
         None,
         move |pin| {
             start_fido2_private_key_pin_setup(&state, pin);

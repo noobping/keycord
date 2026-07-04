@@ -72,7 +72,6 @@ pub enum StoreGitAuditUnverifiedReason {
     SigningKeyUnavailable,
     SignerNotAuthorized,
     NoResolvableStandardRecipients,
-    OnlyFido2Recipients,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -117,7 +116,6 @@ pub fn audit_unverified_reason_message(reason: StoreGitAuditUnverifiedReason) ->
         StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients => {
             "No resolvable standard recipient keys"
         }
-        StoreGitAuditUnverifiedReason::OnlyFido2Recipients => "Only FIDO2 recipients are available",
     }
 }
 
@@ -138,6 +136,5 @@ fn touch_disabled_audit_types() {
         StoreGitAuditUnverifiedReason::SigningKeyUnavailable,
         StoreGitAuditUnverifiedReason::SignerNotAuthorized,
         StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients,
-        StoreGitAuditUnverifiedReason::OnlyFido2Recipients,
     ];
 }

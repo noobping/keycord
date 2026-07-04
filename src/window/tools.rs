@@ -50,7 +50,7 @@ const FIELD_VALUES_FIELDS_SUBTITLE: &str = "Pick a field from the current list."
 const FIELD_VALUES_VALUES_SUBTITLE: &str = "Pick a value from the current list.";
 const FIELD_VALUES_ROW_SUBTITLE: &str = "Browse unique field values from the current list.";
 const FIELD_VALUES_ROW_DISABLED_SUBTITLE: &str =
-    "Unavailable because all configured stores use FIDO2 security keys.";
+    "Unavailable because no supported stores are loaded.";
 const FIELD_VALUES_LOADING_TITLE: &str = "Loading field values";
 const FIELD_VALUES_LOADING_SUBTITLE: &str = "Reading searchable pass fields from the current list.";
 const FIELD_VALUES_EMPTY_TITLE: &str = "No searchable fields";
@@ -67,7 +67,7 @@ const WEAK_PASSWORDS_SUBTITLE: &str = "Scan the current list for passwords that 
 const WEAK_PASSWORDS_ROW_SUBTITLE: &str =
     "Scan the current list for passwords that fail basic checks.";
 const WEAK_PASSWORDS_ROW_DISABLED_SUBTITLE: &str =
-    "Unavailable because all configured stores use FIDO2 security keys.";
+    "Unavailable because no supported stores are loaded.";
 const WEAK_PASSWORDS_LOADING_TITLE: &str = "Scanning passwords";
 const WEAK_PASSWORDS_LOADING_SUBTITLE: &str = "Reading password lines from the current list.";
 const WEAK_PASSWORDS_EMPTY_TITLE: &str = "No weak passwords found";

@@ -1,63 +1,35 @@
 use super::crypto::IntegratedCryptoContext;
-use super::entries::{read_password_entry, read_password_entry_with_progress};
+use super::entries::read_password_entry;
 use super::git::{maybe_commit_git_paths, password_entry_git_path};
-use super::keys::{clear_pending_fido2_enrollment, store_recipients_error_from_integrated_message};
+use super::keys::store_recipients_error_from_integrated_message;
 use super::paths::{
     collect_password_entry_files, desired_entry_file_path, ensure_store_directory,
-    fido2_recipients_file_for_recipients_path, label_from_entry_path, recipients_file_for_label,
-    recipients_file_for_relative_dir, with_updated_recipient_files,
+    label_from_entry_path, recipients_file_for_label, recipients_file_for_relative_dir,
+    with_updated_recipient_file,
 };
 use super::recipients::{
-    fido2_recipient_file_contents, preferred_ripasso_private_key_fingerprint_for_entry,
-    standard_recipient_file_contents,
+    preferred_ripasso_private_key_fingerprint_for_entry, standard_recipient_file_contents,
 };
 use crate::backend::{
-    PasswordEntryError, PasswordEntryReadProgress, StoreRecipients, StoreRecipientsError,
-    StoreRecipientsPrivateKeyRequirement, StoreRecipientsSaveProgress, StoreRecipientsSaveStage,
+    PasswordEntryError, StoreRecipients, StoreRecipientsError, StoreRecipientsPrivateKeyRequirement,
 };
-use crate::fido2_recipient::parse_fido2_recipient_string;
-use crate::logging::log_error;
 use crate::support::git::{ensure_store_git_repository, has_git_repository};
 use crate::support::secure_fs::write_atomic_file;
 use std::fs;
 use std::path::{Path, PathBuf};
 
-fn decrypted_store_entries_with_progress(
+fn decrypted_store_entries(
     store_dir: &Path,
     store_root: &str,
     scoped_recipients_path: &Path,
-    mut report_progress: Option<&mut dyn FnMut(StoreRecipientsSaveProgress)>,
 ) -> Result<Vec<(PathBuf, String)>, String> {
     let mut decrypted = Vec::new();
     let entry_paths =
         collect_root_scoped_entry_paths(store_dir, store_root, scoped_recipients_path)?;
-    let total_items = entry_paths.len();
 
-    for (index, entry_path) in entry_paths.into_iter().enumerate() {
-        let current_item = index + 1;
+    for entry_path in entry_paths {
         let label = label_from_entry_path(store_dir, &entry_path)?;
-        let secret = if let Some(report_progress) = report_progress.as_deref_mut() {
-            report_progress(StoreRecipientsSaveProgress {
-                stage: StoreRecipientsSaveStage::ReadingExistingItems,
-                current_item,
-                total_items,
-                current_touch: 0,
-                total_touches: 0,
-            });
-            let mut emit_progress = |progress: PasswordEntryReadProgress| {
-                report_progress(StoreRecipientsSaveProgress {
-                    stage: StoreRecipientsSaveStage::ReadingExistingItems,
-                    current_item,
-                    total_items,
-                    current_touch: progress.current_step,
-                    total_touches: progress.total_steps,
-                });
-            };
-            read_password_entry_with_progress(store_root, &label, &mut emit_progress)
-                .map_err(|err| err.to_string())?
-        } else {
-            read_password_entry(store_root, &label).map_err(|err| err.to_string())?
-        };
+        let secret = read_password_entry(store_root, &label).map_err(|err| err.to_string())?;
         decrypted.push((entry_path, secret));
     }
 
@@ -81,20 +53,6 @@ fn collect_root_scoped_entry_paths(
     Ok(scoped_paths)
 }
 
-fn clear_saved_fido2_enrollment_state(recipients: &StoreRecipients) {
-    for recipient in recipients.fido2() {
-        let Ok(Some(parsed)) = parse_fido2_recipient_string(recipient) else {
-            continue;
-        };
-        if let Err(err) = clear_pending_fido2_enrollment(&parsed.id) {
-            log_error(format!(
-                "Failed to clear the pending FIDO2 enrollment cache for '{}': {err}",
-                parsed.id
-            ));
-        }
-    }
-}
-
 pub(in crate::backend) fn try_initialize_empty_store_recipients(
     store_root: &str,
     recipients: &StoreRecipients,
@@ -108,19 +66,9 @@ pub(in crate::backend) fn try_initialize_empty_store_recipients(
 
     let recipients_contents =
         standard_recipient_file_contents(recipients.standard(), private_key_requirement);
-    let fido2_recipients_contents = fido2_recipient_file_contents(recipients.fido2());
-    let fido2_recipients_path = fido2_recipients_file_for_recipients_path(&recipients_path);
-    let had_fido2_recipients_path = fido2_recipients_path.exists();
     let should_initialize_git = !has_git_repository(store_root);
 
-    with_updated_recipient_files(
-        &recipients_path,
-        &recipients_contents,
-        &fido2_recipients_path,
-        &fido2_recipients_contents,
-        || Ok(()),
-    )?;
-    clear_saved_fido2_enrollment_state(recipients);
+    with_updated_recipient_file(&recipients_path, &recipients_contents, || Ok(()))?;
 
     if should_initialize_git {
         ensure_store_git_repository(store_root)?;
@@ -129,14 +77,7 @@ pub(in crate::backend) fn try_initialize_empty_store_recipients(
     maybe_commit_git_paths(
         store_root,
         "Update password store recipients",
-        std::iter::once(password_entry_git_path(&store_dir, &recipients_path)?).chain(
-            (!fido2_recipients_contents.trim().is_empty() || had_fido2_recipients_path)
-                .then(|| {
-                    password_entry_git_path(&store_dir, &fido2_recipients_path)
-                        .map_err(|err| err.to_string())
-                })
-                .transpose()?,
-        ),
+        std::iter::once(password_entry_git_path(&store_dir, &recipients_path)?),
         None,
     );
 
@@ -192,48 +133,32 @@ pub fn save_store_recipients_for_relative_dir(
         .map_err(store_recipients_error_from_integrated_message)?;
     let recipients_path = recipients_file_for_relative_dir(store_root, relative_dir)
         .map_err(store_recipients_error_from_integrated_message)?;
-    let decrypted_entries =
-        decrypted_store_entries_with_progress(&store_dir, store_root, &recipients_path, None)
-            .map_err(store_recipients_error_from_integrated_message)?;
+    let decrypted_entries = decrypted_store_entries(&store_dir, store_root, &recipients_path)
+        .map_err(store_recipients_error_from_integrated_message)?;
     let recipients_contents =
         standard_recipient_file_contents(recipients.standard(), private_key_requirement);
-    let fido2_recipients_contents = fido2_recipient_file_contents(recipients.fido2());
-    let context = IntegratedCryptoContext::load_for_recipient_contents(
-        &recipients_contents,
-        &fido2_recipients_contents,
-    )
-    .map_err(store_recipients_error_from_integrated_message)?;
-    let fido2_recipients_path = fido2_recipients_file_for_recipients_path(&recipients_path);
+    let context = IntegratedCryptoContext::load_for_recipient_contents(&recipients_contents)
+        .map_err(store_recipients_error_from_integrated_message)?;
     let should_initialize_git = !recipients_path.exists() && !has_git_repository(store_root);
-    let had_fido2_recipients_path = fido2_recipients_path.exists();
     let mut committed_entry_paths = Vec::new();
 
-    with_updated_recipient_files(
-        &recipients_path,
-        &recipients_contents,
-        &fido2_recipients_path,
-        &fido2_recipients_contents,
-        || {
-            for (entry_path, secret) in &decrypted_entries {
-                let label = label_from_entry_path(&store_dir, entry_path)?;
-                let updated_entry_path = desired_entry_file_path(store_root, &label)?;
-                let ciphertext = context.encrypt_contents_with_existing(secret, None)?;
-                write_atomic_file(&updated_entry_path, &ciphertext)
-                    .map_err(|err| err.to_string())?;
-                if updated_entry_path != *entry_path {
-                    fs::remove_file(entry_path).map_err(|err| err.to_string())?;
-                }
-                committed_entry_paths
-                    .push(password_entry_git_path(&store_dir, &updated_entry_path)?);
-                if updated_entry_path != *entry_path {
-                    committed_entry_paths.push(password_entry_git_path(&store_dir, entry_path)?);
-                }
+    with_updated_recipient_file(&recipients_path, &recipients_contents, || {
+        for (entry_path, secret) in &decrypted_entries {
+            let label = label_from_entry_path(&store_dir, entry_path)?;
+            let updated_entry_path = desired_entry_file_path(store_root, &label)?;
+            let ciphertext = context.encrypt_contents_with_existing(secret, None)?;
+            write_atomic_file(&updated_entry_path, &ciphertext).map_err(|err| err.to_string())?;
+            if updated_entry_path != *entry_path {
+                fs::remove_file(entry_path).map_err(|err| err.to_string())?;
             }
-            Ok(())
-        },
-    )
+            committed_entry_paths.push(password_entry_git_path(&store_dir, &updated_entry_path)?);
+            if updated_entry_path != *entry_path {
+                committed_entry_paths.push(password_entry_git_path(&store_dir, entry_path)?);
+            }
+        }
+        Ok(())
+    })
     .map_err(store_recipients_error_from_integrated_message)?;
-    clear_saved_fido2_enrollment_state(recipients);
 
     if should_initialize_git {
         ensure_store_git_repository(store_root)
@@ -246,135 +171,6 @@ pub fn save_store_recipients_for_relative_dir(
         std::iter::once(
             password_entry_git_path(&store_dir, &recipients_path)
                 .map_err(store_recipients_error_from_integrated_message)?,
-        )
-        .chain(
-            (!fido2_recipients_contents.trim().is_empty() || had_fido2_recipients_path)
-                .then(|| {
-                    password_entry_git_path(&store_dir, &fido2_recipients_path)
-                        .map_err(store_recipients_error_from_integrated_message)
-                })
-                .transpose()?,
-        )
-        .chain(committed_entry_paths),
-        Some(context.fingerprint()),
-    );
-
-    Ok(())
-}
-
-pub fn save_store_recipients_with_progress(
-    store_root: &str,
-    recipients: &StoreRecipients,
-    private_key_requirement: StoreRecipientsPrivateKeyRequirement,
-    report_progress: &mut dyn FnMut(StoreRecipientsSaveProgress),
-) -> Result<(), StoreRecipientsError> {
-    save_store_recipients_with_progress_for_relative_dir(
-        store_root,
-        ".",
-        recipients,
-        private_key_requirement,
-        report_progress,
-    )
-}
-
-pub fn save_store_recipients_with_progress_for_relative_dir(
-    store_root: &str,
-    relative_dir: &str,
-    recipients: &StoreRecipients,
-    private_key_requirement: StoreRecipientsPrivateKeyRequirement,
-    report_progress: &mut dyn FnMut(StoreRecipientsSaveProgress),
-) -> Result<(), StoreRecipientsError> {
-    let store_dir = ensure_store_directory(store_root)
-        .map_err(store_recipients_error_from_integrated_message)?;
-    let recipients_path = recipients_file_for_relative_dir(store_root, relative_dir)
-        .map_err(store_recipients_error_from_integrated_message)?;
-    let decrypted_entries = decrypted_store_entries_with_progress(
-        &store_dir,
-        store_root,
-        &recipients_path,
-        Some(report_progress),
-    )
-    .map_err(store_recipients_error_from_integrated_message)?;
-    let recipients_contents =
-        standard_recipient_file_contents(recipients.standard(), private_key_requirement);
-    let fido2_recipients_contents = fido2_recipient_file_contents(recipients.fido2());
-    let context = IntegratedCryptoContext::load_for_recipient_contents(
-        &recipients_contents,
-        &fido2_recipients_contents,
-    )
-    .map_err(store_recipients_error_from_integrated_message)?;
-    let fido2_recipients_path = fido2_recipients_file_for_recipients_path(&recipients_path);
-    let should_initialize_git = !recipients_path.exists() && !has_git_repository(store_root);
-    let had_fido2_recipients_path = fido2_recipients_path.exists();
-    let mut committed_entry_paths = Vec::new();
-
-    with_updated_recipient_files(
-        &recipients_path,
-        &recipients_contents,
-        &fido2_recipients_path,
-        &fido2_recipients_contents,
-        || {
-            let total_items = decrypted_entries.len();
-            for (index, (entry_path, secret)) in decrypted_entries.iter().enumerate() {
-                let current_item = index + 1;
-                let label = label_from_entry_path(&store_dir, entry_path)?;
-                let updated_entry_path = desired_entry_file_path(store_root, &label)?;
-                report_progress(StoreRecipientsSaveProgress {
-                    stage: StoreRecipientsSaveStage::WritingUpdatedItems,
-                    current_item,
-                    total_items,
-                    current_touch: 0,
-                    total_touches: 0,
-                });
-                let ciphertext = context.encrypt_contents_with_existing_and_progress(
-                    secret,
-                    None,
-                    Some(&mut |progress| {
-                        report_progress(StoreRecipientsSaveProgress {
-                            stage: StoreRecipientsSaveStage::WritingUpdatedItems,
-                            current_item,
-                            total_items,
-                            current_touch: progress.current_step,
-                            total_touches: progress.total_steps,
-                        });
-                    }),
-                )?;
-                write_atomic_file(&updated_entry_path, &ciphertext)
-                    .map_err(|err| err.to_string())?;
-                if updated_entry_path != *entry_path {
-                    fs::remove_file(entry_path).map_err(|err| err.to_string())?;
-                }
-                committed_entry_paths
-                    .push(password_entry_git_path(&store_dir, &updated_entry_path)?);
-                if updated_entry_path != *entry_path {
-                    committed_entry_paths.push(password_entry_git_path(&store_dir, entry_path)?);
-                }
-            }
-            Ok(())
-        },
-    )
-    .map_err(store_recipients_error_from_integrated_message)?;
-    clear_saved_fido2_enrollment_state(recipients);
-
-    if should_initialize_git {
-        ensure_store_git_repository(store_root)
-            .map_err(store_recipients_error_from_integrated_message)?;
-    }
-
-    maybe_commit_git_paths(
-        store_root,
-        "Update password store recipients",
-        std::iter::once(
-            password_entry_git_path(&store_dir, &recipients_path)
-                .map_err(store_recipients_error_from_integrated_message)?,
-        )
-        .chain(
-            (!fido2_recipients_contents.trim().is_empty() || had_fido2_recipients_path)
-                .then(|| {
-                    password_entry_git_path(&store_dir, &fido2_recipients_path)
-                        .map_err(store_recipients_error_from_integrated_message)
-                })
-                .transpose()?,
         )
         .chain(committed_entry_paths),
         Some(context.fingerprint()),

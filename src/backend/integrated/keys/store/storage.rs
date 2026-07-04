@@ -47,7 +47,6 @@ const HARDWAREKEY_FEATURE_DISABLED_ERROR: &str =
     "Managed hardware-key setup is disabled in this build of Keycord.";
 use crate::backend::PrivateKeyError;
 #[cfg(feature = "fidokey")]
-use crate::fido2_recipient::parse_fido2_recipient_string;
 use crate::logging::log_error;
 use crate::preferences::Preferences;
 use crate::support::runtime::has_smartcard_permission;
@@ -595,7 +594,7 @@ fn store_fido2_private_key_manifest(
 #[cfg(feature = "fidokey")]
 fn store_fido2_private_key_cert(
     cert: Cert,
-    binding_recipient: &str,
+    binding_descriptor: &super::super::fido2::Fido2DirectBindingDescriptor,
 ) -> Result<ManagedRipassoPrivateKey, PrivateKeyError> {
     let keys_dir = ripasso_fido_keys_dir().map_err(PrivateKeyError::other)?;
     ensure_private_dir(&keys_dir).map_err(|err| PrivateKeyError::other(err.to_string()))?;
@@ -606,9 +605,7 @@ fn store_fido2_private_key_cert(
         ));
     }
 
-    let binding = super::super::fido2::direct_binding_from_store_recipient(binding_recipient)
-        .map_err(PrivateKeyError::other)?
-        .ok_or_else(|| PrivateKeyError::other("That FIDO2 security key is invalid."))?;
+    let binding = binding_descriptor.binding();
     let key = managed_fido2_private_key_from_cert(&cert);
     let mut private_key_bytes = Vec::new();
     cert.as_tsk()
@@ -994,16 +991,13 @@ pub fn generate_ripasso_hardware_key(
 pub fn generate_fido2_private_key(
     pin: Option<&str>,
 ) -> Result<ManagedRipassoPrivateKey, PrivateKeyError> {
-    let recipient = super::super::fido2::create_fido2_private_key_binding(pin)?;
-    let parsed = parse_fido2_recipient_string(&recipient)
-        .map_err(PrivateKeyError::other)?
-        .ok_or_else(|| PrivateKeyError::other("That FIDO2 security key is invalid."))?;
-    let short_id = &parsed.id[parsed.id.len().saturating_sub(6)..];
-    let user_id = format!("{} ({short_id})", parsed.label);
+    let descriptor = super::super::fido2::create_fido2_private_key_binding(pin)?;
+    let short_id = &descriptor.fingerprint[descriptor.fingerprint.len().saturating_sub(6)..];
+    let user_id = format!("{} ({short_id})", descriptor.label);
     let (cert, _) = CertBuilder::general_purpose(Some(user_id.as_str()))
         .generate()
         .map_err(|err| PrivateKeyError::other(err.to_string()))?;
-    store_fido2_private_key_cert(cert, &recipient)
+    store_fido2_private_key_cert(cert, &descriptor)
 }
 
 #[cfg(not(feature = "fidokey"))]

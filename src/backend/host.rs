@@ -153,10 +153,6 @@ pub(super) const fn password_entry_is_readable(_store_root: &str, _label: &str) 
     true
 }
 
-pub(super) const fn password_entry_fido2_recipient_count(_store_root: &str, _label: &str) -> usize {
-    0
-}
-
 pub(super) fn save_password_entry(
     store_root: &str,
     label: &str,
@@ -247,12 +243,6 @@ pub(super) fn save_store_recipients_with_progress(
     recipients: &StoreRecipients,
     private_key_requirement: StoreRecipientsPrivateKeyRequirement,
 ) -> Result<(), StoreRecipientsError> {
-    if !recipients.fido2().is_empty() {
-        return Err(StoreRecipientsError::other(
-            "FIDO2 recipients require the Integrated backend.",
-        ));
-    }
-
     if try_initialize_empty_store_recipients(store_root, recipients, private_key_requirement)
         .map_err(store_recipients_error_from_internal_message)?
     {
@@ -698,7 +688,7 @@ mod tests {
             |store_root, recipients| {
                 save_store_recipients(
                     store_root,
-                    &StoreRecipients::new(recipients.to_vec(), Vec::new()),
+                    &StoreRecipients::new(recipients.to_vec()),
                     StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
                 )
                 .map_err(|err| err.to_string())
@@ -708,23 +698,6 @@ mod tests {
                     .map_err(|err| err.to_string())
             },
         );
-    }
-
-    #[test]
-    fn host_backend_rejects_fido2_store_recipients() {
-        let err = save_store_recipients(
-            "/tmp/unused",
-            &StoreRecipients::new(
-                Vec::new(),
-                vec![String::from(
-                "keycord-fido2-recipient-v1=0123456789abcdef0123456789abcdef01234567:4465736b204b6579:63726564",
-                )],
-            ),
-            StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
-        )
-        .expect_err("host backend should reject FIDO2 recipients");
-
-        assert!(matches!(err, StoreRecipientsError::Other(_)));
     }
 
     #[test]
@@ -748,7 +721,7 @@ mod tests {
         let store_root = env.store_root().to_string_lossy().to_string();
         save_store_recipients(
             &store_root,
-            &StoreRecipients::new(vec![key.fingerprint_hex.clone()], Vec::new()),
+            &StoreRecipients::new(vec![key.fingerprint_hex.clone()]),
             StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
         )
         .expect("save store recipients");
@@ -785,7 +758,7 @@ mod tests {
         let store_root = env.store_root().to_string_lossy().to_string();
         save_store_recipients(
             &store_root,
-            &StoreRecipients::new(vec![key.fingerprint_hex.clone()], Vec::new()),
+            &StoreRecipients::new(vec![key.fingerprint_hex.clone()]),
             StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
         )
         .expect("save store recipients");
@@ -830,7 +803,7 @@ mod tests {
         let store_root = env.store_root().to_string_lossy().to_string();
         save_store_recipients(
             &store_root,
-            &StoreRecipients::new(vec![key.fingerprint_hex.clone()], Vec::new()),
+            &StoreRecipients::new(vec![key.fingerprint_hex.clone()]),
             StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
         )
         .expect("save store recipients");

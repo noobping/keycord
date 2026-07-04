@@ -147,8 +147,6 @@ fn build_store_recipients_platform_state(
         host_gpg_warning_group: widgets.store_recipients_host_gpg_warning_group.clone(),
         host_gpg_warning_list: widgets.store_recipients_host_gpg_warning_list.clone(),
         host_gpg_warning_row: widgets.store_recipients_host_gpg_warning_row.clone(),
-        fido2_info_group: widgets.store_recipients_fido2_info_group.clone(),
-        fido2_info_list: widgets.store_recipients_fido2_info_list.clone(),
         scope_group: widgets.store_recipients_scope_group.clone(),
         saving_group: widgets.store_recipients_saving_group.clone(),
         keys_group: widgets.store_recipients_keys_group.clone(),
@@ -164,7 +162,6 @@ fn build_store_recipients_platform_state(
         git_list: widgets.store_recipients_git_list.clone(),
         setup_hardware_key_row: widgets.store_recipients_setup_hardware_key_row.clone(),
         add_hardware_key_row: widgets.store_recipients_add_hardware_key_row.clone(),
-        add_fido2_key_row: widgets.store_recipients_add_fido2_key_row.clone(),
         store_git_page: store_git_page.clone(),
         import_hardware_key_row: widgets.store_recipients_import_hardware_key_row.clone(),
         import_clipboard_row: widgets.store_recipients_import_clipboard_row.clone(),
@@ -172,7 +169,6 @@ fn build_store_recipients_platform_state(
         generate_key_row: widgets.store_recipients_generate_key_row.clone(),
         generate_fido2_key_row: widgets.store_recipients_generate_fido2_key_row.clone(),
         require_all_row: widgets.store_recipients_require_all_row.clone(),
-        all_fido2_keys_required_row: widgets.store_recipients_all_fido2_keys_required_row.clone(),
         require_all_check: widgets.store_recipients_require_all_check.clone(),
         private_key_generation_page: widgets.private_key_generation_page.clone(),
         private_key_generation_stack: widgets.private_key_generation_stack.clone(),
@@ -215,8 +211,6 @@ fn build_store_recipients_page_state(
     ));
     let save_in_flight = Rc::new(Cell::new(false));
     let save_queued = Rc::new(Cell::new(false));
-    let additional_fido2_save_guide_dialog = Rc::new(RefCell::new(None));
-    let fido2_save_progress_dialog = Rc::new(RefCell::new(None));
     let key_rows = Rc::new(RefCell::new(Vec::new()));
     let git_rows = Rc::new(RefCell::new(Vec::new()));
 
@@ -238,13 +232,6 @@ fn build_store_recipients_page_state(
                         .upcast()],
                 ),
                 SearchablePreferencesGroup::with_widgets(
-                    &widgets.store_recipients_fido2_info_group,
-                    vec![widgets
-                        .store_recipients_all_fido2_keys_required_row
-                        .clone()
-                        .upcast()],
-                ),
-                SearchablePreferencesGroup::with_widgets(
                     &widgets.store_recipients_scope_group,
                     vec![widgets.store_recipients_scope_row.clone().upcast()],
                 ),
@@ -254,10 +241,7 @@ fn build_store_recipients_page_state(
                 ),
                 SearchablePreferencesGroup::with_widgets(
                     &widgets.store_recipients_create_group,
-                    vec![
-                        widgets.store_recipients_generate_key_row.clone().upcast(),
-                        widgets.store_recipients_add_fido2_key_row.clone().upcast(),
-                    ],
+                    vec![widgets.store_recipients_generate_key_row.clone().upcast()],
                 ),
                 SearchablePreferencesGroup::with_widgets(
                     &widgets.store_recipients_add_group,
@@ -314,8 +298,6 @@ fn build_store_recipients_page_state(
         saved_private_key_requirement,
         save_in_flight,
         save_queued,
-        additional_fido2_save_guide_dialog,
-        fido2_save_progress_dialog,
         reopen_after_subpage: Rc::new(Cell::new(false)),
         key_rows,
         git_rows,

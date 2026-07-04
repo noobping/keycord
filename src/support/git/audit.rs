@@ -4,12 +4,9 @@ use super::command::{
 };
 use super::repository::has_git_repository;
 use crate::backend::{available_host_gpg_public_certs, available_standard_public_certs};
-use crate::fido2_recipient::FIDO2_RECIPIENTS_FILE_NAME;
 use crate::logging::{log_error, run_command_with_input, CommandLogOptions};
 use crate::preferences::Preferences;
-use crate::store::recipients::{
-    normalize_standard_recipient, parse_fido2_recipients, parse_standard_recipients,
-};
+use crate::store::recipients::{normalize_standard_recipient, parse_standard_recipients};
 use crate::support::runtime::has_host_permission;
 use sequoia_openpgp::parse::stream::{
     DetachedVerifierBuilder, MessageLayer, MessageStructure, VerificationError, VerificationHelper,
@@ -97,7 +94,6 @@ pub enum StoreGitAuditUnverifiedReason {
     SigningKeyUnavailable,
     SignerNotAuthorized,
     NoResolvableStandardRecipients,
-    OnlyFido2Recipients,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -126,7 +122,6 @@ struct CommitSummary {
 struct TreeRecipientContext {
     resolved_standard_fingerprints: HashSet<String>,
     standard_recipient_count: usize,
-    fido2_recipient_count: usize,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -340,7 +335,6 @@ pub fn audit_unverified_reason_message(reason: StoreGitAuditUnverifiedReason) ->
         StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients => {
             "No resolvable standard recipient keys"
         }
-        StoreGitAuditUnverifiedReason::OnlyFido2Recipients => "Only FIDO2 recipients are available",
     }
 }
 
@@ -980,9 +974,6 @@ fn authorize_signer(
     if signer_matches_resolved_standard_fingerprint(context, signer_fingerprint) {
         return None;
     }
-    if context.standard_recipient_count == 0 && context.fido2_recipient_count > 0 {
-        return Some(StoreGitAuditUnverifiedReason::OnlyFido2Recipients);
-    }
     if context.resolved_standard_fingerprints.is_empty() {
         return Some(StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients);
     }
@@ -1018,7 +1009,6 @@ fn should_retry_with_commit_history_recipients(
             reason,
             StoreGitAuditUnverifiedReason::SignerNotAuthorized
                 | StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients
-                | StoreGitAuditUnverifiedReason::OnlyFido2Recipients
         )
 }
 
@@ -1029,7 +1019,6 @@ fn load_tree_recipient_context(
 ) -> Result<TreeRecipientContext, String> {
     let recipient_paths = list_tree_recipient_paths(store_root, object)?;
     let mut standard_recipients = Vec::new();
-    let mut fido2_recipients = Vec::new();
 
     for path in recipient_paths {
         let contents = read_tree_file(store_root, object, &path)?;
@@ -1039,15 +1028,11 @@ fn load_tree_recipient_context(
             .unwrap_or_default();
         if file_name == ".gpg-id" {
             standard_recipients.extend(parse_standard_recipients(&contents));
-        } else if file_name == FIDO2_RECIPIENTS_FILE_NAME {
-            fido2_recipients.extend(parse_fido2_recipients(&contents));
         }
     }
 
     standard_recipients.sort();
     standard_recipients.dedup();
-    fido2_recipients.sort();
-    fido2_recipients.dedup();
 
     let resolved_standard_fingerprints = standard_recipients
         .iter()
@@ -1057,7 +1042,6 @@ fn load_tree_recipient_context(
     Ok(TreeRecipientContext {
         resolved_standard_fingerprints,
         standard_recipient_count: standard_recipients.len(),
-        fido2_recipient_count: fido2_recipients.len(),
     })
 }
 
@@ -1090,7 +1074,7 @@ fn list_tree_recipient_paths(store_root: &str, object: &str) -> Result<Vec<Strin
                 .file_name()
                 .and_then(|name| name.to_str())
                 .unwrap_or_default();
-            if file_name == ".gpg-id" || file_name == FIDO2_RECIPIENTS_FILE_NAME {
+            if file_name == ".gpg-id" {
                 Some(path)
             } else {
                 None
@@ -1343,17 +1327,6 @@ mod tests {
         assert_eq!(
             authorize_signer(
                 &TreeRecipientContext {
-                    standard_recipient_count: 0,
-                    fido2_recipient_count: 1,
-                    ..TreeRecipientContext::default()
-                },
-                "ABC"
-            ),
-            Some(StoreGitAuditUnverifiedReason::OnlyFido2Recipients)
-        );
-        assert_eq!(
-            authorize_signer(
-                &TreeRecipientContext {
                     standard_recipient_count: 1,
                     ..TreeRecipientContext::default()
                 },
@@ -1390,10 +1363,7 @@ mod tests {
             StoreGitAuditUnverifiedReason::NoResolvableStandardRecipients,
             true,
         ));
-        assert!(should_retry_with_commit_history_recipients(
-            StoreGitAuditUnverifiedReason::OnlyFido2Recipients,
-            true,
-        ));
+        assert!(should_retry_with_commit_history_recipients(true,));
         assert!(!should_retry_with_commit_history_recipients(
             StoreGitAuditUnverifiedReason::InvalidSignature,
             true,

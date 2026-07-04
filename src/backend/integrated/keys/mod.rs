@@ -33,15 +33,9 @@ pub(in crate::backend::integrated) use self::errors::{
     store_recipients_error_from_integrated_message, INCOMPATIBLE_PRIVATE_KEY_ERROR,
     LOCKED_PRIVATE_KEY_ERROR, MISSING_PRIVATE_KEY_ERROR,
 };
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) use self::fido2::{
-    ciphertext_is_any_managed_bundle, decrypt_fido2_any_managed_bundle_dek_for_bindings,
-    decrypt_fido2_any_managed_bundle_dek_for_fingerprint,
-    decrypt_fido2_any_managed_bundle_for_fingerprint, decrypt_fido2_direct_required_layer,
-    decrypt_payload_from_any_managed_bundle, direct_binding_from_store_recipient,
-    encrypt_fido2_any_managed_bundle_with_progress, encrypt_fido2_direct_required_layer,
-    extract_pgp_wrapped_dek_from_any_managed_bundle,
-    reencrypt_fido2_any_managed_bundle_with_progress, Fido2DirectBinding, Fido2ReadProgress,
-    Fido2WriteProgress,
+    encrypt_fido2_direct_required_layer, Fido2DirectBindingDescriptor,
 };
 #[cfg(all(test, feature = "fidokey"))]
 pub(in crate::backend::integrated) use self::fido2::{
@@ -73,14 +67,13 @@ pub use self::store::store_ripasso_hardware_key_bytes;
 #[cfg(target_os = "linux")]
 pub use self::store::store_ripasso_private_key_bytes;
 pub use self::store::{
-    armored_ripasso_private_key, armored_ripasso_public_key, create_fido2_store_recipient,
-    discover_ripasso_hardware_keys, generate_fido2_private_key, generate_ripasso_hardware_key,
-    generate_ripasso_private_key, import_ripasso_hardware_key_bytes,
-    import_ripasso_private_key_bytes, is_ripasso_private_key_unlocked,
-    list_connected_smartcard_keys, list_ripasso_private_keys, remove_ripasso_private_key,
-    ripasso_private_key_requires_passphrase, ripasso_private_key_requires_session_unlock,
-    ripasso_private_key_title, set_fido2_security_key_pin,
-    unlock_fido2_store_recipient_for_session, unlock_ripasso_private_key_for_session,
+    armored_ripasso_private_key, armored_ripasso_public_key, discover_ripasso_hardware_keys,
+    generate_fido2_private_key, generate_ripasso_hardware_key, generate_ripasso_private_key,
+    import_ripasso_hardware_key_bytes, import_ripasso_private_key_bytes,
+    is_ripasso_private_key_unlocked, list_connected_smartcard_keys, list_ripasso_private_keys,
+    remove_ripasso_private_key, ripasso_private_key_requires_passphrase,
+    ripasso_private_key_requires_session_unlock, ripasso_private_key_title,
+    set_fido2_security_key_pin, unlock_ripasso_private_key_for_session,
 };
 pub(in crate::backend::integrated) use self::store::{
     available_private_key_fingerprints, build_ripasso_crypto_from_key_ring,

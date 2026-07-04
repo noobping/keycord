@@ -102,8 +102,6 @@ pub(in crate::window) struct WindowWidgets {
     pub(in crate::window) store_recipients_host_gpg_warning_group: PreferencesGroup,
     pub(in crate::window) store_recipients_host_gpg_warning_list: PreferencesGroup,
     pub(in crate::window) store_recipients_host_gpg_warning_row: ActionRow,
-    pub(in crate::window) store_recipients_fido2_info_group: PreferencesGroup,
-    pub(in crate::window) store_recipients_fido2_info_list: PreferencesGroup,
     pub(in crate::window) store_recipients_scope_group: PreferencesGroup,
     pub(in crate::window) store_recipients_saving_group: PreferencesGroup,
     pub(in crate::window) store_recipients_keys_group: PreferencesGroup,
@@ -120,14 +118,12 @@ pub(in crate::window) struct WindowWidgets {
     pub(in crate::window) store_recipients_git_list: PreferencesGroup,
     pub(in crate::window) store_recipients_setup_hardware_key_row: ActionRow,
     pub(in crate::window) store_recipients_add_hardware_key_row: ActionRow,
-    pub(in crate::window) store_recipients_add_fido2_key_row: ActionRow,
     pub(in crate::window) store_recipients_import_hardware_key_row: ActionRow,
     pub(in crate::window) store_recipients_import_clipboard_row: ActionRow,
     pub(in crate::window) store_recipients_import_file_row: ActionRow,
     pub(in crate::window) store_recipients_generate_key_row: ActionRow,
     pub(in crate::window) store_recipients_generate_fido2_key_row: ActionRow,
     pub(in crate::window) store_recipients_require_all_row: ActionRow,
-    pub(in crate::window) store_recipients_all_fido2_keys_required_row: ActionRow,
     pub(in crate::window) store_recipients_require_all_check: CheckButton,
     pub(in crate::window) store_git_page: NavigationPage,
     pub(in crate::window) store_git_search_entry: SearchEntry,
@@ -336,8 +332,6 @@ impl WindowWidgets {
             store_recipients_host_gpg_warning_row: required!(
                 "store_recipients_host_gpg_warning_row"
             ),
-            store_recipients_fido2_info_group: required!("store_recipients_fido2_info_group"),
-            store_recipients_fido2_info_list: required!("store_recipients_fido2_info_group"),
             store_recipients_scope_group: required!("store_recipients_scope_group"),
             store_recipients_saving_group: required!("store_recipients_saving_group"),
             store_recipients_keys_group: required!("store_recipients_keys_group"),
@@ -358,7 +352,6 @@ impl WindowWidgets {
             store_recipients_add_hardware_key_row: required!(
                 "store_recipients_add_hardware_key_row"
             ),
-            store_recipients_add_fido2_key_row: required!("store_recipients_add_fido2_key_row"),
             store_recipients_import_hardware_key_row: required!(
                 "store_recipients_import_hardware_key_row"
             ),
@@ -371,9 +364,6 @@ impl WindowWidgets {
                 "store_recipients_generate_fido2_key_row"
             ),
             store_recipients_require_all_row: required!("store_recipients_require_all_row"),
-            store_recipients_all_fido2_keys_required_row: required!(
-                "store_recipients_all_fido2_keys_required_row"
-            ),
             store_recipients_require_all_check: required!("store_recipients_require_all_check"),
             store_git_page: required!("store_git_page"),
             store_git_search_entry: required!("store_git_search_entry"),

@@ -61,9 +61,10 @@ const OPTIONAL_PERMISSION_SUCCESS_TOAST: &str = "Restart app to apply.";
 const OPTIONAL_PERMISSION_ERROR_TOAST: &str = "Couldn't grant permission.";
 
 const FIDO2_BACKEND_REQUIRED_TOOLTIP: &str =
-    "Switch to the Integrated backend to use FIDO2 security keys.";
+    "Switch to the Integrated backend to use experimental FIDO2-protected private keys.";
 #[cfg(feature = "flatpak")]
-const FIDO2_PERMISSION_REQUIRED_TOOLTIP: &str = "Grant USB security key access first.";
+const FIDO2_PERMISSION_REQUIRED_TOOLTIP: &str =
+    "Grant USB security key access for experimental FIDO2-protected private keys first.";
 
 #[cfg(feature = "flatpak")]
 const OPTIONAL_FIDO2_ACCESS_ROW_NAME: &str = "keycord-optional-fido2-access-row";
@@ -337,12 +338,12 @@ fn ensure_optional_fido2_access_group_row(
 
     let row = build_optional_permission_row(
         overlay,
-        "Allow USB security key access",
-        "FIDO2 recipients are optional. Grant USB device access if you want Keycord to use a connected FIDO2 security key directly for Keycord-only encryption, then restart Keycord.",
+        "Allow USB security key access (Experimental FIDO2)",
+        "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access.",
         OptionalPermissionCommand {
             copy_command: FLATPAK_FIDO2_OVERRIDE_COMMAND,
             host_args: FLATPAK_FIDO2_OVERRIDE_ARGS,
-            context: "Grant USB security key access",
+            context: "Grant USB security key access (Experimental FIDO2)",
         },
     );
     row.set_widget_name(OPTIONAL_FIDO2_ACCESS_ROW_NAME);

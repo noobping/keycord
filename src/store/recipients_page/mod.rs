@@ -1,7 +1,6 @@
 use super::recipients::{
     read_store_private_key_requirement, read_store_private_key_requirement_for_scope,
-    read_store_recipients, read_store_recipients_for_scope, store_is_supported_in_current_build,
-    ROOT_STORE_RECIPIENTS_SCOPE, UNSUPPORTED_FIDO2_STORE_MESSAGE,
+    read_store_recipients, read_store_recipients_for_scope, ROOT_STORE_RECIPIENTS_SCOPE,
 };
 use crate::backend::DiscoveredHardwareToken;
 use crate::backend::StoreRecipientsPrivateKeyRequirement;
@@ -25,14 +24,11 @@ use std::rc::Rc;
 
 mod export;
 mod generate;
-mod guide;
 mod import;
 mod list;
 mod mode;
-mod progress;
 mod save;
 mod sync;
-use self::progress::StoreRecipientsSaveProgressDialogHandle;
 pub use self::save::{queue_store_recipients_autosave, register_store_recipients_save_action};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -117,9 +113,6 @@ pub struct StoreRecipientsPageState {
     pub saved_private_key_requirement: Rc<Cell<StoreRecipientsPrivateKeyRequirement>>,
     pub save_in_flight: Rc<Cell<bool>>,
     pub save_queued: Rc<Cell<bool>>,
-    pub additional_fido2_save_guide_dialog: Rc<RefCell<Option<Dialog>>>,
-    pub(crate) fido2_save_progress_dialog:
-        Rc<RefCell<Option<StoreRecipientsSaveProgressDialogHandle>>>,
     pub(crate) reopen_after_subpage: Rc<Cell<bool>>,
     pub(crate) key_rows: Rc<RefCell<Vec<Widget>>>,
     pub(crate) git_rows: Rc<RefCell<Vec<Widget>>>,
@@ -131,8 +124,6 @@ pub struct StoreRecipientsPlatformState {
     pub host_gpg_warning_group: PreferencesGroup,
     pub host_gpg_warning_list: PreferencesGroup,
     pub host_gpg_warning_row: ActionRow,
-    pub fido2_info_group: PreferencesGroup,
-    pub fido2_info_list: PreferencesGroup,
     pub scope_group: PreferencesGroup,
     pub saving_group: PreferencesGroup,
     pub keys_group: PreferencesGroup,
@@ -148,7 +139,6 @@ pub struct StoreRecipientsPlatformState {
     pub git_list: PreferencesGroup,
     pub setup_hardware_key_row: ActionRow,
     pub add_hardware_key_row: ActionRow,
-    pub add_fido2_key_row: ActionRow,
     pub store_git_page: StoreGitPageState,
     pub import_hardware_key_row: ActionRow,
     pub import_clipboard_row: ActionRow,
@@ -156,7 +146,6 @@ pub struct StoreRecipientsPlatformState {
     pub generate_key_row: ActionRow,
     pub generate_fido2_key_row: ActionRow,
     pub require_all_row: ActionRow,
-    pub all_fido2_keys_required_row: ActionRow,
     pub require_all_check: CheckButton,
     pub private_key_generation_page: NavigationPage,
     pub private_key_generation_stack: Stack,
@@ -194,10 +183,9 @@ impl StoreRecipientsPageState {
     }
 }
 
-fn ordered_store_recipients_lists(state: &StoreRecipientsPageState) -> [PreferencesGroup; 8] {
+fn ordered_store_recipients_lists(state: &StoreRecipientsPageState) -> [PreferencesGroup; 7] {
     [
         state.platform.host_gpg_warning_list.clone(),
-        state.platform.fido2_info_list.clone(),
         state.platform.scope_list.clone(),
         state.list.clone(),
         state.platform.create_list.clone(),
@@ -344,14 +332,6 @@ pub fn show_store_recipients_create_page(
 
 pub fn show_store_recipients_edit_page(state: &StoreRecipientsPageState, store: impl Into<String>) {
     let store = store.into();
-    if !store_is_supported_in_current_build(&store) {
-        state
-            .platform
-            .overlay
-            .add_toast(Toast::new(&gettext(UNSUPPORTED_FIDO2_STORE_MESSAGE)));
-        return;
-    }
-
     show_store_recipients_page(
         state,
         StoreRecipientsRequest::edit(store.clone()),

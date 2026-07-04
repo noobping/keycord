@@ -1528,25 +1528,6 @@
                               </object>
                             </child>
                             <child>
-                              <object class="AdwPreferencesGroup" id="store_recipients_fido2_info_group">
-                                <property name="visible">false</property>
-                                <child>
-                                  <object class="AdwActionRow"
-                                    id="store_recipients_all_fido2_keys_required_row">
-                                    <property name="title" translatable="yes">All security keys are required (Experimental)</property>
-                                    <property name="subtitle" translatable="yes">This experimental multi-layer encryption mode asks each selected security key one by one when saving a password.</property>
-                                    <property name="activatable">False</property>
-                                    <property name="visible">False</property>
-                                    <child type="prefix">
-                                      <object class="GtkImage">
-                                        <property name="icon-name">dialog-information-symbolic</property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
                               <object class="AdwPreferencesGroup" id="store_recipients_scope_group">
                                 <property name="visible">false</property>
                                 <property name="title" translatable="yes">Keys for this store</property>
@@ -1593,19 +1574,6 @@
                                     id="store_recipients_generate_key_row">
                                     <property name="title" translatable="yes">Generate private key</property>
                                     <property name="subtitle" translatable="yes">Create a new password-protected key.</property>
-                                    <property name="activatable">True</property>
-                                    <child type="suffix">
-                                      <object class="GtkImage">
-                                        <property name="icon-name">go-next-symbolic</property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="AdwActionRow"
-                                    id="store_recipients_add_fido2_key_row">
-                                    <property name="title" translatable="yes">Add FIDO2 security key (Experimental)</property>
-                                    <property name="subtitle" translatable="yes">Use a connected security key for Keycord-only encryption. This option is incompatible with advanced search, Keycord tools, and other pass apps.</property>
                                     <property name="activatable">True</property>
                                     <child type="suffix">
                                       <object class="GtkImage">

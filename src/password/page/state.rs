@@ -90,15 +90,10 @@ pub(super) fn show_password_status_message(
     state.status.set_description(Some(status_description));
 }
 
-pub(super) fn show_password_loading_state(
-    state: &PasswordPageState,
-    title: &str,
-    subtitle: &str,
-    fido2_recipient_count: usize,
-) {
+pub(super) fn show_password_loading_state(state: &PasswordPageState, title: &str, subtitle: &str) {
     state.username.set_text("");
     show_password_editor_chrome(state, title, subtitle);
-    let (status_title, status_description) = password_open_status_text(fido2_recipient_count);
+    let (status_title, status_description) = password_open_status_text();
     show_password_status_message(state, status_title, status_description);
 }
 

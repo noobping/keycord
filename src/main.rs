@@ -8,7 +8,6 @@ mod setup;
 
 mod backend;
 mod clipboard;
-mod fido2_recipient;
 mod i18n;
 #[cfg(feature = "logging")]
 mod logging;

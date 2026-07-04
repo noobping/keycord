@@ -3,10 +3,7 @@ use super::{
     open_password_entry_page, password_unlock_status_text,
     save_current_password_entry_without_git_unlock_prompt, standard, PasswordPageState,
 };
-use crate::backend::{
-    password_entry_fido2_recipient_count, preferred_ripasso_private_key_fingerprint_for_entry,
-    PasswordEntryError,
-};
+use crate::backend::{preferred_ripasso_private_key_fingerprint_for_entry, PasswordEntryError};
 use crate::logging::log_error;
 use crate::password::model::OpenPassFile;
 use crate::preferences::Preferences;
@@ -44,9 +41,7 @@ pub(super) fn handle_open_password_entry_error(
     }
 
     if open_password_error_action(error) == OpenPasswordErrorAction::PromptUnlock {
-        let fido2_recipient_count =
-            password_entry_fido2_recipient_count(pass_file.store_path(), &pass_file.label());
-        let (status_title, status_description) = password_unlock_status_text(fido2_recipient_count);
+        let (status_title, status_description) = password_unlock_status_text();
         show_password_status_message(state, status_title, status_description);
         match preferred_ripasso_private_key_fingerprint_for_entry(
             pass_file.store_path(),

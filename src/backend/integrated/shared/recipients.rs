@@ -1,14 +1,10 @@
 use super::keys::{
-    available_private_key_fingerprints, direct_binding_from_store_recipient,
-    ensure_ripasso_private_key_is_ready, fingerprint_from_string, load_available_standard_key_ring,
-    missing_private_key_error, selected_ripasso_own_fingerprint, Fido2DirectBinding,
+    available_private_key_fingerprints, ensure_ripasso_private_key_is_ready,
+    fingerprint_from_string, load_available_standard_key_ring, missing_private_key_error,
+    selected_ripasso_own_fingerprint,
 };
-use super::paths::{fido2_recipients_file_for_recipients_path, recipients_file_for_label};
+use super::paths::recipients_file_for_label;
 use crate::backend::{PasswordEntryError, StoreRecipientsPrivateKeyRequirement};
-use crate::fido2_recipient::{
-    build_fido2_recipient_string, is_fido2_recipient_string, parse_fido2_recipient_metadata_line,
-    parse_fido2_recipient_string,
-};
 use sequoia_openpgp::{Cert, KeyHandle};
 use std::collections::{HashMap, HashSet};
 use std::fs;
@@ -23,10 +19,6 @@ pub(super) enum ResolvedRecipient<'a> {
         cert: &'a Arc<Cert>,
         requested_id: String,
     },
-    Fido2 {
-        binding: Fido2DirectBinding,
-        requested_id: String,
-    },
 }
 
 type StandardRecipientMatch<'a> = ([u8; 20], &'a Arc<Cert>);
@@ -35,21 +27,12 @@ impl ResolvedRecipient<'_> {
     pub(super) fn recipient_id(&self) -> String {
         match self {
             Self::Standard { cert, .. } => cert.fingerprint().to_hex(),
-            Self::Fido2 { requested_id, .. } => requested_id.clone(),
         }
     }
 
-    pub(super) fn cert(&self) -> Option<&Arc<Cert>> {
+    pub(super) fn cert(&self) -> &Arc<Cert> {
         match self {
-            Self::Standard { cert, .. } => Some(cert),
-            Self::Fido2 { .. } => None,
-        }
-    }
-
-    pub(super) fn fido2_binding(&self) -> Option<Fido2DirectBinding> {
-        match self {
-            Self::Standard { .. } => None,
-            Self::Fido2 { binding, .. } => Some(binding.clone()),
+            Self::Standard { cert, .. } => cert,
         }
     }
 }
@@ -143,7 +126,7 @@ fn standard_recipient_matches_user_id(needle: &str, user_id: &str) -> bool {
             .is_some_and(|email| email == needle)
 }
 
-fn resolved_standard_recipients_from_contents<'a>(
+pub(super) fn resolved_recipients_from_contents<'a>(
     contents: &str,
     key_ring: &'a HashMap<[u8; 20], Arc<Cert>>,
 ) -> Result<Vec<ResolvedRecipient<'a>>, String> {
@@ -166,40 +149,6 @@ fn resolved_standard_recipients_from_contents<'a>(
         });
     }
 
-    Ok(recipients)
-}
-
-fn resolved_fido2_recipients_from_contents<'a>(
-    contents: &str,
-) -> Result<Vec<ResolvedRecipient<'a>>, String> {
-    let mut recipients = Vec::new();
-    let mut seen_fido2 = HashSet::new();
-
-    for recipient_id in parse_fido2_recipient_file_contents(contents)? {
-        let Some(binding) = direct_binding_from_store_recipient(&recipient_id)? else {
-            return Err(format!(
-                "Recipient '{recipient_id}' is not available in the app."
-            ));
-        };
-        if !seen_fido2.insert(binding.fingerprint.clone()) {
-            continue;
-        }
-        recipients.push(ResolvedRecipient::Fido2 {
-            binding,
-            requested_id: recipient_id,
-        });
-    }
-
-    Ok(recipients)
-}
-
-pub(super) fn resolved_recipients_from_contents<'a>(
-    standard_contents: &str,
-    fido2_contents: &str,
-    key_ring: &'a HashMap<[u8; 20], Arc<Cert>>,
-) -> Result<Vec<ResolvedRecipient<'a>>, String> {
-    let mut recipients = resolved_standard_recipients_from_contents(standard_contents, key_ring)?;
-    recipients.extend(resolved_fido2_recipients_from_contents(fido2_contents)?);
     Ok(recipients)
 }
 
@@ -228,35 +177,6 @@ fn metadata_line_matches(line: &str, expected: &str) -> bool {
         .is_some_and(|value| value.eq_ignore_ascii_case(expected))
 }
 
-fn parse_fido2_recipient_file_contents(contents: &str) -> Result<Vec<String>, String> {
-    let mut recipients = Vec::new();
-
-    for raw_line in contents.lines() {
-        let line = raw_line.trim();
-        if line.is_empty() {
-            continue;
-        }
-
-        if let Some(recipient) = parse_fido2_recipient_metadata_line(line)? {
-            if !recipients.iter().any(|existing| existing == &recipient) {
-                recipients.push(recipient);
-            }
-            continue;
-        }
-
-        let Some(parsed) = parse_fido2_recipient_string(line)? else {
-            return Err("Invalid FIDO2 recipient file.".to_string());
-        };
-        let normalized =
-            build_fido2_recipient_string(&parsed.id, &parsed.label, &parsed.credential_id)?;
-        if !recipients.iter().any(|existing| existing == &normalized) {
-            recipients.push(normalized);
-        }
-    }
-
-    Ok(recipients)
-}
-
 pub(super) fn standard_recipient_file_contents(
     standard_recipients: &[String],
     private_key_requirement: StoreRecipientsPrivateKeyRequirement,
@@ -274,34 +194,8 @@ pub(super) fn standard_recipient_file_contents(
     format!("{}\n", lines.join("\n"))
 }
 
-pub(super) fn fido2_recipient_file_contents(fido2_recipients: &[String]) -> String {
-    if fido2_recipients.is_empty() {
-        return String::new();
-    }
-
-    format!("{}\n", fido2_recipients.join("\n"))
-}
-
-fn read_standard_recipient_file_contents(recipients_file: &Path) -> Result<String, String> {
+pub(super) fn read_store_recipient_file_contents(recipients_file: &Path) -> Result<String, String> {
     fs::read_to_string(recipients_file).map_err(|err| err.to_string())
-}
-
-fn read_fido2_recipient_file_contents(recipients_file: &Path) -> Result<String, String> {
-    let fido2_recipients_path = fido2_recipients_file_for_recipients_path(recipients_file);
-    match fs::read_to_string(fido2_recipients_path) {
-        Ok(contents) => Ok(contents),
-        Err(err) if err.kind() == std::io::ErrorKind::NotFound => Ok(String::new()),
-        Err(err) => Err(err.to_string()),
-    }
-}
-
-pub(super) fn read_store_recipient_file_contents(
-    recipients_file: &Path,
-) -> Result<(String, String), String> {
-    Ok((
-        read_standard_recipient_file_contents(recipients_file)?,
-        read_fido2_recipient_file_contents(recipients_file)?,
-    ))
 }
 
 pub(super) fn private_key_requirement_from_contents(
@@ -316,56 +210,31 @@ pub(super) fn private_key_requirement_from_contents(
     StoreRecipientsPrivateKeyRequirement::AnyManagedKey
 }
 
-pub(super) fn effective_private_key_requirement(
+pub(super) const fn effective_private_key_requirement(
     configured_requirement: StoreRecipientsPrivateKeyRequirement,
-    standard_recipient_count: usize,
-    fido2_recipient_count: usize,
+    _standard_recipient_count: usize,
 ) -> StoreRecipientsPrivateKeyRequirement {
-    if matches!(
-        configured_requirement,
-        StoreRecipientsPrivateKeyRequirement::AllManagedKeys
-    ) || (standard_recipient_count == 0 && fido2_recipient_count > 1)
-    {
-        StoreRecipientsPrivateKeyRequirement::AllManagedKeys
-    } else {
-        StoreRecipientsPrivateKeyRequirement::AnyManagedKey
-    }
-}
-
-fn effective_private_key_requirement_from_contents(
-    standard_contents: &str,
-    fido2_contents: &str,
-) -> Result<StoreRecipientsPrivateKeyRequirement, String> {
-    Ok(effective_private_key_requirement(
-        private_key_requirement_from_contents(standard_contents),
-        standard_recipient_ids_from_contents(standard_contents).len(),
-        parse_fido2_recipient_file_contents(fido2_contents)?.len(),
-    ))
+    configured_requirement
 }
 
 pub(super) fn required_private_key_fingerprints_from_contents(
-    standard_contents: &str,
-    fido2_contents: &str,
+    contents: &str,
     key_ring: &HashMap<[u8; 20], Arc<Cert>>,
 ) -> Result<Vec<String>, String> {
-    Ok(
-        resolved_recipients_from_contents(standard_contents, fido2_contents, key_ring)?
-            .into_iter()
-            .map(|recipient| recipient.recipient_id())
-            .collect(),
-    )
+    Ok(resolved_recipients_from_contents(contents, key_ring)?
+        .into_iter()
+        .map(|recipient| recipient.recipient_id())
+        .collect())
 }
 
 pub(super) fn encryption_context_fingerprint_from_contents(
-    standard_contents: &str,
-    fido2_contents: &str,
+    contents: &str,
     key_ring: &HashMap<[u8; 20], Arc<Cert>>,
 ) -> Result<String, String> {
-    let recipients =
-        resolved_recipients_from_contents(standard_contents, fido2_contents, key_ring)?;
+    let recipients = resolved_recipients_from_contents(contents, key_ring)?;
     let standard_fingerprints = recipients
         .iter()
-        .filter_map(|recipient| recipient.cert().map(|cert| cert.fingerprint().to_hex()))
+        .map(|recipient| recipient.cert().fingerprint().to_hex())
         .collect::<Vec<_>>();
     let mut preferred_standard_fingerprints =
         Vec::with_capacity(standard_fingerprints.len().saturating_add(1));
@@ -378,17 +247,9 @@ pub(super) fn encryption_context_fingerprint_from_contents(
     }
     preferred_standard_fingerprints.extend(standard_fingerprints);
 
-    if let Some(fingerprint) = prioritized_unique_fingerprints(preferred_standard_fingerprints)
+    prioritized_unique_fingerprints(preferred_standard_fingerprints)
         .into_iter()
         .next()
-    {
-        return Ok(fingerprint);
-    }
-
-    recipients
-        .into_iter()
-        .next()
-        .map(|recipient| recipient.recipient_id())
         .ok_or_else(|| "No recipients were found for this password entry.".to_string())
 }
 
@@ -411,10 +272,6 @@ enum PrivateKeyUsePriority {
 }
 
 fn private_key_use_priority(fingerprint: &str) -> PrivateKeyUsePriority {
-    if is_fido2_recipient_string(fingerprint) {
-        return PrivateKeyUsePriority::Unlockable;
-    }
-
     match ensure_ripasso_private_key_is_ready(fingerprint) {
         Ok(()) => PrivateKeyUsePriority::Ready,
         Err(PasswordEntryError::LockedPrivateKey(_)) => PrivateKeyUsePriority::Unlockable,
@@ -447,10 +304,10 @@ fn prioritized_unique_fingerprints(candidates: impl IntoIterator<Item = String>)
 
 fn recipient_fingerprints_for_label(store_root: &str, label: &str) -> Result<Vec<String>, String> {
     let recipients_file = recipients_file_for_label(store_root, label)?;
-    let (standard_contents, fido2_contents) = read_store_recipient_file_contents(&recipients_file)?;
+    let contents = read_store_recipient_file_contents(&recipients_file)?;
     let key_ring = load_available_standard_key_ring()?;
 
-    required_private_key_fingerprints_from_contents(&standard_contents, &fido2_contents, &key_ring)
+    required_private_key_fingerprints_from_contents(&contents, &key_ring)
 }
 
 pub(super) fn private_key_requirement_for_label(
@@ -458,8 +315,8 @@ pub(super) fn private_key_requirement_for_label(
     label: &str,
 ) -> Result<StoreRecipientsPrivateKeyRequirement, String> {
     let recipients_file = recipients_file_for_label(store_root, label)?;
-    let (standard_contents, fido2_contents) = read_store_recipient_file_contents(&recipients_file)?;
-    effective_private_key_requirement_from_contents(&standard_contents, &fido2_contents)
+    let contents = read_store_recipient_file_contents(&recipients_file)?;
+    Ok(private_key_requirement_from_contents(&contents))
 }
 
 pub fn required_private_key_fingerprints_for_entry(
@@ -469,37 +326,19 @@ pub fn required_private_key_fingerprints_for_entry(
     recipient_fingerprints_for_label(store_root, label)
 }
 
-pub(super) fn password_entry_fido2_recipient_count(
-    store_root: &str,
-    label: &str,
-) -> Result<usize, String> {
-    let recipients_file = recipients_file_for_label(store_root, label)?;
-    let (_, fido2_contents) = read_store_recipient_file_contents(&recipients_file)?;
-    Ok(parse_fido2_recipient_file_contents(&fido2_contents)?.len())
-}
-
 pub fn password_entry_is_readable(store_root: &str, label: &str) -> bool {
     let Ok(recipients_file) = recipients_file_for_label(store_root, label) else {
         return false;
     };
-    let Ok((standard_contents, fido2_contents)) =
-        read_store_recipient_file_contents(&recipients_file)
-    else {
+    let Ok(contents) = read_store_recipient_file_contents(&recipients_file) else {
         return false;
     };
-    let Ok(private_key_requirement) =
-        effective_private_key_requirement_from_contents(&standard_contents, &fido2_contents)
-    else {
-        return false;
-    };
+    let private_key_requirement = private_key_requirement_from_contents(&contents);
     let Ok(key_ring) = load_available_standard_key_ring() else {
         return false;
     };
-    let standard_recipient_ids = standard_recipient_ids_from_contents(&standard_contents);
-    let Ok(fido2_recipient_ids) = parse_fido2_recipient_file_contents(&fido2_contents) else {
-        return false;
-    };
-    if standard_recipient_ids.is_empty() && fido2_recipient_ids.is_empty() {
+    let standard_recipient_ids = standard_recipient_ids_from_contents(&contents);
+    if standard_recipient_ids.is_empty() {
         return false;
     }
 
@@ -512,9 +351,7 @@ pub fn password_entry_is_readable(store_root: &str, label: &str) -> bool {
                     .is_some_and(|(_, cert)| {
                         private_key_is_openable_with_unlock(&cert.fingerprint().to_hex())
                     })
-            }) || fido2_recipient_ids
-                .into_iter()
-                .any(|id| private_key_is_openable_with_unlock(&id))
+            })
         }
         StoreRecipientsPrivateKeyRequirement::AllManagedKeys => {
             let mut seen_standard = HashSet::new();
@@ -530,26 +367,12 @@ pub fn password_entry_is_readable(store_root: &str, label: &str) -> bool {
                 }
             }
 
-            let mut seen_fido2 = HashSet::new();
-            for id in fido2_recipient_ids {
-                if !seen_fido2.insert(id.clone()) {
-                    continue;
-                }
-                if !private_key_is_openable_with_unlock(&id) {
-                    return false;
-                }
-            }
-
             true
         }
     }
 }
 
 fn private_key_is_openable_with_unlock(fingerprint: &str) -> bool {
-    if is_fido2_recipient_string(fingerprint) {
-        return true;
-    }
-
     matches!(
         ensure_ripasso_private_key_is_ready(fingerprint),
         Ok(()) | Err(PasswordEntryError::LockedPrivateKey(_))
@@ -608,7 +431,7 @@ pub fn preferred_ripasso_private_key_fingerprint_for_entry(
 mod tests {
     use super::{
         effective_private_key_requirement, resolve_recipient_cert,
-        resolved_standard_recipients_from_contents,
+        resolved_recipients_from_contents,
     };
     use crate::backend::StoreRecipientsPrivateKeyRequirement;
     use sequoia_openpgp::{cert::CertBuilder, Cert};
@@ -621,81 +444,74 @@ mod tests {
             .map(|user_id| {
                 let (cert, _) = CertBuilder::general_purpose(Some(*user_id))
                     .generate()
-                    .expect("generate test certificate");
-                let fingerprint = crate::backend::integrated::keys::fingerprint_from_string(
-                    &cert.fingerprint().to_hex(),
-                )
-                .expect("parse fingerprint");
+                    .expect("generate cert");
+                let fingerprint = cert.fingerprint().as_bytes()[..20]
+                    .try_into()
+                    .expect("fingerprint length");
                 (fingerprint, Arc::new(cert))
             })
             .collect()
     }
 
     #[test]
-    fn pure_multi_fido2_stores_effectively_require_all_keys() {
-        assert_eq!(
-            effective_private_key_requirement(
-                StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
-                0,
-                2,
-            ),
-            StoreRecipientsPrivateKeyRequirement::AllManagedKeys
+    fn standard_recipients_resolve_from_fingerprint_or_user_id() {
+        let key_ring = test_key_ring(&["Alice <alice@example.com>"]);
+        let cert = key_ring.values().next().expect("cert");
+        let fingerprint = cert.fingerprint().to_hex();
+
+        assert!(resolve_recipient_cert(&fingerprint, &key_ring)
+            .expect("resolve fingerprint")
+            .is_some());
+        assert!(resolve_recipient_cert("alice@example.com", &key_ring)
+            .expect("resolve email")
+            .is_some());
+        assert!(
+            resolve_recipient_cert("Alice <alice@example.com>", &key_ring)
+                .expect("resolve user id")
+                .is_some()
         );
+    }
+
+    #[test]
+    fn standard_recipients_error_when_user_id_matches_multiple_keys() {
+        let key_ring = test_key_ring(&[
+            "Shared <shared@example.com>",
+            "Shared Also <shared@example.com>",
+        ]);
+        let err = resolve_recipient_cert("shared@example.com", &key_ring)
+            .expect_err("ambiguous user id should fail");
+        assert!(err.contains("matches multiple keys"));
+    }
+
+    #[test]
+    fn standard_recipient_resolution_deduplicates_fingerprints() {
+        let key_ring = test_key_ring(&["Alice <alice@example.com>"]);
+        let cert = key_ring.values().next().expect("cert");
+        let fingerprint = cert.fingerprint().to_hex();
+        let resolved = resolved_recipients_from_contents(
+            &format!("{fingerprint}\nalice@example.com\n"),
+            &key_ring,
+        )
+        .expect("resolve recipients");
+
+        assert_eq!(resolved.len(), 1);
+    }
+
+    #[test]
+    fn effective_private_key_requirement_uses_configured_value() {
         assert_eq!(
             effective_private_key_requirement(
                 StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
-                1,
-                2,
+                2
             ),
             StoreRecipientsPrivateKeyRequirement::AnyManagedKey
         );
         assert_eq!(
             effective_private_key_requirement(
                 StoreRecipientsPrivateKeyRequirement::AllManagedKeys,
-                0,
-                1,
+                2
             ),
             StoreRecipientsPrivateKeyRequirement::AllManagedKeys
         );
-    }
-
-    #[test]
-    fn exact_email_matches_only_a_unique_cert() {
-        let key_ring = test_key_ring(&["Alice Example <alice@example.com>"]);
-        let resolved = resolve_recipient_cert("alice@example.com", &key_ring)
-            .expect("resolve recipient")
-            .expect("expected a matching certificate");
-
-        assert_eq!(resolved.1.fingerprint().to_hex().len(), 40);
-    }
-
-    #[test]
-    fn ambiguous_email_matches_are_rejected() {
-        let key_ring = test_key_ring(&[
-            "Alice One <shared@example.com>",
-            "Alice Two <shared@example.com>",
-        ]);
-
-        assert_eq!(
-            resolve_recipient_cert("shared@example.com", &key_ring).unwrap_err(),
-            "Recipient 'shared@example.com' matches multiple keys in the app. Use a fingerprint instead."
-                .to_string()
-        );
-        assert_eq!(
-            resolved_standard_recipients_from_contents("shared@example.com\n", &key_ring)
-                .err()
-                .expect("expected ambiguity error"),
-            "Recipient 'shared@example.com' matches multiple keys in the app. Use a fingerprint instead."
-                .to_string()
-        );
-    }
-
-    #[test]
-    fn user_id_fragments_do_not_match_by_substring() {
-        let key_ring = test_key_ring(&["Alice Example <alice@example.com>"]);
-
-        assert!(resolve_recipient_cert("example.com", &key_ring)
-            .expect("resolve recipient")
-            .is_none());
     }
 }

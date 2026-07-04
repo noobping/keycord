@@ -27,40 +27,20 @@ pub type PasswordEntryWriteProgress = PasswordEntryProgress;
 #[derive(Clone, Debug, Default, PartialEq, Eq)]
 pub struct StoreRecipients {
     standard: Vec<String>,
-    fido2: Vec<String>,
 }
 
 impl StoreRecipients {
-    pub fn new(standard: Vec<String>, fido2: Vec<String>) -> Self {
-        Self { standard, fido2 }
+    pub fn new(standard: Vec<String>) -> Self {
+        Self { standard }
     }
 
     pub fn standard(&self) -> &[String] {
         &self.standard
     }
 
-    pub fn fido2(&self) -> &[String] {
-        &self.fido2
-    }
-
     pub fn is_empty(&self) -> bool {
-        self.standard.is_empty() && self.fido2.is_empty()
+        self.standard.is_empty()
     }
-}
-
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum StoreRecipientsSaveStage {
-    ReadingExistingItems,
-    WritingUpdatedItems,
-}
-
-#[derive(Clone, Debug, PartialEq, Eq)]
-pub struct StoreRecipientsSaveProgress {
-    pub stage: StoreRecipientsSaveStage,
-    pub current_item: usize,
-    pub total_items: usize,
-    pub current_touch: usize,
-    pub total_touches: usize,
 }
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
@@ -80,14 +60,13 @@ pub use integrated::required_private_key_fingerprints_for_entry;
 #[cfg(target_os = "linux")]
 pub use integrated::store_ripasso_private_key_bytes;
 pub use integrated::{
-    armored_ripasso_private_key, armored_ripasso_public_key, create_fido2_store_recipient,
-    discover_ripasso_hardware_keys, generate_fido2_private_key, generate_ripasso_hardware_key,
-    generate_ripasso_private_key, import_ripasso_hardware_key_bytes,
-    import_ripasso_private_key_bytes, is_ripasso_private_key_unlocked, list_ripasso_private_keys,
+    armored_ripasso_private_key, armored_ripasso_public_key, discover_ripasso_hardware_keys,
+    generate_fido2_private_key, generate_ripasso_hardware_key, generate_ripasso_private_key,
+    import_ripasso_hardware_key_bytes, import_ripasso_private_key_bytes,
+    is_ripasso_private_key_unlocked, list_ripasso_private_keys,
     preferred_ripasso_private_key_fingerprint_for_entry, remove_ripasso_private_key,
     ripasso_private_key_requires_passphrase, ripasso_private_key_requires_session_unlock,
-    ripasso_private_key_title, set_fido2_security_key_pin,
-    unlock_fido2_store_recipient_for_session, unlock_ripasso_private_key_for_session,
+    ripasso_private_key_title, set_fido2_security_key_pin, unlock_ripasso_private_key_for_session,
     ConnectedSmartcardKey, DiscoveredHardwareToken, ManagedRipassoHardwareKey,
     ManagedRipassoPrivateKey, ManagedRipassoPrivateKeyProtection, PrivateKeyUnlockKind,
     PrivateKeyUnlockRequest,
@@ -192,24 +171,6 @@ pub fn save_password_entry_with_progress(
     }
 }
 
-pub fn save_store_recipients_with_progress(
-    store_root: &str,
-    recipients: &StoreRecipients,
-    private_key_requirement: StoreRecipientsPrivateKeyRequirement,
-    report_progress: &mut dyn FnMut(StoreRecipientsSaveProgress),
-) -> Result<(), StoreRecipientsError> {
-    if Preferences::new().uses_integrated_backend() {
-        integrated::save_store_recipients_with_progress(
-            store_root,
-            recipients,
-            private_key_requirement,
-            report_progress,
-        )
-    } else {
-        host::save_store_recipients_with_progress(store_root, recipients, private_key_requirement)
-    }
-}
-
 pub fn save_store_recipients_for_relative_dir(
     store_root: &str,
     relative_dir: &str,
@@ -236,31 +197,6 @@ pub fn save_store_recipients_for_relative_dir(
     )
 }
 
-pub fn save_store_recipients_with_progress_for_relative_dir(
-    store_root: &str,
-    relative_dir: &str,
-    recipients: &StoreRecipients,
-    private_key_requirement: StoreRecipientsPrivateKeyRequirement,
-    report_progress: &mut dyn FnMut(StoreRecipientsSaveProgress),
-) -> Result<(), StoreRecipientsError> {
-    if Preferences::new().uses_integrated_backend() {
-        integrated::save_store_recipients_with_progress_for_relative_dir(
-            store_root,
-            relative_dir,
-            recipients,
-            private_key_requirement,
-            report_progress,
-        )
-    } else {
-        host::save_store_recipients_with_progress_for_relative_dir(
-            store_root,
-            relative_dir,
-            recipients,
-            private_key_requirement,
-        )
-    }
-}
-
 pub fn read_password_entry_with_progress(
     store_root: &str,
     label: &str,
@@ -277,13 +213,6 @@ pub fn password_entry_is_readable(store_root: &str, label: &str) -> bool {
     dispatch_backend(
         || integrated::password_entry_is_readable(store_root, label),
         || host::password_entry_is_readable(store_root, label),
-    )
-}
-
-pub fn password_entry_fido2_recipient_count(store_root: &str, label: &str) -> usize {
-    dispatch_backend(
-        || integrated::password_entry_fido2_recipient_count(store_root, label),
-        || host::password_entry_fido2_recipient_count(store_root, label),
     )
 }
 

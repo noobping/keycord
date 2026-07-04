@@ -74,12 +74,6 @@ msgstr ""
 "  --accent-color: {accent};\n"
 "}}"
 
-#: src/backend/integrated/keys/fido2/store.rs:687
-msgid "A FIDO2 security key for this item is locked. Unlock it in Preferences."
-msgstr ""
-"Een FIDO2-beveiligingssleutel voor dit item is vergrendeld. Ontgrendel die "
-"in Voorkeuren."
-
 #: data/window.ui:595
 msgid "A list of folders that contain your password data."
 msgstr "Een lijst met mappen die je wachtwoordgegevens bevatten."
@@ -117,10 +111,6 @@ msgstr "Acties"
 msgid "ActivateResult"
 msgstr "ActivateResult"
 
-#: data/window.ui:1594 src/store/recipients_page/import.rs:683
-msgid "Add FIDO2 security key"
-msgstr "FIDO2-beveiligingssleutel toevoegen"
-
 #: data/shortcuts.ui:65 data/window.ui:507
 msgid "Add OTP field"
 msgstr "OTP-veld toevoegen"
@@ -128,10 +118,6 @@ msgstr "OTP-veld toevoegen"
 #: data/metainfo.xml:146
 msgid "Add experimental OpenPGP hardware key support for private keys"
 msgstr "Voeg experimentele OpenPGP-hardwaresleutelondersteuning voor privésleutels toe"
-
-#: src/store/recipients_page/guide.rs:12
-msgid "Add Security Key"
-msgstr "Beveiligingssleutel toevoegen"
 
 #: src/store/git_page.rs:772
 msgid "Add a Git remote for this store."
@@ -265,12 +251,12 @@ msgid "Add tools page"
 msgstr "Voeg een hulpmiddelenpagina toe"
 
 #: data/metainfo.xml:110
-msgid "Added FIDO2 guides and progress indicators."
-msgstr "FIDO2-handleidingen en voortgangsindicatoren toegevoegd."
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "Experimentele FIDO2-handleidingen en voortgangsindicatoren toegevoegd."
 
 #: data/metainfo.xml:102
-msgid "Added FIDO2-protected OpenPGP keys."
-msgstr "Met FIDO2 beveiligde OpenPGP-sleutels toegevoegd."
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "Experimentele met FIDO2 beveiligde OpenPGP-sleutels toegevoegd."
 
 #: data/metainfo.xml:80
 msgid "Added folder-specific recipient editing for .gpg-id files."
@@ -288,14 +274,6 @@ msgstr "Hybride sorteermodus toegevoegd"
 msgid "Added missing template fields."
 msgstr "Ontbrekende sjabloonvelden toegevoegd."
 
-#: src/store/recipients_page/import.rs:244
-msgid "Adding FIDO2 security key"
-msgstr "FIDO2-beveiligingssleutel toevoegen"
-
-#: src/store/recipients_page/progress.rs:11
-msgid "Adding Security Key"
-msgstr "Beveiligingssleutel toevoegen"
-
 #: src/store/recipients_page/import.rs:352
 msgid "Adding hardware key"
 msgstr "Hardwaresleutel toevoegen"
@@ -304,13 +282,9 @@ msgstr "Hardwaresleutel toevoegen"
 msgid "Alice Work <alice@work.example>"
 msgstr "Alice Work <alice@work.example>"
 
-#: data/window.ui:1523
-msgid "All security keys are required (Experimental)"
-msgstr "Alle beveiligingssleutels zijn vereist (experimenteel)"
-
 #: src/window/host_access.rs:214
 msgid "Allow USB security key access"
-msgstr "Sta toegang tot USB-beveiligingssleutels toe"
+msgstr "Toegang tot USB-beveiligingssleutels toestaan"
 
 #: src/window/host_access.rs:90
 msgid "Allow access to apps on this device"
@@ -491,10 +465,6 @@ msgstr "Controleren op updates"
 msgid "Checking pass import availability."
 msgstr "Beschikbaarheid van pass import controleren."
 
-#: src/store/recipients_page/progress.rs:114
-msgid "Checking which keys can open this item."
-msgstr "Controleren welke sleutels dit item kunnen openen."
-
 #: data/window.ui:1370 src/store/management/import.rs:192
 msgid "Choose a file or folder if the importer needs one."
 msgstr "Kies een bestand of map als de importeur er één nodig heeft."
@@ -516,9 +486,8 @@ msgid "Choose a local folder."
 msgstr "Kies een lokale map."
 
 #: data/window.ui:1681
-msgid "Choose a private key file or FIDO2-protected private key file."
-msgstr ""
-"Kies een privésleutelbestand of een met FIDO2 beveiligd privésleutelbestand."
+msgid "Choose a private key file or experimental FIDO2-protected private key file."
+msgstr "Kies een privésleutelbestand of een experimenteel met FIDO2 beveiligd privésleutelbestand."
 
 #: src/password/list/row.rs:514 src/store/management/import.rs:424
 msgid "Choose a store."
@@ -569,12 +538,8 @@ msgid "Choose which folder-specific .gpg-id file to manage."
 msgstr "Kies welk mapspecifiek .gpg-id-bestand je wilt beheren."
 
 #: data/metainfo.xml:37
-msgid ""
-"Manage store recipients, folder-specific .gpg-id files, private keys, FIDO2 "
-"security keys, and experimental OpenPGP smartcard workflows"
-msgstr ""
-"Beheer opslagontvangers, mapspecifieke .gpg-id-bestanden, privésleutels, "
-"FIDO2-beveiligingssleutels en experimentele OpenPGP-smartcard-workflows"
+msgid "Manage store recipients, folder-specific .gpg-id files, private keys, experimental FIDO2-protected private keys, and experimental OpenPGP smartcard workflows"
+msgstr "Beheer opslagontvangers, mapspecifieke .gpg-id-bestanden, privésleutels, experimentele met FIDO2 beveiligde privésleutels en experimentele OpenPGP-smartcard-workflows"
 
 #: data/shortcuts.ui:77
 msgid "Clean pass file"
@@ -735,14 +700,9 @@ msgstr "Verbind de hardwaresleutel en probeer het opnieuw."
 msgid "Connect the hardware key first."
 msgstr "Verbind eerst de hardwaresleutel."
 
-#: src/backend/integrated/keys/fido2/store.rs:550
-msgid "Connect the matching FIDO2 security key"
-msgstr "Verbind de bijpassende FIDO2-beveiligingssleutel"
-
 #: src/backend/errors.rs:14 src/backend/errors.rs:15
 #: src/backend/integrated/keys/fido2/common.rs:102
 #: src/backend/integrated/keys/fido2/common.rs:240
-#: src/backend/integrated/keys/fido2/store.rs:693
 msgid "Connect the matching FIDO2 security key."
 msgstr "Verbind de bijpassende FIDO2-beveiligingssleutel."
 
@@ -761,8 +721,8 @@ msgid "Copied."
 msgstr "Gekopieerd."
 
 #: src/store/recipients_page/list.rs:1084
-msgid "Copy FIDO2-protected private key"
-msgstr "Met FIDO2 beveiligde privésleutel kopiëren"
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "Experimentele met FIDO2 beveiligde privésleutel kopiëren"
 
 #: data/shortcuts.ui:47 data/window.ui:452
 msgid "Copy OTP"
@@ -827,11 +787,6 @@ msgstr "Kon de thuismap niet bepalen."
 #: src/window/git/enabled.rs:201
 msgid "Couldn't add that folder."
 msgstr "Kon add that map niet."
-
-#: src/store/recipients_page/import.rs:271
-#: src/store/recipients_page/import.rs:301
-msgid "Couldn't add the FIDO2 security key."
-msgstr "Kon de FIDO2-beveiligingssleutel niet toevoegen."
 
 #: src/store/recipients_page/import.rs:368
 #: src/store/recipients_page/import.rs:421
@@ -1147,8 +1102,8 @@ msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Kon de gevraagde hardwaresleutel-PIN niet verifiëren"
 
 #: data/window.ui:1615
-msgid "Create a new FIDO2-protected key."
-msgstr "Maak een nieuwe met FIDO2 beveiligde sleutel."
+msgid "Experimental: create a new FIDO2-protected key."
+msgstr "Experimenteel: maak een nieuwe met FIDO2 beveiligde sleutel."
 
 #: data/window.ui:1629
 msgid "Experimental: create a new OpenPGP key on a blank connected smartcard or "
@@ -1343,10 +1298,6 @@ msgstr "Voer een e-mailadres in voor de privésleutel."
 msgid "Enter an email address."
 msgstr "Voer een e-mailadres in."
 
-#: src/backend/integrated/keys/fido2/store.rs:543
-msgid "Enter the FIDO2 security key PIN"
-msgstr "Voer de PIN van de FIDO2-beveiligingssleutel in"
-
 #: src/backend/errors.rs:4 src/backend/errors.rs:5
 #: src/backend/integrated/keys/fido2/common.rs:231
 #: src/backend/integrated/keys/fido2/common.rs:288
@@ -1438,42 +1389,6 @@ msgstr ""
 "Ondersteuning voor met FIDO2 beveiligde privésleutels is uitgeschakeld in "
 "deze build van Keycord."
 
-#: src/store/recipients_page/list.rs:985
-msgid "FIDO2 recipient"
-msgstr "FIDO2-ontvanger"
-
-#: src/backend/integrated/keys/fido2/disabled.rs:133
-msgid "FIDO2 recipient '{}' requires a build with FIDO2 support enabled."
-msgstr ""
-"FIDO2-ontvanger '{}' vereist een build met ingeschakelde FIDO2-ondersteuning."
-
-#: src/private_key/unlock.rs:554
-msgid "FIDO2 recipient unlock worker disconnected unexpectedly."
-msgstr "Worker voor ontgrendeling van FIDO2-ontvangers onverwacht verbroken."
-
-#: src/store/recipients_page/import.rs:267
-msgid "FIDO2 recipient worker disconnected unexpectedly."
-msgstr "Worker voor FIDO2-ontvanger onverwacht verbroken."
-
-#: src/window/host_access.rs:215
-msgid ""
-"FIDO2 recipients are optional. Grant USB device access if you want Keycord "
-"to use a connected FIDO2 security key directly for Keycord-only encryption, "
-"then restart Keycord."
-msgstr ""
-"FIDO2-ontvangers zijn optioneel. Geef toegang tot USB-apparaten als je wilt "
-"dat Keycord een verbonden FIDO2-beveiligingssleutel direct gebruikt voor "
-"Keycord-specifieke versleuteling en start Keycord daarna opnieuw."
-
-#: src/backend/host.rs:240
-msgid "FIDO2 recipients require the Integrated backend."
-msgstr "FIDO2-ontvangers vereisen de Integrated-backend."
-
-#: src/backend/integrated/keys/fido2/common.rs:1046 src/fido2_recipient.rs:4
-#: src/store/recipients_page/list.rs:983
-msgid "FIDO2 security key"
-msgstr "FIDO2-beveiligingssleutel"
-
 #: src/backend/integrated/keys/fido2/disabled.rs:4
 msgid "FIDO2 support is disabled in this build of Keycord."
 msgstr "FIDO2-ondersteuning is uitgeschakeld in deze build van Keycord."
@@ -1496,10 +1411,6 @@ msgstr ""
 msgid "Failed to abort password store merge for {root}: {}"
 msgstr ""
 "Kon het samenvoegen van de wachtwoordopslag voor {root} niet afbreken: {}"
-
-#: src/store/recipients_page/import.rs:91
-msgid "Failed to add FIDO2 security key: {err}"
-msgstr "Kon FIDO2-beveiligingssleutel niet toevoegen: {err}"
 
 #: src/updater/linux.rs:204
 msgid "Failed to allocate a private Linux update staging directory."
@@ -1591,8 +1502,8 @@ msgid "Failed to export search provider object: {err}"
 msgstr "Kon het zoekproviderobject niet exporteren: {err}"
 
 #: src/store/recipients_page/generate.rs:200
-msgid "Failed to generate FIDO2-protected key: {err}"
-msgstr "Kon met FIDO2 beveiligde sleutel niet genereren: {err}"
+msgid "Failed to generate experimental FIDO2-protected key: {err}"
+msgstr "Kon experimentele met FIDO2 beveiligde sleutel niet genereren: {err}"
 
 #: src/store/recipients_page/generate.rs:144
 msgid "Failed to generate private key: {err}"
@@ -2096,10 +2007,6 @@ msgstr "Kon privésleutels niet met de host synchroniseren: {err}"
 msgid "Failed to turn off private-key sync after an error: {}"
 msgstr "Kon privésleutelsynchronisatie na een fout niet uitschakelen: {}"
 
-#: src/private_key/unlock.rs:548
-msgid "Failed to unlock FIDO2 recipient: {err}"
-msgstr "Kon FIDO2-ontvanger niet ontgrendelen: {err}"
-
 #: src/private_key/git.rs:80 src/private_key/unlock.rs:387
 msgid "Failed to unlock ripasso private key: {err}"
 msgstr "Kon ripasso-privésleutel niet ontgrendelen: {err}"
@@ -2241,14 +2148,8 @@ msgid "General"
 msgstr "Algemeen"
 
 #: data/window.ui:1614 src/store/recipients_page/generate.rs:288
-msgid "Generate FIDO2-protected key"
-msgstr "Met FIDO2 beveiligde sleutel genereren"
-
-#: src/store/recipients_page/list.rs:912
-msgid "Generate or import a private key, or add a FIDO2 security key."
-msgstr ""
-"Genereer of importeer een privésleutel, of voeg een FIDO2-"
-"beveiligingssleutel toe."
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "Met FIDO2 beveiligde sleutel genereren (experimenteel)"
 
 #: src/store/recipients_page/list.rs:914
 msgid "Generate or import a private key."
@@ -2263,8 +2164,8 @@ msgid "Generate private key"
 msgstr "Privésleutel genereren"
 
 #: src/store/recipients_page/generate.rs:217
-msgid "Generating FIDO2-protected key"
-msgstr "Met FIDO2 beveiligde sleutel genereren"
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "Experimentele met FIDO2 beveiligde sleutel genereren"
 
 #: data/window.ui:1866
 msgid "Generating key"
@@ -2338,9 +2239,13 @@ msgstr "Teruggaan"
 msgid "Go home"
 msgstr "Naar start"
 
+#: src/window/host_access.rs:342
+msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
+msgstr "Experimentele met FIDO2 beveiligde privésleutels hebben USB-apparaattoegang nodig voordat Keycord een verbonden beveiligingssleutel kan gebruiken om beveiligde privésleutels te ontgrendelen. Start Keycord opnieuw nadat je toegang hebt gegeven."
+
 #: src/window/host_access.rs:33
-msgid "Grant USB security key access first."
-msgstr "Geef eerst toegang tot USB-beveiligingssleutels."
+msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
+msgstr "Geef eerst toegang tot USB-beveiligingssleutels voor experimentele met FIDO2 beveiligde privésleutels."
 
 #: src/window/preferences.rs:120
 msgid ""
@@ -2629,14 +2534,6 @@ msgid "Integrated backend Git commit failed for {store_root}: {err}"
 msgstr ""
 "Git-commit van de backend 'Geïntegreerd' voor {store_root} is mislukt: {err}"
 
-#: src/backend/integrated/keys/fido2/store.rs:158
-#: src/backend/integrated/keys/fido2/store.rs:229
-#: src/backend/integrated/keys/fido2/store.rs:246
-#: src/backend/integrated/keys/fido2/store.rs:401
-#: src/backend/integrated/shared/crypto.rs:567
-msgid "Invalid FIDO2 any-managed password entry."
-msgstr "Ongeldige FIDO2-any-managed-wachtwoordinvoer."
-
 #: src/backend/integrated/keys/fido2/common.rs:725
 msgid "Invalid FIDO2 device path: {err}"
 msgstr "Ongeldig FIDO2-apparaatpad: {err}"
@@ -2644,26 +2541,6 @@ msgstr "Ongeldig FIDO2-apparaatpad: {err}"
 #: src/backend/integrated/keys/fido2/common.rs:471
 msgid "Invalid FIDO2 encrypted data."
 msgstr "Ongeldige met FIDO2 versleutelde gegevens."
-
-#: src/backend/integrated/shared/recipients.rs:248
-msgid "Invalid FIDO2 recipient file."
-msgstr "Ongeldig bestand met FIDO2-ontvangers."
-
-#: src/fido2_recipient.rs:74
-msgid "Invalid FIDO2 recipient label: {err}"
-msgstr "Ongeldig FIDO2-ontvangerlabel: {err}"
-
-#: src/backend/integrated/keys/fido2/store.rs:359
-msgid "Invalid FIDO2 required password-entry layer."
-msgstr "Ongeldige vereiste laag voor FIDO2-wachtwoordinvoer."
-
-#: src/fido2_recipient.rs:128 src/fido2_recipient.rs:154
-#: src/fido2_recipient.rs:161 src/fido2_recipient.rs:30
-#: src/fido2_recipient.rs:34 src/fido2_recipient.rs:60
-#: src/fido2_recipient.rs:63 src/fido2_recipient.rs:66
-#: src/fido2_recipient.rs:78 src/fido2_recipient.rs:81
-msgid "Invalid FIDO2 store recipient."
-msgstr "Ongeldige FIDO2-opslagontvanger."
 
 #: src/backend/integrated/keys/hardware/crypto.rs:530
 msgid "Invalid SHA256 digest length"
@@ -2770,10 +2647,6 @@ msgstr ""
 msgid "Keycord"
 msgstr "Sleutelkoord"
 
-#: src/backend/integrated/keys/fido2/common.rs:261
-msgid "Keycord FIDO2 recipient"
-msgstr "Keycord-FIDO2-ontvanger"
-
 #: src/window/tools/audit.rs:913
 msgid "Keycord OpenPGP"
 msgstr "Keycord OpenPGP"
@@ -2803,48 +2676,6 @@ msgstr ""
 "hulpmiddelen van je computer gebruiken, zoals GPG, de backend 'Host' en "
 "'pass import'. Als je dat niet doet, werkt Keycord nog steeds met de backend "
 "'Integrated'."
-
-#: src/store/recipients_page/progress.rs:84
-msgid ""
-"Keycord is updating every saved item so the new security key can unlock this "
-"store.\n"
-"\n"
-"Keep the security keys for this store connected. Touch a key when it starts "
-"blinking."
-msgstr ""
-"Keycord werkt elk opgeslagen item bij zodat de nieuwe beveiligingssleutel "
-"deze opslag kan ontgrendelen.\n"
-"\n"
-"Houd de beveiligingssleutels voor deze opslag aangesloten. Raak een sleutel "
-"aan wanneer die begint te knipperen."
-
-#: src/store/recipients_page/progress.rs:87
-msgid ""
-"Keycord is updating every saved item so the removed security key no longer "
-"unlocks this store.\n"
-"\n"
-"Keep the security keys you still want to use connected. Touch a key when it "
-"starts blinking."
-msgstr ""
-"Keycord werkt elk opgeslagen item bij zodat de verwijderde "
-"beveiligingssleutel deze opslag niet langer kan ontgrendelen.\n"
-"\n"
-"Houd de beveiligingssleutels die je wilt blijven gebruiken aangesloten. Raak "
-"een sleutel aan wanneer die begint te knipperen."
-
-#: src/store/recipients_page/progress.rs:90
-msgid ""
-"Keycord is updating every saved item so the selected security keys stay in "
-"sync.\n"
-"\n"
-"Keep the security keys for this store connected. Touch a key when it starts "
-"blinking."
-msgstr ""
-"Keycord werkt elk opgeslagen item bij zodat de geselecteerde "
-"beveiligingssleutels gesynchroniseerd blijven.\n"
-"\n"
-"Houd de beveiligingssleutels voor deze opslag aangesloten. Raak een sleutel "
-"aan wanneer die begint te knipperen."
 
 #: src/updater/linux.rs:144
 msgid "Keycord update cleanup failed for '{}': {error}"
@@ -3178,10 +3009,6 @@ msgstr "Nieuw item"
 msgid "New security key PIN"
 msgstr "Nieuwe PIN van de beveiligingssleutel"
 
-#: src/store/recipients_page/guide.rs:13
-msgid "Next"
-msgstr "Volgende"
-
 #: src/store/git_page.rs:201
 msgid "No Git repository yet. Add a remote to initialize one."
 msgstr ""
@@ -3289,8 +3116,6 @@ msgstr "Geen ontvangers ingesteld"
 msgid "No recipients were found"
 msgstr "Geen ontvangers gevonden"
 
-#: src/backend/integrated/keys/fido2/store.rs:109
-#: src/backend/integrated/keys/fido2/store.rs:150
 #: src/backend/integrated/shared/crypto.rs:530
 #: src/backend/integrated/shared/crypto.rs:575
 #: src/backend/integrated/shared/crypto.rs:621
@@ -3333,10 +3158,6 @@ msgstr "Geen waarden"
 msgid "No weak passwords found"
 msgstr "Geen zwakke wachtwoorden gevonden"
 
-#: src/store/recipients_page/guide.rs:69
-msgid "Not Now"
-msgstr "Niet nu"
-
 #: src/window/tools/audit.rs:916
 msgid "Not available"
 msgstr "Niet beschikbaar"
@@ -3369,13 +3190,9 @@ msgstr "Op de ontvangerspagina kun je nu kiezen welk mapspecifieke"
 msgid "One or more local install directories are not writable."
 msgstr "Een of meer lokale installatiemappen zijn niet beschrijfbaar."
 
-#: src/support/git/audit.rs:343 src/support/git/audit_disabled.rs:120
-msgid "Only FIDO2 recipients are available"
-msgstr "Alleen FIDO2-ontvangers zijn beschikbaar"
-
 #: data/metainfo.xml:118
-msgid "Only enable FIDO2 features if the integrated backend is used."
-msgstr "Schakel FIDO2-functies alleen in met de geïntegreerde backend."
+msgid "Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr "Schakel experimentele FIDO2-functies alleen in met de geïntegreerde backend."
 
 #: data/shortcuts.ui:171
 msgid "Open Git tools"
@@ -3513,10 +3330,6 @@ msgstr "Openen"
 #: src/password/page/mod.rs:450
 msgid "Opening item"
 msgstr "Item openen"
-
-#: src/store/recipients_page/progress.rs:97
-msgid "Opening item {current} of {total}"
-msgstr "Item {current} van {total} openen"
 
 #: src/private_key/dialog.rs:95
 msgid "Or use a hardware key (Experimental)."
@@ -3676,13 +3489,6 @@ msgstr "Kies een veld uit de huidige lijst."
 msgid "Pick a value from the current list."
 msgstr "Kies een waarde uit de huidige lijst."
 
-#: src/store/recipients_page/guide.rs:19
-msgid ""
-"Plug in a security key that already works with this store. Then click Next."
-msgstr ""
-"Sluit een beveiligingssleutel aan die al met deze opslag werkt. Klik daarna "
-"op Volgende."
-
 #: data/window.ui:573 src/window/navigation/restore.rs:108
 #: src/window/preferences.rs:453
 msgid "Preferences"
@@ -3720,18 +3526,6 @@ msgstr ""
 "Git-commit voor wachtwoordopslag wordt voorbereid voor {store_root} zonder "
 "ondertekening, omdat privésleutel {fingerprint} niet beschikbaar is in de "
 "app."
-
-#: src/backend/integrated/git.rs:537
-msgid ""
-"Preparing password store Git commit for {store_root} without signing because "
-"this store uses a FIDO2 security key."
-msgstr ""
-"Git-commit voor wachtwoordopslag wordt voorbereid voor {store_root} zonder "
-"ondertekening, omdat deze opslag een FIDO2-beveiligingssleutel gebruikt."
-
-#: src/store/recipients_page/progress.rs:169
-msgid "Preparing saved items"
-msgstr "Opgeslagen items voorbereiden"
 
 #: src/backend/integrated/keys/cert.rs:157
 msgid "Private key fingerprint '{value}' does not have the expected length."
@@ -3791,12 +3585,8 @@ msgid "Raw text"
 msgstr "Ruwe tekst"
 
 #: data/window.ui:1668
-msgid ""
-"Read an armored private key or FIDO2-protected private key from the "
-"clipboard."
-msgstr ""
-"Lees een gepantserde privésleutel of met FIDO2 beveiligde privésleutel van "
-"het klembord."
+msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
+msgstr "Lees een gepantserde privésleutel of experimenteel met FIDO2 beveiligde privésleutel van het klembord."
 
 #: src/support/git/audit.rs:617
 msgid "Read changed paths for password store Git commit {oid}"
@@ -3891,14 +3681,9 @@ msgstr "Ontvangers uit de gecontroleerde commit"
 msgid "Recommended for new stores"
 msgstr "Aanbevolen voor nieuwe opslagen"
 
-#: src/backend/integrated/keys/fido2/store.rs:548
-msgid "Reconnect the FIDO2 security key"
-msgstr "Verbind de FIDO2-beveiligingssleutel opnieuw"
-
 #: src/backend/errors.rs:12 src/backend/errors.rs:13 src/backend/errors.rs:400
 #: src/backend/errors.rs:439 src/backend/integrated/keys/fido2/common.rs:104
 #: src/backend/integrated/keys/fido2/common.rs:246
-#: src/backend/integrated/keys/fido2/store.rs:699
 msgid "Reconnect the FIDO2 security key and try again."
 msgstr "Verbind de FIDO2-beveiligingssleutel opnieuw en probeer het opnieuw."
 
@@ -4004,22 +3789,14 @@ msgid "Removed empty fields."
 msgstr "Lege velden verwijderd."
 
 #: data/metainfo.xml:101
-msgid ""
-"Removed the FIDO2 backed password stores feature from the flatpak app. "
-"Contact me if you want it back."
-msgstr ""
-"Functie voor met FIDO2 ondersteunde wachtwoordopslagen verwijderd uit de "
-"Flatpak-app. Neem contact op als je die terug wilt."
+msgid "Marked FIDO2-backed password stores as experimental in the Flatpak app."
+msgstr "Met FIDO2 ondersteunde wachtwoordopslagen gemarkeerd als experimenteel in de Flatpak-app."
 
 #: data/metainfo.xml:82
 msgid "Reduced secret exposure in GNOME search, command failures, and logs."
 msgstr ""
 "Blootstelling van geheimen verminderd in GNOME-zoekopdrachten, "
 "commandofouten en logs."
-
-#: src/store/recipients_page/progress.rs:10
-msgid "Removing Security Key"
-msgstr "Beveiligingssleutel verwijderen"
 
 #: src/password/list/row.rs:390 src/password/list/row.rs:64
 msgid "Rename pass file"
@@ -4199,10 +3976,6 @@ msgstr "Opgeslagen."
 msgid "Saving"
 msgstr "Opslaan"
 
-#: src/store/recipients_page/progress.rs:98
-msgid "Saving item {current} of {total}"
-msgstr "Item {current} van {total} opslaan"
-
 #: data/window.ui:1555
 msgid "Saving recipients file"
 msgstr "Ontvangersbestand opslaan"
@@ -4347,7 +4120,6 @@ msgstr "Opeenvolgende tekens"
 #: src/backend/errors.rs:389 src/backend/errors.rs:428 src/backend/errors.rs:6
 #: src/backend/errors.rs:7 src/backend/integrated/keys/fido2/common.rs:228
 #: src/backend/integrated/keys/fido2/common.rs:96
-#: src/backend/integrated/keys/fido2/store.rs:684
 msgid "Set a PIN on the FIDO2 security key first."
 msgstr "Stel eerst een PIN in op de FIDO2-beveiligingssleutel."
 
@@ -4356,8 +4128,8 @@ msgstr "Stel eerst een PIN in op de FIDO2-beveiligingssleutel."
 #: src/store/recipients_page/generate.rs:309
 #: src/store/recipients_page/import.rs:284
 #: src/store/recipients_page/import.rs:704
-msgid "Set security key PIN"
-msgstr "PIN van beveiligingssleutel instellen"
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "PIN voor beveiligingssleutel instellen (experimenteel FIDO2)"
 
 #: data/window.ui:1628 data/window.ui:1888
 msgid "Set up new hardware key (Experimental)"
@@ -4479,18 +4251,6 @@ msgstr "Git-wijzigingen van wachtwoordopslag klaarzetten"
 msgid "Status"
 msgstr "Status"
 
-#: src/store/recipients_page/guide.rs:16
-msgid "Step 1 of 3"
-msgstr "Stap 1 van 3"
-
-#: src/store/recipients_page/guide.rs:16
-msgid "Step 2 of 3"
-msgstr "Stap 2 van 3"
-
-#: src/store/recipients_page/guide.rs:16
-msgid "Step 3 of 3"
-msgstr "Stap 3 van 3"
-
 #: src/password/page/mod.rs:123
 msgid "Step {current}/{total}: touch your key if it blinks."
 msgstr "Stap {current}/{total}: raak je sleutel aan als die knippert."
@@ -4550,17 +4310,9 @@ msgstr ""
 msgid "Switch Backend to Host to use pass import."
 msgstr "Schakel de backend naar 'Host' om 'pass import' te gebruiken."
 
-#: src/store/recipients_page/import.rs:236
-msgid "Switch to the Integrated backend to add a FIDO2 security key."
-msgstr ""
-"Schakel over naar de geïntegreerde backend om een FIDO2-beveiligingssleutel "
-"toe te voegen."
-
 #: src/window/host_access.rs:31
-msgid "Switch to the Integrated backend to use FIDO2 security keys."
-msgstr ""
-"Schakel over naar de geïntegreerde backend om FIDO2-beveiligingssleutels te "
-"gebruiken."
+msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
+msgstr "Schakel over naar de geïntegreerde backend om experimentele met FIDO2 beveiligde privésleutels te gebruiken."
 
 #: data/window.ui:396 data/window.ui:878
 msgid "Symbols"
@@ -4609,7 +4361,6 @@ msgstr "Teksteditor"
 #: src/backend/errors.rs:17 src/backend/errors.rs:19
 #: src/backend/integrated/keys/fido2/common.rs:107
 #: src/backend/integrated/keys/fido2/common.rs:249
-#: src/backend/integrated/keys/fido2/store.rs:702
 msgid "That FIDO2 security key does not support the hmac-secret extension."
 msgstr ""
 "Die FIDO2-beveiligingssleutel ondersteunt de hmac-secret-extensie niet."
@@ -4622,13 +4373,8 @@ msgstr "Die FIDO2-beveiligingssleutel is ongeldig."
 #: src/backend/errors.rs:395 src/backend/errors.rs:434 src/backend/errors.rs:8
 #: src/backend/errors.rs:9 src/backend/integrated/keys/fido2/common.rs:100
 #: src/backend/integrated/keys/fido2/common.rs:237
-#: src/backend/integrated/keys/fido2/store.rs:690
 msgid "That FIDO2 security key must support PIN protection."
 msgstr "Die FIDO2-beveiligingssleutel moet PIN-bescherming ondersteunen."
-
-#: src/backend/integrated/keys/fido2/store.rs:58
-msgid "That FIDO2 store recipient is invalid."
-msgstr "Die FIDO2-opslagontvanger is ongeldig."
 
 #: src/backend/integrated/keys/store/storage.rs:1113
 msgid "That FIDO2-protected key could not be exported."
@@ -4737,8 +4483,6 @@ msgid "The FIDO2 security key did not return a credential identifier."
 msgstr "De FIDO2-beveiligingssleutel retourneerde geen credential-ID."
 
 #: src/backend/integrated/keys/errors.rs:9
-#: src/backend/integrated/keys/fido2/store.rs:26
-#: src/backend/integrated/keys/fido2/store.rs:366
 #: src/backend/integrated/shared/crypto.rs:31
 msgid "The available private keys cannot decrypt this item."
 msgstr "De beschikbare privésleutels kunnen dit item niet ontsleutelen."
@@ -4886,19 +4630,6 @@ msgstr "Deze FIDO2-beveiligingssleutel kan je items niet openen."
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Deze branch heeft geen commits beschikbaar om te controleren."
 
-#: src/backend/integrated/keys/fido2/common.rs:33
-#: src/store/recipients.rs:14
-msgid "This build doesn't support FIDO2-backed stores."
-msgstr "Deze build ondersteunt geen FIDO2-opslagen."
-
-#: src/store/recipients_page/progress.rs:175
-msgid ""
-"This can take a while because every saved item has to be opened and saved "
-"again."
-msgstr ""
-"Dit kan even duren omdat elk opgeslagen item opnieuw moet worden geopend en "
-"opgeslagen."
-
 #: src/window/tools.rs:61
 msgid "This field has no searchable values."
 msgstr "Dit veld heeft geen doorzoekbare waarden."
@@ -4989,39 +4720,6 @@ msgstr ""
 "Deze geselecteerde sleutel is vereist zolang alle geselecteerde "
 "privésleutels vereist zijn."
 
-#: src/store/recipients_page/mode.rs:41 src/store/recipients_page/mode.rs:53
-msgid ""
-"This store already mixes FIDO2 and normal keys. Remove one type before "
-"adding more."
-msgstr ""
-"Deze opslag combineert al FIDO2- en normale sleutels. Verwijder een type "
-"voordat je meer toevoegt."
-
-#: src/store/recipients_page/mode.rs:38
-msgid ""
-"This store already uses a FIDO2 security key. Remove it before adding normal "
-"keys."
-msgstr ""
-"Deze opslag gebruikt al een FIDO2-beveiligingssleutel. Verwijder die voordat "
-"je normale sleutels toevoegt."
-
-#: src/store/recipients_page/mode.rs:50
-msgid ""
-"This store already uses normal keys. Remove them before adding a FIDO2 "
-"security key."
-msgstr ""
-"Deze opslag gebruikt al normale sleutels. Verwijder die voordat je een FIDO2-"
-"beveiligingssleutel toevoegt."
-
-#: data/window.ui:1524
-msgid ""
-"This experimental multi-layer encryption mode asks each selected security key "
-"one by one when saving a password."
-msgstr ""
-"Deze experimentele modus voor gelaagde versleuteling vraagt elke "
-"geselecteerde beveiligingssleutel een voor een bij het opslaan van een "
-"wachtwoord."
-
 #: src/password/strength.rs:42
 msgid "Too short ({length} characters)"
 msgstr "Te kort ({length} tekens)"
@@ -5040,20 +4738,11 @@ msgstr "Totaal aantal tekens"
 msgid "Touch each key if it blinks."
 msgstr "Raak elke sleutel aan als die knippert."
 
-#: src/backend/integrated/keys/fido2/store.rs:541
-msgid "Touch the FIDO2 security key"
-msgstr "Raak de FIDO2-beveiligingssleutel aan"
-
 #: src/backend/errors.rs:10 src/backend/errors.rs:11 src/backend/errors.rs:398
 #: src/backend/errors.rs:437 src/backend/integrated/keys/fido2/common.rs:103
 #: src/backend/integrated/keys/fido2/common.rs:243
-#: src/backend/integrated/keys/fido2/store.rs:696
 msgid "Touch the FIDO2 security key and try again."
 msgstr "Raak de FIDO2-beveiligingssleutel aan en probeer het opnieuw."
-
-#: src/store/recipients_page/guide.rs:20
-msgid "Touch the FIDO2 security key when it starts blinking."
-msgstr "Raak de FIDO2-beveiligingssleutel aan wanneer die begint te knipperen."
 
 #: src/password/page/mod.rs:98 src/private_key/unlock.rs:69
 #: src/store/recipients_page/generate.rs:219
@@ -5062,12 +4751,6 @@ msgstr "Raak de FIDO2-beveiligingssleutel aan wanneer die begint te knipperen."
 #: src/store/recipients_page/import.rs:286
 msgid "Touch your key if it blinks."
 msgstr "Raak je sleutel aan als die knippert."
-
-#: src/store/recipients_page/progress.rs:108
-msgid "Touch {current} of {total} for this item when it starts blinking."
-msgstr ""
-"Raak voor dit item sleutel {current} van {total} aan wanneer die begint te "
-"knipperen."
 
 #: src/main.rs:519
 msgid "Translated by Nick."
@@ -5111,10 +4794,8 @@ msgid "Turn on private-key sync?"
 msgstr "Privésleutelsynchronisatie inschakelen?"
 
 #: src/window/tools.rs:52 src/window/tools.rs:69
-msgid "Unavailable because all configured stores use FIDO2 security keys."
-msgstr ""
-"Niet beschikbaar omdat alle ingestelde opslagen FIDO2-beveiligingssleutels "
-"gebruiken."
+msgid "Unavailable because no supported stores are loaded."
+msgstr "Niet beschikbaar omdat er geen ondersteunde opslagen zijn geladen."
 
 #: data/shortcuts.ui:89
 msgid "Undo or revert changes"
@@ -5183,10 +4864,6 @@ msgstr "Naamloze privésleutel"
 #: src/backend/integrated/keys/cert.rs:91
 msgid "Unnamed smartcard"
 msgstr "Naamloze smartcard"
-
-#: src/store/recipients_page/guide.rs:18
-msgid "Unplug the new security key."
-msgstr "Koppel de nieuwe beveiligingssleutel los."
 
 #: src/backend/errors.rs:27
 msgid "Unplug the other security keys, then try again."
@@ -5280,17 +4957,9 @@ msgstr "Grootte van update komt na het downloaden niet overeen (verwacht {}, gek
 msgid "Update size mismatch for '{}'."
 msgstr "Grootte van update '{}' komt niet overeen."
 
-#: src/store/recipients_page/progress.rs:12
-msgid "Updating Security Keys"
-msgstr "Beveiligingssleutels bijwerken"
-
 #: data/window.ui:1556
 msgid "Updating all saved passwords to match the new access settings."
 msgstr "Alle opgeslagen wachtwoorden worden bijgewerkt zodat ze overeenkomen met de nieuwe toegangsinstellingen."
-
-#: src/store/recipients_page/progress.rs:116
-msgid "Updating this item with the selected keys."
-msgstr "Dit item wordt bijgewerkt met de geselecteerde sleutels."
 
 #: data/window.ui:352 data/window.ui:830
 msgid "Uppercase letters"
@@ -5595,7 +5264,6 @@ msgid "cannot decrypt password store entries"
 msgstr "kan items in de wachtwoordopslag niet ontsleutelen"
 
 #: src/backend/integrated/keys/fido2/key.rs:75
-#: src/backend/integrated/keys/fido2/store.rs:652
 msgid "checked above"
 msgstr "hierboven gecontroleerd"
 
@@ -5715,10 +5383,6 @@ msgstr "docs_disabled.rs"
 #: src/backend/integrated/keys/hardware/linux.rs:570
 msgid "does not support"
 msgstr "ondersteunt niet"
-
-#: src/backend/integrated/keys/fido2/store.rs:552
-msgid "does not support the hmac-secret extension"
-msgstr "ondersteunt de hmac-secret-extensie niet"
 
 #: src/updater/common.rs:972
 msgid "download release asset"
@@ -5998,14 +5662,6 @@ msgstr "gschemas.compiled"
 msgid "hardware key manifest"
 msgstr "manifest voor hardwaresleutel"
 
-#: src/fido2_recipient.rs:146 src/fido2_recipient.rs:147
-msgid "hex digit"
-msgstr "hexcijfer"
-
-#: src/backend/host.rs:706
-msgid "host backend should reject FIDO2 recipients"
-msgstr "Host-backend moet FIDO2-ontvangers afwijzen"
-
 #: src/preferences/mod.rs:50
 msgid "host command"
 msgstr "hostopdracht"
@@ -6037,14 +5693,6 @@ msgstr "is niet beschikbaar in de app."
 #: src/window/docs.rs:25
 msgid "keycord-doc:"
 msgstr "keycord-doc:"
-
-#: src/backend/host.rs:701
-msgid ""
-"keycord-fido2-recipient-"
-"v1=0123456789abcdef0123456789abcdef01234567:4465736b204b6579:63726564"
-msgstr ""
-"keycord-fido2-recipient-"
-"v1=0123456789abcdef0123456789abcdef01234567:4465736b204b6579:63726564"
 
 #: data/metainfo.xml:31
 msgid "layout, so you can keep using the folders you already have."
@@ -6198,11 +5846,6 @@ msgstr "sortering van wachtwoordlijst"
 #: src/backend/integrated/keys/hardware/linux.rs:557
 msgid "password not checked"
 msgstr "wachtwoord niet gecontroleerd"
-
-#: src/backend/integrated/keys/fido2/store.rs:276
-#: src/backend/integrated/keys/fido2/store.rs:301
-msgid "pending FIDO2 candidates poisoned"
-msgstr "pending FIDO2 candidates poisoned"
 
 #: src/backend/integrated/keys/fido2/common.rs:557
 msgid "pin auth blocked"
@@ -6469,10 +6112,6 @@ msgstr "write marker"
 msgid "write update bytes"
 msgstr "bytes van updatebestand schrijven"
 
-#: src/backend/integrated/shared/crypto.rs:711 src/fido2_recipient.rs:19
-msgid "writing hex into a string should not fail"
-msgstr "het schrijven van hex naar een string mag niet mislukken"
-
 #: src/updater/common.rs:1197
 msgid "{:.1} KiB"
 msgstr "{:.1} KiB"
@@ -6488,10 +6127,6 @@ msgstr "{APP_WINDOW_TITLE}: {detail}"
 #: src/i18n.rs:75
 msgid "{DOMAIN}.mo"
 msgstr "{DOMAIN}.mo"
-
-#: src/fido2_recipient.rs:42
-msgid "{FIDO2_RECIPIENT_METADATA_PREFIX}{}:{}:{}"
-msgstr "{FIDO2_RECIPIENT_METADATA_PREFIX}{}:{}:{}"
 
 #: src/setup.rs:192 src/setup.rs:329 src/setup.rs:337 src/setup.rs:352
 msgid "{GETTEXT_DOMAIN}.mo"
@@ -6528,10 +6163,6 @@ msgstr "{base}?{}"
 #: src/store/git_page.rs:251
 msgid "{branch} (no commits yet)"
 msgstr "{branch} (nog geen commits)"
-
-#: src/fido2_recipient.rs:19
-msgid "{byte:02X}"
-msgstr "{byte:02X}"
 
 #: src/backend/integrated/shared/crypto.rs:711 src/search_provider.rs:413
 #: src/updater/common.rs:1172
@@ -6762,10 +6393,6 @@ msgstr ""
 msgid "{} ({short_id})"
 msgstr "{} ({short_id})"
 
-#: src/fido2_recipient.rs:113
-msgid "{} - FIDO2 recipient"
-msgstr "{} - FIDO2-ontvanger"
-
 #: src/updater/common.rs:1184
 msgid "{} of {} ({percentage:.0}%)"
 msgstr "{} van {} ({percentage:.0}%)"
@@ -6825,9 +6452,6 @@ msgstr "{}.toml"
 #~ msgstr ""
 #~ "Elke gesynchroniseerde hostsleutel moet met een wachtwoord zijn beveiligd "
 #~ "voordat Keycord die kan opslaan."
-
-#~ msgid "FIDO2 recipients are only available on Linux and Windows."
-#~ msgstr "FIDO2-ontvangers zijn alleen beschikbaar op Linux en Windows."
 
 #~ msgid "Failed to create config dir: {e}"
 #~ msgstr "Kon de configuratiemap niet maken: {e}"
@@ -6981,9 +6605,6 @@ msgstr "{}.toml"
 #~ "Werkt met wachtwoordmappen die de standaard <code>pass</code>-indeling "
 #~ "gebruiken, zodat je de mappen die je al hebt kunt blijven gebruiken."
 
-#~ msgid "Add FIDO2 recipient support"
-#~ msgstr "Voeg ondersteuning voor FIDO2-ontvangers toe"
-
 #~ msgid ""
 #~ "App runtime: debug={}, setup={}, flatpak={}, host-access={}, "
 #~ "smartcard={}, fido={}."
@@ -6994,21 +6615,11 @@ msgstr "{}.toml"
 #~ msgid "Choose a private key file."
 #~ msgstr "Kies een privésleutelbestand."
 
-#~ msgid "FIDO2 store recipients must be unlocked separately."
-#~ msgstr "FIDO2-opslagontvangers moeten apart worden ontgrendeld."
-
 #~ msgid "Import private key from clipboard"
 #~ msgstr "Privésleutel vanuit klembord importeren"
 
 #~ msgid "Read an armored private key from the clipboard."
 #~ msgstr "Lees een ge-armorde privésleutel van het klembord."
-
-#~ msgid ""
-#~ "Use password-protected or hardware-backed OpenPGP and FIDO2 keys, plus "
-#~ "FIDO2 recipients"
-#~ msgstr ""
-#~ "Gebruik met wachtwoord beveiligde of door hardware ondersteunde OpenPGP-"
-#~ "privésleutels, plus FIDO2-ontvangers"
 
 #~ msgid ""
 #~ "App runtime: debug={}, setup={}, flatpak={}, host-access={}, smartcard={}."
@@ -7253,13 +6864,6 @@ msgstr "{}.toml"
 
 #~ msgid "Generate a new app-managed key inside Keycord."
 #~ msgstr "Genereer een nieuwe door de app beheerde sleutel in Keycord."
-
-#~ msgid ""
-#~ "Import an existing private key, add a FIDO2 recipient, or connect a "
-#~ "hardware token."
-#~ msgstr ""
-#~ "Importeer een bestaande privésleutel, voeg een FIDO2-ontvanger toe of "
-#~ "verbind een hardwaretoken."
 
 #~ msgid "Install the latest Windows release"
 #~ msgstr "Installeer de nieuwste Windows-release"

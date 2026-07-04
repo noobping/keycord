@@ -10,10 +10,7 @@ If the folder is not empty, Keycord treats it as an existing store and opens the
 
 If the folder is empty, Keycord opens the create-store version of the store-key page through [src/store/recipients_page/mod.rs](../src/store/recipients_page/mod.rs). Create mode immediately queues an autosave, but the save only becomes real once there is at least one recipient.
 
-The recipient page keeps an in-memory list of selected recipients. Before saving, [src/store/recipients.rs](../src/store/recipients.rs) splits that list into:
-
-- standard recipients that belong in `.gpg-id`
-- FIDO2 recipients that belong in `.fido-id`
+The recipient page keeps an in-memory list of selected recipients. Before saving, [src/store/recipients.rs](../src/store/recipients.rs) normalizes that list into standard recipients that belong in `.gpg-id`.
 
 The actual save path lives in [src/store/recipients_page/save.rs](../src/store/recipients_page/save.rs) and [src/backend/integrated/store.rs](../src/backend/integrated/store.rs):
 
@@ -26,7 +23,7 @@ The actual save path lives in [src/store/recipients_page/save.rs](../src/store/r
 
 Two details matter here.
 
-First, recipient files are transactional. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) writes the new `.gpg-id` and FIDO2 sidecar, runs the reencryption closure, and restores the old files if reencryption fails.
+First, recipient files are transactional. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) writes the new `.gpg-id` recipient file, runs the reencryption closure, and restores the old file if reencryption fails.
 
 Second, recipients are inherited per path. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) resolves an entry's recipients by walking upward until it finds the nearest `.gpg-id`. So the "story of a secret" is really "find the closest recipient file, then use that policy."
 
@@ -50,10 +47,7 @@ That save path does four important things:
 3. It encrypts the plaintext according to the store policy.
 4. It writes the ciphertext to disk.
 
-The file extension is part of the policy. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) and [src/password/entry_files.rs](../src/password/entry_files.rs) choose:
-
-- `.gpg` for standard recipient stores
-- `.keycord` for FIDO2 recipient stores
+The file extension is part of the standard pass layout. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) and [src/password/entry_files.rs](../src/password/entry_files.rs) use `.gpg` for password entries.
 
 ## Story 3: Password-Protected Key
 
@@ -100,40 +94,20 @@ On write, [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/sh
 
 On read, the same module reverses the process one recipient at a time. If even one required key is missing, incompatible, or still locked, the secret does not open.
 
-There is one extra rule hidden in [src/backend/integrated/shared/recipients.rs](../src/backend/integrated/shared/recipients.rs): a FIDO2-only store with more than one FIDO2 recipient is treated as `AllManagedKeys` even if the comment is absent. In other words, "all keys required" is explicit for normal keys and implicit for multi-key FIDO2-only stores.
+## Story 5: Experimental FIDO2-Protected Private Key
 
-## Story 5: FIDO2 Security Key
+The FIDO2-protected private-key flow starts from the key generation UI in [src/store/recipients_page/generate.rs](../src/store/recipients_page/generate.rs). The FIDO2 binding work lives in [src/backend/integrated/keys/fido2](../src/backend/integrated/keys/fido2), and the protected private-key bytes are stored through [src/backend/integrated/keys/store/storage.rs](../src/backend/integrated/keys/store/storage.rs).
 
-The FIDO2 add flow lives in [src/store/recipients_page/import.rs](../src/store/recipients_page/import.rs), but the real work happens in [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs).
-
-When the user adds a FIDO2 security key:
+When the user generates an experimental FIDO2-protected private key:
 
 1. Keycord enrolls an `hmac-secret` credential against the Keycord RP ID.
-2. It derives a stable recipient id from the credential id.
-3. It stores a temporary enrollment record in memory.
-4. It returns a recipient string such as `keycord-fido2-recipient-v1=...`.
+2. It creates a `Fido2DirectBindingDescriptor` with the key fingerprint, display label, and credential id.
+3. It stores that descriptor in the private-key manifest beside the protected key material.
+4. It encrypts the private-key protection layer with the FIDO2 direct required-layer format.
 
-The recipient string format is defined in [src/fido2_recipient.rs](../src/fido2_recipient.rs). The recipient itself is saved to `.fido-id`, not `.gpg-id`.
+That descriptor is private-key metadata. It is not a store recipient, it is not written to `.gpg-id`, and Keycord no longer writes a FIDO2 sidecar file.
 
-The temporary enrollment cache in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs) is important. It lets the first save use the just-created FIDO2 secret material without forcing the user to immediately re-derive it from the device again. After a successful store-recipient save, [src/backend/integrated/store.rs](../src/backend/integrated/store.rs) clears that pending enrollment state.
-
-FIDO2 entry encryption is different from standard OpenPGP entry encryption.
-
-For the common any-key path, [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) and [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) create an any-managed bundle:
-
-- a random data-encryption key encrypts the pass-file payload once
-- each FIDO2 recipient gets its own wrapped copy of that key
-- standard OpenPGP recipients can also get a wrapped copy of the same key
-
-That means the payload is encrypted once, but multiple recipient wrappers point at it.
-
-For rewrites, [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) tries to preserve existing wrapped recipients when possible. That is why adding or removing one FIDO2 key does not always force a full rebuild of every FIDO2 wrapper.
-
-For the experimental all-keys-required path, FIDO2 uses direct required layers instead of the any-managed bundle.
-
-Unlocking is also session-based. [src/private_key/unlock.rs](../src/private_key/unlock.rs) can ask for a FIDO2 PIN, then [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) validates the device and caches the PIN in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs).
-
-The extra guidance dialog in [src/store/recipients_page/guide.rs](../src/store/recipients_page/guide.rs) exists for a real reason: when you add another FIDO2 recipient to an existing FIDO2 store, Keycord still has to decrypt the old entries before it can re-wrap them for the new set of keys. That is why it may ask for a security key that already works with the store.
+Unlocking is still session-based. [src/private_key/unlock.rs](../src/private_key/unlock.rs) can ask for a FIDO2 PIN, then the FIDO2 key code validates the device and caches the PIN in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs). Once unlocked, the managed OpenPGP key participates in the normal recipient flow described above.
 
 ## Story 6: A Secret Is Opened
 
@@ -162,4 +136,4 @@ From there the story is short:
 
 The important detail is that copy is still a decrypt operation. The password is not cached as ready-to-copy plaintext somewhere else in the app. Keycord re-enters the same read path, takes the first line, and hands that text to the clipboard.
 
-If the Host backend is active, [src/clipboard.rs](../src/clipboard.rs) takes a different route and shells out to `pass -c` instead. The rest of this guide follows the integrated path because that is where store-key management, experimental layered encryption, and FIDO2 behavior live.
+If the Host backend is active, [src/clipboard.rs](../src/clipboard.rs) takes a different route and shells out to `pass -c` instead. The rest of this guide follows the integrated path because that is where store-key management, experimental layered encryption, and experimental FIDO2 behavior live.

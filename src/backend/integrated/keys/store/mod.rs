@@ -40,9 +40,8 @@ pub use storage::{
     ripasso_private_key_title,
 };
 pub use unlock::{
-    create_fido2_store_recipient, is_ripasso_private_key_unlocked,
-    ripasso_private_key_requires_passphrase, ripasso_private_key_requires_session_unlock,
-    set_fido2_security_key_pin, unlock_fido2_store_recipient_for_session,
+    is_ripasso_private_key_unlocked, ripasso_private_key_requires_passphrase,
+    ripasso_private_key_requires_session_unlock, set_fido2_security_key_pin,
     unlock_ripasso_private_key_for_session,
 };
 

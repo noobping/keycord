@@ -10,10 +10,7 @@ Als de map niet leeg is, behandelt Keycord die als een bestaande opslag en opent
 
 Als de map leeg is, opent Keycord via [src/store/recipients_page/mod.rs](../src/store/recipients_page/mod.rs) de versie van de pagina voor het maken van een nieuwe opslag. De modus voor maken zet meteen een autosave in de wachtrij, maar die opslag wordt pas echt zodra er minstens een ontvanger is.
 
-De ontvangerspagina houdt een lijst van geselecteerde ontvangers in het geheugen. Voor het opslaan splitst [src/store/recipients.rs](../src/store/recipients.rs) die lijst in:
-
-- standaardontvangers die in `.gpg-id` horen
-- FIDO2-ontvangers die in `.fido-id` horen
+De ontvangerspagina houdt een lijst van geselecteerde ontvangers in het geheugen. Voor het opslaan normaliseert [src/store/recipients.rs](../src/store/recipients.rs) die lijst naar standaardontvangers die in `.gpg-id` horen.
 
 Het echte opslagpad zit in [src/store/recipients_page/save.rs](../src/store/recipients_page/save.rs) en [src/backend/integrated/store.rs](../src/backend/integrated/store.rs):
 
@@ -26,7 +23,7 @@ Het echte opslagpad zit in [src/store/recipients_page/save.rs](../src/store/reci
 
 Twee details zijn hier belangrijk.
 
-Ten eerste zijn ontvangerbestanden transactioneel. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) schrijft het nieuwe `.gpg-id` en het FIDO2-sidecarbestand, voert de closure voor herencryptie uit en zet de oude bestanden terug als de herencryptie mislukt.
+Ten eerste zijn ontvangerbestanden transactioneel. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) schrijft het nieuwe `.gpg-id`-ontvangerbestand, voert de closure voor herencryptie uit en zet het oude bestand terug als de herencryptie mislukt.
 
 Ten tweede worden ontvangers per pad geerfd. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) zoekt de ontvangers van een item door omhoog te lopen totdat het de dichtstbijzijnde `.gpg-id` vindt. Het "verhaal van een geheim" is dus eigenlijk "vind het dichtstbijzijnde ontvangerbestand en gebruik dan dat beleid".
 
@@ -50,12 +47,7 @@ Dat opslagpad doet vier belangrijke dingen:
 3. Het versleutelt de platte tekst volgens het opslagbeleid.
 4. Het schrijft de ciphertext naar schijf.
 
-De bestandsextensie hoort bij dat beleid. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) en [src/password/entry_files.rs](../src/password/entry_files.rs) kiezen:
-
-- `.gpg` voor opslagen met standaardontvangers
-- `.keycord` voor opslagen met FIDO2-ontvangers
-
-Bestaande verouderde bestanden worden nog steeds gerespecteerd, dus een item met FIDO2-ondersteuning kan een ouder `.gpg`-bestand blijven lezen totdat het wordt herschreven.
+De bestandsextensie hoort bij de standaard pass-indeling. [src/backend/integrated/shared/paths.rs](../src/backend/integrated/shared/paths.rs) en [src/password/entry_files.rs](../src/password/entry_files.rs) gebruiken `.gpg` voor wachtwoordinvoeren.
 
 ## Verhaal 3: Met wachtwoord beveiligde sleutel
 
@@ -102,40 +94,20 @@ Bij schrijven schakelt [src/backend/integrated/shared/crypto.rs](../src/backend/
 
 Bij lezen draait dezelfde module dat proces voor elke ontvanger in omgekeerde volgorde terug. Als ook maar een vereiste sleutel ontbreekt, incompatibel is of nog vergrendeld is, gaat het geheim niet open.
 
-Er zit nog een extra regel verstopt in [src/backend/integrated/shared/recipients.rs](../src/backend/integrated/shared/recipients.rs): een opslag met alleen FIDO2 en meer dan een FIDO2-ontvanger wordt behandeld als `AllManagedKeys`, zelfs als de comment ontbreekt. Met andere woorden: "alle sleutels vereist" is expliciet voor normale sleutels en impliciet voor FIDO2-opslagen met meerdere sleutels.
+## Verhaal 5: Experimentele met FIDO2 beveiligde privésleutel
 
-## Verhaal 5: FIDO2-beveiligingssleutel
+De flow voor met FIDO2 beveiligde privésleutels begint in de UI voor sleutelaanmaak in [src/store/recipients_page/generate.rs](../src/store/recipients_page/generate.rs). Het FIDO2-bindingswerk zit in [src/backend/integrated/keys/fido2](../src/backend/integrated/keys/fido2), en de beveiligde privésleutelbytes worden opgeslagen via [src/backend/integrated/keys/store/storage.rs](../src/backend/integrated/keys/store/storage.rs).
 
-De flow voor het toevoegen van FIDO2 leeft in [src/store/recipients_page/import.rs](../src/store/recipients_page/import.rs), maar het echte werk gebeurt in [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs).
-
-Wanneer de gebruiker een FIDO2-beveiligingssleutel toevoegt:
+Wanneer de gebruiker een experimentele met FIDO2 beveiligde privésleutel genereert:
 
 1. registreert Keycord een `hmac-secret`-credential tegen de Keycord RP ID
-2. leidt het een stabiele ontvanger-id af uit de credential-id
-3. slaat het tijdelijk een inschrijvingsrecord in het geheugen op
-4. geeft het een ontvangerstring terug zoals `keycord-fido2-recipient-v1=...`
+2. maakt het een `Fido2DirectBindingDescriptor` met de sleutelvingerafdruk, weergavelabel en credential-id
+3. slaat het die descriptor in het privésleutelmanifest op naast het beveiligde sleutelmateriaal
+4. versleutelt het de beveiligingslaag van de privésleutel met het FIDO2 direct required-layer-formaat
 
-Het formaat van die ontvangerstring staat in [src/fido2_recipient.rs](../src/fido2_recipient.rs). De ontvanger zelf wordt opgeslagen in `.fido-id`, niet in `.gpg-id`.
+Die descriptor is metadata voor privésleutels. Het is geen opslagontvanger, hij wordt niet naar `.gpg-id` geschreven en Keycord schrijft geen FIDO2-sidecarbestand meer.
 
-De tijdelijke cache voor inschrijvingen in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs) is belangrijk. Daardoor kan de eerste save meteen het zojuist gemaakte FIDO2-geheimmateriaal gebruiken zonder de gebruiker te dwingen het direct opnieuw van het apparaat af te leiden. Na een succesvolle save van opslagontvangers wist [src/backend/integrated/store.rs](../src/backend/integrated/store.rs) die pending enrollment-status.
-
-FIDO2-versleuteling voor items werkt anders dan standaard OpenPGP-versleuteling voor items.
-
-Voor het gebruikelijke any-key-pad maken [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) en [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) een any-managed-bundel:
-
-- een willekeurige data-encryptiesleutel versleutelt de payload van het pass-bestand een keer
-- elke FIDO2-ontvanger krijgt zijn eigen ingepakte kopie van die sleutel
-- standaard OpenPGP-ontvangers kunnen ook een ingepakte kopie van dezelfde sleutel krijgen
-
-Dat betekent dat de payload een keer wordt versleuteld, maar dat meerdere ontvangerwrappers ernaar verwijzen.
-
-Voor herschrijvingen probeert [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) bestaande ingepakte ontvangers waar mogelijk te behouden. Daarom dwingt het toevoegen of verwijderen van een FIDO2-sleutel niet altijd een volledige herbouw van elke FIDO2-wrapper af.
-
-Voor het experimentele pad waarbij alle sleutels vereist zijn, gebruikt FIDO2 directe vereiste lagen in plaats van de any-managed-bundel.
-
-Ontgrendelen is ook sessiegebaseerd. [src/private_key/unlock.rs](../src/private_key/unlock.rs) kan om een FIDO2-PIN vragen, waarna [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) het apparaat valideert en de PIN cachet in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs).
-
-De extra begeleidingsdialoog in [src/store/recipients_page/guide.rs](../src/store/recipients_page/guide.rs) bestaat om een echte reden: wanneer je nog een FIDO2-ontvanger toevoegt aan een bestaande FIDO2-opslag, moet Keycord de oude items nog steeds ontsleutelen voordat het ze opnieuw kan inpakken voor de nieuwe set sleutels. Daarom kan het vragen om een beveiligingssleutel die al met de opslag werkt.
+Ontgrendelen blijft sessiegebaseerd. [src/private_key/unlock.rs](../src/private_key/unlock.rs) kan om een FIDO2-PIN vragen, waarna de FIDO2-sleutelcode het apparaat valideert en de PIN cachet in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs). Eenmaal ontgrendeld doet de beheerde OpenPGP-sleutel mee in de normale ontvangerflow hierboven.
 
 ## Verhaal 6: Een geheim wordt geopend
 
@@ -164,4 +136,4 @@ Vanaf daar is het verhaal kort:
 
 Het belangrijke detail is dat kopieren nog steeds een ontsleuteloperatie is. Het wachtwoord wordt nergens anders in de app als kant-en-klare platte tekst voor kopieren gecachet. Keycord gaat opnieuw door hetzelfde leespad, neemt de eerste regel en geeft die tekst aan het klembord.
 
-Als de Host-backend actief is, neemt [src/clipboard.rs](../src/clipboard.rs) een andere route en roept het `pass -c` aan. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels, experimentele gelaagde versleuteling en FIDO2-gedrag leeft.
+Als de Host-backend actief is, neemt [src/clipboard.rs](../src/clipboard.rs) een andere route en roept het `pass -c` aan. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels, experimentele gelaagde versleuteling en experimenteel FIDO2-gedrag leeft.

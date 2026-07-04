@@ -410,17 +410,6 @@ pub fn ripasso_private_key_requires_passphrase(bytes: &[u8]) -> Result<bool, Pri
     Ok(cert_requires_passphrase(&cert))
 }
 
-pub fn create_fido2_store_recipient(pin: Option<&str>) -> Result<String, PrivateKeyError> {
-    super::super::fido2::create_fido2_store_recipient(pin)
-}
-
 pub fn set_fido2_security_key_pin(new_pin: &str) -> Result<(), PrivateKeyError> {
     super::super::fido2::set_fido2_security_key_pin(new_pin)
-}
-
-pub fn unlock_fido2_store_recipient_for_session(
-    recipient: &str,
-    pin: Option<&str>,
-) -> Result<(), PrivateKeyError> {
-    super::super::fido2::unlock_fido2_store_recipient_for_session(recipient, pin)
 }

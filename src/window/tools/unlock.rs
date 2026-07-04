@@ -3,13 +3,12 @@ use crate::backend::{
     list_connected_smartcard_keys, list_ripasso_private_keys,
     ripasso_private_key_requires_session_unlock,
 };
-use crate::fido2_recipient::{is_fido2_recipient_string, same_fido2_recipient};
 use crate::i18n::gettext;
 use crate::preferences::Preferences;
 use crate::private_key::unlock::prompt_private_key_unlock_for_action;
 use crate::store::recipients::{
-    read_store_fido2_recipients_for_scope, read_store_standard_recipients_for_scope,
-    relevant_store_recipient_scopes, ROOT_STORE_RECIPIENTS_SCOPE,
+    read_store_standard_recipients_for_scope, relevant_store_recipient_scopes,
+    ROOT_STORE_RECIPIENTS_SCOPE,
 };
 use crate::support::background::spawn_result_task;
 use adw::{Toast, ToastOverlay};
@@ -69,12 +68,7 @@ impl ToolsPageState {
 }
 
 fn collect_locked_tool_fingerprints(requests: &[FieldValueRequest]) -> Vec<String> {
-    let mut fingerprints = collect_unlockable_standard_tool_fingerprints(requests);
-    append_unlockable_tool_fingerprints(
-        &mut fingerprints,
-        collect_available_tool_fido2_recipients(requests),
-    );
-    fingerprints
+    collect_unlockable_standard_tool_fingerprints(requests)
 }
 
 fn collect_unlockable_standard_tool_fingerprints(requests: &[FieldValueRequest]) -> Vec<String> {
@@ -94,19 +88,6 @@ fn collect_unlockable_standard_tool_fingerprints(requests: &[FieldValueRequest])
     }
 
     fingerprints
-}
-
-fn collect_available_tool_fido2_recipients(requests: &[FieldValueRequest]) -> Vec<String> {
-    let mut recipients = Vec::new();
-    for store_root in tool_request_store_roots(requests) {
-        for scope in tool_request_store_scopes(&store_root) {
-            append_unlockable_tool_fingerprints(
-                &mut recipients,
-                read_store_fido2_recipients_for_scope(&store_root, &scope),
-            );
-        }
-    }
-    recipients
 }
 
 fn available_tool_keys() -> Result<Vec<AvailableToolKey>, String> {
@@ -197,26 +178,17 @@ fn tool_recipient_matches_key(recipient: &str, key: &AvailableToolKey) -> bool {
 
 fn append_unlockable_tool_fingerprints(fingerprints: &mut Vec<String>, candidates: Vec<String>) {
     for candidate in candidates {
-        let unlockable = if is_fido2_recipient_string(&candidate) {
-            true
-        } else {
-            matches!(
-                ripasso_private_key_requires_session_unlock(&candidate),
-                Ok(true)
-            )
-        };
-        if !unlockable {
+        if !matches!(
+            ripasso_private_key_requires_session_unlock(&candidate),
+            Ok(true)
+        ) {
             continue;
         }
 
-        let duplicate = fingerprints.iter().any(|existing| {
-            if is_fido2_recipient_string(existing) && is_fido2_recipient_string(&candidate) {
-                same_fido2_recipient(existing, &candidate)
-            } else {
-                existing.eq_ignore_ascii_case(&candidate)
-            }
-        });
-        if !duplicate {
+        if !fingerprints
+            .iter()
+            .any(|existing| existing.eq_ignore_ascii_case(&candidate))
+        {
             fingerprints.push(candidate);
         }
     }
@@ -271,28 +243,19 @@ fn prompt_tool_unlock_at_index(
 
 #[cfg(test)]
 mod tests {
-    use super::append_unlockable_tool_fingerprints;
+    use super::push_unique_standard_tool_recipient;
 
     #[test]
-    fn unlockable_tool_fingerprints_keep_unique_standard_and_fido_keys() {
-        let mut fingerprints = vec!["ABCDEF0123456789".to_string()];
-        append_unlockable_tool_fingerprints(
-            &mut fingerprints,
-            vec![
-                "abcdef0123456789".to_string(),
-                "keycord-fido2-recipient-v1=0123456789abcdef0123456789abcdef01234567:4465736b204b6579:63726564"
-                    .to_string(),
-                "keycord-fido2-recipient-v1=0123456789abcdef0123456789abcdef01234567:4261636b7570204b6579:63726564"
-                    .to_string(),
-            ],
-        );
+    fn standard_tool_recipients_are_case_insensitive_and_unique() {
+        let mut recipients = vec!["ABCDEF0123456789".to_string()];
+        push_unique_standard_tool_recipient(&mut recipients, "abcdef0123456789".to_string());
+        push_unique_standard_tool_recipient(&mut recipients, "FEDCBA9876543210".to_string());
 
         assert_eq!(
-            fingerprints,
+            recipients,
             vec![
                 "ABCDEF0123456789".to_string(),
-                "keycord-fido2-recipient-v1=0123456789abcdef0123456789abcdef01234567:4465736b204b6579:63726564"
-                    .to_string(),
+                "FEDCBA9876543210".to_string(),
             ]
         );
     }

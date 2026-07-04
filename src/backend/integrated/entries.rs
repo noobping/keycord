@@ -1,4 +1,4 @@
-use super::crypto::{decrypt_any_managed_entry_for_fingerprint, IntegratedCryptoContext};
+use super::crypto::{decrypt_entry_for_fingerprint, IntegratedCryptoContext};
 use super::git::{maybe_commit_git_paths, password_entry_git_path};
 use super::keys::{
     ensure_ripasso_private_key_is_ready, password_entry_error_from_integrated_message,
@@ -10,7 +10,6 @@ use super::paths::{
 };
 use super::recipients::{
     decryption_candidate_fingerprints_for_entry,
-    password_entry_fido2_recipient_count as fido2_recipient_count,
     password_entry_is_readable as recipients_password_entry_is_readable,
     private_key_requirement_for_label, required_private_key_fingerprints_for_entry,
 };
@@ -18,7 +17,6 @@ use crate::backend::{
     PasswordEntryError, PasswordEntryReadProgress, PasswordEntryWriteError,
     PasswordEntryWriteProgress, StoreRecipientsPrivateKeyRequirement,
 };
-use crate::fido2_recipient::is_fido2_recipient_string;
 use crate::logging::log_error;
 use crate::support::secure_fs::write_atomic_file;
 use std::fs;
@@ -45,32 +43,8 @@ pub fn read_password_entry_with_progress(
         let context = IntegratedCryptoContext::load_for_label(store_root, label)
             .map_err(password_entry_error_from_integrated_message)?;
         return context
-            .decrypt_entry_with_progress(
-                &entry_path,
-                Some(&mut |progress| {
-                    report_progress(PasswordEntryReadProgress {
-                        current_step: progress.current_step,
-                        total_steps: progress.total_steps,
-                    });
-                }),
-            )
+            .decrypt_entry(&entry_path)
             .map_err(password_entry_error_from_integrated_message);
-    }
-
-    if let Ok(context) = IntegratedCryptoContext::load_for_label(store_root, label) {
-        if context.uses_parallel_fido2_decrypt_for_any_managed() {
-            return context
-                .decrypt_entry_with_progress(
-                    &entry_path,
-                    Some(&mut |progress| {
-                        report_progress(PasswordEntryReadProgress {
-                            current_step: progress.current_step,
-                            total_steps: progress.total_steps,
-                        });
-                    }),
-                )
-                .map_err(password_entry_error_from_integrated_message);
-        }
     }
 
     let mut saw_locked_key = false;
@@ -78,22 +52,9 @@ pub fn read_password_entry_with_progress(
     let mut last_error = None;
     let candidate_fingerprints = decryption_candidate_fingerprints_for_entry(store_root, label)
         .map_err(PasswordEntryError::other)?;
-    let total_fido2_steps = candidate_fingerprints
-        .iter()
-        .filter(|fingerprint| is_fido2_recipient_string(fingerprint))
-        .count();
-    let mut current_fido2_step = 0usize;
-
+    let _ = report_progress;
     for fingerprint in candidate_fingerprints {
-        if is_fido2_recipient_string(&fingerprint) && total_fido2_steps > 0 {
-            current_fido2_step += 1;
-            report_progress(PasswordEntryReadProgress {
-                current_step: current_fido2_step,
-                total_steps: total_fido2_steps,
-            });
-        }
-
-        match decrypt_any_managed_entry_for_fingerprint(&fingerprint, &entry_path) {
+        match decrypt_entry_for_fingerprint(&fingerprint, &entry_path) {
             Ok(secret) => return Ok(secret),
             Err(err) => match password_entry_error_from_integrated_message(err) {
                 PasswordEntryError::LockedPrivateKey(message) => {
@@ -131,10 +92,6 @@ pub fn read_password_line(store_root: &str, label: &str) -> Result<String, Passw
 
 pub fn password_entry_is_readable(store_root: &str, label: &str) -> bool {
     recipients_password_entry_is_readable(store_root, label)
-}
-
-pub fn password_entry_fido2_recipient_count(store_root: &str, label: &str) -> usize {
-    fido2_recipient_count(store_root, label).unwrap_or(0)
 }
 
 pub fn save_password_entry(
@@ -175,17 +132,9 @@ pub fn save_password_entry_with_progress(
         .map(fs::read)
         .transpose()
         .map_err(|err| password_entry_write_error_from_integrated_message(err.to_string()))?;
+    let _ = report_progress;
     let ciphertext = context
-        .encrypt_contents_with_existing_and_progress(
-            contents,
-            previous_ciphertext.as_deref(),
-            Some(&mut |progress| {
-                report_progress(PasswordEntryWriteProgress {
-                    current_step: progress.current_step,
-                    total_steps: progress.total_steps,
-                });
-            }),
-        )
+        .encrypt_contents_with_existing(contents, previous_ciphertext.as_deref())
         .map_err(password_entry_write_error_from_integrated_message)?;
     let existing_git_path = existing_entry_path
         .as_ref()
@@ -307,9 +256,6 @@ fn ensure_required_private_keys_are_ready(
     fingerprints: &[String],
 ) -> Result<(), PasswordEntryError> {
     for fingerprint in fingerprints {
-        if is_fido2_recipient_string(fingerprint) {
-            continue;
-        }
         ensure_ripasso_private_key_is_ready(fingerprint)?;
     }
 
