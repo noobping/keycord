@@ -336,11 +336,11 @@ msgstr "Er bestaat al een item met die naam."
 msgid ""
 "App runtime: debug={}, setup={}, flatpak={}, docs={}, logging={}, audit={}, "
 "legacy-compat={}, host-access={}, smartcard={}, hardwarekey={}, "
-"fidostore={}, fidokey={}."
+"fidokey={}."
 msgstr ""
 "App-runtime: debug={}, setup={}, flatpak={}, docs={}, logging={}, audit={}, "
 "legacy-compat={}, hosttoegang={}, smartcard={}, hardwarekey={}, "
-"fidostore={}, fidokey={}."
+"fidokey={}."
 
 #: data/metainfo.xml:90
 msgid ""
@@ -1434,11 +1434,6 @@ msgstr "Host-GPG-privésleutel exporteren"
 #: src/backend/host.rs:451
 msgid "Export host GPG public keys"
 msgstr "Host-GPG-publieke sleutels exporteren"
-
-#: src/backend/integrated/keys/fido2/common.rs:34
-msgid "FIDO store support is disabled in this build of Keycord."
-msgstr ""
-"Ondersteuning voor FIDO-opslagen is uitgeschakeld in deze build van Keycord."
 
 #: src/private_key/unlock.rs:322 src/private_key/unlock.rs:443
 #: src/store/recipients_page/generate.rs:272
@@ -4925,7 +4920,8 @@ msgstr "Deze FIDO2-beveiligingssleutel kan je items niet openen."
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Deze branch heeft geen commits beschikbaar om te controleren."
 
-#: src/store/recipients.rs:15
+#: src/backend/integrated/keys/fido2/common.rs:33
+#: src/store/recipients.rs:14
 msgid "This build doesn't support FIDO2-backed stores."
 msgstr "Deze build ondersteunt geen FIDO2-opslagen."
 
@@ -6875,13 +6871,6 @@ msgstr "{}.toml"
 
 #~ msgid "Add OTP"
 #~ msgstr "OTP toevoegen"
-
-#~ msgid ""
-#~ "App runtime: debug={}, setup={}, flatpak={}, docs={}, host-access={}, "
-#~ "smartcard={}, fidostore={}, fidokey={}."
-#~ msgstr ""
-#~ "App-runtime: debug={}, setup={}, flatpak={}, docs={}, host-toegang={}, "
-#~ "smartcard={}, fidostore={}, fidokey={}."
 
 #~ msgid "Choose the matching hardware public key file to finish setup."
 #~ msgstr ""

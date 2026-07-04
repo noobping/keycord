@@ -131,7 +131,7 @@ pub const fn supports_first_time_fido2_pin_setup() -> bool {
     cfg!(all(
         target_os = "linux",
         feature = "fidopin",
-        any(feature = "fidostore", feature = "fidokey")
+        feature = "fidokey"
     ))
 }
 

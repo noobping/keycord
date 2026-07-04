@@ -29,9 +29,8 @@ use std::time::{Duration, Instant};
 use zeroize::Zeroizing;
 
 pub const FIDO2_RP_ID: &str = "io.github.noobping.keycord";
-#[cfg(not(feature = "fidostore"))]
-pub(super) const FIDO2_STORE_FEATURE_DISABLED_MESSAGE: &str =
-    "FIDO store support is disabled in this build of Keycord.";
+pub(super) const FIDO2_STORE_UNSUPPORTED_MESSAGE: &str =
+    "This build doesn't support FIDO2-backed stores.";
 
 pub(super) const FIDO2_HMAC_SALT_LEN: usize = 32;
 const FIDO2_CLIENT_DATA_HASH_LEN: usize = 32;

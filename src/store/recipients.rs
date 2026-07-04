@@ -4,7 +4,6 @@ use crate::fido2_recipient::{
     parse_fido2_recipient_string, FIDO2_RECIPIENTS_FILE_NAME,
 };
 use crate::i18n::gettext;
-use crate::support::runtime::supports_fidostore_features;
 use std::fs;
 use std::path::{Component, Path, PathBuf};
 #[cfg(test)]
@@ -12,7 +11,7 @@ use std::{cell::RefCell, rc::Rc};
 use walkdir::WalkDir;
 
 const REQUIRE_ALL_PRIVATE_KEYS_METADATA: &str = "keycord-private-key-requirement=all";
-pub const UNSUPPORTED_FIDOSTORE_MESSAGE: &str = "This build doesn't support FIDO2-backed stores.";
+pub const UNSUPPORTED_FIDO2_STORE_MESSAGE: &str = "This build doesn't support FIDO2-backed stores.";
 pub const ROOT_STORE_RECIPIENTS_SCOPE: &str = ".";
 
 fn normalized_store_recipients_scope(scope: &str) -> String {
@@ -97,7 +96,7 @@ pub fn store_uses_fido2_recipients(store_root: &str) -> bool {
 }
 
 pub fn store_is_supported_in_current_build(store_root: &str) -> bool {
-    supports_fidostore_features() || !store_uses_fido2_recipients(store_root)
+    !store_uses_fido2_recipients(store_root)
 }
 
 pub fn read_store_private_key_requirement(
@@ -194,7 +193,7 @@ pub fn relevant_store_recipient_scopes(store_root: &str) -> Vec<String> {
 
 pub fn store_recipients_subtitle(store_root: &str) -> String {
     if !store_is_supported_in_current_build(store_root) {
-        return gettext(UNSUPPORTED_FIDOSTORE_MESSAGE);
+        return gettext(UNSUPPORTED_FIDO2_STORE_MESSAGE);
     }
 
     let recipients = read_store_recipients(store_root);
@@ -325,7 +324,7 @@ mod tests {
         read_store_recipients_for_scope, relevant_store_recipient_scopes, split_store_recipients,
         store_is_supported_in_current_build, store_recipients_subtitle,
         store_uses_fido2_recipients, stores_with_preferred_first, ROOT_STORE_RECIPIENTS_SCOPE,
-        UNSUPPORTED_FIDOSTORE_MESSAGE,
+        UNSUPPORTED_FIDO2_STORE_MESSAGE,
     };
     use crate::backend::{StoreRecipients, StoreRecipientsPrivateKeyRequirement};
     use crate::fido2_recipient::{
@@ -538,7 +537,7 @@ mod tests {
     }
 
     #[test]
-    fn store_support_matches_the_fidostore_feature_flag() {
+    fn stores_with_fido2_recipients_are_unsupported() {
         let recipient = test_fido2_recipient("Desk Key", b"cred");
         let unique = SystemTime::now()
             .duration_since(UNIX_EPOCH)
@@ -552,10 +551,9 @@ mod tests {
         )
         .expect("fido2 recipients file should be written");
 
-        assert_eq!(
-            store_is_supported_in_current_build(store_root.to_str().expect("utf8 temp path")),
-            crate::support::runtime::supports_fidostore_features()
-        );
+        assert!(!store_is_supported_in_current_build(
+            store_root.to_str().expect("utf8 temp path")
+        ));
 
         let _ = fs::remove_dir_all(store_root);
     }
@@ -576,17 +574,10 @@ mod tests {
         )
         .expect("fido2 recipients file should be written");
 
-        if crate::support::runtime::supports_fidostore_features() {
-            assert_ne!(
-                store_recipients_subtitle(store_root.to_str().expect("utf8 temp path")),
-                gettext(UNSUPPORTED_FIDOSTORE_MESSAGE)
-            );
-        } else {
-            assert_eq!(
-                store_recipients_subtitle(store_root.to_str().expect("utf8 temp path")),
-                gettext(UNSUPPORTED_FIDOSTORE_MESSAGE)
-            );
-        }
+        assert_eq!(
+            store_recipients_subtitle(store_root.to_str().expect("utf8 temp path")),
+            gettext(UNSUPPORTED_FIDO2_STORE_MESSAGE)
+        );
 
         let _ = fs::remove_dir_all(store_root);
     }

@@ -2,8 +2,7 @@ use super::StoreRecipientsPageState;
 use crate::fido2_recipient::is_fido2_recipient_string;
 use crate::i18n::gettext;
 use crate::support::runtime::{
-    supports_fidokey_features, supports_fidostore_features, supports_hardwarekey_features,
-    supports_smartcard_features,
+    supports_fidokey_features, supports_hardwarekey_features, supports_smartcard_features,
 };
 use crate::window::host_access::{
     append_optional_fido2_access_group_row, append_optional_smartcard_access_group_row,
@@ -21,10 +20,6 @@ pub(super) enum StoreRecipientsSelectionMode {
 impl StoreRecipientsSelectionMode {
     const fn allows_standard_recipients(self) -> bool {
         matches!(self, Self::Empty | Self::StandardOnly)
-    }
-
-    const fn allows_fido2_recipients(self) -> bool {
-        matches!(self, Self::Empty | Self::Fido2Only)
     }
 
     const fn shows_standard_recipient_choice(self, active: bool) -> bool {
@@ -86,10 +81,8 @@ pub(super) fn sync_store_recipients_mode_controls(
     uses_integrated_backend: bool,
 ) {
     let show_standard_rows = selection_mode.allows_standard_recipients();
-    let show_fido2_rows = selection_mode.allows_fido2_recipients();
     let smartcard_supported = supports_smartcard_features();
     let hardwarekey_supported = supports_hardwarekey_features();
-    let fidostore_supported = supports_fidostore_features();
     let fidokey_supported = supports_fidokey_features();
     let show_generic_import_rows = show_standard_rows;
 
@@ -121,10 +114,7 @@ pub(super) fn sync_store_recipients_mode_controls(
         .platform
         .import_hardware_key_row
         .set_visible(show_standard_rows && smartcard_supported);
-    state
-        .platform
-        .add_fido2_key_row
-        .set_visible(show_fido2_rows && fidostore_supported);
+    state.platform.add_fido2_key_row.set_visible(false);
 
     append_optional_smartcard_access_group_row(
         &state.platform.add_list,

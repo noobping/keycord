@@ -1,7 +1,7 @@
 use super::recipients::{
     read_store_private_key_requirement, read_store_private_key_requirement_for_scope,
     read_store_recipients, read_store_recipients_for_scope, store_is_supported_in_current_build,
-    ROOT_STORE_RECIPIENTS_SCOPE, UNSUPPORTED_FIDOSTORE_MESSAGE,
+    ROOT_STORE_RECIPIENTS_SCOPE, UNSUPPORTED_FIDO2_STORE_MESSAGE,
 };
 use crate::backend::DiscoveredHardwareToken;
 use crate::backend::StoreRecipientsPrivateKeyRequirement;
@@ -348,7 +348,7 @@ pub fn show_store_recipients_edit_page(state: &StoreRecipientsPageState, store: 
         state
             .platform
             .overlay
-            .add_toast(Toast::new(&gettext(UNSUPPORTED_FIDOSTORE_MESSAGE)));
+            .add_toast(Toast::new(&gettext(UNSUPPORTED_FIDO2_STORE_MESSAGE)));
         return;
     }
 

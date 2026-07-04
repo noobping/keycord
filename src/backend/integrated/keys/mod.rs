@@ -1,10 +1,10 @@
 mod cache;
 mod cert;
 mod errors;
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 #[path = "fido2/mod.rs"]
 mod fido2;
-#[cfg(not(any(feature = "fidostore", feature = "fidokey")))]
+#[cfg(not(feature = "fidokey"))]
 #[path = "fido2/mod.rs"]
 mod fido2;
 #[path = "hardware/mod.rs"]
@@ -43,7 +43,7 @@ pub(in crate::backend::integrated) use self::fido2::{
     reencrypt_fido2_any_managed_bundle_with_progress, Fido2DirectBinding, Fido2ReadProgress,
     Fido2WriteProgress,
 };
-#[cfg(all(test, any(feature = "fidostore", feature = "fidokey")))]
+#[cfg(all(test, feature = "fidokey"))]
 pub(in crate::backend::integrated) use self::fido2::{
     reset_fido2_transport_for_tests, set_fido2_transport_for_tests, Fido2AssertionOutput,
     Fido2DeviceLabel, Fido2Enrollment, Fido2Transport, Fido2TransportError,

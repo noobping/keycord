@@ -21,13 +21,6 @@ option(
 )
 
 option(
-  'fidostore',
-  type: 'boolean',
-  value: false,
-  description: 'Enable FIDO2-backed password store support.',
-)
-
-option(
   'smartcard',
   type: 'boolean',
   value: false,

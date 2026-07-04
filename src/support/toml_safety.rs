@@ -18,7 +18,7 @@ impl TomlParseLimits {
 pub(crate) const PREFERENCE_FILE_TOML_LIMITS: TomlParseLimits = TomlParseLimits::new(64 * 1024, 16);
 pub(crate) const MANAGED_KEY_MANIFEST_TOML_LIMITS: TomlParseLimits =
     TomlParseLimits::new(128 * 1024, 16);
-#[cfg(any(test, feature = "fidostore", feature = "fidokey"))]
+#[cfg(any(test, feature = "fidokey"))]
 pub(crate) const FIDO2_TEXT_ENVELOPE_TOML_LIMITS: TomlParseLimits =
     TomlParseLimits::new(1024 * 1024, 16);
 

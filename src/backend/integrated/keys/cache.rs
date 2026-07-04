@@ -4,11 +4,11 @@ use sequoia_openpgp::Cert;
 use std::collections::HashMap;
 use std::sync::{Arc, OnceLock, RwLock};
 use std::time::{Duration, Instant};
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 use zeroize::Zeroizing;
 
 const SECRET_CACHE_IDLE_TIMEOUT: Duration = Duration::from_secs(15 * 60);
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 type CachedFido2Pin = Arc<Zeroizing<Vec<u8>>>;
 
 #[derive(Clone)]
@@ -115,19 +115,19 @@ fn unlocked_hardware_private_keys() -> &'static SecretCache<HardwareSessionPolic
     UNLOCKED_KEYS.get_or_init(SecretCache::new)
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 fn cached_fido2_pins() -> &'static SecretCache<CachedFido2Pin> {
     static FIDO2_PINS: OnceLock<SecretCache<CachedFido2Pin>> = OnceLock::new();
     FIDO2_PINS.get_or_init(SecretCache::new)
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 fn pending_fido2_enrollments() -> &'static SecretCache<PendingFido2Enrollment> {
     static FIDO2_ENROLLMENTS: OnceLock<SecretCache<PendingFido2Enrollment>> = OnceLock::new();
     FIDO2_ENROLLMENTS.get_or_init(SecretCache::new)
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 #[derive(Debug)]
 pub(in crate::backend::integrated) struct PendingFido2Enrollment {
     credential_id: Vec<u8>,
@@ -135,7 +135,7 @@ pub(in crate::backend::integrated) struct PendingFido2Enrollment {
     hmac_secret: Zeroizing<Vec<u8>>,
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 impl PendingFido2Enrollment {
     fn new(
         credential_id: impl AsRef<[u8]>,
@@ -165,7 +165,7 @@ impl PendingFido2Enrollment {
     }
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 impl Clone for PendingFido2Enrollment {
     fn clone(&self) -> Self {
         Self::new(&self.credential_id, self.hmac_salt(), self.hmac_secret())
@@ -213,7 +213,7 @@ pub(in crate::backend::integrated) fn cache_unlocked_hardware_private_key(
     Ok(())
 }
 
-#[cfg(all(test, any(feature = "fidostore", feature = "fidokey")))]
+#[cfg(all(test, feature = "fidokey"))]
 pub(in crate::backend::integrated) fn peek_cached_fido2_pin(
     fingerprint: &str,
 ) -> Result<Option<CachedFido2Pin>, String> {
@@ -221,7 +221,7 @@ pub(in crate::backend::integrated) fn peek_cached_fido2_pin(
     Ok(cached_fido2_pins().peek(&fingerprint))
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) fn borrow_cached_fido2_pin(
     fingerprint: &str,
 ) -> Result<Option<CachedFido2Pin>, String> {
@@ -229,7 +229,7 @@ pub(in crate::backend::integrated) fn borrow_cached_fido2_pin(
     Ok(cached_fido2_pins().borrow(&fingerprint))
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) fn cache_fido2_pin(
     fingerprint: &str,
     pin: impl AsRef<[u8]>,
@@ -239,7 +239,7 @@ pub(in crate::backend::integrated) fn cache_fido2_pin(
     Ok(())
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) fn clear_cached_fido2_pin(
     fingerprint: &str,
 ) -> Result<(), String> {
@@ -248,7 +248,7 @@ pub(in crate::backend::integrated) fn clear_cached_fido2_pin(
     Ok(())
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) fn borrow_pending_fido2_enrollment(
     fingerprint: &str,
 ) -> Result<Option<PendingFido2Enrollment>, String> {
@@ -256,7 +256,7 @@ pub(in crate::backend::integrated) fn borrow_pending_fido2_enrollment(
     Ok(pending_fido2_enrollments().borrow(&fingerprint))
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) fn cache_pending_fido2_enrollment(
     fingerprint: &str,
     credential_id: impl AsRef<[u8]>,
@@ -269,7 +269,7 @@ pub(in crate::backend::integrated) fn cache_pending_fido2_enrollment(
     Ok(())
 }
 
-#[cfg(any(feature = "fidostore", feature = "fidokey"))]
+#[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) fn clear_pending_fido2_enrollment(
     fingerprint: &str,
 ) -> Result<(), String> {
@@ -278,7 +278,7 @@ pub(in crate::backend::integrated) fn clear_pending_fido2_enrollment(
     Ok(())
 }
 
-#[cfg(not(any(feature = "fidostore", feature = "fidokey")))]
+#[cfg(not(feature = "fidokey"))]
 pub(in crate::backend::integrated) fn clear_pending_fido2_enrollment(
     _fingerprint: &str,
 ) -> Result<(), String> {
@@ -291,9 +291,9 @@ pub(in crate::backend::integrated) fn remove_cached_unlocked_ripasso_private_key
     let fingerprint = normalized_fingerprint(fingerprint)?;
     unlocked_ripasso_private_keys().remove(&fingerprint);
     unlocked_hardware_private_keys().remove(&fingerprint);
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     cached_fido2_pins().remove(&fingerprint);
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     pending_fido2_enrollments().remove(&fingerprint);
     Ok(())
 }
@@ -301,9 +301,9 @@ pub(in crate::backend::integrated) fn remove_cached_unlocked_ripasso_private_key
 pub(in crate::backend) fn clear_integrated_runtime_secret_state() {
     unlocked_ripasso_private_keys().clear();
     unlocked_hardware_private_keys().clear();
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     cached_fido2_pins().clear();
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     pending_fido2_enrollments().clear();
 }
 
@@ -332,7 +332,7 @@ mod tests {
         unlocked_ripasso_private_keys().expire_for_tests(fingerprint);
     }
 
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     fn expire_fido_pin_entry(fingerprint: &str) {
         super::cached_fido2_pins().expire_for_tests(fingerprint);
     }
@@ -372,7 +372,7 @@ mod tests {
             .is_some());
     }
 
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     #[test]
     fn peek_does_not_refresh_fido_pin_entries() {
         clear_integrated_runtime_secret_state();
@@ -386,7 +386,7 @@ mod tests {
             .is_none());
     }
 
-    #[cfg(any(feature = "fidostore", feature = "fidokey"))]
+    #[cfg(feature = "fidokey")]
     #[test]
     fn borrow_refreshes_fido_pin_entries() {
         clear_integrated_runtime_secret_state();

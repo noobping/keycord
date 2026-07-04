@@ -1,6 +1,5 @@
 use super::super::cache::{borrow_pending_fido2_enrollment, clear_cached_fido2_pin};
-#[cfg(not(feature = "fidostore"))]
-use super::common::FIDO2_STORE_FEATURE_DISABLED_MESSAGE;
+use super::common::FIDO2_STORE_UNSUPPORTED_MESSAGE;
 use super::common::{
     cached_pin_string, decode_base64, decrypt_aes_256_gcm, derive_direct_hmac_assertion_with_pin,
     derive_kek, encode_base64, encrypt_aes_256_gcm, parse_text_envelope, random_bytes,
@@ -37,57 +36,18 @@ struct DirectAnyRecipientCandidate {
     wrapped_dek: Vec<u8>,
 }
 
-#[cfg(feature = "fidostore")]
-pub fn create_fido2_store_recipient(pin: Option<&str>) -> Result<String, PrivateKeyError> {
-    super::common::create_fido2_binding(pin)
-}
-
-#[cfg(not(feature = "fidostore"))]
 pub fn create_fido2_store_recipient(_pin: Option<&str>) -> Result<String, PrivateKeyError> {
     Err(PrivateKeyError::unsupported_fido2_key(
-        FIDO2_STORE_FEATURE_DISABLED_MESSAGE,
+        FIDO2_STORE_UNSUPPORTED_MESSAGE,
     ))
 }
 
-#[cfg(feature = "fidostore")]
-fn unlock_fido2_binding_for_session(
-    recipient: &str,
-    pin: Option<&str>,
-) -> Result<(), PrivateKeyError> {
-    let recipient = parse_store_recipient_binding(recipient)
-        .ok_or_else(|| PrivateKeyError::other("That FIDO2 store recipient is invalid."))?;
-    let salt = random_bytes::<FIDO2_HMAC_SALT_LEN>();
-    derive_direct_hmac_assertion_with_pin(
-        &recipient.fingerprint,
-        &recipient.rp_id,
-        &recipient.credential_id,
-        &salt,
-        &[],
-        pin,
-    )
-    .map_err(super::common::private_key_error_from_fido2_error)?;
-    if let Some(pin) = pin {
-        super::super::cache::cache_fido2_pin(&recipient.fingerprint, pin)
-            .map_err(PrivateKeyError::other)?;
-    }
-    Ok(())
-}
-
-#[cfg(feature = "fidostore")]
-pub fn unlock_fido2_store_recipient_for_session(
-    recipient: &str,
-    pin: Option<&str>,
-) -> Result<(), PrivateKeyError> {
-    unlock_fido2_binding_for_session(recipient, pin)
-}
-
-#[cfg(not(feature = "fidostore"))]
 pub fn unlock_fido2_store_recipient_for_session(
     _recipient: &str,
     _pin: Option<&str>,
 ) -> Result<(), PrivateKeyError> {
     Err(PrivateKeyError::unsupported_fido2_key(
-        FIDO2_STORE_FEATURE_DISABLED_MESSAGE,
+        FIDO2_STORE_UNSUPPORTED_MESSAGE,
     ))
 }
 
@@ -703,14 +663,6 @@ fn direct_fido2_store_message(fingerprint: &str, err: Fido2TransportError) -> St
         }
         Fido2TransportError::Other(message) => message,
     }
-}
-
-#[cfg(feature = "fidostore")]
-fn parse_store_recipient_binding(recipient: &str) -> Option<Fido2DirectBinding> {
-    parse_fido2_recipient_string(recipient)
-        .ok()
-        .flatten()
-        .map(|recipient| direct_binding_from_store_recipient_data(&recipient))
 }
 
 fn direct_binding_from_store_recipient_data(recipient: &Fido2StoreRecipient) -> Fido2DirectBinding {
