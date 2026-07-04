@@ -81,9 +81,9 @@ Als de benodigde sleutel nog vergrendeld is, faalt het lezen met een locked-key-
 
 Voor versleuteling bouwt [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) een normale lijst met OpenPGP-ontvangers en versleutelt het het hele pass-bestand in een keer.
 
-## Verhaal 4: Alle sleutels verplichten
+## Verhaal 4: Alle sleutels verplichten (experimenteel)
 
-Deze optie begint in de UI voor opslagsleutels. [src/store/recipients_page/list.rs](../src/store/recipients_page/list.rs) toont de schakelaar "alle sleutels vereisen" wanneer de opslag normale beheerde sleutels gebruikt.
+Deze experimentele optie begint in de UI voor opslagsleutels. [src/store/recipients_page/list.rs](../src/store/recipients_page/list.rs) toont de schakelaar "alle sleutels vereisen" wanneer de opslag normale beheerde sleutels gebruikt.
 
 Het opslaan van die optie maakt geen nieuw bestand. Het voegt metadata toe aan `.gpg-id`. [src/backend/integrated/shared/recipients.rs](../src/backend/integrated/shared/recipients.rs) schrijft:
 
@@ -93,7 +93,7 @@ Het opslaan van die optie maakt geen nieuw bestand. Het voegt metadata toe aan `
 
 Die ene comment verandert het hele lees- en schrijfpak.
 
-Bij schrijven schakelt [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) over van "elke geselecteerde sleutel mag dit openen" naar gelaagde versleuteling:
+Bij schrijven schakelt [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) over van "elke geselecteerde sleutel mag dit openen" naar experimentele gelaagde versleuteling:
 
 1. Versleutel de platte tekst voor de binnenste vereiste ontvanger.
 2. Wikkel die ciphertext in een laag `keycord-require-all-private-keys-v1`.
@@ -131,7 +131,7 @@ Dat betekent dat de payload een keer wordt versleuteld, maar dat meerdere ontvan
 
 Voor herschrijvingen probeert [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) bestaande ingepakte ontvangers waar mogelijk te behouden. Daarom dwingt het toevoegen of verwijderen van een FIDO2-sleutel niet altijd een volledige herbouw van elke FIDO2-wrapper af.
 
-Voor het pad waarbij alle sleutels vereist zijn, gebruikt FIDO2 directe vereiste lagen in plaats van de any-managed-bundel.
+Voor het experimentele pad waarbij alle sleutels vereist zijn, gebruikt FIDO2 directe vereiste lagen in plaats van de any-managed-bundel.
 
 Ontgrendelen is ook sessiegebaseerd. [src/private_key/unlock.rs](../src/private_key/unlock.rs) kan om een FIDO2-PIN vragen, waarna [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) het apparaat valideert en de PIN cachet in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs).
 
@@ -164,4 +164,4 @@ Vanaf daar is het verhaal kort:
 
 Het belangrijke detail is dat kopieren nog steeds een ontsleuteloperatie is. Het wachtwoord wordt nergens anders in de app als kant-en-klare platte tekst voor kopieren gecachet. Keycord gaat opnieuw door hetzelfde leespad, neemt de eerste regel en geeft die tekst aan het klembord.
 
-Als de Host-backend actief is, neemt [src/clipboard.rs](../src/clipboard.rs) een andere route en roept het `pass -c` aan. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels, gelaagde versleuteling en FIDO2-gedrag leeft.
+Als de Host-backend actief is, neemt [src/clipboard.rs](../src/clipboard.rs) een andere route en roept het `pass -c` aan. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels, experimentele gelaagde versleuteling en FIDO2-gedrag leeft.

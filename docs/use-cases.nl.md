@@ -102,12 +102,12 @@ Veelgebruikte workflow:
 
 1. open **Opslagsleutels**
 2. voeg de vereiste ontvangers toe
-3. schakel **Alle geselecteerde sleutels vereisen** in
+3. schakel experimenteel **Alle geselecteerde sleutels vereisen** in
 4. sla de opslagontvangers op
 
 Beperking:
 
-- dit is Keycord-specifiek
+- dit is experimenteel en Keycord-specifiek
 - andere `pass`-apps kunnen die items niet lezen
 
 Typisch gebruik:
@@ -157,7 +157,7 @@ find otp AND user admin
 - één persoonlijke opslag: begin met `Integrated`
 - scheiding tussen persoonlijk en werk: gebruik meerdere opslagen
 - gedeelde teamopslag: focus op ontvangers en Git-status
-- opslag met hoog vertrouwen: gebruik gelaagde versleuteling alleen als je het compatibiliteitsverlies accepteert
+- opslag met hoog vertrouwen: gebruik experimentele gelaagde versleuteling alleen als je het compatibiliteitsverlies accepteert
 - beheerzware opstelling: gebruik padconventies, gestructureerde velden en de pagina met hulpmiddelen
 
 ## Verder lezen

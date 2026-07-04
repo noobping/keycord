@@ -102,12 +102,12 @@ Common workflow:
 
 1. open **Store keys**
 2. add the required recipients
-3. enable **Require all selected keys**
+3. enable experimental **Require all selected keys**
 4. save the store recipients
 
 Limit:
 
-- this is Keycord-specific
+- this is experimental and Keycord-specific
 - other `pass` apps cannot read those items
 
 Typical use:
@@ -157,7 +157,7 @@ find otp AND user admin
 - one personal store: start with `Integrated`
 - personal + work separation: use multiple stores
 - shared team store: focus on recipients and Git state
-- high-trust store: use layered encryption only if you accept the compatibility loss
+- high-trust store: use experimental layered encryption only if you accept the compatibility loss
 - admin-heavy setup: use path conventions, structured fields, and the tools page
 
 ## Next

@@ -243,7 +243,7 @@ Voor wijzigingen op opslagniveau aan sleutels:
 1. Open **Wachtwoordopslagen** in Voorkeuren.
 2. Open de pagina **Opslagsleutels** van de doelopslag.
 3. Voeg ontvangers toe of verwijder ze.
-4. Genereer eventueel een privésleutel, importeer er een of koppel een hardwaresleutel.
+4. Genereer eventueel een privésleutel, importeer er een of koppel een experimentele hardwaresleutel.
 5. Sla de wijzigingen op.
 
 Op Linux kan de Integrated-backend vereisen dat een beheerde privésleutel is ontgrendeld voordat Keycord items opnieuw kan versleutelen of de Git-commit kan ondertekenen. Als de dialoog voor het ontgrendelen van ondertekening wordt gesloten, kan het opslaan doorgaan zonder Git-handtekening.

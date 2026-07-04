@@ -27,7 +27,7 @@ Keycord reads and writes normal `pass` stores:
 - open one or more password stores and search by name, store, field, regular expression, or structured `find` query
 - edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes
 - add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
-- manage store recipients, folder-specific `.gpg-id` files, private keys, FIDO2 security keys, and OpenPGP smartcards
+- manage store recipients, folder-specific `.gpg-id` files, private keys, FIDO2 security keys, and experimental OpenPGP smartcard workflows
 - sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
 - use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux
 
@@ -42,7 +42,7 @@ Keycord reads and writes normal `pass` stores:
 | Restore a store from a Git URL in the UI | No | Yes | Linux only; requires host access. |
 | `pass import` integration | No | Yes | Linux only; requires the `pass import` extension. |
 | Remote Git fetch, merge, and push | Yes | Yes | Linux only; requires host access and a Git-backed store. |
-| Smartcard / YubiKey workflows | Yes | Yes | Linux only; Flatpak needs smartcard access. |
+| Experimental smartcard / YubiKey workflows | Yes | Yes | Linux only; Flatpak needs smartcard access. |
 | Sync Keycord private keys with host GPG | Yes | Yes | Linux only and host access required. |
 
 ## Limits
@@ -52,12 +52,12 @@ Keycord reads and writes normal `pass` stores:
   - If Host is selected without host access, Keycord falls back to Integrated behavior.
 - Non-Linux builds:
   - Host-only features such as custom `pass`, restore-from-Git, and `pass import` stay hidden.
-  - hardware-key workflows stay hidden.
-- Flatpak smartcard support:
-  - hardware-key actions need PC/SC access
+  - experimental hardware-key workflows stay hidden.
+- Experimental Flatpak smartcard support:
+  - experimental hardware-key actions need PC/SC access
   - password-protected software keys do not
-- Layered encryption:
-  - this is Keycord-specific
+- Experimental layered encryption:
+  - this is experimental and Keycord-specific
   - other `pass` apps cannot read those items
 
 ## Start

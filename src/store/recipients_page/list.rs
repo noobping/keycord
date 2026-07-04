@@ -538,7 +538,7 @@ fn sync_private_key_requirement_row(
         state.platform.git_group.is_visible(),
     );
     let git_group_title = if show_store_options_title {
-        gettext("Store options")
+        gettext("Experimental store options")
     } else {
         String::new()
     };

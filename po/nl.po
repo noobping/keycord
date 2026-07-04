@@ -126,8 +126,8 @@ msgid "Add OTP field"
 msgstr "OTP-veld toevoegen"
 
 #: data/metainfo.xml:146
-msgid "Add OpenPGP hardware key support for private keys"
-msgstr "Voeg OpenPGP-hardwaresleutelondersteuning voor privésleutels toe"
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr "Voeg experimentele OpenPGP-hardwaresleutelondersteuning voor privésleutels toe"
 
 #: src/store/recipients_page/guide.rs:12
 msgid "Add Security Key"
@@ -205,8 +205,8 @@ msgid "Add field"
 msgstr "Veld toevoegen"
 
 #: data/window.ui:1641
-msgid "Add hardware key"
-msgstr "Hardwaresleutel toevoegen"
+msgid "Add hardware key (Experimental)"
+msgstr "Hardwaresleutel toevoegen (experimenteel)"
 
 #: data/window.ui:78 src/password/list/row.rs:242
 msgid "Add item"
@@ -250,11 +250,11 @@ msgstr "Voeg de optie toe om de logboeken te kopiëren"
 
 #: data/window.ui:1642
 msgid ""
-"Add the public key already stored on the connected OpenPGP smartcard or "
-"YubiKey."
+"Experimental: add the public key already stored on the connected OpenPGP "
+"smartcard or YubiKey."
 msgstr ""
-"Voeg de publieke sleutel toe die al op de verbonden OpenPGP-smartcard of "
-"YubiKey is opgeslagen."
+"Experimenteel: voeg de publieke sleutel toe die al op de verbonden OpenPGP-"
+"smartcard of YubiKey is opgeslagen."
 
 #: src/setup.rs:23
 msgid "Add to app menu"
@@ -305,8 +305,8 @@ msgid "Alice Work <alice@work.example>"
 msgstr "Alice Work <alice@work.example>"
 
 #: data/window.ui:1523
-msgid "All security keys are required"
-msgstr "Alle beveiligingssleutels zijn vereist"
+msgid "All security keys are required (Experimental)"
+msgstr "Alle beveiligingssleutels zijn vereist (experimenteel)"
 
 #: src/window/host_access.rs:214
 msgid "Allow USB security key access"
@@ -317,8 +317,8 @@ msgid "Allow access to apps on this device"
 msgstr "Toegang tot apps op dit apparaat toestaan"
 
 #: src/window/host_access.rs:236
-msgid "Allow smartcard access"
-msgstr "Smartcardtoegang toestaan"
+msgid "Allow smartcard access (Experimental)"
+msgstr "Smartcardtoegang toestaan (experimenteel)"
 
 #: src/backend/errors.rs:104 src/backend/errors.rs:116 src/password/undo.rs:60
 msgid "An item with that name already exists."
@@ -394,9 +394,10 @@ msgid "Bad locale path"
 msgstr "Ongeldig localepad"
 
 #: data/window.ui:1655
-msgid "Bind a public key file to the connected hardware key."
+msgid "Experimental: bind a public key file to the connected hardware key."
 msgstr ""
-"Koppel een bestand met een publieke sleutel aan de verbonden hardwaresleutel."
+"Experimenteel: koppel een bestand met een publieke sleutel aan de verbonden "
+"hardwaresleutel."
 
 #: src/store/git_page.rs:883
 msgid "Branch"
@@ -570,10 +571,10 @@ msgstr "Kies welk mapspecifiek .gpg-id-bestand je wilt beheren."
 #: data/metainfo.xml:37
 msgid ""
 "Manage store recipients, folder-specific .gpg-id files, private keys, FIDO2 "
-"security keys, and OpenPGP smartcards"
+"security keys, and experimental OpenPGP smartcard workflows"
 msgstr ""
 "Beheer opslagontvangers, mapspecifieke .gpg-id-bestanden, privésleutels, "
-"FIDO2-beveiligingssleutels en OpenPGP-smartcards"
+"FIDO2-beveiligingssleutels en experimentele OpenPGP-smartcard-workflows"
 
 #: data/shortcuts.ui:77
 msgid "Clean pass file"
@@ -1150,9 +1151,11 @@ msgid "Create a new FIDO2-protected key."
 msgstr "Maak een nieuwe met FIDO2 beveiligde sleutel."
 
 #: data/window.ui:1629
-msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgid "Experimental: create a new OpenPGP key on a blank connected smartcard or "
+"YubiKey."
 msgstr ""
-"Maak een nieuwe OpenPGP-sleutel op een lege verbonden smartcard of YubiKey."
+"Experimenteel: maak een nieuwe OpenPGP-sleutel op een lege verbonden "
+"smartcard of YubiKey."
 
 #: src/password/new_item.rs:54
 msgid "Create a new pass file."
@@ -2398,13 +2401,13 @@ msgstr "De importwerker voor hardwaresleutels is onverwacht verbroken."
 
 #: src/window/host_access.rs:237
 msgid ""
-"Hardware keys are optional. Grant PC/SC access if you want Keycord to use "
-"connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-"
-"protected keys remain available without this."
+"Experimental hardware-key workflows need PC/SC access to use connected "
+"OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected "
+"keys remain available without this."
 msgstr ""
-"Hardwaresleutels zijn optioneel. Geef PC/SC-toegang als je wilt dat Keycord "
-"verbonden OpenPGP-smartcards of YubiKeys gebruikt en start Keycord daarna "
-"opnieuw. Met wachtwoord beveiligde sleutels blijven zonder dit beschikbaar."
+"Experimentele hardwaresleutelworkflows hebben PC/SC-toegang nodig om "
+"verbonden OpenPGP-smartcards of YubiKeys te gebruiken. Start Keycord daarna "
+"opnieuw. Met wachtwoord beveiligde sleutels blijven beschikbaar zonder dit."
 
 #: src/support/ui.rs:743
 msgid "Hide permanently"
@@ -2478,8 +2481,8 @@ msgid "Import an existing private key or connect a hardware token."
 msgstr "Importeer een bestaande privésleutel of verbind een hardwaretoken."
 
 #: data/window.ui:1654 src/store/recipients_page/import.rs:626
-msgid "Import hardware public key"
-msgstr "Publieke hardwaresleutel importeren"
+msgid "Import hardware public key (Experimental)"
+msgstr "Publieke hardwaresleutel importeren (experimenteel)"
 
 #: src/backend/host.rs:483
 msgid "Import host GPG private key"
@@ -3516,8 +3519,8 @@ msgid "Opening item {current} of {total}"
 msgstr "Item {current} van {total} openen"
 
 #: src/private_key/dialog.rs:95
-msgid "Or use a hardware key."
-msgstr "Of gebruik een hardwaresleutel."
+msgid "Or use a hardware key (Experimental)."
+msgstr "Of gebruik een hardwaresleutel (experimenteel)."
 
 #: data/window.ui:1609
 msgid "Other ways to add a key"
@@ -4357,8 +4360,8 @@ msgid "Set security key PIN"
 msgstr "PIN van beveiligingssleutel instellen"
 
 #: data/window.ui:1628 data/window.ui:1888
-msgid "Set up new hardware key"
-msgstr "Nieuwe hardwaresleutel instellen"
+msgid "Set up new hardware key (Experimental)"
+msgstr "Nieuwe hardwaresleutel instellen (experimenteel)"
 
 #: src/backend/integrated/keys/fido2/common.rs:299
 msgid ""
@@ -4368,8 +4371,8 @@ msgstr ""
 "build alleen ondersteund op Linux."
 
 #: data/window.ui:1934
-msgid "Setting up hardware key"
-msgstr "Hardwaresleutel instellen"
+msgid "Setting up hardware key (Experimental)"
+msgstr "Hardwaresleutel instellen (experimenteel)"
 
 #: src/password/strength.rs:57
 msgid "Short with limited character variety"
@@ -4510,8 +4513,8 @@ msgid "Store keys"
 msgstr "Opslagsleutels"
 
 #: data/window.ui:1695 src/store/recipients_page/list.rs:541
-msgid "Store options"
-msgstr "Opslagopties"
+msgid "Experimental store options"
+msgstr "Experimentele opslagopties"
 
 #: src/store/management/clone.rs:237 src/window/git/enabled.rs:194
 msgid "Store restored."
@@ -4910,8 +4913,8 @@ msgstr ""
 
 #: src/store/recipients_page/import.rs:607
 msgid ""
-"This hardware key already has OpenPGP keys. Use Add hardware key or import "
-"the matching public key file instead."
+"This hardware key already has OpenPGP keys. Use Add hardware key "
+"(Experimental) or import the matching public key file instead."
 msgstr ""
 "Deze hardwaresleutel heeft al OpenPGP-sleutels. Gebruik 'Hardwaresleutel "
 "toevoegen' of importeer in plaats daarvan het bijpassende publieke-"
@@ -4924,10 +4927,10 @@ msgstr "Deze hardwaresleutel kan je items niet openen."
 #: src/store/recipients_page/import.rs:590
 msgid ""
 "This hardware key has no OpenPGP key yet. Use Set up new hardware key "
-"instead."
+"(Experimental) instead."
 msgstr ""
 "Deze hardwaresleutel heeft nog geen OpenPGP-sleutel. Gebruik in plaats "
-"daarvan 'Nieuwe hardwaresleutel instellen'."
+"daarvan 'Nieuwe hardwaresleutel instellen (experimenteel)'."
 
 #: src/window/build/widgets.rs:231
 msgid ""
@@ -5012,12 +5015,12 @@ msgstr ""
 
 #: data/window.ui:1524
 msgid ""
-"This store uses more than one security key. Saving a password will ask each "
-"selected security key one by one."
+"This experimental multi-layer encryption mode asks each selected security key "
+"one by one when saving a password."
 msgstr ""
-"Deze opslag gebruikt meer dan een beveiligingssleutel. Bij het opslaan van "
-"een wachtwoord wordt elke geselecteerde beveiligingssleutel een voor een "
-"gevraagd."
+"Deze experimentele modus voor gelaagde versleuteling vraagt elke "
+"geselecteerde beveiligingssleutel een voor een bij het opslaan van een "
+"wachtwoord."
 
 #: src/password/strength.rs:42
 msgid "Too short ({length} characters)"
@@ -5446,12 +5449,12 @@ msgstr ""
 
 #: data/window.ui:1700
 msgid ""
-"When off, any selected key can unlock an item. When on, every selected key "
-"must be unlocked. Other pass apps will not be able to read these items."
+"Experimental multi-layer encryption. When on, every selected key must be "
+"unlocked and other pass apps will not be able to read these items."
 msgstr ""
-"Wanneer dit uit staat, kan elke geselecteerde sleutel een item ontgrendelen. "
-"Wanneer dit aan staat, moet elke geselecteerde sleutel worden ontgrendeld. "
-"Andere pass-apps kunnen deze items niet lezen."
+"Experimentele gelaagde versleuteling. Indien ingeschakeld, moet elke "
+"geselecteerde sleutel worden ontgrendeld en kunnen andere pass-apps deze "
+"items niet lezen."
 
 #: data/metainfo.xml:83
 msgid "When you change recipients, Keycord now changes the selected folder's"
@@ -6894,7 +6897,7 @@ msgstr "{}.toml"
 
 #~ msgid ""
 #~ "Choose which keys unlock a store, including password-protected keys, FIDO "
-#~ "security keys, and OpenPGP smartcards"
+#~ "security keys, and experimental OpenPGP smartcard workflows"
 #~ msgstr ""
 #~ "Kies welke sleutels een opslag ontgrendelen, inclusief met een wachtwoord "
 #~ "beveiligde sleutels, FIDO-beveiligingssleutels en OpenPGP-smartcards"

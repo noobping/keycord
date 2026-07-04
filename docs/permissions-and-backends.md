@@ -37,7 +37,7 @@ Use it when you need:
 | `pass import` integration | No | Yes | Linux only; `pass import` must be available in the configured command |
 | Manage Git remotes | Yes | Yes | Linux only in the UI; host access required for remote network operations |
 | Remote Git sync | Yes | Yes | Linux only; host access, clean repo, checked-out branch, and remotes |
-| Smartcard / YubiKey workflows | Yes | Yes | Smartcard access in Flatpak |
+| Experimental smartcard / YubiKey workflows | Yes | Yes | Smartcard access in Flatpak |
 | Sync Keycord keys with host GPG | Yes | Yes | Linux only and host access required |
 
 ## Flatpak Permissions
@@ -60,9 +60,9 @@ Keycord exposes this command when host access is missing:
 flatpak override --user --talk-name=org.freedesktop.Flatpak io.github.noobping.keycord
 ```
 
-### Smartcard access
+### Smartcard access for experimental hardware keys
 
-Hardware-key actions need PC/SC access in Flatpak builds.
+Experimental hardware-key actions need PC/SC access in Flatpak builds.
 
 Keycord exposes this command when smartcard access is missing:
 
@@ -131,7 +131,7 @@ On Linux, Integrated workflows may need a managed private key unlocked before Ke
 
 If the unlock prompt is dismissed, the save can continue without a Git signature.
 
-## Store Recipients And Layered Encryption
+## Store Recipients And Experimental Layered Encryption
 
 ### Normal recipient handling
 
@@ -141,9 +141,9 @@ Stores use `.gpg-id` for recipients. Keycord accepts recipient values such as:
 - key handles,
 - user IDs like `Alice Example <alice@example.com>`.
 
-### Require all selected keys
+### Require all selected keys (experimental)
 
-Keycord can mark a store so every selected managed key must be unlocked. This uses layered encryption and adds Keycord-specific metadata to `.gpg-id`.
+Keycord can mark a store so every selected managed key must be unlocked. This uses experimental layered encryption and adds Keycord-specific metadata to `.gpg-id`.
 
 Use this only when you explicitly want Keycord-only behavior.
 
@@ -156,14 +156,14 @@ Important warning:
 Keycord can manage:
 
 - password-protected private keys stored by the app,
-- Linux hardware-backed OpenPGP keys,
-- public-key imports bound to connected hardware keys on Linux.
+- experimental Linux hardware-backed OpenPGP keys,
+- experimental public-key imports bound to connected hardware keys on Linux.
 
 The store-key UI supports:
 
 - generate private key,
-- add hardware key on Linux,
-- import hardware public key on Linux,
+- add experimental hardware key on Linux,
+- import experimental hardware public key on Linux,
 - import from clipboard,
 - import from file.
 
@@ -182,9 +182,9 @@ Important constraints:
 
 Use this if you want one managed set of software keys across Keycord and the host keyring.
 
-## Hardware Keys
+## Hardware Keys (Experimental)
 
-Keycord supports connected OpenPGP smartcards and YubiKeys on Linux.
+Keycord supports experimental connected OpenPGP smartcard and YubiKey workflows on Linux.
 
 Use cases:
 

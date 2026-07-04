@@ -363,8 +363,8 @@ fn ensure_optional_smartcard_access_group_row(
 
     let row = build_optional_permission_row(
         overlay,
-        "Allow smartcard access",
-        "Hardware keys are optional. Grant PC/SC access if you want Keycord to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this.",
+        "Allow smartcard access (Experimental)",
+        "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this.",
         OptionalPermissionCommand {
             copy_command: FLATPAK_SMARTCARD_OVERRIDE_COMMAND,
             host_args: FLATPAK_SMARTCARD_OVERRIDE_ARGS,

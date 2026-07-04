@@ -1533,8 +1533,8 @@
                                 <child>
                                   <object class="AdwActionRow"
                                     id="store_recipients_all_fido2_keys_required_row">
-                                    <property name="title" translatable="yes">All security keys are required</property>
-                                    <property name="subtitle" translatable="yes">This store uses more than one security key. Saving a password will ask each selected security key one by one.</property>
+                                    <property name="title" translatable="yes">All security keys are required (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">This experimental multi-layer encryption mode asks each selected security key one by one when saving a password.</property>
                                     <property name="activatable">False</property>
                                     <property name="visible">False</property>
                                     <child type="prefix">
@@ -1638,8 +1638,8 @@
                                 <child>
                                   <object class="AdwActionRow"
                                     id="store_recipients_setup_hardware_key_row">
-                                    <property name="title" translatable="yes">Set up new hardware key</property>
-                                    <property name="subtitle" translatable="yes">Create a new OpenPGP key on a blank connected smartcard or YubiKey.</property>
+                                    <property name="title" translatable="yes">Set up new hardware key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Experimental: create a new OpenPGP key on a blank connected smartcard or YubiKey.</property>
                                     <property name="activatable">True</property>
                                     <child type="suffix">
                                       <object class="GtkImage">
@@ -1651,8 +1651,8 @@
                                 <child>
                                   <object class="AdwActionRow"
                                     id="store_recipients_add_hardware_key_row">
-                                    <property name="title" translatable="yes">Add hardware key</property>
-                                    <property name="subtitle" translatable="yes">Add the public key already stored on the connected OpenPGP smartcard or YubiKey.</property>
+                                    <property name="title" translatable="yes">Add hardware key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Experimental: add the public key already stored on the connected OpenPGP smartcard or YubiKey.</property>
                                     <property name="activatable">True</property>
                                     <child type="suffix">
                                       <object class="GtkImage">
@@ -1664,8 +1664,8 @@
                                 <child>
                                   <object class="AdwActionRow"
                                     id="store_recipients_import_hardware_key_row">
-                                    <property name="title" translatable="yes">Import hardware public key</property>
-                                    <property name="subtitle" translatable="yes">Bind a public key file to the connected hardware key.</property>
+                                    <property name="title" translatable="yes">Import hardware public key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Experimental: bind a public key file to the connected hardware key.</property>
                                     <property name="activatable">True</property>
                                     <child type="suffix">
                                       <object class="GtkImage">
@@ -1705,12 +1705,12 @@
                             <child>
                               <object class="AdwPreferencesGroup" id="store_recipients_options_group">
                                 <property name="visible">false</property>
-                                <property name="title" translatable="yes">Store options</property>
+                                <property name="title" translatable="yes">Experimental store options</property>
                                 <child>
                                   <object class="AdwActionRow"
                                     id="store_recipients_require_all_row">
                                     <property name="title" translatable="yes">Require all selected private keys</property>
-                                    <property name="subtitle" translatable="yes">When off, any selected key can unlock an item. When on, every selected key must be unlocked. Other pass apps will not be able to read these items.</property>
+                                    <property name="subtitle" translatable="yes">Experimental multi-layer encryption. When on, every selected key must be unlocked and other pass apps will not be able to read these items.</property>
                                     <property name="activatable">True</property>
                                     <property name="visible">False</property>
                                     <child type="suffix">
@@ -1898,7 +1898,7 @@
 
                 <child>
                   <object class="AdwNavigationPage" id="hardware_key_generation_page">
-                    <property name="title" translatable="yes">Set up new hardware key</property>
+                    <property name="title" translatable="yes">Set up new hardware key (Experimental)</property>
                     <child>
                       <object class="GtkStack" id="hardware_key_generation_stack">
                         <child>
@@ -1944,7 +1944,7 @@
                         </child>
                         <child>
                           <object class="AdwStatusPage" id="hardware_key_generation_loading">
-                            <property name="title" translatable="yes">Setting up hardware key</property>
+                            <property name="title" translatable="yes">Setting up hardware key (Experimental)</property>
                             <property name="icon-name">dialog-password-symbolic</property>
                             <property name="hexpand">true</property>
                             <property name="vexpand">true</property>

@@ -92,7 +92,7 @@ fn private_key_password_dialog_error_message(passphrase: &str) -> Option<&'stati
         .then_some("Enter the key password.")
 }
 
-const HARDWARE_EXTERNAL_BUTTON_LABEL: &str = "Or use a hardware key.";
+const HARDWARE_EXTERNAL_BUTTON_LABEL: &str = "Or use a hardware key (Experimental).";
 
 fn private_key_unlock_row_title(kind: PrivateKeyUnlockKind) -> &'static str {
     match kind {
@@ -511,7 +511,10 @@ mod tests {
             private_key_unlock_row_title(PrivateKeyUnlockKind::Fido2SecurityKey,),
             "Security key PIN"
         );
-        assert_eq!(HARDWARE_EXTERNAL_BUTTON_LABEL, "Or use a hardware key.");
+        assert_eq!(
+            HARDWARE_EXTERNAL_BUTTON_LABEL,
+            "Or use a hardware key (Experimental)."
+        );
     }
 
     #[test]

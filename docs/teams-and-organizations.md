@@ -138,7 +138,7 @@ After editing:
 
 When adding a member:
 
-1. choose the key type: existing key, new password-protected key, or hardware key
+1. choose the key type: existing key, new password-protected key, or experimental hardware key
 2. add the recipient on **Store keys**
 3. save the store recipients
 4. have the member restore or open the store
@@ -209,7 +209,7 @@ Useful tools:
 
 ## High-Trust Stores
 
-Keycord can require all selected managed keys for a store.
+Keycord can experimentally require all selected managed keys for a store.
 
 Use this only if you accept the tradeoff:
 
@@ -221,7 +221,7 @@ Use this only if you accept the tradeoff:
 For Flatpak:
 
 - on Linux Flatpak, host access is needed for restore-from-Git and remote Git sync
-- smartcard access is needed for hardware keys
+- smartcard access is needed for experimental hardware keys
 - the Integrated backend still works without those permissions for local operations
 
 On Linux, host private-key sync is also available. Read the risks first in [Permissions and Backends](permissions-and-backends.md).

@@ -24,14 +24,14 @@ option(
   'smartcard',
   type: 'boolean',
   value: false,
-  description: 'Enable direct OpenPGP smartcard and security-token recipient support.',
+  description: 'Enable experimental direct OpenPGP smartcard and security-token recipient support.',
 )
 
 option(
   'hardwarekey',
   type: 'boolean',
   value: false,
-  description: 'Enable managed OpenPGP hardware-key add/import/setup flows.',
+  description: 'Enable experimental managed OpenPGP hardware-key add/import/setup flows.',
 )
 
 option(

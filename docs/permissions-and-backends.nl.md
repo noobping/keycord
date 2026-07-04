@@ -37,7 +37,7 @@ Gebruik deze wanneer je het volgende nodig hebt:
 | `pass import`-integratie | Nee | Ja | Alleen Linux; `pass import` moet beschikbaar zijn in de geconfigureerde opdracht |
 | Git-remotes beheren | Ja | Ja | Alleen Linux in de UI; hosttoegang vereist voor netwerkbewerkingen op remotes |
 | Git-synchronisatie op afstand | Ja | Ja | Alleen Linux; hosttoegang, schone repo, uitgecheckte branch en remotes |
-| Smartcard- / YubiKey-workflows | Ja | Ja | Smartcardtoegang in Flatpak |
+| Experimentele smartcard- / YubiKey-workflows | Ja | Ja | Smartcardtoegang in Flatpak |
 | Keycord-sleutels synchroniseren met host-GPG | Ja | Ja | Alleen Linux en hosttoegang vereist |
 
 ## Flatpak-machtigingen
@@ -60,9 +60,9 @@ Keycord toont deze opdracht wanneer hosttoegang ontbreekt:
 flatpak override --user --talk-name=org.freedesktop.Flatpak io.github.noobping.keycord
 ```
 
-### Smartcardtoegang
+### Smartcardtoegang voor experimentele hardwaresleutels
 
-Acties met hardwaresleutels hebben PC/SC-toegang nodig in Flatpak-builds.
+Experimentele acties met hardwaresleutels hebben PC/SC-toegang nodig in Flatpak-builds.
 
 Keycord toont deze opdracht wanneer smartcardtoegang ontbreekt:
 
@@ -131,7 +131,7 @@ Op Linux kunnen workflows van de Integrated-backend vereisen dat een beheerde pr
 
 Als de ontgrendelingsprompt wordt gesloten, kan het opslaan doorgaan zonder Git-handtekening.
 
-## Opslagontvangers en gelaagde versleuteling
+## Opslagontvangers en experimentele gelaagde versleuteling
 
 ### Normale afhandeling van ontvangers
 
@@ -141,9 +141,9 @@ Opslagen gebruiken `.gpg-id` voor ontvangers. Keycord accepteert ontvangerwaarde
 - sleutelhandles,
 - gebruikers-ID's zoals `Alice Example <alice@example.com>`.
 
-### Alle geselecteerde sleutels vereisen
+### Alle geselecteerde sleutels vereisen (experimenteel)
 
-Keycord kan een opslag zo markeren dat elke geselecteerde beheerde sleutel moet zijn ontgrendeld. Dit gebruikt gelaagde versleuteling en voegt Keycord-specifieke metadata toe aan `.gpg-id`.
+Keycord kan een opslag zo markeren dat elke geselecteerde beheerde sleutel moet zijn ontgrendeld. Dit gebruikt experimentele gelaagde versleuteling en voegt Keycord-specifieke metadata toe aan `.gpg-id`.
 
 Gebruik dit alleen wanneer je expliciet Keycord-only gedrag wilt.
 
@@ -156,14 +156,14 @@ Belangrijke waarschuwing:
 Keycord kan het volgende beheren:
 
 - met wachtwoord beveiligde privésleutels die door de app worden opgeslagen,
-- Linux OpenPGP-sleutels met hardwareondersteuning,
-- imports van publieke sleutels die op Linux worden gekoppeld aan verbonden hardwaresleutels.
+- experimentele Linux OpenPGP-sleutels met hardwareondersteuning,
+- experimentele imports van publieke sleutels die op Linux worden gekoppeld aan verbonden hardwaresleutels.
 
 De UI voor opslagsleutels ondersteunt:
 
 - privésleutel genereren,
-- hardwaresleutel toevoegen op Linux,
-- publieke hardwaresleutel importeren op Linux,
+- experimentele hardwaresleutel toevoegen op Linux,
+- experimentele publieke hardwaresleutel importeren op Linux,
 - importeren vanaf het klembord,
 - importeren vanuit een bestand.
 
@@ -182,9 +182,9 @@ Belangrijke beperkingen:
 
 Gebruik dit als je één beheerde set softwaresleutels wilt in zowel Keycord als de host-keyring.
 
-## Hardwaresleutels
+## Hardwaresleutels (experimenteel)
 
-Keycord ondersteunt verbonden OpenPGP-smartcards en YubiKeys op Linux.
+Keycord ondersteunt experimentele workflows voor verbonden OpenPGP-smartcards en YubiKeys op Linux.
 
 Gebruiksscenario's:
 

@@ -79,9 +79,9 @@ If the needed key is still locked, the read fails with a locked-key error. The c
 
 For encryption, [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) builds a normal OpenPGP recipient list and encrypts the whole pass file once.
 
-## Story 4: Require All Keys
+## Story 4: Require All Keys (Experimental)
 
-This option starts in the store-key UI. [src/store/recipients_page/list.rs](../src/store/recipients_page/list.rs) exposes the "require all" toggle when the store is using normal managed keys.
+This experimental option starts in the store-key UI. [src/store/recipients_page/list.rs](../src/store/recipients_page/list.rs) exposes the "require all" toggle when the store is using normal managed keys.
 
 Saving that option does not create a new file. It adds metadata to `.gpg-id`. [src/backend/integrated/shared/recipients.rs](../src/backend/integrated/shared/recipients.rs) writes:
 
@@ -91,7 +91,7 @@ Saving that option does not create a new file. It adds metadata to `.gpg-id`. [s
 
 That one comment changes the whole read and write path.
 
-On write, [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) switches from "any selected key may open this" to layered encryption:
+On write, [src/backend/integrated/shared/crypto.rs](../src/backend/integrated/shared/crypto.rs) switches from "any selected key may open this" to experimental layered encryption:
 
 1. Encrypt the plaintext for the innermost required recipient.
 2. Wrap that ciphertext in a `keycord-require-all-private-keys-v1` layer.
@@ -129,7 +129,7 @@ That means the payload is encrypted once, but multiple recipient wrappers point 
 
 For rewrites, [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) tries to preserve existing wrapped recipients when possible. That is why adding or removing one FIDO2 key does not always force a full rebuild of every FIDO2 wrapper.
 
-For the all-keys-required path, FIDO2 uses direct required layers instead of the any-managed bundle.
+For the experimental all-keys-required path, FIDO2 uses direct required layers instead of the any-managed bundle.
 
 Unlocking is also session-based. [src/private_key/unlock.rs](../src/private_key/unlock.rs) can ask for a FIDO2 PIN, then [src/backend/integrated/keys/fido2.rs](../src/backend/integrated/keys/fido2.rs) validates the device and caches the PIN in [src/backend/integrated/keys/cache.rs](../src/backend/integrated/keys/cache.rs).
 
@@ -162,4 +162,4 @@ From there the story is short:
 
 The important detail is that copy is still a decrypt operation. The password is not cached as ready-to-copy plaintext somewhere else in the app. Keycord re-enters the same read path, takes the first line, and hands that text to the clipboard.
 
-If the Host backend is active, [src/clipboard.rs](../src/clipboard.rs) takes a different route and shells out to `pass -c` instead. The rest of this guide follows the integrated path because that is where store-key management, layered encryption, and FIDO2 behavior live.
+If the Host backend is active, [src/clipboard.rs](../src/clipboard.rs) takes a different route and shells out to `pass -c` instead. The rest of this guide follows the integrated path because that is where store-key management, experimental layered encryption, and FIDO2 behavior live.

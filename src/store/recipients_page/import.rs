@@ -587,7 +587,7 @@ fn add_connected_hardware_key(state: &StoreRecipientsPageState) {
     }
 
     state.platform.overlay.add_toast(Toast::new(&gettext(
-        "This hardware key has no OpenPGP key yet. Use Set up new hardware key instead.",
+        "This hardware key has no OpenPGP key yet. Use Set up new hardware key (Experimental) instead.",
     )));
 }
 
@@ -604,7 +604,7 @@ fn setup_connected_hardware_key(state: &StoreRecipientsPageState) {
         || token.decryption_fingerprint.is_some()
     {
         state.platform.overlay.add_toast(Toast::new(&gettext(
-            "This hardware key already has OpenPGP keys. Use Add hardware key or import the matching public key file instead.",
+            "This hardware key already has OpenPGP keys. Use Add hardware key (Experimental) or import the matching public key file instead.",
         )));
         return;
     }
@@ -623,7 +623,7 @@ fn import_hardware_key_from_file(state: &StoreRecipientsPageState) {
     open_hardware_public_key_picker(
         state,
         hardware_key_from_token(&token),
-        "Import hardware public key",
+        "Import hardware public key (Experimental)",
     );
 }
 

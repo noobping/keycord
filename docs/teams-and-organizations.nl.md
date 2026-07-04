@@ -138,7 +138,7 @@ Na het bewerken:
 
 Bij het toevoegen van een lid:
 
-1. kies het sleuteltype: bestaande sleutel, nieuwe met wachtwoord beveiligde sleutel of hardwaresleutel
+1. kies het sleuteltype: bestaande sleutel, nieuwe met wachtwoord beveiligde sleutel of experimentele hardwaresleutel
 2. voeg de ontvanger toe bij **Opslagsleutels**
 3. sla de opslagontvangers op
 4. laat het lid de opslag herstellen of openen
@@ -209,7 +209,7 @@ Handige hulpmiddelen:
 
 ## Opslagen met hoog vertrouwen
 
-Keycord kan vereisen dat alle geselecteerde beheerde sleutels voor een opslag nodig zijn.
+Keycord kan experimenteel vereisen dat alle geselecteerde beheerde sleutels voor een opslag nodig zijn.
 
 Gebruik dit alleen als je de afweging accepteert:
 
@@ -221,7 +221,7 @@ Gebruik dit alleen als je de afweging accepteert:
 Voor Flatpak:
 
 - op Linux Flatpak is hosttoegang nodig voor restore-from-Git en Git-synchronisatie op afstand
-- smartcardtoegang is nodig voor hardwaresleutels
+- smartcardtoegang is nodig voor experimentele hardwaresleutels
 - de Integrated-backend werkt nog steeds zonder die machtigingen voor lokale bewerkingen
 
 Op Linux is synchronisatie van host-privésleutels ook beschikbaar. Lees eerst de risico's in [Machtigingen en backends](permissions-and-backends.md).
