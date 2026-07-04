@@ -59,12 +59,12 @@ option(
   'fidokey',
   type: 'boolean',
   value: false,
-  description: 'Enable FIDO2-protected OpenPGP private key support.',
+  description: 'Enable experimental FIDO2-protected OpenPGP private key support.',
 )
 
 option(
   'fidopin',
   type: 'boolean',
   value: false,
-  description: 'Enable Linux-only first-time FIDO2 security-key PIN setup support.',
+  description: 'Enable experimental Linux-only first-time FIDO2 security-key PIN setup support.',
 )

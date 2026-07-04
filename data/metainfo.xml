@@ -33,7 +33,7 @@
       <li>Open one or more password stores and search by name, store, field, regular expression, or structured find query</li>
       <li>Edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes</li>
       <li>Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend</li>
-      <li>Manage store recipients, folder-specific .gpg-id files, private keys, FIDO2 security keys, and experimental OpenPGP smartcard workflows</li>
+      <li>Manage store recipients, folder-specific .gpg-id files, private keys, experimental FIDO2 security keys, and experimental OpenPGP smartcard workflows</li>
       <li>Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details</li>
       <li>Use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux</li>
     </ul>
@@ -102,8 +102,8 @@
     <release version="0.9.8" date="2026-04-01">
       <description>
         <ul>
-          <li>Removed the FIDO2 backed password stores feature from the flatpak app. Contact me if you want it back.</li>
-          <li>Added FIDO2-protected OpenPGP keys.</li>
+          <li>Removed the FIDO2 backed password stores feature from the flatpak app.</li>
+          <li>Added experimental FIDO2-protected OpenPGP keys.</li>
         </ul>
       </description>
     </release>
@@ -111,7 +111,7 @@
       <description>
         <ul>
           <li>Fixed OTP bug where valid secrets were incorrectly invalidated.</li>
-          <li>Added FIDO2 guides and progress indicators.</li>
+          <li>Added experimental FIDO2 guides and progress indicators.</li>
         </ul>
       </description>
     </release>
@@ -119,7 +119,7 @@
       <description>
         <ul>
           <li>Change the default to use the filename as the username.</li>
-          <li>Only enable FIDO2 features if the integrated backend is used.</li>
+          <li>Only enable experimental FIDO2 features if the integrated backend is used.</li>
         </ul>
       </description>
     </release>

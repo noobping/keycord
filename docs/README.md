@@ -27,7 +27,7 @@ Keycord reads and writes normal `pass` stores:
 - open one or more password stores and search by name, store, field, regular expression, or structured `find` query
 - edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes
 - add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
-- manage store recipients, folder-specific `.gpg-id` files, private keys, FIDO2 security keys, and experimental OpenPGP smartcard workflows
+- manage store recipients, folder-specific `.gpg-id` files, private keys, experimental FIDO2 security keys, and experimental OpenPGP smartcard workflows
 - sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
 - use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux
 

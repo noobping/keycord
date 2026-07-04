@@ -27,7 +27,7 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 - open een of meer wachtwoordopslagen en zoek op naam, opslag, veld, reguliere expressie of gestructureerde `find`-query
 - bewerk items met formuliervelden of ruwe pass-bestandstekst, genereer wachtwoorden en kopieer wachtwoorden, gebruikersnamen of eenmalige inlogcodes
 - voeg bestaande opslagen toe, maak nieuwe opslagen, importeer wachtwoorden op ondersteunde Linux-systemen of herstel een opslag uit Git met de Host-backend
-- beheer opslagontvangers, mapspecifieke `.gpg-id`-bestanden, privésleutels, FIDO2-beveiligingssleutels en experimentele OpenPGP-smartcard-workflows
+- beheer opslagontvangers, mapspecifieke `.gpg-id`-bestanden, privésleutels, experimentele FIDO2-beveiligingssleutels en experimentele OpenPGP-smartcard-workflows
 - synchroniseer Git-opslagen, beheer remotes, onderteken wijzigingen en bekijk geschiedenis met commitverificatiedetails
 - gebruik de adaptieve GTK-interface met toetsenbord, aanwijzer of aanraking op desktop- en mobiele Linux
 
