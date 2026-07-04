@@ -55,8 +55,6 @@ The file extension is part of the policy. [src/backend/integrated/shared/paths.r
 - `.gpg` for standard recipient stores
 - `.keycord` for FIDO2 recipient stores
 
-Existing legacy files are still respected, so a FIDO2-backed entry can continue to read an older `.gpg` file until it is rewritten.
-
 ## Story 3: Password-Protected Key
 
 This is the normal managed-key path.

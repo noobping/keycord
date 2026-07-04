@@ -283,7 +283,7 @@ find otp AND email is $username
 ```text
 reg:(?i)^work/.+github$
 find user matches '^(alice|bob)$'
-find notes not regex 'deprecated|legacy'
+find notes not regex 'deprecated|old'
 ```
 
 ### Exacte veldvergelijking

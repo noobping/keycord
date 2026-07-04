@@ -2050,7 +2050,7 @@ fn pure_fido2_store_reads_current_any_managed_entries_with_all_fido2_recipients(
     .expect("build current any-managed FIDO2 entry");
     let entry_path = store.join("team/service.gpg");
     fs::create_dir_all(entry_path.parent().expect("entry parent")).expect("create entry parent");
-    fs::write(&entry_path, ciphertext).expect("write legacy entry");
+    fs::write(&entry_path, ciphertext).expect("write standard-extension entry");
     drop(_write_guard);
 
     let read_transport = Arc::new(RecordingSequentialFido2Transport::new(&[

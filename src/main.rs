@@ -34,11 +34,6 @@ use crate::support::object_data::{
     cloned_data, set_cloned_data, set_string_data, take_data, take_string_data,
 };
 use crate::support::runtime::handle_unsupported_host_command_invocation;
-#[cfg(feature = "legacy-compat")]
-use crate::support::startup::{
-    fatal_startup_error, prompt_startup_recovery_dialog, show_startup_error_dialog,
-    StartupRecoveryChoice,
-};
 #[cfg(all(target_os = "linux", feature = "setup"))]
 use crate::support::theme::install_color_scheme_tracking;
 use crate::window::navigation::APP_WINDOW_TITLE;
@@ -96,79 +91,23 @@ fn main() -> ExitCode {
     #[cfg(target_os = "windows")]
     configure_windows_runtime_environment();
     if let Err(err) = resources_register_include!("compiled.gresource") {
-        #[cfg(feature = "legacy-compat")]
-        {
-            return fatal_startup_error(APP_WINDOW_TITLE, "Failed to register resources.", err);
-        }
-        #[cfg(not(feature = "legacy-compat"))]
-        {
-            return nonlegacy_startup_error("Failed to register resources.", &err.to_string());
-        }
+        return startup_error("Failed to register resources.", &err.to_string());
     }
 
     if let Err(err) = adw::init() {
-        #[cfg(feature = "legacy-compat")]
-        {
-            return fatal_startup_error(APP_WINDOW_TITLE, "Failed to initialize libadwaita.", err);
-        }
-        #[cfg(not(feature = "legacy-compat"))]
-        {
-            return nonlegacy_startup_error("Failed to initialize libadwaita.", &err.to_string());
-        }
+        return startup_error("Failed to initialize libadwaita.", &err.to_string());
     }
 
     let Some(display) = Display::default() else {
-        #[cfg(feature = "legacy-compat")]
-        {
-            return fatal_startup_error(
-                APP_WINDOW_TITLE,
-                "No display available.",
-                "missing display",
-            );
-        }
-        #[cfg(not(feature = "legacy-compat"))]
-        {
-            return nonlegacy_startup_error("No display available.", "missing display");
-        }
+        return startup_error("No display available.", "missing display");
     };
     #[cfg(all(target_os = "linux", feature = "setup"))]
     install_color_scheme_tracking(&display);
     let theme = IconTheme::for_display(&display);
     theme.add_resource_path(RESOURCE_ID);
 
-    match backend::prepare_startup() {
-        Ok(backend::StartupPreparation::Ready) => {}
-        #[cfg(feature = "legacy-compat")]
-        Ok(backend::StartupPreparation::RecoveryRequired(recovery)) => {
-            let choice = prompt_startup_recovery_dialog(APP_WINDOW_TITLE, recovery.detail());
-            if choice == StartupRecoveryChoice::Quit {
-                return 0.into();
-            }
-            if let Err(err) = backend::continue_after_startup_recovery(&recovery) {
-                return fatal_startup_error(
-                    APP_WINDOW_TITLE,
-                    "Failed to recover incompatible managed private-key data.",
-                    err,
-                );
-            }
-        }
-        Err(err) => {
-            #[cfg(feature = "legacy-compat")]
-            {
-                return fatal_startup_error(
-                    APP_WINDOW_TITLE,
-                    "Failed to prepare managed private-key storage.",
-                    err,
-                );
-            }
-            #[cfg(not(feature = "legacy-compat"))]
-            {
-                return nonlegacy_startup_error(
-                    "Failed to prepare managed private-key storage.",
-                    &err,
-                );
-            }
-        }
+    if let Err(err) = backend::prepare_startup() {
+        return startup_error("Failed to prepare managed private-key storage.", &err);
     }
 
     // Create the application
@@ -233,13 +172,7 @@ fn main() -> ExitCode {
                 updater::after_window_presented(app, &win);
             }
             Err(err) => {
-                #[cfg(feature = "legacy-compat")]
-                let _ =
-                    fatal_startup_error(APP_WINDOW_TITLE, "Failed to build the main window.", err);
-                #[cfg(not(feature = "legacy-compat"))]
-                {
-                    report_nonlegacy_startup_error("Failed to build the main window.", &err);
-                }
+                report_startup_error("Failed to build the main window.", &err);
                 app.quit();
             }
         }
@@ -305,8 +238,7 @@ fn command_line_query(args: &[OsString]) -> Option<String> {
         .filter(|query| !query.is_empty())
 }
 
-#[cfg(not(feature = "legacy-compat"))]
-fn report_nonlegacy_startup_error(summary: &str, error: &str) {
+fn report_startup_error(summary: &str, error: &str) {
     let detail = format!("{summary}\nerror: {error}");
     log_error(&detail);
     eprintln!("{APP_WINDOW_TITLE}: {detail}");
@@ -314,9 +246,8 @@ fn report_nonlegacy_startup_error(summary: &str, error: &str) {
     show_windows_startup_error_dialog(APP_WINDOW_TITLE, &detail);
 }
 
-#[cfg(not(feature = "legacy-compat"))]
-fn nonlegacy_startup_error(summary: &str, error: &str) -> ExitCode {
-    report_nonlegacy_startup_error(summary, error);
+fn startup_error(summary: &str, error: &str) -> ExitCode {
+    report_startup_error(summary, error);
     1.into()
 }
 
@@ -485,11 +416,6 @@ fn register_app_actions(app: &Application) {
             log_error(format!(
                 "Failed to build the shortcuts window.\nerror: {err}"
             ));
-            #[cfg(feature = "legacy-compat")]
-            show_startup_error_dialog(
-                APP_WINDOW_TITLE,
-                &gettext("Couldn't open the shortcuts window."),
-            );
         }
     });
     app.add_action(&shortcuts_action);

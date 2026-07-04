@@ -559,7 +559,7 @@ mod tests {
     }
 
     #[test]
-    fn unsupported_fido_store_subtitle_explains_the_build_limit() {
+    fn unsupported_fido2_recipient_store_subtitle_explains_the_build_limit() {
         let recipient = test_fido2_recipient("Desk Key", b"cred");
         let unique = SystemTime::now()
             .duration_since(UNIX_EPOCH)

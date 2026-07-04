@@ -1,11 +1,6 @@
 #[cfg(feature = "fidokey")]
 use super::super::cert::parse_fido2_public_key_bytes;
-#[cfg(any(
-    feature = "smartcard",
-    feature = "hardwarekey",
-    feature = "fidokey",
-    all(test, feature = "legacy-compat")
-))]
+#[cfg(any(feature = "smartcard", feature = "hardwarekey", feature = "fidokey"))]
 use super::super::cert::ManagedRipassoPrivateKey;
 #[cfg(feature = "fidokey")]
 use super::super::cert::{normalized_fingerprint, ManagedRipassoPrivateKeyProtection};
@@ -48,7 +43,7 @@ pub(super) struct Fido2PrivateKeyManifest {
 }
 
 impl HardwarePrivateKeyManifest {
-    #[cfg(any(feature = "smartcard", all(test, feature = "legacy-compat")))]
+    #[cfg(feature = "smartcard")]
     pub(super) fn from_key(
         key: &ManagedRipassoPrivateKey,
         hardware: &ManagedRipassoHardwareKey,

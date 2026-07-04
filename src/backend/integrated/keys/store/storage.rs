@@ -50,7 +50,7 @@ use crate::backend::PrivateKeyError;
 use crate::fido2_recipient::parse_fido2_recipient_string;
 use crate::logging::log_error;
 use crate::preferences::Preferences;
-use crate::support::runtime::{has_smartcard_permission, supports_legacy_compat_features};
+use crate::support::runtime::has_smartcard_permission;
 use crate::support::secure_fs::{ensure_private_dir, write_private_file};
 use ripasso::crypto::{slice_to_20_bytes, Sequoia};
 #[cfg(feature = "hardwarekey")]
@@ -189,12 +189,11 @@ fn canonical_managed_key_path_name(path: &Path) -> Option<String> {
 }
 
 fn include_managed_key_scan_path(path: &Path, artifact_kind: &str) -> bool {
-    if supports_legacy_compat_features()
-        || path
-            .file_name()
-            .and_then(|value| value.to_str())
-            .zip(canonical_managed_key_path_name(path))
-            .is_some_and(|(name, canonical)| name == canonical)
+    if path
+        .file_name()
+        .and_then(|value| value.to_str())
+        .zip(canonical_managed_key_path_name(path))
+        .is_some_and(|(name, canonical)| name == canonical)
     {
         return true;
     }
@@ -217,7 +216,6 @@ fn validate_scanned_managed_key_path<T>(
     artifact_kind: &str,
     fingerprint: &str,
     entry: T,
-    strict: bool,
 ) -> Result<Option<T>, String> {
     if managed_key_path_matches_fingerprint(path, fingerprint) {
         return Ok(Some(entry));
@@ -232,12 +230,8 @@ fn validate_scanned_managed_key_path<T>(
         path.display(),
         expected.display()
     );
-    if strict {
-        Err(message)
-    } else {
-        log_error(message);
-        Ok(None)
-    }
+    log_error(message);
+    Ok(None)
 }
 
 fn scan_managed_key_entry<T>(
@@ -247,7 +241,6 @@ fn scan_managed_key_entry<T>(
 ) -> Result<Option<T>, String> {
     match load() {
         Ok(entry) => Ok(Some(entry)),
-        Err(err) if supports_legacy_compat_features() => Err(err),
         Err(err) => {
             log_error(format!(
                 "Ignoring invalid managed private-key {artifact_kind} '{}': {err}",
@@ -263,12 +256,12 @@ pub(in crate::backend::integrated) fn find_stored_private_key(
 ) -> Result<StoredPrivateKeyEntry, String> {
     let requested = normalized_fingerprint(fingerprint)?;
 
-    let legacy_dir = ripasso_keys_dir()?;
-    let direct_legacy_path = legacy_dir.join(requested.to_ascii_lowercase());
-    if direct_legacy_path.exists() {
+    let keys_dir = ripasso_keys_dir()?;
+    let direct_password_path = keys_dir.join(requested.to_ascii_lowercase());
+    if direct_password_path.exists() {
         return validate_direct_stored_private_key(
             &requested,
-            read_password_private_key_entry(&direct_legacy_path)?,
+            read_password_private_key_entry(&direct_password_path)?,
         );
     }
 
@@ -437,13 +430,7 @@ pub(in crate::backend::integrated) fn load_stored_ripasso_key_ring(
             continue;
         };
         let fingerprint = entry.key.fingerprint.clone();
-        let Some(entry) = validate_scanned_managed_key_path(
-            &path,
-            "file",
-            &fingerprint,
-            entry,
-            supports_legacy_compat_features(),
-        )?
+        let Some(entry) = validate_scanned_managed_key_path(&path, "file", &fingerprint, entry)?
         else {
             continue;
         };
@@ -463,13 +450,7 @@ pub(in crate::backend::integrated) fn load_stored_ripasso_key_ring(
             continue;
         };
         let fingerprint = entry.key.fingerprint.clone();
-        let Some(entry) = validate_scanned_managed_key_path(
-            &dir,
-            "folder",
-            &fingerprint,
-            entry,
-            supports_legacy_compat_features(),
-        )?
+        let Some(entry) = validate_scanned_managed_key_path(&dir, "folder", &fingerprint, entry)?
         else {
             continue;
         };
@@ -490,13 +471,7 @@ pub(in crate::backend::integrated) fn load_stored_ripasso_key_ring(
             continue;
         };
         let fingerprint = entry.key.fingerprint.clone();
-        let Some(entry) = validate_scanned_managed_key_path(
-            &path,
-            "file",
-            &fingerprint,
-            entry,
-            supports_legacy_compat_features(),
-        )?
+        let Some(entry) = validate_scanned_managed_key_path(&path, "file", &fingerprint, entry)?
         else {
             continue;
         };
@@ -675,7 +650,7 @@ pub fn list_ripasso_private_keys() -> Result<Vec<ManagedRipassoPrivateKey>, Stri
             Ok(entry) => {
                 let fingerprint = entry.key.fingerprint.clone();
                 let Some(entry) =
-                    validate_scanned_managed_key_path(&path, "file", &fingerprint, entry, false)?
+                    validate_scanned_managed_key_path(&path, "file", &fingerprint, entry)?
                 else {
                     continue;
                 };
@@ -700,7 +675,7 @@ pub fn list_ripasso_private_keys() -> Result<Vec<ManagedRipassoPrivateKey>, Stri
             Ok(entry) => {
                 let fingerprint = entry.key.fingerprint.clone();
                 let Some(entry) =
-                    validate_scanned_managed_key_path(&dir, "folder", &fingerprint, entry, false)?
+                    validate_scanned_managed_key_path(&dir, "folder", &fingerprint, entry)?
                 else {
                     continue;
                 };
@@ -726,7 +701,7 @@ pub fn list_ripasso_private_keys() -> Result<Vec<ManagedRipassoPrivateKey>, Stri
             Ok(entry) => {
                 let fingerprint = entry.key.fingerprint.clone();
                 let Some(entry) =
-                    validate_scanned_managed_key_path(&path, "file", &fingerprint, entry, false)?
+                    validate_scanned_managed_key_path(&path, "file", &fingerprint, entry)?
                 else {
                     continue;
                 };
@@ -1155,21 +1130,15 @@ pub fn ripasso_private_key_title(fingerprint: &str) -> Result<String, String> {
 
 #[cfg(test)]
 mod tests {
-    #[cfg(not(feature = "legacy-compat"))]
     use super::{
         find_stored_private_key, list_ripasso_private_keys, load_stored_ripasso_key_ring,
         ripasso_keys_dir,
     };
-    #[cfg(not(feature = "legacy-compat"))]
     use crate::backend::integrated::keys::cert::parse_managed_private_key_bytes;
-    #[cfg(not(feature = "legacy-compat"))]
     use crate::backend::test_support::SystemBackendTestEnv;
-    #[cfg(not(feature = "legacy-compat"))]
     use sequoia_openpgp::{cert::CertBuilder, crypto::Password, serialize::Serialize};
-    #[cfg(not(feature = "legacy-compat"))]
     use std::fs;
 
-    #[cfg(not(feature = "legacy-compat"))]
     fn protected_cert_bytes(email: &str) -> Vec<u8> {
         let password: Password = "hunter2".into();
         let (cert, _) = CertBuilder::general_purpose(Some(email))
@@ -1183,9 +1152,8 @@ mod tests {
         bytes
     }
 
-    #[cfg(not(feature = "legacy-compat"))]
     #[test]
-    fn invalid_canonical_private_keys_are_skipped_during_scans_without_legacy_compat() {
+    fn invalid_canonical_private_keys_are_skipped_during_scans() {
         let _env = SystemBackendTestEnv::new();
         let valid_bytes = protected_cert_bytes("valid-scan@example.com");
         let broken_bytes = protected_cert_bytes("broken-scan@example.com");
@@ -1216,30 +1184,29 @@ mod tests {
         assert!(find_stored_private_key(&broken_key.fingerprint).is_err());
     }
 
-    #[cfg(not(feature = "legacy-compat"))]
     #[test]
-    fn non_canonical_private_key_paths_are_ignored_without_legacy_compat() {
+    fn non_canonical_private_key_paths_are_ignored() {
         let _env = SystemBackendTestEnv::new();
         let bytes = protected_cert_bytes("uppercase-path@example.com");
         let (_, key) = parse_managed_private_key_bytes(&bytes).expect("parse key");
         let keys_dir = ripasso_keys_dir().expect("resolve keys dir");
         fs::create_dir_all(&keys_dir).expect("create keys dir");
         fs::write(keys_dir.join(key.fingerprint.to_ascii_uppercase()), &bytes)
-            .expect("write legacy key");
+            .expect("write non-canonical key");
 
         assert!(list_ripasso_private_keys().expect("list keys").is_empty());
         assert!(load_stored_ripasso_key_ring()
             .expect("load key ring")
             .is_empty());
         assert_eq!(
-            find_stored_private_key(&key.fingerprint).expect_err("legacy key should be hidden"),
+            find_stored_private_key(&key.fingerprint)
+                .expect_err("non-canonical key should be hidden"),
             "That private key is not stored in the app."
         );
     }
 
-    #[cfg(not(feature = "legacy-compat"))]
     #[test]
-    fn mismatched_private_key_paths_are_skipped_without_legacy_compat() {
+    fn mismatched_private_key_paths_are_skipped() {
         let _env = SystemBackendTestEnv::new();
         let bytes = protected_cert_bytes("mismatched-path@example.com");
         let other_bytes = protected_cert_bytes("other-path@example.com");

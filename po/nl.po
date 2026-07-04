@@ -101,14 +101,6 @@ msgid "A private key for this item is locked. Unlock it in Preferences."
 msgstr ""
 "Een privésleutel voor dit item is vergrendeld. Ontgrendel die in Voorkeuren."
 
-#: src/support/startup.rs:75
-msgid "A startup error log was written to:"
-msgstr "Er is een logbestand voor een opstartfout geschreven naar:"
-
-#: src/support/startup.rs:88
-msgid "A startup recovery log was written to:"
-msgstr "Er is een logbestand voor opstartherstel geschreven naar:"
-
 #: src/support/git/sync.rs:54
 msgid "Abort password store Git merge"
 msgstr "Git-merge van wachtwoordopslag afbreken"
@@ -335,11 +327,11 @@ msgstr "Er bestaat al een item met die naam."
 #: src/support/runtime.rs:18
 msgid ""
 "App runtime: debug={}, setup={}, flatpak={}, docs={}, logging={}, audit={}, "
-"legacy-compat={}, host-access={}, smartcard={}, hardwarekey={}, "
+"host-access={}, smartcard={}, hardwarekey={}, "
 "fidokey={}."
 msgstr ""
 "App-runtime: debug={}, setup={}, flatpak={}, docs={}, logging={}, audit={}, "
-"legacy-compat={}, hosttoegang={}, smartcard={}, hardwarekey={}, "
+"hosttoegang={}, smartcard={}, hardwarekey={}, "
 "fidokey={}."
 
 #: data/metainfo.xml:90
@@ -405,10 +397,6 @@ msgstr "Ongeldig localepad"
 msgid "Bind a public key file to the connected hardware key."
 msgstr ""
 "Koppel een bestand met een publieke sleutel aan de verbonden hardwaresleutel."
-
-#: src/support/startup.rs:85
-msgid "Blocked items:"
-msgstr "Geblokkeerde items:"
 
 #: src/store/git_page.rs:883
 msgid "Branch"
@@ -611,7 +599,7 @@ msgstr "Het klembord bevat geen sleutel."
 msgid "Clipboard unavailable."
 msgstr "Klembord niet beschikbaar."
 
-#: src/support/startup.rs:100 src/updater/linux.rs:252
+#: src/updater/linux.rs:252
 msgid "Close"
 msgstr "Sluiten"
 
@@ -764,10 +752,6 @@ msgstr "Verbind de bijpassende hardwaresleutel voordat je die importeert."
 #: src/support/runtime.rs:180
 msgid "Context"
 msgstr "Context"
-
-#: src/support/startup.rs:122
-msgid "Continue and remove incompatible data"
-msgstr "Doorgaan en incompatibele gegevens verwijderen"
 
 #: src/clipboard.rs:165 src/password/page/mod.rs:862
 #: src/password/page/mod.rs:872 src/password/page/mod.rs:882
@@ -2800,23 +2784,6 @@ msgid "Keycord couldn't finish installing the downloaded Linux update."
 msgstr ""
 "Keycord kon de installatie van de gedownloade Linux-update niet voltooien."
 
-#: src/support/startup.rs:83
-msgid ""
-"Keycord found incompatible private-key data while preparing the app-managed "
-"key storage.\n"
-"\n"
-"Quit keeps the data untouched.\n"
-"Continue and remove incompatible data permanently deletes only the "
-"incompatible private-key files or folders so startup can continue."
-msgstr ""
-"Keycord heeft incompatibele privésleutelgegevens gevonden tijdens het "
-"voorbereiden van de door de app beheerde sleutelopslag.\n"
-"\n"
-"Afsluiten laat de gegevens ongemoeid.\n"
-"Doorgaan en incompatibele gegevens verwijderen wist permanent alleen de "
-"incompatibele privésleutelbestanden of -mappen, zodat het opstarten kan "
-"doorgaan."
-
 #: src/updater/common.rs:43
 msgid "Keycord is already up to date."
 msgstr "Keycord is al up-to-date."
@@ -3814,10 +3781,6 @@ msgstr ""
 #: src/support/git/sync.rs:106
 msgid "Push password store Git branch {branch} to {remote}"
 msgstr "Git-branch {branch} van wachtwoordopslag naar {remote} pushen"
-
-#: src/support/startup.rs:121
-msgid "Quit"
-msgstr "Afsluiten"
 
 #: data/window.ui:545 src/password/page/mod.rs:539
 #: src/window/navigation/restore.rs:106
@@ -6409,14 +6372,6 @@ msgstr "sha256:"
 msgid "signal {signal}"
 msgstr "signaal {signal}"
 
-#: src/support/startup.rs:9
-msgid "startup-error.log"
-msgstr "startup-error.log"
-
-#: src/support/startup.rs:10
-msgid "startup-recovery.log"
-msgstr "startup-recovery.log"
-
 #: src/logging/command/run.rs:63
 msgid "stdin: [redacted]"
 msgstr "stdin: [weggelakt]"
@@ -6563,20 +6518,6 @@ msgstr "{action} mislukt: {stdout}"
 msgid "{action} failed: {}"
 msgstr "{action} mislukt: {}"
 
-#: src/support/startup.rs:73
-msgid ""
-"{app_name} couldn't start.\n"
-"\n"
-"{detail}"
-msgstr ""
-"{app_name} kon niet starten.\n"
-"\n"
-"{detail}"
-
-#: src/support/startup.rs:25
-msgid "{app_name}: {detail}"
-msgstr "{app_name}: {detail}"
-
 #: src/password/otp/url.rs:91
 msgid "{base}?{}"
 msgstr "{base}?{}"
@@ -6677,14 +6618,6 @@ msgstr ""
 "{context}\n"
 "$ {command}\n"
 "{label}:"
-
-#: src/support/startup.rs:23
-msgid ""
-"{context}\n"
-"error: {error}"
-msgstr ""
-"{context}\n"
-"fout: {error}"
 
 #: src/support/toml_safety.rs:40
 msgid "{context} exceeds the supported TOML nesting depth of {}."
