@@ -1,6 +1,7 @@
 mod placeholder;
 mod row;
 mod search;
+mod store_filter;
 
 use self::placeholder::{
     register_placeholder_state, show_loading_placeholder, show_resolved_placeholder,
@@ -11,6 +12,7 @@ use self::row::{
     SelectedPasswordRowAction,
 };
 use self::search::{search_controller_for_list, SearchFilterController};
+pub use self::store_filter::configure_password_list_store_filter;
 use crate::backend::password_entry_is_readable;
 use crate::logging::{log_error, log_info};
 use crate::password::model::{
@@ -29,7 +31,7 @@ use adw::gtk::{
 };
 use adw::prelude::*;
 use adw::ToastOverlay;
-use std::collections::{BTreeMap, HashMap};
+use std::collections::{BTreeMap, BTreeSet, HashMap};
 use std::rc::Rc;
 use std::sync::{Mutex, OnceLock};
 
@@ -37,6 +39,15 @@ use std::sync::{Mutex, OnceLock};
 enum Visibility {
     Hidden,
     Visible,
+}
+
+pub(crate) fn apply_password_list_store_filter(
+    list: &ListBox,
+    included_store_roots: BTreeSet<String>,
+) {
+    if let Some(controller) = search_controller_for_list(list) {
+        controller.set_included_store_roots(list, included_store_roots);
+    }
 }
 
 impl Visibility {
@@ -651,7 +662,11 @@ pub fn setup_search_filter(
         placeholder_spinner,
         list_view,
     );
-    let controller = SearchFilterController::new();
+    let controller = SearchFilterController::new(
+        Preferences::new()
+            .filter_included_store_roots()
+            .map(|roots| roots.into_iter().collect()),
+    );
     controller.register_for_list(list);
 
     let controller_for_filter = controller.clone();

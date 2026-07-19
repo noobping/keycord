@@ -6,8 +6,8 @@ use super::deferred::DeferredState;
 use super::widgets::WindowWidgets;
 use crate::logging::log_info;
 use crate::password::list::{
-    connect_selected_pass_file_shortcuts, load_passwords_async, setup_search_filter,
-    PasswordListActions,
+    configure_password_list_store_filter, connect_selected_pass_file_shortcuts,
+    load_passwords_async, setup_search_filter, PasswordListActions,
 };
 use crate::password::new_item::{register_open_new_password_action, NewPasswordDialogState};
 use crate::password::page::PasswordPageState;
@@ -63,6 +63,14 @@ pub(super) fn assemble_password_list_page(widgets: &WindowWidgets) {
         &widgets.password_list_status,
         &widgets.password_list_spinner,
         &widgets.password_list_scrolled,
+    );
+    configure_password_list_store_filter(
+        &widgets.password_list_filter_button,
+        &widgets.password_list_filter_popover,
+        &widgets.password_list_filter_store_box,
+        &widgets.list,
+        &widgets.navigation_view,
+        &widgets.toast_overlay,
     );
     connect_selected_pass_file_shortcuts(&widgets.list, &widgets.toast_overlay);
 
