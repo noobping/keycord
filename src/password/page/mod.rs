@@ -6,7 +6,7 @@ mod state;
 use super::file::{
     apply_pass_file_template_contents, clean_pass_file_contents,
     new_pass_file_contents_from_template, pass_file_has_missing_template_fields,
-    structured_pass_contents,
+    pass_file_has_passkey_storage_field, structured_pass_contents,
 };
 use super::generation::generate_password;
 use super::list::{load_passwords_async, PasswordListActions};
@@ -386,23 +386,34 @@ pub fn begin_new_password_entry(
     store_root: Option<String>,
     add_dialog: &Dialog,
 ) -> Result<(), &'static str> {
+    let settings = Preferences::new();
+    let template_contents =
+        new_pass_file_contents_from_template(&settings.new_pass_file_template());
+    begin_new_password_entry_with_contents(state, path, store_root, &template_contents)?;
+    add_dialog.force_close();
+    Ok(())
+}
+
+pub fn begin_new_password_entry_with_contents(
+    state: &PasswordPageState,
+    path: &str,
+    store_root: Option<String>,
+    contents: &str,
+) -> Result<(), &'static str> {
     let path = normalize_password_entry_label(path);
     let path = path.as_str();
     if path.is_empty() {
         return Err("Enter a name.");
     }
 
-    let settings = Preferences::new();
-    let store_root = store_root.unwrap_or_else(|| settings.store());
+    let store_root = store_root.unwrap_or_else(|| Preferences::new().store());
     if store_root.trim().is_empty() {
         return Err("Add a store folder first.");
     }
-    let template_contents =
-        new_pass_file_contents_from_template(&settings.new_pass_file_template());
     let opened_pass_file = OpenPassFile::from_label(store_root, path);
     set_opened_pass_file(&state.nav, opened_pass_file.clone());
-    let template_pass_file =
-        refresh_opened_pass_file_from_contents(&state.nav, &opened_pass_file, &template_contents)
+    let prepared_pass_file =
+        refresh_opened_pass_file_from_contents(&state.nav, &opened_pass_file, contents)
             .or_else(|| get_opened_pass_file(&state.nav));
 
     show_password_editor_chrome(state, "New item", path);
@@ -410,15 +421,17 @@ pub fn begin_new_password_entry(
     state.otp.clear();
     push_navigation_page_if_needed(&state.nav, &state.page);
 
-    add_dialog.force_close();
-    sync_editor_contents(state, &template_contents, template_pass_file.as_ref());
-    sync_saved_password_state(state, &template_contents, false);
+    sync_editor_contents(state, contents, prepared_pass_file.as_ref());
+    sync_saved_password_state(state, contents, false);
     focus_password_row(state);
     Ok(())
 }
 
 pub fn show_raw_pass_file_page(state: &PasswordPageState) {
     let contents = structured_editor_contents(state);
+    if pass_file_has_passkey_storage_field(&contents) {
+        return;
+    }
     state.text.buffer().set_text(&contents);
 
     let subtitle = get_opened_pass_file(&state.nav).map_or_else(
@@ -697,6 +710,24 @@ pub fn password_page_has_unsaved_changes(state: &PasswordPageState) -> bool {
     current_editor_contents(state) != *state.saved_contents.borrow()
 }
 
+#[cfg(feature = "passkey")]
+pub fn password_page_would_discard_work(state: &PasswordPageState) -> bool {
+    password_work_would_be_discarded(
+        password_page_has_unsaved_changes(state),
+        state.saved_entry_exists.get(),
+        get_opened_pass_file(&state.nav).is_some(),
+    )
+}
+
+#[cfg(feature = "passkey")]
+const fn password_work_would_be_discarded(
+    contents_changed: bool,
+    saved_entry_exists: bool,
+    has_opened_entry: bool,
+) -> bool {
+    contents_changed || (has_opened_entry && !saved_entry_exists)
+}
+
 pub fn revert_unsaved_password_changes(state: &PasswordPageState) -> bool {
     if !password_page_has_unsaved_changes(state) {
         return false;
@@ -707,6 +738,19 @@ pub fn revert_unsaved_password_changes(state: &PasswordPageState) -> bool {
     sync_editor_contents(state, &saved_contents, pass_file.as_ref());
     state.overlay.add_toast(Toast::new(&gettext("Reverted.")));
     true
+}
+
+#[cfg(all(test, feature = "passkey"))]
+mod replacement_tests {
+    use super::password_work_would_be_discarded;
+
+    #[test]
+    fn second_import_is_blocked_when_the_first_new_entry_is_untouched() {
+        assert!(password_work_would_be_discarded(false, false, true));
+        assert!(password_work_would_be_discarded(true, true, true));
+        assert!(!password_work_would_be_discarded(false, true, true));
+        assert!(!password_work_would_be_discarded(false, false, false));
+    }
 }
 
 pub fn generate_password_entry(state: &PasswordPageState) {

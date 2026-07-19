@@ -4,6 +4,11 @@ use std::fmt::Write as _;
 use std::fs;
 use std::path::{Path, PathBuf};
 
+#[cfg(not(feature = "setup"))]
+mod desktop_entry {
+    include!("src/desktop_entry.rs");
+}
+
 type Catalog = BTreeMap<String, CatalogEntry>;
 
 #[derive(Default)]
@@ -1310,17 +1315,19 @@ fn desktop_file() {
     let project = env!("CARGO_PKG_NAME");
     let dir = Path::new(".");
     let comment = option_env!("CARGO_PKG_DESCRIPTION").unwrap_or("Password manager");
+    let (open_argument, mime_types) = desktop_entry::passkey_fields(cfg!(feature = "passkey"));
     let contents = format!(
         "[Desktop Entry]
 Type=Application
 Version=1.0
 Name=Keycord
 Comment={comment}
-Exec={project}
+Exec={project}{open_argument}
 Icon={app_id}
 Terminal=false
 Categories=System;Security;
 StartupNotify=true
+{mime_types}
 "
     );
     fs::write(dir.join(format!("{project}.desktop")), contents)

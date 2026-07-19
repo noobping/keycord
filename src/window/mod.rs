@@ -9,15 +9,21 @@ mod git;
 pub(crate) mod host_access;
 mod logs;
 pub mod navigation;
+#[cfg(feature = "passkey")]
+mod passkey_request;
 mod preferences;
 pub(crate) mod preferences_search;
 pub(crate) mod session;
 mod tools;
 
+#[cfg(feature = "passkey")]
+pub use self::build::begin_passkey_import;
 pub use self::build::create_main_window;
 pub use self::build::dispatch_main_window_command;
 pub use self::git::clone_store_repository;
 pub(crate) use self::host_access::append_optional_host_access_group_row;
+#[cfg(feature = "passkey")]
+pub use self::passkey_request::{present_open_passkey_request, OpenPasskeyRequest};
 pub(crate) use self::tools::sync_tools_action_availability;
 
 #[cfg(test)]
@@ -46,6 +52,7 @@ mod tests {
                 StructuredPassLine::Field(_) => value.clone(),
                 StructuredPassLine::Username(_)
                 | StructuredPassLine::Otp(_)
+                | StructuredPassLine::Passkey(_)
                 | StructuredPassLine::Preserved(_) => None,
             })
             .collect::<Vec<_>>();
@@ -210,5 +217,30 @@ mod tests {
             "secret\nusername:\nurl: https://example.com",
             "username:\nurl: https://example.com"
         ));
+    }
+
+    #[cfg(feature = "passkey")]
+    #[test]
+    fn passkey_fields_round_trip_without_exposing_key_material_in_debug_output() {
+        use crate::password::passkey::{encode_passkey_envelope, generate_passkey_credential};
+
+        let credential =
+            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
+        let envelope = encode_passkey_envelope(&credential).expect("encode passkey");
+        let contents = format!("\npasskey: {envelope}");
+        let (password, parsed) = parse_structured_pass_lines(&contents);
+        let templates = parsed
+            .iter()
+            .map(|(line, _)| line.clone())
+            .collect::<Vec<_>>();
+
+        assert_eq!(
+            structured_pass_contents_from_values(&password, "", None, &templates, &[]),
+            contents
+        );
+        assert_eq!(clean_pass_file_contents(&contents), contents);
+        let debug = format!("{templates:?}");
+        assert!(!debug.contains(&envelope));
+        assert!(!debug.contains(&credential.key));
     }
 }

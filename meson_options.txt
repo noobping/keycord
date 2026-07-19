@@ -63,6 +63,13 @@ option(
 )
 
 option(
+  'passkey',
+  type: 'boolean',
+  value: true,
+  description: 'Enable passkey request handling and storage in pass files.',
+)
+
+option(
   'fidopin',
   type: 'boolean',
   value: false,

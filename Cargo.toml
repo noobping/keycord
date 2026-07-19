@@ -10,12 +10,14 @@ repository = "https://github.com/noobping/keycord"
 
 [features]
 audit = []
+default = ["passkey"]
 docs = ["dep:pulldown-cmark"]
 fidokey = ["dep:base64", "dep:fido2-rs", "dep:hmac", "dep:openssl"]
 fidopin = ["dep:libfido2-sys"]
-flatpak = ["docs", "audit", "fidokey", "fidopin", "smartcard", "logging"]
+flatpak = ["docs", "audit", "fidokey", "fidopin", "smartcard", "logging", "passkey"]
 hardwarekey = ["smartcard"]
 logging = []
+passkey = ["dep:base64", "dep:openssl", "dep:serde_json"]
 setup = ["dep:semver", "dep:reqwest", "docs", "audit", "smartcard", "logging"]
 smartcard = ["dep:card-backend-pcsc", "dep:openpgp-card"]
 
@@ -42,6 +44,7 @@ openssl = { version = "0.10.76", optional = true }
 sha2 = "0.11.0"
 url = "2.5.8"
 qrcode = { version = "0.14.1", default-features = false }
+serde_json = { version = "1.0.150", optional = true }
 
 [target.'cfg(target_os = "linux")'.dependencies]
 anyhow = "1.0"

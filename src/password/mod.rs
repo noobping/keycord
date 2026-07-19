@@ -7,5 +7,8 @@ pub mod new_item;
 pub mod opened;
 pub mod otp;
 pub mod page;
+pub mod passkey;
+#[cfg(feature = "passkey")]
+pub mod passkey_request;
 pub mod strength;
 pub mod undo;

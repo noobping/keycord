@@ -29,6 +29,8 @@ mod window;
 use crate::i18n::gettext;
 use crate::logging::{log_error, run_command_output, CommandLogOptions};
 use crate::password::model::OpenPassFile;
+#[cfg(feature = "passkey")]
+use crate::password::passkey_request::{read_opened_passkey_file, OpenedPasskeyFile};
 use crate::preferences::Preferences;
 use crate::support::hardening::apply_process_hardening;
 use crate::support::object_data::{
@@ -38,6 +40,8 @@ use crate::support::runtime::handle_unsupported_host_command_invocation;
 #[cfg(all(target_os = "linux", feature = "setup"))]
 use crate::support::theme::install_color_scheme_tracking;
 use crate::window::navigation::APP_WINDOW_TITLE;
+#[cfg(feature = "passkey")]
+use crate::window::OpenPasskeyRequest;
 
 use adw::gio::SimpleAction;
 use adw::gtk::{
@@ -66,6 +70,8 @@ const APP_ID: &str = env!("APP_ID");
 const RESOURCE_ID: &str = env!("RESOURCE_ID");
 const ISSUE_URL: &str = concat!(env!("CARGO_PKG_REPOSITORY"), "/issues");
 const MAIN_WINDOW_ACTIVATING_KEY: &str = "main-window-activating";
+#[cfg(feature = "passkey")]
+const OPEN_PASSKEY_REQUEST_KEY: &str = "open-passkey-request";
 const RIPASSO_VERSION: &str = env!("RIPASSO_VERSION");
 const SEQUOIA_OPENPGP_VERSION: &str = env!("SEQUOIA_OPENPGP_VERSION");
 const SHORTCUTS_UI: &str = include_str!("../data/shortcuts.ui");
@@ -121,9 +127,15 @@ fn main() -> ExitCode {
     app.set_accels_for_action("app.about", &["F1"]);
     register_app_actions(&app);
 
-    // When the desktop asks us to "open" something, just activate the app
+    // Validate passkey request files before handing them to the main window.
     {
         app.connect_open(|app, _files, _hint| {
+            #[cfg(feature = "passkey")]
+            set_cloned_data(
+                app,
+                OPEN_PASSKEY_REQUEST_KEY,
+                open_passkey_request_from_files(_files),
+            );
             app.activate();
         });
     }
@@ -132,11 +144,7 @@ fn main() -> ExitCode {
     {
         app.connect_command_line(|app, cmd| {
             let args = cmd.arguments();
-            if let Some(pass_file) = command_line_pass_file(&args) {
-                set_cloned_data(app, "open-pass-file", pass_file);
-            } else if let Some(query) = command_line_query(&args) {
-                set_string_data(app, "query", query);
-            }
+            dispatch_command_line_args(app, &args);
             app.activate(); // continue normal startup path
 
             0.into()
@@ -161,9 +169,15 @@ fn main() -> ExitCode {
 
         let query = take_string_data(app, "query");
         let pass_file = take_data(app, "open-pass-file");
+        #[cfg(feature = "passkey")]
+        let passkey_request = take_data(app, OPEN_PASSKEY_REQUEST_KEY);
         if let Some(window) = existing_main_window(app) {
             window::dispatch_main_window_command(&window, query, pass_file);
             window.present();
+            #[cfg(feature = "passkey")]
+            if let Some(passkey_request) = passkey_request {
+                window::present_open_passkey_request(&window, passkey_request);
+            }
             return;
         }
 
@@ -171,6 +185,10 @@ fn main() -> ExitCode {
             Ok(win) => {
                 win.present();
                 updater::after_window_presented(app, &win);
+                #[cfg(feature = "passkey")]
+                if let Some(passkey_request) = passkey_request {
+                    window::present_open_passkey_request(&win, passkey_request);
+                }
             }
             Err(err) => {
                 report_startup_error("Failed to build the main window.", &err);
@@ -225,6 +243,94 @@ fn command_line_pass_file(args: &[OsString]) -> Option<OpenPassFile> {
     }
 
     Some(OpenPassFile::from_label(store_root, label))
+}
+
+fn dispatch_command_line_args(app: &Application, args: &[OsString]) {
+    if let Some(pass_file) = command_line_pass_file(args) {
+        set_cloned_data(app, "open-pass-file", pass_file);
+        return;
+    }
+
+    #[cfg(feature = "passkey")]
+    if let Some(passkey_request) = command_line_passkey_request(args) {
+        set_cloned_data(app, OPEN_PASSKEY_REQUEST_KEY, passkey_request);
+        return;
+    }
+
+    if let Some(query) = command_line_query(args) {
+        set_string_data(app, "query", query);
+    }
+}
+
+#[cfg(feature = "passkey")]
+fn open_passkey_request_from_files(files: &[adw::gio::File]) -> OpenPasskeyRequest {
+    let [file] = files else {
+        return OpenPasskeyRequest::Invalid(
+            "Open exactly one passkey request at a time.".to_string(),
+        );
+    };
+    open_passkey_request_file(file)
+}
+
+#[cfg(feature = "passkey")]
+fn open_passkey_request_file(file: &adw::gio::File) -> OpenPasskeyRequest {
+    let Some(path) = file.path() else {
+        return OpenPasskeyRequest::Invalid(
+            "Only regular files on the local filesystem are accepted.".to_string(),
+        );
+    };
+
+    match read_opened_passkey_file(path) {
+        Ok(OpenedPasskeyFile::ExportRequest(request)) => OpenPasskeyRequest::Valid(request),
+        Ok(OpenedPasskeyFile::Credential(credential)) => OpenPasskeyRequest::Import(credential),
+        Err(error) => OpenPasskeyRequest::Invalid(error.to_string()),
+    }
+}
+
+#[cfg(feature = "passkey")]
+fn command_line_passkey_request(args: &[OsString]) -> Option<OpenPasskeyRequest> {
+    let explicit = args
+        .get(1)
+        .is_some_and(|arg| arg == "--open-passkey-request");
+    let argument = if explicit {
+        match (args.get(2), args.get(3)) {
+            (Some(argument), None) => argument,
+            _ => {
+                return Some(OpenPasskeyRequest::Invalid(
+                    "Use --open-passkey-request with exactly one local file.".to_string(),
+                ));
+            }
+        }
+    } else {
+        if args.len() != 2 {
+            return None;
+        }
+        args.get(1)?
+    };
+
+    let file = argument
+        .to_str()
+        .filter(|value| value.starts_with("file://"))
+        .map_or_else(
+            || adw::gio::File::for_path(std::path::PathBuf::from(argument)),
+            adw::gio::File::for_uri,
+        );
+    if explicit {
+        return Some(open_passkey_request_file(&file));
+    }
+
+    let path = file.path()?;
+    if std::fs::symlink_metadata(&path).is_err() {
+        return None;
+    }
+    match read_opened_passkey_file(path) {
+        Ok(OpenedPasskeyFile::ExportRequest(request)) => Some(OpenPasskeyRequest::Valid(request)),
+        Ok(OpenedPasskeyFile::Credential(credential)) => {
+            Some(OpenPasskeyRequest::Import(credential))
+        }
+        Err(error) if error.is_not_passkey_request() => None,
+        Err(error) => Some(OpenPasskeyRequest::Invalid(error.to_string())),
+    }
 }
 
 fn command_line_query(args: &[OsString]) -> Option<String> {

@@ -1,7 +1,8 @@
 use super::super::file::{
-    dynamic_field_row, parse_structured_pass_lines, rebuild_dynamic_fields_from_lines,
-    structured_pass_contents, sync_username_row_from_parsed_lines, DynamicFieldTemplate,
-    OtpFieldTemplate, StructuredPassLine,
+    dynamic_field_row, parse_structured_pass_lines, pass_file_has_passkey_storage_field,
+    rebuild_dynamic_fields_from_lines, structured_pass_contents,
+    sync_username_row_from_parsed_lines, DynamicFieldTemplate, OtpFieldTemplate,
+    StructuredPassLine,
 };
 use super::{refresh_apply_template_button, refresh_password_analysis_label, PasswordPageState};
 use crate::password::model::OpenPassFile;
@@ -37,7 +38,12 @@ pub(super) fn sync_editor_contents(
 ) {
     let (password, structured_lines) = parse_structured_pass_lines(contents);
     state.entry.set_text(&password);
-    state.text.buffer().set_text(contents);
+    let contains_passkey = pass_file_has_passkey_storage_field(contents);
+    if contains_passkey {
+        state.text.buffer().set_text("");
+    } else {
+        state.text.buffer().set_text(contents);
+    }
     rebuild_dynamic_fields_from_lines(
         &state.dynamic_box,
         &state.overlay,
@@ -46,6 +52,7 @@ pub(super) fn sync_editor_contents(
         &structured_lines,
     );
     sync_username_row_from_parsed_lines(&state.username, pass_file, &structured_lines);
+    state.raw.set_visible(!contains_passkey);
     state.otp.sync_from_parsed_lines(&structured_lines, true);
     state.field_add_row.set_text("");
     refresh_password_analysis_label(state);

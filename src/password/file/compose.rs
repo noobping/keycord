@@ -50,6 +50,7 @@ pub fn structured_pass_contents_from_values(
                     output.push_str(&template.line(otp_url));
                 }
             }
+            StructuredPassLine::Passkey(template) => output.push_str(&template.line()),
             StructuredPassLine::Preserved(line) => output.push_str(line),
         }
     }
@@ -88,8 +89,10 @@ pub fn apply_pass_file_template_contents(contents: &str, template: &str) -> Stri
     let original_len = current_lines.len();
 
     for (line, value) in template_lines {
-        if matches!(line, StructuredPassLine::Preserved(_))
-            || has_matching_template_line(&current_lines, &line)
+        if matches!(
+            line,
+            StructuredPassLine::Passkey(_) | StructuredPassLine::Preserved(_)
+        ) || has_matching_template_line(&current_lines, &line)
         {
             continue;
         }
@@ -140,6 +143,7 @@ fn cleaned_line(line: StructuredPassLine, value: Option<String>) -> Option<Strin
         StructuredPassLine::Otp(template) => value
             .filter(|url| should_keep_otp_url(url))
             .map(|url| template.line(&url)),
+        StructuredPassLine::Passkey(template) => Some(template.line()),
         StructuredPassLine::Preserved(line) => Some(line),
     }
 }
@@ -178,6 +182,7 @@ fn line_contents(line: &StructuredPassLine, value: Option<&str>) -> String {
             )
         }
         StructuredPassLine::Otp(template) => template.line(value.unwrap_or_default()),
+        StructuredPassLine::Passkey(template) => template.line(),
         StructuredPassLine::Preserved(line) => line.clone(),
     }
 }
@@ -201,6 +206,7 @@ fn has_matching_template_line(
 enum TemplateLineIdentity {
     Username,
     Otp,
+    Passkey,
     Field(String),
 }
 
@@ -208,6 +214,7 @@ fn template_line_identity(line: &StructuredPassLine) -> Option<TemplateLineIdent
     match line {
         StructuredPassLine::Username(_) => Some(TemplateLineIdentity::Username),
         StructuredPassLine::Otp(_) => Some(TemplateLineIdentity::Otp),
+        StructuredPassLine::Passkey(_) => Some(TemplateLineIdentity::Passkey),
         StructuredPassLine::Field(template) => {
             canonical_search_field_key(&template.title).map(TemplateLineIdentity::Field)
         }

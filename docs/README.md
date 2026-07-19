@@ -20,12 +20,14 @@ Keycord reads and writes normal `pass` stores:
 - one secret per file
 - the first line as the password
 - later `key: value` lines as structured fields
+- a reserved `passkey:` field for passkey credential data when passkey support is enabled
 - `.gpg-id` for store recipients
 
 ## Keycord Features
 
 - open one or more password stores and search by name, store, field, regular expression, or structured `find` query
 - edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes
+- import CXF passkeys into ordinary encrypted `pass` entries and open local CXP passkey export requests
 - add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
 - manage store recipients, folder-specific `.gpg-id` files, private keys, experimental FIDO2-protected private keys, and experimental OpenPGP smartcard workflows
 - sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
@@ -59,6 +61,9 @@ Keycord reads and writes normal `pass` stores:
 - Experimental layered encryption:
   - this is experimental and Keycord-specific
   - other `pass` apps cannot read those items
+- Passkeys:
+  - passkey support is enabled by default and can be omitted at build time with the `passkey` Cargo feature disabled
+  - opening a CXP request checks a local export-request file's structure; it is not browser WebAuthn or a live authenticator
 
 ## Start
 
