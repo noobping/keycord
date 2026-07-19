@@ -298,11 +298,6 @@ fn handle_password_save_result(
     }
 }
 
-fn set_password_save_buttons_sensitive(state: &PasswordPageState, sensitive: bool) {
-    state.save.set_sensitive(sensitive);
-    state.editor_save_button.set_sensitive(sensitive);
-}
-
 pub fn open_password_entry_page(
     state: &PasswordPageState,
     opened_pass_file: OpenPassFile,

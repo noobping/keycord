@@ -17,6 +17,7 @@ mod logging;
 mod password;
 mod preferences;
 mod private_key;
+mod qr_code;
 #[cfg(target_os = "linux")]
 mod search_provider;
 mod store;
@@ -42,10 +43,10 @@ use adw::gtk::{
     gdk::Display,
     gio::{resources_register_include, ApplicationFlags},
     glib::ExitCode,
-    Builder, IconTheme, License, ShortcutsWindow,
+    Builder, IconTheme, License,
 };
 use adw::prelude::*;
-use adw::Application;
+use adw::{Application, ShortcutsDialog};
 #[cfg(target_os = "windows")]
 use dirs_next::cache_dir;
 use std::ffi::OsString;
@@ -404,27 +405,24 @@ fn register_app_actions(app: &Application) {
 
     let shortcuts_action = SimpleAction::new("shortcuts", None);
     let app_for_shortcuts = app.clone();
-    shortcuts_action.connect_activate(move |_, _| match build_shortcuts_window() {
+    shortcuts_action.connect_activate(move |_, _| match build_shortcuts_dialog() {
         Ok(shortcuts) => {
-            if let Some(active_window) = app_for_shortcuts.active_window() {
-                shortcuts.set_transient_for(Some(&active_window));
-            }
-            shortcuts.present();
+            shortcuts.present(app_for_shortcuts.active_window().as_ref());
         }
         Err(err) => {
             log_error(format!(
-                "Failed to build the shortcuts window.\nerror: {err}"
+                "Failed to build the shortcuts dialog.\nerror: {err}"
             ));
         }
     });
     app.add_action(&shortcuts_action);
 }
 
-fn build_shortcuts_window() -> Result<ShortcutsWindow, String> {
+fn build_shortcuts_dialog() -> Result<ShortcutsDialog, String> {
     let builder = Builder::from_string(SHORTCUTS_UI);
     builder
-        .object("shortcuts_window")
-        .ok_or_else(|| "Failed to build shortcuts window.".to_string())
+        .object("shortcuts_dialog")
+        .ok_or_else(|| "Failed to build shortcuts dialog.".to_string())
 }
 
 fn build_about_dialog() -> adw::AboutDialog {

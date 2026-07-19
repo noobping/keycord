@@ -2,6 +2,7 @@ use std::path::{Component, Path};
 
 pub const STANDARD_PASSWORD_ENTRY_EXTENSION: &str = "gpg";
 
+#[cfg(test)]
 pub const fn password_entry_extension() -> &'static str {
     STANDARD_PASSWORD_ENTRY_EXTENSION
 }
@@ -67,9 +68,9 @@ pub fn label_from_password_entry_relative_path(relative: &Path) -> Option<String
 #[cfg(test)]
 mod tests {
     use super::{
-        is_password_entry_file, label_from_password_entry_path,
-        label_from_password_entry_relative_path, normalize_password_entry_label,
-        password_entry_extension, STANDARD_PASSWORD_ENTRY_EXTENSION,
+        is_password_entry_file, label_from_password_entry_relative_path,
+        normalize_password_entry_label, password_entry_extension,
+        STANDARD_PASSWORD_ENTRY_EXTENSION,
     };
     use std::path::Path;
 

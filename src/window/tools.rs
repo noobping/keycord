@@ -126,6 +126,7 @@ struct ToolSelectPageState {
     logs_row: ActionRow,
     copy_logs_row: ActionRow,
     copy_logs_button: Button,
+    qr_logs_button: Button,
     setup_row: Rc<RefCell<Option<ActionRow>>>,
     pass_import_row: Rc<RefCell<Option<StoreImportToolRowState>>>,
 }
@@ -229,6 +230,7 @@ pub struct ToolsPageWidgets<'a> {
     pub logs_row: &'a ActionRow,
     pub copy_logs_row: &'a ActionRow,
     pub copy_logs_button: &'a Button,
+    pub qr_logs_button: &'a Button,
     pub overlay: &'a ToastOverlay,
     pub password_page: &'a PasswordPageState,
     pub field_values: ToolBrowserWidgets<'a>,
@@ -272,6 +274,7 @@ impl ToolsPageState {
                 logs_row: widgets.logs_row.clone(),
                 copy_logs_row: widgets.copy_logs_row.clone(),
                 copy_logs_button: widgets.copy_logs_button.clone(),
+                qr_logs_button: widgets.qr_logs_button.clone(),
                 setup_row: Rc::new(RefCell::new(None)),
                 pass_import_row: Rc::new(RefCell::new(None)),
             },
@@ -593,7 +596,7 @@ fn collect_loaded_entry_requests(list: &ListBox) -> Vec<FieldValueRequest> {
         child = next;
     }
 
-    let mut store_support = StoreSupportCache::default();
+    let mut store_support = StoreSupportCache;
     filter_tool_requests(requests, |store_path| {
         store_support.supports_password_read_tools(store_path)
     })
@@ -610,7 +613,7 @@ fn filter_tool_requests(
 }
 
 fn password_read_tools_available_for_store_roots(stores: &[String]) -> bool {
-    let mut store_support = StoreSupportCache::default();
+    let mut store_support = StoreSupportCache;
     password_read_tools_available_for_store_roots_with(stores, |store_path| {
         store_support.supports_password_read_tools(store_path)
     })

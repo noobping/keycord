@@ -10,9 +10,7 @@ mod transport_test;
 #[cfg(feature = "fidokey")]
 pub use self::common::set_fido2_security_key_pin;
 #[cfg(feature = "fidokey")]
-pub(in crate::backend::integrated) use self::common::{
-    Fido2DirectBinding, Fido2DirectBindingDescriptor,
-};
+pub(in crate::backend::integrated) use self::common::Fido2DirectBindingDescriptor;
 #[cfg(feature = "fidokey")]
 pub(in crate::backend::integrated) use self::key::{
     create_fido2_private_key_binding, encrypt_fido2_direct_required_layer,

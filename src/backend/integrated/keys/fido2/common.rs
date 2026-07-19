@@ -43,15 +43,6 @@ pub(super) const FIDO2_DIRECT_LAYER_KIND: &str = "fido2-required-layer";
 pub(super) const FIDO2_DIRECT_LAYER_AAD_PREFIX: &[u8] = b"keycord/fido2-required-layer/payload/v1:";
 
 #[derive(Clone, Debug, PartialEq, Eq)]
-pub(in crate::backend::integrated) struct Fido2Progress {
-    pub current_step: usize,
-    pub total_steps: usize,
-}
-
-pub(in crate::backend::integrated) type Fido2ReadProgress = Fido2Progress;
-pub(in crate::backend::integrated) type Fido2WriteProgress = Fido2Progress;
-
-#[derive(Clone, Debug, PartialEq, Eq)]
 pub struct Fido2DirectBinding {
     pub fingerprint: String,
     pub label: String,
