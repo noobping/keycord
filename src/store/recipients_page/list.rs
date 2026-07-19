@@ -280,12 +280,6 @@ fn sync_private_key_delete_button(delete_button: &adw::gtk::Button, blocked_mess
     delete_button.set_tooltip_text(Some(&tooltip));
 }
 
-fn sync_recipient_remove_button(button: &adw::gtk::Button, blocked_message: Option<&str>) {
-    button.set_sensitive(blocked_message.is_none());
-    let tooltip = gettext(blocked_message.unwrap_or("Remove recipient"));
-    button.set_tooltip_text(Some(&tooltip));
-}
-
 fn sync_private_key_toggle_button(toggle: &adw::gtk::CheckButton, blocked_message: Option<&str>) {
     toggle.set_sensitive(blocked_message.is_none());
     let tooltip = blocked_message.map(gettext);

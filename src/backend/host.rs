@@ -270,26 +270,6 @@ pub(super) fn save_store_recipients_with_progress(
     Ok(())
 }
 
-pub(super) fn save_store_recipients_with_progress_for_relative_dir(
-    store_root: &str,
-    relative_dir: &str,
-    recipients: &StoreRecipients,
-    private_key_requirement: StoreRecipientsPrivateKeyRequirement,
-) -> Result<(), StoreRecipientsError> {
-    let relative_dir = validated_effective_recipient_relative_dir(relative_dir)?;
-    if relative_dir.as_os_str().is_empty() {
-        return save_store_recipients_with_progress(
-            store_root,
-            recipients,
-            private_key_requirement,
-        );
-    }
-
-    Err(StoreRecipientsError::other(
-        "Managing nested .gpg-id files requires the Integrated backend.",
-    ))
-}
-
 pub(super) fn save_store_recipients_for_relative_dir(
     store_root: &str,
     relative_dir: &str,
@@ -642,9 +622,7 @@ mod tests {
     };
     use crate::backend::test_support::assert_entry_is_encrypted_for_each_recipient;
     use crate::backend::test_support::SystemBackendTestEnv;
-    use crate::backend::{
-        StoreRecipients, StoreRecipientsError, StoreRecipientsPrivateKeyRequirement,
-    };
+    use crate::backend::{StoreRecipients, StoreRecipientsPrivateKeyRequirement};
     use crate::preferences::Preferences;
     use crate::support::git::has_git_repository;
     #[cfg(feature = "audit")]

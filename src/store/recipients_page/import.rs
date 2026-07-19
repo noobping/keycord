@@ -3,8 +3,7 @@ use super::list::rebuild_store_recipients_list;
 use super::mode::ensure_standard_recipient_actions_allowed;
 use super::sync::sync_private_keys_to_host_if_enabled;
 use super::{
-    present_store_recipients_dialog, queue_store_recipients_autosave,
-    sync_store_recipients_page_header, StoreRecipientsPageState,
+    present_store_recipients_dialog, sync_store_recipients_page_header, StoreRecipientsPageState,
 };
 use crate::backend::{
     discover_ripasso_hardware_keys, import_ripasso_hardware_key_bytes,

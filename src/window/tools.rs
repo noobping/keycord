@@ -596,7 +596,7 @@ fn collect_loaded_entry_requests(list: &ListBox) -> Vec<FieldValueRequest> {
         child = next;
     }
 
-    let mut store_support = StoreSupportCache::default();
+    let mut store_support = StoreSupportCache;
     filter_tool_requests(requests, |store_path| {
         store_support.supports_password_read_tools(store_path)
     })
@@ -613,7 +613,7 @@ fn filter_tool_requests(
 }
 
 fn password_read_tools_available_for_store_roots(stores: &[String]) -> bool {
-    let mut store_support = StoreSupportCache::default();
+    let mut store_support = StoreSupportCache;
     password_read_tools_available_for_store_roots_with(stores, |store_path| {
         store_support.supports_password_read_tools(store_path)
     })

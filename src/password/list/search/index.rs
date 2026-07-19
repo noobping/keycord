@@ -52,7 +52,7 @@ pub(super) fn build_search_index_batch(
 
 pub(super) fn collect_unindexed_requests(list: &ListBox) -> Vec<SearchIndexRequest> {
     let mut requests = Vec::new();
-    let mut store_support = StoreSupportCache::default();
+    let mut store_support = StoreSupportCache;
     for_each_row(list, |row| {
         if !matches!(
             row_field_index_state(&row),

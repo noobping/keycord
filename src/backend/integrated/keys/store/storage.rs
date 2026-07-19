@@ -46,7 +46,6 @@ const SMARTCARD_FEATURE_DISABLED_ERROR: &str =
 const HARDWAREKEY_FEATURE_DISABLED_ERROR: &str =
     "Managed hardware-key setup is disabled in this build of Keycord.";
 use crate::backend::PrivateKeyError;
-#[cfg(feature = "fidokey")]
 use crate::logging::log_error;
 use crate::preferences::Preferences;
 use crate::support::runtime::has_smartcard_permission;

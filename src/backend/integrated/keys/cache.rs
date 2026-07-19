@@ -269,22 +269,6 @@ pub(in crate::backend::integrated) fn cache_pending_fido2_enrollment(
     Ok(())
 }
 
-#[cfg(feature = "fidokey")]
-pub(in crate::backend::integrated) fn clear_pending_fido2_enrollment(
-    fingerprint: &str,
-) -> Result<(), String> {
-    let fingerprint = normalized_fingerprint(fingerprint)?;
-    pending_fido2_enrollments().remove(&fingerprint);
-    Ok(())
-}
-
-#[cfg(not(feature = "fidokey"))]
-pub(in crate::backend::integrated) fn clear_pending_fido2_enrollment(
-    _fingerprint: &str,
-) -> Result<(), String> {
-    Ok(())
-}
-
 pub(in crate::backend::integrated) fn remove_cached_unlocked_ripasso_private_key(
     fingerprint: &str,
 ) -> Result<(), String> {

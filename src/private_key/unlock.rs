@@ -1,18 +1,22 @@
 use crate::backend::{
     list_connected_smartcard_keys, list_ripasso_private_keys, ripasso_private_key_title,
-    set_fido2_security_key_pin, supports_first_time_fido2_pin_setup,
     unlock_ripasso_private_key_for_session, ManagedRipassoPrivateKey, PrivateKeyError,
     PrivateKeyUnlockKind, PrivateKeyUnlockRequest,
 };
+#[cfg(feature = "fidokey")]
+use crate::backend::{set_fido2_security_key_pin, supports_first_time_fido2_pin_setup};
 use crate::i18n::gettext;
 use crate::logging::log_error;
+#[cfg(feature = "fidokey")]
+use crate::private_key::dialog::present_fido2_pin_setup_dialog_with_close_handler;
 use crate::private_key::dialog::{
-    build_private_key_progress_dialog, present_fido2_pin_setup_dialog_with_close_handler,
-    present_private_key_unlock_dialog_with_close_handler, PrivateKeyDialogHandle,
+    build_private_key_progress_dialog, present_private_key_unlock_dialog_with_close_handler,
+    PrivateKeyDialogHandle,
 };
 use crate::support::actions::activate_widget_action;
 use crate::support::background::spawn_result_task_with_finalizer;
 use adw::{glib, prelude::*, ApplicationWindow, Toast, ToastOverlay};
+#[cfg(feature = "fidokey")]
 use secrecy::ExposeSecret;
 use std::rc::Rc;
 
@@ -51,6 +55,7 @@ fn present_fido2_unlock_progress_dialog(
     ))
 }
 
+#[cfg(feature = "fidokey")]
 fn present_fido2_pin_setup_progress_dialog(
     window: &ApplicationWindow,
     subtitle: Option<&str>,
@@ -81,6 +86,7 @@ const fn managed_fido2_unlock_enabled(_kind: PrivateKeyUnlockKind) -> bool {
     false
 }
 
+#[cfg(feature = "fidokey")]
 fn prompt_fido2_pin_setup_dialog<F, G>(
     window: &ApplicationWindow,
     overlay: &ToastOverlay,

@@ -16,8 +16,8 @@ use crate::window::preferences_search::PreferencesPageSearchState;
 use adw::gtk::{Button, CheckButton, ScrolledWindow, Stack, Widget};
 use adw::prelude::*;
 use adw::{
-    ActionRow, ApplicationWindow, ComboRow, Dialog, EntryRow, NavigationPage, NavigationView,
-    PasswordEntryRow, PreferencesGroup, StatusPage, Toast, ToastOverlay, WindowTitle,
+    ActionRow, ApplicationWindow, ComboRow, EntryRow, NavigationPage, NavigationView,
+    PasswordEntryRow, PreferencesGroup, StatusPage, ToastOverlay, WindowTitle,
 };
 use std::cell::{Cell, RefCell};
 use std::rc::Rc;
