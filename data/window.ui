@@ -12,18 +12,18 @@
             <child type="start">
               <object class="GtkBox">
                 <child>
-                  <object class="GtkButton" id="back_button">
-                    <property name="icon-name">go-previous-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Back</property>
-                    <property name="action-name">win.back</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
                   <object class="GtkBox">
                     <style>
                       <class name="linked" />
                     </style>
+                    <child>
+                      <object class="GtkButton" id="back_button">
+                        <property name="icon-name">go-previous-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Back</property>
+                        <property name="action-name">win.back</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
                     <child>
                       <object class="GtkButton" id="add_button">
                         <property name="icon-name">list-add-symbolic</property>
@@ -292,30 +292,30 @@
                                         <property name="margin-end">15</property>
                                         <property name="margin-bottom">6</property>
                                         <child>
-                                          <object class="GtkButton">
-                                            <property name="icon-name">view-refresh-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Generate password</property>
-                                            <property name="action-name">win.generate-password</property>
-                                            <style>
-                                              <class name="flat" />
-                                            </style>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkToggleButton" id="password_generator_settings_button">
-                                            <property name="icon-name">emblem-system-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Password options</property>
-                                            <style>
-                                              <class name="flat" />
-                                            </style>
-                                          </object>
-                                        </child>
-                                        <child>
                                           <object class="GtkBox">
                                             <property name="orientation">horizontal</property>
                                             <style>
                                               <class name="linked" />
                                             </style>
+                                            <child>
+                                              <object class="GtkButton">
+                                                <property name="icon-name">view-refresh-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Generate password</property>
+                                                <property name="action-name">win.generate-password</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkToggleButton" id="password_generator_settings_button">
+                                                <property name="icon-name">emblem-system-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Password options</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
                                             <child>
                                               <object class="GtkButton" id="copy_password_button">
                                                 <property name="icon-name">edit-copy-symbolic</property>

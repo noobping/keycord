@@ -129,16 +129,18 @@ pub(super) fn append_password_row(
     action_row.set_margin_start(password_list_indent(depth));
     let unreadable_icon = build_unreadable_password_icon(!readable);
     let copy_button = flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy password");
-    let (copy_qr_group, qr_button) = copy_qr_button_group(&copy_button, "Show password as QR code");
-    copy_qr_group.set_visible(readable);
+    let (button_group, qr_button) = copy_qr_button_group(&copy_button, "Show password as QR code");
+    copy_button.set_visible(readable);
+    qr_button.set_visible(readable);
     let menu_button = MenuButton::builder()
         .icon_name("view-more-symbolic")
         .has_frame(false)
         .css_classes(vec!["flat"])
         .build();
+    menu_button.set_tooltip_text(Some(&gettext("Password actions")));
+    button_group.append(&menu_button);
     action_row.add_prefix(&unreadable_icon);
-    action_row.add_suffix(&copy_qr_group);
-    action_row.add_suffix(&menu_button);
+    action_row.add_suffix(&button_group);
 
     let text_edit_row = EntryRow::new();
     text_edit_row.set_show_apply_button(true);
