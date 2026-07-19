@@ -87,19 +87,6 @@ pub(super) fn configure_optional_log_rows(state: &ToolsPageState) {
         .connect_clicked(move |_| copy_action());
 }
 
-#[cfg(test)]
-mod tests {
-    use super::information_group_visible;
-
-    #[test]
-    fn information_group_requires_docs_or_logs() {
-        assert!(!information_group_visible(false, false));
-        assert!(information_group_visible(true, false));
-        assert!(information_group_visible(false, true));
-        assert!(information_group_visible(true, true));
-    }
-}
-
 #[cfg(all(target_os = "linux", feature = "setup"))]
 pub(super) fn append_optional_setup_row(state: &ToolsPageState) -> Option<ActionRow> {
     if !can_install_locally() {
@@ -170,4 +157,17 @@ pub(super) fn append_optional_pass_import_row(
             }
         })),
     )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::information_group_visible;
+
+    #[test]
+    fn information_group_requires_docs_or_logs() {
+        assert!(!information_group_visible(false, false));
+        assert!(information_group_visible(true, false));
+        assert!(information_group_visible(false, true));
+        assert!(information_group_visible(true, true));
+    }
 }

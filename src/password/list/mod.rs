@@ -1469,7 +1469,7 @@ mod tests {
             .join("/");
         let rows = build_password_list_rows(
             vec![(
-                PassEntry::from_label("/tmp/store", &format!("{relative_path}/entry")),
+                PassEntry::from_label("/tmp/store", format!("{relative_path}/entry")),
                 true,
             )],
             PasswordListSortMode::StorePath,

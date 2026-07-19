@@ -345,6 +345,10 @@ pub fn register_context_undo_action(window: &ApplicationWindow, state: &ContextU
     });
 }
 
+#[expect(
+    clippy::too_many_arguments,
+    reason = "This is flat window-action wiring for the search control on every navigation page."
+)]
 pub fn register_toggle_find_action(
     window: &adw::ApplicationWindow,
     navigation: &WindowNavigationState,
