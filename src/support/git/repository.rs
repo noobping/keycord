@@ -59,6 +59,28 @@ pub fn ensure_store_git_repository(root: &str) -> Result<(), String> {
     }
 }
 
+pub fn password_store_git_state_summary(root: &str) -> String {
+    if !has_git_repository(root) {
+        return format!(
+            "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
+        );
+    }
+    if !supports_host_command_features() {
+        return format!(
+            "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
+        );
+    }
+    if has_host_permission() {
+        return format!(
+            "Password store Git state: {root} -> Git repository detected, local commits enabled, network operations enabled."
+        );
+    }
+
+    format!(
+        "Password store Git state: {root} -> Git repository detected, local commits enabled, remote sync disabled in this backend."
+    )
+}
+
 #[cfg(test)]
 mod tests {
     use super::git_command_available_with;
@@ -80,26 +102,4 @@ mod tests {
             Command::new("keycord-command-that-does-not-exist")
         }));
     }
-}
-
-pub fn password_store_git_state_summary(root: &str) -> String {
-    if !has_git_repository(root) {
-        return format!(
-            "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
-        );
-    }
-    if !supports_host_command_features() {
-        return format!(
-            "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
-        );
-    }
-    if has_host_permission() {
-        return format!(
-            "Password store Git state: {root} -> Git repository detected, local commits enabled, network operations enabled."
-        );
-    }
-
-    format!(
-        "Password store Git state: {root} -> Git repository detected, local commits enabled, remote sync disabled in this backend."
-    )
 }

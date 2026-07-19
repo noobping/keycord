@@ -1,4 +1,4 @@
-use super::export::{copy_managed_key_material, show_managed_key_material_qr};
+use super::export::copy_managed_key_material;
 use super::mode::{
     current_selection_mode, show_standard_private_key_choice, sync_store_recipients_mode_controls,
     StoreRecipientsSelectionMode,
@@ -20,7 +20,6 @@ use crate::i18n::gettext;
 use crate::logging::log_error;
 use crate::preferences::Preferences;
 use crate::private_key::unlock::prompt_private_key_unlock_for_action;
-use crate::qr_code::{connect_qr_button, copy_qr_button_group};
 use crate::store::git_page::rebuild_store_recipients_git_row;
 use crate::store::recipients::{relevant_store_recipient_scopes, ROOT_STORE_RECIPIENTS_SCOPE};
 use crate::support::actions::activate_widget_action;
@@ -864,8 +863,6 @@ fn append_managed_private_key_row(
     };
     let (row, toggle) =
         append_private_key_row_shell(&key.title(), &subtitle, active, toggle_blocked_message);
-    append_private_key_unlock_suffix(state, &key.fingerprint, &row, unlocked, requires_unlock);
-
     let copy_button = flat_icon_button_with_tooltip(
         "edit-copy-symbolic",
         match key.protection {
@@ -877,22 +874,21 @@ fn append_managed_private_key_row(
             }
         },
     );
-    let (copy_qr_group, qr_button) = copy_qr_button_group(&copy_button, "Show key as QR code");
-    row.add_suffix(&copy_qr_group);
-
     let delete_button = flat_icon_button_with_tooltip("user-trash-symbolic", "Remove key");
     sync_private_key_delete_button(&delete_button, delete_blocked_message);
-    row.add_suffix(&delete_button);
+
+    let button_group = private_key_button_group();
+    if let Some(unlock_button) =
+        private_key_unlock_button(state, &key.fingerprint, unlocked, requires_unlock)
+    {
+        button_group.append(&unlock_button);
+    }
+    button_group.append(&copy_button);
+    button_group.append(&delete_button);
+    row.add_suffix(&button_group);
     add_tracked_preferences_group_child(&state.list, state.key_rows.as_ref(), &row);
 
-    connect_managed_private_key_row_actions(
-        state,
-        key,
-        &toggle,
-        &copy_button,
-        &qr_button,
-        &delete_button,
-    );
+    connect_managed_private_key_row_actions(state, key, &toggle, &copy_button, &delete_button);
 }
 
 fn append_host_private_key_row(
@@ -924,9 +920,9 @@ fn append_host_private_key_row(
     );
 
     let copy_button = flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy fingerprint");
-    let (copy_qr_group, qr_button) =
-        copy_qr_button_group(&copy_button, "Show fingerprint as QR code");
-    row.add_suffix(&copy_qr_group);
+    let button_group = private_key_button_group();
+    button_group.append(&copy_button);
+    row.add_suffix(&button_group);
     add_tracked_preferences_group_child(&state.list, state.key_rows.as_ref(), &row);
 
     let state_for_toggle = state.clone();
@@ -954,26 +950,27 @@ fn append_host_private_key_row(
             Some(&copy_button_for_click),
         );
     });
-    let fingerprint_for_qr = key.fingerprint.clone();
-    connect_qr_button(&qr_button, &state.platform.overlay, move || {
-        fingerprint_for_qr.clone()
-    });
 }
 
-fn append_private_key_unlock_suffix(
+fn private_key_button_group() -> adw::gtk::Box {
+    let group = adw::gtk::Box::new(adw::gtk::Orientation::Horizontal, 0);
+    group.set_valign(adw::gtk::Align::Center);
+    group.add_css_class("linked");
+    group
+}
+
+fn private_key_unlock_button(
     state: &StoreRecipientsPageState,
     fingerprint: &str,
-    row: &ActionRow,
     unlocked: bool,
     requires_unlock: bool,
-) {
+) -> Option<adw::gtk::Button> {
     if !Preferences::new().uses_integrated_backend() {
-        return;
+        return None;
     }
 
     if !unlocked && requires_unlock {
         let unlock_button = flat_icon_button_with_tooltip("changes-prevent-symbolic", "Unlock key");
-        row.add_suffix(&unlock_button);
         let state = state.clone();
         let fingerprint = fingerprint.to_string();
         let finish_button = unlock_button.clone();
@@ -1001,6 +998,9 @@ fn append_private_key_unlock_suffix(
                 on_finish,
             );
         });
+        Some(unlock_button)
+    } else {
+        None
     }
 }
 
@@ -1026,7 +1026,6 @@ fn connect_managed_private_key_row_actions(
     key: &ManagedRipassoPrivateKey,
     toggle: &adw::gtk::CheckButton,
     copy_button: &adw::gtk::Button,
-    qr_button: &adw::gtk::Button,
     delete_button: &adw::gtk::Button,
 ) {
     let state_for_toggle = state.clone();
@@ -1049,13 +1048,6 @@ fn connect_managed_private_key_row_actions(
     let copy_button_for_click = copy_button.clone();
     copy_button.connect_clicked(move |_| {
         copy_managed_key_material(&state_for_copy, &key_for_copy, Some(&copy_button_for_click));
-    });
-
-    let state_for_qr = state.clone();
-    let key_for_qr = key.clone();
-    let qr_button_for_click = qr_button.clone();
-    qr_button.connect_clicked(move |_| {
-        show_managed_key_material_qr(&state_for_qr, &key_for_qr, &qr_button_for_click);
     });
 
     let state_for_delete = state.clone();
@@ -1111,12 +1103,15 @@ fn append_connected_smartcard_row(
         active,
         toggle_blocked_message,
     );
-    append_private_key_unlock_suffix(state, &key.fingerprint, &row, unlocked, requires_unlock);
-
     let copy_button = flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy fingerprint");
-    let (copy_qr_group, qr_button) =
-        copy_qr_button_group(&copy_button, "Show fingerprint as QR code");
-    row.add_suffix(&copy_qr_group);
+    let button_group = private_key_button_group();
+    if let Some(unlock_button) =
+        private_key_unlock_button(state, &key.fingerprint, unlocked, requires_unlock)
+    {
+        button_group.append(&unlock_button);
+    }
+    button_group.append(&copy_button);
+    row.add_suffix(&button_group);
     add_tracked_preferences_group_child(&state.list, state.key_rows.as_ref(), &row);
 
     let state_for_toggle = state.clone();
@@ -1143,10 +1138,6 @@ fn append_connected_smartcard_row(
             &overlay,
             Some(&copy_button_for_click),
         );
-    });
-    let fingerprint_for_qr = key.fingerprint.clone();
-    connect_qr_button(&qr_button, &state.platform.overlay, move || {
-        fingerprint_for_qr.clone()
     });
 }
 

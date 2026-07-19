@@ -16,7 +16,7 @@ fidopin = ["dep:libfido2-sys"]
 flatpak = ["docs", "audit", "fidokey", "fidopin", "smartcard", "logging"]
 hardwarekey = ["smartcard"]
 logging = []
-setup = ["dep:semver", "dep:reqwest", "docs", "audit", "fidokey", "fidopin", "smartcard", "logging"]
+setup = ["dep:semver", "dep:reqwest", "docs", "audit", "smartcard", "logging"]
 smartcard = ["dep:card-backend-pcsc", "dep:openpgp-card"]
 
 [dependencies]

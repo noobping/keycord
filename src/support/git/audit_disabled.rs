@@ -8,6 +8,7 @@ pub struct StoreGitAuditCatalog {
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct StoreGitAuditStore {
     pub store_root: String,
+    pub default_branch: Option<String>,
     pub branches: Vec<StoreGitAuditBranchRef>,
 }
 

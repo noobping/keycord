@@ -12,112 +12,160 @@
             <child type="start">
               <object class="GtkBox">
                 <child>
-                  <object class="GtkButton" id="back_button">
-                    <property name="icon-name">go-previous-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Back</property>
-                    <property name="action-name">win.back</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkMenuButton" id="tools_audit_filter_button">
-                    <property name="visible">false</property>
-                    <property name="icon-name">funnel-symbolic</property>
-                    <property name="always-show-arrow">false</property>
-                    <property name="tooltip-text" translatable="yes">Filter results</property>
-                    <property name="popover">
-                      <object class="GtkPopover" id="tools_audit_filter_popover">
-                        <property name="width-request">300</property>
-                        <child>
-                          <object class="GtkScrolledWindow">
-                            <property name="propagate-natural-width">true</property>
-                            <property name="propagate-natural-height">true</property>
+                  <object class="GtkBox">
+                    <style>
+                      <class name="linked" />
+                    </style>
+                    <child>
+                      <object class="GtkButton" id="back_button">
+                        <property name="icon-name">go-previous-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Back</property>
+                        <property name="action-name">win.back</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="add_button">
+                        <property name="icon-name">list-add-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Add item</property>
+                        <property name="action-name">win.open-new-password</property>
+                        <property name="visible">true</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="find_button">
+                        <property name="icon-name">edit-find-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Find item</property>
+                        <property name="action-name">win.toggle-find</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuButton" id="password_list_filter_button">
+                        <property name="visible">false</property>
+                        <property name="icon-name">funnel-symbolic</property>
+                        <property name="always-show-arrow">false</property>
+                        <property name="tooltip-text" translatable="yes">Filter results</property>
+                        <property name="popover">
+                          <object class="GtkPopover" id="password_list_filter_popover">
+                            <property name="width-request">300</property>
                             <child>
-                              <object class="GtkBox">
-                                <property name="orientation">vertical</property>
-                                <property name="spacing">12</property>
-                                <property name="margin-top">12</property>
-                                <property name="margin-bottom">12</property>
-                                <property name="margin-start">12</property>
-                                <property name="margin-end">12</property>
+                              <object class="GtkScrolledWindow">
+                                <property name="propagate-natural-width">true</property>
+                                <property name="propagate-natural-height">true</property>
                                 <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes">Stores</property>
-                                    <property name="xalign">0</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkBox" id="tools_audit_filter_store_box">
+                                  <object class="GtkBox">
                                     <property name="orientation">vertical</property>
-                                    <property name="spacing">6</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes">Branches</property>
-                                    <property name="xalign">0</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkBox" id="tools_audit_filter_branch_box">
-                                    <property name="orientation">vertical</property>
-                                    <property name="spacing">6</property>
+                                    <property name="spacing">12</property>
+                                    <property name="margin-top">12</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-end">12</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Stores</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="password_list_filter_store_box">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">6</property>
+                                      </object>
+                                    </child>
                                   </object>
                                 </child>
                               </object>
                             </child>
                           </object>
-                        </child>
+                        </property>
                       </object>
-                    </property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="add_button">
-                    <property name="icon-name">list-add-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Add item</property>
-                    <property name="action-name">win.open-new-password</property>
-                    <property name="visible">true</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="find_button">
-                    <property name="icon-name">edit-find-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Find item</property>
-                    <property name="action-name">win.toggle-find</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="save_button">
-                    <property name="icon-name">document-save-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Save</property>
-                    <property name="action-name">win.save-password</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="open_raw_button">
-                    <property name="icon-name">text-x-generic-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Open raw text</property>
-                    <property name="action-name">win.open-raw-pass-file</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="git_button">
-                    <property name="icon-name">git-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Restore store</property>
-                    <property name="action-name">win.open-git</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="store_button">
-                    <property name="icon-name">folder-new-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Add or create store</property>
-                    <property name="action-name">win.open-store-picker</property>
-                    <property name="visible">false</property>
+                    </child>
+                    <child>
+                      <object class="GtkMenuButton" id="tools_audit_filter_button">
+                        <property name="visible">false</property>
+                        <property name="icon-name">funnel-symbolic</property>
+                        <property name="always-show-arrow">false</property>
+                        <property name="tooltip-text" translatable="yes">Filter results</property>
+                        <property name="popover">
+                          <object class="GtkPopover" id="tools_audit_filter_popover">
+                            <property name="width-request">300</property>
+                            <child>
+                              <object class="GtkScrolledWindow">
+                                <property name="propagate-natural-width">true</property>
+                                <property name="propagate-natural-height">true</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">vertical</property>
+                                    <property name="spacing">12</property>
+                                    <property name="margin-top">12</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-end">12</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Stores</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="tools_audit_filter_store_box">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">6</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Branches</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="tools_audit_filter_branch_box">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">6</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="save_button">
+                        <property name="icon-name">document-save-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Save</property>
+                        <property name="action-name">win.save-password</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="open_raw_button">
+                        <property name="icon-name">text-x-generic-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Open raw text</property>
+                        <property name="action-name">win.open-raw-pass-file</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="git_button">
+                        <property name="icon-name">git-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Restore store</property>
+                        <property name="action-name">win.open-git</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="store_button">
+                        <property name="icon-name">folder-new-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Add or create store</property>
+                        <property name="action-name">win.open-store-picker</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
@@ -152,6 +200,7 @@
                         <child>
                           <object class="GtkSearchEntry" id="search_entry">
                             <property name="visible">false</property>
+                            <property name="hexpand">true</property>
                             <property name="placeholder-text" translatable="yes">Search names, stores, or fields</property>
                             <property name="tooltip-text" translatable="yes">Use find for fields. Use reg for patterns.</property>
                           </object>
@@ -243,30 +292,30 @@
                                         <property name="margin-end">15</property>
                                         <property name="margin-bottom">6</property>
                                         <child>
-                                          <object class="GtkButton">
-                                            <property name="icon-name">view-refresh-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Generate password</property>
-                                            <property name="action-name">win.generate-password</property>
-                                            <style>
-                                              <class name="flat" />
-                                            </style>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkToggleButton" id="password_generator_settings_button">
-                                            <property name="icon-name">emblem-system-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Password options</property>
-                                            <style>
-                                              <class name="flat" />
-                                            </style>
-                                          </object>
-                                        </child>
-                                        <child>
                                           <object class="GtkBox">
                                             <property name="orientation">horizontal</property>
                                             <style>
                                               <class name="linked" />
                                             </style>
+                                            <child>
+                                              <object class="GtkButton">
+                                                <property name="icon-name">view-refresh-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Generate password</property>
+                                                <property name="action-name">win.generate-password</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkToggleButton" id="password_generator_settings_button">
+                                                <property name="icon-name">emblem-system-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Password options</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
                                             <child>
                                               <object class="GtkButton" id="copy_password_button">
                                                 <property name="icon-name">edit-copy-symbolic</property>
@@ -1057,6 +1106,27 @@
                                           </object>
                                         </child>
                                         <child>
+                                          <object class="AdwActionRow" id="tools_export_row">
+                                            <property name="title" translatable="yes">Export passwords</property>
+                                            <property name="subtitle" translatable="yes">Export every password and field to a CSV file.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkStack" id="tools_export_suffix_stack">
+                                                <child>
+                                                  <object class="GtkImage" id="tools_export_suffix_arrow">
+                                                    <property name="icon-name">document-save-symbolic</property>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkSpinner" id="tools_export_spinner">
+                                                    <property name="spinning">false</property>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                        <child>
                                           <object class="AdwActionRow" id="tools_audit_row">
                                             <property name="title" translatable="yes">Inspect change history</property>
                                             <property name="subtitle" translatable="yes">Inspect Git history across stores and verify commit signatures.</property>
@@ -1121,29 +1191,12 @@
                                             <property name="subtitle" translatable="yes">Copy recent app and command output to the clipboard.</property>
                                             <property name="activatable">True</property>
                                             <child type="suffix">
-                                              <object class="GtkBox">
-                                                <property name="orientation">horizontal</property>
+                                              <object class="GtkButton" id="tools_copy_logs_button">
+                                                <property name="icon-name">edit-copy-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Copy logs</property>
                                                 <style>
-                                                  <class name="linked" />
+                                                  <class name="flat" />
                                                 </style>
-                                                <child>
-                                                  <object class="GtkButton" id="tools_copy_logs_button">
-                                                    <property name="icon-name">edit-copy-symbolic</property>
-                                                    <property name="tooltip-text" translatable="yes">Copy logs</property>
-                                                    <style>
-                                                      <class name="flat" />
-                                                    </style>
-                                                  </object>
-                                                </child>
-                                                <child>
-                                                  <object class="GtkButton" id="tools_qr_logs_button">
-                                                    <property name="icon-name">qr-code-symbolic</property>
-                                                    <property name="tooltip-text" translatable="yes">Show logs as QR code</property>
-                                                    <style>
-                                                      <class name="flat" />
-                                                    </style>
-                                                  </object>
-                                                </child>
                                               </object>
                                             </child>
                                           </object>
@@ -1373,6 +1426,7 @@
                         <child>
                           <object class="GtkSearchEntry" id="tools_audit_search_entry">
                             <property name="visible">false</property>
+                            <property name="hexpand">true</property>
                             <property name="placeholder-text" translatable="yes">Search results</property>
                           </object>
                         </child>

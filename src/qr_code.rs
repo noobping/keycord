@@ -1,7 +1,7 @@
 use crate::i18n::gettext;
 use crate::support::ui::{dialog_content_shell, flat_icon_button_with_tooltip};
 use adw::glib::Bytes;
-use adw::gtk::{gdk, Align, Box as GtkBox, Button, Orientation, Picture, Widget};
+use adw::gtk::{gdk, Align, Box as GtkBox, Button, Orientation, Picture, Widget, Window};
 use adw::prelude::*;
 use adw::{Dialog, Toast, ToastOverlay};
 use qrcode::types::Color;
@@ -90,7 +90,14 @@ pub fn show_qr_code(text: &str, overlay: &ToastOverlay, parent: &impl IsA<Widget
             &content,
         ))
         .build();
-    dialog.present(Some(parent));
+    if let Some(window) = parent
+        .root()
+        .and_then(|root| root.downcast::<Window>().ok())
+    {
+        dialog.present(Some(&window));
+    } else {
+        dialog.present(Some(parent));
+    }
 }
 
 pub fn connect_qr_button<F>(button: &Button, overlay: &ToastOverlay, text: F)

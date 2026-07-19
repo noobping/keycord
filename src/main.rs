@@ -8,6 +8,7 @@ mod setup;
 
 mod backend;
 mod clipboard;
+mod filters;
 mod i18n;
 #[cfg(feature = "logging")]
 mod logging;

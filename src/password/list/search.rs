@@ -19,6 +19,7 @@ use crate::support::background::spawn_result_task;
 use crate::support::object_data::{cloned_data, non_null_to_string_option, set_cloned_data};
 use adw::gtk::{ListBox, ListBoxRow};
 use std::cell::{Cell, RefCell};
+use std::collections::BTreeSet;
 use std::rc::Rc;
 
 const SEARCH_CONTROLLER_KEY: &str = "search-controller";
@@ -50,6 +51,7 @@ struct SearchFilterState {
     indexing_generation: Cell<Option<u64>>,
     has_store_dirs: Cell<bool>,
     loading: Cell<bool>,
+    included_store_roots: RefCell<Option<BTreeSet<String>>>,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -60,7 +62,7 @@ pub(super) enum SearchRowFieldIndexState {
 }
 
 impl SearchFilterController {
-    pub(super) fn new() -> Self {
+    pub(super) fn new(included_store_roots: Option<BTreeSet<String>>) -> Self {
         Self {
             state: Rc::new(SearchFilterState {
                 query: RefCell::new(SearchQuery::Empty),
@@ -68,6 +70,7 @@ impl SearchFilterController {
                 indexing_generation: Cell::new(None),
                 has_store_dirs: Cell::new(false),
                 loading: Cell::new(false),
+                included_store_roots: RefCell::new(included_store_roots),
             }),
         }
     }
@@ -88,7 +91,11 @@ impl SearchFilterController {
         let query = self.state.query.borrow().clone();
         let query_is_empty = query.is_empty();
         let rows = collect_filterable_rows(list, &query);
-        let visibility = password_list_row_visibility(&rows, query_is_empty);
+        let visibility = password_list_row_visibility(
+            &rows,
+            query_is_empty,
+            self.state.included_store_roots.borrow().as_ref(),
+        );
         let has_visible_results = visibility.iter().any(|(_, visible)| *visible);
 
         for (row, visible) in visibility {
@@ -112,6 +119,17 @@ impl SearchFilterController {
 
     pub(super) fn matches_row(&self, row: &ListBoxRow) -> bool {
         cloned_data(row, SEARCH_VISIBILITY_KEY).unwrap_or(true)
+    }
+
+    pub(super) fn set_included_store_roots(
+        &self,
+        list: &ListBox,
+        included_store_roots: BTreeSet<String>,
+    ) {
+        *self.state.included_store_roots.borrow_mut() = Some(included_store_roots);
+        self.refresh_row_visibility(list);
+        list.invalidate_filter();
+        self.update_placeholder(list);
     }
 
     pub(super) fn begin_reload(&self, has_store_dirs: bool) {
@@ -275,6 +293,7 @@ fn password_entry_matches_query(row: &ListBoxRow, query: &SearchQuery) -> bool {
 fn password_list_row_visibility(
     rows: &[(ListBoxRow, FilterablePasswordListRow)],
     query_is_empty: bool,
+    included_store_roots: Option<&BTreeSet<String>>,
 ) -> Vec<(ListBoxRow, bool)> {
     let states = rows.iter().map(|(_, row)| row.clone()).collect::<Vec<_>>();
     let visibility = if query_is_empty {
@@ -286,9 +305,23 @@ fn password_list_row_visibility(
         )
     };
 
+    let visibility = combine_password_list_visibility(
+        visibility,
+        password_list_store_filter_visibility(&states, included_store_roots),
+    );
+
     rows.iter()
         .zip(visibility)
         .map(|((row, _), visible)| (row.clone(), visible))
+        .collect()
+}
+
+fn password_list_store_filter_visibility(
+    rows: &[FilterablePasswordListRow],
+    included_store_roots: Option<&BTreeSet<String>>,
+) -> Vec<bool> {
+    rows.iter()
+        .map(|row| included_store_roots.is_none_or(|included| included.contains(row.store_path())))
         .collect()
 }
 
@@ -389,8 +422,10 @@ const fn advanced_search_includes_store(
 mod visibility_tests {
     use super::{
         combine_password_list_visibility, password_list_collapsed_visibility,
-        password_list_search_visibility, FilterablePasswordListRow,
+        password_list_search_visibility, password_list_store_filter_visibility,
+        FilterablePasswordListRow,
     };
+    use std::collections::BTreeSet;
 
     #[test]
     fn collapsed_visibility_hides_descendants_of_closed_folders() {
@@ -495,6 +530,35 @@ mod visibility_tests {
                 password_list_search_visibility(&rows),
             ),
             vec![true, false, false]
+        );
+    }
+
+    #[test]
+    fn store_filter_only_shows_rows_from_included_stores() {
+        let rows = vec![
+            FilterablePasswordListRow::Folder {
+                store_path: "/tmp/personal".to_string(),
+                depth: 0,
+                expanded: true,
+            },
+            FilterablePasswordListRow::Entry {
+                store_path: "/tmp/personal".to_string(),
+                depth: 1,
+                matches_query: true,
+            },
+            FilterablePasswordListRow::Entry {
+                store_path: "/tmp/work".to_string(),
+                depth: 0,
+                matches_query: true,
+            },
+        ];
+
+        assert_eq!(
+            password_list_store_filter_visibility(
+                &rows,
+                Some(&BTreeSet::from(["/tmp/work".to_string()])),
+            ),
+            vec![false, false, true]
         );
     }
 }
