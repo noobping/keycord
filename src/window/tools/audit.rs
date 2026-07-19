@@ -8,7 +8,12 @@ use super::{
     AUDIT_ROW_GIT_UNAVAILABLE_SUBTITLE, AUDIT_ROW_SUBTITLE, AUDIT_SEARCH_EMPTY_SUBTITLE,
     AUDIT_SEARCH_EMPTY_TITLE, AUDIT_SUBTITLE, AUDIT_TITLE,
 };
+use crate::filters::{
+    build_filter_toggle, reconciled_included_filter_values, update_included_filter_value,
+};
 use crate::i18n::gettext;
+use crate::logging::log_error;
+use crate::password::list::apply_password_list_store_filter;
 use crate::preferences::Preferences;
 use crate::store::labels::{shortened_store_label_for_path, shortened_store_label_map};
 use crate::support::background::spawn_result_task;
@@ -20,12 +25,10 @@ use crate::support::git::{
     StoreGitAuditVerificationState, STORE_GIT_AUDIT_PAGE_SIZE,
 };
 use crate::support::runtime::supports_audit_features;
-use crate::support::ui::{reveal_navigation_page, visible_navigation_page_is};
+use crate::support::ui::{clear_box_children, reveal_navigation_page, visible_navigation_page_is};
 use crate::window::navigation::{show_secondary_page_chrome, HasWindowChrome};
 use adw::glib::WeakRef;
-use adw::gtk::{
-    Align, Box as GtkBox, CheckButton, Grid, Image, Label, Orientation, Spinner, Widget,
-};
+use adw::gtk::{Align, Box as GtkBox, Grid, Image, Label, Orientation, Spinner, Widget};
 use adw::prelude::*;
 use adw::{ActionRow, ExpanderRow, PreferencesGroup, Toast};
 use std::cell::{Cell, RefCell};
@@ -38,8 +41,6 @@ pub(super) struct AuditToolState {
     loading_catalog: Cell<bool>,
     catalog: RefCell<Option<StoreGitAuditCatalog>>,
     error: RefCell<Option<String>>,
-    selected_stores: RefCell<Option<BTreeSet<String>>>,
-    selected_branches: RefCell<Option<BTreeSet<String>>>,
     store_labels: RefCell<HashMap<String, String>>,
     branches: RefCell<BTreeMap<AuditBranchKey, Rc<AuditBranchState>>>,
 }
@@ -203,16 +204,6 @@ impl ToolsPageState {
                             .map(|store| store.store_root.clone())
                             .collect::<Vec<_>>(),
                     ));
-                let available_stores = audit_available_store_ids(&catalog);
-                let available_branches = audit_available_branch_names(&catalog);
-                let selected_stores = self.audit_page.audit.selected_stores.borrow().clone();
-                let selected_branches = self.audit_page.audit.selected_branches.borrow().clone();
-                *self.audit_page.audit.selected_stores.borrow_mut() = Some(
-                    reconciled_filter_selection(selected_stores.as_ref(), &available_stores),
-                );
-                *self.audit_page.audit.selected_branches.borrow_mut() = Some(
-                    reconciled_filter_selection(selected_branches.as_ref(), &available_branches),
-                );
                 *self.audit_page.audit.catalog.borrow_mut() = Some(catalog);
             }
             Err(err) => {
@@ -276,14 +267,12 @@ impl ToolsPageState {
             return;
         }
 
-        let selected_stores = selected_filter_values(
-            self.audit_page.audit.selected_stores.borrow().as_ref(),
+        let selected_stores = reconciled_included_filter_values(
+            Some(&self.included_store_filter_values()),
             &audit_available_store_ids(&catalog),
         );
-        let selected_branches = selected_filter_values(
-            self.audit_page.audit.selected_branches.borrow().as_ref(),
-            &audit_available_branch_names(&catalog),
-        );
+        let available_branches = audit_available_branch_names(&catalog);
+        let selected_branches = self.included_audit_branch_filter_values(&available_branches);
         if selected_stores.is_empty() || selected_branches.is_empty() {
             self.set_audit_status(AUDIT_EMPTY_SELECTION_TITLE, AUDIT_EMPTY_SELECTION_SUBTITLE);
             self.audit_page
@@ -360,14 +349,12 @@ impl ToolsPageState {
             return;
         };
 
-        let selected_stores = selected_filter_values(
-            self.audit_page.audit.selected_stores.borrow().as_ref(),
+        let selected_stores = reconciled_included_filter_values(
+            Some(&self.included_store_filter_values()),
             &audit_available_store_ids(&catalog),
         );
-        let selected_branches = selected_filter_values(
-            self.audit_page.audit.selected_branches.borrow().as_ref(),
-            &audit_available_branch_names(&catalog),
-        );
+        let available_branches = audit_available_branch_names(&catalog);
+        let selected_branches = self.included_audit_branch_filter_values(&available_branches);
 
         for store in &catalog.stores {
             let store_root = store.store_root.clone();
@@ -375,7 +362,10 @@ impl ToolsPageState {
                 &store_root,
                 &self.audit_page.audit.store_labels.borrow(),
             );
-            let toggle = build_audit_filter_toggle(&label, selected_stores.contains(&store_root));
+            let toggle = build_filter_toggle(
+                &gtk_safe_text(&label),
+                selected_stores.contains(&store_root),
+            );
             let state = self.clone();
             toggle.connect_toggled(move |toggle| {
                 state.update_audit_store_filter(&store_root, toggle.is_active());
@@ -384,8 +374,10 @@ impl ToolsPageState {
         }
 
         for branch_name in audit_available_branch_names(&catalog) {
-            let toggle =
-                build_audit_filter_toggle(&branch_name, selected_branches.contains(&branch_name));
+            let toggle = build_filter_toggle(
+                &gtk_safe_text(&branch_name),
+                selected_branches.contains(&branch_name),
+            );
             let state = self.clone();
             toggle.connect_toggled(move |toggle| {
                 state.update_audit_branch_filter(&branch_name, toggle.is_active());
@@ -397,20 +389,17 @@ impl ToolsPageState {
     }
 
     fn update_audit_store_filter(&self, store_root: &str, active: bool) {
-        let Some(catalog) = self.audit_page.audit.catalog.borrow().clone() else {
+        let preferences = Preferences::new();
+        let mut included = self.included_store_filter_values();
+        update_included_filter_value(&mut included, store_root, active);
+        if let Err(err) =
+            preferences.set_filter_included_store_roots(included.iter().cloned().collect())
+        {
+            self.handle_audit_filter_save_error("store", &err);
+            self.render_audit_filter_controls();
             return;
-        };
-        let available = audit_available_store_ids(&catalog);
-        let mut selection = selected_filter_values(
-            self.audit_page.audit.selected_stores.borrow().as_ref(),
-            &available,
-        );
-        if active {
-            selection.insert(store_root.to_string());
-        } else {
-            selection.remove(store_root);
         }
-        *self.audit_page.audit.selected_stores.borrow_mut() = Some(selection);
+        apply_password_list_store_filter(&self.root_list, included);
         self.render_audit_page();
     }
 
@@ -418,18 +407,65 @@ impl ToolsPageState {
         let Some(catalog) = self.audit_page.audit.catalog.borrow().clone() else {
             return;
         };
+        let preferences = Preferences::new();
         let available = audit_available_branch_names(&catalog);
-        let mut selection = selected_filter_values(
-            self.audit_page.audit.selected_branches.borrow().as_ref(),
-            &available,
-        );
-        if active {
-            selection.insert(branch_name.to_string());
-        } else {
-            selection.remove(branch_name);
+        let mut included = self.included_audit_branch_filter_values(&available);
+        update_included_filter_value(&mut included, branch_name, active);
+        if let Err(err) =
+            preferences.set_audit_filter_included_branches(included.iter().cloned().collect())
+        {
+            self.handle_audit_filter_save_error("branch", &err);
+            self.render_audit_filter_controls();
+            return;
         }
-        *self.audit_page.audit.selected_branches.borrow_mut() = Some(selection);
         self.render_audit_page();
+    }
+
+    fn included_store_filter_values(&self) -> BTreeSet<String> {
+        let preferences = Preferences::new();
+        let available = preferences
+            .store_roots()
+            .into_iter()
+            .collect::<BTreeSet<_>>();
+        let stored = preferences
+            .filter_included_store_roots()
+            .map(|roots| roots.into_iter().collect::<BTreeSet<_>>());
+        let included = reconciled_included_filter_values(stored.as_ref(), &available);
+        if stored.as_ref().is_some_and(|stored| stored != &included) {
+            if let Err(err) =
+                preferences.set_filter_included_store_roots(included.iter().cloned().collect())
+            {
+                self.handle_audit_filter_save_error("store cleanup", &err);
+            }
+        }
+        included
+    }
+
+    fn included_audit_branch_filter_values(
+        &self,
+        available: &BTreeSet<String>,
+    ) -> BTreeSet<String> {
+        let preferences = Preferences::new();
+        let stored = preferences
+            .audit_filter_included_branches()
+            .map(|branches| branches.into_iter().collect::<BTreeSet<_>>());
+        let included = reconciled_included_filter_values(stored.as_ref(), available);
+        if stored.as_ref().is_some_and(|stored| stored != &included) {
+            if let Err(err) =
+                preferences.set_audit_filter_included_branches(included.iter().cloned().collect())
+            {
+                self.handle_audit_filter_save_error("branch cleanup", &err);
+            }
+        }
+        included
+    }
+
+    fn handle_audit_filter_save_error(&self, filter_kind: &str, err: &adw::glib::BoolError) {
+        log_error(format!(
+            "Failed to save audit {filter_kind} filter selection: {err}"
+        ));
+        self.overlay
+            .add_toast(Toast::new(&gettext("Couldn't save the filter selection.")));
     }
 
     fn audit_search_query(&self) -> String {
@@ -803,29 +839,6 @@ fn audit_available_branch_names(catalog: &StoreGitAuditCatalog) -> BTreeSet<Stri
         .collect()
 }
 
-fn reconciled_filter_selection(
-    existing: Option<&BTreeSet<String>>,
-    available: &BTreeSet<String>,
-) -> BTreeSet<String> {
-    existing.map_or_else(
-        || available.clone(),
-        |existing| {
-            existing
-                .iter()
-                .filter(|value| available.contains(*value))
-                .cloned()
-                .collect()
-        },
-    )
-}
-
-fn selected_filter_values(
-    existing: Option<&BTreeSet<String>>,
-    available: &BTreeSet<String>,
-) -> BTreeSet<String> {
-    reconciled_filter_selection(existing, available)
-}
-
 fn audit_search_query(text: &str) -> String {
     text.trim().to_lowercase()
 }
@@ -951,12 +964,6 @@ fn trimmed_multiline_text(text: &str) -> String {
         gettext("Empty")
     } else {
         trimmed.to_string()
-    }
-}
-
-fn clear_box_children(container: &GtkBox) {
-    while let Some(child) = container.first_child() {
-        container.remove(&child);
     }
 }
 
@@ -1174,14 +1181,6 @@ fn build_commit_detail_section(title: &str, value: &str, monospace: bool) -> Gtk
     section
 }
 
-fn build_audit_filter_toggle(label: &str, active: bool) -> CheckButton {
-    CheckButton::builder()
-        .label(gtk_safe_text(label))
-        .active(active)
-        .hexpand(true)
-        .build()
-}
-
 fn localized_text(text: &str) -> String {
     gtk_safe_text(&gettext(text))
 }
@@ -1196,8 +1195,8 @@ mod tests {
         audit_available_branch_names, audit_available_store_ids,
         audit_branch_context_matches_query, audit_commit_matches_query, audit_search_query,
         branch_expansion_needs_initial_load, commit_summary_subtitle, gtk_safe_text,
-        localized_text, reconciled_filter_selection, verification_method_summary,
-        verification_state_summary, verification_summary, AuditBranchState,
+        localized_text, verification_method_summary, verification_state_summary,
+        verification_summary, AuditBranchState,
     };
     use crate::i18n::gettext;
     use crate::support::git::{
@@ -1235,24 +1234,6 @@ mod tests {
                 },
             ],
         }
-    }
-
-    #[test]
-    fn filter_selection_defaults_to_all_available_values() {
-        let available = BTreeSet::from(["main".to_string(), "origin/main".to_string()]);
-
-        assert_eq!(reconciled_filter_selection(None, &available), available);
-    }
-
-    #[test]
-    fn filter_selection_preserves_explicit_empty_choice() {
-        let available = BTreeSet::from(["main".to_string(), "origin/main".to_string()]);
-        let selected = BTreeSet::new();
-
-        assert_eq!(
-            reconciled_filter_selection(Some(&selected), &available),
-            BTreeSet::new()
-        );
     }
 
     #[test]

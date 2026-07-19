@@ -22,6 +22,8 @@ pub(super) struct PreferenceFile {
     pub(super) ripasso_own_fingerprint: Option<String>,
     pub(super) sync_private_keys_with_host: Option<bool>,
     pub(super) audit_use_commit_history_recipients: Option<bool>,
+    pub(super) filter_included_store_roots: Option<Vec<String>>,
+    pub(super) audit_filter_included_branches: Option<Vec<String>>,
     pub(super) hidden_notices: Option<Vec<String>>,
 }
 

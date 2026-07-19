@@ -45,6 +45,12 @@ pub fn clear_list_box(list: &ListBox) {
     }
 }
 
+pub fn clear_box_children(container: &GtkBox) {
+    while let Some(child) = container.first_child() {
+        container.remove(&child);
+    }
+}
+
 pub fn add_tracked_preferences_group_child(
     group: &PreferencesGroup,
     tracked: &RefCell<Vec<Widget>>,

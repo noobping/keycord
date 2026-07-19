@@ -137,6 +137,22 @@
       </description>
     </key>
 
+    <key name="filter-included-store-roots" type="as">
+      <default>[]</default>
+      <summary>Stores included by shared filters</summary>
+      <description>
+        Store roots selected in shared store filters, including the password list and audit tool.
+      </description>
+    </key>
+
+    <key name="audit-filter-included-branches" type="as">
+      <default>[]</default>
+      <summary>Branches included by the audit filter</summary>
+      <description>
+        Git branch names selected in the audit tool filter.
+      </description>
+    </key>
+
     <key name="hidden-notices" type="as">
       <default>[]</default>
       <summary>Hidden notices</summary>
