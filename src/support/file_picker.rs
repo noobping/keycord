@@ -3,13 +3,10 @@ use crate::logging::log_error;
 #[cfg(target_os = "linux")]
 use adw::gio;
 #[cfg(target_os = "linux")]
-use adw::gtk::{FileChooserAction, FileChooserNative, ResponseType};
+use adw::gtk::FileDialog;
 #[cfg(target_os = "linux")]
 use adw::prelude::*;
 use adw::{ApplicationWindow, Toast, ToastOverlay};
-#[cfg(target_os = "linux")]
-use std::rc::Rc;
-
 #[cfg(target_os = "windows")]
 use winsafe::{self as w, co, prelude::*};
 
@@ -20,7 +17,6 @@ enum LocalPathKind {
 }
 
 impl LocalPathKind {
-    #[cfg(any(target_os = "windows", test))]
     const fn chooser_error_message(self) -> &'static str {
         match self {
             Self::File => "Couldn't open the file chooser.",
@@ -61,42 +57,37 @@ fn choose_local_path_with_dialog(
     title: &str,
     accept_label: &str,
     kind: LocalPathKind,
-    create_folders: bool,
     overlay: &ToastOverlay,
     on_selected: impl Fn(String) + 'static,
 ) {
-    let dialog = FileChooserNative::new(
-        Some(&gettext(title)),
-        Some(window),
-        match kind {
-            LocalPathKind::File => FileChooserAction::Open,
-            LocalPathKind::Folder => FileChooserAction::SelectFolder,
-        },
-        Some(&gettext(accept_label)),
-        Some(&gettext("Cancel")),
-    );
-    if matches!(kind, LocalPathKind::Folder) {
-        dialog.set_create_folders(create_folders);
-    }
+    let dialog = FileDialog::builder()
+        .title(gettext(title))
+        .accept_label(gettext(accept_label))
+        .modal(true)
+        .build();
 
     let overlay = overlay.clone();
-    let on_selected = Rc::new(on_selected);
-    dialog.connect_response(move |dialog, response| {
-        if response == ResponseType::Accept {
-            let Some(file) = dialog.file() else {
-                dialog.hide();
-                return;
-            };
-
+    let handle_result = move |result: Result<gio::File, adw::glib::Error>| match result {
+        Ok(file) => {
             if let Some(path) = selected_local_path(&file, kind, &overlay) {
                 on_selected(path);
             }
         }
+        Err(err) if err.matches(gio::IOErrorEnum::Cancelled) => {}
+        Err(err) => {
+            log_error(format!("Failed to open the file chooser: {err}"));
+            overlay.add_toast(Toast::new(&gettext(kind.chooser_error_message())));
+        }
+    };
 
-        dialog.hide();
-    });
-
-    dialog.show();
+    match kind {
+        LocalPathKind::File => {
+            dialog.open(Some(window), None::<&gio::Cancellable>, handle_result);
+        }
+        LocalPathKind::Folder => {
+            dialog.select_folder(Some(window), None::<&gio::Cancellable>, handle_result);
+        }
+    }
 }
 
 #[cfg(target_os = "windows")]
@@ -169,7 +160,6 @@ pub fn choose_local_file_path(
         title,
         accept_label,
         LocalPathKind::File,
-        false,
         overlay,
         on_selected,
     );
@@ -199,12 +189,15 @@ pub fn choose_local_folder_path(
     on_selected: impl Fn(String) + 'static,
 ) {
     #[cfg(target_os = "linux")]
+    // GtkFileDialog delegates folder creation controls to the platform chooser.
+    let _ = create_folders;
+
+    #[cfg(target_os = "linux")]
     choose_local_path_with_dialog(
         window,
         title,
         accept_label,
         LocalPathKind::Folder,
-        create_folders,
         overlay,
         on_selected,
     );
@@ -235,38 +228,32 @@ pub fn choose_file_bytes(
     read_error_message: &'static str,
     on_selected: impl Fn(Vec<u8>) + 'static,
 ) {
-    let dialog = FileChooserNative::new(
-        Some(&gettext(title)),
-        Some(window),
-        FileChooserAction::Open,
-        Some(&gettext(accept_label)),
-        Some(&gettext("Cancel")),
-    );
+    let dialog = FileDialog::builder()
+        .title(gettext(title))
+        .accept_label(gettext(accept_label))
+        .modal(true)
+        .build();
     let overlay = overlay.clone();
-    let on_selected = Rc::new(on_selected);
-    dialog.connect_response(move |dialog, response| {
-        if response != ResponseType::Accept {
-            dialog.hide();
-            return;
-        }
-
-        let Some(file) = dialog.file() else {
-            dialog.hide();
-            return;
-        };
-
-        match file.load_bytes(None::<&gio::Cancellable>) {
-            Ok((bytes, _)) => on_selected(bytes.as_ref().to_vec()),
+    dialog.open(
+        Some(window),
+        None::<&gio::Cancellable>,
+        move |result| match result {
+            Ok(file) => match file.load_bytes(None::<&gio::Cancellable>) {
+                Ok((bytes, _)) => on_selected(bytes.as_ref().to_vec()),
+                Err(err) => {
+                    log_error(format!("{log_context}: {err}"));
+                    overlay.add_toast(Toast::new(&gettext(read_error_message)));
+                }
+            },
+            Err(err) if err.matches(gio::IOErrorEnum::Cancelled) => {}
             Err(err) => {
-                log_error(format!("{log_context}: {err}"));
-                overlay.add_toast(Toast::new(&gettext(read_error_message)));
+                log_error(format!("Failed to open the file chooser: {err}"));
+                overlay.add_toast(Toast::new(&gettext(
+                    LocalPathKind::File.chooser_error_message(),
+                )));
             }
-        }
-
-        dialog.hide();
-    });
-
-    dialog.show();
+        },
+    );
 }
 
 #[cfg(target_os = "windows")]
