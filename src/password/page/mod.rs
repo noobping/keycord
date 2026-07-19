@@ -710,6 +710,24 @@ pub fn password_page_has_unsaved_changes(state: &PasswordPageState) -> bool {
     current_editor_contents(state) != *state.saved_contents.borrow()
 }
 
+#[cfg(feature = "passkey")]
+pub fn password_page_would_discard_work(state: &PasswordPageState) -> bool {
+    password_work_would_be_discarded(
+        password_page_has_unsaved_changes(state),
+        state.saved_entry_exists.get(),
+        get_opened_pass_file(&state.nav).is_some(),
+    )
+}
+
+#[cfg(feature = "passkey")]
+const fn password_work_would_be_discarded(
+    contents_changed: bool,
+    saved_entry_exists: bool,
+    has_opened_entry: bool,
+) -> bool {
+    contents_changed || (has_opened_entry && !saved_entry_exists)
+}
+
 pub fn revert_unsaved_password_changes(state: &PasswordPageState) -> bool {
     if !password_page_has_unsaved_changes(state) {
         return false;
@@ -720,6 +738,19 @@ pub fn revert_unsaved_password_changes(state: &PasswordPageState) -> bool {
     sync_editor_contents(state, &saved_contents, pass_file.as_ref());
     state.overlay.add_toast(Toast::new(&gettext("Reverted.")));
     true
+}
+
+#[cfg(all(test, feature = "passkey"))]
+mod replacement_tests {
+    use super::password_work_would_be_discarded;
+
+    #[test]
+    fn second_import_is_blocked_when_the_first_new_entry_is_untouched() {
+        assert!(password_work_would_be_discarded(false, false, true));
+        assert!(password_work_would_be_discarded(true, true, true));
+        assert!(!password_work_would_be_discarded(false, true, true));
+        assert!(!password_work_would_be_discarded(false, false, false));
+    }
 }
 
 pub fn generate_password_entry(state: &PasswordPageState) {

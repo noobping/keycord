@@ -9,15 +9,21 @@ mod git;
 pub(crate) mod host_access;
 mod logs;
 pub mod navigation;
+#[cfg(feature = "passkey")]
+mod passkey_request;
 mod preferences;
 pub(crate) mod preferences_search;
 pub(crate) mod session;
 mod tools;
 
+#[cfg(feature = "passkey")]
+pub use self::build::begin_passkey_import;
 pub use self::build::create_main_window;
 pub use self::build::dispatch_main_window_command;
 pub use self::git::clone_store_repository;
 pub(crate) use self::host_access::append_optional_host_access_group_row;
+#[cfg(feature = "passkey")]
+pub use self::passkey_request::{present_open_passkey_request, OpenPasskeyRequest};
 pub(crate) use self::tools::sync_tools_action_availability;
 
 #[cfg(test)]
