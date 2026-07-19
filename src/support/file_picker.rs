@@ -218,6 +218,110 @@ pub fn choose_local_folder_path(
     }
 }
 
+pub fn choose_local_save_file_path(
+    window: &ApplicationWindow,
+    title: &str,
+    accept_label: &str,
+    initial_name: &str,
+    extension: &str,
+    overlay: &ToastOverlay,
+    on_selected: impl Fn(String) + 'static,
+) {
+    #[cfg(target_os = "linux")]
+    {
+        let _ = extension;
+        let dialog = FileDialog::builder()
+            .title(gettext(title))
+            .accept_label(gettext(accept_label))
+            .initial_name(initial_name)
+            .modal(true)
+            .build();
+        let overlay = overlay.clone();
+        dialog.save(
+            Some(window),
+            None::<&gio::Cancellable>,
+            move |result| match result {
+                Ok(file) => {
+                    if let Some(path) = selected_local_path(&file, LocalPathKind::File, &overlay) {
+                        on_selected(path);
+                    }
+                }
+                Err(err) if err.matches(gio::IOErrorEnum::Cancelled) => {}
+                Err(err) => {
+                    log_error(format!("Failed to open the save-file chooser: {err}"));
+                    overlay.add_toast(Toast::new(&gettext("Couldn't open the file chooser.")));
+                }
+            },
+        );
+    }
+
+    #[cfg(target_os = "windows")]
+    {
+        let _ = window;
+        match choose_windows_save_path(title, accept_label, initial_name, extension) {
+            Ok(Some(path)) => on_selected(path),
+            Ok(None) => {}
+            Err(err) => {
+                log_error(err);
+                overlay.add_toast(Toast::new(&gettext("Couldn't open the file chooser.")));
+            }
+        }
+    }
+}
+
+#[cfg(target_os = "windows")]
+fn choose_windows_save_path(
+    title: &str,
+    accept_label: &str,
+    initial_name: &str,
+    extension: &str,
+) -> Result<Option<String>, String> {
+    let _com = w::CoInitializeEx(co::COINIT::APARTMENTTHREADED)
+        .map_err(|err| format!("Failed to initialize COM for the save-file picker: {err}"))?;
+    let dialog = w::CoCreateInstance::<w::IFileSaveDialog>(
+        &co::CLSID::FileSaveDialog,
+        None::<&w::IUnknown>,
+        co::CLSCTX::INPROC_SERVER,
+    )
+    .map_err(|err| format!("Failed to create the Windows save-file picker: {err}"))?;
+    let options = dialog
+        .GetOptions()
+        .map_err(|err| format!("Failed to read Windows save-file picker options: {err}"))?
+        | co::FOS::FORCEFILESYSTEM
+        | co::FOS::PATHMUSTEXIST
+        | co::FOS::OVERWRITEPROMPT;
+
+    dialog
+        .SetOptions(options)
+        .map_err(|err| format!("Failed to configure Windows save-file picker options: {err}"))?;
+    dialog
+        .SetTitle(title)
+        .map_err(|err| format!("Failed to set the Windows save-file picker title: {err}"))?;
+    dialog
+        .SetOkButtonLabel(accept_label)
+        .map_err(|err| format!("Failed to set the Windows save-file picker button label: {err}"))?;
+    dialog
+        .SetFileName(initial_name)
+        .map_err(|err| format!("Failed to set the Windows save-file name: {err}"))?;
+    dialog
+        .SetDefaultExtension(extension)
+        .map_err(|err| format!("Failed to set the Windows save-file extension: {err}"))?;
+
+    let owner = w::HWND::GetDesktopWindow();
+    let accepted = dialog
+        .Show(&owner)
+        .map_err(|err| format!("Failed to show the Windows save-file picker: {err}"))?;
+    if !accepted {
+        return Ok(None);
+    }
+
+    dialog
+        .GetResult()
+        .and_then(|item| item.GetDisplayName(co::SIGDN::FILESYSPATH))
+        .map(Some)
+        .map_err(|err| format!("Failed to read the selected Windows save path: {err}"))
+}
+
 #[cfg(target_os = "linux")]
 pub fn choose_file_bytes(
     window: &ApplicationWindow,

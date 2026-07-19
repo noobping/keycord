@@ -1,4 +1,5 @@
 mod audit;
+mod export;
 mod field_values;
 mod menu;
 #[cfg(test)]
@@ -32,6 +33,7 @@ use adw::prelude::*;
 use adw::{
     ActionRow, ApplicationWindow, NavigationPage, PreferencesGroup, StatusPage, ToastOverlay,
 };
+use std::cell::Cell;
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -75,6 +77,8 @@ const WEAK_PASSWORDS_EMPTY_SUBTITLE: &str =
     "No loaded pass files matched the current weak-password checks.";
 const WEAK_PASSWORDS_FILTER_EMPTY_TITLE: &str = "No matching results";
 const WEAK_PASSWORDS_FILTER_EMPTY_SUBTITLE: &str = "Try a different search term.";
+const EXPORT_ROW_SUBTITLE: &str = "Export every password and field to a CSV file.";
+const EXPORT_ROW_DISABLED_SUBTITLE: &str = "Unavailable because no supported stores are loaded.";
 const AUDIT_TITLE: &str = "Inspect change history";
 const AUDIT_SUBTITLE: &str = "Git history and verification";
 const AUDIT_ROW_SUBTITLE: &str = "Inspect Git history across stores and verify commit signatures.";
@@ -118,6 +122,11 @@ struct ToolSelectPageState {
     weak_passwords_suffix_stack: Stack,
     weak_passwords_suffix_arrow: Image,
     weak_passwords_spinner: Spinner,
+    export_row: ActionRow,
+    export_suffix_stack: Stack,
+    export_suffix_arrow: Image,
+    export_spinner: Spinner,
+    export_busy: Rc<Cell<bool>>,
     audit_row: ActionRow,
     audit_suffix_stack: Stack,
     audit_suffix_arrow: Image,
@@ -218,6 +227,10 @@ pub struct ToolsPageWidgets<'a> {
     pub weak_passwords_suffix_stack: &'a Stack,
     pub weak_passwords_suffix_arrow: &'a Image,
     pub weak_passwords_spinner: &'a Spinner,
+    pub export_row: &'a ActionRow,
+    pub export_suffix_stack: &'a Stack,
+    pub export_suffix_arrow: &'a Image,
+    pub export_spinner: &'a Spinner,
     pub audit_row: &'a ActionRow,
     pub audit_suffix_stack: &'a Stack,
     pub audit_suffix_arrow: &'a Image,
@@ -263,6 +276,11 @@ impl ToolsPageState {
                 weak_passwords_suffix_stack: widgets.weak_passwords_suffix_stack.clone(),
                 weak_passwords_suffix_arrow: widgets.weak_passwords_suffix_arrow.clone(),
                 weak_passwords_spinner: widgets.weak_passwords_spinner.clone(),
+                export_row: widgets.export_row.clone(),
+                export_suffix_stack: widgets.export_suffix_stack.clone(),
+                export_suffix_arrow: widgets.export_suffix_arrow.clone(),
+                export_spinner: widgets.export_spinner.clone(),
+                export_busy: Rc::new(Cell::new(false)),
                 audit_row: widgets.audit_row.clone(),
                 audit_suffix_stack: widgets.audit_suffix_stack.clone(),
                 audit_suffix_arrow: widgets.audit_suffix_arrow.clone(),
@@ -326,6 +344,8 @@ impl ToolsPageState {
         self.select_page
             .audit_row
             .connect_activated(move |_| state.prepare_audit_page());
+
+        self.connect_export_tool();
 
         configure_optional_doc_row(self);
         configure_optional_log_rows(self);
@@ -487,9 +507,15 @@ impl ToolsPageState {
         self.sync_tool_rows();
     }
 
+    fn set_export_tool_busy(&self, busy: bool) {
+        self.select_page.export_busy.set(busy);
+        self.sync_tool_rows();
+    }
+
     fn advanced_search_tools_are_busy(&self) -> bool {
         self.field_browser.browser.tool_busy.get()
             || self.weak_password_page.weak_passwords.tool_busy.get()
+            || self.select_page.export_busy.get()
     }
 
     fn sync_tool_rows(&self) {
@@ -499,7 +525,8 @@ impl ToolsPageState {
             && advanced_search_tool_rows_enabled(
                 self.field_browser.browser.tool_busy.get(),
                 self.weak_password_page.weak_passwords.tool_busy.get(),
-            );
+            )
+            && !self.select_page.export_busy.get();
         set_tool_action_row_state(
             &self.select_page.field_values_row,
             &self.select_page.field_values_suffix_stack,
@@ -524,6 +551,19 @@ impl ToolsPageState {
                 WEAK_PASSWORDS_ROW_SUBTITLE
             } else {
                 WEAK_PASSWORDS_ROW_DISABLED_SUBTITLE
+            },
+        );
+        set_tool_action_row_state(
+            &self.select_page.export_row,
+            &self.select_page.export_suffix_stack,
+            &self.select_page.export_suffix_arrow,
+            &self.select_page.export_spinner,
+            advanced_search_enabled,
+            self.select_page.export_busy.get(),
+            if available {
+                EXPORT_ROW_SUBTITLE
+            } else {
+                EXPORT_ROW_DISABLED_SUBTITLE
             },
         );
         self.sync_audit_tool_row();

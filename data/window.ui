@@ -1098,6 +1098,27 @@
                                           </object>
                                         </child>
                                         <child>
+                                          <object class="AdwActionRow" id="tools_export_row">
+                                            <property name="title" translatable="yes">Export passwords</property>
+                                            <property name="subtitle" translatable="yes">Export every password and field to a CSV file.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkStack" id="tools_export_suffix_stack">
+                                                <child>
+                                                  <object class="GtkImage" id="tools_export_suffix_arrow">
+                                                    <property name="icon-name">document-save-symbolic</property>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkSpinner" id="tools_export_spinner">
+                                                    <property name="spinning">false</property>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                        <child>
                                           <object class="AdwActionRow" id="tools_audit_row">
                                             <property name="title" translatable="yes">Inspect change history</property>
                                             <property name="subtitle" translatable="yes">Inspect Git history across stores and verify commit signatures.</property>
