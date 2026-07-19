@@ -31,7 +31,7 @@
     <p>Keycord is an adaptive graphical client for password folders that use the standard pass layout. Existing stores remain normal pass stores on disk, so they keep working with pass and other compatible tools.</p>
     <ul>
       <li>Open one or more password stores and search by name, store, field, regular expression, or structured find query</li>
-      <li>Edit entries with form fields or raw pass-file text, generate passwords, and copy or show passwords, usernames, and one-time codes as QR codes</li>
+      <li>Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes</li>
       <li>Import passkeys into ordinary encrypted pass entries and open local credential-exchange requests</li>
       <li>Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend</li>
       <li>Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization</li>
@@ -80,9 +80,9 @@
     <release version="0.9.12" date="2026-07-19">
       <description>
         <ul>
-          <li>Added passkey import and local credential-exchange request opening while keeping passkeys in ordinary encrypted pass entries.</li>
-          <li>Added QR-code views for passwords, usernames, one-time codes, and setup commands.</li>
-          <li>Added password-store filtering and remembered history-inspection filters.</li>
+          <li>Passkeys can now be imported into ordinary encrypted pass entries, and local credential-exchange request files can be opened.</li>
+          <li>Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands.</li>
+          <li>Added entry filtering by password store and remembered history-inspection filters.</li>
           <li>Added CSV export for moving data to other tools.</li>
           <li>Improved header actions and hid filters when they cannot affect the current view.</li>
         </ul>
@@ -92,7 +92,6 @@
       <description>
         <ul>
           <li>Added hybrid sorting mode</li>
-          <li>Fixed permissions for smartcards</li>
         </ul>
       </description>
     </release>
@@ -112,19 +111,10 @@
         </ul>
       </description>
     </release>
-    <release version="0.9.8" date="2026-04-01">
-      <description>
-        <ul>
-          <li>Removed the FIDO2 backed password stores feature from the flatpak app.</li>
-          <li>Added experimental FIDO2-protected OpenPGP keys.</li>
-        </ul>
-      </description>
-    </release>
     <release version="0.9.7" date="2026-03-31">
       <description>
         <ul>
           <li>Fixed OTP bug where valid secrets were incorrectly invalidated.</li>
-          <li>Added experimental FIDO2 guides and progress indicators.</li>
         </ul>
       </description>
     </release>
@@ -132,15 +122,7 @@
       <description>
         <ul>
           <li>Change the default to use the filename as the username.</li>
-          <li>Only enable experimental FIDO2 features if the integrated backend is used.</li>
         </ul>
-      </description>
-    </release>
-    <release version="0.9.5" date="2026-03-29">
-      <description>
-        <p>
-          Add experimental FIDO2 support
-        </p>
       </description>
     </release>
     <release version="0.9.4" date="2026-03-28">
@@ -160,7 +142,6 @@
     <release version="0.9.2" date="2026-03-26">
       <description>
         <ul>
-          <li>Add experimental OpenPGP hardware key support for private keys</li>
           <li>Expand the password editor with cleanup actions</li>
           <li>You can now use the field values as variables in search</li>
         </ul>
