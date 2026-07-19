@@ -16,6 +16,7 @@ docs = get_option('docs')
 logging = get_option('logging')
 audit = get_option('audit')
 fidokey = get_option('fidokey')
+passkey = get_option('passkey')
 fidopin = get_option('fidopin')
 smartcard = get_option('smartcard')
 hardwarekey = get_option('hardwarekey')
@@ -29,6 +30,7 @@ foreach feature_name, enabled : {
   'logging': logging,
   'audit': audit,
   'fidokey': fidokey,
+  'passkey': passkey,
   'fidopin': fidopin,
   'smartcard': smartcard,
   'hardwarekey': hardwarekey,
@@ -173,6 +175,13 @@ install_data(
   install_dir: join_paths(get_option('datadir'), 'applications'),
 )
 
+if passkey
+  install_data(
+    'data/io.github.noobping.keycord-passkey.xml',
+    install_dir: join_paths(get_option('datadir'), 'mime', 'packages'),
+  )
+endif
+
 install_data(
   'keycord-search-provider.ini',
   rename: 'io.github.noobping.keycord.search-provider.ini',
@@ -199,4 +208,5 @@ install_data(
 
 gnome.post_install(
   glib_compile_schemas: true,
+  update_mime_database: passkey,
 )

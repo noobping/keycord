@@ -8,6 +8,10 @@ use std::{
     time::{SystemTime, UNIX_EPOCH},
 };
 
+mod desktop_entry {
+    include!("desktop_entry.rs");
+}
+
 const APP_ID: &str = env!("APP_ID");
 const GETTEXT_DOMAIN: &str = env!("GETTEXT_DOMAIN");
 const LOCALEDIR: &str = env!("LOCALEDIR");
@@ -15,6 +19,8 @@ const RESOURCE_ID: &str = env!("RESOURCE_ID");
 const AVAILABLE_LOCALES: &str = env!("AVAILABLE_LOCALES");
 const SEARCH_PROVIDER_BUS_NAME: &str = env!("SEARCH_PROVIDER_BUS_NAME");
 const SEARCH_PROVIDER_OBJECT_PATH: &str = env!("SEARCH_PROVIDER_OBJECT_PATH");
+#[cfg(feature = "passkey")]
+const PASSKEY_MIME_PACKAGE: &str = include_str!("../data/io.github.noobping.keycord-passkey.xml");
 
 pub fn local_menu_action_label(installed: bool) -> &'static str {
     if installed {
@@ -80,6 +86,8 @@ pub fn install_locally() -> std::io::Result<()> {
         return Err(Error::new(ErrorKind::NotFound, "No data directory found"));
     };
     let apps = data.join("applications");
+    #[cfg(feature = "passkey")]
+    let mime_packages = data.join("mime").join("packages");
     let dbus_services = data.join("dbus-1").join("services");
     let search_providers = data.join("gnome-shell").join("search-providers");
     let icons = data
@@ -99,6 +107,8 @@ pub fn install_locally() -> std::io::Result<()> {
 
     std::fs::create_dir_all(&bin)?;
     std::fs::create_dir_all(&apps)?;
+    #[cfg(feature = "passkey")]
+    std::fs::create_dir_all(&mime_packages)?;
     std::fs::create_dir_all(&dbus_services)?;
     std::fs::create_dir_all(&search_providers)?;
     std::fs::create_dir_all(&icons)?;
@@ -109,10 +119,14 @@ pub fn install_locally() -> std::io::Result<()> {
     std::fs::set_permissions(&dest, perms)?;
 
     write_desktop_file(&apps, &dest)?;
+    #[cfg(feature = "passkey")]
+    write_passkey_mime_package(&mime_packages)?;
     write_search_provider_file(&search_providers)?;
     write_search_provider_service_file(&dbus_services, &dest)?;
     extract_icon(&icons)?;
     install_locales(&locale_root)?;
+    #[cfg(feature = "passkey")]
+    refresh_mime_database(&data);
 
     Ok(())
 }
@@ -137,6 +151,11 @@ pub fn uninstall_locally() -> std::io::Result<()> {
     let desktop = data
         .join("applications")
         .join(format!("{}.desktop", APP_ID));
+    #[cfg(feature = "passkey")]
+    let passkey_mime = data
+        .join("mime")
+        .join("packages")
+        .join(format!("{}-passkey.xml", APP_ID));
     let search_provider = data
         .join("gnome-shell")
         .join("search-providers")
@@ -151,6 +170,10 @@ pub fn uninstall_locally() -> std::io::Result<()> {
     if desktop.exists() {
         fs::remove_file(desktop)?;
     }
+    #[cfg(feature = "passkey")]
+    if passkey_mime.exists() {
+        fs::remove_file(passkey_mime)?;
+    }
     if search_provider.exists() {
         fs::remove_file(search_provider)?;
     }
@@ -161,6 +184,8 @@ pub fn uninstall_locally() -> std::io::Result<()> {
         fs::remove_file(icon)?;
     }
     remove_installed_locales(&data.join("locale"))?;
+    #[cfg(feature = "passkey")]
+    refresh_mime_database(&data);
     Ok(())
 }
 
@@ -175,6 +200,8 @@ fn can_install_into(bin: &Path, data: &Path) -> bool {
             .join("scalable")
             .join("apps"),
     ];
+    #[cfg(feature = "passkey")]
+    targets.push(data.join("mime").join("packages"));
     if locale_install_required() {
         targets.push(data.join("locale"));
     }
@@ -246,17 +273,19 @@ fn write_desktop_file(apps_path: &Path, bin_path: &Path) -> std::io::Result<()> 
     let project = env!("CARGO_PKG_NAME");
     let comment = option_env!("CARGO_PKG_DESCRIPTION").unwrap_or("Password manager");
     let exec = bin_path.display(); // absolute path to the installed binary
+    let (open_argument, mime_types) = desktop_entry::passkey_fields(cfg!(feature = "passkey"));
     let contents = format!(
         "[Desktop Entry]
 Type=Application
 Version=1.0
 Name={project}
 Comment={comment}
-Exec={exec}
+Exec={exec}{open_argument}
 Icon={APP_ID}
 Terminal=false
 Categories=System;Security;
 StartupNotify=true
+{mime_types}
 ",
     );
 
@@ -269,6 +298,22 @@ StartupNotify=true
     fs::set_permissions(&file, perms)?;
 
     Ok(())
+}
+
+#[cfg(feature = "passkey")]
+fn write_passkey_mime_package(packages_path: &Path) -> std::io::Result<()> {
+    let file = packages_path.join(format!("{}-passkey.xml", APP_ID));
+    fs::write(&file, PASSKEY_MIME_PACKAGE)?;
+    let mut perms = fs::metadata(&file)?.permissions();
+    perms.set_mode(0o644);
+    fs::set_permissions(file, perms)
+}
+
+#[cfg(feature = "passkey")]
+fn refresh_mime_database(data_path: &Path) {
+    let _ = process::Command::new("update-mime-database")
+        .arg(data_path.join("mime"))
+        .status();
 }
 
 fn write_search_provider_file(search_providers_path: &Path) -> std::io::Result<()> {
