@@ -3,6 +3,7 @@ use super::command::{
     run_store_remote_git_command,
 };
 use super::repository::has_git_repository;
+use super::status::symbolic_head_branch;
 use crate::backend::{available_host_gpg_public_certs, available_standard_public_certs};
 use crate::logging::{log_error, run_command_with_input, CommandLogOptions};
 use crate::preferences::Preferences;
@@ -30,6 +31,7 @@ pub struct StoreGitAuditCatalog {
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct StoreGitAuditStore {
     pub store_root: String,
+    pub default_branch: Option<String>,
     pub branches: Vec<StoreGitAuditBranchRef>,
 }
 
@@ -223,6 +225,7 @@ pub fn discover_store_git_audit_catalog(
         branches.extend(remote_branches);
         stores.push(StoreGitAuditStore {
             store_root: store_root.clone(),
+            default_branch: symbolic_head_branch(store_root)?,
             branches,
         });
     }

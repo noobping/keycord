@@ -44,7 +44,7 @@ fn head_has_commit(root: &str) -> Result<bool, String> {
     }
 }
 
-fn symbolic_head_branch(root: &str) -> Result<Option<String>, String> {
+pub(super) fn symbolic_head_branch(root: &str) -> Result<Option<String>, String> {
     let output = run_store_git_command(
         root,
         "Inspect password store Git branch",

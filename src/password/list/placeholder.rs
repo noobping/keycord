@@ -49,7 +49,7 @@ impl PasswordListPlaceholderState {
             PlaceholderPresentation {
                 icon_name: "edit-find-symbolic",
                 title: "No matches",
-                description: Some("Try another query."),
+                description: Some("Try another query or filter."),
                 spinner: false,
             }
         };
@@ -157,7 +157,7 @@ fn resolved_placeholder(empty: bool, has_store_dirs: bool) -> StatusPage {
         StatusPage::builder()
             .icon_name("edit-find-symbolic")
             .title(gettext("No matches"))
-            .description(gettext("Try another query."))
+            .description(gettext("Try another query or filter."))
             .build()
     }
 }

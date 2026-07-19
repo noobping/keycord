@@ -190,6 +190,10 @@ pub(super) fn append_store_clone_row(
     );
 }
 
+#[expect(
+    clippy::too_many_arguments,
+    reason = "This internal boundary carries the window, store-list, preferences, feedback, navigation, and clone request state into one asynchronous operation."
+)]
 fn start_store_clone(
     window: &ApplicationWindow,
     stores_list: &ListBox,

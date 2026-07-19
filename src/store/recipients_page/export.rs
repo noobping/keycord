@@ -6,7 +6,6 @@ use crate::backend::{
 use crate::clipboard::set_clipboard_text;
 use crate::i18n::gettext;
 use crate::logging::log_error;
-use crate::qr_code::show_qr_code;
 use adw::gtk::Button;
 use adw::{Toast, ToastOverlay};
 
@@ -49,25 +48,5 @@ pub(super) fn copy_managed_key_material(
             .platform
             .overlay
             .add_toast(Toast::new(&gettext("Couldn't copy that key.")));
-    }
-}
-
-pub(super) fn show_managed_key_material_qr(
-    state: &StoreRecipientsPageState,
-    key: &ManagedRipassoPrivateKey,
-    button: &Button,
-) {
-    match managed_key_material(key) {
-        Ok(armored) => show_qr_code(&armored, &state.platform.overlay, button),
-        Err(err) => {
-            log_error(format!(
-                "Failed to read key material '{}' for QR code: {err}",
-                key.fingerprint
-            ));
-            state
-                .platform
-                .overlay
-                .add_toast(Toast::new(&gettext("Couldn't read that key.")));
-        }
     }
 }

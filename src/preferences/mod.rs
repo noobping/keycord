@@ -182,6 +182,13 @@ impl Preferences {
         notices
     }
 
+    fn normalized_filter_values(mut values: Vec<String>) -> Vec<String> {
+        values.retain(|value| !value.is_empty());
+        values.sort();
+        values.dedup();
+        values
+    }
+
     fn resolved_store_dirs(stores: Option<Vec<String>>) -> Vec<String> {
         stores.unwrap_or_else(default_store_dirs)
     }
@@ -419,6 +426,73 @@ impl Preferences {
         )
     }
 
+    pub fn filter_included_store_roots(&self) -> Option<Vec<String>> {
+        self.read_preference(
+            |settings| {
+                settings.user_value("filter-included-store-roots").map(|_| {
+                    Self::normalized_filter_values(
+                        settings
+                            .strv("filter-included-store-roots")
+                            .iter()
+                            .map(std::string::ToString::to_string)
+                            .collect(),
+                    )
+                })
+            },
+            |cfg| {
+                cfg.filter_included_store_roots
+                    .clone()
+                    .map(Self::normalized_filter_values)
+            },
+        )
+    }
+
+    pub fn set_filter_included_store_roots(&self, roots: Vec<String>) -> Result<(), BoolError> {
+        let roots = Self::normalized_filter_values(roots);
+        let settings_roots = roots.clone();
+        self.write_preference(
+            |settings| settings.set_strv("filter-included-store-roots", settings_roots.clone()),
+            |cfg| cfg.filter_included_store_roots = Some(roots),
+        )
+    }
+
+    pub fn audit_filter_included_branches(&self) -> Option<Vec<String>> {
+        self.read_preference(
+            |settings| {
+                settings
+                    .user_value("audit-filter-included-branches")
+                    .map(|_| {
+                        Self::normalized_filter_values(
+                            settings
+                                .strv("audit-filter-included-branches")
+                                .iter()
+                                .map(std::string::ToString::to_string)
+                                .collect(),
+                        )
+                    })
+            },
+            |cfg| {
+                cfg.audit_filter_included_branches
+                    .clone()
+                    .map(Self::normalized_filter_values)
+            },
+        )
+    }
+
+    pub fn set_audit_filter_included_branches(
+        &self,
+        branches: Vec<String>,
+    ) -> Result<(), BoolError> {
+        let branches = Self::normalized_filter_values(branches);
+        let settings_branches = branches.clone();
+        self.write_preference(
+            |settings| {
+                settings.set_strv("audit-filter-included-branches", settings_branches.clone())
+            },
+            |cfg| cfg.audit_filter_included_branches = Some(branches),
+        )
+    }
+
     pub fn hidden_notices(&self) -> Vec<String> {
         Self::normalized_hidden_notices(self.read_preference(
             |settings| {
@@ -628,6 +702,19 @@ mod tests {
         assert_eq!(
             PasswordListSortMode::StorePath.render_mode(true),
             PasswordListSortMode::StorePath
+        );
+    }
+
+    #[test]
+    fn filter_values_are_sorted_deduplicated_and_keep_exact_labels() {
+        assert_eq!(
+            Preferences::normalized_filter_values(vec![
+                "work".to_string(),
+                " personal ".to_string(),
+                String::new(),
+                "work".to_string(),
+            ]),
+            vec![" personal ".to_string(), "work".to_string()]
         );
     }
 
