@@ -7,5 +7,6 @@ pub mod new_item;
 pub mod opened;
 pub mod otp;
 pub mod page;
+pub mod passkey;
 pub mod strength;
 pub mod undo;
