@@ -125,6 +125,24 @@ How it works:
 
 Use `find otp` in search when you need every entry that has OTP enabled.
 
+## Store Passkeys And Open Exchange Requests
+
+With the default-enabled `passkey` feature, Keycord stores passkey credential data in a reserved
+`passkey:` field inside an ordinary pass entry. The whole entry, including the passkey private key,
+is protected by the store's normal OpenPGP encryption. Compatible `pass` tools can continue to
+manage the same `.gpg` files, although they treat the reserved field as ordinary decrypted text.
+
+Keycord can open a local CXP passkey export-request JSON file. Before treating it as a request, it
+checks that it is a bounded regular local file and structurally checks the request fields. This is
+credential-exchange request handling, not a browser WebAuthn ceremony or a live authenticator.
+The importer name in a local request is not authenticated. Opening a request does not, on its own,
+mean that an encrypted CXP response has been generated.
+
+Keycord can also open a standard CXF passkey credential. After confirmation, it prepares a new
+unsaved item in the configured default store. Review the RP ID and username, then use the normal
+Save action so the store's usual recipient and unlock flow protects the credential. The raw editor
+and generic password CSV export do not expose passkey private-key material.
+
 ## Search, Visibility, Reload, And Sync
 
 ### Search

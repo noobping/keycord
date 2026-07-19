@@ -26,13 +26,32 @@ Keycord treats these lines specially:
 
 - `username:`, `user:`, and `login:` map to the username field
 - `otpauth://...` or `otpauth: otpauth://...` becomes the OTP field
+- `passkey: keycord-passkey-v1:...` contains a passkey credential when passkey support is enabled
 - other `key: value` lines become searchable fields
 - lines without a colon are preserved as raw text but are not structured search fields
+
+The reserved `passkey:` line includes private key material. It is encrypted at rest because
+`pass` encrypts the complete entry as a `.gpg` file, just like its password line and other
+fields. Treat the raw or otherwise decrypted entry as secret.
 
 ### Editors
 
 - Standard editor: password, username, OTP, and dynamic fields
-- Raw editor: the full pass file as text
+- Raw editor: the full pass file as text; it is unavailable for entries containing passkey material
+
+### Passkeys
+
+Passkey support is enabled by default. Keycord stores a passkey in an ordinary entry in the
+default `pass` store (normally `~/.password-store`) or another configured store; it does not use
+a separate passkey database. Opening a standard Credential Exchange Format (CXF) passkey file asks
+for confirmation, then prepares a new item in the default store for review and encrypted saving.
+Keycord also recognizes and structurally checks local Credential Exchange Protocol (CXP) passkey
+export-request files when they are opened with the app.
+
+This request-opening path is for local credential exchange. It does not make Keycord a browser
+WebAuthn authenticator and does not by itself claim to have produced an encrypted CXP response.
+Developers can leave this support out with `cargo build --no-default-features` or the Meson option
+`-Dpasskey=false`.
 
 ## Backends
 

@@ -11,6 +11,7 @@ Keycord works with password folders that use the standard [`pass`](https://www.p
 
 - Open one or more password stores and search by name, store, field, regular expression, or structured `find` query
 - Edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes
+- Import CXF passkeys into ordinary encrypted `pass` entries and open local CXP passkey export requests
 - Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
 - Manage store recipients, folder-specific `.gpg-id` files, private keys, experimental FIDO2 security keys and experimental OpenPGP smartcard workflows
 - Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
@@ -36,3 +37,7 @@ Package names differ by distribution. This project was tested with Fedora packag
 sudo dnf install gpgme-devel clang pkg-config pkgconf-pkg-config nettle-devel libgpg-error-devel openssl-devel gtk4-devel gdk-pixbuf2-devel gcc gcc-c++ make gettext glib2-devel cairo-devel capnproto capnproto-devel pcsc-lite-devel pango-devel libadwaita-devel cargo mold clippy rustfmt \
     cmake libcbor-devel hidapi-devel libfido2-devel pcsc-lite pcsc-lite-ccid systemd-devel git pass pass-otp pinentry pinentry-gnome3 python-pass-import
 ```
+
+Passkey support is the separate Cargo feature `passkey` and is enabled by default. Use
+`cargo build --no-default-features` to build without it, or set the Meson option
+`-Dpasskey=false` when configuring a Meson build.
