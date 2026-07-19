@@ -388,7 +388,6 @@ pub(super) fn tools_page_state(
         logs_row: &widgets.tools_logs_row,
         copy_logs_row: &widgets.tools_copy_logs_row,
         copy_logs_button: &widgets.tools_copy_logs_button,
-        qr_logs_button: &widgets.tools_qr_logs_button,
         overlay: &widgets.toast_overlay,
         password_page,
         field_values: ToolBrowserWidgets {

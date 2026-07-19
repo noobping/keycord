@@ -1121,29 +1121,12 @@
                                             <property name="subtitle" translatable="yes">Copy recent app and command output to the clipboard.</property>
                                             <property name="activatable">True</property>
                                             <child type="suffix">
-                                              <object class="GtkBox">
-                                                <property name="orientation">horizontal</property>
+                                              <object class="GtkButton" id="tools_copy_logs_button">
+                                                <property name="icon-name">edit-copy-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Copy logs</property>
                                                 <style>
-                                                  <class name="linked" />
+                                                  <class name="flat" />
                                                 </style>
-                                                <child>
-                                                  <object class="GtkButton" id="tools_copy_logs_button">
-                                                    <property name="icon-name">edit-copy-symbolic</property>
-                                                    <property name="tooltip-text" translatable="yes">Copy logs</property>
-                                                    <style>
-                                                      <class name="flat" />
-                                                    </style>
-                                                  </object>
-                                                </child>
-                                                <child>
-                                                  <object class="GtkButton" id="tools_qr_logs_button">
-                                                    <property name="icon-name">qr-code-symbolic</property>
-                                                    <property name="tooltip-text" translatable="yes">Show logs as QR code</property>
-                                                    <style>
-                                                      <class name="flat" />
-                                                    </style>
-                                                  </object>
-                                                </child>
                                               </object>
                                             </child>
                                           </object>

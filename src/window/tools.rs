@@ -126,7 +126,6 @@ struct ToolSelectPageState {
     logs_row: ActionRow,
     copy_logs_row: ActionRow,
     copy_logs_button: Button,
-    qr_logs_button: Button,
     setup_row: Rc<RefCell<Option<ActionRow>>>,
     pass_import_row: Rc<RefCell<Option<StoreImportToolRowState>>>,
 }
@@ -230,7 +229,6 @@ pub struct ToolsPageWidgets<'a> {
     pub logs_row: &'a ActionRow,
     pub copy_logs_row: &'a ActionRow,
     pub copy_logs_button: &'a Button,
-    pub qr_logs_button: &'a Button,
     pub overlay: &'a ToastOverlay,
     pub password_page: &'a PasswordPageState,
     pub field_values: ToolBrowserWidgets<'a>,
@@ -274,7 +272,6 @@ impl ToolsPageState {
                 logs_row: widgets.logs_row.clone(),
                 copy_logs_row: widgets.copy_logs_row.clone(),
                 copy_logs_button: widgets.copy_logs_button.clone(),
-                qr_logs_button: widgets.qr_logs_button.clone(),
                 setup_row: Rc::new(RefCell::new(None)),
                 pass_import_row: Rc::new(RefCell::new(None)),
             },
