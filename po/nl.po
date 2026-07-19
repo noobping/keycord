@@ -150,7 +150,7 @@ msgstr ""
 "Voeg een opslag met een Git-repository toe om hier de geschiedenis te "
 "bekijken."
 
-#: data/metainfo.xml:164
+#: data/metainfo.xml:183
 msgid "Add advanced search"
 msgstr "Voeg geavanceerd zoeken toe"
 
@@ -166,7 +166,7 @@ msgstr "Voeg eerst nog een opslag toe."
 msgid "Add at least one remote before syncing."
 msgstr "Voeg minstens één remote toe voordat je synchroniseert."
 
-#: data/metainfo.xml:136
+#: data/metainfo.xml:154
 msgid "Add documentation"
 msgstr "Voeg documentatie toe"
 
@@ -177,6 +177,14 @@ msgid ""
 msgstr ""
 "Voeg bestaande opslagen toe, maak nieuwe opslagen, importeer wachtwoorden op "
 "ondersteunde systemen of herstel een opslag vanuit Git met de Host-backend"
+
+#: data/metainfo.xml:141
+msgid "Add experimental FIDO2 support"
+msgstr "Experimentele FIDO2-ondersteuning toevoegen"
+
+#: data/metainfo.xml:163
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr "Experimentele OpenPGP-hardwaresleutelondersteuning voor privésleutels toevoegen"
 
 #: data/shortcuts.ui:51 data/window.ui:569
 msgid "Add field"
@@ -194,7 +202,7 @@ msgstr "Item toevoegen"
 msgid "Add missing fields"
 msgstr "Ontbrekende velden toevoegen"
 
-#: data/metainfo.xml:165
+#: data/metainfo.xml:184
 msgid "Add optional GPG synchronization"
 msgstr "Voeg optionele GPG-synchronisatie toe"
 
@@ -218,11 +226,11 @@ msgstr "Git-remote voor wachtwoordopslag toevoegen"
 msgid "Add remote"
 msgstr "Remote toevoegen"
 
-#: data/metainfo.xml:137
+#: data/metainfo.xml:155
 msgid "Add search provider"
 msgstr "Voeg zoekprovider toe"
 
-#: data/metainfo.xml:153
+#: data/metainfo.xml:172
 msgid "Add the option to copy the logs"
 msgstr "Voeg de optie toe om de logboeken te kopiëren"
 
@@ -238,7 +246,7 @@ msgstr ""
 msgid "Add to app menu"
 msgstr "Aan appmenu toevoegen"
 
-#: data/metainfo.xml:163
+#: data/metainfo.xml:182
 msgid "Add tools page"
 msgstr "Voeg een hulpmiddelenpagina toe"
 
@@ -247,7 +255,7 @@ msgid "Added CSV export for moving data to other tools."
 msgstr ""
 "CSV-export toegevoegd om gegevens naar andere hulpmiddelen over te zetten."
 
-#: data/metainfo.xml:109
+#: data/metainfo.xml:110
 msgid "Added Git history inspection with commit verification details."
 msgstr ""
 "Inspectie van de Git-geschiedenis toegevoegd, met details over "
@@ -269,7 +277,15 @@ msgstr ""
 "Filteren op wachtwoordopslag toegevoegd; filters voor geschiedenisinspectie "
 "worden nu onthouden."
 
-#: data/metainfo.xml:106
+#: data/metainfo.xml:127
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "Experimentele FIDO2-handleidingen en voortgangsindicatoren toegevoegd."
+
+#: data/metainfo.xml:119
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "Experimentele met FIDO2 beveiligde OpenPGP-sleutels toegevoegd."
+
+#: data/metainfo.xml:107
 msgid "Added folder-specific recipient editing for .gpg-id files."
 msgstr "Bewerken van ontvangers in mapspecifieke .gpg-id-bestanden toegevoegd."
 
@@ -411,7 +427,7 @@ msgstr "Kan de laatste wijziging niet ongedaan maken."
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: data/metainfo.xml:124
+#: data/metainfo.xml:134
 msgid "Change the default to use the filename as the username."
 msgstr "Gebruik standaard de naam van het pass-bestand als gebruikersnaam."
 
@@ -419,7 +435,7 @@ msgstr "Gebruik standaard de naam van het pass-bestand als gebruikersnaam."
 msgid "Changed paths"
 msgstr "Gewijzigde paden"
 
-#: data/metainfo.xml:155
+#: data/metainfo.xml:174
 msgid "Changed the app icon to a keycord"
 msgstr "App-pictogram gewijzigd naar een sleutelkoord"
 
@@ -1360,7 +1376,7 @@ msgstr "Voer de PIN van de beveiligingssleutel in."
 msgid "Escape"
 msgstr "Escape"
 
-#: data/metainfo.xml:145
+#: data/metainfo.xml:164
 msgid "Expand the password editor with cleanup actions"
 msgstr "Breid de wachtwoordeditor uit met opschoonacties"
 
@@ -2245,24 +2261,28 @@ msgstr ""
 "Vind zwakke wachtwoorden, bekijk terugkerende veldwaarden, filter op opslag "
 "en exporteer wachtwoordopslagen naar CSV"
 
-#: data/metainfo.xml:177
+#: data/metainfo.xml:196
 msgid "First release"
 msgstr "Eerste release"
 
-#: data/metainfo.xml:130
+#: data/metainfo.xml:148
 msgid "Fix back icon"
 msgstr "Pictogram voor teruggaan herstellen"
 
-#: data/metainfo.xml:154
+#: data/metainfo.xml:173
 msgid "Fix optional Git synchronization"
 msgstr "Herstel optionele Git-synchronisatie"
 
-#: data/metainfo.xml:117
+#: data/metainfo.xml:126
 msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
 msgstr ""
 "OTP-fout opgelost waarbij geldige geheimen onterecht ongeldig werden gemaakt."
 
-#: data/metainfo.xml:100
+#: data/metainfo.xml:95
+msgid "Fixed permissions for smartcards"
+msgstr "Machtigingen voor smartcards hersteld"
+
+#: data/metainfo.xml:101
 msgid "Fixed the GNOME search provider."
 msgstr "Probleem met de GNOME-zoekprovider opgelost."
 
@@ -2601,12 +2621,12 @@ msgstr ""
 "Kopbalkacties verbeterd en filters verborgen wanneer ze de huidige weergave "
 "niet kunnen beïnvloeden."
 
-#: data/metainfo.xml:107
+#: data/metainfo.xml:108
 msgid "Improved recipient selection when a store has many possible keys."
 msgstr ""
 "Ontvangerselectie verbeterd wanneer een opslag veel mogelijke sleutels heeft."
 
-#: data/metainfo.xml:110
+#: data/metainfo.xml:111
 msgid "Improved search, filtering, keyboard navigation, and entry editing."
 msgstr "Zoeken, filteren, toetsenbordnavigatie en itembewerking verbeterd."
 
@@ -3405,6 +3425,12 @@ msgstr "OTP-geheim"
 msgid "One or more local install directories are not writable."
 msgstr "Een of meer lokale installatiemappen zijn niet beschrijfbaar."
 
+#: data/metainfo.xml:135
+msgid ""
+"Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr ""
+"Schakel experimentele FIDO2-functies alleen in met de Integrated-backend."
+
 #: src/main.rs:279
 msgid "Only regular files on the local filesystem are accepted."
 msgstr ""
@@ -3943,7 +3969,7 @@ msgstr "Verbind de FIDO2-beveiligingssleutel opnieuw en probeer het opnieuw."
 msgid "Reconnect the hardware key and try again."
 msgstr "Verbind de hardwaresleutel opnieuw en probeer het opnieuw."
 
-#: data/metainfo.xml:108
+#: data/metainfo.xml:109
 msgid "Reduced secret exposure in GNOME search, command failures, and logs."
 msgstr ""
 "Blootstelling van geheimen in GNOME-zoekresultaten, mislukte opdrachten en "
@@ -4044,6 +4070,12 @@ msgstr "Remote verwijderen"
 #: src/password/page/mod.rs:706
 msgid "Removed empty fields."
 msgstr "Lege velden verwijderd."
+
+#: data/metainfo.xml:118
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr ""
+"De functie voor met FIDO2 beveiligde wachtwoordopslagen uit de Flatpak-app "
+"verwijderd."
 
 #: src/password/list/row.rs:404 src/password/list/row.rs:65
 msgid "Rename pass file"
@@ -4401,7 +4433,7 @@ msgstr "Loguitvoer tonen"
 msgid "Show OTP as QR code"
 msgstr "OTP als QR-code tonen"
 
-#: data/metainfo.xml:162
+#: data/metainfo.xml:181
 msgid "Show disabled options instead of hiding them"
 msgstr "Toon uitgeschakelde opties in plaats van ze te verbergen"
 
@@ -5451,19 +5483,19 @@ msgstr "Git-tree van wachtwoordopslag schrijven"
 msgid "X-GitHub-Api-Version"
 msgstr "X-GitHub-Api-Version"
 
-#: data/metainfo.xml:172
+#: data/metainfo.xml:191
 msgid "You can now generate new private keys."
 msgstr "Je kunt nu nieuwe privésleutels genereren."
 
-#: data/metainfo.xml:166
+#: data/metainfo.xml:185
 msgid "You can now manage Git remotes"
 msgstr "Je kunt nu Git-remotes beheren"
 
-#: data/metainfo.xml:138
+#: data/metainfo.xml:156
 msgid "You can now open pass files in a new window"
 msgstr "Je kunt pass-bestanden nu in een nieuw venster openen"
 
-#: data/metainfo.xml:146
+#: data/metainfo.xml:165
 msgid "You can now use the field values as variables in search"
 msgstr "Je kunt veldwaarden nu als variabelen in zoeken gebruiken"
 
@@ -5863,7 +5895,7 @@ msgstr "git write-tree"
 msgid "glib-2.0"
 msgstr "glib-2.0"
 
-#: data/metainfo.xml:196
+#: data/metainfo.xml:215
 msgid "gpg"
 msgstr "gpg"
 
@@ -6067,11 +6099,11 @@ msgstr "bewerking geweigerd"
 msgid "operations.rs"
 msgstr "operations.rs"
 
-#: data/metainfo.xml:197
+#: data/metainfo.xml:216
 msgid "otp"
 msgstr "otp"
 
-#: data/metainfo.xml:195
+#: data/metainfo.xml:214
 msgid "pass"
 msgstr "pass"
 
@@ -6107,7 +6139,7 @@ msgstr "`pass mv` mislukt"
 msgid "pass rm failed"
 msgstr "`pass rm` mislukt"
 
-#: data/metainfo.xml:199
+#: data/metainfo.xml:218
 msgid "passkey"
 msgstr "passkey"
 
@@ -6119,7 +6151,7 @@ msgstr "passkey: [weggelakt]"
 msgid "passkey: {envelope}"
 msgstr "passkey: {envelope}"
 
-#: data/metainfo.xml:194
+#: data/metainfo.xml:213
 msgid "password"
 msgstr "wachtwoord"
 
@@ -6283,7 +6315,7 @@ msgstr "opslagpad"
 msgid "stream logger panicked while reading {label}"
 msgstr "Er trad een panic op in de streamlogger tijdens het lezen van {label}"
 
-#: data/metainfo.xml:198
+#: data/metainfo.xml:217
 msgid "totp"
 msgstr "totp"
 

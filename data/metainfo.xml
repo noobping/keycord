@@ -92,6 +92,7 @@
       <description>
         <ul>
           <li>Added hybrid sorting mode</li>
+          <li>Fixed permissions for smartcards</li>
         </ul>
       </description>
     </release>
@@ -111,10 +112,19 @@
         </ul>
       </description>
     </release>
+    <release version="0.9.8" date="2026-04-01">
+      <description>
+        <ul>
+          <li>Removed the FIDO2 backed password stores feature from the flatpak app.</li>
+          <li>Added experimental FIDO2-protected OpenPGP keys.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.7" date="2026-03-31">
       <description>
         <ul>
           <li>Fixed OTP bug where valid secrets were incorrectly invalidated.</li>
+          <li>Added experimental FIDO2 guides and progress indicators.</li>
         </ul>
       </description>
     </release>
@@ -122,7 +132,15 @@
       <description>
         <ul>
           <li>Change the default to use the filename as the username.</li>
+          <li>Only enable experimental FIDO2 features if the integrated backend is used.</li>
         </ul>
+      </description>
+    </release>
+    <release version="0.9.5" date="2026-03-29">
+      <description>
+        <p>
+          Add experimental FIDO2 support
+        </p>
       </description>
     </release>
     <release version="0.9.4" date="2026-03-28">
@@ -142,6 +160,7 @@
     <release version="0.9.2" date="2026-03-26">
       <description>
         <ul>
+          <li>Add experimental OpenPGP hardware key support for private keys</li>
           <li>Expand the password editor with cleanup actions</li>
           <li>You can now use the field values as variables in search</li>
         </ul>
