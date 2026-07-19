@@ -2,7 +2,9 @@ use super::{FieldValueRequest, ToolsPageState};
 use crate::backend::read_password_entry;
 use crate::i18n::gettext;
 use crate::logging::log_error;
-use crate::password::file::{parse_structured_pass_lines, StructuredPassLine};
+use crate::password::file::{
+    is_passkey_storage_line, parse_structured_pass_lines, StructuredPassLine,
+};
 use crate::password::model::{collect_all_password_items_with_options, CollectItemsOptions};
 use crate::store::labels::{shortened_store_label_for_path, shortened_store_label_map};
 use crate::support::background::spawn_result_task;
@@ -49,6 +51,9 @@ impl CsvExportRow {
 
         for ((line, value), raw_line) in structured_lines.into_iter().zip(contents.lines().skip(1))
         {
+            if is_passkey_storage_line(raw_line) {
+                continue;
+            }
             match line {
                 StructuredPassLine::Username(_) => {
                     if let Some(value) = value {
@@ -60,6 +65,7 @@ impl CsvExportRow {
                         otp_urls.push(value);
                     }
                 }
+                StructuredPassLine::Passkey(_) => {}
                 StructuredPassLine::Field(_) => fields.push(raw_line.to_string()),
                 StructuredPassLine::Preserved(_) => notes.push(raw_line.to_string()),
             }
@@ -74,7 +80,7 @@ impl CsvExportRow {
             otp: otp_urls.join("\n"),
             fields: fields.join("\n"),
             notes: notes.join("\n"),
-            contents: contents.to_string(),
+            contents: redacted_export_contents(contents),
         }
     }
 
@@ -103,6 +109,30 @@ impl CsvExportRow {
         self.notes.zeroize();
         self.contents.zeroize();
     }
+}
+
+fn redacted_export_contents(contents: &str) -> String {
+    if !contents.lines().any(is_passkey_storage_line) {
+        return contents.to_string();
+    }
+
+    let mut redacted = String::with_capacity(contents.len());
+    for segment in contents.split_inclusive('\n') {
+        let (line_with_cr, newline) = segment
+            .strip_suffix('\n')
+            .map_or((segment, ""), |line| (line, "\n"));
+        let (line, carriage_return) = line_with_cr
+            .strip_suffix('\r')
+            .map_or((line_with_cr, ""), |line| (line, "\r"));
+        if is_passkey_storage_line(line) {
+            redacted.push_str("passkey: [redacted]");
+            redacted.push_str(carriage_return);
+            redacted.push_str(newline);
+        } else {
+            redacted.push_str(segment);
+        }
+    }
+    redacted
 }
 
 impl ToolsPageState {
@@ -277,7 +307,9 @@ fn append_csv_record<'a>(output: &mut String, fields: impl IntoIterator<Item = &
 
 #[cfg(test)]
 mod tests {
-    use super::{append_csv_record, CsvExportRow, FieldValueRequest, CSV_HEADER};
+    use super::{
+        append_csv_record, redacted_export_contents, CsvExportRow, FieldValueRequest, CSV_HEADER,
+    };
 
     #[test]
     fn csv_records_quote_commas_quotes_and_newlines() {
@@ -327,5 +359,47 @@ mod tests {
         assert_eq!(output.matches(',').count(), 8);
         assert!(output.starts_with("\"store\",\"store_path\",\"entry\""));
         assert!(output.ends_with("\"contents\"\r\n"));
+    }
+
+    #[test]
+    fn raw_passkey_fields_are_redacted_from_password_csv_exports() {
+        let contents = "\npasskey: keycord-passkey-v1:private-material\nurl: example.com";
+        let redacted = redacted_export_contents(contents);
+
+        assert_eq!(
+            redacted,
+            "\npasskey: [redacted]\nurl: example.com".to_string()
+        );
+        assert!(!redacted.contains("private-material"));
+
+        let request = FieldValueRequest {
+            root: "/stores/main".to_string(),
+            label: "example/alice".to_string(),
+        };
+        let row = CsvExportRow::from_contents("main".to_string(), &request, contents);
+        assert!(row
+            .fields()
+            .iter()
+            .all(|field| !field.contains("private-material")));
+        assert!(row.notes.is_empty());
+        assert_eq!(row.fields, "url: example.com");
+    }
+
+    #[test]
+    fn export_redaction_preserves_existing_line_endings_and_final_newlines() {
+        let ordinary = "secret\r\nurl: example.com\r\n";
+        assert_eq!(redacted_export_contents(ordinary), ordinary);
+
+        let passkey = "\r\npasskey: keycord-passkey-v1:secret\r\nurl: example.com\r\n";
+        assert_eq!(
+            redacted_export_contents(passkey),
+            "\r\npasskey: [redacted]\r\nurl: example.com\r\n"
+        );
+
+        let noncanonical = "\nPassKey : keycord-passkey-v1:secret\n\n";
+        assert_eq!(
+            redacted_export_contents(noncanonical),
+            "\npasskey: [redacted]\n\n"
+        );
     }
 }

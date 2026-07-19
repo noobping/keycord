@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/vnd.keycord.passkey-request+json">
+    <comment>CXP passkey export request</comment>
+    <sub-class-of type="application/json"/>
+    <glob pattern="*.passkey-request.json" weight="80"/>
+    <glob pattern="*.cxp-request.json" weight="80"/>
+  </mime-type>
+  <mime-type type="application/vnd.keycord.passkey+json">
+    <comment>CXF passkey credential</comment>
+    <sub-class-of type="application/json"/>
+    <glob pattern="*.passkey.json" weight="80"/>
+  </mime-type>
+</mime-info>

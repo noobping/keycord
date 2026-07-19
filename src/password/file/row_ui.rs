@@ -1,8 +1,9 @@
 use super::types::{is_url_field_key, DynamicFieldRow, DynamicFieldTemplate, StructuredPassLine};
 use super::url::add_open_url_suffix;
 use crate::clipboard::add_copy_suffix;
+use crate::i18n::gettext;
 use adw::gtk::{Box as GtkBox, Widget};
-use adw::{prelude::*, EntryRow, PasswordEntryRow, ToastOverlay};
+use adw::{prelude::*, ActionRow, EntryRow, PasswordEntryRow, ToastOverlay};
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -25,6 +26,7 @@ pub fn rebuild_dynamic_fields_from_lines(
 
     let mut rows = Vec::new();
     let mut templates = Vec::new();
+    let mut has_visible_rows = false;
 
     for (line, value) in structured_lines.iter().cloned() {
         match line {
@@ -34,6 +36,7 @@ pub fn rebuild_dynamic_fields_from_lines(
                 box_widget.append(&row.widget());
                 rows.push(row);
                 templates.push(StructuredPassLine::Field(template));
+                has_visible_rows = true;
             }
             StructuredPassLine::Username(template) => {
                 templates.push(StructuredPassLine::Username(template));
@@ -41,13 +44,25 @@ pub fn rebuild_dynamic_fields_from_lines(
             StructuredPassLine::Otp(template) => {
                 templates.push(StructuredPassLine::Otp(template));
             }
+            StructuredPassLine::Passkey(template) => {
+                let credential = &template.credential;
+                let subtitle = format!("{} — {}", credential.username, credential.rp_id);
+                let row = ActionRow::builder()
+                    .title(gettext("Passkey"))
+                    .subtitle(subtitle)
+                    .build();
+                apply_field_row_style(&row);
+                box_widget.append(&row);
+                templates.push(StructuredPassLine::Passkey(template));
+                has_visible_rows = true;
+            }
             StructuredPassLine::Preserved(line) => {
                 templates.push(StructuredPassLine::Preserved(line));
             }
         }
     }
 
-    box_widget.set_visible(!rows.is_empty());
+    box_widget.set_visible(has_visible_rows);
     *templates_state.borrow_mut() = templates;
     *rows_state.borrow_mut() = rows;
 }
