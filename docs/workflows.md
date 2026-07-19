@@ -261,7 +261,7 @@ For store-level key changes:
 1. Open **Password Stores** in Preferences.
 2. Open the target store's **Store keys** page.
 3. Add or remove recipients.
-4. Optionally generate a private key, import one, or attach an experimental hardware key.
+4. Optionally generate a password-protected private key or import one from a file or the clipboard.
 5. Save changes.
 
 On Linux, if the Integrated backend needs a private key unlocked to re-encrypt entries or sign the Git commit, Keycord prompts for it. If the signing unlock dialog is dismissed, the save can continue without a Git signature.

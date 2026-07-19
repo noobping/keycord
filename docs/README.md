@@ -6,7 +6,7 @@ Keycord is a graphical app for standard [`pass`](https://www.passwordstore.org/)
 
 - [Getting Started](getting-started.md): setup, stores, first items, and first searches
 - [Search Guide](search.md): plain search, `reg`, and `find`
-- [Workflows](workflows.md): editing, OTP, tools, shortcuts, and maintenance
+- [Workflows](workflows.md): editing, OTP, passkeys, tools, exports, shortcuts, and maintenance
 - [Permissions and Backends](permissions-and-backends.md): Integrated vs Host, Flatpak permissions, Git, and key sync
 - [Story of Secrets](story-of-secrets.md): code-oriented walkthrough of store creation, entry encryption, unlock paths, and clipboard copy
 - [Teams and Organizations](teams-and-organizations.md): shared stores, recipients, onboarding, offboarding, and bootstrap patterns
@@ -26,10 +26,11 @@ Keycord reads and writes normal `pass` stores:
 ## Keycord Features
 
 - open one or more password stores and search by name, store, field, regular expression, or structured `find` query
-- edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes
-- import CXF passkeys into ordinary encrypted `pass` entries and open local CXP passkey export requests
+- edit entries with form fields or raw pass-file text, generate passwords, and copy or show passwords, usernames, and one-time codes as QR codes
+- import passkeys into ordinary encrypted `pass` entries and open local credential-exchange requests
 - add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
-- manage store recipients, folder-specific `.gpg-id` files, private keys, experimental FIDO2-protected private keys, and experimental OpenPGP smartcard workflows
+- manage store recipients, folder-specific `.gpg-id` files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization
+- find weak passwords, browse repeated field values, filter by store, and export password stores to CSV
 - sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
 - use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux
 
@@ -44,7 +45,6 @@ Keycord reads and writes normal `pass` stores:
 | Restore a store from a Git URL in the UI | No | Yes | Linux only; requires host access. |
 | `pass import` integration | No | Yes | Linux only; requires the `pass import` extension. |
 | Remote Git fetch, merge, and push | Yes | Yes | Linux only; requires host access and a Git-backed store. |
-| Experimental smartcard / YubiKey workflows | Yes | Yes | Linux only; Flatpak needs smartcard access. |
 | Sync Keycord private keys with host GPG | Yes | Yes | Linux only and host access required. |
 
 ## Limits
@@ -54,10 +54,6 @@ Keycord reads and writes normal `pass` stores:
   - If Host is selected without host access, Keycord falls back to Integrated behavior.
 - Non-Linux builds:
   - Host-only features such as custom `pass`, restore-from-Git, and `pass import` stay hidden.
-  - experimental hardware-key workflows stay hidden.
-- Experimental Flatpak smartcard support:
-  - experimental hardware-key actions need PC/SC access
-  - password-protected software keys do not
 - Experimental layered encryption:
   - this is experimental and Keycord-specific
   - other `pass` apps cannot read those items

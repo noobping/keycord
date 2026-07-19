@@ -5,15 +5,16 @@
 [![Linux](https://github.com/noobping/keycord/actions/workflows/linux.yml/badge.svg)](https://github.com/noobping/keycord/actions/workflows/linux.yml)
 [![Windows](https://github.com/noobping/keycord/actions/workflows/win.yml/badge.svg)](https://github.com/noobping/keycord/actions/workflows/win.yml)
 
-Browse and edit password stores.
-
-Keycord works with password folders that use the standard [`pass`](https://www.passwordstore.org/) layout. Existing stores stay on disk as normal pass stores, so you can keep using compatible tools.
+Keycord is an adaptive graphical client for password folders that use the standard
+[`pass`](https://www.passwordstore.org/) layout. Existing stores remain normal pass stores on disk,
+so they keep working with `pass` and other compatible tools.
 
 - Open one or more password stores and search by name, store, field, regular expression, or structured `find` query
-- Edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes
-- Import CXF passkeys into ordinary encrypted `pass` entries and open local CXP passkey export requests
+- Edit entries with form fields or raw pass-file text, generate passwords, and copy or show passwords, usernames, and one-time codes as QR codes
+- Import passkeys into ordinary encrypted `pass` entries and open local credential-exchange requests
 - Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
-- Manage store recipients, folder-specific `.gpg-id` files, private keys, experimental FIDO2 security keys and experimental OpenPGP smartcard workflows
+- Manage store recipients, folder-specific `.gpg-id` files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization
+- Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV
 - Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
 - Use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux
 
@@ -25,9 +26,9 @@ Start with the [Getting Started guide](docs/getting-started.md), then explore th
 
 - [Search](docs/search.md): how to find outdated or insecure accounts
 - [Workflows](docs/workflows.md): how to do things in Keycord
-- [Permissions & Backends](docs/permissions-and-backends.md): application environment
+- [Permissions and Backends](docs/permissions-and-backends.md): application environment
 - [Use Cases](docs/use-cases.md): practical examples and short tutorials
-- [Teams & Organizations](docs/teams-and-organizations.md): manage shared stores and collaboration
+- [Teams, Workgroups, and Organizations](docs/teams-and-organizations.md): manage shared stores and collaboration
 
 ## Development
 

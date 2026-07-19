@@ -1,6 +1,6 @@
 # Aan de slag
 
-Keycord is een grafische app voor standaard `pass`-opslagen. Je hoeft je gegevens niet te converteren, en de interface is gemaakt voor toetsenbord, aanwijzer en aanraking op desktop- en mobiele Linux.
+Keycord is een grafische app voor standaard `pass`-opslagen. Je hoeft je gegevens niet te converteren, en de interface is gemaakt voor toetsenbord, muisaanwijzer en aanraking op Linux-desktops en mobiele Linux-apparaten.
 
 ## Kernbegrippen
 
@@ -26,13 +26,32 @@ Keycord behandelt deze regels speciaal:
 
 - `username:`, `user:` en `login:` verwijzen naar het veld voor de gebruikersnaam
 - `otpauth://...` of `otpauth: otpauth://...` wordt het OTP-veld
+- `passkey: keycord-passkey-v1:...` bevat een passkey wanneer passkeyondersteuning is ingeschakeld
 - andere `key: value`-regels worden doorzoekbare velden
 - regels zonder dubbele punt blijven behouden als ruwe tekst, maar zijn geen gestructureerde zoekvelden
+
+De gereserveerde `passkey:`-regel bevat privésleutelmateriaal. Dit wordt in rust versleuteld omdat
+de volledige pass-inhoud in het gewone `.gpg`-bestand wordt opgeslagen. Bewaar geen gedecodeerde
+passkeyregel in platte tekst.
 
 ### Editors
 
 - Standaardeditor: wachtwoord, gebruikersnaam, OTP en dynamische velden
-- Ruwe editor: het volledige pass-bestand als tekst
+- Ruwe editor: het volledige pass-bestand als tekst; niet beschikbaar voor items met passkeymateriaal
+
+### Passkeys
+
+Passkeyondersteuning is standaard ingeschakeld. Keycord bewaart een passkey in een gewoon item in
+de standaard `pass`-opslag (doorgaans `~/.password-store`) of in een andere geconfigureerde opslag;
+er wordt geen afzonderlijke passkeydatabase gebruikt. Wanneer je een standaard CXF-passkeybestand
+opent, vraagt Keycord om bevestiging en maakt het daarna in de standaardopslag een nieuw item dat je
+kunt controleren en versleuteld kunt opslaan. Keycord herkent en controleert ook de structuur van
+lokale CXP-exportverzoeken voor passkeys wanneer je die met de app opent.
+
+Deze route voor lokale uitwisseling maakt Keycord niet tot een live passkeyprovider voor
+webbrowsers en beweert niet dat er een versleuteld CXP-antwoord is aangemaakt. Ontwikkelaars kunnen
+deze ondersteuning weglaten met `cargo build --no-default-features` of de Meson-optie
+`-Dpasskey=false`.
 
 ## Backends
 
