@@ -141,7 +141,7 @@
       <default>[]</default>
       <summary>Stores included by shared filters</summary>
       <description>
-        Store roots selected in shared store filters, including the password list and audit tool.
+        Store roots selected in shared store filters, including the password list and audit tool. An empty selection includes every store.
       </description>
     </key>
 
@@ -149,7 +149,7 @@
       <default>[]</default>
       <summary>Branches included by the audit filter</summary>
       <description>
-        Git branch names selected in the audit tool filter.
+        Git branch names selected in the audit tool filter. The initial selection follows repository default branches, while an empty saved selection includes every branch.
       </description>
     </key>
 

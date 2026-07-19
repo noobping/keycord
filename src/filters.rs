@@ -13,18 +13,32 @@ pub fn reconciled_included_filter_values(
     included: Option<&BTreeSet<String>>,
     available: &BTreeSet<String>,
 ) -> BTreeSet<String> {
-    included.map_or_else(
-        || available.clone(),
-        |included| included.intersection(available).cloned().collect(),
-    )
+    let included: BTreeSet<String> = included
+        .map(|included| included.intersection(available).cloned().collect())
+        .unwrap_or_default();
+    if included.is_empty() {
+        available.clone()
+    } else {
+        included
+    }
 }
 
-pub fn update_included_filter_value(included: &mut BTreeSet<String>, value: &str, selected: bool) {
+pub fn update_included_filter_value(
+    included: &mut BTreeSet<String>,
+    value: &str,
+    selected: bool,
+) -> bool {
     if selected {
         included.insert(value.to_string());
-    } else {
-        included.remove(value);
+        return true;
     }
+
+    if included.len() == 1 && included.contains(value) {
+        return false;
+    }
+
+    included.remove(value);
+    true
 }
 
 #[cfg(test)]
@@ -57,13 +71,13 @@ mod tests {
     }
 
     #[test]
-    fn explicit_empty_included_values_keep_every_filter_deselected() {
+    fn explicit_empty_included_values_select_every_available_filter() {
         let available = BTreeSet::from(["personal".to_string(), "work".to_string()]);
         let included = BTreeSet::new();
 
         assert_eq!(
             reconciled_included_filter_values(Some(&included), &available),
-            BTreeSet::new()
+            available
         );
     }
 
@@ -71,9 +85,17 @@ mod tests {
     fn toggling_filters_updates_included_values() {
         let mut included = BTreeSet::from(["shared".to_string()]);
 
-        update_included_filter_value(&mut included, "work", true);
-        update_included_filter_value(&mut included, "shared", false);
+        assert!(update_included_filter_value(&mut included, "work", true));
+        assert!(update_included_filter_value(&mut included, "shared", false));
 
+        assert_eq!(included, BTreeSet::from(["work".to_string()]));
+    }
+
+    #[test]
+    fn last_included_filter_cannot_be_deselected() {
+        let mut included = BTreeSet::from(["work".to_string()]);
+
+        assert!(!update_included_filter_value(&mut included, "work", false));
         assert_eq!(included, BTreeSet::from(["work".to_string()]));
     }
 }

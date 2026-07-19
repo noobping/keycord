@@ -271,8 +271,7 @@ impl ToolsPageState {
             Some(&self.included_store_filter_values()),
             &audit_available_store_ids(&catalog),
         );
-        let available_branches = audit_available_branch_names(&catalog);
-        let selected_branches = self.included_audit_branch_filter_values(&available_branches);
+        let selected_branches = self.included_audit_branch_filter_values(&catalog);
         if selected_stores.is_empty() || selected_branches.is_empty() {
             self.set_audit_status(AUDIT_EMPTY_SELECTION_TITLE, AUDIT_EMPTY_SELECTION_SUBTITLE);
             self.audit_page
@@ -353,8 +352,7 @@ impl ToolsPageState {
             Some(&self.included_store_filter_values()),
             &audit_available_store_ids(&catalog),
         );
-        let available_branches = audit_available_branch_names(&catalog);
-        let selected_branches = self.included_audit_branch_filter_values(&available_branches);
+        let selected_branches = self.included_audit_branch_filter_values(&catalog);
 
         for store in &catalog.stores {
             let store_root = store.store_root.clone();
@@ -391,7 +389,10 @@ impl ToolsPageState {
     fn update_audit_store_filter(&self, store_root: &str, active: bool) {
         let preferences = Preferences::new();
         let mut included = self.included_store_filter_values();
-        update_included_filter_value(&mut included, store_root, active);
+        if !update_included_filter_value(&mut included, store_root, active) {
+            self.render_audit_filter_controls();
+            return;
+        }
         if let Err(err) =
             preferences.set_filter_included_store_roots(included.iter().cloned().collect())
         {
@@ -408,9 +409,11 @@ impl ToolsPageState {
             return;
         };
         let preferences = Preferences::new();
-        let available = audit_available_branch_names(&catalog);
-        let mut included = self.included_audit_branch_filter_values(&available);
-        update_included_filter_value(&mut included, branch_name, active);
+        let mut included = self.included_audit_branch_filter_values(&catalog);
+        if !update_included_filter_value(&mut included, branch_name, active) {
+            self.render_audit_filter_controls();
+            return;
+        }
         if let Err(err) =
             preferences.set_audit_filter_included_branches(included.iter().cloned().collect())
         {
@@ -443,13 +446,13 @@ impl ToolsPageState {
 
     fn included_audit_branch_filter_values(
         &self,
-        available: &BTreeSet<String>,
+        catalog: &StoreGitAuditCatalog,
     ) -> BTreeSet<String> {
         let preferences = Preferences::new();
         let stored = preferences
             .audit_filter_included_branches()
             .map(|branches| branches.into_iter().collect::<BTreeSet<_>>());
-        let included = reconciled_included_filter_values(stored.as_ref(), available);
+        let included = reconciled_audit_branch_filter_values(stored.as_ref(), catalog);
         if stored.as_ref().is_some_and(|stored| stored != &included) {
             if let Err(err) =
                 preferences.set_audit_filter_included_branches(included.iter().cloned().collect())
@@ -839,6 +842,34 @@ fn audit_available_branch_names(catalog: &StoreGitAuditCatalog) -> BTreeSet<Stri
         .collect()
 }
 
+fn audit_default_branch_names(catalog: &StoreGitAuditCatalog) -> BTreeSet<String> {
+    catalog
+        .stores
+        .iter()
+        .filter_map(|store| store.default_branch.clone())
+        .collect()
+}
+
+fn reconciled_audit_branch_filter_values(
+    stored: Option<&BTreeSet<String>>,
+    catalog: &StoreGitAuditCatalog,
+) -> BTreeSet<String> {
+    let available = audit_available_branch_names(catalog);
+    if let Some(stored) = stored {
+        return reconciled_included_filter_values(Some(stored), &available);
+    }
+
+    let defaults = audit_default_branch_names(catalog)
+        .intersection(&available)
+        .cloned()
+        .collect::<BTreeSet<_>>();
+    if defaults.is_empty() {
+        available
+    } else {
+        defaults
+    }
+}
+
 fn audit_search_query(text: &str) -> String {
     text.trim().to_lowercase()
 }
@@ -1195,8 +1226,8 @@ mod tests {
         audit_available_branch_names, audit_available_store_ids,
         audit_branch_context_matches_query, audit_commit_matches_query, audit_search_query,
         branch_expansion_needs_initial_load, commit_summary_subtitle, gtk_safe_text,
-        localized_text, verification_method_summary, verification_state_summary,
-        verification_summary, AuditBranchState,
+        localized_text, reconciled_audit_branch_filter_values, verification_method_summary,
+        verification_state_summary, verification_summary, AuditBranchState,
     };
     use crate::i18n::gettext;
     use crate::support::git::{
@@ -1211,6 +1242,7 @@ mod tests {
             stores: vec![
                 StoreGitAuditStore {
                     store_root: "/stores/work".to_string(),
+                    default_branch: Some("main".to_string()),
                     branches: vec![
                         StoreGitAuditBranchRef {
                             full_ref: "refs/heads/main".to_string(),
@@ -1226,6 +1258,7 @@ mod tests {
                 },
                 StoreGitAuditStore {
                     store_root: "/stores/home".to_string(),
+                    default_branch: Some("main".to_string()),
                     branches: vec![StoreGitAuditBranchRef {
                         full_ref: "refs/heads/main".to_string(),
                         name: "main".to_string(),
@@ -1246,6 +1279,26 @@ mod tests {
         );
         assert_eq!(
             audit_available_branch_names(&catalog),
+            BTreeSet::from(["main".to_string(), "origin/main".to_string()])
+        );
+    }
+
+    #[test]
+    fn unset_branch_filters_select_only_default_branches() {
+        let catalog = test_catalog();
+
+        assert_eq!(
+            reconciled_audit_branch_filter_values(None, &catalog),
+            BTreeSet::from(["main".to_string()])
+        );
+    }
+
+    #[test]
+    fn empty_saved_branch_filters_select_every_available_branch() {
+        let catalog = test_catalog();
+
+        assert_eq!(
+            reconciled_audit_branch_filter_values(Some(&BTreeSet::new()), &catalog),
             BTreeSet::from(["main".to_string(), "origin/main".to_string()])
         );
     }

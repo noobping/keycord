@@ -37,6 +37,9 @@ fn render_password_list_store_filter(
             log_filter_save_error(overlay, "clean stale store filter values", &err);
         }
     }
+    if let Some(controller) = search_controller_for_list(list) {
+        controller.set_included_store_roots(list, included.clone());
+    }
 
     for store_root in store_roots {
         let label = shortened_store_label_for_path(&store_root, &store_labels);
@@ -51,7 +54,10 @@ fn render_password_list_store_filter(
                 .map(|roots| roots.into_iter().collect::<BTreeSet<_>>());
             let mut included =
                 reconciled_included_filter_values(stored_included.as_ref(), &available);
-            update_included_filter_value(&mut included, &store_root, toggle.is_active());
+            if !update_included_filter_value(&mut included, &store_root, toggle.is_active()) {
+                toggle.set_active(true);
+                return;
+            }
             if let Err(err) =
                 preferences.set_filter_included_store_roots(included.iter().cloned().collect())
             {
