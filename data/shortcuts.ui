@@ -1,300 +1,290 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface domain="keycord">
-  <object class="GtkShortcutsWindow" id="shortcuts_window">
-    <property name="modal">True</property>
-    <property name="destroy-with-parent">True</property>
-    <property name="title" translatable="yes">Keyboard Shortcuts</property>
+  <object class="AdwShortcutsDialog" id="shortcuts_dialog">
     <child>
-      <object class="GtkShortcutsSection">
-        <property name="section-name">shortcuts</property>
-        <property name="max-height">15</property>
-        <property name="title" translatable="yes">Keyboard Shortcuts</property>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Pass files</property>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes">Pass files</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open a new item</property>
-                <property name="accelerator">&lt;Primary&gt;n</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Save current page or sync from home</property>
-                <property name="accelerator">&lt;Primary&gt;s</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open raw text</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;r</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Copy password</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;c</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Copy username</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;u</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Copy OTP</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;t</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Apply template</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;a</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Add field</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;f</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Add OTP field</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;o</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Password options</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;p</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Clean pass file</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;k</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Generate password</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;g</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Undo or revert changes</property>
-                <property name="accelerator">&lt;Primary&gt;z</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open a new item</property>
+            <property name="accelerator">&lt;Primary&gt;n</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes">List</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Find item</property>
-                <property name="accelerator">&lt;Primary&gt;f</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Copy selected item's password</property>
-                <property name="accelerator">&lt;Primary&gt;c</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Rename selected pass file</property>
-                <property name="accelerator">F2</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Move selected pass file</property>
-                <property name="accelerator">&lt;Primary&gt;m</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Delete selected pass file</property>
-                <property name="accelerator">Delete</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Show hidden and duplicate entries</property>
-                <property name="accelerator">&lt;Primary&gt;h</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Sync stores</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;s</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Refresh current list</property>
-                <property name="accelerator">F5</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Save current page or sync from home</property>
+            <property name="accelerator">&lt;Primary&gt;s</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes">Navigation</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Go back</property>
-                <property name="accelerator">Escape</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Go home</property>
-                <property name="accelerator">Home</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Add or create store</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;n</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open Git tools</property>
-                <property name="accelerator">&lt;Primary&gt;g</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open raw text</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;r</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes">Stores</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 1 keys</property>
-                <property name="accelerator">&lt;Primary&gt;1</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 2 keys</property>
-                <property name="accelerator">&lt;Primary&gt;2</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 3 keys</property>
-                <property name="accelerator">&lt;Primary&gt;3</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 4 keys</property>
-                <property name="accelerator">&lt;Primary&gt;4</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 5 keys</property>
-                <property name="accelerator">&lt;Primary&gt;5</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 6 keys</property>
-                <property name="accelerator">&lt;Primary&gt;6</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 1 Git remotes</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;1</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 2 Git remotes</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;2</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 3 Git remotes</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;3</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 4 Git remotes</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;4</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 5 Git remotes</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;5</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open store 6 Git remotes</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;6</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Copy password</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;c</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes">Tools</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open tools</property>
-                <property name="accelerator">&lt;Primary&gt;t</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open docs</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;d</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut" id="shortcuts_open_logs">
-                <property name="title" translatable="yes">Open logs</property>
-                <property name="accelerator">F12</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Copy username</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;u</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes">General</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Open preferences</property>
-                <property name="accelerator">&lt;Primary&gt;comma</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">Show shortcuts</property>
-                <property name="accelerator">&lt;Primary&gt;question</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes">About</property>
-                <property name="accelerator">F1</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Copy OTP</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;t</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Apply template</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;a</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Add field</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;f</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Add OTP field</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;o</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Password options</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;p</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Clean pass file</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;k</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Generate password</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;g</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Undo or revert changes</property>
+            <property name="accelerator">&lt;Primary&gt;z</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">List</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Find item</property>
+            <property name="accelerator">&lt;Primary&gt;f</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Copy selected item's password</property>
+            <property name="accelerator">&lt;Primary&gt;c</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Rename selected pass file</property>
+            <property name="accelerator">F2</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Move selected pass file</property>
+            <property name="accelerator">&lt;Primary&gt;m</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Delete selected pass file</property>
+            <property name="accelerator">Delete</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Show hidden and duplicate entries</property>
+            <property name="accelerator">&lt;Primary&gt;h</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Sync stores</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;s</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Refresh current list</property>
+            <property name="accelerator">F5</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Navigation</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Go back</property>
+            <property name="accelerator">Escape</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Go home</property>
+            <property name="accelerator">Home</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Add or create store</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;n</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open Git tools</property>
+            <property name="accelerator">&lt;Primary&gt;g</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Stores</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 1 keys</property>
+            <property name="accelerator">&lt;Primary&gt;1</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 2 keys</property>
+            <property name="accelerator">&lt;Primary&gt;2</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 3 keys</property>
+            <property name="accelerator">&lt;Primary&gt;3</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 4 keys</property>
+            <property name="accelerator">&lt;Primary&gt;4</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 5 keys</property>
+            <property name="accelerator">&lt;Primary&gt;5</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 6 keys</property>
+            <property name="accelerator">&lt;Primary&gt;6</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 1 Git remotes</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;1</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 2 Git remotes</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;2</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 3 Git remotes</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;3</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 4 Git remotes</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;4</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 5 Git remotes</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;5</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open store 6 Git remotes</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Alt&gt;6</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Tools</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open tools</property>
+            <property name="accelerator">&lt;Primary&gt;t</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open docs</property>
+            <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;d</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem" id="shortcuts_open_logs">
+            <property name="title" translatable="yes">Open logs</property>
+            <property name="accelerator">F12</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">General</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open preferences</property>
+            <property name="accelerator">&lt;Primary&gt;comma</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Show shortcuts</property>
+            <property name="accelerator">&lt;Primary&gt;question</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">About</property>
+            <property name="accelerator">F1</property>
           </object>
         </child>
       </object>

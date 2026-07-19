@@ -6,6 +6,8 @@ use crate::logging::{log_error, run_command_output, CommandLogOptions};
 #[cfg(feature = "flatpak")]
 use crate::preferences::Preferences;
 #[cfg(feature = "flatpak")]
+use crate::qr_code::{connect_qr_button, copy_qr_button_group};
+#[cfg(feature = "flatpak")]
 use crate::support::background::spawn_result_task;
 #[cfg(feature = "flatpak")]
 use crate::support::runtime::{
@@ -116,7 +118,13 @@ fn build_optional_permission_row(
         row.add_suffix(&suffix);
     } else {
         let button = flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy permission command");
-        row.add_suffix(&button);
+        let (button_group, qr_button) =
+            copy_qr_button_group(&button, "Show permission command as QR code");
+        row.add_suffix(&button_group);
+
+        connect_qr_button(&qr_button, overlay, move || {
+            command.copy_command.to_string()
+        });
 
         let overlay = overlay.clone();
         let feedback_button = button.clone();

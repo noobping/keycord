@@ -15,8 +15,7 @@ use super::keys::set_fido2_security_key_pin;
 use super::keys::store_ripasso_hardware_key_bytes;
 use super::keys::{
     armored_ripasso_private_key, clear_cached_unlocked_ripasso_private_keys,
-    discover_ripasso_hardware_keys, ensure_ripasso_private_key_is_ready,
-    generate_ripasso_hardware_key, generate_ripasso_private_key, import_ripasso_hardware_key_bytes,
+    ensure_ripasso_private_key_is_ready, generate_ripasso_private_key,
     import_ripasso_private_key_bytes, is_ripasso_private_key_unlocked,
     list_connected_smartcard_keys, list_ripasso_private_keys, load_available_standard_key_ring,
     parse_managed_private_key_bytes, prepare_managed_private_key_bytes, remove_ripasso_private_key,
@@ -24,7 +23,12 @@ use super::keys::{
     ripasso_private_key_requires_passphrase, ripasso_private_key_requires_session_unlock,
     set_hardware_transport_for_tests, unlock_ripasso_private_key_for_session,
     DiscoveredHardwareToken, HardwareSessionPolicy, HardwareTransport, HardwareTransportError,
-    ManagedRipassoHardwareKey, ManagedRipassoPrivateKeyProtection, PrivateKeyUnlockRequest,
+    ManagedRipassoPrivateKeyProtection, PrivateKeyUnlockRequest,
+};
+#[cfg(any(feature = "hardwarekey", feature = "smartcard"))]
+use super::keys::{
+    discover_ripasso_hardware_keys, generate_ripasso_hardware_key,
+    import_ripasso_hardware_key_bytes, ManagedRipassoHardwareKey,
 };
 #[cfg(feature = "fidokey")]
 use super::keys::{
@@ -48,6 +52,7 @@ use crate::store::recipients::split_store_recipients;
 use crate::support::git::has_git_repository;
 #[cfg(feature = "hardwarekey")]
 use secrecy::ExposeSecret;
+#[cfg(any(feature = "hardwarekey", feature = "smartcard"))]
 use secrecy::SecretString;
 use sequoia_openpgp::{cert::CertBuilder, crypto::Password, parse::Parse, serialize::Serialize};
 use std::fs;

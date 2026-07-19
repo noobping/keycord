@@ -262,12 +262,29 @@
                                           </object>
                                         </child>
                                         <child>
-                                          <object class="GtkButton" id="copy_password_button">
-                                            <property name="icon-name">edit-copy-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Copy password</property>
+                                          <object class="GtkBox">
+                                            <property name="orientation">horizontal</property>
                                             <style>
-                                              <class name="flat" />
+                                              <class name="linked" />
                                             </style>
+                                            <child>
+                                              <object class="GtkButton" id="copy_password_button">
+                                                <property name="icon-name">edit-copy-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Copy password</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkButton" id="qr_password_button">
+                                                <property name="icon-name">qr-code-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Show password as QR code</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
                                           </object>
                                         </child>
                                       </object>
@@ -428,12 +445,29 @@
                                         <property name="margin-end">15</property>
                                         <property name="margin-bottom">6</property>
                                         <child>
-                                          <object class="GtkButton" id="copy_username_button">
-                                            <property name="icon-name">edit-copy-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Copy username</property>
+                                          <object class="GtkBox">
+                                            <property name="orientation">horizontal</property>
                                             <style>
-                                              <class name="flat" />
+                                              <class name="linked" />
                                             </style>
+                                            <child>
+                                              <object class="GtkButton" id="copy_username_button">
+                                                <property name="icon-name">edit-copy-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Copy username</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkButton" id="qr_username_button">
+                                                <property name="icon-name">qr-code-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Show username as QR code</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
                                           </object>
                                         </child>
                                       </object>
@@ -447,12 +481,29 @@
                                         <property name="margin-end">15</property>
                                         <property name="margin-bottom">6</property>
                                         <child>
-                                          <object class="GtkButton" id="copy_otp_button">
-                                            <property name="icon-name">edit-copy-symbolic</property>
-                                            <property name="tooltip-text" translatable="yes">Copy OTP</property>
+                                          <object class="GtkBox">
+                                            <property name="orientation">horizontal</property>
                                             <style>
-                                              <class name="flat" />
+                                              <class name="linked" />
                                             </style>
+                                            <child>
+                                              <object class="GtkButton" id="copy_otp_button">
+                                                <property name="icon-name">edit-copy-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Copy OTP</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkButton" id="qr_otp_button">
+                                                <property name="icon-name">qr-code-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Show OTP as QR code</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
                                           </object>
                                         </child>
                                       </object>
@@ -1070,12 +1121,29 @@
                                             <property name="subtitle" translatable="yes">Copy recent app and command output to the clipboard.</property>
                                             <property name="activatable">True</property>
                                             <child type="suffix">
-                                              <object class="GtkButton" id="tools_copy_logs_button">
-                                                <property name="icon-name">edit-copy-symbolic</property>
-                                                <property name="tooltip-text" translatable="yes">Copy logs</property>
+                                              <object class="GtkBox">
+                                                <property name="orientation">horizontal</property>
                                                 <style>
-                                                  <class name="flat" />
+                                                  <class name="linked" />
                                                 </style>
+                                                <child>
+                                                  <object class="GtkButton" id="tools_copy_logs_button">
+                                                    <property name="icon-name">edit-copy-symbolic</property>
+                                                    <property name="tooltip-text" translatable="yes">Copy logs</property>
+                                                    <style>
+                                                      <class name="flat" />
+                                                    </style>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkButton" id="tools_qr_logs_button">
+                                                    <property name="icon-name">qr-code-symbolic</property>
+                                                    <property name="tooltip-text" translatable="yes">Show logs as QR code</property>
+                                                    <style>
+                                                      <class name="flat" />
+                                                    </style>
+                                                  </object>
+                                                </child>
                                               </object>
                                             </child>
                                           </object>

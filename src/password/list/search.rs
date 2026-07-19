@@ -225,7 +225,7 @@ fn collect_filterable_rows(
     query: &SearchQuery,
 ) -> Vec<(ListBoxRow, FilterablePasswordListRow)> {
     let mut rows = Vec::new();
-    let mut store_support = StoreSupportCache::default();
+    let mut store_support = StoreSupportCache;
     let uses_advanced_features = query.uses_advanced_features();
     for_each_row(list, |row| {
         if password_list_row_action_kind(&row).is_some() {

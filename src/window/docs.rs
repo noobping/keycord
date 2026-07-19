@@ -1010,7 +1010,12 @@ fn scroll_to_widget(scrolled: &ScrolledWindow, widget: &Widget) {
         widget.grab_focus();
         let adjustment = scrolled.vadjustment();
         let max_value = (adjustment.upper() - adjustment.page_size()).max(0.0);
-        let target = f64::from(widget.allocation().y()).clamp(0.0, max_value);
+        let target = widget
+            .parent()
+            .and_then(|parent| widget.compute_bounds(&parent))
+            .map(|bounds| f64::from(bounds.y()))
+            .unwrap_or_default()
+            .clamp(0.0, max_value);
         adjustment.set_value(target);
     });
 }

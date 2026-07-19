@@ -104,12 +104,21 @@ pub(super) fn assemble_password_page(
     );
     connect_password_copy_buttons(
         &widgets.toast_overlay,
-        &widgets.password_entry,
-        &widgets.copy_password_button,
-        &widgets.username_entry,
-        &widgets.copy_username_button,
-        &widgets.otp_entry,
-        &widgets.copy_otp_button,
+        (
+            &widgets.password_entry,
+            &widgets.copy_password_button,
+            &widgets.qr_password_button,
+        ),
+        (
+            &widgets.username_entry,
+            &widgets.copy_username_button,
+            &widgets.qr_username_button,
+        ),
+        (
+            &widgets.otp_entry,
+            &widgets.copy_otp_button,
+            &widgets.qr_otp_button,
+        ),
     );
     connect_new_password_submit(password_page_state, new_password_dialog_state);
     connect_password_generation_autosave(

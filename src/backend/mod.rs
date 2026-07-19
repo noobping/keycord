@@ -151,26 +151,6 @@ pub fn list_connected_smartcard_keys() -> Result<Vec<ConnectedSmartcardKey>, Str
     dispatch_backend(integrated::list_connected_smartcard_keys, || Ok(Vec::new()))
 }
 
-pub fn save_password_entry_with_progress(
-    store_root: &str,
-    label: &str,
-    contents: &str,
-    overwrite: bool,
-    report_progress: &mut dyn FnMut(PasswordEntryWriteProgress),
-) -> Result<(), PasswordEntryWriteError> {
-    if Preferences::new().uses_integrated_backend() {
-        integrated::save_password_entry_with_progress(
-            store_root,
-            label,
-            contents,
-            overwrite,
-            report_progress,
-        )
-    } else {
-        host::save_password_entry_with_progress(store_root, label, contents, overwrite)
-    }
-}
-
 pub fn save_store_recipients_for_relative_dir(
     store_root: &str,
     relative_dir: &str,

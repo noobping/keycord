@@ -14,7 +14,6 @@ mod store;
 #[cfg(test)]
 pub(in crate::backend) use self::cache::clear_cached_unlocked_ripasso_private_keys;
 pub(in crate::backend) use self::cache::clear_integrated_runtime_secret_state;
-pub(in crate::backend::integrated) use self::cache::clear_pending_fido2_enrollment;
 pub(in crate::backend::integrated) use self::cache::{
     borrow_unlocked_hardware_private_key, borrow_unlocked_ripasso_private_key,
 };
@@ -32,10 +31,6 @@ pub(in crate::backend::integrated) use self::errors::{
     password_entry_write_error_from_integrated_message, password_entry_write_error_from_io,
     store_recipients_error_from_integrated_message, INCOMPATIBLE_PRIVATE_KEY_ERROR,
     LOCKED_PRIVATE_KEY_ERROR, MISSING_PRIVATE_KEY_ERROR,
-};
-#[cfg(feature = "fidokey")]
-pub(in crate::backend::integrated) use self::fido2::{
-    encrypt_fido2_direct_required_layer, Fido2DirectBindingDescriptor,
 };
 #[cfg(all(test, feature = "fidokey"))]
 pub(in crate::backend::integrated) use self::fido2::{
