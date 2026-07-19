@@ -5,7 +5,7 @@ use super::{
     PASSWORD_LIST_ROW_KIND_KEY, PASSWORD_LIST_ROW_STORE_PATH_KEY,
 };
 use crate::backend::rename_password_entry;
-use crate::clipboard::copy_password_entry_to_clipboard;
+use crate::clipboard::{copy_password_entry_to_clipboard, show_password_entry_qr};
 use crate::i18n::gettext;
 use crate::logging::log_error;
 use crate::password::entry_files::normalize_password_entry_label;
@@ -16,10 +16,11 @@ use crate::password::undo::{
     UndoError,
 };
 use crate::preferences::Preferences;
+use crate::qr_code::copy_qr_button_group;
 use crate::store::labels::{shortened_store_label_for_path, shortened_store_labels};
 use crate::support::background::spawn_result_task;
 use crate::support::object_data::{cloned_data, set_cloned_data, set_string_data};
-use crate::support::ui::{dim_label_icon, flat_icon_button, flat_icon_button_with_tooltip};
+use crate::support::ui::{dim_label_icon, flat_icon_button_with_tooltip};
 use crate::support::uri::launch_default_uri;
 use crate::window::create_main_window;
 use adw::gio::{Menu, SimpleAction, SimpleActionGroup};
@@ -127,15 +128,16 @@ pub(super) fn append_password_row(
         .build();
     action_row.set_margin_start(password_list_indent(depth));
     let unreadable_icon = build_unreadable_password_icon(!readable);
-    let copy_button = flat_icon_button("edit-copy-symbolic");
-    copy_button.set_visible(readable);
+    let copy_button = flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy password");
+    let (copy_qr_group, qr_button) = copy_qr_button_group(&copy_button, "Show password as QR code");
+    copy_qr_group.set_visible(readable);
     let menu_button = MenuButton::builder()
         .icon_name("view-more-symbolic")
         .has_frame(false)
         .css_classes(vec!["flat"])
         .build();
     action_row.add_prefix(&unreadable_icon);
-    action_row.add_suffix(&copy_button);
+    action_row.add_suffix(&copy_qr_group);
     action_row.add_suffix(&menu_button);
 
     let text_edit_row = EntryRow::new();
@@ -178,6 +180,7 @@ pub(super) fn append_password_row(
 
     configure_password_row_menu(&menu_button, &state, readable, list, overlay);
     connect_copy_action(&state, &copy_button, overlay);
+    connect_qr_action(&state, &qr_button, overlay);
     connect_text_edit_actions(&state, list, &text_cancel_button, overlay);
     connect_store_move_actions(
         &state,
@@ -381,6 +384,15 @@ fn connect_copy_action(state: &PasswordRowState, button: &Button, overlay: &Toas
             overlay.clone(),
             Some(copied_button.clone()),
         );
+    });
+}
+
+fn connect_qr_action(state: &PasswordRowState, button: &Button, overlay: &ToastOverlay) {
+    let overlay = overlay.clone();
+    let state = state.clone();
+    let button = button.clone();
+    button.clone().connect_clicked(move |_| {
+        show_password_entry_qr(state.item.borrow().clone(), overlay.clone(), button.clone());
     });
 }
 

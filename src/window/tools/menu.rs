@@ -5,6 +5,7 @@ use crate::i18n::gettext;
 use crate::logging::log_error;
 use crate::logging::log_snapshot;
 use crate::preferences::Preferences;
+use crate::qr_code::connect_qr_button;
 #[cfg(all(target_os = "linux", feature = "setup"))]
 use crate::setup::{
     can_install_locally, install_locally, is_installed_locally, local_menu_action_label,
@@ -85,6 +86,11 @@ pub(super) fn configure_optional_log_rows(state: &ToolsPageState) {
         .select_page
         .copy_logs_button
         .connect_clicked(move |_| copy_action());
+
+    connect_qr_button(&state.select_page.qr_logs_button, &state.overlay, || {
+        let (_, _, text) = log_snapshot();
+        text
+    });
 }
 
 #[cfg(test)]

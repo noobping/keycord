@@ -6,6 +6,7 @@ use crate::logging::{log_error, run_command_status, CommandLogOptions};
 use crate::password::model::PassEntry;
 use crate::preferences::Preferences;
 use crate::private_key::unlock::prompt_private_key_unlock_for_action;
+use crate::qr_code::{connect_copy_and_qr_buttons, copy_qr_button_group, show_qr_code};
 use crate::support::background::{spawn_result_task, spawn_worker};
 use crate::support::ui::flat_icon_button_with_tooltip;
 use adw::gtk::{gdk::Display, Button, Widget};
@@ -71,13 +72,14 @@ pub fn add_copy_suffix<W>(widget: &W, text: impl Fn() -> String + 'static, overl
 where
     W: IsA<Widget> + Clone,
 {
-    let button = flat_icon_button_with_tooltip(COPY_BUTTON_ICON_NAME, "Copy value");
-    connect_copy_button(&button, overlay, text);
+    let copy_button = flat_icon_button_with_tooltip(COPY_BUTTON_ICON_NAME, "Copy value");
+    let (button_group, qr_button) = copy_qr_button_group(&copy_button, "Show value as QR code");
+    connect_copy_and_qr_buttons(&copy_button, &qr_button, overlay, text);
 
     if let Some(row) = widget.dynamic_cast_ref::<EntryRow>() {
-        row.add_suffix(&button);
+        row.add_suffix(&button_group);
     } else if let Some(row) = widget.dynamic_cast_ref::<PasswordEntryRow>() {
-        row.add_suffix(&button);
+        row.add_suffix(&button_group);
     }
 }
 
@@ -193,4 +195,82 @@ pub fn copy_password_entry_to_clipboard(
     } else {
         copy_password_entry_to_clipboard_via_pass_command(item, button.as_ref());
     }
+}
+
+fn handle_password_qr_error(
+    item: &PassEntry,
+    overlay: &ToastOverlay,
+    button: &Button,
+    error: &PasswordEntryError,
+) -> bool {
+    if !matches!(error, PasswordEntryError::LockedPrivateKey(_)) {
+        return false;
+    }
+
+    match preferred_ripasso_private_key_fingerprint_for_entry(&item.store_path, &item.label()) {
+        Ok(fingerprint) => {
+            let retry_overlay = overlay.clone();
+            let retry_item = item.clone();
+            let retry_button = button.clone();
+            let finish_button = button.clone();
+            prompt_private_key_unlock_for_action(
+                overlay,
+                fingerprint,
+                Rc::new(move || {
+                    show_password_entry_qr(
+                        retry_item.clone(),
+                        retry_overlay.clone(),
+                        retry_button.clone(),
+                    );
+                }),
+                Rc::new(move |success| {
+                    if !success {
+                        finish_button.set_sensitive(true);
+                    }
+                }),
+            );
+            true
+        }
+        Err(resolve_err) => {
+            log_error(format!(
+                "Failed to resolve the private key for QR retry: {resolve_err}"
+            ));
+            false
+        }
+    }
+}
+
+pub fn show_password_entry_qr(item: PassEntry, overlay: ToastOverlay, button: Button) {
+    button.set_sensitive(false);
+    let overlay_for_disconnect = overlay.clone();
+    let button_for_disconnect = button.clone();
+    let task_item = item.clone();
+    spawn_result_task(
+        move || {
+            let label = task_item.label();
+            read_password_line(&task_item.store_path, &label)
+        },
+        move |result| match result {
+            Ok(password) => {
+                show_qr_code(&password, &overlay, &button);
+                button.set_sensitive(true);
+            }
+            Err(err) => {
+                log_error(format!("Failed to read password entry for QR code: {err}"));
+                if handle_password_qr_error(&item, &overlay, &button, &err) {
+                    return;
+                }
+                button.set_sensitive(true);
+                overlay.add_toast(Toast::new(&gettext(
+                    "Couldn't show the password as a QR code.",
+                )));
+            }
+        },
+        move || {
+            button_for_disconnect.set_sensitive(true);
+            overlay_for_disconnect.add_toast(Toast::new(&gettext(
+                "Couldn't show the password as a QR code.",
+            )));
+        },
+    );
 }

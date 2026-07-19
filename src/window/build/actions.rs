@@ -1,4 +1,3 @@
-use crate::clipboard::connect_copy_button;
 use crate::i18n::gettext;
 use crate::password::list::{
     clear_password_search, password_list_row_action_kind, toggle_password_list_folder_row,
@@ -17,6 +16,7 @@ use crate::password::page::{
     refresh_apply_template_button, refresh_password_analysis_label, save_current_password_entry,
     show_raw_pass_file_page, toggle_password_options, PasswordPageState,
 };
+use crate::qr_code::connect_copy_and_qr_buttons;
 use crate::support::actions::{activate_widget_action, register_window_action};
 use crate::support::object_data::non_null_to_string_option;
 use crate::support::ui::connect_entry_row_apply_button_to_nonempty_text;
@@ -76,27 +76,28 @@ pub(super) fn connect_password_list_activation(
 
 pub(super) fn connect_password_copy_buttons(
     overlay: &ToastOverlay,
-    password_entry: &PasswordEntryRow,
-    copy_password_button: &Button,
-    username_entry: &EntryRow,
-    copy_username_button: &Button,
-    otp_entry: &PasswordEntryRow,
-    copy_otp_button: &Button,
+    password: (&PasswordEntryRow, &Button, &Button),
+    username: (&EntryRow, &Button, &Button),
+    otp: (&PasswordEntryRow, &Button, &Button),
 ) {
     {
-        let entry = password_entry.clone();
-        let button = copy_password_button.clone();
-        connect_copy_button(&button, overlay, move || entry.text().to_string());
+        let entry = password.0.clone();
+        let button = password.1.clone();
+        connect_copy_and_qr_buttons(&button, password.2, overlay, move || {
+            entry.text().to_string()
+        });
     }
     {
-        let entry = username_entry.clone();
-        let button = copy_username_button.clone();
-        connect_copy_button(&button, overlay, move || entry.text().to_string());
+        let entry = username.0.clone();
+        let button = username.1.clone();
+        connect_copy_and_qr_buttons(&button, username.2, overlay, move || {
+            entry.text().to_string()
+        });
     }
     {
-        let entry = otp_entry.clone();
-        let button = copy_otp_button.clone();
-        connect_copy_button(&button, overlay, move || entry.text().to_string());
+        let entry = otp.0.clone();
+        let button = otp.1.clone();
+        connect_copy_and_qr_buttons(&button, otp.2, overlay, move || entry.text().to_string());
     }
 }
 
