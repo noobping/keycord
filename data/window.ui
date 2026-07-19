@@ -28,11 +28,112 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkButton" id="find_button">
-                    <property name="icon-name">edit-find-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Find item</property>
-                    <property name="action-name">win.toggle-find</property>
-                    <property name="visible">false</property>
+                  <object class="GtkBox">
+                    <style>
+                      <class name="linked" />
+                    </style>
+                    <child>
+                      <object class="GtkButton" id="find_button">
+                        <property name="icon-name">edit-find-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Find item</property>
+                        <property name="action-name">win.toggle-find</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuButton" id="password_list_filter_button">
+                        <property name="visible">false</property>
+                        <property name="icon-name">funnel-symbolic</property>
+                        <property name="always-show-arrow">false</property>
+                        <property name="tooltip-text" translatable="yes">Filter results</property>
+                        <property name="popover">
+                          <object class="GtkPopover" id="password_list_filter_popover">
+                            <property name="width-request">300</property>
+                            <child>
+                              <object class="GtkScrolledWindow">
+                                <property name="propagate-natural-width">true</property>
+                                <property name="propagate-natural-height">true</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">vertical</property>
+                                    <property name="spacing">12</property>
+                                    <property name="margin-top">12</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-end">12</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Stores</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="password_list_filter_store_box">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">6</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuButton" id="tools_audit_filter_button">
+                        <property name="visible">false</property>
+                        <property name="icon-name">funnel-symbolic</property>
+                        <property name="always-show-arrow">false</property>
+                        <property name="tooltip-text" translatable="yes">Filter results</property>
+                        <property name="popover">
+                          <object class="GtkPopover" id="tools_audit_filter_popover">
+                            <property name="width-request">300</property>
+                            <child>
+                              <object class="GtkScrolledWindow">
+                                <property name="propagate-natural-width">true</property>
+                                <property name="propagate-natural-height">true</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">vertical</property>
+                                    <property name="spacing">12</property>
+                                    <property name="margin-top">12</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-end">12</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Stores</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="tools_audit_filter_store_box">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">6</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Branches</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="tools_audit_filter_branch_box">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">6</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
                   </object>
                 </child>
                 <child>
@@ -97,57 +198,11 @@
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkBox">
-                            <property name="spacing">6</property>
-                            <child>
-                              <object class="GtkSearchEntry" id="search_entry">
-                                <property name="visible">false</property>
-                                <property name="hexpand">true</property>
-                                <property name="placeholder-text" translatable="yes">Search names, stores, or fields</property>
-                                <property name="tooltip-text" translatable="yes">Use find for fields. Use reg for patterns.</property>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkMenuButton" id="password_list_filter_button">
-                                <property name="visible">false</property>
-                                <property name="icon-name">funnel-symbolic</property>
-                                <property name="always-show-arrow">false</property>
-                                <property name="tooltip-text" translatable="yes">Filter results</property>
-                                <property name="popover">
-                                  <object class="GtkPopover" id="password_list_filter_popover">
-                                    <property name="width-request">300</property>
-                                    <child>
-                                      <object class="GtkScrolledWindow">
-                                        <property name="propagate-natural-width">true</property>
-                                        <property name="propagate-natural-height">true</property>
-                                        <child>
-                                          <object class="GtkBox">
-                                            <property name="orientation">vertical</property>
-                                            <property name="spacing">12</property>
-                                            <property name="margin-top">12</property>
-                                            <property name="margin-bottom">12</property>
-                                            <property name="margin-start">12</property>
-                                            <property name="margin-end">12</property>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label" translatable="yes">Stores</property>
-                                                <property name="xalign">0</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkBox" id="password_list_filter_store_box">
-                                                <property name="orientation">vertical</property>
-                                                <property name="spacing">6</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </property>
-                              </object>
-                            </child>
+                          <object class="GtkSearchEntry" id="search_entry">
+                            <property name="visible">false</property>
+                            <property name="hexpand">true</property>
+                            <property name="placeholder-text" translatable="yes">Search names, stores, or fields</property>
+                            <property name="tooltip-text" translatable="yes">Use find for fields. Use reg for patterns.</property>
                           </object>
                         </child>
 
@@ -1369,68 +1424,10 @@
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkBox">
-                            <property name="spacing">6</property>
-                            <child>
-                              <object class="GtkSearchEntry" id="tools_audit_search_entry">
-                                <property name="visible">false</property>
-                                <property name="hexpand">true</property>
-                                <property name="placeholder-text" translatable="yes">Search results</property>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkMenuButton" id="tools_audit_filter_button">
-                                <property name="visible">false</property>
-                                <property name="icon-name">funnel-symbolic</property>
-                                <property name="always-show-arrow">false</property>
-                                <property name="tooltip-text" translatable="yes">Filter results</property>
-                                <property name="popover">
-                                  <object class="GtkPopover" id="tools_audit_filter_popover">
-                                    <property name="width-request">300</property>
-                                    <child>
-                                      <object class="GtkScrolledWindow">
-                                        <property name="propagate-natural-width">true</property>
-                                        <property name="propagate-natural-height">true</property>
-                                        <child>
-                                          <object class="GtkBox">
-                                            <property name="orientation">vertical</property>
-                                            <property name="spacing">12</property>
-                                            <property name="margin-top">12</property>
-                                            <property name="margin-bottom">12</property>
-                                            <property name="margin-start">12</property>
-                                            <property name="margin-end">12</property>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label" translatable="yes">Stores</property>
-                                                <property name="xalign">0</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkBox" id="tools_audit_filter_store_box">
-                                                <property name="orientation">vertical</property>
-                                                <property name="spacing">6</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label" translatable="yes">Branches</property>
-                                                <property name="xalign">0</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkBox" id="tools_audit_filter_branch_box">
-                                                <property name="orientation">vertical</property>
-                                                <property name="spacing">6</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </property>
-                              </object>
-                            </child>
+                          <object class="GtkSearchEntry" id="tools_audit_search_entry">
+                            <property name="visible">false</property>
+                            <property name="hexpand">true</property>
+                            <property name="placeholder-text" translatable="yes">Search results</property>
                           </object>
                         </child>
                         <child>
