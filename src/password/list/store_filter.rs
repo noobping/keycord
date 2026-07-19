@@ -1,6 +1,7 @@
 use super::search::search_controller_for_list;
 use crate::filters::{
-    build_filter_toggle, reconciled_included_filter_values, update_included_filter_value,
+    build_filter_toggle, filter_has_multiple_options, filter_toggle_is_sensitive,
+    reconciled_included_filter_values, update_included_filter_value,
 };
 use crate::i18n::gettext;
 use crate::logging::log_error;
@@ -43,7 +44,13 @@ fn render_password_list_store_filter(
 
     for store_root in store_roots {
         let label = shortened_store_label_for_path(&store_root, &store_labels);
-        let toggle = build_filter_toggle(&label, included.contains(&store_root));
+        let active = included.contains(&store_root);
+        let toggle = build_filter_toggle(
+            &label,
+            active,
+            filter_toggle_is_sensitive(active, included.len()),
+        );
+        let filter_store_box_for_toggle = filter_store_box.clone();
         let list = list.clone();
         let overlay = overlay.clone();
         let available = available.clone();
@@ -62,12 +69,11 @@ fn render_password_list_store_filter(
                 preferences.set_filter_included_store_roots(included.iter().cloned().collect())
             {
                 log_filter_save_error(&overlay, "save store filter selection", &err);
+                render_password_list_store_filter(&filter_store_box_for_toggle, &list, &overlay);
                 return;
             }
 
-            if let Some(controller) = search_controller_for_list(&list) {
-                controller.set_included_store_roots(&list, included);
-            }
+            render_password_list_store_filter(&filter_store_box_for_toggle, &list, &overlay);
         });
         filter_store_box.append(&toggle);
     }
@@ -83,8 +89,8 @@ fn sync_password_list_filter_button(
     filter_popover: &Popover,
     navigation: &NavigationView,
 ) {
-    let visible =
-        navigation_stack_is_root(navigation) && !Preferences::new().store_roots().is_empty();
+    let visible = navigation_stack_is_root(navigation)
+        && filter_has_multiple_options(Preferences::new().store_roots().len());
     filter_button.set_visible(visible);
     filter_button.set_sensitive(visible);
     if !visible {

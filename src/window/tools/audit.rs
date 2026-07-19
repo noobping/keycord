@@ -9,7 +9,8 @@ use super::{
     AUDIT_SEARCH_EMPTY_TITLE, AUDIT_SUBTITLE, AUDIT_TITLE,
 };
 use crate::filters::{
-    build_filter_toggle, reconciled_included_filter_values, update_included_filter_value,
+    build_filter_toggle, filter_has_multiple_options, filter_toggle_is_sensitive,
+    reconciled_included_filter_values, update_included_filter_value,
 };
 use crate::i18n::gettext;
 use crate::logging::log_error;
@@ -141,7 +142,14 @@ impl ToolsPageState {
 
     pub(super) fn sync_audit_filter_button(&self) {
         let visible = supports_audit_features()
-            && visible_navigation_page_is(&self.navigation.nav, &self.audit_page.page);
+            && visible_navigation_page_is(&self.navigation.nav, &self.audit_page.page)
+            && self
+                .audit_page
+                .audit
+                .catalog
+                .borrow()
+                .as_ref()
+                .is_some_and(audit_catalog_has_multiple_filter_options);
         self.audit_page.filter_button.set_visible(visible);
         self.audit_page.filter_button.set_sensitive(
             visible
@@ -360,9 +368,11 @@ impl ToolsPageState {
                 &store_root,
                 &self.audit_page.audit.store_labels.borrow(),
             );
+            let active = selected_stores.contains(&store_root);
             let toggle = build_filter_toggle(
                 &gtk_safe_text(&label),
-                selected_stores.contains(&store_root),
+                active,
+                filter_toggle_is_sensitive(active, selected_stores.len()),
             );
             let state = self.clone();
             toggle.connect_toggled(move |toggle| {
@@ -372,9 +382,11 @@ impl ToolsPageState {
         }
 
         for branch_name in audit_available_branch_names(&catalog) {
+            let active = selected_branches.contains(&branch_name);
             let toggle = build_filter_toggle(
                 &gtk_safe_text(&branch_name),
-                selected_branches.contains(&branch_name),
+                active,
+                filter_toggle_is_sensitive(active, selected_branches.len()),
             );
             let state = self.clone();
             toggle.connect_toggled(move |toggle| {
@@ -401,6 +413,7 @@ impl ToolsPageState {
             return;
         }
         apply_password_list_store_filter(&self.root_list, included);
+        self.render_audit_filter_controls();
         self.render_audit_page();
     }
 
@@ -421,6 +434,7 @@ impl ToolsPageState {
             self.render_audit_filter_controls();
             return;
         }
+        self.render_audit_filter_controls();
         self.render_audit_page();
     }
 
@@ -842,6 +856,11 @@ fn audit_available_branch_names(catalog: &StoreGitAuditCatalog) -> BTreeSet<Stri
         .collect()
 }
 
+fn audit_catalog_has_multiple_filter_options(catalog: &StoreGitAuditCatalog) -> bool {
+    filter_has_multiple_options(audit_available_store_ids(catalog).len())
+        || filter_has_multiple_options(audit_available_branch_names(catalog).len())
+}
+
 fn audit_default_branch_names(catalog: &StoreGitAuditCatalog) -> BTreeSet<String> {
     catalog
         .stores
@@ -1224,9 +1243,10 @@ fn gtk_safe_text(text: &str) -> String {
 mod tests {
     use super::{
         audit_available_branch_names, audit_available_store_ids,
-        audit_branch_context_matches_query, audit_commit_matches_query, audit_search_query,
-        branch_expansion_needs_initial_load, commit_summary_subtitle, gtk_safe_text,
-        localized_text, reconciled_audit_branch_filter_values, verification_method_summary,
+        audit_branch_context_matches_query, audit_catalog_has_multiple_filter_options,
+        audit_commit_matches_query, audit_search_query, branch_expansion_needs_initial_load,
+        commit_summary_subtitle, gtk_safe_text, localized_text,
+        reconciled_audit_branch_filter_values, verification_method_summary,
         verification_state_summary, verification_summary, AuditBranchState,
     };
     use crate::i18n::gettext;
@@ -1281,6 +1301,26 @@ mod tests {
             audit_available_branch_names(&catalog),
             BTreeSet::from(["main".to_string(), "origin/main".to_string()])
         );
+    }
+
+    #[test]
+    fn audit_filter_requires_multiple_stores_or_branches() {
+        let single_option_catalog = StoreGitAuditCatalog {
+            stores: vec![StoreGitAuditStore {
+                store_root: "/stores/home".to_string(),
+                default_branch: Some("main".to_string()),
+                branches: vec![StoreGitAuditBranchRef {
+                    full_ref: "refs/heads/main".to_string(),
+                    name: "main".to_string(),
+                    remote: false,
+                }],
+            }],
+        };
+
+        assert!(!audit_catalog_has_multiple_filter_options(
+            &single_option_catalog
+        ));
+        assert!(audit_catalog_has_multiple_filter_options(&test_catalog()));
     }
 
     #[test]
