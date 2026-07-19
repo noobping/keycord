@@ -2,6 +2,9 @@ use adw::glib;
 use adw::gtk::Widget;
 use adw::prelude::*;
 use adw::{EntryRow, PasswordEntryRow};
+use std::fmt;
+
+use crate::password::passkey::{PasskeyCredential, PASSKEY_FIELD_KEY};
 
 const USERNAME_FIELD_KEYS: [&str; 3] = ["login", "username", "user"];
 const SENSITIVE_FIELD_HINTS: [&str; 8] = [
@@ -38,6 +41,9 @@ impl DynamicFieldTemplate {
         if title.eq_ignore_ascii_case("otpauth") {
             return Err("Use Add OTP secret instead.");
         }
+        if cfg!(feature = "passkey") && title.eq_ignore_ascii_case(PASSKEY_FIELD_KEY) {
+            return Err("Use a passkey request instead.");
+        }
 
         Ok(Self {
             raw_key: title.to_string(),
@@ -67,6 +73,35 @@ pub enum OtpFieldTemplate {
     },
 }
 
+#[derive(Clone, PartialEq, Eq)]
+pub struct PasskeyFieldTemplate {
+    pub(super) raw_key: String,
+    pub(super) separator_spacing: String,
+    pub(super) encoded_value: String,
+    pub(super) credential: PasskeyCredential,
+}
+
+impl PasskeyFieldTemplate {
+    pub(super) fn line(&self) -> String {
+        format!(
+            "{}:{}{}",
+            self.raw_key, self.separator_spacing, self.encoded_value
+        )
+    }
+}
+
+impl fmt::Debug for PasskeyFieldTemplate {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        formatter
+            .debug_struct("PasskeyFieldTemplate")
+            .field("raw_key", &self.raw_key)
+            .field("separator_spacing", &self.separator_spacing)
+            .field("encoded_value", &"[redacted]")
+            .field("credential", &self.credential)
+            .finish()
+    }
+}
+
 impl OtpFieldTemplate {
     pub(super) fn line(&self, url: &str) -> String {
         match self {
@@ -84,6 +119,7 @@ pub enum StructuredPassLine {
     Field(DynamicFieldTemplate),
     Username(UsernameFieldTemplate),
     Otp(OtpFieldTemplate),
+    Passkey(PasskeyFieldTemplate),
     Preserved(String),
 }
 
@@ -185,6 +221,14 @@ mod tests {
             DynamicFieldTemplate::new("otpauth", None),
             Err("Use Add OTP secret instead.")
         );
+        if cfg!(feature = "passkey") {
+            assert_eq!(
+                DynamicFieldTemplate::new("passkey", None),
+                Err("Use a passkey request instead.")
+            );
+        } else {
+            assert!(DynamicFieldTemplate::new("passkey", None).is_ok());
+        }
         assert_eq!(
             DynamicFieldTemplate::new("api:key", None),
             Err("Field names can't contain ':'.")

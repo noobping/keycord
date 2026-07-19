@@ -46,6 +46,7 @@ mod tests {
                 StructuredPassLine::Field(_) => value.clone(),
                 StructuredPassLine::Username(_)
                 | StructuredPassLine::Otp(_)
+                | StructuredPassLine::Passkey(_)
                 | StructuredPassLine::Preserved(_) => None,
             })
             .collect::<Vec<_>>();
@@ -210,5 +211,30 @@ mod tests {
             "secret\nusername:\nurl: https://example.com",
             "username:\nurl: https://example.com"
         ));
+    }
+
+    #[cfg(feature = "passkey")]
+    #[test]
+    fn passkey_fields_round_trip_without_exposing_key_material_in_debug_output() {
+        use crate::password::passkey::{encode_passkey_envelope, generate_passkey_credential};
+
+        let credential =
+            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
+        let envelope = encode_passkey_envelope(&credential).expect("encode passkey");
+        let contents = format!("\npasskey: {envelope}");
+        let (password, parsed) = parse_structured_pass_lines(&contents);
+        let templates = parsed
+            .iter()
+            .map(|(line, _)| line.clone())
+            .collect::<Vec<_>>();
+
+        assert_eq!(
+            structured_pass_contents_from_values(&password, "", None, &templates, &[]),
+            contents
+        );
+        assert_eq!(clean_pass_file_contents(&contents), contents);
+        let debug = format!("{templates:?}");
+        assert!(!debug.contains(&envelope));
+        assert!(!debug.contains(&credential.key));
     }
 }
