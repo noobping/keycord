@@ -17,6 +17,7 @@ mod logging;
 mod password;
 mod preferences;
 mod private_key;
+mod qr_code;
 #[cfg(target_os = "linux")]
 mod search_provider;
 mod store;
