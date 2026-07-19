@@ -1,6 +1,6 @@
 # Keycord-documentatie
 
-Keycord is een grafische app voor standaard [`pass`](https://www.passwordstore.org/)-opslagen. Het behoudt dezelfde mapindeling op schijf, werkt met compatibele pass-hulpmiddelen en gebruikt een adaptieve GTK-interface voor toetsenbord, muisaanwijzer en aanraking op Linux-desktops en mobiele Linux-apparaten.
+Keycord is een grafische app voor standaard [`pass`](https://www.passwordstore.org/)-opslagen. Het behoudt dezelfde mapindeling op schijf, werkt met compatibele pass-hulpmiddelen en gebruikt een adaptieve GTK-interface voor toetsenbord-, muis- en aanraakbediening op desktops en mobiele apparaten.
 
 ## Handleidingen
 
@@ -32,7 +32,7 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 - beheer opslagontvangers, mapspecifieke `.gpg-id`-bestanden en met een wachtwoord beveiligde privésleutels, inclusief import uit bestanden of het klembord en optionele synchronisatie met GPG op de host
 - vind zwakke wachtwoorden, bekijk terugkerende veldwaarden, filter op opslag en exporteer wachtwoordopslagen naar CSV
 - synchroniseer Git-opslagen, beheer remotes, onderteken wijzigingen en bekijk de geschiedenis met details over commitverificatie
-- gebruik de adaptieve GTK-interface met toetsenbord, muisaanwijzer of aanraking op Linux-desktops en mobiele Linux-apparaten
+- gebruik de adaptieve GTK-interface met toetsenbord, muis of aanraking op desktops en mobiele apparaten
 
 ## Backendmatrix
 

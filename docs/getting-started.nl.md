@@ -1,6 +1,6 @@
 # Aan de slag
 
-Keycord is een grafische app voor standaard `pass`-opslagen. Je hoeft je gegevens niet te converteren, en de interface is gemaakt voor toetsenbord, muisaanwijzer en aanraking op Linux-desktops en mobiele Linux-apparaten.
+Keycord is een grafische app voor standaard `pass`-opslagen. Je hoeft je gegevens niet te converteren, en de interface is gemaakt voor toetsenbord-, muis- en aanraakbediening op desktops en mobiele apparaten.
 
 ## Kernbegrippen
 

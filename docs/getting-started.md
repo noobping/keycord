@@ -1,6 +1,6 @@
 # Getting Started
 
-Keycord is a graphical app for standard `pass` stores. You do not need to convert your data, and the interface is designed for keyboard, pointer, and touch use on desktop and mobile Linux.
+Keycord is a graphical app for standard `pass` stores. You do not need to convert your data, and the interface is designed for keyboard, mouse, and touch across desktop and mobile devices.
 
 ## Core Concepts
 

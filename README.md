@@ -16,7 +16,7 @@ so they keep working with `pass` and other compatible tools.
 - Manage store recipients, folder-specific `.gpg-id` files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization
 - Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV
 - Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
-- Use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux
+- Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices
 
 ![list](screenshots/list.png)
 

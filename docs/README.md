@@ -1,6 +1,6 @@
 # Keycord Docs
 
-Keycord is a graphical app for standard [`pass`](https://www.passwordstore.org/) stores. It keeps the same folder layout on disk, works with compatible pass tools, and uses an adaptive GTK interface for keyboard, pointer, and touch use on desktop and mobile Linux.
+Keycord is a graphical app for standard [`pass`](https://www.passwordstore.org/) stores. It keeps the same folder layout on disk, works with compatible pass tools, and uses an adaptive GTK interface for keyboard, mouse, and touch across desktop and mobile devices.
 
 ## Guides
 
@@ -32,7 +32,7 @@ Keycord reads and writes normal `pass` stores:
 - manage store recipients, folder-specific `.gpg-id` files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization
 - find weak passwords, browse repeated field values, filter by store, and export password stores to CSV
 - sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details
-- use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux
+- use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices
 
 ## Backend Matrix
 
