@@ -20,18 +20,18 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkButton" id="add_button">
-                    <property name="icon-name">list-add-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Add item</property>
-                    <property name="action-name">win.open-new-password</property>
-                    <property name="visible">true</property>
-                  </object>
-                </child>
-                <child>
                   <object class="GtkBox">
                     <style>
                       <class name="linked" />
                     </style>
+                    <child>
+                      <object class="GtkButton" id="add_button">
+                        <property name="icon-name">list-add-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Add item</property>
+                        <property name="action-name">win.open-new-password</property>
+                        <property name="visible">true</property>
+                      </object>
+                    </child>
                     <child>
                       <object class="GtkButton" id="find_button">
                         <property name="icon-name">edit-find-symbolic</property>
@@ -134,38 +134,38 @@
                         </property>
                       </object>
                     </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="save_button">
-                    <property name="icon-name">document-save-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Save</property>
-                    <property name="action-name">win.save-password</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="open_raw_button">
-                    <property name="icon-name">text-x-generic-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Open raw text</property>
-                    <property name="action-name">win.open-raw-pass-file</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="git_button">
-                    <property name="icon-name">git-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Restore store</property>
-                    <property name="action-name">win.open-git</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="store_button">
-                    <property name="icon-name">folder-new-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Add or create store</property>
-                    <property name="action-name">win.open-store-picker</property>
-                    <property name="visible">false</property>
+                    <child>
+                      <object class="GtkButton" id="save_button">
+                        <property name="icon-name">document-save-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Save</property>
+                        <property name="action-name">win.save-password</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="open_raw_button">
+                        <property name="icon-name">text-x-generic-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Open raw text</property>
+                        <property name="action-name">win.open-raw-pass-file</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="git_button">
+                        <property name="icon-name">git-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Restore store</property>
+                        <property name="action-name">win.open-git</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="store_button">
+                        <property name="icon-name">folder-new-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Add or create store</property>
+                        <property name="action-name">win.open-store-picker</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
