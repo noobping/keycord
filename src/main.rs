@@ -69,6 +69,7 @@ use winsafe::{self as w, co};
 const APP_ID: &str = env!("APP_ID");
 const RESOURCE_ID: &str = env!("RESOURCE_ID");
 const ISSUE_URL: &str = concat!(env!("CARGO_PKG_REPOSITORY"), "/issues");
+const TRANSLATION_URL: &str = "https://hosted.weblate.org/projects/keycord";
 const MAIN_WINDOW_ACTIVATING_KEY: &str = "main-window-activating";
 #[cfg(feature = "passkey")]
 const OPEN_PASSKEY_REQUEST_KEY: &str = "open-passkey-request";
@@ -553,6 +554,7 @@ fn build_about_dialog() -> adw::AboutDialog {
         .support_url(ISSUE_URL)
         .build();
     about.add_link(&gettext("Repository"), env!("CARGO_PKG_REPOSITORY"));
+    about.add_link(&gettext("Translate"), TRANSLATION_URL);
     about
 }
 
