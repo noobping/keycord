@@ -30,6 +30,10 @@ Start with the [Getting Started guide](docs/getting-started.md), then explore th
 - [Use Cases](docs/use-cases.md): practical examples and short tutorials
 - [Teams, Workgroups, and Organizations](docs/teams-and-organizations.md): manage shared stores and collaboration
 
+## Translation
+
+You can translate Keycord using [weblate](https://hosted.weblate.org/projects/keycord) which makes it possible to translate from your browser. Simply register and start translating.
+
 ## Development
 
 Package names differ by distribution. This project was tested with Fedora packages:
