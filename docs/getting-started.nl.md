@@ -30,12 +30,6 @@ Keycord behandelt deze regels speciaal:
 - andere `key: value`-regels worden doorzoekbare velden
 - regels zonder dubbele punt blijven behouden als ruwe tekst, maar zijn geen gestructureerde zoekvelden
 
-De naam `passkey:` is altijd gereserveerd, ook in builds zonder passkeyondersteuning en wanneer de
-waarde ongeldig is. Zo kan privésleutelmateriaal geen gewoon doorzoekbaar of exporteerbaar veld
-worden. De regel bevat privésleutelmateriaal. Dit wordt in rust versleuteld omdat
-de volledige pass-inhoud in het gewone `.gpg`-bestand wordt opgeslagen. Bewaar geen gedecodeerde
-passkeyregel in platte tekst.
-
 ### Editors
 
 - Standaardeditor: wachtwoord, gebruikersnaam, OTP en dynamische velden

@@ -20,7 +20,6 @@ Keycord reads and writes normal `pass` stores:
 - one secret per file
 - the first line as the password
 - later `key: value` lines as structured fields
-- a reserved `passkey:` field for passkey credential data when passkey support is enabled
 - `.gpg-id` for store recipients
 
 ## Keycord Features
@@ -57,9 +56,6 @@ Keycord reads and writes normal `pass` stores:
 - Experimental layered encryption:
   - this is experimental and Keycord-specific
   - other `pass` apps cannot read those items
-- Passkeys:
-  - passkey support is enabled by default and can be omitted at build time with the `passkey` Cargo feature disabled
-  - opening a CXP request checks a local export-request file's structure; it is not browser WebAuthn or a live authenticator
 
 ## Start
 

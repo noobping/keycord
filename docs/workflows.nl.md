@@ -127,7 +127,7 @@ Gebruik `find otp` in zoeken wanneer je elk item nodig hebt waarvoor OTP is inge
 
 ## Passkeys opslaan en uitwisselingsverzoeken openen
 
-Met de standaard ingeschakelde `passkey`-feature bewaart Keycord passkeygegevens in een
+Met de `passkey`-feature bewaart Keycord passkeygegevens in een
 gereserveerd `passkey:`-veld in een gewoon pass-item. Het volledige item, inclusief het
 privésleutelmateriaal van de passkey, wordt beschermd door de normale OpenPGP-versleuteling van de
 opslag. Compatibele `pass`-hulpmiddelen kunnen dezelfde `.gpg`-bestanden blijven beheren en zien het
