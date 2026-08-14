@@ -39,12 +39,10 @@ fields. Treat the raw or otherwise decrypted entry as secret.
 
 ### Passkeys
 
-Keycord stores a passkey in an ordinary entry in the
-default `pass` store (normally `~/.password-store`) or another configured store; it does not use
-a separate passkey database. Opening a standard Credential Exchange Format (CXF) passkey file asks
-for confirmation, then prepares a new item in the default store for review and encrypted saving.
-Keycord also recognizes and structurally checks local Credential Exchange Protocol (CXP) passkey
-export-request files when they are opened with the app.
+Keycord stores a passkey in an entry in the default `pass` store (normally `~/.password-store`) or another configured store; 
+it does not use a separate passkey database. 
+Opening a standard Credential Exchange Format (CXF) passkey file asks for confirmation, then prepares a new item in the default store for review and encrypted saving.
+Keycord also recognizes and structurally checks local Credential Exchange Protocol (CXP) passkey export-request files when they are opened with the app.
 
 This request-opening path is for local credential exchange. It does not make Keycord a browser
 WebAuthn authenticator and does not by itself claim to have produced an encrypted CXP response.
