@@ -21,8 +21,8 @@ jobs:
       PKG_CONFIG_ALLOW_CROSS: 1
       PKG_CONFIG: C:\tools\msys64\mingw64\bin\pkgconf.exe
       MSYS2_PATH: C:\tools\msys64
-      PKG_CONFIG_PATH: C:\tools\msys64\mingw64\lib\pkgconfig
-      PKG_CONFIG_PATH_x86_64_pc_windows_gnu: C:\tools\msys64\mingw64\lib\pkgconfig
+      PKG_CONFIG_PATH: C:\tools\msys64\mingw64\lib\nettle3\pkgconfig;C:\tools\msys64\mingw64\lib\pkgconfig
+      PKG_CONFIG_PATH_x86_64_pc_windows_gnu: C:\tools\msys64\mingw64\lib\nettle3\pkgconfig;C:\tools\msys64\mingw64\lib\pkgconfig
       GETTEXT_SYSTEM: 1
 
     steps:
@@ -44,6 +44,7 @@ jobs:
           C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-libfido2"
           C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-gpgme"
           C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-hidapi"
+          C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-nettle3"
           C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-pkgconf"
           C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-openssl"
           C:\tools\msys64\usr\bin\bash -lc "pacman -S --noconfirm mingw-w64-x86_64-make"
@@ -69,7 +70,7 @@ jobs:
             Copy-Item $zImport $zCompat
           }
 
-      - name: Verify libfido2 discovery
+      - name: Verify native dependency discovery
         shell: pwsh
         run: |
           if (-not (Test-Path $env:FIDO2_LIB_DIR)) {
@@ -82,6 +83,17 @@ jobs:
           }
           & $env:PKG_CONFIG --modversion libfido2
           & $env:PKG_CONFIG --libs libfido2
+
+          $nettleHeader = 'C:\tools\msys64\mingw64\include\nettle3\nettle\pgp.h'
+          if (-not (Test-Path $nettleHeader)) {
+            throw "Nettle 3 compatibility header not found: $nettleHeader"
+          }
+          $nettleVersion = (& $env:PKG_CONFIG --modversion nettle).Trim()
+          if (-not $nettleVersion.StartsWith('3.')) {
+            throw "pkg-config selected incompatible Nettle $nettleVersion instead of Nettle 3"
+          }
+          & $env:PKG_CONFIG --cflags nettle hogweed
+          & $env:PKG_CONFIG --libs nettle hogweed
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
