@@ -395,7 +395,7 @@ msgstr ""
 #: src/password/list/row.rs:155
 #: src/updater/common.rs:696
 #: src/window/passkey_request.rs:57
-#: src/window/preferences.rs:210
+#: src/window/preferences.rs:198
 #: src/window/tools/export.rs:155
 msgid "Cancel"
 msgstr ""
@@ -661,7 +661,7 @@ msgstr ""
 msgid "Connect the matching hardware key before importing it."
 msgstr ""
 
-#: src/support/runtime.rs:170
+#: src/support/runtime.rs:174
 msgid "Context"
 msgstr ""
 
@@ -1005,7 +1005,7 @@ msgstr ""
 msgid "Couldn't save that remote."
 msgstr ""
 
-#: src/window/preferences.rs:482
+#: src/window/preferences.rs:470
 msgid "Couldn't save that setting."
 msgstr ""
 
@@ -1036,7 +1036,7 @@ msgstr ""
 msgid "Couldn't start the installer."
 msgstr ""
 
-#: src/window/preferences.rs:351
+#: src/window/preferences.rs:339
 msgid "Couldn't sync private keys."
 msgstr ""
 
@@ -1207,7 +1207,7 @@ msgstr ""
 msgid "Enabled for this result"
 msgstr ""
 
-#: src/window/preferences.rs:236
+#: src/window/preferences.rs:224
 msgid "Enter a command."
 msgstr ""
 
@@ -1524,7 +1524,7 @@ msgstr ""
 msgid "Failed to download the update: {error}"
 msgstr ""
 
-#: src/window/preferences.rs:346
+#: src/window/preferences.rs:334
 msgid "Failed to enable private-key sync: {err}"
 msgstr ""
 
@@ -1900,7 +1900,7 @@ msgstr ""
 msgid "Failed to save password entry: {err}"
 msgstr ""
 
-#: src/window/preferences.rs:479
+#: src/window/preferences.rs:467
 msgid "Failed to save preference ({context}): {}"
 msgstr ""
 
@@ -2283,11 +2283,11 @@ msgstr ""
 msgid "Grant host access"
 msgstr ""
 
-#: src/window/preferences.rs:123
+#: src/window/preferences.rs:124
 msgid "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
 msgstr ""
 
-#: src/window/preferences.rs:307
+#: src/window/preferences.rs:295
 msgid "Grant host access first."
 msgstr ""
 
@@ -2351,7 +2351,7 @@ msgstr ""
 msgid "Historical fallback"
 msgstr ""
 
-#: src/window/preferences.rs:396
+#: src/window/preferences.rs:384
 msgid "History recipients"
 msgstr ""
 
@@ -2554,7 +2554,7 @@ msgstr ""
 msgid "Inspecting Git-backed stores and discovering branches."
 msgstr ""
 
-#: src/window/preferences.rs:180
+#: src/window/preferences.rs:168
 msgid "Install Git to use commit-history recipients for audit verification."
 msgstr ""
 
@@ -2652,7 +2652,7 @@ msgid "Invalid recipients file path."
 msgstr ""
 
 #: data/window.ui:741
-#: src/window/preferences.rs:119
+#: src/window/preferences.rs:120
 msgid "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
 msgstr ""
 
@@ -2756,7 +2756,7 @@ msgstr ""
 msgid "Keycord update restart skipped: no local executable directory found."
 msgstr ""
 
-#: src/window/preferences.rs:208
+#: src/window/preferences.rs:196
 msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
 msgstr ""
 
@@ -3536,7 +3536,7 @@ msgstr ""
 
 #: data/window.ui:673
 #: src/window/navigation/restore.rs:108
-#: src/window/preferences.rs:457
+#: src/window/preferences.rs:445
 msgid "Preferences"
 msgstr ""
 
@@ -3590,15 +3590,15 @@ msgstr ""
 msgid "Private keys can't be verified"
 msgstr ""
 
-#: src/window/preferences.rs:343
+#: src/window/preferences.rs:331
 msgid "Private keys synced."
 msgstr ""
 
 #: src/private_key/sync.rs:131
 #: src/private_key/sync.rs:174
 #: src/private_key/sync.rs:38
-#: src/window/preferences.rs:127
-#: src/window/preferences.rs:131
+#: src/window/preferences.rs:128
+#: src/window/preferences.rs:132
 msgid "Private-key sync with the host is only available on Linux."
 msgstr ""
 
@@ -3950,7 +3950,7 @@ msgstr ""
 msgid "Restoring store"
 msgstr ""
 
-#: src/window/preferences.rs:178
+#: src/window/preferences.rs:166
 msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
 msgstr ""
 
@@ -4794,11 +4794,11 @@ msgstr ""
 msgid "Try another query or filter."
 msgstr ""
 
-#: src/window/preferences.rs:211
+#: src/window/preferences.rs:199
 msgid "Turn On"
 msgstr ""
 
-#: src/window/preferences.rs:207
+#: src/window/preferences.rs:195
 msgid "Turn on private-key sync?"
 msgstr ""
 
@@ -5244,7 +5244,7 @@ msgstr ""
 msgid "clean stale store filter values"
 msgstr ""
 
-#: src/window/preferences.rs:548
+#: src/window/preferences.rs:536
 msgid "clear empty fields before save"
 msgstr ""
 
@@ -5728,7 +5728,7 @@ msgstr ""
 msgid "move password entry to another store"
 msgstr ""
 
-#: src/window/preferences.rs:566
+#: src/window/preferences.rs:554
 msgid "new item template"
 msgstr ""
 
@@ -5830,11 +5830,11 @@ msgstr ""
 msgid "password"
 msgstr ""
 
-#: src/window/preferences.rs:748
+#: src/window/preferences.rs:736
 msgid "password generation"
 msgstr ""
 
-#: src/window/preferences.rs:692
+#: src/window/preferences.rs:680
 msgid "password list sort"
 msgstr ""
 
@@ -5874,8 +5874,8 @@ msgstr ""
 msgid "private key"
 msgstr ""
 
-#: src/window/preferences.rs:332
-#: src/window/preferences.rs:359
+#: src/window/preferences.rs:320
+#: src/window/preferences.rs:347
 msgid "private-key sync"
 msgstr ""
 
@@ -6025,7 +6025,7 @@ msgstr ""
 msgid "user handle"
 msgstr ""
 
-#: src/window/preferences.rs:622
+#: src/window/preferences.rs:610
 msgid "username fallback"
 msgstr ""
 
