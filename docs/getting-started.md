@@ -39,7 +39,7 @@ fields. Treat the raw or otherwise decrypted entry as secret.
 
 ### Passkeys
 
-Passkey support is enabled by default. Keycord stores a passkey in an ordinary entry in the
+Keycord stores a passkey in an ordinary entry in the
 default `pass` store (normally `~/.password-store`) or another configured store; it does not use
 a separate passkey database. Opening a standard Credential Exchange Format (CXF) passkey file asks
 for confirmation, then prepares a new item in the default store for review and encrypted saving.
