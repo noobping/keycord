@@ -320,7 +320,7 @@ fn otp_secret_is_blank(url: &str) -> bool {
 mod tests {
     use super::url::{otp_display, otp_period, otp_secret_from_url, replace_otp_secret};
     use super::{otp_secret_is_blank, EMPTY_OTP_URL};
-    use totp_rs::TOTP;
+    use totp_rs::Totp;
 
     #[test]
     fn otp_secret_is_read_from_otpauth_url() {
@@ -377,7 +377,7 @@ mod tests {
     #[test]
     fn placeholder_url_becomes_a_valid_totp_url_after_filling_in_the_secret() {
         let url = replace_otp_secret(EMPTY_OTP_URL, "JBSWY3DPEHPK3PXP");
-        assert!(TOTP::from_url_unchecked(&url).is_ok());
+        assert!(Totp::from_url_unchecked(&url).is_ok());
     }
 
     #[test]

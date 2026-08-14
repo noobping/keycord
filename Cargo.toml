@@ -31,7 +31,7 @@ ripasso = "0.8.0"
 sequoia-openpgp = "2.4.1"
 dirs-next = "2.0.0"
 shellexpand = "3.1.2"
-totp-rs = "6.0.0"
+totp-rs = { version = "6.0.0", features = ["otpauth"] }
 rand = "0.10.2"
 regex = "1.13.1"
 zeroize = { version = "1.9.0", features = [ "alloc" ] }
