@@ -4,9 +4,22 @@ use std::env;
 use std::process::Command;
 
 fn build_command(program: String, args: Vec<String>, envs: &[(&str, &str)]) -> Command {
-    let mut cmd = if env::var("FLATPAK_ID").is_ok() {
+    build_command_with_flatpak(program, args, envs, env::var("FLATPAK_ID").is_ok())
+}
+
+fn build_command_with_flatpak(
+    program: String,
+    args: Vec<String>,
+    envs: &[(&str, &str)],
+    use_flatpak: bool,
+) -> Command {
+    let mut cmd = if use_flatpak {
         let mut cmd = Command::new("flatpak-spawn");
-        cmd.arg("--host").arg(&program).args(&args);
+        cmd.arg("--host");
+        for (key, value) in envs {
+            cmd.arg(format!("--env={key}={value}"));
+        }
+        cmd.arg(&program).args(&args);
         cmd.current_dir("/");
         cmd
     } else {
@@ -89,7 +102,7 @@ impl Preferences {
 
 #[cfg(test)]
 mod tests {
-    use super::{build_command, local_git_command, remote_git_command};
+    use super::{build_command, build_command_with_flatpak, local_git_command, remote_git_command};
 
     #[test]
     fn linux_host_command_sets_requested_environment_variables() {
@@ -113,6 +126,31 @@ mod tests {
                 key.to_string_lossy() == "PASSWORD_STORE_DIR"
                     && value.to_string_lossy() == "/tmp/store"
             }));
+    }
+
+    #[test]
+    fn linux_flatpak_host_command_forwards_requested_environment_variables() {
+        let cmd = build_command_with_flatpak(
+            "pass".to_string(),
+            vec!["show".to_string(), "team/demo".to_string()],
+            &[("PASSWORD_STORE_DIR", "/tmp/store")],
+            true,
+        );
+
+        assert_eq!(cmd.get_program().to_string_lossy(), "flatpak-spawn");
+        assert_eq!(
+            cmd.get_args()
+                .map(|arg| arg.to_string_lossy().into_owned())
+                .collect::<Vec<_>>(),
+            vec![
+                "--host".to_string(),
+                "--env=PASSWORD_STORE_DIR=/tmp/store".to_string(),
+                "pass".to_string(),
+                "show".to_string(),
+                "team/demo".to_string()
+            ]
+        );
+        assert_eq!(cmd.get_current_dir(), Some(std::path::Path::new("/")));
     }
 
     #[test]
