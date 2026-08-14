@@ -99,6 +99,41 @@ pub struct KeyManagementUiState {
     controls_connected: Rc<Cell<bool>>,
 }
 
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+struct RecipientActionPresentation {
+    generate_private_key: bool,
+    import_private_key: bool,
+    setup_hardware_key: bool,
+    connect_hardware_key: bool,
+}
+
+impl RecipientActionPresentation {
+    const fn new(
+        standard_actions_enabled: bool,
+        hardware_generation_supported: bool,
+        smartcard_supported: bool,
+    ) -> Self {
+        Self {
+            generate_private_key: standard_actions_enabled,
+            import_private_key: standard_actions_enabled,
+            setup_hardware_key: standard_actions_enabled && hardware_generation_supported,
+            connect_hardware_key: standard_actions_enabled && smartcard_supported,
+        }
+    }
+
+    const fn create_group_visible(self) -> bool {
+        self.generate_private_key
+    }
+
+    const fn hardware_rows_visible(self) -> bool {
+        self.setup_hardware_key || self.connect_hardware_key
+    }
+
+    const fn add_group_visible(self, fido_generation_visible: bool) -> bool {
+        fido_generation_visible || self.hardware_rows_visible() || self.import_private_key
+    }
+}
+
 impl KeyManagementUiState {
     pub fn new(parts: KeyManagementUiParts) -> Self {
         let state = Self {
@@ -138,29 +173,35 @@ impl KeyManagementUiState {
         standard_actions_enabled: bool,
         uses_integrated_backend: bool,
     ) {
-        let smartcard_supported = smartcard_available();
-        let hardware_generation_supported = hardware_key_available();
+        let presentation = RecipientActionPresentation::new(
+            standard_actions_enabled,
+            hardware_key_available(),
+            smartcard_available(),
+        );
         self.widgets
             .generate_private_key_row
-            .set_visible(standard_actions_enabled);
+            .set_visible(presentation.generate_private_key);
         #[cfg(feature = "fido-ui")]
-        self.fido
+        let fido_generation_visible = self
+            .fido
             .sync_generation_visibility(standard_actions_enabled);
+        #[cfg(not(feature = "fido-ui"))]
+        let fido_generation_visible = false;
         self.widgets
             .import_clipboard_row
-            .set_visible(standard_actions_enabled);
+            .set_visible(presentation.import_private_key);
         self.widgets
             .import_file_row
-            .set_visible(standard_actions_enabled);
+            .set_visible(presentation.import_private_key);
         self.widgets
             .setup_hardware_key_row
-            .set_visible(standard_actions_enabled && hardware_generation_supported);
+            .set_visible(presentation.setup_hardware_key);
         self.widgets
             .add_hardware_key_row
-            .set_visible(standard_actions_enabled && smartcard_supported);
+            .set_visible(presentation.connect_hardware_key);
         self.widgets
             .import_hardware_key_row
-            .set_visible(standard_actions_enabled && smartcard_supported);
+            .set_visible(presentation.connect_hardware_key);
 
         let hardware_rows = [
             &self.widgets.setup_hardware_key_row,
@@ -171,14 +212,14 @@ impl KeyManagementUiState {
             &self.widgets.recipient_add_group,
             &self.overlay,
             &hardware_rows,
-            standard_actions_enabled && hardware_rows.iter().any(|row| row.is_visible()),
+            presentation.hardware_rows_visible(),
         );
         #[cfg(feature = "fido-ui")]
         (self.ports.sync_optional_fido_access)(
             &self.widgets.recipient_add_group,
             &self.overlay,
             &[self.fido.generation_row()],
-            uses_integrated_backend && self.fido.generation_is_visible(),
+            uses_integrated_backend && fido_generation_visible,
         );
 
         #[cfg(not(feature = "fido-ui"))]
@@ -186,19 +227,10 @@ impl KeyManagementUiState {
 
         self.widgets
             .recipient_create_group
-            .set_visible(self.widgets.generate_private_key_row.is_visible());
-        #[cfg(feature = "fido-ui")]
-        let fido_generation_visible = self.fido.generation_is_visible();
-        #[cfg(not(feature = "fido-ui"))]
-        let fido_generation_visible = false;
-        self.widgets.recipient_add_group.set_visible(
-            fido_generation_visible
-                || self.widgets.setup_hardware_key_row.is_visible()
-                || self.widgets.add_hardware_key_row.is_visible()
-                || self.widgets.import_hardware_key_row.is_visible()
-                || self.widgets.import_clipboard_row.is_visible()
-                || self.widgets.import_file_row.is_visible(),
-        );
+            .set_visible(presentation.create_group_visible());
+        self.widgets
+            .recipient_add_group
+            .set_visible(presentation.add_group_visible(fido_generation_visible));
     }
 
     pub fn handle_generation_subpage_back(&self) -> bool {
@@ -326,5 +358,38 @@ impl KeyManagementUiState {
         if let Some(ports) = self.workflow.borrow().as_ref() {
             (ports.on_generation_page_closed)(reopen_recipient_page);
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::RecipientActionPresentation;
+
+    #[test]
+    fn standard_key_actions_show_both_groups_without_optional_hardware() {
+        let presentation = RecipientActionPresentation::new(true, false, false);
+
+        assert!(presentation.create_group_visible());
+        assert!(presentation.add_group_visible(false));
+        assert!(presentation.generate_private_key);
+        assert!(presentation.import_private_key);
+    }
+
+    #[test]
+    fn recipient_groups_are_derived_from_policy_not_current_gtk_visibility() {
+        let presentation = RecipientActionPresentation::new(true, true, true);
+
+        assert!(presentation.create_group_visible());
+        assert!(presentation.add_group_visible(true));
+        assert!(presentation.hardware_rows_visible());
+    }
+
+    #[test]
+    fn blocked_standard_actions_hide_all_action_groups() {
+        let presentation = RecipientActionPresentation::new(false, true, true);
+
+        assert!(!presentation.create_group_visible());
+        assert!(!presentation.add_group_visible(false));
+        assert!(!presentation.hardware_rows_visible());
     }
 }

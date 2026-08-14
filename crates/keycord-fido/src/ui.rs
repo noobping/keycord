@@ -57,13 +57,14 @@ impl FidoWindowWidgets {
         &self.generation_row
     }
 
-    pub fn sync_generation_visibility(&self, actions_enabled: bool) {
-        self.generation_row
-            .set_visible(actions_enabled && crate::security_key_available());
-    }
-
-    pub fn generation_is_visible(&self) -> bool {
-        self.generation_row.is_visible()
+    /// Apply recipient-workflow policy and return the row's own visibility.
+    ///
+    /// Returning the policy result avoids asking GTK whether the row is
+    /// effectively visible while its containing group is still hidden.
+    pub fn sync_generation_visibility(&self, actions_enabled: bool) -> bool {
+        let visible = generation_visible(actions_enabled, crate::security_key_available());
+        self.generation_row.set_visible(visible);
+        visible
     }
 
     /// Search widgets contributed to the embedding key-management group.
@@ -86,6 +87,10 @@ impl FidoWindowWidgets {
             start_key_generation(&state, None);
         });
     }
+}
+
+const fn generation_visible(actions_enabled: bool, security_key_available: bool) -> bool {
+    actions_enabled && security_key_available
 }
 
 /// Presentation-ready failure returned by the OpenPGP adapter.
@@ -619,10 +624,17 @@ fn ensure_usb_access_row(
 mod tests {
     use super::{
         access_presentation, flatpak_usb_override_args, flatpak_usb_override_command,
-        pin_entry_error_message, pin_retry_prompt, pin_setup_error_message, AccessPresentation,
-        PinRetryPrompt,
+        generation_visible, pin_entry_error_message, pin_retry_prompt, pin_setup_error_message,
+        AccessPresentation, PinRetryPrompt,
     };
     use crate::FidoErrorKind;
+
+    #[test]
+    fn generation_visibility_follows_workflow_and_capability_policy() {
+        assert!(generation_visible(true, true));
+        assert!(!generation_visible(false, true));
+        assert!(!generation_visible(true, false));
+    }
 
     #[test]
     fn pin_entry_requires_a_value() {

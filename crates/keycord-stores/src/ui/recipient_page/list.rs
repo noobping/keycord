@@ -156,7 +156,7 @@ fn sync_private_key_requirement_row(state: &StoreRecipientsPageState, has_keys: 
     let show_require_all = show_require_all_private_keys_option(selection_mode, has_keys);
     let show_store_options_title = show_store_options_title_above_git_row(
         show_require_all,
-        state.platform.git_group.is_visible(),
+        state.platform.git_group.get_visible(),
     );
     let git_group_title = if show_store_options_title {
         gettext("Experimental store options")

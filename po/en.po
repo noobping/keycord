@@ -616,7 +616,7 @@ msgstr "Committed"
 msgid "Committer"
 msgstr "Committer"
 
-#: crates/keycord-fido/src/ui.rs:409
+#: crates/keycord-fido/src/ui.rs:414
 msgid "Confirm new security key PIN"
 msgstr "Confirm new security key PIN"
 
@@ -624,7 +624,7 @@ msgstr "Confirm new security key PIN"
 msgid "Confirm password"
 msgstr "Confirm password"
 
-#: crates/keycord-fido/src/ui.rs:299
+#: crates/keycord-fido/src/ui.rs:304
 msgid "Confirm the new security key PIN."
 msgstr "Confirm the new security key PIN."
 
@@ -840,8 +840,8 @@ msgstr "Couldn't generate the hardware decryption key"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Couldn't generate the hardware signing key"
 
-#: crates/keycord-fido/src/ui.rs:197
-#: crates/keycord-fido/src/ui.rs:223
+#: crates/keycord-fido/src/ui.rs:202
+#: crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -1328,7 +1328,7 @@ msgstr "Enter the key password."
 msgid "Enter the new hardware key PIN."
 msgstr "Enter the new hardware key PIN."
 
-#: crates/keycord-fido/src/ui.rs:296
+#: crates/keycord-fido/src/ui.rs:301
 msgid "Enter the new security key PIN."
 msgstr "Enter the new security key PIN."
 
@@ -1337,7 +1337,7 @@ msgstr "Enter the new security key PIN."
 msgid "Enter the private key password."
 msgstr "Enter the private key password."
 
-#: crates/keycord-fido/src/ui.rs:291
+#: crates/keycord-fido/src/ui.rs:296
 msgid "Enter the security key PIN."
 msgstr "Enter the security key PIN."
 
@@ -1353,7 +1353,7 @@ msgstr "Exec=/tmp/keycord %f"
 msgid "Expand the password editor with cleanup actions"
 msgstr "Expand the password editor with cleanup actions"
 
-#: crates/keycord-fido/src/ui.rs:192
+#: crates/keycord-fido/src/ui.rs:197
 msgid "Experimental FIDO2-protected key generation worker disconnected unexpectedly."
 msgstr "Experimental FIDO2-protected key generation worker disconnected unexpectedly."
 
@@ -1428,7 +1428,7 @@ msgstr "Exported {count} passwords."
 msgid "FIDO UI is dispatched first"
 msgstr "FIDO UI is dispatched first"
 
-#: crates/keycord-fido/src/ui.rs:220
+#: crates/keycord-fido/src/ui.rs:225
 #: crates/keycord-keys/src/ui/unlock.rs:262
 msgid "FIDO2 PIN setup worker disconnected unexpectedly."
 msgstr "FIDO2 PIN setup worker disconnected unexpectedly."
@@ -1563,7 +1563,7 @@ msgstr "Failed to export passkey JSON: {err}"
 msgid "Failed to export search provider object: {err}"
 msgstr "Failed to export search provider object: {err}"
 
-#: crates/keycord-fido/src/ui.rs:150
+#: crates/keycord-fido/src/ui.rs:155
 msgid "Failed to generate experimental FIDO2-protected key: {}"
 msgstr "Failed to generate experimental FIDO2-protected key: {}"
 
@@ -2213,7 +2213,7 @@ msgid "General"
 msgstr "General"
 
 #: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:233
+#: crates/keycord-fido/src/ui.rs:238
 msgid "Generate FIDO2-protected key (Experimental)"
 msgstr "Generate FIDO2-protected key (Experimental)"
 
@@ -2232,7 +2232,7 @@ msgstr "Generate password"
 msgid "Generate private key"
 msgstr "Generate private key"
 
-#: crates/keycord-fido/src/ui.rs:167
+#: crates/keycord-fido/src/ui.rs:172
 msgid "Generating FIDO2-protected key (Experimental)"
 msgstr "Generating FIDO2-protected key (Experimental)"
 
@@ -2702,7 +2702,7 @@ msgstr "Keep this key selected while all selected private keys are required."
 msgid "Key file removed."
 msgstr "Key file removed."
 
-#: crates/keycord-fido/src/ui.rs:146
+#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Key generated."
@@ -3083,7 +3083,7 @@ msgstr "New hardware key PIN"
 msgid "New item"
 msgstr "New item"
 
-#: crates/keycord-fido/src/ui.rs:405
+#: crates/keycord-fido/src/ui.rs:410
 msgid "New security key PIN"
 msgstr "New security key PIN"
 
@@ -4113,7 +4113,7 @@ msgstr "Search values"
 msgid "Search weak passwords"
 msgstr "Search weak passwords"
 
-#: crates/keycord-fido/src/ui.rs:332
+#: crates/keycord-fido/src/ui.rs:337
 msgid "Security key PIN"
 msgstr "Security key PIN"
 
@@ -4147,13 +4147,13 @@ msgstr "Sequential characters"
 msgid "Set a PIN on the FIDO2 security key first."
 msgstr "Set a PIN on the FIDO2 security key first."
 
-#: crates/keycord-fido/src/ui.rs:528
+#: crates/keycord-fido/src/ui.rs:533
 #: crates/keycord-keys/src/ui/unlock.rs:77
 msgid "Set security key PIN"
 msgstr "Set security key PIN"
 
-#: crates/keycord-fido/src/ui.rs:209
-#: crates/keycord-fido/src/ui.rs:245
+#: crates/keycord-fido/src/ui.rs:214
+#: crates/keycord-fido/src/ui.rs:250
 msgid "Set security key PIN (Experimental FIDO2)"
 msgstr "Set security key PIN (Experimental FIDO2)"
 
@@ -4594,7 +4594,7 @@ msgstr "The passwords do not match."
 msgid "The private key password is incorrect."
 msgstr "The private key password is incorrect."
 
-#: crates/keycord-fido/src/ui.rs:302
+#: crates/keycord-fido/src/ui.rs:307
 msgid "The security key PINs do not match."
 msgstr "The security key PINs do not match."
 
@@ -4856,7 +4856,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Unlock another selected private key before clearing this one."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:522
+#: crates/keycord-fido/src/ui.rs:527
 #: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:392
@@ -5418,7 +5418,7 @@ msgstr "finalize update file"
 msgid "find \"{}\" is \"{}\""
 msgstr "find \"{}\" is \"{}\""
 
-#: crates/keycord-fido/src/ui.rs:268
+#: crates/keycord-fido/src/ui.rs:273
 msgid "flatpak override --user --device=all {app_id}"
 msgstr "flatpak override --user --device=all {app_id}"
 
