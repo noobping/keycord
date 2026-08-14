@@ -1,0 +1,15 @@
+# Retired detailed owner-UI construction seams. Root composition may pass whole subject
+# bundles, generic window chrome, and explicit cross-subject ports to owner constructors.
+PreferencesPageSearchState::new
+SearchablePreferencesGroup::
+PreferencesPageControls {
+StoreGitPageState {
+StoreRecipientsPageParts
+StoreRecipientsPlatformState {
+StoreImportPageWidgets
+StoreImportChrome
+StoreImportControls
+StoreImportPageState {
+PasswordPageState {
+DocumentationPageWidgets
+GitActionWidgets

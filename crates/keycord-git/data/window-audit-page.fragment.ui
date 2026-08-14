@@ -1,0 +1,52 @@
+                <child>
+                  <object class="AdwNavigationPage" id="tools_audit_page">
+                    <property name="title" translatable="yes">Inspect change history</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSearchEntry" id="tools_audit_search_entry">
+                            <property name="visible">false</property>
+                            <property name="hexpand">true</property>
+                            <property name="placeholder-text" translatable="yes">Search results</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStack" id="tools_audit_stack">
+                            <child>
+                              <object class="AdwStatusPage" id="tools_audit_status">
+                                <property name="icon-name">git-symbolic</property>
+                                <property name="title" translatable="yes">Inspect change history</property>
+                                <property name="description" translatable="yes">Open a Git-backed store to inspect branches and commits.</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkScrolledWindow" id="tools_audit_scrolled">
+                                <property name="vscrollbar-policy">automatic</property>
+                                <property name="hscrollbar-policy">never</property>
+                                <property name="propagate-natural-width">true</property>
+                                <property name="propagate-natural-height">true</property>
+                                <child>
+                                  <object class="AdwClamp">
+                                    <property name="maximum-size">900</property>
+                                    <property name="tightening-threshold">600</property>
+                                    <child>
+                                      <object class="GtkBox" id="tools_audit_content">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">18</property>
+                                        <property name="margin-top">18</property>
+                                        <property name="margin-bottom">18</property>
+                                        <property name="margin-start">18</property>
+                                        <property name="margin-end">18</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>

@@ -1,0 +1,45 @@
+# OWNER ACTION-PATTERN [ALLOWED-CONSUMERS]
+#
+# Owners may use their own actions. Extra consumers are comma-separated subject
+# names; `all` is reserved for genuinely generic Shell actions. A trailing `*`
+# matches generated action names such as numbered store shortcuts.
+
+docs open-docs
+
+entries add-otp-secret
+entries add-pass-field
+entries apply-pass-template
+entries clean-pass-file
+entries copy-otp
+entries copy-password
+entries copy-username
+entries generate-password
+entries import-private-key-from-pass-file
+entries open-new-password
+entries open-raw-pass-file
+entries reload-password-list
+entries save-password
+entries toggle-hidden-and-duplicates
+entries toggle-password-options
+
+git git-clone
+git open-git
+git open-store-git-*
+git synchronize
+
+preferences open-preferences
+
+root context-reload
+root context-save
+root context-undo
+root open-tools shell
+root toggle-find entries
+
+shell back all
+shell go-home all
+shell open-log git
+
+stores open-store-picker
+stores open-store-recipients-*
+stores reload-store-recipients-list
+stores save-store-recipients

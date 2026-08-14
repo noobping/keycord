@@ -1,0 +1,32 @@
+[package]
+name = "keycord-stores"
+description = "Password-store repositories and management for Keycord"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[features]
+default = []
+ui = [
+    "dep:adw",
+    "dep:keycord-preferences",
+    "dep:keycord-shell",
+    "dep:secrecy",
+    "keycord-keys/ui",
+    "keycord-preferences/ui",
+]
+
+[dependencies]
+adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
+keycord-keys.workspace = true
+keycord-preferences = { workspace = true, optional = true }
+keycord-runtime.workspace = true
+keycord-shell = { workspace = true, optional = true }
+secrecy = { version = "0.10.3", optional = true }
+sequoia-openpgp = "2.4.1"
+thiserror = "2.0"
+walkdir = "2.5.0"

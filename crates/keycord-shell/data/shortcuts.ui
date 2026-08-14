@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="keycord">
+  <object class="AdwShortcutsDialog" id="shortcuts_dialog">
+    <!-- keycord-shortcuts-fragment:entries-sections -->
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Navigation</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Go back</property>
+            <property name="accelerator">Escape</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Go home</property>
+            <property name="accelerator">Home</property>
+          </object>
+        </child>
+        <!-- keycord-shortcuts-fragment:stores-navigation-item -->
+        <!-- keycord-shortcuts-fragment:git-navigation-item -->
+      </object>
+    </child>
+    <!-- keycord-shortcuts-fragment:stores-section -->
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Tools</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Open tools</property>
+            <property name="accelerator">&lt;Primary&gt;t</property>
+          </object>
+        </child>
+        <!-- keycord-shortcuts-fragment:docs-tool-item -->
+        <child>
+          <object class="AdwShortcutsItem" id="shortcuts_open_logs">
+            <property name="title" translatable="yes">Open logs</property>
+            <property name="accelerator">F12</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">General</property>
+        <!-- keycord-shortcuts-fragment:preferences-general-item -->
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Show shortcuts</property>
+            <property name="accelerator">&lt;Primary&gt;question</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">About</property>
+            <property name="accelerator">F1</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

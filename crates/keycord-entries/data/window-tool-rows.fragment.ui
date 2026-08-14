@@ -1,0 +1,63 @@
+                                        <child>
+                                          <object class="AdwActionRow" id="tools_field_values_row">
+                                            <property name="title" translatable="yes">Browse field values</property>
+                                            <property name="subtitle" translatable="yes">Browse unique field values from the current list.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkStack" id="tools_field_values_suffix_stack">
+                                                <child>
+                                                  <object class="GtkImage" id="tools_field_values_suffix_arrow">
+                                                    <property name="icon-name">go-next-symbolic</property>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkSpinner" id="tools_field_values_spinner">
+                                                    <property name="spinning">false</property>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="AdwActionRow" id="tools_weak_passwords_row">
+                                            <property name="title" translatable="yes">Find weak passwords</property>
+                                            <property name="subtitle" translatable="yes">Scan the current list for passwords that fail basic checks.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkStack" id="tools_weak_passwords_suffix_stack">
+                                                <child>
+                                                  <object class="GtkImage" id="tools_weak_passwords_suffix_arrow">
+                                                    <property name="icon-name">go-next-symbolic</property>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkSpinner" id="tools_weak_passwords_spinner">
+                                                    <property name="spinning">false</property>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="AdwActionRow" id="tools_export_row">
+                                            <property name="title" translatable="yes">Export passwords</property>
+                                            <property name="subtitle" translatable="yes">Export every password and field to a CSV file.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkStack" id="tools_export_suffix_stack">
+                                                <child>
+                                                  <object class="GtkImage" id="tools_export_suffix_arrow">
+                                                    <property name="icon-name">document-save-symbolic</property>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkSpinner" id="tools_export_spinner">
+                                                    <property name="spinning">false</property>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>

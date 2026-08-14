@@ -1,63 +1,29 @@
-use crate::password::page::PasswordPageState;
-use crate::store::git_page::StoreGitPageState;
-use crate::store::management::StoreRecipientsPageState;
 use adw::gtk::Button;
-use adw::{ApplicationWindow, EntryRow, NavigationPage, NavigationView, WindowTitle};
+use adw::{NavigationPage, NavigationView, WindowTitle};
+use keycord_entries::ui::widgets::EntryWindowWidgets;
+use keycord_keys::ui::KeyWindowWidgets;
+use keycord_shell::navigation::{HasWindowChrome, WindowChrome};
 
 #[derive(Clone)]
 pub struct WindowNavigationState {
     pub nav: NavigationView,
-    pub password_page: NavigationPage,
-    pub raw_text_page: NavigationPage,
+    pub entries: EntryWindowWidgets,
+    pub keys: KeyWindowWidgets,
     pub settings_page: NavigationPage,
     pub tools_page: NavigationPage,
     pub docs_page: NavigationPage,
     pub docs_detail_page: NavigationPage,
-    pub tools_field_values_page: NavigationPage,
-    pub tools_value_values_page: NavigationPage,
-    pub tools_weak_passwords_page: NavigationPage,
     pub tools_audit_page: NavigationPage,
     pub store_import_page: NavigationPage,
     pub log_page: NavigationPage,
     pub back: Button,
     pub add: Button,
     pub find: Button,
-    pub git: Button,
-    pub store: Button,
+    pub primary_action: Button,
+    pub secondary_action: Button,
     pub save: Button,
     pub raw: Button,
-    pub win: WindowTitle,
-    pub username: EntryRow,
-}
-
-#[derive(Clone)]
-pub struct WindowPageState {
-    pub window: ApplicationWindow,
-    pub nav: NavigationView,
-    pub page: NavigationPage,
-    pub back: Button,
-    pub add: Button,
-    pub find: Button,
-    pub git: Button,
-    pub store: Button,
-    pub save: Button,
-    pub raw: Button,
-    pub win: WindowTitle,
-}
-
-pub struct WindowChrome<'a> {
-    pub back: &'a Button,
-    pub add: &'a Button,
-    pub find: &'a Button,
-    pub git: &'a Button,
-    pub store: &'a Button,
-    pub save: &'a Button,
-    pub raw: &'a Button,
-    pub win: &'a WindowTitle,
-}
-
-pub trait HasWindowChrome {
-    fn window_chrome(&self) -> WindowChrome<'_>;
+    pub title: WindowTitle,
 }
 
 macro_rules! impl_has_window_chrome {
@@ -69,11 +35,11 @@ macro_rules! impl_has_window_chrome {
                         back: &self.back,
                         add: &self.add,
                         find: &self.find,
-                        git: &self.git,
-                        store: &self.store,
+                        primary_action: &self.primary_action,
+                        secondary_action: &self.secondary_action,
                         save: &self.save,
                         raw: &self.raw,
-                        win: &self.win,
+                        title: &self.title,
                     }
                 }
             }
@@ -81,10 +47,4 @@ macro_rules! impl_has_window_chrome {
     };
 }
 
-impl_has_window_chrome!(
-    WindowNavigationState,
-    WindowPageState,
-    PasswordPageState,
-    StoreRecipientsPageState,
-    StoreGitPageState,
-);
+impl_has_window_chrome!(WindowNavigationState,);

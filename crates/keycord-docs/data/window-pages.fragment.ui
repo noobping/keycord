@@ -1,0 +1,70 @@
+                <child>
+                  <object class="AdwNavigationPage" id="docs_page">
+                    <property name="title" translatable="yes">Documentation</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSearchEntry" id="docs_search_entry">
+                            <property name="visible">false</property>
+                            <property name="placeholder-text" translatable="yes">Search docs</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkScrolledWindow">
+                            <property name="vscrollbar-policy">automatic</property>
+                            <property name="hscrollbar-policy">never</property>
+                            <property name="propagate-natural-width">true</property>
+                            <property name="propagate-natural-height">true</property>
+                            <child>
+                              <object class="AdwPreferencesPage">
+                                <child>
+                                  <object class="AdwPreferencesGroup">
+                                    <child>
+                                      <object class="GtkListBox" id="docs_list">
+                                        <property name="selection-mode">none</property>
+                                        <style>
+                                          <class name="boxed-list" />
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="AdwNavigationPage" id="docs_detail_page">
+                    <property name="title" translatable="yes">Documentation</property>
+                    <child>
+                      <object class="GtkScrolledWindow" id="docs_detail_scrolled">
+                        <property name="vscrollbar-policy">automatic</property>
+                        <property name="hscrollbar-policy">never</property>
+                        <property name="propagate-natural-width">true</property>
+                        <property name="propagate-natural-height">true</property>
+                        <child>
+                          <object class="AdwClamp">
+                            <property name="maximum-size">900</property>
+                            <property name="tightening-threshold">600</property>
+                            <child>
+                              <object class="GtkBox" id="docs_detail_box">
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">18</property>
+                                <property name="margin-top">18</property>
+                                <property name="margin-bottom">18</property>
+                                <property name="margin-start">18</property>
+                                <property name="margin-end">18</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>

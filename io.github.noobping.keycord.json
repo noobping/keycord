@@ -13,9 +13,6 @@
     "prepend-ld-library-path": "/app/lib:/usr/lib/sdk/llvm20/lib",
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "append-ld-library-path": "/usr/lib/sdk/rust-stable/lib",
-    "build-args": [
-      "--share=network"
-    ],
     "env": {
       "CLANG_PATH": "/usr/lib/sdk/llvm20/bin/clang",
       "CARGO_HOME": "/run/build/keycord/cargo",
@@ -139,6 +136,11 @@
     {
       "name": "keycord",
       "buildsystem": "meson",
+      "build-options": {
+        "env": {
+          "CARGO_NET_OFFLINE": "true"
+        }
+      },
       "config-opts": [
         "-Dcargo_variant=developer",
         "-Dcargo_features=flatpak",
@@ -156,7 +158,8 @@
             "builddir",
             "target"
           ]
-        }
+        },
+        "cargo-sources.yml"
       ]
     }
   ]

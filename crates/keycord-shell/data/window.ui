@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="keycord">
+  <object class="AdwApplicationWindow" id="main_window">
+    <property name="title" translatable="yes">Keycord</property>
+    <property name="default-width">850</property>
+    <property name="default-height">600</property>
+    <property name="icon-name">io.github.noobping.keycord</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <child type="start">
+              <object class="GtkBox">
+                <child>
+                  <object class="GtkBox">
+                    <style>
+                      <class name="linked" />
+                    </style>
+                    <child>
+                      <object class="GtkButton" id="back_button">
+                        <property name="icon-name">go-previous-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Back</property>
+                        <property name="action-name">win.back</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <!-- keycord-window-fragment:entries-header-list -->
+                    <!-- keycord-window-fragment:git-header-audit-filter -->
+                    <!-- keycord-window-fragment:entries-header-editor -->
+                    <!-- keycord-window-fragment:git-header-action -->
+                    <!-- keycord-window-fragment:stores-header-action -->
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="title">
+              <object class="AdwWindowTitle" id="window_title">
+                <property name="title" translatable="yes">Keycord</property>
+                <property name="subtitle" translatable="yes">Browse and edit password stores</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkMenuButton" id="primary_menu_button">
+                <property name="primary">True</property>
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="AdwToastOverlay" id="toast_overlay">
+            <child>
+              <object class="AdwNavigationView" id="navigation_view">
+
+                <!-- keycord-window-fragment:entries-pages -->
+
+                <!-- keycord-window-fragment:preferences-page -->
+
+                <child>
+                  <object class="AdwNavigationPage" id="tools_page">
+                    <property name="title" translatable="yes">Tools</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSearchEntry" id="tools_search_entry">
+                            <property name="visible">false</property>
+                            <property name="placeholder-text" translatable="yes">Search tools</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkScrolledWindow" id="tools_page_scrolled">
+                            <property name="vscrollbar-policy">automatic</property>
+                            <property name="hscrollbar-policy">never</property>
+                            <property name="propagate-natural-width">true</property>
+                            <property name="propagate-natural-height">true</property>
+                            <child>
+                              <object class="AdwPreferencesPage" id="tools_preferences_page">
+                                <child>
+                                  <object class="AdwPreferencesGroup" id="tools_primary_group">
+                                    <property name="title" translatable="yes">Tools</property>
+                                    <child>
+                                      <object class="GtkListBox" id="tools_list">
+                                        <property name="selection-mode">none</property>
+                                        <style>
+                                          <class name="boxed-list" />
+                                        </style>
+                                        <!-- keycord-window-fragment:entries-tool-rows -->
+                                        <!-- keycord-window-fragment:git-tool-row -->
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwPreferencesGroup" id="tools_information_group">
+                                    <property name="title" translatable="yes">Information</property>
+                                    <child>
+                                      <object class="GtkListBox" id="tools_logs_list">
+                                        <property name="selection-mode">none</property>
+                                        <style>
+                                          <class name="boxed-list" />
+                                        </style>
+                                        <!-- keycord-window-fragment:docs-tool-row -->
+                                        <child>
+                                          <object class="AdwActionRow" id="tools_logs_row">
+                                            <property name="title" translatable="yes">Open logs</property>
+                                            <property name="subtitle" translatable="yes">Inspect recent app and command output.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkImage">
+                                                <property name="icon-name">go-next-symbolic</property>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="AdwActionRow" id="tools_copy_logs_row">
+                                            <property name="title" translatable="yes">Copy logs</property>
+                                            <property name="subtitle" translatable="yes">Copy recent app and command output to the clipboard.</property>
+                                            <property name="activatable">True</property>
+                                            <child type="suffix">
+                                              <object class="GtkButton" id="tools_copy_logs_button">
+                                                <property name="icon-name">edit-copy-symbolic</property>
+                                                <property name="tooltip-text" translatable="yes">Copy logs</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwPreferencesGroup" id="tools_search_empty_group">
+                                    <property name="visible">false</property>
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="title" translatable="yes">No matching tools</property>
+                                        <property name="subtitle" translatable="yes">Try a different search term.</property>
+                                        <property name="activatable">False</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <!-- keycord-window-fragment:docs-pages -->
+
+                <!-- keycord-window-fragment:entries-tool-pages -->
+
+                <!-- keycord-window-fragment:git-audit-page -->
+
+                <!-- keycord-window-fragment:stores-pages -->
+
+                <!-- keycord-window-fragment:git-store-page -->
+
+                <!-- keycord-window-fragment:keys-generation-pages -->
+
+                <child>
+                  <object class="AdwNavigationPage" id="log_page">
+                    <property name="title" translatable="yes">Logs</property>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="vscrollbar-policy">automatic</property>
+                        <property name="hscrollbar-policy">automatic</property>
+                        <property name="propagate-natural-width">true</property>
+                        <property name="propagate-natural-height">true</property>
+                        <child>
+                          <object class="GtkTextView" id="log_view">
+                            <property name="editable">false</property>
+                            <property name="cursor-visible">false</property>
+                            <property name="monospace">true</property>
+                            <property name="wrap-mode">word-char</property>
+                            <property name="left-margin">15</property>
+                            <property name="right-margin">15</property>
+                            <property name="top-margin">15</property>
+                            <property name="bottom-margin">15</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <!-- keycord-window-fragment:git-busy-page -->
+
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+  <menu id="primary_menu">
+    <section>
+      <!-- keycord-window-fragment:entries-menu-items -->
+      <!-- keycord-window-fragment:git-menu-item -->
+      <item>
+        <attribute name="label" translatable="yes">_Tools</attribute>
+        <attribute name="action">win.open-tools</attribute>
+      </item>
+      <!-- keycord-window-fragment:preferences-menu-item -->
+      <!-- keycord-window-fragment:lifecycle-menu-item -->
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">app.shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Keycord</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

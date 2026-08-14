@@ -1,0 +1,22 @@
+                                        <child>
+                                          <object class="AdwActionRow" id="tools_audit_row">
+                                            <property name="title" translatable="yes">Inspect change history</property>
+                                            <property name="subtitle" translatable="yes">Inspect Git history across stores and verify commit signatures.</property>
+                                            <property name="activatable">True</property>
+                                            <property name="visible">false</property>
+                                            <child type="suffix">
+                                              <object class="GtkStack" id="tools_audit_suffix_stack">
+                                                <child>
+                                                  <object class="GtkImage" id="tools_audit_suffix_arrow">
+                                                    <property name="icon-name">go-next-symbolic</property>
+                                                  </object>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkSpinner" id="tools_audit_spinner">
+                                                    <property name="spinning">false</property>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>

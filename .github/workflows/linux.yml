@@ -85,13 +85,13 @@ jobs:
             pkg-config \
             pkgconf
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
 
       - name: Verify passkey feature build
-        run: cargo test --no-run --no-default-features --features passkey
+        run: cargo test --package keycord --locked --no-run --no-default-features --features passkey
 
       - name: Build
-        run: cargo build --release --features setup
+        run: cargo build --package keycord --locked --release --features setup
 
       - name: Collect
         if: ${{ env.TAG_NAME != '' }}
@@ -108,4 +108,3 @@ jobs:
         with:
           tag_name: ${{ env.TAG_NAME }}
           files: ${{ env.FILE }}
-          overwrite_files: true

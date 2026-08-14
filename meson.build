@@ -21,7 +21,7 @@ fidopin = get_option('fidopin')
 smartcard = get_option('smartcard')
 hardwarekey = get_option('hardwarekey')
 project_binary = 'keycord'
-cargo_command = 'cargo build'
+cargo_command = 'cargo build --package keycord --locked'
 
 effective_cargo_features = cargo_features
 foreach feature_name, enabled : {
@@ -45,7 +45,7 @@ foreach feature_name, enabled : {
 endforeach
 
 if cargo_variant == 'release' or cargo_variant == 'translation'
-  cargo_command = 'cargo build --release'
+  cargo_command = 'cargo build --package keycord --locked --release'
 endif
 
 message('Configured Meson wrapper variant "@0@" -> @1@'.format(cargo_variant, cargo_command))
@@ -87,9 +87,9 @@ if [ "$variant" = "release" ] || [ "$variant" = "translation" ]; then
 fi
 
 if [ -n "$native_cargo" ]; then
-  set -- "$native_cargo" build "--manifest-path" "$source_root/Cargo.toml" "--target-dir" "$build_root/cargo-target" "--no-default-features"
+  set -- "$native_cargo" build "--package" "keycord" "--manifest-path" "$source_root/Cargo.toml" "--target-dir" "$build_root/cargo-target" "--locked" "--no-default-features"
 else
-  set -- "$flatpak_spawn" --host toolbox run cargo build "--manifest-path" "$source_root/Cargo.toml" "--target-dir" "$build_root/cargo-target" "--no-default-features"
+  set -- "$flatpak_spawn" --host toolbox run cargo build "--package" "keycord" "--manifest-path" "$source_root/Cargo.toml" "--target-dir" "$build_root/cargo-target" "--locked" "--no-default-features"
 fi
 
 if [ "$profile_dir" = "release" ]; then
@@ -144,64 +144,107 @@ foreach variant : ['developer', 'release', 'translation']
   )
 endforeach
 
+lifecycle_metadata = configuration_data()
+lifecycle_metadata.set('APP_ID', 'io.github.noobping.keycord')
+lifecycle_metadata.set('BUS_NAME', 'io.github.noobping.keycord.SearchProvider')
+lifecycle_metadata.set('OBJECT_PATH', '/io/github/noobping/keycord/SearchProvider')
+lifecycle_metadata.set('DISPLAY_NAME', 'Keycord')
+lifecycle_metadata.set('COMMENT', 'Browse and edit password stores')
+lifecycle_metadata.set('EXECUTABLE', project_binary)
+if passkey
+  lifecycle_metadata.set('OPEN_ARGUMENT', ' %f')
+  lifecycle_metadata.set('MIME_TYPES', 'MimeType=application/vnd.keycord.passkey-request+json;application/vnd.keycord.passkey+json;')
+else
+  lifecycle_metadata.set('OPEN_ARGUMENT', '')
+  lifecycle_metadata.set('MIME_TYPES', '')
+endif
+
+desktop_file = configure_file(
+  input: 'crates/keycord-lifecycle/data/keycord.desktop.in',
+  output: 'keycord.desktop',
+  configuration: lifecycle_metadata,
+)
+
+search_provider_file = configure_file(
+  input: 'crates/keycord-lifecycle/data/keycord-search-provider.ini.in',
+  output: 'keycord-search-provider.ini',
+  configuration: lifecycle_metadata,
+)
+
+search_provider_service = configure_file(
+  input: 'crates/keycord-lifecycle/data/keycord-search-provider.service.in',
+  output: 'keycord-search-provider.service',
+  configuration: lifecycle_metadata,
+)
+
 install_data(
-  'data/scalable/apps/io.github.noobping.keycord.svg',
+  'crates/keycord-lifecycle/data/branding/scalable/apps/io.github.noobping.keycord.svg',
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'scalable', 'apps'),
 )
 
 install_data(
-  'data/scalable/apps/io.github.noobping.keycord-beta.svg',
+  'crates/keycord-lifecycle/data/branding/scalable/apps/io.github.noobping.keycord-beta.svg',
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'scalable', 'apps'),
 )
 
 install_data(
-  'data/256x256/apps/io.github.noobping.keycord.png',
+  'crates/keycord-lifecycle/data/branding/256x256/apps/io.github.noobping.keycord.png',
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', '256x256', 'apps'),
 )
 
 install_data(
-  'data/256x256/apps/io.github.noobping.keycord-beta.png',
+  'crates/keycord-lifecycle/data/branding/256x256/apps/io.github.noobping.keycord-beta.png',
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', '256x256', 'apps'),
 )
 
 install_subdir(
-  'data/symbolic/apps',
+  'crates/keycord-shell/data/symbolic/apps',
+  install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic'),
+)
+
+install_subdir(
+  'crates/keycord-lifecycle/data/branding/symbolic/apps',
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic'),
 )
 
 install_data(
-  'keycord.desktop',
+  'crates/keycord-git/data/symbolic/apps/git-symbolic.svg',
+  install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps'),
+)
+
+install_data(
+  desktop_file,
   rename: 'io.github.noobping.keycord.desktop',
   install_dir: join_paths(get_option('datadir'), 'applications'),
 )
 
 if passkey
   install_data(
-    'data/io.github.noobping.keycord-passkey.xml',
+    'crates/keycord-passkey/data/io.github.noobping.keycord-passkey.xml',
     install_dir: join_paths(get_option('datadir'), 'mime', 'packages'),
   )
 endif
 
 install_data(
-  'keycord-search-provider.ini',
+  search_provider_file,
   rename: 'io.github.noobping.keycord.search-provider.ini',
   install_dir: join_paths(get_option('datadir'), 'gnome-shell', 'search-providers'),
 )
 
 install_data(
-  'keycord-search-provider.service',
+  search_provider_service,
   rename: 'io.github.noobping.keycord.SearchProvider.service',
   install_dir: join_paths(get_option('datadir'), 'dbus-1', 'services'),
 )
 
 install_data(
-  'data/gschema.xml',
+  'crates/keycord-preferences/data/io.github.noobping.keycord.gschema.xml',
   rename: 'io.github.noobping.keycord.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas'),
 )
 
 install_data(
-  'data/metainfo.xml',
+  'crates/keycord-lifecycle/data/metainfo.xml',
   rename: 'io.github.noobping.keycord.metainfo.xml',
   install_dir: join_paths(get_option('datadir'), 'metainfo'),
 )

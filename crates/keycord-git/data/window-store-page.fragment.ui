@@ -1,0 +1,77 @@
+                <child>
+                  <object class="AdwNavigationPage" id="store_git_page">
+                    <property name="title" translatable="yes">Git remotes</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSearchEntry" id="store_git_search_entry">
+                            <property name="visible">false</property>
+                            <property name="placeholder-text" translatable="yes">Search Git remotes</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkScrolledWindow" id="store_git_page_scrolled">
+                            <property name="vscrollbar-policy">automatic</property>
+                            <property name="hscrollbar-policy">never</property>
+                            <property name="propagate-natural-width">true</property>
+                            <property name="propagate-natural-height">true</property>
+                            <child>
+                              <object class="AdwPreferencesPage" id="store_git_preferences_page">
+                            <child>
+                              <object class="AdwPreferencesGroup">
+                                <property name="visible">false</property>
+                                <child>
+                                  <object class="AdwActionRow" id="store_git_back_row">
+                                    <property name="title" translatable="yes">Back to Store keys</property>
+                                    <property name="activatable">True</property>
+                                    <child type="prefix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">go-previous-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_git_remotes_list">
+                                <property name="title" translatable="yes">Remotes</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_git_actions_list">
+                                <property name="title" translatable="yes">Actions</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_git_status_list">
+                                <property name="title" translatable="yes">Status</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_git_access_list">
+                                <property name="visible">false</property>
+                                <property name="title" translatable="yes">Host access</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_git_search_empty_group">
+                                <property name="visible">false</property>
+                                <child>
+                                  <object class="AdwActionRow">
+                                    <property name="title" translatable="yes">No matching Git remotes</property>
+                                    <property name="subtitle" translatable="yes">Try a different search term.</property>
+                                    <property name="activatable">False</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                    </child>
+                  </object>
+                </child>

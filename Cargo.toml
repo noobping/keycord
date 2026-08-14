@@ -1,6 +1,34 @@
 [package]
 name = "keycord"
 description = "Browse and edit password stores"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[workspace]
+members = [
+    "crates/keycord-architecture",
+    "crates/keycord-docs",
+    "crates/keycord-entries",
+    "crates/keycord-fido",
+    "crates/keycord-git",
+    "crates/keycord-keys",
+    "crates/keycord-lifecycle",
+    "crates/keycord-passkey",
+    "crates/keycord-preferences",
+    "crates/keycord-runtime",
+    "crates/keycord-shell",
+    "crates/keycord-stores",
+    "crates/keycord-ui-fragments",
+]
+default-members = ["."]
+resolver = "2"
+
+[workspace.package]
 authors = ["noobping <hello@noobping.dev>"]
 version = "0.9.12"
 edition = "2021"
@@ -8,68 +36,91 @@ license = "GPL-3.0-only"
 homepage = "https://github.com/noobping/keycord"
 repository = "https://github.com/noobping/keycord"
 
+[workspace.dependencies]
+keycord-docs = { path = "crates/keycord-docs", default-features = false }
+keycord-entries = { path = "crates/keycord-entries", default-features = false }
+keycord-fido = { path = "crates/keycord-fido", default-features = false }
+keycord-git = { path = "crates/keycord-git", default-features = false }
+keycord-keys = { path = "crates/keycord-keys", default-features = false }
+keycord-lifecycle = { path = "crates/keycord-lifecycle", default-features = false }
+keycord-passkey = { path = "crates/keycord-passkey", default-features = false }
+keycord-preferences = { path = "crates/keycord-preferences", default-features = false }
+keycord-runtime = { path = "crates/keycord-runtime", default-features = false }
+keycord-shell = { path = "crates/keycord-shell", default-features = false }
+keycord-stores = { path = "crates/keycord-stores", default-features = false }
+keycord-ui-fragments = { path = "crates/keycord-ui-fragments", default-features = false }
+
 [features]
-audit = []
+audit = [
+    "dep:sequoia-openpgp",
+    "keycord-git/audit",
+    "keycord-keys/audit",
+]
 default = []
-docs = ["dep:pulldown-cmark"]
-fidokey = ["dep:base64", "dep:fido2-rs", "dep:hmac", "dep:openssl"]
-fidopin = ["dep:libfido2-sys"]
-flatpak = ["docs", "audit", "smartcard", "logging", "passkey"]
-hardwarekey = ["smartcard"]
-logging = []
-passkey = ["dep:base64", "dep:openssl", "dep:serde_json"]
-setup = ["dep:semver", "dep:reqwest", "docs", "audit", "smartcard", "logging"]
-smartcard = ["dep:card-backend-pcsc", "dep:openpgp-card"]
+docs = ["keycord-docs/docs"]
+fidokey = [
+    "dep:keycord-fido",
+    "keycord-fido/native-transport",
+    "keycord-fido/ui",
+    "keycord-keys/fido-ui",
+]
+fidopin = [
+    "fidokey",
+    "keycord-fido/pin-setup",
+    "keycord-keys/fidopin",
+]
+flatpak = [
+    "docs",
+    "audit",
+    "smartcard",
+    "logging",
+    "passkey",
+    "keycord-preferences/flatpak",
+    "keycord-git/flatpak",
+    "keycord-lifecycle/flatpak",
+    "keycord-keys/flatpak",
+    "keycord-fido?/flatpak",
+    "keycord-runtime/flatpak",
+]
+hardwarekey = ["smartcard", "keycord-keys/hardwarekey"]
+logging = ["keycord-shell/logging"]
+passkey = [
+    "keycord-entries/passkey",
+    "keycord-passkey/passkey",
+    "keycord-passkey/ui",
+]
+setup = [
+    "docs",
+    "audit",
+    "smartcard",
+    "logging",
+    "keycord-lifecycle/setup",
+]
+smartcard = ["keycord-keys/smartcard"]
 
 [dependencies]
-thiserror = "2.0"
+keycord-docs = { workspace = true, default-features = false, features = ["ui"] }
+keycord-entries = { workspace = true, features = ["ui"] }
+keycord-fido = { workspace = true, optional = true, default-features = false }
+keycord-git = { workspace = true, features = ["ui"] }
+keycord-lifecycle = { workspace = true, features = ["ui"] }
+keycord-keys = { workspace = true, features = ["ui"] }
+keycord-passkey = { workspace = true, default-features = false }
+keycord-preferences = { workspace = true, features = ["ui"] }
+keycord-runtime.workspace = true
+keycord-shell.workspace = true
+keycord-stores = { workspace = true, features = ["ui"] }
 adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"] }
-walkdir = "2.5.0"
-toml = "1.1.4"
-serde = { version = "1.0.229", features = ["derive"] }
-ripasso = "0.8.0"
-sequoia-openpgp = "2.4.1"
+sequoia-openpgp = { version = "2.4.1", optional = true }
 dirs-next = "2.0.0"
-shellexpand = "3.1.2"
-totp-rs = { version = "6.0.0", features = ["otpauth"] }
-rand = "0.10.2"
-regex = "1.13.1"
-zeroize = { version = "1.9.0", features = [ "alloc" ] }
-secrecy = "0.10.3"
-pulldown-cmark = { version = "0.13.4", optional = true }
-fido2-rs = { version = "0.5.0", optional = true }
-base64 = { version = "0.23.1", optional = true }
-hmac = { version = "0.13.0", optional = true }
-openssl = { version = "0.10.81", optional = true }
-sha2 = "0.11.0"
-url = "2.5.8"
-qrcode = { version = "0.14.1", default-features = false }
-serde_json = { version = "1.0.151", optional = true }
-
-[target.'cfg(target_os = "linux")'.dependencies]
-anyhow = "1.0"
-libc = "0.2"
-shlex = "2.0.1"
-card-backend-pcsc = { version = "0.5.2", optional = true }
-libfido2-sys = { version = "0.5.1", optional = true }
-openpgp-card = { version = "0.7.0", optional = true }
-semver = { version = "1.0.28", optional = true }
-reqwest = { version = "0.13.4", optional = true, default-features = false, features = ["blocking", "json", "rustls"] }
 
 [build-dependencies]
-glib-build-tools = "0.22.8"
+keycord-lifecycle = { workspace = true, features = ["build-support"] }
+keycord-passkey = { workspace = true, default-features = false }
 
-[target.'cfg(target_os = "windows")'.build-dependencies]
-winresource = "0.1.31"
-
-[target.'cfg(target_os = "windows")'.dependencies]
-semver = "1.0.28"
-reqwest = { version = "0.13.4", default-features = false, features = ["blocking", "json", "rustls"] }
-winsafe = { version = "0.0.28", features = ["shell"] }
-windows-sys = { version = "0.61.2", features = [
-    "Win32_Foundation",
-    "Win32_Security",
-    "Win32_Security_Authorization",
-    "Win32_System_SystemServices",
-    "Win32_System_Threading",
-] }
+[dev-dependencies]
+keycord-fido = { workspace = true, features = ["test-support"] }
+keycord-keys = { workspace = true, features = ["test-support"] }
+ripasso = "0.8.0"
+secrecy = "0.10.3"
+sequoia-openpgp = "2.4.1"

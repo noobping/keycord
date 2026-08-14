@@ -1,0 +1,789 @@
+use crate::PasswordGenerationSettings;
+use gio::{self, prelude::*, Settings};
+use glib::BoolError;
+use serde::{Deserialize, Serialize};
+use std::path::PathBuf;
+
+use crate::restricted::default_store_dirs;
+use crate::storage::{load_file_prefs, save_file_prefs, PreferenceFile};
+
+const DEFAULT_NEW_PASS_FILE_TEMPLATE: &str = "username:\nemail:\nurl:";
+const DEFAULT_WINDOW_WIDTH: i32 = 850;
+const DEFAULT_WINDOW_HEIGHT: i32 = 600;
+#[cfg(all(debug_assertions, not(feature = "flatpak")))]
+const APP_ID: &str = "io.github.noobping.keycord-beta";
+#[cfg(any(not(debug_assertions), feature = "flatpak"))]
+const APP_ID: &str = "io.github.noobping.keycord";
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum BackendKind {
+    Integrated,
+    HostCommand,
+}
+
+pub(crate) const fn default_backend_kind() -> BackendKind {
+    BackendKind::Integrated
+}
+
+impl BackendKind {
+    pub const fn stored_value(self) -> &'static str {
+        match self {
+            Self::Integrated => "integrated",
+            Self::HostCommand => "host",
+        }
+    }
+
+    pub fn from_stored(value: &str) -> Self {
+        match value.trim().to_ascii_lowercase().as_str() {
+            "integrated" => Self::Integrated,
+            "host" => Self::HostCommand,
+            _ => default_backend_kind(),
+        }
+    }
+
+    pub const fn label(self) -> &'static str {
+        match self {
+            Self::Integrated => "Integrated",
+            Self::HostCommand => "Host",
+        }
+    }
+
+    pub const fn uses_host_command(self) -> bool {
+        matches!(self, Self::HostCommand)
+    }
+}
+
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum UsernameFallbackMode {
+    Folder,
+    #[default]
+    Filename,
+}
+
+impl UsernameFallbackMode {
+    pub const fn stored_value(self) -> &'static str {
+        match self {
+            Self::Folder => "folder",
+            Self::Filename => "filename",
+        }
+    }
+
+    pub fn from_stored(value: &str) -> Self {
+        match value.trim().to_ascii_lowercase().as_str() {
+            "filename" | "file" | "name" => Self::Filename,
+            _ => Self::Folder,
+        }
+    }
+}
+
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum PasswordListSortMode {
+    Filename,
+    #[default]
+    Hybrid,
+    StorePath,
+}
+
+impl PasswordListSortMode {
+    pub const fn stored_value(self) -> &'static str {
+        match self {
+            Self::Filename => "filename",
+            Self::Hybrid => "hybrid",
+            Self::StorePath => "store-path",
+        }
+    }
+
+    pub fn from_stored(value: &str) -> Self {
+        match value.trim().to_ascii_lowercase().as_str() {
+            "filename" | "file" | "name" => Self::Filename,
+            "hybrid" | "mixed" => Self::Hybrid,
+            "store-path" | "store" | "path" | "folder" | "folders" => Self::StorePath,
+            _ => Self::default(),
+        }
+    }
+
+    pub const fn render_mode(self, search_active: bool) -> Self {
+        match (self, search_active) {
+            (Self::Hybrid, true) => Self::Filename,
+            (Self::Hybrid, false) => Self::StorePath,
+            _ => self,
+        }
+    }
+}
+
+#[derive(Debug, Clone)]
+pub struct Preferences {
+    settings: Option<Settings>,
+}
+
+impl Default for Preferences {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+impl Preferences {
+    pub fn new() -> Self {
+        Self {
+            settings: Self::try_settings(),
+        }
+    }
+
+    pub(crate) fn read_preference<T>(
+        &self,
+        read_settings: impl FnOnce(&Settings) -> T,
+        read_file: impl FnOnce(&PreferenceFile) -> T,
+    ) -> T {
+        self.settings
+            .as_ref()
+            .map_or_else(|| read_file(&load_file_prefs()), read_settings)
+    }
+
+    pub(crate) fn write_preference(
+        &self,
+        write_settings: impl FnOnce(&Settings) -> Result<(), BoolError>,
+        write_file: impl FnOnce(&mut PreferenceFile),
+    ) -> Result<(), BoolError> {
+        self.settings.as_ref().map_or_else(
+            || {
+                let mut cfg = load_file_prefs();
+                write_file(&mut cfg);
+                save_file_prefs(&cfg)
+            },
+            write_settings,
+        )
+    }
+
+    fn try_settings() -> Option<Settings> {
+        let source = gio::SettingsSchemaSource::default()?;
+        let _schema = source.lookup(APP_ID, true)?;
+        Some(Settings::new(APP_ID))
+    }
+
+    fn expand_path(s: &str) -> String {
+        shellexpand::full(s).map_or_else(|_| s.to_string(), std::borrow::Cow::into_owned)
+    }
+
+    fn stored_window_dimension(value: Option<i32>, default: i32) -> i32 {
+        value.filter(|value| *value > 0).unwrap_or(default)
+    }
+
+    fn normalized_hidden_notices(notices: Vec<String>) -> Vec<String> {
+        let mut notices = notices
+            .into_iter()
+            .map(|notice| notice.trim().to_string())
+            .filter(|notice| !notice.is_empty())
+            .collect::<Vec<_>>();
+        notices.sort();
+        notices.dedup();
+        notices
+    }
+
+    fn normalized_filter_values(mut values: Vec<String>) -> Vec<String> {
+        values.retain(|value| !value.is_empty());
+        values.sort();
+        values.dedup();
+        values
+    }
+
+    fn resolved_store_dirs(stores: Option<Vec<String>>) -> Vec<String> {
+        stores.unwrap_or_else(default_store_dirs)
+    }
+
+    pub fn store_roots(&self) -> Vec<String> {
+        self.stores()
+            .into_iter()
+            .map(|store| Self::expand_path(&store))
+            .collect()
+    }
+
+    pub fn window_size(&self) -> (i32, i32) {
+        self.read_preference(
+            |settings| {
+                (
+                    Self::stored_window_dimension(
+                        Some(settings.int("window-width")),
+                        DEFAULT_WINDOW_WIDTH,
+                    ),
+                    Self::stored_window_dimension(
+                        Some(settings.int("window-height")),
+                        DEFAULT_WINDOW_HEIGHT,
+                    ),
+                )
+            },
+            |cfg| {
+                (
+                    Self::stored_window_dimension(cfg.window_width, DEFAULT_WINDOW_WIDTH),
+                    Self::stored_window_dimension(cfg.window_height, DEFAULT_WINDOW_HEIGHT),
+                )
+            },
+        )
+    }
+
+    pub fn store(&self) -> String {
+        self.store_roots().into_iter().next().unwrap_or_default()
+    }
+
+    pub fn new_pass_file_template(&self) -> String {
+        self.read_preference(
+            |settings| settings.string("new-pass-file-template").to_string(),
+            |cfg| {
+                cfg.new_pass_file_template
+                    .clone()
+                    .unwrap_or_else(|| DEFAULT_NEW_PASS_FILE_TEMPLATE.to_string())
+            },
+        )
+    }
+
+    pub fn clear_empty_fields_before_save(&self) -> bool {
+        self.read_preference(
+            |settings| settings.boolean("clear-empty-fields-before-save"),
+            |cfg| cfg.clear_empty_fields_before_save.unwrap_or(false),
+        )
+    }
+
+    pub fn password_generation_settings(&self) -> PasswordGenerationSettings {
+        self.read_preference(
+            |settings| {
+                PasswordGenerationSettings {
+                    length: settings.uint("password-generator-length"),
+                    min_lowercase: settings.uint("password-generator-min-lowercase"),
+                    min_uppercase: settings.uint("password-generator-min-uppercase"),
+                    min_numbers: settings.uint("password-generator-min-numbers"),
+                    min_symbols: settings.uint("password-generator-min-symbols"),
+                }
+                .normalized()
+            },
+            |cfg| {
+                cfg.password_generation
+                    .clone()
+                    .unwrap_or_default()
+                    .normalized()
+            },
+        )
+    }
+
+    pub fn username_fallback_mode(&self) -> UsernameFallbackMode {
+        self.read_preference(
+            |settings| {
+                UsernameFallbackMode::from_stored(&settings.string("username-fallback-mode"))
+            },
+            |cfg| cfg.username_fallback_mode.unwrap_or_default(),
+        )
+    }
+
+    pub fn password_list_sort_mode(&self) -> PasswordListSortMode {
+        self.read_preference(
+            |settings| {
+                PasswordListSortMode::from_stored(&settings.string("password-list-sort-mode"))
+            },
+            |cfg| cfg.password_list_sort_mode.unwrap_or_default(),
+        )
+    }
+
+    pub fn stores(&self) -> Vec<String> {
+        self.read_preference(
+            |settings| {
+                Self::resolved_store_dirs(settings.user_value("password-store-dirs").map(|_| {
+                    settings
+                        .strv("password-store-dirs")
+                        .iter()
+                        .map(std::string::ToString::to_string)
+                        .collect()
+                }))
+            },
+            |cfg| Self::resolved_store_dirs(cfg.password_store_dirs.clone()),
+        )
+    }
+
+    pub fn paths(&self) -> Vec<PathBuf> {
+        self.store_roots().into_iter().map(PathBuf::from).collect()
+    }
+
+    pub fn set_stores(&self, stores: Vec<String>) -> Result<(), BoolError> {
+        let settings_stores = stores.clone();
+        self.write_preference(
+            |settings| settings.set_strv("password-store-dirs", settings_stores.clone()),
+            |cfg| cfg.password_store_dirs = Some(stores),
+        )
+    }
+
+    pub fn set_window_size(&self, width: i32, height: i32) -> Result<(), BoolError> {
+        let width = Self::stored_window_dimension(Some(width), DEFAULT_WINDOW_WIDTH);
+        let height = Self::stored_window_dimension(Some(height), DEFAULT_WINDOW_HEIGHT);
+        self.write_preference(
+            |settings| {
+                settings.set_int("window-width", width)?;
+                settings.set_int("window-height", height)?;
+                Ok(())
+            },
+            |cfg| {
+                cfg.window_width = Some(width);
+                cfg.window_height = Some(height);
+            },
+        )
+    }
+
+    pub fn set_new_pass_file_template(&self, template: &str) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_string("new-pass-file-template", template),
+            |cfg| cfg.new_pass_file_template = Some(template.to_string()),
+        )
+    }
+
+    pub fn set_clear_empty_fields_before_save(&self, enabled: bool) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_boolean("clear-empty-fields-before-save", enabled),
+            |cfg| cfg.clear_empty_fields_before_save = Some(enabled),
+        )
+    }
+
+    pub fn set_password_generation_settings(
+        &self,
+        settings: &PasswordGenerationSettings,
+    ) -> Result<(), BoolError> {
+        let settings = settings.normalized();
+        let file_settings = settings.clone();
+        self.write_preference(
+            |gio_settings| {
+                gio_settings.set_uint("password-generator-length", settings.length)?;
+                gio_settings
+                    .set_uint("password-generator-min-lowercase", settings.min_lowercase)?;
+                gio_settings
+                    .set_uint("password-generator-min-uppercase", settings.min_uppercase)?;
+                gio_settings.set_uint("password-generator-min-numbers", settings.min_numbers)?;
+                gio_settings.set_uint("password-generator-min-symbols", settings.min_symbols)?;
+                Ok(())
+            },
+            |cfg| cfg.password_generation = Some(file_settings),
+        )
+    }
+
+    pub fn set_username_fallback_mode(&self, mode: UsernameFallbackMode) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_string("username-fallback-mode", mode.stored_value()),
+            |cfg| cfg.username_fallback_mode = Some(mode),
+        )
+    }
+
+    pub fn set_password_list_sort_mode(&self, mode: PasswordListSortMode) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_string("password-list-sort-mode", mode.stored_value()),
+            |cfg| cfg.password_list_sort_mode = Some(mode),
+        )
+    }
+
+    pub fn prune_missing_stores(&self) -> Result<bool, BoolError> {
+        let stores = self.stores();
+        let existing = stores
+            .iter()
+            .filter(|store| Self::store_dir_exists(store))
+            .cloned()
+            .collect::<Vec<_>>();
+
+        if existing.len() == stores.len() {
+            Ok(false)
+        } else {
+            self.set_stores(existing)?;
+            Ok(true)
+        }
+    }
+
+    fn store_dir_exists(store: &str) -> bool {
+        let path = PathBuf::from(Self::expand_path(store));
+        path.exists() && path.is_dir()
+    }
+
+    pub fn sync_private_keys_with_host(&self) -> bool {
+        self.read_preference(
+            |settings| settings.boolean("sync-private-keys-with-host"),
+            |cfg| cfg.sync_private_keys_with_host.unwrap_or(false),
+        )
+    }
+
+    pub fn set_sync_private_keys_with_host(&self, enabled: bool) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_boolean("sync-private-keys-with-host", enabled),
+            |cfg| cfg.sync_private_keys_with_host = Some(enabled),
+        )
+    }
+
+    pub fn audit_use_commit_history_recipients(&self) -> bool {
+        self.read_preference(
+            |settings| settings.boolean("audit-use-commit-history-recipients"),
+            |cfg| cfg.audit_use_commit_history_recipients.unwrap_or(false),
+        )
+    }
+
+    pub fn set_audit_use_commit_history_recipients(&self, enabled: bool) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_boolean("audit-use-commit-history-recipients", enabled),
+            |cfg| cfg.audit_use_commit_history_recipients = Some(enabled),
+        )
+    }
+
+    pub fn filter_included_store_roots(&self) -> Option<Vec<String>> {
+        self.read_preference(
+            |settings| {
+                settings.user_value("filter-included-store-roots").map(|_| {
+                    Self::normalized_filter_values(
+                        settings
+                            .strv("filter-included-store-roots")
+                            .iter()
+                            .map(std::string::ToString::to_string)
+                            .collect(),
+                    )
+                })
+            },
+            |cfg| {
+                cfg.filter_included_store_roots
+                    .clone()
+                    .map(Self::normalized_filter_values)
+            },
+        )
+    }
+
+    pub fn set_filter_included_store_roots(&self, roots: Vec<String>) -> Result<(), BoolError> {
+        let roots = Self::normalized_filter_values(roots);
+        let settings_roots = roots.clone();
+        self.write_preference(
+            |settings| settings.set_strv("filter-included-store-roots", settings_roots.clone()),
+            |cfg| cfg.filter_included_store_roots = Some(roots),
+        )
+    }
+
+    pub fn audit_filter_included_branches(&self) -> Option<Vec<String>> {
+        self.read_preference(
+            |settings| {
+                settings
+                    .user_value("audit-filter-included-branches")
+                    .map(|_| {
+                        Self::normalized_filter_values(
+                            settings
+                                .strv("audit-filter-included-branches")
+                                .iter()
+                                .map(std::string::ToString::to_string)
+                                .collect(),
+                        )
+                    })
+            },
+            |cfg| {
+                cfg.audit_filter_included_branches
+                    .clone()
+                    .map(Self::normalized_filter_values)
+            },
+        )
+    }
+
+    pub fn set_audit_filter_included_branches(
+        &self,
+        branches: Vec<String>,
+    ) -> Result<(), BoolError> {
+        let branches = Self::normalized_filter_values(branches);
+        let settings_branches = branches.clone();
+        self.write_preference(
+            |settings| {
+                settings.set_strv("audit-filter-included-branches", settings_branches.clone())
+            },
+            |cfg| cfg.audit_filter_included_branches = Some(branches),
+        )
+    }
+
+    pub fn hidden_notices(&self) -> Vec<String> {
+        Self::normalized_hidden_notices(self.read_preference(
+            |settings| {
+                settings
+                    .strv("hidden-notices")
+                    .iter()
+                    .map(std::string::ToString::to_string)
+                    .collect()
+            },
+            |cfg| cfg.hidden_notices.clone().unwrap_or_default(),
+        ))
+    }
+
+    pub fn is_notice_hidden(&self, notice_id: &str) -> bool {
+        let notice_id = notice_id.trim();
+        !notice_id.is_empty()
+            && self
+                .hidden_notices()
+                .iter()
+                .any(|hidden| hidden == notice_id)
+    }
+
+    pub fn hide_notice(&self, notice_id: &str) -> Result<(), BoolError> {
+        let notice_id = notice_id.trim();
+        if notice_id.is_empty() {
+            return Ok(());
+        }
+
+        let mut hidden_notices = self.hidden_notices();
+        hidden_notices.push(notice_id.to_string());
+        let hidden_notices = Self::normalized_hidden_notices(hidden_notices);
+        let settings_hidden_notices = hidden_notices.clone();
+        self.write_preference(
+            |settings| settings.set_strv("hidden-notices", settings_hidden_notices.clone()),
+            |cfg| cfg.hidden_notices = Some(hidden_notices),
+        )
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{
+        default_backend_kind, default_store_dirs, BackendKind, PasswordListSortMode, Preferences,
+        UsernameFallbackMode, DEFAULT_WINDOW_HEIGHT, DEFAULT_WINDOW_WIDTH,
+    };
+    use crate::PasswordGenerationSettings;
+    use std::time::{SystemTime, UNIX_EPOCH};
+
+    fn expected_default_store_dirs() -> Vec<String> {
+        std::env::var("HOME")
+            .map(|home| vec![format!("{home}/.password-store")])
+            .unwrap_or_default()
+    }
+
+    #[test]
+    fn default_store_dirs_match_build_mode() {
+        assert_eq!(default_store_dirs(), expected_default_store_dirs());
+    }
+
+    #[test]
+    fn store_dirs_default_when_unset() {
+        assert_eq!(
+            Preferences::resolved_store_dirs(None),
+            expected_default_store_dirs()
+        );
+    }
+
+    #[test]
+    fn store_dirs_keep_explicit_empty_lists() {
+        assert_eq!(
+            Preferences::resolved_store_dirs(Some(Vec::<String>::new())),
+            Vec::<String>::new()
+        );
+    }
+
+    #[test]
+    fn default_backend_matches_build_mode() {
+        assert_eq!(default_backend_kind(), BackendKind::Integrated);
+    }
+
+    #[test]
+    fn backend_storage_accepts_only_current_names() {
+        assert_eq!(BackendKind::Integrated.stored_value(), "integrated");
+        assert_eq!(BackendKind::HostCommand.stored_value(), "host");
+        assert_eq!(
+            BackendKind::from_stored("integrated"),
+            BackendKind::Integrated
+        );
+        assert_eq!(BackendKind::from_stored("host"), BackendKind::HostCommand);
+        assert_eq!(
+            BackendKind::from_stored("host-command"),
+            BackendKind::Integrated
+        );
+        assert_eq!(BackendKind::from_stored("pass"), BackendKind::Integrated);
+    }
+
+    #[test]
+    fn backend_kind_capabilities_match_expected_backends() {
+        assert!(!BackendKind::Integrated.uses_host_command());
+        assert!(BackendKind::HostCommand.uses_host_command());
+    }
+
+    #[test]
+    fn missing_store_paths_are_filtered_out() {
+        let nanos = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .expect("clock before unix epoch")
+            .as_nanos();
+        let existing = std::env::temp_dir().join(format!("passwordstore-test-{nanos}"));
+        std::fs::create_dir_all(&existing).expect("create temp store dir");
+
+        assert!(Preferences::store_dir_exists(
+            existing.to_string_lossy().as_ref()
+        ));
+        assert!(!Preferences::store_dir_exists(
+            existing.join("missing").to_string_lossy().as_ref()
+        ));
+
+        std::fs::remove_dir_all(&existing).expect("remove temp store dir");
+    }
+
+    #[test]
+    fn password_generation_settings_default_to_a_usable_configuration() {
+        let settings = Preferences::new().password_generation_settings();
+
+        assert!(settings.length >= settings.minimum_length());
+        assert!(settings.minimum_length() > 0);
+    }
+
+    #[test]
+    fn password_generation_settings_normalize_disabled_classes_with_minimums() {
+        let settings = PasswordGenerationSettings {
+            length: 6,
+            min_lowercase: 2,
+            min_uppercase: 1,
+            min_numbers: 5,
+            min_symbols: 0,
+        }
+        .normalized();
+
+        assert_eq!(settings.length, 8);
+    }
+
+    #[test]
+    fn username_fallback_mode_defaults_to_filename() {
+        assert_eq!(
+            UsernameFallbackMode::default(),
+            UsernameFallbackMode::Filename
+        );
+    }
+
+    #[test]
+    fn username_fallback_mode_storage_accepts_current_names() {
+        assert_eq!(UsernameFallbackMode::Folder.stored_value(), "folder");
+        assert_eq!(UsernameFallbackMode::Filename.stored_value(), "filename");
+        assert_eq!(
+            UsernameFallbackMode::from_stored("folder"),
+            UsernameFallbackMode::Folder
+        );
+        assert_eq!(
+            UsernameFallbackMode::from_stored("filename"),
+            UsernameFallbackMode::Filename
+        );
+    }
+
+    #[test]
+    fn password_list_sort_mode_defaults_to_hybrid() {
+        assert_eq!(
+            PasswordListSortMode::default(),
+            PasswordListSortMode::Hybrid
+        );
+    }
+
+    #[test]
+    fn password_list_sort_mode_storage_accepts_current_names() {
+        assert_eq!(PasswordListSortMode::Filename.stored_value(), "filename");
+        assert_eq!(PasswordListSortMode::Hybrid.stored_value(), "hybrid");
+        assert_eq!(PasswordListSortMode::StorePath.stored_value(), "store-path");
+        assert_eq!(
+            PasswordListSortMode::from_stored("filename"),
+            PasswordListSortMode::Filename
+        );
+        assert_eq!(
+            PasswordListSortMode::from_stored("hybrid"),
+            PasswordListSortMode::Hybrid
+        );
+        assert_eq!(
+            PasswordListSortMode::from_stored("store-path"),
+            PasswordListSortMode::StorePath
+        );
+    }
+
+    #[test]
+    fn password_list_sort_mode_hybrid_renders_by_context() {
+        assert_eq!(
+            PasswordListSortMode::Hybrid.render_mode(false),
+            PasswordListSortMode::StorePath
+        );
+        assert_eq!(
+            PasswordListSortMode::Hybrid.render_mode(true),
+            PasswordListSortMode::Filename
+        );
+        assert_eq!(
+            PasswordListSortMode::Filename.render_mode(true),
+            PasswordListSortMode::Filename
+        );
+        assert_eq!(
+            PasswordListSortMode::StorePath.render_mode(true),
+            PasswordListSortMode::StorePath
+        );
+    }
+
+    #[test]
+    fn filter_values_are_sorted_deduplicated_and_keep_exact_labels() {
+        assert_eq!(
+            Preferences::normalized_filter_values(vec![
+                "work".to_string(),
+                " personal ".to_string(),
+                String::new(),
+                "work".to_string(),
+            ]),
+            vec![" personal ".to_string(), "work".to_string()]
+        );
+    }
+
+    #[test]
+    fn hidden_notice_ids_are_normalized() {
+        assert_eq!(
+            Preferences::normalized_hidden_notices(vec![
+                " store-warning ".to_string(),
+                "".to_string(),
+                "store-warning".to_string(),
+                "usb-permission".to_string(),
+            ]),
+            vec!["store-warning".to_string(), "usb-permission".to_string()]
+        );
+    }
+
+    #[test]
+    fn password_list_sort_mode_invalid_values_fall_back_to_hybrid() {
+        assert_eq!(
+            PasswordListSortMode::from_stored("unexpected"),
+            PasswordListSortMode::Hybrid
+        );
+    }
+
+    #[test]
+    fn private_key_sync_defaults_to_disabled() {
+        assert!(!Preferences::new().sync_private_keys_with_host());
+    }
+
+    #[test]
+    fn audit_history_recipient_fallback_defaults_to_disabled() {
+        assert_eq!(
+            crate::storage::PreferenceFile::default().audit_use_commit_history_recipients,
+            None
+        );
+    }
+
+    #[test]
+    fn clear_empty_fields_before_save_defaults_to_disabled() {
+        assert!(!Preferences::new().clear_empty_fields_before_save());
+    }
+
+    #[test]
+    fn invalid_window_dimensions_fall_back_to_the_default_size() {
+        assert_eq!(
+            Preferences::stored_window_dimension(Some(0), DEFAULT_WINDOW_WIDTH),
+            DEFAULT_WINDOW_WIDTH
+        );
+        assert_eq!(
+            Preferences::stored_window_dimension(Some(-1), DEFAULT_WINDOW_HEIGHT),
+            DEFAULT_WINDOW_HEIGHT
+        );
+        assert_eq!(
+            Preferences::stored_window_dimension(Some(900), DEFAULT_WINDOW_WIDTH),
+            900
+        );
+    }
+
+    #[test]
+    fn window_size_defaults_match_the_ui_defaults() {
+        assert_eq!(DEFAULT_WINDOW_WIDTH, 850);
+        assert_eq!(DEFAULT_WINDOW_HEIGHT, 600);
+    }
+
+    #[test]
+    fn application_id_keeps_the_product_identity() {
+        #[cfg(all(debug_assertions, not(feature = "flatpak")))]
+        assert_eq!(super::APP_ID, "io.github.noobping.keycord-beta");
+
+        #[cfg(any(not(debug_assertions), feature = "flatpak"))]
+        assert_eq!(super::APP_ID, "io.github.noobping.keycord");
+    }
+}

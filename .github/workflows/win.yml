@@ -90,7 +90,7 @@ jobs:
         run: rustup target add x86_64-pc-windows-gnu
 
       - name: Build
-        run: cargo build --release --target x86_64-pc-windows-gnu
+        run: cargo build --package keycord --locked --release --target x86_64-pc-windows-gnu
 
       - name: Bundle
         shell: pwsh
@@ -122,21 +122,27 @@ jobs:
           $mingwRoot = 'C:\tools\msys64\mingw64'
           $shareDir = Join-Path $bundleDir 'share'
 
-          $iconSourceDir = Join-Path $workspace 'data\scalable\apps'
+          $iconSourceDir = Join-Path $workspace 'crates\keycord-lifecycle\data\branding\scalable\apps'
           $iconTargetDir = Join-Path $shareDir 'icons\hicolor\scalable\apps'
           if (Test-Path $iconSourceDir) {
             New-Item -ItemType Directory -Path $iconTargetDir -Force | Out-Null
             Copy-Item (Join-Path $iconSourceDir '*.svg') $iconTargetDir -Force
           }
 
-          $iconSourceDir = Join-Path $workspace 'data\symbolic\apps'
           $iconTargetDir = Join-Path $shareDir 'icons\hicolor\symbolic\apps'
-          if (Test-Path $iconSourceDir) {
-            New-Item -ItemType Directory -Path $iconTargetDir -Force | Out-Null
-            Copy-Item (Join-Path $iconSourceDir '*.svg') $iconTargetDir -Force
+          New-Item -ItemType Directory -Path $iconTargetDir -Force | Out-Null
+          $iconSourceDirs = @(
+            (Join-Path $workspace 'crates\keycord-shell\data\symbolic\apps'),
+            (Join-Path $workspace 'crates\keycord-lifecycle\data\branding\symbolic\apps'),
+            (Join-Path $workspace 'crates\keycord-git\data\symbolic\apps')
+          )
+          foreach ($iconSourceDir in $iconSourceDirs) {
+            if (Test-Path $iconSourceDir) {
+              Copy-Item (Join-Path $iconSourceDir '*.svg') $iconTargetDir -Force
+            }
           }
 
-          $icon256SourceDir = Join-Path $workspace 'data\256x256\apps'
+          $icon256SourceDir = Join-Path $workspace 'crates\keycord-lifecycle\data\branding\256x256\apps'
           $icon256TargetDir = Join-Path $shareDir 'icons\hicolor\256x256\apps'
           if (Test-Path $icon256SourceDir) {
             New-Item -ItemType Directory -Path $icon256TargetDir -Force | Out-Null
@@ -322,7 +328,7 @@ jobs:
             -dBundleDir="$(Resolve-Path bundle)" `
             -dProductVersion="$ver" `
             -out wix\generated\ `
-            data\keycord.wxs `
+            crates\keycord-lifecycle\data\branding\keycord.wxs `
             wix\generated\AppFiles.wxs
 
           & $light `
@@ -366,4 +372,3 @@ jobs:
         with:
           tag_name: ${{ env.LATEST_TAG }}
           files: dist/keycord.msi
-          overwrite_files: true

@@ -1,0 +1,37 @@
+[package]
+name = "keycord-passkey"
+description = "Passkey credential storage and local CXF/CXP workflows for Keycord"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[features]
+default = []
+passkey = [
+    "dep:base64",
+    "dep:libc",
+    "dep:openssl",
+    "dep:rand",
+    "dep:serde",
+    "dep:serde_json",
+    "dep:thiserror",
+    "dep:zeroize",
+]
+ui = ["passkey", "dep:adw"]
+
+[dependencies]
+adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
+base64 = { version = "0.23.1", optional = true }
+openssl = { version = "0.10.81", optional = true }
+rand = { version = "0.10.2", optional = true }
+serde = { version = "1.0.229", features = ["derive"], optional = true }
+serde_json = { version = "1.0.151", optional = true }
+thiserror = { version = "2.0", optional = true }
+zeroize = { version = "1.9.0", features = ["alloc"], optional = true }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = { version = "0.2", optional = true }

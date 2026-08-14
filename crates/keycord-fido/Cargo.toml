@@ -1,0 +1,37 @@
+[package]
+name = "keycord-fido"
+description = "FIDO2 hmac-secret protection for Keycord"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[features]
+default = []
+flatpak = []
+native-transport = ["dep:fido2-rs"]
+pin-setup = ["native-transport", "dep:libfido2-sys"]
+test-support = []
+ui = ["dep:adw", "dep:keycord-shell", "dep:secrecy"]
+
+[dependencies]
+adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
+base64 = "0.23.1"
+fido2-rs = { version = "0.5.0", optional = true }
+hmac = "0.13.0"
+keycord-runtime.workspace = true
+keycord-shell = { workspace = true, optional = true }
+openssl = "0.10.81"
+rand = "0.10.2"
+secrecy = { version = "0.10.3", optional = true }
+serde = { version = "1.0.229", features = ["derive"] }
+sha2 = "0.11.0"
+thiserror = "2.0"
+toml = "1.1.4"
+zeroize = { version = "1.9.0", features = ["alloc"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libfido2-sys = { version = "0.5.1", optional = true }

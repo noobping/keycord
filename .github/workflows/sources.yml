@@ -46,15 +46,15 @@ jobs:
           python3 -m pip show tomlkit aiohttp
           python3 -c "import tomlkit, aiohttp; print('ok', tomlkit.__version__)"
 
-      - name: Ensure Cargo.lock exists
+      - name: Verify committed workspace lock
+        shell: bash
         run: |
-          if [ ! -f Cargo.lock ]; then
-            echo "Cargo.lock missing; generating..."
-            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-            echo "$HOME/.cargo/bin" >> $GITHUB_PATH
-            sed -i '/\[target.\x27cfg(target_os = "windows")\x27.*ependencies\]/,/^$/d' Cargo.toml
-            cargo generate-lockfile
+          set -euo pipefail
+          if [[ ! -f Cargo.lock ]]; then
+            echo "Cargo.lock must be committed before generating Flatpak sources." >&2
+            exit 1
           fi
+          cargo metadata --locked --format-version 1 >/dev/null
 
       - name: Fetch flatpak-builder-tools
         run: |

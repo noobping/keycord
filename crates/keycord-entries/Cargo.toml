@@ -1,0 +1,38 @@
+[package]
+name = "keycord-entries"
+description = "Password entry workflows and presentation for Keycord"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[features]
+default = []
+passkey = ["keycord-passkey/passkey"]
+ui = [
+    "dep:adw",
+    "dep:keycord-shell",
+    "dep:totp-rs",
+    "dep:url",
+    "keycord-preferences/ui",
+]
+
+[dependencies]
+adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
+keycord-passkey = { workspace = true, default-features = false }
+keycord-keys.workspace = true
+keycord-preferences.workspace = true
+keycord-runtime.workspace = true
+keycord-shell = { workspace = true, optional = true }
+keycord-stores.workspace = true
+rand = "0.10.2"
+regex = "1.13.1"
+ripasso = "0.8.0"
+secrecy = "0.10.3"
+thiserror = "2.0"
+totp-rs = { version = "6.0.0", features = ["otpauth"], optional = true }
+url = { version = "2.5.8", optional = true }
+zeroize = { version = "1.9.0", features = ["alloc"] }

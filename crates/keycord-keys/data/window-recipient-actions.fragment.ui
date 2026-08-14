@@ -1,0 +1,98 @@
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_recipients_keys_group">
+                                <property name="title" translatable="yes">Keys for this store</property>
+                                <property name="description" translatable="yes">Select the private keys that can unlock passwords in this store.</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_recipients_create_group">
+                                <property name="visible">false</property>
+                                <property name="title" translatable="yes">Recommended for new stores</property>
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_generate_key_row">
+                                    <property name="title" translatable="yes">Generate private key</property>
+                                    <property name="subtitle" translatable="yes">Create a new password-protected key.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">go-next-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="store_recipients_add_group">
+                                <property name="visible">false</property>
+                                <property name="title" translatable="yes">Other ways to add a key</property>
+                                <property name="description" translatable="yes">Import an existing private key or connect a hardware token.</property>
+                                <!-- keycord-window-fragment:fido-generation-row -->
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_setup_hardware_key_row">
+                                    <property name="title" translatable="yes">Set up new hardware key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Experimental: create a new OpenPGP key on a blank connected smartcard or YubiKey.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">go-next-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_add_hardware_key_row">
+                                    <property name="title" translatable="yes">Add hardware key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Experimental: add the public key already stored on the connected OpenPGP smartcard or YubiKey.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">go-next-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_import_hardware_key_row">
+                                    <property name="title" translatable="yes">Import hardware public key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Experimental: bind a public key file to the connected hardware key.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">document-open-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_import_clipboard_row">
+                                    <property name="title" translatable="yes">Import key from clipboard</property>
+                                    <property name="subtitle" translatable="yes">Read an armored private key or experimental FIDO2-protected private key from the clipboard.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">edit-paste-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_import_file_row">
+                                    <property name="title" translatable="yes">Import key</property>
+                                    <property name="subtitle" translatable="yes">Choose a private key file or experimental FIDO2-protected private key file.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">document-open-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>

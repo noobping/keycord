@@ -1,0 +1,32 @@
+                <child>
+                  <object class="AdwNavigationPage" id="git_busy_page">
+                    <property name="title" translatable="yes">Working</property>
+                    <child>
+                      <object class="AdwStatusPage" id="git_busy_status">
+                        <property name="title" translatable="yes">Working</property>
+                        <property name="description" translatable="yes">Wait a moment.</property>
+                        <property name="icon-name">git-symbolic</property>
+                        <property name="hexpand">true</property>
+                        <property name="vexpand">true</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">12</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkSpinner">
+                                <property name="spinning">true</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="git_busy_show_logs_button">
+                                <property name="label" translatable="yes">Show Logs</property>
+                                <property name="action-name">win.open-log</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>

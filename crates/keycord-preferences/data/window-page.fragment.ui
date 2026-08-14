@@ -1,0 +1,365 @@
+                <child>
+                  <object class="AdwNavigationPage" id="settings_page">
+                    <property name="title" translatable="yes">Preferences</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSearchEntry" id="settings_search_entry">
+                            <property name="visible">false</property>
+                            <property name="placeholder-text" translatable="yes">Search preferences</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkScrolledWindow" id="settings_page_scrolled">
+                            <property name="vscrollbar-policy">automatic</property>
+                            <property name="hscrollbar-policy">never</property>
+                            <property name="propagate-natural-width">true</property>
+                            <property name="propagate-natural-height">true</property>
+                            <child>
+                              <object class="AdwPreferencesPage" id="settings_preferences_page">
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_store_list_group">
+                                <property name="title" translatable="yes">Password Stores</property>
+                                <property name="description" translatable="yes">A list of folders that contain your password data.</property>
+                                <child>
+                                  <object class="GtkListBox" id="password_stores">
+                                    <property name="hexpand">true</property>
+                                    <property name="selection-mode">none</property>
+                                    <style>
+                                      <class name="boxed-list" />
+                                    </style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_store_actions_group">
+                                <child>
+                                  <object class="GtkListBox" id="password_store_actions">
+                                    <property name="hexpand">true</property>
+                                    <property name="selection-mode">none</property>
+                                    <style>
+                                      <class name="boxed-list" />
+                                    </style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="backend_preferences">
+                                <property name="title" translatable="yes">Backend</property>
+                                <property name="description" translatable="yes">Choose how Keycord opens your data. Integrated is the default. Use Host to run your own command.</property>
+                                <child>
+                                  <object class="AdwComboRow" id="backend_row">
+                                    <property name="visible">false</property>
+                                    <property name="title" translatable="yes">Backend</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwEntryRow" id="pass_command_row">
+                                    <property name="title" translatable="yes">Host</property>
+                                    <property name="show-apply-button">true</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow" id="sync_private_keys_with_host_row">
+                                    <property name="title" translatable="yes">Sync private keys with the host</property>
+                                    <property name="subtitle" translatable="yes">Keep Keycord's private keys and your computer's GPG private keys in step when host access is available.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton" id="sync_private_keys_with_host_check">
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow" id="audit_use_commit_history_recipients_row">
+                                    <property name="title" translatable="yes">Use commit-history recipients for audit verification</property>
+                                    <property name="subtitle" translatable="yes">When enabled, History can use recipients from earlier commits while verifying older encrypted entries.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton" id="audit_use_commit_history_recipients_check">
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="host_access_preferences_group" />
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_username_group">
+                                <property name="title" translatable="yes">Username</property>
+                                <property name="description" translatable="yes">Used only when a pass file has no encrypted username field.</property>
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_username_filename_row">
+                                    <property name="title" translatable="yes">Use file name</property>
+                                    <property name="subtitle" translatable="yes">Show the pass file name as the username.</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton"
+                                        id="preferences_username_filename_check">
+                                        <property name="group">preferences_username_folder_check</property>
+                                        <property name="active">true</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_username_folder_row">
+                                    <property name="title" translatable="yes">Use folder name</property>
+                                    <property name="subtitle" translatable="yes">Show the last folder segment as the username.</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton"
+                                        id="preferences_username_folder_check">
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_password_list_group">
+                                <property name="title" translatable="yes">Password List</property>
+                                <property name="description" translatable="yes">Choose how pass files are ordered on the home page.</property>
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_list_sort_filename_row">
+                                    <property name="title" translatable="yes">Use file name</property>
+                                    <property name="subtitle" translatable="yes">Sort entries by pass file name only.</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton"
+                                        id="preferences_password_list_sort_filename_check">
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_list_sort_hybrid_row">
+                                    <property name="title" translatable="yes">Use folders with file name search</property>
+                                    <property name="subtitle" translatable="yes">Keep folders in the list, but sort search results by pass file name.</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton"
+                                        id="preferences_password_list_sort_hybrid_check">
+                                        <property name="group">preferences_password_list_sort_filename_check</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_list_sort_store_path_row">
+                                    <property name="title" translatable="yes">Use store, folders, and file name</property>
+                                    <property name="subtitle" translatable="yes">Keep entries grouped by store and folder before the file name.</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton"
+                                        id="preferences_password_list_sort_store_path_check">
+                                        <property name="group">preferences_password_list_sort_filename_check</property>
+                                        <property name="active">true</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_template_group">
+                                <property name="title" translatable="yes">New Password Template</property>
+                                <property name="description" translatable="yes">These lines are added after the password line when you create a new password entry. Leave it empty to start with a blank pass file.</property>
+                                <child>
+                                  <object class="GtkScrolledWindow">
+                                    <property name="hscrollbar-policy">never</property>
+                                    <property name="min-content-height">160</property>
+                                    <child>
+                                      <object class="GtkTextView" id="new_pass_file_template_view">
+                                        <property name="editable">true</property>
+                                        <property name="wrap-mode">word-char</property>
+                                        <property name="monospace">true</property>
+                                        <property name="top-margin">12</property>
+                                        <property name="bottom-margin">12</property>
+                                        <property name="left-margin">12</property>
+                                        <property name="right-margin">12</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_clear_empty_fields_group">
+                                <child>
+                                  <object class="AdwActionRow" id="clear_empty_fields_before_save_row">
+                                    <property name="title" translatable="yes">Clear empty fields before save</property>
+                                    <property name="subtitle" translatable="yes">Automatically remove blank username, field, and OTP lines when saving a pass file.</property>
+                                    <property name="activatable">True</property>
+                                    <child type="suffix">
+                                      <object class="GtkCheckButton" id="clear_empty_fields_before_save_check">
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_generator_group">
+                                <property name="title" translatable="yes">Password Generation</property>
+                                <property name="description" translatable="yes">These settings are used when you generate or regenerate a password from the editor.</property>
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_generator_length_row">
+                                    <property name="title" translatable="yes">Length</property>
+                                    <property name="subtitle" translatable="yes">Total characters</property>
+                                    <child type="suffix">
+                                      <object class="GtkSpinButton"
+                                        id="preferences_password_generator_length_spin">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">1</property>
+                                            <property name="upper">256</property>
+                                            <property name="step-increment">1</property>
+                                            <property name="page-increment">5</property>
+                                            <property name="value">24</property>
+                                          </object>
+                                        </property>
+                                        <property name="numeric">true</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_generator_min_lowercase_row">
+                                    <property name="title" translatable="yes">Lowercase letters</property>
+                                    <property name="subtitle" translatable="yes">Minimum count, 0 disables</property>
+                                    <child type="suffix">
+                                      <object class="GtkSpinButton"
+                                        id="preferences_password_generator_min_lowercase_spin">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">0</property>
+                                            <property name="upper">256</property>
+                                            <property name="step-increment">1</property>
+                                            <property name="page-increment">5</property>
+                                            <property name="value">1</property>
+                                          </object>
+                                        </property>
+                                        <property name="numeric">true</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_generator_min_uppercase_row">
+                                    <property name="title" translatable="yes">Uppercase letters</property>
+                                    <property name="subtitle" translatable="yes">Minimum count, 0 disables</property>
+                                    <child type="suffix">
+                                      <object class="GtkSpinButton"
+                                        id="preferences_password_generator_min_uppercase_spin">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">0</property>
+                                            <property name="upper">256</property>
+                                            <property name="step-increment">1</property>
+                                            <property name="page-increment">5</property>
+                                            <property name="value">1</property>
+                                          </object>
+                                        </property>
+                                        <property name="numeric">true</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_generator_min_numbers_row">
+                                    <property name="title" translatable="yes">Numbers</property>
+                                    <property name="subtitle" translatable="yes">Minimum count, 0 disables</property>
+                                    <child type="suffix">
+                                      <object class="GtkSpinButton"
+                                        id="preferences_password_generator_min_numbers_spin">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">0</property>
+                                            <property name="upper">256</property>
+                                            <property name="step-increment">1</property>
+                                            <property name="page-increment">5</property>
+                                            <property name="value">1</property>
+                                          </object>
+                                        </property>
+                                        <property name="numeric">true</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                                <child>
+                                  <object class="AdwActionRow" id="preferences_password_generator_min_symbols_row">
+                                    <property name="title" translatable="yes">Symbols</property>
+                                    <property name="subtitle" translatable="yes">Minimum count, 0 disables</property>
+                                    <child type="suffix">
+                                      <object class="GtkSpinButton"
+                                        id="preferences_password_generator_min_symbols_spin">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">0</property>
+                                            <property name="upper">256</property>
+                                            <property name="step-increment">1</property>
+                                            <property name="page-increment">5</property>
+                                            <property name="value">1</property>
+                                          </object>
+                                        </property>
+                                        <property name="numeric">true</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="valign">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwPreferencesGroup" id="settings_search_empty_group">
+                                <property name="visible">false</property>
+                                <child>
+                                  <object class="AdwActionRow">
+                                    <property name="title" translatable="yes">No matching preferences</property>
+                                    <property name="subtitle" translatable="yes">Try a different search term.</property>
+                                    <property name="activatable">False</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                    </child>
+                  </object>
+                </child>

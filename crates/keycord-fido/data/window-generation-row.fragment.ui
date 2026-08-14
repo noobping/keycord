@@ -1,0 +1,14 @@
+                                <child>
+                                  <object class="AdwActionRow"
+                                    id="store_recipients_generate_fido2_key_row">
+                                    <property name="title" translatable="yes">Generate FIDO2-protected key (Experimental)</property>
+                                    <property name="subtitle" translatable="yes">Create a new FIDO2-protected key.</property>
+                                    <property name="activatable">True</property>
+                                    <property name="visible">False</property>
+                                    <child type="suffix">
+                                      <object class="GtkImage">
+                                        <property name="icon-name">go-next-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>

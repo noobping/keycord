@@ -1,0 +1,49 @@
+name: Architecture
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - development
+    paths:
+      - "Cargo.toml"
+      - "ARCHITECTURE.md"
+      - "build.rs"
+      - "crates/**"
+      - "src/**"
+      - ".github/workflows/architecture.yml"
+
+concurrency:
+  group: architecture-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy,rustfmt
+
+      - name: Format
+        run: cargo fmt --package keycord-architecture -- --check
+
+      - name: Test
+        run: cargo test --package keycord-architecture --locked --offline
+
+      - name: Lint
+        run: cargo clippy --package keycord-architecture --locked --offline --all-targets --all-features -- -D warnings
+
+      - name: Validate architecture
+        run: cargo run --package keycord-architecture --locked --offline -- .

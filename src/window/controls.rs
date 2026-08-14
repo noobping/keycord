@@ -1,33 +1,23 @@
-use crate::i18n::gettext;
-use crate::password::list::{load_passwords_async, PasswordListActions};
-use crate::password::model::OpenPassFile;
-use crate::password::page::{
-    open_password_entry_page, password_page_has_unsaved_changes,
-    retry_open_password_entry_if_needed, revert_unsaved_password_changes, show_password_list_page,
-    PasswordPageState,
-};
-use crate::password::undo::{
-    execute_undo_action, pop_undo_action, push_undo_action, unavailable_undo_message,
-    undo_action_restored_entry,
-};
-use crate::store::git_page::StoreGitPageState;
-use crate::store::management::{StoreRecipientsPageState, NUMBERED_STORE_SHORTCUT_COUNT};
-use crate::store::recipients_page::handle_store_recipients_subpage_back;
-use crate::support::actions::{activate_widget_action, register_window_action};
-use crate::support::background::spawn_result_task;
-use crate::support::runtime::{
-    has_host_permission, supports_docs_features, supports_host_command_features,
-    supports_logging_features,
-};
-use crate::support::ui::{navigation_stack_is_root, visible_navigation_page_is};
-use crate::window::git::{handle_git_busy_back, GitActionState};
 use crate::window::navigation::{restore_window_for_current_page, WindowNavigationState};
-use crate::window::tools::sync_tools_action_availability;
-use adw::gtk::{Button, ListBox, SearchEntry};
 use adw::prelude::*;
-use adw::ToastOverlay;
 use adw::{Application, ApplicationWindow, NavigationPage};
-use std::cell::Cell;
+use keycord_docs::configure_documentation_shortcuts;
+use keycord_entries::ui::actions::configure_entry_window_shortcuts;
+use keycord_entries::ui::list::PasswordListVisibilityState;
+use keycord_entries::ui::page::{
+    retry_open_password_entry_if_needed, show_password_list_page, PasswordPageState,
+};
+use keycord_git::ui::{
+    configure_git_shortcuts, handle_git_busy_back, GitActionState, StoreGitPageState,
+};
+use keycord_preferences::ui::configure_preferences_shortcuts;
+use keycord_runtime::capabilities::has_host_permission;
+use keycord_shell::actions::{activate_widget_action, register_window_action};
+use keycord_shell::configure_shell_shortcuts;
+use keycord_shell::ui::{navigation_stack_is_root, visible_navigation_page_is};
+use keycord_stores::ui::configure_store_shortcuts;
+use keycord_stores::ui::management::StoreRecipientsPageState;
+use keycord_stores::ui::recipient_page::handle_store_recipients_subpage_back;
 use std::rc::Rc;
 
 #[derive(Clone)]
@@ -40,66 +30,13 @@ fn before_back_action(state: &PlatformBackActionState) -> bool {
 }
 
 #[derive(Clone)]
-pub struct ListVisibilityState {
-    show_hidden: Rc<Cell<bool>>,
-    show_duplicates: Rc<Cell<bool>>,
-}
-
-impl ListVisibilityState {
-    pub fn new(show_hidden: bool, show_duplicates: bool) -> Self {
-        Self {
-            show_hidden: Rc::new(Cell::new(show_hidden)),
-            show_duplicates: Rc::new(Cell::new(show_duplicates)),
-        }
-    }
-
-    pub fn show_hidden(&self) -> bool {
-        self.show_hidden.get()
-    }
-
-    pub fn show_duplicates(&self) -> bool {
-        self.show_duplicates.get()
-    }
-
-    pub fn toggle_all(&self) -> (bool, bool) {
-        let (show_hidden, show_duplicates) =
-            toggled_list_visibility(self.show_hidden(), self.show_duplicates());
-        self.show_hidden.set(show_hidden);
-        self.show_duplicates.set(show_duplicates);
-        (show_hidden, show_duplicates)
-    }
-}
-
-const fn toggled_list_visibility(show_hidden: bool, show_duplicates: bool) -> (bool, bool) {
-    let show_all = !(show_hidden && show_duplicates);
-    (show_all, show_all)
-}
-
-#[derive(Clone)]
 pub struct BackActionState {
     pub password_page: PasswordPageState,
     pub recipients_page: StoreRecipientsPageState,
     pub store_git_page: StoreGitPageState,
     pub navigation: WindowNavigationState,
-    pub visibility: ListVisibilityState,
+    pub visibility: PasswordListVisibilityState,
     pub platform: PlatformBackActionState,
-}
-
-#[derive(Clone)]
-pub struct ListVisibilityActionState {
-    pub overlay: ToastOverlay,
-    pub list: ListBox,
-    pub navigation: WindowNavigationState,
-    pub visibility: ListVisibilityState,
-}
-
-#[derive(Clone)]
-pub struct ContextUndoActionState {
-    pub password_page: PasswordPageState,
-    pub recipients_page: StoreRecipientsPageState,
-    pub store_git_page: StoreGitPageState,
-    pub navigation: WindowNavigationState,
-    pub visibility: ListVisibilityState,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -129,8 +66,8 @@ fn visible_context_page(
     navigation: &WindowNavigationState,
     recipients_page: &NavigationPage,
 ) -> VisibleContextPage {
-    if visible_navigation_page_is(&navigation.nav, &navigation.password_page)
-        || visible_navigation_page_is(&navigation.nav, &navigation.raw_text_page)
+    if visible_navigation_page_is(&navigation.nav, &navigation.entries.password_page)
+        || visible_navigation_page_is(&navigation.nav, &navigation.entries.raw_text_page)
     {
         VisibleContextPage::Password
     } else if visible_navigation_page_is(&navigation.nav, recipients_page) {
@@ -177,12 +114,6 @@ fn context_reload_target(
     recipients_page: &NavigationPage,
 ) -> ContextReloadTarget {
     context_reload_target_from_page(visible_context_page(navigation, recipients_page))
-}
-
-fn configure_platform_shortcuts(app: &Application) {
-    if supports_logging_features() {
-        app.set_accels_for_action("win.open-log", &["F12"]);
-    }
 }
 
 pub fn register_context_save_action(
@@ -236,283 +167,19 @@ pub fn register_context_reload_action(
     );
 }
 
-fn reload_password_list(
-    list: &ListBox,
-    overlay: &ToastOverlay,
-    navigation: &WindowNavigationState,
-    visibility: &ListVisibilityState,
-) {
-    let list_actions = PasswordListActions::new(
-        &navigation.add,
-        &navigation.git,
-        &navigation.store,
-        &navigation.find,
-        &navigation.save,
-    );
-    load_passwords_async(
-        list,
-        &list_actions,
-        overlay,
-        Rc::new({
-            let navigation = navigation.nav.clone();
-            move || navigation_stack_is_root(&navigation)
-        }),
-        visibility.show_hidden(),
-        visibility.show_duplicates(),
-    );
-    if let Some(root) = list.root() {
-        if let Ok(window) = root.downcast::<ApplicationWindow>() {
-            sync_tools_action_availability(&window);
-        }
-    }
+pub fn register_context_undo_action(window: &ApplicationWindow, undo: Rc<dyn Fn()>) {
+    register_window_action(window, "context-undo", move || undo());
 }
 
-pub fn register_context_undo_action(window: &ApplicationWindow, state: &ContextUndoActionState) {
-    let state = state.clone();
-    register_window_action(window, "context-undo", move || {
-        let editing_password = matches!(
-            visible_context_page(&state.navigation, &state.recipients_page.page),
-            VisibleContextPage::Password
-        );
-        if editing_password && password_page_has_unsaved_changes(&state.password_page) {
-            let _ = revert_unsaved_password_changes(&state.password_page);
-            return;
-        }
+pub type ToggleFindCallback = Rc<dyn Fn() -> bool>;
 
-        let Some(action) = pop_undo_action(&state.navigation.nav) else {
-            return;
-        };
-        if let Some(message) = unavailable_undo_message(&action) {
-            state
-                .password_page
-                .overlay
-                .add_toast(adw::Toast::new(&gettext(message)));
-            return;
-        }
-
-        let overlay = state.password_page.overlay.clone();
-        let state_for_result = state.clone();
-        let state_for_disconnect = state.clone();
-        let action_for_result = action.clone();
-        let action_for_disconnect = action.clone();
-        spawn_result_task(
-            move || execute_undo_action(&action),
-            move |result| match result {
-                Ok(()) => {
-                    if editing_password {
-                        if let Some((store, label)) = undo_action_restored_entry(&action_for_result)
-                        {
-                            open_password_entry_page(
-                                &state_for_result.password_page,
-                                OpenPassFile::from_label(store, &label),
-                                false,
-                            );
-                        } else {
-                            show_password_list_page(
-                                &state_for_result.password_page,
-                                state_for_result.visibility.show_hidden(),
-                                state_for_result.visibility.show_duplicates(),
-                            );
-                        }
-                    } else {
-                        reload_password_list(
-                            &state_for_result.password_page.list,
-                            &state_for_result.password_page.overlay,
-                            &state_for_result.navigation,
-                            &state_for_result.visibility,
-                        );
-                        let _ = restore_window_for_current_page(
-                            &state_for_result.navigation,
-                            &state_for_result.recipients_page,
-                            &state_for_result.store_git_page,
-                        );
-                    }
-                    overlay.add_toast(adw::Toast::new(&gettext("Undone.")));
-                }
-                Err(err) => {
-                    push_undo_action(&state_for_result.navigation.nav, action_for_result);
-                    overlay.add_toast(adw::Toast::new(&gettext(err.toast_message())));
-                }
-            },
-            move || {
-                push_undo_action(&state_for_disconnect.navigation.nav, action_for_disconnect);
-                state_for_disconnect
-                    .password_page
-                    .overlay
-                    .add_toast(adw::Toast::new(&gettext("Can't undo the last change.")));
-            },
-        );
-    });
-}
-
-#[expect(
-    clippy::too_many_arguments,
-    reason = "This is flat window-action wiring for the search control on every navigation page."
-)]
 pub fn register_toggle_find_action(
     window: &adw::ApplicationWindow,
-    navigation: &WindowNavigationState,
-    find_button: &Button,
-    search_entry: &SearchEntry,
-    list: &ListBox,
-    settings_search_entry: &SearchEntry,
-    store_recipients_page: &NavigationPage,
-    store_recipients_search_entry: &SearchEntry,
-    store_git_page: &NavigationPage,
-    store_git_search_entry: &SearchEntry,
-    tools_search_entry: &SearchEntry,
-    docs_search_entry: &SearchEntry,
-    field_search_entry: &SearchEntry,
-    value_search_entry: &SearchEntry,
-    weak_password_search_entry: &SearchEntry,
-    audit_search_entry: &SearchEntry,
-    on_audit_search_changed: Rc<dyn Fn()>,
+    callbacks: Vec<ToggleFindCallback>,
 ) {
-    let navigation = navigation.clone();
-    let find_button = find_button.clone();
-    let search_entry = search_entry.clone();
-    let list = list.clone();
-    let settings_search_entry = settings_search_entry.clone();
-    let store_recipients_page = store_recipients_page.clone();
-    let store_recipients_search_entry = store_recipients_search_entry.clone();
-    let store_git_page = store_git_page.clone();
-    let store_git_search_entry = store_git_search_entry.clone();
-    let tools_search_entry = tools_search_entry.clone();
-    let docs_search_entry = docs_search_entry.clone();
-    let field_search_entry = field_search_entry.clone();
-    let value_search_entry = value_search_entry.clone();
-    let weak_password_search_entry = weak_password_search_entry.clone();
-    let audit_search_entry = audit_search_entry.clone();
     register_window_action(window, "toggle-find", move || {
-        if visible_navigation_page_is(&navigation.nav, &navigation.settings_page) {
-            toggle_tool_search_entry(&find_button, &settings_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &store_recipients_page) {
-            toggle_tool_search_entry(&find_button, &store_recipients_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &store_git_page) {
-            toggle_tool_search_entry(&find_button, &store_git_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &navigation.docs_page) {
-            toggle_tool_search_entry(&find_button, &docs_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &navigation.tools_page) {
-            toggle_tool_search_entry(&find_button, &tools_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &navigation.tools_field_values_page) {
-            toggle_tool_search_entry(&find_button, &field_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &navigation.tools_value_values_page) {
-            toggle_tool_search_entry(&find_button, &value_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &navigation.tools_weak_passwords_page) {
-            toggle_tool_search_entry(&find_button, &weak_password_search_entry);
-            return;
-        }
-
-        if visible_navigation_page_is(&navigation.nav, &navigation.tools_audit_page) {
-            if !find_button.is_visible() {
-                hide_search_entry(&audit_search_entry);
-                return;
-            }
-
-            if audit_search_entry.is_visible() {
-                hide_and_clear_audit_search_entry(&audit_search_entry, &on_audit_search_changed);
-                return;
-            }
-
-            audit_search_entry.set_visible(true);
-            audit_search_entry.grab_focus();
-            return;
-        }
-
-        if !find_button.is_visible() {
-            hide_search_entry(&search_entry);
-            return;
-        }
-
-        if search_entry.is_visible() {
-            hide_and_clear_search_entry(&search_entry, &list);
-            return;
-        }
-
-        search_entry.set_visible(true);
-        search_entry.grab_focus();
+        let _ = callbacks.iter().any(|toggle_find| toggle_find());
     });
-}
-
-pub fn connect_search_visibility(find_button: &Button, search_entry: &SearchEntry, list: &ListBox) {
-    let search_entry = search_entry.clone();
-    let list = list.clone();
-    find_button.connect_visible_notify(move |button| {
-        if button.is_visible() {
-            if !search_entry.text().is_empty() {
-                search_entry.set_visible(true);
-                list.invalidate_filter();
-            }
-            return;
-        }
-
-        hide_search_entry(&search_entry);
-    });
-}
-
-fn hide_and_clear_search_entry(search_entry: &SearchEntry, list: &ListBox) {
-    hide_search_entry(search_entry);
-    if !search_entry.text().is_empty() {
-        search_entry.set_text("");
-    }
-    list.invalidate_filter();
-}
-
-fn toggle_tool_search_entry(find_button: &Button, search_entry: &SearchEntry) {
-    if !find_button.is_visible() {
-        hide_search_entry(search_entry);
-        return;
-    }
-
-    if search_entry.is_visible() {
-        hide_and_clear_tool_search_entry(search_entry);
-        return;
-    }
-
-    search_entry.set_visible(true);
-    search_entry.grab_focus();
-}
-
-fn hide_and_clear_tool_search_entry(search_entry: &SearchEntry) {
-    hide_search_entry(search_entry);
-    if !search_entry.text().is_empty() {
-        search_entry.set_text("");
-    }
-}
-
-fn hide_and_clear_audit_search_entry(search_entry: &SearchEntry, on_search_changed: &Rc<dyn Fn()>) {
-    hide_search_entry(search_entry);
-    if search_entry.text().is_empty() {
-        return;
-    }
-
-    search_entry.set_text("");
-    on_search_changed();
-}
-
-fn hide_search_entry(search_entry: &SearchEntry) {
-    search_entry.set_visible(false);
 }
 
 pub fn register_back_action(window: &adw::ApplicationWindow, state: &BackActionState) {
@@ -528,6 +195,7 @@ pub fn register_back_action(window: &adw::ApplicationWindow, state: &BackActionS
         state.navigation.nav.pop();
         if restore_window_for_current_page(
             &state.navigation,
+            &state.password_page,
             &state.recipients_page,
             &state.store_git_page,
         ) {
@@ -555,105 +223,25 @@ pub fn register_go_home_action(window: &adw::ApplicationWindow, state: &BackActi
 }
 
 pub fn configure_window_shortcuts(app: &Application) {
-    app.set_accels_for_action("win.back", &["Escape"]);
-    app.set_accels_for_action("win.go-home", &["Home"]);
+    configure_shell_shortcuts(app);
+    configure_entry_window_shortcuts(app);
+    configure_store_shortcuts(app);
+    configure_preferences_shortcuts(app);
+    configure_git_shortcuts(app);
+    configure_documentation_shortcuts(app);
+
     app.set_accels_for_action("win.context-save", &["<primary>s"]);
     app.set_accels_for_action("win.context-reload", &["F5"]);
-    app.set_accels_for_action("win.synchronize", &["<primary><shift>s"]);
     app.set_accels_for_action("win.context-undo", &["<primary>z"]);
     app.set_accels_for_action("win.toggle-find", &["<primary>f"]);
-    app.set_accels_for_action("win.toggle-hidden-and-duplicates", &["<primary>h"]);
-    app.set_accels_for_action("win.open-new-password", &["<primary>n"]);
-    app.set_accels_for_action("win.open-store-picker", &["<primary><shift>n"]);
-    app.set_accels_for_action("win.open-raw-pass-file", &["<primary><shift>r"]);
-    app.set_accels_for_action("win.copy-password", &["<primary><shift>c"]);
-    app.set_accels_for_action("win.copy-username", &["<primary><shift>u"]);
-    app.set_accels_for_action("win.copy-otp", &["<primary><shift>t"]);
-    app.set_accels_for_action("win.apply-pass-template", &["<primary><shift>a"]);
-    app.set_accels_for_action("win.add-pass-field", &["<primary><shift>f"]);
-    app.set_accels_for_action("win.add-otp-secret", &["<primary><shift>o"]);
-    app.set_accels_for_action("win.clean-pass-file", &["<primary><shift>k"]);
-    app.set_accels_for_action("win.generate-password", &["<primary><shift>g"]);
-    app.set_accels_for_action("win.toggle-password-options", &["<primary><shift>p"]);
-    app.set_accels_for_action("win.open-git", &["<primary>g"]);
-    app.set_accels_for_action("win.open-preferences", &["<primary>comma"]);
     app.set_accels_for_action("win.open-tools", &["<primary>t"]);
-
-    for slot in 1..=NUMBERED_STORE_SHORTCUT_COUNT {
-        let recipients_action = format!("win.open-store-recipients-{slot}");
-        let recipients_accel = format!("<primary>{slot}");
-        app.set_accels_for_action(&recipients_action, &[recipients_accel.as_str()]);
-    }
-
-    if supports_host_command_features() {
-        for slot in 1..=NUMBERED_STORE_SHORTCUT_COUNT {
-            let git_action = format!("win.open-store-git-{slot}");
-            let git_accel = format!("<primary><alt>{slot}");
-            app.set_accels_for_action(&git_action, &[git_accel.as_str()]);
-        }
-    }
-
-    if supports_docs_features() {
-        app.set_accels_for_action("win.open-docs", &["<primary><shift>d"]);
-    }
-    app.set_accels_for_action("app.shortcuts", &["<primary>question"]);
-    configure_platform_shortcuts(app);
-}
-
-pub fn register_list_visibility_action(
-    window: &adw::ApplicationWindow,
-    state: &ListVisibilityActionState,
-) {
-    let state = state.clone();
-    register_window_action(window, "toggle-hidden-and-duplicates", move || {
-        let show_list_actions = navigation_stack_is_root(&state.navigation.nav);
-        if !show_list_actions {
-            return;
-        }
-        let _ = state.visibility.toggle_all();
-        reload_password_list(
-            &state.list,
-            &state.overlay,
-            &state.navigation,
-            &state.visibility,
-        );
-    });
-}
-
-pub fn register_reload_password_list_action(
-    window: &adw::ApplicationWindow,
-    state: &ListVisibilityActionState,
-) {
-    let state = state.clone();
-    register_window_action(window, "reload-password-list", move || {
-        reload_password_list(
-            &state.list,
-            &state.overlay,
-            &state.navigation,
-            &state.visibility,
-        );
-    });
-}
-
-pub fn apply_startup_query(
-    startup_query: Option<String>,
-    search_entry: &SearchEntry,
-    list: &ListBox,
-) {
-    if let Some(query) = startup_query {
-        if !query.is_empty() {
-            search_entry.set_visible(true);
-            search_entry.set_text(&query);
-            list.invalidate_filter();
-        }
-    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::{
-        context_reload_target_from_page, context_save_target_from_page, toggled_list_visibility,
-        ContextReloadTarget, ContextSaveTarget, VisibleContextPage,
+        context_reload_target_from_page, context_save_target_from_page, ContextReloadTarget,
+        ContextSaveTarget, VisibleContextPage,
     };
 
     #[test]
@@ -726,13 +314,5 @@ mod tests {
             context_reload_target_from_page(VisibleContextPage::Other),
             ContextReloadTarget::None
         );
-    }
-
-    #[test]
-    fn combined_visibility_action_shows_everything_until_both_flags_are_enabled() {
-        assert_eq!(toggled_list_visibility(false, false), (true, true));
-        assert_eq!(toggled_list_visibility(true, false), (true, true));
-        assert_eq!(toggled_list_visibility(false, true), (true, true));
-        assert_eq!(toggled_list_visibility(true, true), (false, false));
     }
 }

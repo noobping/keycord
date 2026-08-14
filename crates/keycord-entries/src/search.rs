@@ -1,0 +1,902 @@
+use crate::file::{canonical_search_field_key, SearchablePassField};
+use regex::Regex;
+
+#[cfg(test)]
+mod tests;
+
+pub const OTP_SEARCH_KEY: &str = "__meta_otp";
+pub const STORE_PATH_SEARCH_KEY: &str = "store path";
+pub const STORE_SEARCH_KEY: &str = "store";
+pub const WEAK_PASSWORD_SEARCH_KEY: &str = "__meta_weak_password";
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum SearchRowFieldIndexState {
+    Unindexed,
+    Unavailable,
+    Indexed(Vec<SearchablePassField>),
+}
+
+pub const fn is_stale_index_batch(current_generation: u64, batch_generation: u64) -> bool {
+    batch_generation != current_generation
+}
+
+#[derive(Clone, Debug)]
+pub enum SearchQuery {
+    Empty,
+    Plain(String),
+    Regex(RegexSearchQuery),
+    Structured(StructuredSearchQuery),
+    InvalidRegex,
+    InvalidStructured,
+}
+
+#[derive(Clone, Debug)]
+pub struct RegexSearchQuery {
+    pattern: String,
+    compiled: Regex,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum StructuredSearchQuery {
+    Clause(SearchClause),
+    Otp,
+    WeakPassword,
+    Not(Box<StructuredSearchQuery>),
+    And(Box<StructuredSearchQuery>, Box<StructuredSearchQuery>),
+    Or(Box<StructuredSearchQuery>, Box<StructuredSearchQuery>),
+}
+
+#[derive(Clone, Debug)]
+pub struct SearchClause {
+    field: String,
+    comparison: SearchComparison,
+    operand: SearchOperand,
+    compiled_regex: Option<Regex>,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum SearchOperand {
+    Literal(String),
+    FieldReference(String),
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SearchComparison {
+    Contains,
+    ContainsNot,
+    Exact,
+    ExactNot,
+    RegexMatch,
+    RegexNotMatch,
+}
+
+impl SearchQuery {
+    pub const fn is_empty(&self) -> bool {
+        matches!(self, Self::Empty)
+    }
+
+    pub fn requires_index(&self) -> bool {
+        match self {
+            Self::Structured(query) => query.requires_index(),
+            Self::Regex(_) => true,
+            Self::Empty | Self::Plain(_) | Self::InvalidRegex | Self::InvalidStructured => false,
+        }
+    }
+}
+
+impl SearchComparison {
+    const fn is_regex(self) -> bool {
+        matches!(self, Self::RegexMatch | Self::RegexNotMatch)
+    }
+
+    const fn supports_field_reference(self) -> bool {
+        matches!(self, Self::Exact | Self::ExactNot)
+    }
+}
+
+impl SearchClause {
+    pub fn new(field: String, comparison: SearchComparison, value: String) -> Option<Self> {
+        Self::from_operand(field, comparison, SearchOperand::Literal(value))
+    }
+
+    pub fn field_reference(
+        field: String,
+        comparison: SearchComparison,
+        referenced_field: String,
+    ) -> Option<Self> {
+        Self::from_operand(
+            field,
+            comparison,
+            SearchOperand::FieldReference(referenced_field),
+        )
+    }
+
+    fn from_operand(
+        field: String,
+        comparison: SearchComparison,
+        operand: SearchOperand,
+    ) -> Option<Self> {
+        match operand {
+            SearchOperand::Literal(value) => {
+                if value.is_empty() {
+                    return None;
+                }
+
+                let compiled_regex = if comparison.is_regex() {
+                    Some(Regex::new(&value).ok()?)
+                } else {
+                    None
+                };
+                let operand = if comparison.is_regex() {
+                    SearchOperand::Literal(value)
+                } else {
+                    SearchOperand::Literal(value.to_lowercase())
+                };
+
+                Some(Self {
+                    field,
+                    comparison,
+                    operand,
+                    compiled_regex,
+                })
+            }
+            SearchOperand::FieldReference(referenced_field) => {
+                if referenced_field.is_empty() || !comparison.supports_field_reference() {
+                    return None;
+                }
+
+                Some(Self {
+                    field,
+                    comparison,
+                    operand: SearchOperand::FieldReference(referenced_field),
+                    compiled_regex: None,
+                })
+            }
+        }
+    }
+
+    fn can_match_without_index(&self) -> bool {
+        if field_is_metadata_only(&self.field) {
+            return matches!(&self.operand, SearchOperand::Literal(_))
+                || matches!(
+                    &self.operand,
+                    SearchOperand::FieldReference(referenced_field)
+                        if field_is_metadata_only(referenced_field)
+                );
+        }
+
+        false
+    }
+}
+
+impl RegexSearchQuery {
+    pub fn new(pattern: &str) -> Option<Self> {
+        let pattern = pattern.trim();
+        if pattern.is_empty() {
+            return None;
+        }
+        let compiled = Regex::new(pattern).ok()?;
+        Some(Self {
+            pattern: pattern.to_string(),
+            compiled,
+        })
+    }
+}
+
+impl StructuredSearchQuery {
+    fn requires_index(&self) -> bool {
+        match self {
+            Self::Clause(clause) => !clause.can_match_without_index(),
+            Self::Otp | Self::WeakPassword => true,
+            Self::Not(query) => query.requires_index(),
+            Self::And(left, right) | Self::Or(left, right) => {
+                left.requires_index() || right.requires_index()
+            }
+        }
+    }
+}
+
+impl PartialEq for RegexSearchQuery {
+    fn eq(&self, other: &Self) -> bool {
+        self.pattern == other.pattern
+    }
+}
+
+impl Eq for RegexSearchQuery {}
+
+impl PartialEq for SearchClause {
+    fn eq(&self, other: &Self) -> bool {
+        self.field == other.field
+            && self.comparison == other.comparison
+            && self.operand == other.operand
+    }
+}
+
+impl Eq for SearchClause {}
+
+impl PartialEq for SearchQuery {
+    fn eq(&self, other: &Self) -> bool {
+        match (self, other) {
+            (Self::Empty, Self::Empty)
+            | (Self::InvalidRegex, Self::InvalidRegex)
+            | (Self::InvalidStructured, Self::InvalidStructured) => true,
+            (Self::Plain(left), Self::Plain(right)) => left == right,
+            (Self::Regex(left), Self::Regex(right)) => left == right,
+            (Self::Structured(left), Self::Structured(right)) => left == right,
+            _ => false,
+        }
+    }
+}
+
+impl Eq for SearchQuery {}
+
+pub fn parse_search_query(query: &str) -> SearchQuery {
+    if query.is_empty() {
+        return SearchQuery::Empty;
+    }
+
+    if query.trim().eq_ignore_ascii_case("reg") {
+        return SearchQuery::InvalidRegex;
+    }
+
+    if let Some(remainder) = strip_query_prefix(query, "reg") {
+        return RegexSearchQuery::new(remainder)
+            .map_or(SearchQuery::InvalidRegex, SearchQuery::Regex);
+    }
+
+    let Some(remainder) = strip_structured_query_prefix(query) else {
+        return SearchQuery::Plain(query.to_lowercase());
+    };
+
+    parse_structured_search_query(remainder)
+        .map_or(SearchQuery::InvalidStructured, SearchQuery::Structured)
+}
+
+pub fn row_matches_query(
+    label: &str,
+    store_label: &str,
+    store_path: &str,
+    fields: &SearchRowFieldIndexState,
+    query: &SearchQuery,
+) -> bool {
+    let metadata_fields = metadata_fields(store_label, store_path);
+    match query {
+        SearchQuery::Empty => true,
+        SearchQuery::Plain(query) => plain_query_matches(label, &metadata_fields, query),
+        SearchQuery::Regex(query) => regex_query_matches(label, &metadata_fields, fields, query),
+        SearchQuery::Structured(query) => match fields {
+            SearchRowFieldIndexState::Indexed(fields) => {
+                structured_query_matches(&metadata_fields, Some(fields), query)
+            }
+            SearchRowFieldIndexState::Unindexed | SearchRowFieldIndexState::Unavailable => {
+                structured_query_matches(&metadata_fields, None, query)
+            }
+        },
+        SearchQuery::InvalidRegex => false,
+        SearchQuery::InvalidStructured => false,
+    }
+}
+
+fn parse_structured_search_query(query: &str) -> Option<StructuredSearchQuery> {
+    StructuredSearchParser::new(query).parse()
+}
+
+fn strip_structured_query_prefix(query: &str) -> Option<&str> {
+    strip_query_prefix(query, "find")
+}
+
+fn strip_query_prefix<'a>(query: &'a str, prefix: &str) -> Option<&'a str> {
+    let found_prefix = query.get(..prefix.len())?;
+    if !found_prefix.eq_ignore_ascii_case(prefix) {
+        return None;
+    }
+
+    match query.get(prefix.len()..)?.chars().next() {
+        Some(':') => query.get(prefix.len() + 1..),
+        Some(ch) if ch.is_ascii_whitespace() => {
+            let separator = query
+                .get(prefix.len()..)?
+                .char_indices()
+                .find(|(_, ch)| !ch.is_ascii_whitespace())
+                .map_or(query.len(), |(index, _)| prefix.len() + index);
+            query.get(separator..)
+        }
+        _ => None,
+    }
+}
+
+struct StructuredSearchParser<'a> {
+    input: &'a str,
+    pos: usize,
+}
+
+impl<'a> StructuredSearchParser<'a> {
+    const fn new(input: &'a str) -> Self {
+        Self { input, pos: 0 }
+    }
+
+    fn parse(mut self) -> Option<StructuredSearchQuery> {
+        let query = self.parse_or()?;
+        self.skip_whitespace();
+        self.is_eof().then_some(query)
+    }
+
+    fn parse_or(&mut self) -> Option<StructuredSearchQuery> {
+        let mut query = self.parse_and()?;
+        loop {
+            self.skip_whitespace();
+            if !self.consume_symbol("||") && !self.consume_keyword("OR") {
+                break;
+            }
+
+            let right = self.parse_and()?;
+            query = StructuredSearchQuery::Or(Box::new(query), Box::new(right));
+        }
+
+        Some(query)
+    }
+
+    fn parse_and(&mut self) -> Option<StructuredSearchQuery> {
+        let mut query = self.parse_not()?;
+        loop {
+            self.skip_whitespace();
+            if !self.consume_symbol("&&")
+                && !self.consume_keyword("AND")
+                && !self.consume_keyword("WITH")
+            {
+                break;
+            }
+
+            let right = self.parse_not()?;
+            query = StructuredSearchQuery::And(Box::new(query), Box::new(right));
+        }
+
+        Some(query)
+    }
+
+    fn parse_not(&mut self) -> Option<StructuredSearchQuery> {
+        self.skip_whitespace();
+        if self.consume_symbol("!") || self.consume_keyword("NOT") {
+            return Some(StructuredSearchQuery::Not(Box::new(self.parse_not()?)));
+        }
+
+        self.parse_primary()
+    }
+
+    fn parse_primary(&mut self) -> Option<StructuredSearchQuery> {
+        self.skip_whitespace();
+        if self.consume_char('(') {
+            let query = self.parse_or()?;
+            self.skip_whitespace();
+            self.consume_char(')').then_some(query)
+        } else if self.parse_otp_predicate() {
+            Some(StructuredSearchQuery::Otp)
+        } else if self.parse_weak_password_predicate() {
+            Some(StructuredSearchQuery::WeakPassword)
+        } else {
+            Some(StructuredSearchQuery::Clause(self.parse_clause()?))
+        }
+    }
+
+    fn parse_otp_predicate(&mut self) -> bool {
+        self.consume_keyword("OTP")
+    }
+
+    fn parse_weak_password_predicate(&mut self) -> bool {
+        if !self.consume_keyword("WEAK") {
+            return false;
+        }
+
+        self.skip_whitespace();
+        let _ = self.consume_keyword("PASSWORDS") || self.consume_keyword("PASSWORD");
+        true
+    }
+
+    fn parse_clause(&mut self) -> Option<SearchClause> {
+        let (raw_field, field_was_quoted) = self.parse_field()?;
+        self.skip_whitespace();
+        let field = canonical_search_field_key(&raw_field)?;
+        let comparison = if let Some(comparison) = self.parse_symbolic_comparison() {
+            comparison
+        } else {
+            if !field_was_quoted && is_reserved_human_field_keyword(&raw_field) {
+                return None;
+            }
+            match self.parse_human_comparison() {
+                Ok(Some(comparison)) => comparison,
+                Ok(None) => SearchComparison::Contains,
+                Err(()) => return None,
+            }
+        };
+        self.skip_whitespace();
+        let operand = self.parse_operand(comparison)?;
+        match operand {
+            SearchOperand::Literal(value) => SearchClause::new(field, comparison, value),
+            SearchOperand::FieldReference(referenced_field) => {
+                SearchClause::field_reference(field, comparison, referenced_field)
+            }
+        }
+    }
+
+    fn parse_symbolic_comparison(&mut self) -> Option<SearchComparison> {
+        if self.consume_symbol("==") {
+            Some(SearchComparison::Exact)
+        } else if self.consume_symbol("!=") {
+            Some(SearchComparison::ExactNot)
+        } else if self.consume_symbol("~=") {
+            Some(SearchComparison::Contains)
+        } else if self.consume_symbol("!~") {
+            Some(SearchComparison::ContainsNot)
+        } else if self.consume_symbol("=") {
+            Some(SearchComparison::Contains)
+        } else {
+            None
+        }
+    }
+
+    fn parse_human_comparison(&mut self) -> Result<Option<SearchComparison>, ()> {
+        if self.keyword_starts_at(self.pos, "IS") {
+            self.consume_keyword("IS");
+            self.skip_whitespace();
+            return Ok(Some(if self.consume_keyword("NOT") {
+                SearchComparison::ExactNot
+            } else {
+                SearchComparison::Exact
+            }));
+        }
+
+        if self.keyword_starts_at(self.pos, "DOES") {
+            self.consume_keyword("DOES");
+            self.skip_whitespace();
+            if !self.consume_keyword("NOT") {
+                return Err(());
+            }
+            self.skip_whitespace();
+            if self.consume_keyword("CONTAIN") || self.consume_keyword("CONTAINS") {
+                return Ok(Some(SearchComparison::ContainsNot));
+            }
+            if self.consume_keyword("MATCH") || self.consume_keyword("MATCHES") {
+                return Ok(Some(SearchComparison::RegexNotMatch));
+            }
+            return Err(());
+        }
+
+        if self.keyword_starts_at(self.pos, "NOT") {
+            self.consume_keyword("NOT");
+            self.skip_whitespace();
+            if self.consume_keyword("REGEX") {
+                return Ok(Some(SearchComparison::RegexNotMatch));
+            }
+            return Err(());
+        }
+
+        if self.keyword_starts_at(self.pos, "MATCHES") || self.keyword_starts_at(self.pos, "MATCH")
+        {
+            let _ = self.consume_keyword("MATCHES") || self.consume_keyword("MATCH");
+            return Ok(Some(SearchComparison::RegexMatch));
+        }
+
+        if self.keyword_starts_at(self.pos, "REGEX") {
+            self.consume_keyword("REGEX");
+            return Ok(Some(SearchComparison::RegexMatch));
+        }
+
+        if self.keyword_starts_at(self.pos, "CONTAINS")
+            || self.keyword_starts_at(self.pos, "CONTAIN")
+        {
+            let _ = self.consume_keyword("CONTAINS") || self.consume_keyword("CONTAIN");
+            return Ok(Some(SearchComparison::Contains));
+        }
+
+        Ok(None)
+    }
+
+    fn parse_field(&mut self) -> Option<(String, bool)> {
+        self.skip_whitespace();
+        if matches!(self.peek_char(), Some('"') | Some('\'')) {
+            return Some((self.parse_quoted_value()?, true));
+        }
+
+        let start = self.pos;
+        while let Some(ch) = self.peek_char() {
+            if ch.is_ascii_whitespace() || matches!(ch, '(' | ')' | '=' | '!' | '~') {
+                break;
+            }
+            self.advance_char();
+        }
+
+        let field = self.input.get(start..self.pos)?.trim();
+        (!field.is_empty()).then(|| (field.to_string(), false))
+    }
+
+    fn parse_value(&mut self) -> Option<String> {
+        if matches!(self.peek_char(), Some('"') | Some('\'')) {
+            self.parse_quoted_value()
+        } else {
+            self.parse_unquoted_value()
+        }
+    }
+
+    fn parse_operand(&mut self, comparison: SearchComparison) -> Option<SearchOperand> {
+        if self.peek_char() == Some('$') {
+            if !comparison.supports_field_reference() {
+                return None;
+            }
+
+            return self
+                .parse_field_reference()
+                .map(SearchOperand::FieldReference);
+        }
+
+        self.parse_value().map(SearchOperand::Literal)
+    }
+
+    fn parse_field_reference(&mut self) -> Option<String> {
+        if !self.consume_char('$') {
+            return None;
+        }
+
+        let raw_field = if matches!(self.peek_char(), Some('"') | Some('\'')) {
+            self.parse_quoted_value()?
+        } else {
+            self.parse_unquoted_field_reference()?
+        };
+
+        canonical_search_field_key(&raw_field)
+    }
+
+    fn parse_unquoted_field_reference(&mut self) -> Option<String> {
+        let start = self.pos;
+        while let Some(ch) = self.peek_char() {
+            if ch.is_ascii_whitespace() || matches!(ch, '(' | ')' | '=' | '!' | '~') {
+                break;
+            }
+            self.advance_char();
+        }
+
+        let field = self.input.get(start..self.pos)?.trim();
+        (!field.is_empty()).then(|| field.to_string())
+    }
+
+    fn parse_quoted_value(&mut self) -> Option<String> {
+        let quote = self.peek_char()?;
+        if !matches!(quote, '"' | '\'') {
+            return None;
+        }
+        if !self.consume_char(quote) {
+            return None;
+        }
+
+        let mut value = String::new();
+        loop {
+            let ch = self.peek_char()?;
+            self.advance_char();
+            match ch {
+                ch if ch == quote => return Some(value),
+                '\\' => {
+                    let escaped = self.peek_char()?;
+                    self.advance_char();
+                    value.push(escaped);
+                }
+                _ => value.push(ch),
+            }
+        }
+    }
+
+    fn parse_unquoted_value(&mut self) -> Option<String> {
+        let start = self.pos;
+        let mut scan = self.pos;
+        let mut end = None;
+        while scan < self.input.len() {
+            if matches!(self.peek_char_at(scan), Some('(' | ')'))
+                || self.starts_with_symbol_at(scan, "&&")
+                || self.starts_with_symbol_at(scan, "||")
+                || self.keyword_starts_at(scan, "AND")
+                || self.keyword_starts_at(scan, "WITH")
+                || self.keyword_starts_at(scan, "OR")
+            {
+                break;
+            }
+
+            let ch = self.peek_char_at(scan)?;
+            scan += ch.len_utf8();
+            if !ch.is_ascii_whitespace() {
+                end = Some(scan);
+            }
+        }
+
+        let end = end?;
+        self.pos = end;
+        Some(self.input.get(start..end)?.trim_end().to_string())
+    }
+
+    fn skip_whitespace(&mut self) {
+        while self.peek_char().is_some_and(|ch| ch.is_ascii_whitespace()) {
+            self.advance_char();
+        }
+    }
+
+    fn is_eof(&self) -> bool {
+        self.pos >= self.input.len()
+    }
+
+    fn peek_char(&self) -> Option<char> {
+        self.peek_char_at(self.pos)
+    }
+
+    fn peek_char_at(&self, pos: usize) -> Option<char> {
+        self.input.get(pos..)?.chars().next()
+    }
+
+    fn advance_char(&mut self) {
+        if let Some(ch) = self.peek_char() {
+            self.pos += ch.len_utf8();
+        }
+    }
+
+    fn consume_char(&mut self, ch: char) -> bool {
+        if self.peek_char() == Some(ch) {
+            self.advance_char();
+            true
+        } else {
+            false
+        }
+    }
+
+    fn consume_symbol(&mut self, symbol: &str) -> bool {
+        if self.starts_with_symbol_at(self.pos, symbol) {
+            self.pos += symbol.len();
+            true
+        } else {
+            false
+        }
+    }
+
+    fn consume_keyword(&mut self, keyword: &str) -> bool {
+        if self.keyword_starts_at(self.pos, keyword) {
+            self.pos += keyword.len();
+            true
+        } else {
+            false
+        }
+    }
+
+    fn starts_with_symbol_at(&self, pos: usize, symbol: &str) -> bool {
+        self.input
+            .get(pos..)
+            .is_some_and(|rest| rest.starts_with(symbol))
+    }
+
+    fn keyword_starts_at(&self, pos: usize, keyword: &str) -> bool {
+        let Some(candidate) = self.input.get(pos..pos + keyword.len()) else {
+            return false;
+        };
+        if !candidate.eq_ignore_ascii_case(keyword) {
+            return false;
+        }
+
+        operator_boundary(self.peek_char_before(pos))
+            && operator_boundary(self.peek_char_at(pos + keyword.len()))
+    }
+
+    fn peek_char_before(&self, pos: usize) -> Option<char> {
+        self.input.get(..pos)?.chars().next_back()
+    }
+}
+
+fn operator_boundary(ch: Option<char>) -> bool {
+    matches!(ch, None | Some('(' | ')')) || ch.is_some_and(|ch| ch.is_ascii_whitespace())
+}
+
+fn field_is_metadata_only(field_key: &str) -> bool {
+    field_key == STORE_SEARCH_KEY || field_key == STORE_PATH_SEARCH_KEY
+}
+
+fn is_reserved_human_field_keyword(field: &str) -> bool {
+    field.eq_ignore_ascii_case("and")
+        || field.eq_ignore_ascii_case("with")
+        || field.eq_ignore_ascii_case("or")
+        || field.eq_ignore_ascii_case("not")
+        || field.eq_ignore_ascii_case("is")
+        || field.eq_ignore_ascii_case("does")
+        || field.eq_ignore_ascii_case("match")
+        || field.eq_ignore_ascii_case("matches")
+        || field.eq_ignore_ascii_case("regex")
+        || field.eq_ignore_ascii_case("otp")
+        || field.eq_ignore_ascii_case("contain")
+        || field.eq_ignore_ascii_case("contains")
+}
+
+fn metadata_fields(store_label: &str, store_path: &str) -> [SearchablePassField; 2] {
+    [
+        SearchablePassField {
+            key: STORE_SEARCH_KEY.to_string(),
+            value: store_label.to_string(),
+            normalized_value: store_label.to_lowercase(),
+        },
+        SearchablePassField {
+            key: STORE_PATH_SEARCH_KEY.to_string(),
+            value: store_path.to_string(),
+            normalized_value: store_path.to_lowercase(),
+        },
+    ]
+}
+
+fn plain_query_matches(label: &str, metadata_fields: &[SearchablePassField], query: &str) -> bool {
+    label.to_lowercase().contains(query)
+        || metadata_fields
+            .iter()
+            .filter(|field| field.key == STORE_SEARCH_KEY)
+            .any(|field| field.normalized_value.contains(query))
+}
+
+fn structured_query_matches(
+    metadata_fields: &[SearchablePassField],
+    indexed_fields: Option<&[SearchablePassField]>,
+    query: &StructuredSearchQuery,
+) -> bool {
+    match query {
+        StructuredSearchQuery::Clause(clause) => {
+            clause_matches(metadata_fields, indexed_fields, clause)
+        }
+        StructuredSearchQuery::Otp => indexed_fields.is_some_and(has_otp),
+        StructuredSearchQuery::WeakPassword => indexed_fields.is_some_and(has_weak_password),
+        StructuredSearchQuery::Not(query) => {
+            !structured_query_matches(metadata_fields, indexed_fields, query)
+        }
+        StructuredSearchQuery::And(left, right) => {
+            structured_query_matches(metadata_fields, indexed_fields, left)
+                && structured_query_matches(metadata_fields, indexed_fields, right)
+        }
+        StructuredSearchQuery::Or(left, right) => {
+            structured_query_matches(metadata_fields, indexed_fields, left)
+                || structured_query_matches(metadata_fields, indexed_fields, right)
+        }
+    }
+}
+
+fn has_weak_password(fields: &[SearchablePassField]) -> bool {
+    fields
+        .iter()
+        .any(|field| field.key == WEAK_PASSWORD_SEARCH_KEY)
+}
+
+fn has_otp(fields: &[SearchablePassField]) -> bool {
+    fields.iter().any(|field| field.key == OTP_SEARCH_KEY)
+}
+
+fn regex_query_matches(
+    label: &str,
+    metadata_fields: &[SearchablePassField],
+    fields: &SearchRowFieldIndexState,
+    query: &RegexSearchQuery,
+) -> bool {
+    if query.compiled.is_match(label) {
+        return true;
+    }
+
+    match fields {
+        SearchRowFieldIndexState::Indexed(fields) => {
+            query
+                .compiled
+                .is_match(&regex_search_corpus(label, metadata_fields, Some(fields)))
+        }
+        SearchRowFieldIndexState::Unindexed | SearchRowFieldIndexState::Unavailable => query
+            .compiled
+            .is_match(&regex_search_corpus(label, metadata_fields, None)),
+    }
+}
+
+fn regex_search_corpus(
+    label: &str,
+    metadata_fields: &[SearchablePassField],
+    indexed_fields: Option<&[SearchablePassField]>,
+) -> String {
+    let mut corpus = String::from(label);
+    for field in metadata_fields
+        .iter()
+        .chain(indexed_fields.into_iter().flat_map(|fields| fields.iter()))
+    {
+        corpus.push('\n');
+        corpus.push_str(&field.key);
+        corpus.push(':');
+        corpus.push(' ');
+        corpus.push_str(&field.value);
+    }
+    corpus
+}
+
+fn clause_matches(
+    metadata_fields: &[SearchablePassField],
+    indexed_fields: Option<&[SearchablePassField]>,
+    clause: &SearchClause,
+) -> bool {
+    match &clause.operand {
+        SearchOperand::Literal(value) => match clause.comparison {
+            SearchComparison::Contains => {
+                matches_field(metadata_fields, indexed_fields, &clause.field, |field| {
+                    field.normalized_value.contains(value)
+                })
+            }
+            SearchComparison::ContainsNot => {
+                !matches_field(metadata_fields, indexed_fields, &clause.field, |field| {
+                    field.normalized_value.contains(value)
+                })
+            }
+            SearchComparison::Exact => {
+                matches_field(metadata_fields, indexed_fields, &clause.field, |field| {
+                    field.normalized_value == *value
+                })
+            }
+            SearchComparison::ExactNot => {
+                !matches_field(metadata_fields, indexed_fields, &clause.field, |field| {
+                    field.normalized_value == *value
+                })
+            }
+            SearchComparison::RegexMatch => {
+                matches_field(metadata_fields, indexed_fields, &clause.field, |field| {
+                    clause
+                        .compiled_regex
+                        .as_ref()
+                        .is_some_and(|regex| regex.is_match(&field.value))
+                })
+            }
+            SearchComparison::RegexNotMatch => {
+                !matches_field(metadata_fields, indexed_fields, &clause.field, |field| {
+                    clause
+                        .compiled_regex
+                        .as_ref()
+                        .is_some_and(|regex| regex.is_match(&field.value))
+                })
+            }
+        },
+        SearchOperand::FieldReference(referenced_field) => {
+            let matches_positive = field_reference_matches(
+                metadata_fields,
+                indexed_fields,
+                &clause.field,
+                referenced_field,
+            );
+            match clause.comparison {
+                SearchComparison::Exact => matches_positive,
+                SearchComparison::ExactNot => !matches_positive,
+                SearchComparison::Contains
+                | SearchComparison::ContainsNot
+                | SearchComparison::RegexMatch
+                | SearchComparison::RegexNotMatch => false,
+            }
+        }
+    }
+}
+
+fn matches_field(
+    metadata_fields: &[SearchablePassField],
+    indexed_fields: Option<&[SearchablePassField]>,
+    field_key: &str,
+    predicate: impl FnMut(&SearchablePassField) -> bool,
+) -> bool {
+    fields_for_key(metadata_fields, indexed_fields, field_key).any(predicate)
+}
+
+fn field_reference_matches(
+    metadata_fields: &[SearchablePassField],
+    indexed_fields: Option<&[SearchablePassField]>,
+    field_key: &str,
+    referenced_field: &str,
+) -> bool {
+    fields_for_key(metadata_fields, indexed_fields, field_key).any(|field| {
+        fields_for_key(metadata_fields, indexed_fields, referenced_field)
+            .any(|other| field.normalized_value == other.normalized_value)
+    })
+}
+
+fn fields_for_key<'a>(
+    metadata_fields: &'a [SearchablePassField],
+    indexed_fields: Option<&'a [SearchablePassField]>,
+    field_key: &'a str,
+) -> impl Iterator<Item = &'a SearchablePassField> + 'a {
+    metadata_fields
+        .iter()
+        .chain(indexed_fields.into_iter().flat_map(|fields| fields.iter()))
+        .filter(move |field| field.key == field_key)
+}

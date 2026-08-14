@@ -1,0 +1,21 @@
+# Direct key models, inventory, material, lock-state, deletion, and row rendering
+# belong to Keys. Stores retains only recipient selection and save policy.
+AvailablePrivateKey
+AvailableRecipientKey
+PrivateKeyVerificationWarning
+RecipientKeyVerificationWarning
+ManagedRipassoPrivateKey
+ConnectedSmartcardKey
+HostGpgPrivateKeySummary
+armored_managed_key_material
+copy_managed_key_material
+inspect_private_key_lock_state
+is_ripasso_private_key_unlocked
+ripasso_private_key_requires_session_unlock
+remove_ripasso_private_key
+list_ripasso_private_keys
+list_connected_smartcard_keys
+merge_available_recipient_keys
+append_managed_key_row
+append_smartcard_key_row
+append_host_key_row

@@ -1,0 +1,3 @@
+# Runtime owns the generic bounded-TOML type only. Size/depth policy constants and
+# subject-specific types belong to the subject that owns each serialized format.
+struct TomlParseLimits

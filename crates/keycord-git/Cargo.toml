@@ -1,0 +1,36 @@
+[package]
+name = "keycord-git"
+description = "Git repository integration for Keycord"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[features]
+default = []
+audit = []
+flatpak = ["keycord-preferences/flatpak", "keycord-runtime/flatpak"]
+ui = [
+    "dep:adw",
+    "dep:keycord-keys",
+    "dep:keycord-shell",
+    "dep:keycord-stores",
+    "keycord-preferences/ui",
+    "keycord-keys/ui",
+    "keycord-stores/ui",
+]
+
+[dependencies]
+keycord-preferences.workspace = true
+keycord-runtime.workspace = true
+keycord-keys = { workspace = true, optional = true }
+keycord-shell = { workspace = true, optional = true }
+keycord-stores = { workspace = true, optional = true }
+adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
+sequoia-openpgp = "2.4.1"
+
+[dev-dependencies]
+keycord-stores.workspace = true

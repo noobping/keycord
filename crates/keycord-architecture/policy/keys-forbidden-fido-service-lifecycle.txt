@@ -1,0 +1,12 @@
+# Global/shared FIDO service construction and test transport replacement belong to FIDO.
+OnceLock
+RwLock
+FidoService::native
+FidoService::new
+shared_native_service_cell
+FIDO2_TRANSPORT
+transport_cell
+set_fido2_transport_for_tests
+reset_fido2_transport_for_tests
+set_shared_native_transport_for_tests
+reset_shared_native_transport_for_tests

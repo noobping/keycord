@@ -1,0 +1,43 @@
+[package]
+name = "keycord-keys"
+description = "OpenPGP key management for Keycord"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+publish = false
+
+[features]
+default = []
+audit = []
+fido = ["dep:keycord-fido", "keycord-fido/native-transport"]
+fido-ui = ["fido", "ui", "keycord-fido/ui"]
+fidopin = ["fido", "keycord-fido/pin-setup"]
+flatpak = []
+hardwarekey = ["smartcard"]
+smartcard = ["dep:card-backend-pcsc", "dep:openpgp-card"]
+test-support = ["keycord-fido?/test-support"]
+ui = ["dep:adw", "dep:keycord-shell", "keycord-preferences/ui"]
+
+[dependencies]
+anyhow = "1.0"
+dirs-next = "2.0.0"
+keycord-fido = { workspace = true, optional = true, default-features = false }
+keycord-preferences.workspace = true
+keycord-runtime.workspace = true
+keycord-shell = { workspace = true, optional = true }
+rand = "0.10.2"
+ripasso = "0.8.0"
+secrecy = "0.10.3"
+sequoia-openpgp = "2.4.1"
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2.0"
+toml = "1.1.4"
+zeroize = { version = "1.9.0", features = ["alloc"] }
+adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+card-backend-pcsc = { version = "0.5.2", optional = true }
+openpgp-card = { version = "0.7.0", optional = true }

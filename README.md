@@ -22,19 +22,22 @@ so they keep working with `pass` and other compatible tools.
 
 ## Documentation
 
-Start with the [Getting Started guide](docs/getting-started.md), then explore the following sections:
+Start with the [Getting Started guide](crates/keycord-docs/docs/getting-started.md), then explore the following sections:
 
-- [Search](docs/search.md): how to find outdated or insecure accounts
-- [Workflows](docs/workflows.md): how to do things in Keycord
-- [Permissions and Backends](docs/permissions-and-backends.md): application environment
-- [Use Cases](docs/use-cases.md): practical examples and short tutorials
-- [Teams, Workgroups, and Organizations](docs/teams-and-organizations.md): manage shared stores and collaboration
+- [Search](crates/keycord-docs/docs/search.md): how to find outdated or insecure accounts
+- [Workflows](crates/keycord-docs/docs/workflows.md): how to do things in Keycord
+- [Permissions and Backends](crates/keycord-docs/docs/permissions-and-backends.md): application environment
+- [Use Cases](crates/keycord-docs/docs/use-cases.md): practical examples and short tutorials
+- [Teams, Workgroups, and Organizations](crates/keycord-docs/docs/teams-and-organizations.md): manage shared stores and collaboration
 
 ## Translation
 
 You can translate Keycord using [weblate](https://hosted.weblate.org/projects/keycord) which makes it possible to translate from your browser. Simply register and start translating.
 
 ## Development
+
+The root package is the application composition layer; implementation is split into focused
+subject crates. See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and dependency rules.
 
 Package names differ by distribution. This project was tested with Fedora packages:
 
