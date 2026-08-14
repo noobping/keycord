@@ -445,11 +445,11 @@ msgstr ""
 msgid "Checking pass import availability."
 msgstr ""
 
-#: src/password/passkey.rs:297
+#: src/password/passkey.rs:189
 msgid "Choose a JSON object containing exactly one passkey credential."
 msgstr ""
 
-#: src/password/passkey.rs:296
+#: src/password/passkey.rs:188
 msgid "Choose a JSON object containing one passkey credential."
 msgstr ""
 
@@ -1234,7 +1234,7 @@ msgstr ""
 msgid "Enter a name."
 msgstr ""
 
-#: src/password/passkey.rs:394
+#: src/password/passkey.rs:286
 msgid "Enter a passkey username."
 msgstr ""
 
@@ -1254,7 +1254,7 @@ msgstr ""
 msgid "Enter a username."
 msgstr ""
 
-#: src/password/passkey.rs:508
+#: src/password/passkey.rs:400
 msgid "Enter a valid PKCS#8 passkey private key."
 msgstr ""
 
@@ -1262,8 +1262,8 @@ msgstr ""
 msgid "Enter a valid email address."
 msgstr ""
 
-#: src/password/passkey.rs:433
-#: src/password/passkey.rs:452
+#: src/password/passkey.rs:325
+#: src/password/passkey.rs:344
 msgid "Enter a valid passkey RP ID."
 msgstr ""
 
@@ -1673,7 +1673,7 @@ msgstr ""
 msgid "Failed to move password entry after save: {err}"
 msgstr ""
 
-#: src/password/passkey.rs:472
+#: src/password/passkey.rs:364
 msgid "Failed to normalize passkey private key: {err}"
 msgstr ""
 
@@ -1924,8 +1924,8 @@ msgstr ""
 msgid "Failed to serialize config: {e}"
 msgstr ""
 
-#: src/password/passkey.rs:202
-msgid "Failed to serialize passkey data: {err}"
+#: src/password/passkey.rs:98
+msgid "Failed to serialize stored passkey data: {err}"
 msgstr ""
 
 #: src/private_key/unlock.rs:310
@@ -2615,23 +2615,18 @@ msgstr ""
 msgid "Invalid host Git signature metadata."
 msgstr ""
 
-#: src/password/passkey.rs:146
-#: src/password/passkey.rs:161
-#: src/password/passkey.rs:351
-#: src/password/passkey.rs:420
-#: src/password/passkey.rs:426
+#: src/password/passkey.rs:130
+#: src/password/passkey.rs:243
+#: src/password/passkey.rs:312
+#: src/password/passkey.rs:318
 msgid "Invalid passkey FIDO2 extensions: {err}"
 msgstr ""
 
-#: src/password/passkey.rs:223
+#: src/password/passkey.rs:112
 msgid "Invalid passkey JSON: {err}"
 msgstr ""
 
-#: src/password/passkey.rs:217
-msgid "Invalid passkey envelope: {err}"
-msgstr ""
-
-#: src/password/passkey.rs:484
+#: src/password/passkey.rs:376
 msgid "Invalid passkey {label}: {err}"
 msgstr ""
 
@@ -2649,6 +2644,10 @@ msgstr ""
 
 #: src/backend/path_validation.rs:11
 msgid "Invalid recipients file path."
+msgstr ""
+
+#: src/password/passkey.rs:103
+msgid "Invalid stored passkey JSON: {err}"
 msgstr ""
 
 #: data/window.ui:741
@@ -3406,7 +3405,7 @@ msgstr ""
 msgid "Passkey"
 msgstr ""
 
-#: src/password/passkey.rs:422
+#: src/password/passkey.rs:314
 msgid "Passkey FIDO2 extensions must be a JSON object."
 msgstr ""
 
@@ -3414,7 +3413,7 @@ msgstr ""
 msgid "Passkey export request opened"
 msgstr ""
 
-#: src/password/passkey.rs:40
+#: src/password/passkey.rs:28
 msgid "PasskeyCredential"
 msgstr ""
 
@@ -3611,7 +3610,7 @@ msgstr ""
 msgid "QR code"
 msgstr ""
 
-#: src/password/passkey.rs:355
+#: src/password/passkey.rs:247
 msgid "RP ID"
 msgstr ""
 
@@ -4529,7 +4528,7 @@ msgstr ""
 msgid "The installer is ready to run."
 msgstr ""
 
-#: src/password/passkey.rs:375
+#: src/password/passkey.rs:267
 msgid "The passkey is missing a {label}."
 msgstr ""
 
@@ -4549,11 +4548,11 @@ msgstr ""
 msgid "The passkey request source is not a regular local file: {path:?}"
 msgstr ""
 
-#: src/password/passkey.rs:461
+#: src/password/passkey.rs:353
 msgid "The passkey {label} is empty."
 msgstr ""
 
-#: src/password/passkey.rs:480
+#: src/password/passkey.rs:372
 msgid "The passkey {label} must use unpadded base64url."
 msgstr ""
 
@@ -4589,6 +4588,10 @@ msgstr ""
 
 #: src/backend/errors.rs:162
 msgid "The selected store path is not a folder."
+msgstr ""
+
+#: src/password/passkey.rs:105
+msgid "The stored JSON is not a passkey credential."
 msgstr ""
 
 #: src/backend/integrated/keys/hardware/crypto.rs:364
@@ -4636,7 +4639,7 @@ msgstr ""
 msgid "This branch doesn't have any commits available to audit."
 msgstr ""
 
-#: src/password/passkey.rs:516
+#: src/password/passkey.rs:408
 msgid "This build does not include passkey support."
 msgstr ""
 
@@ -4921,10 +4924,6 @@ msgstr ""
 
 #: src/backend/integrated/keys/hardware/crypto.rs:542
 msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
-msgstr ""
-
-#: src/password/passkey.rs:214
-msgid "Unsupported passkey envelope."
 msgstr ""
 
 #: src/updater/common.rs:68
@@ -5304,8 +5303,8 @@ msgstr ""
 msgid "create update download directory"
 msgstr ""
 
-#: src/password/passkey.rs:354
-#: src/password/passkey.rs:404
+#: src/password/passkey.rs:246
+#: src/password/passkey.rs:296
 msgid "credential ID"
 msgstr ""
 
@@ -5683,10 +5682,6 @@ msgstr ""
 msgid "keycord-doc:"
 msgstr ""
 
-#: src/password/passkey.rs:4
-msgid "keycord-passkey-v1:"
-msgstr ""
-
 #: src/window/tools/export.rs:19
 msgid "keycord-passwords.csv"
 msgstr ""
@@ -5823,7 +5818,7 @@ msgid "passkey: [redacted]"
 msgstr ""
 
 #: src/window/build/mod.rs:223
-msgid "passkey: {envelope}"
+msgid "passkey: {storage_value}"
 msgstr ""
 
 #: data/metainfo.xml:214
@@ -5869,8 +5864,8 @@ msgstr ""
 msgid "preferences file"
 msgstr ""
 
-#: src/password/passkey.rs:359
-#: src/password/passkey.rs:468
+#: src/password/passkey.rs:251
+#: src/password/passkey.rs:360
 msgid "private key"
 msgstr ""
 
@@ -6020,8 +6015,8 @@ msgstr ""
 msgid "update-{:032x}"
 msgstr ""
 
-#: src/password/passkey.rs:358
-#: src/password/passkey.rs:408
+#: src/password/passkey.rs:250
+#: src/password/passkey.rs:300
 msgid "user handle"
 msgstr ""
 

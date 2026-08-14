@@ -222,12 +222,12 @@ mod tests {
     #[cfg(feature = "passkey")]
     #[test]
     fn passkey_fields_round_trip_without_exposing_key_material_in_debug_output() {
-        use crate::password::passkey::{encode_passkey_envelope, generate_passkey_credential};
+        use crate::password::passkey::{encode_passkey_storage_value, generate_passkey_credential};
 
         let credential =
             generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let envelope = encode_passkey_envelope(&credential).expect("encode passkey");
-        let contents = format!("\npasskey: {envelope}");
+        let storage_value = encode_passkey_storage_value(&credential).expect("encode passkey");
+        let contents = format!("\npasskey: {storage_value}");
         let (password, parsed) = parse_structured_pass_lines(&contents);
         let templates = parsed
             .iter()
@@ -240,7 +240,7 @@ mod tests {
         );
         assert_eq!(clean_pass_file_contents(&contents), contents);
         let debug = format!("{templates:?}");
-        assert!(!debug.contains(&envelope));
+        assert!(!debug.contains(&storage_value));
         assert!(!debug.contains(&credential.key));
     }
 }

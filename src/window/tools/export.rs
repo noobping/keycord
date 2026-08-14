@@ -363,7 +363,8 @@ mod tests {
 
     #[test]
     fn raw_passkey_fields_are_redacted_from_password_csv_exports() {
-        let contents = "\npasskey: keycord-passkey-v1:private-material\nurl: example.com";
+        let contents =
+            "\npasskey: {\"type\":\"passkey\",\"key\":\"private-material\"}\nurl: example.com";
         let redacted = redacted_export_contents(contents);
 
         assert_eq!(
@@ -390,13 +391,14 @@ mod tests {
         let ordinary = "secret\r\nurl: example.com\r\n";
         assert_eq!(redacted_export_contents(ordinary), ordinary);
 
-        let passkey = "\r\npasskey: keycord-passkey-v1:secret\r\nurl: example.com\r\n";
+        let passkey =
+            "\r\npasskey: {\"type\":\"passkey\",\"key\":\"secret\"}\r\nurl: example.com\r\n";
         assert_eq!(
             redacted_export_contents(passkey),
             "\r\npasskey: [redacted]\r\nurl: example.com\r\n"
         );
 
-        let noncanonical = "\nPassKey : keycord-passkey-v1:secret\n\n";
+        let noncanonical = "\nPassKey : private JSON\n\n";
         assert_eq!(
             redacted_export_contents(noncanonical),
             "\npasskey: [redacted]\n\n"

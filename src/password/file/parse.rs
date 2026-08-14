@@ -4,9 +4,7 @@ use super::types::{
 };
 #[cfg(all(test, feature = "passkey"))]
 use crate::password::passkey::PasskeyCredential;
-use crate::password::passkey::{
-    decode_passkey_envelope, PASSKEY_ENVELOPE_PREFIX, PASSKEY_FIELD_KEY,
-};
+use crate::password::passkey::{decode_passkey_storage_value, PASSKEY_FIELD_KEY};
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct SearchablePassField {
@@ -57,11 +55,10 @@ pub fn pass_file_has_passkey_storage_field(contents: &str) -> bool {
 }
 
 pub fn is_passkey_storage_line(line: &str) -> bool {
-    let Some((key, value)) = line.split_once(':') else {
+    let Some((key, _)) = line.split_once(':') else {
         return false;
     };
     key.trim().eq_ignore_ascii_case(PASSKEY_FIELD_KEY)
-        && (cfg!(feature = "passkey") || value.trim_start().starts_with(PASSKEY_ENVELOPE_PREFIX))
 }
 
 pub fn canonical_search_field_key(key: &str) -> Option<String> {
@@ -131,13 +128,13 @@ pub fn parse_structured_pass_lines(
             }
 
             if is_passkey_storage_line(line) {
-                let encoded_value = trim_leading_spacing(raw_value);
-                return match decode_passkey_envelope(&encoded_value) {
+                let storage_value = trim_leading_spacing(raw_value);
+                return match decode_passkey_storage_value(&storage_value) {
                     Ok(credential) => (
                         StructuredPassLine::Passkey(PasskeyFieldTemplate {
                             raw_key: raw_key.to_string(),
                             separator_spacing: leading_spacing(raw_value),
-                            encoded_value,
+                            storage_value,
                             credential,
                         }),
                         None,
@@ -269,41 +266,33 @@ mod tests {
     #[test]
     fn passkey_fields_are_never_searchable() {
         assert_eq!(
-            searchable_pass_fields("secret\npasskey: not-a-valid-envelope"),
+            searchable_pass_fields("secret\npasskey: not-valid-json"),
             Vec::<SearchablePassField>::new()
         );
-        assert!(!pass_file_has_passkey(
-            "secret\npasskey: not-a-valid-envelope"
-        ));
+        assert!(!pass_file_has_passkey("secret\npasskey: not-valid-json"));
         assert!(pass_file_has_passkey_storage_field(
-            "secret\npasskey: not-a-valid-envelope"
+            "secret\npasskey: not-valid-json"
         ));
     }
 
     #[cfg(not(feature = "passkey"))]
     #[test]
-    fn disabled_feature_leaves_ordinary_passkey_fields_unchanged() {
-        assert_eq!(
-            searchable_pass_fields("secret\npasskey: an ordinary note"),
-            vec![field("passkey", "an ordinary note")]
-        );
-        assert!(!pass_file_has_passkey_storage_field(
-            "secret\npasskey: an ordinary note"
-        ));
+    fn disabled_feature_still_reserves_passkey_fields() {
+        assert!(searchable_pass_fields("secret\npasskey: private JSON").is_empty());
         assert!(pass_file_has_passkey_storage_field(
-            "secret\npasskey: keycord-passkey-v1:opaque"
+            "secret\npasskey: private JSON"
         ));
     }
 
     #[cfg(feature = "passkey")]
     #[test]
-    fn valid_passkey_envelopes_are_detected_without_becoming_searchable() {
-        use crate::password::passkey::{encode_passkey_envelope, generate_passkey_credential};
+    fn valid_stored_passkeys_are_detected_without_becoming_searchable() {
+        use crate::password::passkey::{encode_passkey_storage_value, generate_passkey_credential};
 
         let passkey =
             generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let envelope = encode_passkey_envelope(&passkey).expect("encode passkey");
-        let contents = format!("\npasskey: {envelope}");
+        let storage_value = encode_passkey_storage_value(&passkey).expect("encode passkey");
+        let contents = format!("\npasskey: {storage_value}");
 
         assert!(pass_file_has_passkey(&contents));
         assert!(pass_file_has_passkey_storage_field(&contents));

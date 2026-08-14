@@ -26,11 +26,13 @@ Keycord treats these lines specially:
 
 - `username:`, `user:`, and `login:` map to the username field
 - `otpauth://...` or `otpauth: otpauth://...` becomes the OTP field
-- `passkey: keycord-passkey-v1:...` contains a passkey credential when passkey support is enabled
+- `passkey: {"type":"passkey",...}` contains one compact standard CXF passkey JSON object
 - other `key: value` lines become searchable fields
 - lines without a colon are preserved as raw text but are not structured search fields
 
-The reserved `passkey:` line includes private key material. It is encrypted at rest because
+The `passkey:` name is always reserved, including in builds without passkey support and when its
+value is malformed. This prevents private material from becoming an ordinary searchable or
+exportable field. The line includes private key material. It is encrypted at rest because
 `pass` encrypts the complete entry as a `.gpg` file, just like its password line and other
 fields. Treat the raw or otherwise decrypted entry as secret.
 
