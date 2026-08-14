@@ -1,14 +1,14 @@
 # Keycord-documentatie
 
-Keycord is een grafische app voor standaard [`pass`](https://www.passwordstore.org/)-opslagen. Het behoudt dezelfde mapindeling op schijf, werkt met compatibele pass-hulpmiddelen en gebruikt een adaptieve GTK-interface voor toetsenbord, aanwijzer en aanraking op desktop- en mobiele Linux.
+Keycord is een grafische app voor standaard [`pass`](https://www.passwordstore.org/)-opslagen. Het behoudt dezelfde mapindeling op schijf, werkt met compatibele pass-hulpmiddelen en gebruikt een adaptieve GTK-interface voor toetsenbord-, muis- en aanraakbediening op desktops en mobiele apparaten.
 
 ## Handleidingen
 
-- [Aan de slag](getting-started.md): setup, opslagen, eerste items en eerste zoekopdrachten
+- [Aan de slag](getting-started.md): installatie, opslagen, eerste items en eerste zoekopdrachten
 - [Zoekgids](search.md): gewoon zoeken, `reg` en `find`
-- [Werkstromen](workflows.md): bewerken, OTP, hulpmiddelen, sneltoetsen en onderhoud
+- [Werkstromen](workflows.md): bewerken, OTP, passkeys, hulpmiddelen, export, sneltoetsen en onderhoud
 - [Machtigingen en backends](permissions-and-backends.md): Integrated vs Host, Flatpak-machtigingen, Git en sleutelsynchronisatie
-- [Het verhaal van geheimen](story-of-secrets.md): codegerichte rondgang door het maken van opslagen, versleuteling van items, ontgrendelpaden en kopieren naar het klembord
+- [Het verhaal van geheimen](story-of-secrets.md): codegerichte rondgang door het maken van opslagen, versleuteling van items, ontgrendelpaden en kopiëren naar het klembord
 - [Teams, werkgroepen en organisaties](teams-and-organizations.md): gedeelde opslagen, ontvangers, onboarding, offboarding en bootstrap-patronen
 - [Gebruiksscenario's](use-cases.md): veelvoorkomende opstellingen, van persoonlijk gebruik tot gedeelde opslagen en beheerwerk
 
@@ -22,14 +22,16 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 - latere `key: value`-regels als gestructureerde velden
 - `.gpg-id` voor opslagontvangers
 
-## Keycord functies
+## Keycord-functies
 
-- open een of meer wachtwoordopslagen en zoek op naam, opslag, veld, reguliere expressie of gestructureerde `find`-query
-- bewerk items met formuliervelden of ruwe pass-bestandstekst, genereer wachtwoorden en kopieer wachtwoorden, gebruikersnamen of eenmalige inlogcodes
-- voeg bestaande opslagen toe, maak nieuwe opslagen, importeer wachtwoorden op ondersteunde Linux-systemen of herstel een opslag uit Git met de Host-backend
-- beheer opslagontvangers, mapspecifieke `.gpg-id`-bestanden, privésleutels, experimentele met FIDO2 beveiligde privésleutels en experimentele OpenPGP-smartcard-workflows
-- synchroniseer Git-opslagen, beheer remotes, onderteken wijzigingen en bekijk geschiedenis met commitverificatiedetails
-- gebruik de adaptieve GTK-interface met toetsenbord, aanwijzer of aanraking op desktop- en mobiele Linux
+- open een of meer wachtwoordopslagen en zoek op naam, opslag, veld, reguliere expressie of gestructureerde `find`-zoekopdracht
+- bewerk items met formuliervelden of ruwe pass-bestandstekst, genereer wachtwoorden en kopieer of toon wachtwoorden, gebruikersnamen en eenmalige codes als QR-code
+- importeer passkeys in gewone versleutelde `pass`-items en open lokale verzoeken voor de uitwisseling van inloggegevens
+- voeg bestaande opslagen toe, maak nieuwe opslagen, importeer wachtwoorden op ondersteunde systemen of herstel een opslag uit Git met de Host-backend
+- beheer opslagontvangers, mapspecifieke `.gpg-id`-bestanden en met een wachtwoord beveiligde privésleutels, inclusief import uit bestanden of het klembord en optionele synchronisatie met GPG op de host
+- vind zwakke wachtwoorden, bekijk terugkerende veldwaarden, filter op opslag en exporteer wachtwoordopslagen naar CSV
+- synchroniseer Git-opslagen, beheer remotes, onderteken wijzigingen en bekijk de geschiedenis met details over commitverificatie
+- gebruik de adaptieve GTK-interface met toetsenbord, muis of aanraking op desktops en mobiele apparaten
 
 ## Backendmatrix
 
@@ -42,7 +44,6 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 | Een opslag herstellen vanuit een Git-URL in de UI | Nee | Ja | Alleen Linux; hosttoegang vereist. |
 | `pass import`-integratie | Nee | Ja | Alleen Linux; vereist de extensie `pass import`. |
 | Git op afstand ophalen, mergen en pushen | Ja | Ja | Alleen Linux; vereist hosttoegang en een opslag met Git-backend. |
-| Experimentele smartcard- / YubiKey-workflows | Ja | Ja | Alleen Linux; Flatpak heeft smartcardtoegang nodig. |
 | Keycord-privésleutels synchroniseren met host-GPG | Ja | Ja | Alleen Linux en hosttoegang vereist. |
 
 ## Beperkingen
@@ -52,10 +53,6 @@ Keycord leest en schrijft gewone `pass`-opslagen:
   - Als Host is geselecteerd zonder hosttoegang, valt Keycord terug op de Integrated-backend.
 - Niet-Linux-builds:
   - Functies die alleen in Host beschikbaar zijn, zoals een aangepaste `pass`, herstellen vanuit Git en `pass import`, blijven verborgen.
-  - experimentele workflows met hardwaresleutels blijven verborgen.
-- Experimentele Flatpak-smartcardondersteuning:
-  - experimentele acties met hardwaresleutels hebben PC/SC-toegang nodig
-  - met wachtwoord beveiligde softwaresleutels niet
 - Experimentele gelaagde versleuteling:
   - dit is experimenteel en Keycord-specifiek
   - andere `pass`-apps kunnen die items niet lezen

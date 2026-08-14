@@ -1,7 +1,6 @@
 use std::fmt;
 
 pub const PASSKEY_FIELD_KEY: &str = "passkey";
-pub const PASSKEY_ENVELOPE_PREFIX: &str = "keycord-passkey-v1:";
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[cfg_attr(not(feature = "passkey"), allow(dead_code))]
@@ -9,17 +8,6 @@ pub enum PasskeyRegistrationState {
     Imported,
     GeneratedUnregistered,
     Registered,
-}
-
-impl PasskeyRegistrationState {
-    #[cfg(all(test, feature = "passkey"))]
-    pub const fn as_str(self) -> &'static str {
-        match self {
-            Self::Imported => "imported",
-            Self::GeneratedUnregistered => "generated-unregistered",
-            Self::Registered => "registered",
-        }
-    }
 }
 
 #[derive(Clone, PartialEq, Eq)]
@@ -69,7 +57,7 @@ pub const fn passkey_support_available() -> bool {
 
 #[cfg(feature = "passkey")]
 mod implementation {
-    use super::{PasskeyCredential, PasskeyRegistrationState, PASSKEY_ENVELOPE_PREFIX};
+    use super::{PasskeyCredential, PasskeyRegistrationState};
     use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
     #[cfg(test)]
     use openssl::ec::{EcGroup, EcKey};
@@ -78,7 +66,7 @@ mod implementation {
     use openssl::pkey::{PKey, Private};
     #[cfg(test)]
     use rand::random;
-    use serde::{Deserialize, Serialize};
+    use serde::Serialize;
     use serde_json::Value;
     use zeroize::Zeroizing;
 
@@ -89,30 +77,7 @@ mod implementation {
         registration_state: PasskeyRegistrationState,
     }
 
-    #[derive(Serialize, Deserialize)]
-    #[serde(rename_all = "camelCase")]
-    struct PasskeyEnvelope {
-        credential_id: String,
-        rp_id: String,
-        username: String,
-        user_display_name: String,
-        user_handle: String,
-        key: String,
-        #[serde(default, skip_serializing_if = "Option::is_none")]
-        fido2_extensions: Option<Value>,
-        registration_state: EnvelopeRegistrationState,
-    }
-
-    #[derive(Debug, Serialize, Deserialize)]
-    #[serde(rename_all = "kebab-case")]
-    enum EnvelopeRegistrationState {
-        Imported,
-        GeneratedUnregistered,
-        Registered,
-    }
-
-    #[cfg(test)]
-    #[derive(Debug, Serialize)]
+    #[derive(Serialize)]
     #[serde(rename_all = "camelCase")]
     struct CxfPasskey<'a> {
         #[serde(rename = "type")]
@@ -127,95 +92,19 @@ mod implementation {
         fido2_extensions: Option<Value>,
     }
 
-    impl TryFrom<PasskeyCredential> for PasskeyEnvelope {
-        type Error = String;
-
-        fn try_from(passkey: PasskeyCredential) -> Result<Self, Self::Error> {
-            Ok(Self {
-                credential_id: passkey.credential_id,
-                rp_id: passkey.rp_id,
-                username: passkey.username,
-                user_display_name: passkey.user_display_name,
-                user_handle: passkey.user_handle,
-                key: passkey.key,
-                fido2_extensions: passkey
-                    .fido2_extensions
-                    .as_deref()
-                    .map(serde_json::from_str)
-                    .transpose()
-                    .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))?,
-                registration_state: passkey.registration_state.into(),
-            })
-        }
-    }
-
-    impl TryFrom<PasskeyEnvelope> for PasskeyCredential {
-        type Error = String;
-
-        fn try_from(envelope: PasskeyEnvelope) -> Result<Self, Self::Error> {
-            let fido2_extensions = envelope
-                .fido2_extensions
-                .as_ref()
-                .map(serde_json::to_string)
-                .transpose()
-                .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))?;
-            normalize_passkey(
-                &envelope.credential_id,
-                &envelope.rp_id,
-                &envelope.username,
-                &envelope.user_display_name,
-                &envelope.user_handle,
-                &envelope.key,
-                PasskeyMetadata {
-                    fido2_extensions: fido2_extensions.as_deref(),
-                    registration_state: envelope.registration_state.into(),
-                },
-            )
-        }
-    }
-
-    impl From<PasskeyRegistrationState> for EnvelopeRegistrationState {
-        fn from(value: PasskeyRegistrationState) -> Self {
-            match value {
-                PasskeyRegistrationState::Imported => Self::Imported,
-                PasskeyRegistrationState::GeneratedUnregistered => Self::GeneratedUnregistered,
-                PasskeyRegistrationState::Registered => Self::Registered,
-            }
-        }
-    }
-
-    impl From<EnvelopeRegistrationState> for PasskeyRegistrationState {
-        fn from(value: EnvelopeRegistrationState) -> Self {
-            match value {
-                EnvelopeRegistrationState::Imported => Self::Imported,
-                EnvelopeRegistrationState::GeneratedUnregistered => Self::GeneratedUnregistered,
-                EnvelopeRegistrationState::Registered => Self::Registered,
-            }
-        }
-    }
-
-    pub fn encode_passkey_envelope(passkey: &PasskeyCredential) -> Result<String, String> {
+    pub fn encode_passkey_storage_value(passkey: &PasskeyCredential) -> Result<String, String> {
         let passkey = normalized_passkey(passkey)?;
-        let envelope = PasskeyEnvelope::try_from(passkey)?;
-        let json = Zeroizing::new(
-            serde_json::to_vec(&envelope)
-                .map_err(|err| format!("Failed to serialize passkey data: {err}"))?,
-        );
-        Ok(format!(
-            "{PASSKEY_ENVELOPE_PREFIX}{}",
-            URL_SAFE_NO_PAD.encode(json)
-        ))
+        serde_json::to_string(&cxf_passkey(&passkey)?)
+            .map_err(|err| format!("Failed to serialize stored passkey data: {err}"))
     }
 
-    pub fn decode_passkey_envelope(value: &str) -> Result<PasskeyCredential, String> {
-        let encoded = value
-            .trim()
-            .strip_prefix(PASSKEY_ENVELOPE_PREFIX)
-            .ok_or_else(|| "Unsupported passkey envelope.".to_string())?;
-        let json = Zeroizing::new(decode_base64url(encoded, "envelope")?);
-        let envelope: PasskeyEnvelope = serde_json::from_slice(&json)
-            .map_err(|err| format!("Invalid passkey envelope: {err}"))?;
-        envelope.try_into()
+    pub fn decode_passkey_storage_value(value: &str) -> Result<PasskeyCredential, String> {
+        let value: Value = serde_json::from_str(value.trim())
+            .map_err(|err| format!("Invalid stored passkey JSON: {err}"))?;
+        if !is_cxf_passkey(&value) {
+            return Err("The stored JSON is not a passkey credential.".to_string());
+        }
+        passkey_from_cxf_value(&value, PasskeyRegistrationState::Imported)
     }
 
     pub fn import_cxf_passkey_json(input: &str) -> Result<PasskeyCredential, String> {
@@ -228,13 +117,18 @@ mod implementation {
     #[cfg(test)]
     pub fn export_cxf_passkey_json(passkey: &PasskeyCredential) -> Result<String, String> {
         let passkey = normalized_passkey(passkey)?;
+        serde_json::to_string_pretty(&cxf_passkey(&passkey)?)
+            .map_err(|err| format!("Failed to export passkey JSON: {err}"))
+    }
+
+    fn cxf_passkey(passkey: &PasskeyCredential) -> Result<CxfPasskey<'_>, String> {
         let fido2_extensions = passkey
             .fido2_extensions
             .as_deref()
             .map(serde_json::from_str)
             .transpose()
             .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))?;
-        let cxf = CxfPasskey {
+        Ok(CxfPasskey {
             credential_type: CXF_PASSKEY_TYPE,
             credential_id: &passkey.credential_id,
             rp_id: &passkey.rp_id,
@@ -243,9 +137,7 @@ mod implementation {
             user_handle: &passkey.user_handle,
             key: &passkey.key,
             fido2_extensions,
-        };
-        serde_json::to_string_pretty(&cxf)
-            .map_err(|err| format!("Failed to export passkey JSON: {err}"))
+        })
     }
 
     #[cfg(test)]
@@ -516,11 +408,11 @@ mod implementation {
     const UNSUPPORTED: &str = "This build does not include passkey support.";
 
     #[cfg(test)]
-    pub fn encode_passkey_envelope(_passkey: &PasskeyCredential) -> Result<String, String> {
+    pub fn encode_passkey_storage_value(_passkey: &PasskeyCredential) -> Result<String, String> {
         Err(UNSUPPORTED.to_string())
     }
 
-    pub fn decode_passkey_envelope(_value: &str) -> Result<PasskeyCredential, String> {
+    pub fn decode_passkey_storage_value(_value: &str) -> Result<PasskeyCredential, String> {
         Err(UNSUPPORTED.to_string())
     }
 
@@ -544,20 +436,20 @@ mod implementation {
     }
 }
 
-pub use implementation::decode_passkey_envelope;
+pub use implementation::decode_passkey_storage_value;
 #[cfg(feature = "passkey")]
-pub use implementation::{encode_passkey_envelope, import_cxf_passkey_json};
+pub use implementation::{encode_passkey_storage_value, import_cxf_passkey_json};
 #[cfg(all(test, not(feature = "passkey")))]
-pub use implementation::{encode_passkey_envelope, import_cxf_passkey_json};
+pub use implementation::{encode_passkey_storage_value, import_cxf_passkey_json};
 #[cfg(test)]
 pub use implementation::{export_cxf_passkey_json, generate_passkey_credential};
 
 #[cfg(all(test, feature = "passkey"))]
 mod tests {
     use super::{
-        decode_passkey_envelope, encode_passkey_envelope, export_cxf_passkey_json,
+        decode_passkey_storage_value, encode_passkey_storage_value, export_cxf_passkey_json,
         generate_passkey_credential, import_cxf_passkey_json, PasskeyCredential,
-        PasskeyRegistrationState, PASSKEY_ENVELOPE_PREFIX,
+        PasskeyRegistrationState,
     };
     use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
     use openssl::ec::{EcGroup, EcKey};
@@ -573,23 +465,32 @@ mod tests {
     }
 
     #[test]
-    fn passkey_envelopes_round_trip_all_registration_states() {
+    fn stored_passkeys_use_direct_compact_cxf_json() {
         let generated =
             generate_passkey_credential("Example.COM", "alice", "").expect("generate passkey");
 
+        let mut encodings = Vec::new();
         for state in [
             PasskeyRegistrationState::GeneratedUnregistered,
             PasskeyRegistrationState::Registered,
             PasskeyRegistrationState::Imported,
         ] {
             let passkey = generated.with_registration_state(state);
-            let encoded = encode_passkey_envelope(&passkey).expect("encode passkey");
-            assert!(encoded.starts_with(PASSKEY_ENVELOPE_PREFIX));
+            let encoded = encode_passkey_storage_value(&passkey).expect("encode passkey");
+            assert!(encoded.starts_with("{\"type\":\"passkey\","));
+            assert!(encoded.ends_with('}'));
+            assert!(!encoded.contains("keycord-passkey"));
+            assert!(!encoded.contains("version"));
+            assert!(!encoded.contains("registrationState"));
 
-            let decoded = decode_passkey_envelope(&encoded).expect("decode passkey");
-            assert_eq!(decoded, passkey);
-            assert_eq!(decoded.registration_state.as_str(), state.as_str());
+            let decoded = decode_passkey_storage_value(&encoded).expect("decode passkey");
+            assert_eq!(
+                decoded,
+                passkey.with_registration_state(PasskeyRegistrationState::Imported)
+            );
+            encodings.push(encoded);
         }
+        assert!(encodings.windows(2).all(|pair| pair[0] == pair[1]));
     }
 
     #[test]
@@ -748,8 +649,8 @@ mod tests {
         value["fido2Extensions"] = extensions.clone();
 
         let imported = import_cxf_passkey_json(&value.to_string()).expect("import extensions");
-        let encoded = encode_passkey_envelope(&imported).expect("encode passkey envelope");
-        let decoded = decode_passkey_envelope(&encoded).expect("decode passkey envelope");
+        let encoded = encode_passkey_storage_value(&imported).expect("encode stored passkey");
+        let decoded = decode_passkey_storage_value(&encoded).expect("decode stored passkey");
         assert_eq!(decoded, imported);
 
         let exported = exported_value(&decoded);
@@ -782,9 +683,9 @@ mod tests {
     }
 
     #[test]
-    fn malformed_envelopes_and_invalid_public_values_are_rejected() {
-        assert!(decode_passkey_envelope("keycord-passkey-v1:not-valid").is_err());
-        assert!(decode_passkey_envelope("other-prefix:abc").is_err());
+    fn malformed_storage_values_and_invalid_public_values_are_rejected() {
+        assert!(decode_passkey_storage_value("not-valid-json").is_err());
+        assert!(decode_passkey_storage_value("other-prefix:abc").is_err());
 
         let generated =
             generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
@@ -792,7 +693,7 @@ mod tests {
             rp_id: "invalid/rp".to_string(),
             ..generated
         };
-        assert!(encode_passkey_envelope(&invalid).is_err());
+        assert!(encode_passkey_storage_value(&invalid).is_err());
         assert!(export_cxf_passkey_json(&invalid).is_err());
     }
 }
@@ -800,7 +701,7 @@ mod tests {
 #[cfg(all(test, not(feature = "passkey")))]
 mod disabled_tests {
     use super::{
-        decode_passkey_envelope, encode_passkey_envelope, export_cxf_passkey_json,
+        decode_passkey_storage_value, encode_passkey_storage_value, export_cxf_passkey_json,
         generate_passkey_credential, import_cxf_passkey_json, passkey_support_available,
         PasskeyCredential, PasskeyRegistrationState,
     };
@@ -820,8 +721,8 @@ mod disabled_tests {
 
         assert!(!passkey_support_available());
         assert!(generate_passkey_credential("example.com", "alice", "Alice").is_err());
-        assert!(encode_passkey_envelope(&passkey).is_err());
-        assert!(decode_passkey_envelope("keycord-passkey-v1:value").is_err());
+        assert!(encode_passkey_storage_value(&passkey).is_err());
+        assert!(decode_passkey_storage_value(r#"{"type":"passkey"}"#).is_err());
         assert!(import_cxf_passkey_json(r#"{"type":"passkey"}"#).is_err());
         assert!(export_cxf_passkey_json(&passkey).is_err());
     }

@@ -483,9 +483,17 @@ fn collect_rust_strings_from_file(path: &Path, catalog: &mut Catalog) {
                     value.push('\n');
                     index += 1;
                 }
-                byte => {
+                byte if byte.is_ascii() => {
                     value.push(byte as char);
                     index += 1;
+                }
+                _ => {
+                    let character = source[index..]
+                        .chars()
+                        .next()
+                        .expect("Rust source should remain valid UTF-8");
+                    value.push(character);
+                    index += character.len_utf8();
                 }
             }
         }
@@ -689,12 +697,35 @@ fn skip_raw_string(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
 }
 
 fn skip_cfg_test_item(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
-    const ATTR: &[u8] = b"#[cfg(test)]";
-    if !bytes[*index..].starts_with(ATTR) {
+    const PREFIX: &[u8] = b"#[cfg(";
+    if !bytes[*index..].starts_with(PREFIX) {
         return false;
     }
 
-    *index += ATTR.len();
+    let predicate_start = *index + PREFIX.len();
+    let mut cursor = predicate_start;
+    let mut depth = 1usize;
+    while cursor < bytes.len() && depth > 0 {
+        match bytes[cursor] {
+            b'(' => depth += 1,
+            b')' => depth -= 1,
+            _ => {}
+        }
+        cursor += 1;
+    }
+    if depth != 0 || bytes.get(cursor) != Some(&b']') {
+        return false;
+    }
+
+    let predicate_end = cursor - 1;
+    let is_test_item = bytes[predicate_start..predicate_end]
+        .split(|byte| !(byte.is_ascii_alphanumeric() || *byte == b'_'))
+        .any(|token| token == b"test");
+    if !is_test_item {
+        return false;
+    }
+
+    *index = cursor + 1;
     while *index < bytes.len() {
         match bytes[*index] {
             b'\n' => {

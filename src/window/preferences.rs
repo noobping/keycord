@@ -11,6 +11,7 @@ use crate::support::actions::register_window_action;
 use crate::support::git::git_command_available;
 use crate::support::runtime::{
     has_host_permission, supports_audit_features, supports_host_command_features,
+    supports_private_key_sync_with_host,
 };
 use crate::support::ui::{
     connect_entry_row_apply_button_to_nonempty_text, focus_first_matching_list_row_in_order,
@@ -131,24 +132,11 @@ const SYNC_PRIVATE_KEYS_UNAVAILABLE_SUBTITLE: &str =
     "Private-key sync with the host is only available on Linux.";
 
 fn host_private_key_sync_is_available() -> bool {
-    #[cfg(feature = "flatpak")]
-    {
-        has_host_permission()
-    }
-
-    #[cfg(all(target_os = "linux", not(feature = "flatpak")))]
-    {
-        true
-    }
-
-    #[cfg(not(target_os = "linux"))]
-    {
-        false
-    }
+    supports_private_key_sync_with_host() && has_host_permission()
 }
 
 fn sync_private_key_sync_row(row: &ActionRow, check: &CheckButton, preferences: &Preferences) {
-    let supported = cfg!(target_os = "linux");
+    let supported = supports_private_key_sync_with_host();
     row.set_visible(supported);
     if !supported {
         return;

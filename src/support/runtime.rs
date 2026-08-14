@@ -46,6 +46,10 @@ pub const fn supports_host_command_features() -> bool {
     cfg!(target_os = "linux")
 }
 
+pub const fn supports_private_key_sync_with_host() -> bool {
+    cfg!(all(target_os = "linux", feature = "flatpak"))
+}
+
 pub const fn supports_setup_features() -> bool {
     cfg!(all(target_os = "linux", feature = "setup"))
 }
@@ -227,6 +231,18 @@ mod tests {
     use super::{
         handle_unsupported_host_command_invocation, OsString, UNSUPPORTED_HOST_COMMAND_ARG,
     };
+
+    #[cfg(not(feature = "flatpak"))]
+    #[test]
+    fn non_flatpak_builds_disable_private_key_sync_with_host() {
+        assert!(!super::supports_private_key_sync_with_host());
+    }
+
+    #[cfg(all(target_os = "linux", feature = "flatpak"))]
+    #[test]
+    fn linux_flatpak_builds_enable_private_key_sync_with_host() {
+        assert!(super::supports_private_key_sync_with_host());
+    }
 
     #[test]
     fn unsupported_host_command_flag_is_detected() {

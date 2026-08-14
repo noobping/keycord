@@ -14,7 +14,7 @@ mod storage;
 
 use self::restricted::default_store_dirs;
 use self::storage::{load_file_prefs, save_file_prefs, PreferenceFile};
-use crate::support::runtime::supports_host_command_features;
+use crate::support::runtime::supports_private_key_sync_with_host;
 
 const DEFAULT_NEW_PASS_FILE_TEMPLATE: &str = "username:\nemail:\nurl:";
 const DEFAULT_WINDOW_WIDTH: i32 = 850;
@@ -398,7 +398,7 @@ impl Preferences {
     }
 
     pub fn sync_private_keys_with_host(&self) -> bool {
-        supports_host_command_features()
+        supports_private_key_sync_with_host()
             && self.read_preference(
                 |settings| settings.boolean("sync-private-keys-with-host"),
                 |cfg| cfg.sync_private_keys_with_host.unwrap_or(false),

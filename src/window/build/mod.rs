@@ -28,7 +28,7 @@ use crate::password::otp::PasswordOtpState;
 use crate::password::page::password_page_would_discard_work;
 use crate::password::page::{open_password_entry_page, password_page_has_unsaved_changes};
 #[cfg(feature = "passkey")]
-use crate::password::passkey::{encode_passkey_envelope, PasskeyCredential};
+use crate::password::passkey::{encode_passkey_storage_value, PasskeyCredential};
 use crate::preferences::Preferences;
 use crate::private_key::sync::{sync_private_keys_with_host, PrivateKeySyncDirection};
 use crate::support::actions::activate_widget_action;
@@ -219,8 +219,8 @@ pub fn begin_passkey_import(
     if password_page_would_discard_work(&state.password_page) {
         return Err("Save or discard your current changes before importing a passkey.".to_string());
     }
-    let envelope = encode_passkey_envelope(credential)?;
-    let contents = format!("\npasskey: {envelope}");
+    let storage_value = encode_passkey_storage_value(credential)?;
+    let contents = format!("\npasskey: {storage_value}");
     let label = passkey_entry_label(credential);
     crate::password::page::begin_new_password_entry_with_contents(
         &state.password_page,

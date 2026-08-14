@@ -127,7 +127,7 @@ Use `find otp` in search when you need every entry that has OTP enabled.
 
 ## Store Passkeys And Open Exchange Requests
 
-With the default-enabled `passkey` feature, Keycord stores passkey credential data in a reserved
+With the `passkey` feature, Keycord stores passkey credential data in a reserved
 `passkey:` field inside an ordinary pass entry. The whole entry, including the passkey private key,
 is protected by the store's normal OpenPGP encryption. Compatible `pass` tools can continue to
 manage the same `.gpg` files, although they treat the reserved field as ordinary decrypted text.
@@ -261,7 +261,7 @@ For store-level key changes:
 1. Open **Password Stores** in Preferences.
 2. Open the target store's **Store keys** page.
 3. Add or remove recipients.
-4. Optionally generate a private key, import one, or attach an experimental hardware key.
+4. Optionally generate a password-protected private key or import one from a file or the clipboard.
 5. Save changes.
 
 On Linux, if the Integrated backend needs a private key unlocked to re-encrypt entries or sign the Git commit, Keycord prompts for it. If the signing unlock dialog is dismissed, the save can continue without a Git signature.
