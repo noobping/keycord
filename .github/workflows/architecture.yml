@@ -40,10 +40,10 @@ jobs:
         run: cargo fmt --package keycord-architecture -- --check
 
       - name: Test
-        run: cargo test --package keycord-architecture
+        run: cargo test --package keycord-architecture --locked
 
       - name: Lint
-        run: cargo clippy --package keycord-architecture --all-targets --all-features -- -D warnings
+        run: cargo clippy --package keycord-architecture --locked --all-targets --all-features -- -D warnings
 
       - name: Validate architecture
-        run: cargo run --package keycord-architecture -- .
+        run: cargo run --package keycord-architecture --locked -- .

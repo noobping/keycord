@@ -1581,10 +1581,9 @@ fn fragment_identity(relative: &str) -> Option<(FragmentKind, String)> {
     let filename = components[3].strip_suffix(".fragment.ui")?;
     let (kind, rest) = if let Some(rest) = filename.strip_prefix("window-") {
         (FragmentKind::Window, rest)
-    } else if let Some(rest) = filename.strip_prefix("shortcuts-") {
-        (FragmentKind::Shortcuts, rest)
     } else {
-        return None;
+        let rest = filename.strip_prefix("shortcuts-")?;
+        (FragmentKind::Shortcuts, rest)
     };
     if rest.is_empty() {
         return None;
@@ -2983,6 +2982,14 @@ pub(in crate::window) struct WindowWidgets {
         );
         assert_eq!(
             fragment_identity("crates/keycord-shell/data/window-subject.fragment.ui"),
+            None
+        );
+        assert_eq!(
+            fragment_identity("crates/keycord-docs/data/menu-tool-item.fragment.ui"),
+            None
+        );
+        assert_eq!(
+            fragment_identity("crates/keycord-docs/data/shortcuts-.fragment.ui"),
             None
         );
     }

@@ -7,7 +7,7 @@ it can run without building Keycord's application dependencies or installing GTK
 Run the complete guard from the repository root:
 
 ```sh
-cargo run --package keycord-architecture --offline -- .
+cargo run --package keycord-architecture --locked -- .
 ```
 
 The check enforces:
