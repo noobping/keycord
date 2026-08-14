@@ -43,9 +43,7 @@ Wanneer je een standaard CXF-passkeybestand opent, vraagt Keycord om bevestiging
 Keycord herkent en controleert ook de structuur van lokale CXP-exportverzoeken voor passkeys wanneer je die met de app opent.
 
 Deze route voor lokale uitwisseling maakt Keycord niet tot een live passkeyprovider voor
-webbrowsers en beweert niet dat er een versleuteld CXP-antwoord is aangemaakt. Ontwikkelaars kunnen
-deze ondersteuning weglaten met `cargo build --no-default-features` of de Meson-optie
-`-Dpasskey=false`.
+webbrowsers en beweert niet dat er een versleuteld CXP-antwoord is aangemaakt.
 
 ## Backends
 

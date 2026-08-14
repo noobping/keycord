@@ -46,8 +46,6 @@ Keycord also recognizes and structurally checks local Credential Exchange Protoc
 
 This request-opening path is for local credential exchange. It does not make Keycord a browser
 WebAuthn authenticator and does not by itself claim to have produced an encrypted CXP response.
-Developers can leave this support out with `cargo build --no-default-features` or the Meson option
-`-Dpasskey=false`.
 
 ## Backends
 
