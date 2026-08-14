@@ -1,15 +1,15 @@
 use std::time::{SystemTime, UNIX_EPOCH};
-use totp_rs::TOTP;
+use totp_rs::Totp;
 use url::Url;
 
 const DEFAULT_OTP_PERIOD: u64 = 30;
 
 pub(super) fn otp_display(url: &str) -> Result<(String, u64, u64), String> {
     let normalized_url = normalized_otp_url(url)?;
-    let totp = TOTP::from_url_unchecked(&normalized_url).map_err(|err| err.to_string())?;
+    let totp = Totp::from_url_unchecked(&normalized_url).map_err(|err| err.to_string())?;
     let period = otp_period(&normalized_url);
     let remaining = otp_remaining_seconds(period);
-    let code = totp.generate_current().map_err(|err| err.to_string())?;
+    let code = totp.generate_current().to_string();
     Ok((code, remaining, period))
 }
 

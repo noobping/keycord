@@ -28,15 +28,16 @@
   </supports>
 
   <description>
-    <p>Keycord works with folders that use the standard pass layout. Existing stores stay on disk as normal pass stores, so you can keep using compatible tools.</p>
+    <p>Keycord is an adaptive graphical client for password folders that use the standard pass layout. Existing stores remain normal pass stores on disk, so they keep working with pass and other compatible tools.</p>
     <ul>
       <li>Open one or more password stores and search by name, store, field, regular expression, or structured find query</li>
-      <li>Edit entries with form fields or raw pass-file text, generate passwords, and copy passwords, usernames, or one-time login codes</li>
-      <li>Import CXF passkeys into ordinary encrypted pass entries and open local CXP passkey export requests</li>
+      <li>Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes</li>
+      <li>Import passkeys into ordinary encrypted pass entries and open local credential-exchange requests</li>
       <li>Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend</li>
-      <li>Manage store recipients, folder-specific .gpg-id files, private keys, experimental FIDO2-protected private keys, and experimental OpenPGP smartcard workflows</li>
+      <li>Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization</li>
+      <li>Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV</li>
       <li>Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details</li>
-      <li>Use the adaptive GTK interface with keyboard, pointer, or touch on desktop and mobile Linux</li>
+      <li>Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices</li>
     </ul>
   </description>
 
@@ -76,6 +77,17 @@
   </screenshots>
 
   <releases>
+    <release version="0.9.12" date="2026-07-21">
+      <description>
+        <ul>
+          <li>Passkeys can now be imported into ordinary encrypted pass entries, and local credential-exchange request files can be opened.</li>
+          <li>Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands.</li>
+          <li>Added entry filtering by password store and remembered history-inspection filters.</li>
+          <li>Added CSV export for moving data to other tools.</li>
+          <li>Improved header actions and hid filters when they cannot affect the current view.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.11" date="2026-05-04">
       <description>
         <ul>
@@ -188,6 +200,7 @@
 
   <url type="homepage" translate="no">https://github.com/noobping/keycord</url>
   <url type="bugtracker" translate="no">https://github.com/noobping/keycord/issues</url>
+  <url type="translate" translate="no">https://hosted.weblate.org/projects/keycord</url>
   <url type="vcs-browser" translate="no">https://github.com/noobping/keycord</url>
 
   <content_rating type="oars-1.1"/>

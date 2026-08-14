@@ -1,0 +1,6372 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.12\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/password/page/mod.rs:94
+msgid "-----BEGIN PGP PRIVATE KEY BLOCK-----"
+msgstr ""
+
+#: src/support/git/audit.rs:720
+msgid "-----BEGIN PGP SIGNATURE-----"
+msgstr ""
+
+#: src/support/git/audit.rs:722
+msgid "-----BEGIN SSH SIGNATURE-----"
+msgstr ""
+
+#: src/password/page/mod.rs:95
+msgid "-----END PGP PRIVATE KEY BLOCK-----"
+msgstr ""
+
+#: src/support/git/audit.rs:354
+msgid "--format=%(refname)%00%(refname:short)%00"
+msgstr ""
+
+#: src/support/git/audit.rs:557
+msgid "--format=%H%x00%G?%x00%GS%x00%GK%x00%GF%x00%GP%x1f"
+msgstr ""
+
+#: src/support/git/audit.rs:406
+msgid "--format=%H%x00%h%x00%s%x00%an <%ae>%x00%aI%x00%cn <%ce>%x00%cI%x00"
+msgstr ""
+
+#: src/window/host_access.rs:41
+msgid "--talk-name=org.freedesktop.Flatpak"
+msgstr ""
+
+#: src/store/recipients.rs:168
+msgid "1 recipient"
+msgstr ""
+
+#: src/store/git_page.rs:270
+msgid "1 remote configured."
+msgstr ""
+
+#: src/window/docs.rs:1066
+msgid "<a href=\"{}\">{}</a>"
+msgstr ""
+
+#: src/support/theme.rs:263
+msgid ""
+"@define-color accent_bg_color {background};\n@define-color accent_fg_color {foreground};\n@define-color accent_color {accent};\n:root {{\n  --accent-bg-color: {background};\n  --accent-fg-color: {foreground};\n  --accent-color: {accent};\n}}"
+msgstr ""
+
+#: data/window.ui:695
+msgid "A list of folders that contain your password data."
+msgstr ""
+
+#: src/updater/linux.rs:35
+msgid "A newer Linux standalone build is available."
+msgstr ""
+
+#: src/updater/windows.rs:16
+msgid "A newer Windows release is available."
+msgstr ""
+
+#: src/backend/host_errors.rs:83
+msgid "A private key for this item is locked."
+msgstr ""
+
+#: src/backend/integrated/keys/errors.rs:7
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr ""
+
+#: src/support/git/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr ""
+
+#: data/shortcuts.ui:286
+msgid "About"
+msgstr ""
+
+#: data/window.ui:1886
+msgid "Actions"
+msgstr ""
+
+#: src/search_provider.rs:133
+msgid "ActivateResult"
+msgstr ""
+
+#: data/shortcuts.ui:57
+#: data/window.ui:607
+msgid "Add OTP field"
+msgstr ""
+
+#: src/store/git_page.rs:772
+msgid "Add a Git remote for this store."
+msgstr ""
+
+#: src/store/management.rs:185
+msgid "Add a folder."
+msgstr ""
+
+#: src/backend/errors.rs:408
+msgid "Add a password to that key first."
+msgstr ""
+
+#: src/backend/errors.rs:105
+#: src/backend/errors.rs:163
+#: src/backend/errors.rs:66
+#: src/password/undo.rs:68
+msgid "Add a private key in Preferences."
+msgstr ""
+
+#: src/store/git_page.rs:288
+msgid "Add a remote to initialize a Git repository first."
+msgstr ""
+
+#: src/password/page/mod.rs:411
+msgid "Add a store folder first."
+msgstr ""
+
+#: src/store/management/import.rs:178
+msgid "Add a store to use pass import."
+msgstr ""
+
+#: src/window/tools.rs:90
+msgid "Add a store with a Git repository to inspect history here."
+msgstr ""
+
+#: data/metainfo.xml:183
+msgid "Add advanced search"
+msgstr ""
+
+#: src/password/list/placeholder.rs:170
+#: src/password/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr ""
+
+#: src/password/list/row.rs:483
+msgid "Add another store first."
+msgstr ""
+
+#: src/store/git_page.rs:291
+msgid "Add at least one remote before syncing."
+msgstr ""
+
+#: data/metainfo.xml:154
+msgid "Add documentation"
+msgstr ""
+
+#: data/metainfo.xml:36
+msgid "Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend"
+msgstr ""
+
+#: data/metainfo.xml:141
+msgid "Add experimental FIDO2 support"
+msgstr ""
+
+#: data/metainfo.xml:163
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr ""
+
+#: data/shortcuts.ui:51
+#: data/window.ui:569
+msgid "Add field"
+msgstr ""
+
+#: data/window.ui:1744
+msgid "Add hardware key (Experimental)"
+msgstr ""
+
+#: data/window.ui:30
+#: src/password/list/row.rs:247
+msgid "Add item"
+msgstr ""
+
+#: data/window.ui:591
+msgid "Add missing fields"
+msgstr ""
+
+#: data/metainfo.xml:184
+msgid "Add optional GPG synchronization"
+msgstr ""
+
+#: data/shortcuts.ui:157
+#: data/window.ui:164
+#: src/store/management.rs:294
+msgid "Add or create store"
+msgstr ""
+
+#: src/window/tools/menu.rs:101
+msgid "Add or remove this build from the local app menu."
+msgstr ""
+
+#: src/backend/integrated/entries.rs:120
+msgid "Add password for {label}"
+msgstr ""
+
+#: src/support/git/remotes.rs:54
+msgid "Add password store Git remote"
+msgstr ""
+
+#: src/store/git_page.rs:771
+#: src/store/git_page.rs:781
+msgid "Add remote"
+msgstr ""
+
+#: data/metainfo.xml:155
+msgid "Add search provider"
+msgstr ""
+
+#: data/metainfo.xml:172
+msgid "Add the option to copy the logs"
+msgstr ""
+
+#: src/window/passkey_request.rs:48
+msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
+msgstr ""
+
+#: src/setup.rs:29
+msgid "Add to app menu"
+msgstr ""
+
+#: data/metainfo.xml:182
+msgid "Add tools page"
+msgstr ""
+
+#: data/metainfo.xml:86
+msgid "Added CSV export for moving data to other tools."
+msgstr ""
+
+#: data/metainfo.xml:110
+msgid "Added Git history inspection with commit verification details."
+msgstr ""
+
+#: data/metainfo.xml:84
+msgid "Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands."
+msgstr ""
+
+#: data/metainfo.xml:85
+msgid "Added entry filtering by password store and remembered history-inspection filters."
+msgstr ""
+
+#: data/metainfo.xml:127
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr ""
+
+#: data/metainfo.xml:119
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr ""
+
+#: data/metainfo.xml:107
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ""
+
+#: data/metainfo.xml:94
+msgid "Added hybrid sorting mode"
+msgstr ""
+
+#: src/password/page/mod.rs:503
+msgid "Added missing template fields."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:231
+msgid "Adding hardware key"
+msgstr ""
+
+#: src/window/host_access.rs:349
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr ""
+
+#: src/window/host_access.rs:221
+msgid "Allow access to apps on this device"
+msgstr ""
+
+#: src/window/host_access.rs:375
+msgid "Allow smartcard access (Experimental)"
+msgstr ""
+
+#: src/backend/errors.rs:104
+#: src/backend/errors.rs:116
+#: src/password/undo.rs:60
+msgid "An item with that name already exists."
+msgstr ""
+
+#: src/support/runtime.rs:18
+msgid "App runtime: debug={}, setup={}, flatpak={}, docs={}, logging={}, audit={}, host-access={}, smartcard={}, hardwarekey={}, fidokey={}."
+msgstr ""
+
+#: data/shortcuts.ui:45
+msgid "Apply template"
+msgstr ""
+
+#: src/support/git/audit_disabled.rs:103
+#: src/support/git/audit_disabled.rs:93
+msgid "Audit features are disabled in this build."
+msgstr ""
+
+#: src/window/tools/audit.rs:235
+msgid "Audit stopped unexpectedly."
+msgstr ""
+
+#: src/window/tools/audit.rs:1105
+msgid "Author"
+msgstr ""
+
+#: src/window/tools/audit.rs:1106
+msgid "Authored"
+msgstr ""
+
+#: data/window.ui:877
+msgid "Automatically remove blank username, field, and OTP lines when saving a pass file."
+msgstr ""
+
+#: src/updater/common.rs:922
+msgid "Available version:"
+msgstr ""
+
+#: data/window.ui:22
+msgid "Back"
+msgstr ""
+
+#: data/window.ui:1624
+msgid "Back to Preferences"
+msgstr ""
+
+#: data/window.ui:1868
+msgid "Back to Store keys"
+msgstr ""
+
+#: data/window.ui:724
+#: data/window.ui:729
+msgid "Backend"
+msgstr ""
+
+#: src/i18n.rs:123
+msgid "Bad locale path"
+msgstr ""
+
+#: src/store/git_page.rs:883
+msgid "Branch"
+msgstr ""
+
+#: data/window.ui:119
+msgid "Branches"
+msgstr ""
+
+#: data/metainfo.xml:6
+#: data/window.ui:176
+#: keycord.desktop:5
+#: src/window/navigation/chrome.rs:8
+msgid "Browse and edit password stores"
+msgstr ""
+
+#: data/window.ui:1068
+#: src/window/navigation/restore.rs:126
+#: src/window/navigation/restore.rs:134
+#: src/window/tools.rs:50
+msgid "Browse field values"
+msgstr ""
+
+#: data/window.ui:1069
+#: src/window/tools.rs:53
+msgid "Browse unique field values from the current list."
+msgstr ""
+
+#: src/password/passkey_request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr ""
+
+#: src/password/passkey_request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr ""
+
+#: src/password/page/mod.rs:65
+msgid "Can't open this item."
+msgstr ""
+
+#: src/password/undo.rs:12
+msgid "Can't undo that change."
+msgstr ""
+
+#: src/password/undo.rs:58
+#: src/password/undo.rs:85
+#: src/window/controls.rs:342
+msgid "Can't undo the last change."
+msgstr ""
+
+#: src/password/list/row.rs:147
+#: src/password/list/row.rs:155
+#: src/updater/common.rs:696
+#: src/window/passkey_request.rs:57
+#: src/window/preferences.rs:198
+#: src/window/tools/export.rs:155
+msgid "Cancel"
+msgstr ""
+
+#: data/metainfo.xml:134
+msgid "Change the default to use the filename as the username."
+msgstr ""
+
+#: src/window/tools/audit.rs:1167
+msgid "Changed paths"
+msgstr ""
+
+#: data/metainfo.xml:174
+msgid "Changed the app icon to a keycord"
+msgstr ""
+
+#: data/window.ui:2147
+msgid "Check for _Updates"
+msgstr ""
+
+#: src/window/git/operations.rs:31
+msgid "Check out a branch before syncing"
+msgstr ""
+
+#: src/support/git/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr ""
+
+#: src/store/git_page.rs:335
+#: src/window/git/operations.rs:32
+msgid "Check out a branch before syncing."
+msgstr ""
+
+#: src/backend/integrated/git.rs:117
+msgid "Check staged password store Git changes"
+msgstr ""
+
+#: src/store/git_page.rs:894
+msgid "Check the logs for details."
+msgstr ""
+
+#: src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr ""
+
+#: src/store/management/import.rs:182
+msgid "Checking pass import availability."
+msgstr ""
+
+#: src/password/passkey.rs:189
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr ""
+
+#: src/password/passkey.rs:188
+msgid "Choose a JSON object containing one passkey credential."
+msgstr ""
+
+#: data/window.ui:1505
+#: src/store/management/import.rs:192
+msgid "Choose a file or folder if the importer needs one."
+msgstr ""
+
+#: src/store/management/clone.rs:165
+msgid "Choose a folder and restore it from a Git repository."
+msgstr ""
+
+#: src/store/management.rs:295
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr ""
+
+#: data/window.ui:1784
+msgid "Choose a private key file or experimental FIDO2-protected private key file."
+msgstr ""
+
+#: src/password/list/row.rs:528
+#: src/store/management/import.rs:424
+msgid "Choose a store."
+msgstr ""
+
+#: src/store/management/import.rs:435
+msgid "Choose an importer."
+msgstr ""
+
+#: data/window.ui:725
+msgid "Choose how Keycord opens your data. Integrated is the default. Use Host to run your own command."
+msgstr ""
+
+#: data/window.ui:805
+msgid "Choose how pass files are ordered on the home page."
+msgstr ""
+
+#: src/store/management/import.rs:374
+msgid "Choose import source file"
+msgstr ""
+
+#: src/store/management/import.rs:392
+msgid "Choose import source folder"
+msgstr ""
+
+#: data/window.ui:1510
+msgid "Choose source file"
+msgstr ""
+
+#: data/window.ui:1520
+msgid "Choose source folder"
+msgstr ""
+
+#: src/store/management.rs:329
+msgid "Choose store folder"
+msgstr ""
+
+#: src/store/management/clone.rs:114
+msgid "Choose store folder to restore"
+msgstr ""
+
+#: data/window.ui:1661
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr ""
+
+#: data/shortcuts.ui:69
+msgid "Clean pass file"
+msgstr ""
+
+#: data/window.ui:876
+msgid "Clear empty fields before save"
+msgstr ""
+
+#: src/password/list/row.rs:257
+msgid "Clear search"
+msgstr ""
+
+#: data/window.ui:1530
+msgid "Clear source path"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:543
+msgid "Clipboard does not contain a key."
+msgstr ""
+
+#: src/clipboard.rs:22
+#: src/store/recipients_page/import.rs:529
+msgid "Clipboard unavailable."
+msgstr ""
+
+#: src/updater/linux.rs:276
+#: src/window/passkey_request.rs:40
+#: src/window/passkey_request.rs:80
+msgid "Close"
+msgstr ""
+
+#: src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr ""
+
+#: src/logging/command/run.rs:177
+#: src/logging/disabled.rs:103
+msgid "Command input writer panicked."
+msgstr ""
+
+#: src/window/tools/audit.rs:1104
+msgid "Commit"
+msgstr ""
+
+#: src/window/tools/audit.rs:775
+msgid "Commit loading stopped unexpectedly."
+msgstr ""
+
+#: src/window/git/operations.rs:25
+msgid "Commit or discard local changes before syncing"
+msgstr ""
+
+#: src/support/git/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr ""
+
+#: src/support/git/sync.rs:12
+msgid "Commit or discard local changes before syncing this store. Local and remote commits are also waiting to sync."
+msgstr ""
+
+#: src/support/git/sync.rs:18
+msgid "Commit or discard local changes before syncing this store. Local commits are also waiting to sync."
+msgstr ""
+
+#: src/support/git/sync.rs:24
+msgid "Commit or discard local changes before syncing this store. Remote commits are also waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:309
+msgid "Commit or discard local changes before syncing."
+msgstr ""
+
+#: src/store/git_page.rs:295
+msgid "Commit or discard local changes before syncing. Local and remote commits are also waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:300
+msgid "Commit or discard local changes before syncing. Local commits are also waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:305
+msgid "Commit or discard local changes before syncing. Remote commits are also waiting to sync."
+msgstr ""
+
+#: src/window/tools/audit.rs:1108
+msgid "Committed"
+msgstr ""
+
+#: src/window/tools/audit.rs:1107
+msgid "Committer"
+msgstr ""
+
+#: src/private_key/dialog.rs:258
+msgid "Confirm new security key PIN"
+msgstr ""
+
+#: data/window.ui:1957
+msgid "Confirm password"
+msgstr ""
+
+#: src/private_key/dialog.rs:125
+msgid "Confirm the new security key PIN."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:201
+#: src/store/recipients_page/import.rs:265
+msgid "Connect a hardware key first."
+msgstr ""
+
+#: src/backend/errors.rs:26
+#: src/backend/integrated/keys/fido2/common.rs:724
+#: src/backend/integrated/keys/fido2/common.rs:905
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:207
+msgid "Connect only one hardware key before adding it."
+msgstr ""
+
+#: src/backend/errors.rs:387
+msgid "Connect the FIDO2 security key and try again."
+msgstr ""
+
+#: src/backend/errors.rs:426
+msgid "Connect the FIDO2 security key first."
+msgstr ""
+
+#: src/backend/errors.rs:374
+msgid "Connect the hardware key and try again."
+msgstr ""
+
+#: src/backend/errors.rs:411
+msgid "Connect the hardware key first."
+msgstr ""
+
+#: src/backend/errors.rs:14
+#: src/backend/errors.rs:15
+#: src/backend/integrated/keys/fido2/common.rs:111
+#: src/backend/integrated/keys/fido2/common.rs:229
+msgid "Connect the matching FIDO2 security key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:829
+msgid "Connect the matching hardware key before importing it."
+msgstr ""
+
+#: src/support/runtime.rs:174
+msgid "Context"
+msgstr ""
+
+#: src/clipboard.rs:167
+#: src/password/page/mod.rs:795
+#: src/password/page/mod.rs:805
+#: src/password/page/mod.rs:815
+#: src/window/host_access.rs:133
+#: src/window/tools/menu.rs:73
+msgid "Copied."
+msgstr ""
+
+#: data/shortcuts.ui:39
+#: data/window.ui:541
+msgid "Copy OTP"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:869
+msgid "Copy armored private key"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:870
+msgid "Copy armored public key"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:873
+msgid "Copy experimental FIDO2-protected private key"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:1106
+#: src/store/recipients_page/list.rs:922
+msgid "Copy fingerprint"
+msgstr ""
+
+#: data/window.ui:1190
+#: data/window.ui:1196
+msgid "Copy logs"
+msgstr ""
+
+#: data/shortcuts.ui:27
+#: data/window.ui:322
+#: src/password/list/row.rs:131
+msgid "Copy password"
+msgstr ""
+
+#: src/clipboard.rs:99
+msgid "Copy password to clipboard"
+msgstr ""
+
+#: src/window/host_access.rs:120
+msgid "Copy permission command"
+msgstr ""
+
+#: data/window.ui:1191
+msgid "Copy recent app and command output to the clipboard."
+msgstr ""
+
+#: data/shortcuts.ui:98
+msgid "Copy selected item's password"
+msgstr ""
+
+#: data/shortcuts.ui:33
+#: data/window.ui:505
+msgid "Copy username"
+msgstr ""
+
+#: src/clipboard.rs:75
+msgid "Copy value"
+msgstr ""
+
+#: src/backend/integrated/keys/store/paths.rs:11
+#: src/backend/integrated/keys/store/paths.rs:18
+#: src/backend/integrated/keys/store/paths.rs:5
+msgid "Could not determine the data folder."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:416
+msgid "Could not determine the home folder."
+msgstr ""
+
+#: src/store/management.rs:351
+#: src/store/management/clone.rs:230
+#: src/window/git/enabled.rs:201
+msgid "Couldn't add that folder."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:247
+#: src/store/recipients_page/import.rs:300
+msgid "Couldn't add the hardware key."
+msgstr ""
+
+#: src/password/list/row.rs:781
+msgid ""
+"Couldn't build a new window.\nerror: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr ""
+
+#: src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr ""
+
+#: src/store/recipients_page/export.rs:50
+msgid "Couldn't copy that key."
+msgstr ""
+
+#: src/clipboard.rs:177
+#: src/clipboard.rs:182
+msgid "Couldn't copy the password."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr ""
+
+#: src/store/recipients_page/mod.rs:58
+msgid "Couldn't create the store."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:453
+#: src/backend/integrated/keys/fido2/common.rs:456
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr ""
+
+#: src/backend/errors.rs:132
+#: src/password/list/row.rs:595
+msgid "Couldn't delete the item."
+msgstr ""
+
+#: src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr ""
+
+#: src/window/tools/export.rs:212
+#: src/window/tools/export.rs:232
+msgid "Couldn't export passwords."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:178
+msgid "Couldn't find key with matching fingerprint"
+msgstr ""
+
+#: src/password/list/row.rs:772
+msgid "Couldn't find the application to open a new window."
+msgstr ""
+
+#: src/private_key/git.rs:115
+msgid "Couldn't find the application window for the Git signing unlock dialog."
+msgstr ""
+
+#: src/private_key/unlock.rs:403
+msgid "Couldn't find the application window for the private key unlock dialog."
+msgstr ""
+
+#: src/password/list/row.rs:763
+msgid "Couldn't find the current window to open a new one."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:148
+#: src/store/recipients_page/generate.rs:188
+#: src/store/recipients_page/generate.rs:249
+#: src/store/recipients_page/generate.rs:279
+msgid "Couldn't generate the key."
+msgstr ""
+
+#: src/window/host_access.rs:63
+msgid "Couldn't grant permission."
+msgstr ""
+
+#: src/window/passkey_request.rs:77
+msgid "Couldn't import passkey"
+msgstr ""
+
+#: src/store/management/import.rs:474
+#: src/store/management/import.rs:499
+msgid "Couldn't import passwords."
+msgstr ""
+
+#: src/backend/errors.rs:444
+#: src/backend/errors.rs:445
+#: src/password/page/mod.rs:602
+#: src/password/page/mod.rs:631
+#: src/password/page/mod.rs:641
+#: src/store/recipients_page/import.rs:180
+msgid "Couldn't import the key."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:680
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr ""
+
+#: src/store/git_page.rs:356
+#: src/store/git_page.rs:824
+msgid "Couldn't inspect Git remotes."
+msgstr ""
+
+#: src/store/git_page.rs:893
+msgid "Couldn't inspect Git state"
+msgstr ""
+
+#: data/window.ui:1640
+#: src/store/recipients_page/list.rs:80
+msgid "Couldn't inspect host GPG keys"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:217
+msgid "Couldn't inspect the hardware key."
+msgstr ""
+
+#: src/updater/linux.rs:275
+msgid "Couldn't install the update."
+msgstr ""
+
+#: src/password/page/mod.rs:552
+#: src/store/recipients_page/sync.rs:18
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr ""
+
+#: src/window/tools/audit.rs:758
+msgid "Couldn't load commits."
+msgstr ""
+
+#: src/window/tools.rs:91
+msgid "Couldn't load data"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:712
+msgid "Couldn't load private keys"
+msgstr ""
+
+#: src/password/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr ""
+
+#: src/password/list/row.rs:564
+msgid "Couldn't move the item."
+msgstr ""
+
+#: src/password/list/row.rs:764
+#: src/password/list/row.rs:773
+#: src/password/list/row.rs:782
+msgid "Couldn't open a new window."
+msgstr ""
+
+#: src/window/passkey_request.rs:30
+msgid "Couldn't open passkey request"
+msgstr ""
+
+#: src/window/build/actions.rs:65
+msgid "Couldn't open that item."
+msgstr ""
+
+#: src/support/file_picker.rs:22
+#: src/support/file_picker.rs:252
+#: src/support/file_picker.rs:266
+msgid "Couldn't open the file chooser."
+msgstr ""
+
+#: src/support/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr ""
+
+#: src/password/list/row.rs:752
+msgid "Couldn't open the folder."
+msgstr ""
+
+#: src/store/management/import.rs:345
+msgid "Couldn't open the import page."
+msgstr ""
+
+#: src/password/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr ""
+
+#: src/window/tools/unlock.rs:64
+msgid "Couldn't prepare tool access."
+msgstr ""
+
+#: src/private_key/git.rs:120
+msgid "Couldn't present the Git signing unlock dialog. Continuing without a signature."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:349
+#: src/store/recipients_page/import.rs:517
+msgid "Couldn't read that file."
+msgstr ""
+
+#: src/store/management.rs:339
+msgid "Couldn't read that folder."
+msgstr ""
+
+#: src/backend/errors.rs:452
+msgid "Couldn't read that key."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:550
+msgid "Couldn't read the clipboard."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:1064
+msgid "Couldn't remove that key."
+msgstr ""
+
+#: src/store/git_page.rs:701
+msgid "Couldn't remove that remote."
+msgstr ""
+
+#: src/backend/errors.rs:121
+msgid "Couldn't rename the item."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr ""
+
+#: src/window/git/operations.rs:59
+#: src/window/git/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr ""
+
+#: src/backend/errors.rs:109
+#: src/backend/errors.rs:110
+msgid "Couldn't save changes."
+msgstr ""
+
+#: src/store/recipients_page/mod.rs:59
+msgid "Couldn't save store keys."
+msgstr ""
+
+#: src/store/git_page.rs:569
+msgid "Couldn't save that remote."
+msgstr ""
+
+#: src/window/preferences.rs:470
+msgid "Couldn't save that setting."
+msgstr ""
+
+#: src/password/list/store_filter.rs:84
+#: src/window/tools/audit.rs:485
+msgid "Couldn't save the filter selection."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr ""
+
+#: src/clipboard.rs:265
+#: src/clipboard.rs:272
+msgid "Couldn't show the password as a QR code."
+msgstr ""
+
+#: src/updater/linux.rs:43
+#: src/updater/windows.rs:24
+msgid "Couldn't start the installer."
+msgstr ""
+
+#: src/window/preferences.rs:339
+msgid "Couldn't sync private keys."
+msgstr ""
+
+#: src/store/git_page.rs:863
+msgid "Couldn't sync store."
+msgstr ""
+
+#: src/window/git/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr ""
+
+#: src/private_key/git.rs:84
+msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
+msgstr ""
+
+#: src/backend/errors.rs:392
+#: src/backend/errors.rs:431
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr ""
+
+#: src/backend/errors.rs:380
+#: src/backend/errors.rs:382
+#: src/backend/errors.rs:416
+#: src/backend/errors.rs:419
+msgid "Couldn't unlock the hardware key."
+msgstr ""
+
+#: src/backend/errors.rs:401
+#: src/backend/errors.rs:441
+#: src/private_key/unlock.rs:30
+msgid "Couldn't unlock the key."
+msgstr ""
+
+#: src/window/tools/menu.rs:115
+msgid "Couldn't update the app menu."
+msgstr ""
+
+#: src/password/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr ""
+
+#: data/window.ui:1718
+msgid "Create a new FIDO2-protected key."
+msgstr ""
+
+#: src/password/new_item.rs:54
+msgid "Create a new pass file."
+msgstr ""
+
+#: data/window.ui:1698
+msgid "Create a new password-protected key."
+msgstr ""
+
+#: src/window/navigation/restore.rs:71
+msgid "Create a password-protected private key for password stores."
+msgstr ""
+
+#: src/backend/integrated/git.rs:640
+msgid "Created {} password store Git commit {commit_oid} for {store_root}."
+msgstr ""
+
+#: src/support/git/audit.rs:331
+#: src/support/git/audit_disabled.rs:110
+msgid "Cryptographically invalid signature"
+msgstr ""
+
+#: src/window/tools/audit.rs:968
+msgid "Current branch-tip recipients"
+msgstr ""
+
+#: src/updater/common.rs:919
+msgid "Current version:"
+msgstr ""
+
+#: src/password/passkey_request.rs:66
+msgid "CxpHpkeParameters"
+msgstr ""
+
+#: src/support/secure_fs.rs:234
+msgid "D:P(A;;FA;;;SY)(A;;FA;;;{user_sid})"
+msgstr ""
+
+#: src/support/secure_fs.rs:235
+msgid "D:P(A;OICI;FA;;;SY)(A;OICI;FA;;;{user_sid})"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:366
+msgid "Default"
+msgstr ""
+
+#: src/password/list/row.rs:71
+msgid "Delete"
+msgstr ""
+
+#: src/backend/host.rs:482
+msgid "Delete host GPG private key"
+msgstr ""
+
+#: src/backend/host.rs:220
+msgid "Delete password entry"
+msgstr ""
+
+#: data/shortcuts.ui:116
+msgid "Delete selected pass file"
+msgstr ""
+
+#: src/store/git_page.rs:253
+msgid "Detached HEAD"
+msgstr ""
+
+#: src/window/navigation/pages.rs:31
+#: src/window/navigation/restore.rs:161
+msgid "Details"
+msgstr ""
+
+#: src/private_key/git.rs:159
+msgid "Dismissed the Git signing unlock prompt for {context_for_close}. Continuing without a signature."
+msgstr ""
+
+#: data/window.ui:1166
+#: data/window.ui:1231
+#: data/window.ui:1272
+#: src/window/docs.rs:20
+#: src/window/docs_disabled.rs:5
+#: src/window/navigation/pages.rs:43
+msgid "Documentation"
+msgstr ""
+
+#: src/updater/common.rs:1179
+msgid "Downloaded"
+msgstr ""
+
+#: data/metainfo.xml:63
+msgid "Edit a password entry"
+msgstr ""
+
+#: data/metainfo.xml:34
+msgid "Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes"
+msgstr ""
+
+#: src/store/git_page.rs:640
+#: src/store/git_page.rs:660
+msgid "Edit remote"
+msgstr ""
+
+#: data/window.ui:1945
+#: data/window.ui:2013
+msgid "Email"
+msgstr ""
+
+#: src/support/validation.rs:50
+msgid "Email fields must use a valid email address."
+msgstr ""
+
+#: src/window/tools/audit.rs:1014
+msgid "Empty"
+msgstr ""
+
+#: src/window/tools/audit.rs:1144
+msgid "Enabled for this result"
+msgstr ""
+
+#: src/window/preferences.rs:224
+msgid "Enter a command."
+msgstr ""
+
+#: src/password/file/types.rs:33
+msgid "Enter a field name."
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:67
+msgid "Enter a key password."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:924
+msgid "Enter a name for the hardware key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:1018
+msgid "Enter a name for the private key."
+msgstr ""
+
+#: src/password/list/row.rs:641
+#: src/password/page/mod.rs:406
+#: src/store/recipients_page/generate.rs:50
+#: src/store/recipients_page/import.rs:94
+msgid "Enter a name."
+msgstr ""
+
+#: src/password/passkey.rs:286
+msgid "Enter a passkey username."
+msgstr ""
+
+#: src/store/git_page.rs:416
+msgid "Enter a remote URL."
+msgstr ""
+
+#: src/store/git_page.rs:410
+msgid "Enter a remote name."
+msgstr ""
+
+#: src/store/management/clone.rs:33
+msgid "Enter a repository URL."
+msgstr ""
+
+#: src/password/model.rs:120
+msgid "Enter a username."
+msgstr ""
+
+#: src/password/passkey.rs:400
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr ""
+
+#: src/support/validation.rs:35
+msgid "Enter a valid email address."
+msgstr ""
+
+#: src/password/passkey.rs:325
+#: src/password/passkey.rs:344
+msgid "Enter a valid passkey RP ID."
+msgstr ""
+
+#: src/password/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr ""
+
+#: src/password/otp/mod.rs:113
+#: src/password/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:930
+msgid "Enter an email address for the hardware key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:1024
+msgid "Enter an email address for the private key."
+msgstr ""
+
+#: src/support/validation.rs:32
+msgid "Enter an email address."
+msgstr ""
+
+#: src/backend/errors.rs:4
+#: src/backend/errors.rs:5
+#: src/backend/integrated/keys/fido2/common.rs:106
+#: src/backend/integrated/keys/fido2/common.rs:220
+#: src/backend/integrated/keys/fido2/common.rs:282
+#: src/backend/integrated/keys/fido2/key.rs:69
+#: src/backend/integrated/keys/store/unlock.rs:266
+msgid "Enter the FIDO2 security key PIN."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:478
+#: src/backend/integrated/keys/store/storage.rs:947
+#: src/backend/integrated/keys/store/unlock.rs:245
+#: src/private_key/dialog.rs:115
+msgid "Enter the hardware key PIN."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:937
+#: src/store/recipients_page/import.rs:109
+msgid "Enter the hardware key admin PIN."
+msgstr ""
+
+#: src/private_key/dialog.rs:114
+#: src/private_key/dialog.rs:92
+msgid "Enter the key password."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:476
+#: src/backend/integrated/keys/store/storage.rs:945
+#: src/store/recipients_page/import.rs:112
+msgid "Enter the new hardware key PIN."
+msgstr ""
+
+#: src/private_key/dialog.rs:122
+msgid "Enter the new security key PIN."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:255
+#: src/backend/integrated/keys/store/storage.rs:1031
+msgid "Enter the private key password."
+msgstr ""
+
+#: src/private_key/dialog.rs:116
+msgid "Enter the security key PIN."
+msgstr ""
+
+#: src/window/controls.rs:558
+msgid "Escape"
+msgstr ""
+
+#: data/metainfo.xml:164
+msgid "Expand the password editor with cleanup actions"
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:243
+msgid "Experimental FIDO2-protected key generation worker disconnected unexpectedly."
+msgstr ""
+
+#: src/window/host_access.rs:350
+msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
+msgstr ""
+
+#: src/window/host_access.rs:376
+msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
+msgstr ""
+
+#: data/window.ui:1803
+msgid "Experimental multi-layer encryption. When on, every selected key must be unlocked and other pass apps will not be able to read these items."
+msgstr ""
+
+#: data/window.ui:1798
+#: src/store/recipients_page/list.rs:476
+msgid "Experimental store options"
+msgstr ""
+
+#: data/window.ui:1745
+msgid "Experimental: add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+msgstr ""
+
+#: data/window.ui:1758
+msgid "Experimental: bind a public key file to the connected hardware key."
+msgstr ""
+
+#: data/window.ui:1732
+msgid "Experimental: create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr ""
+
+#: src/window/tools/export.rs:156
+#: src/window/tools/export.rs:174
+msgid "Export"
+msgstr ""
+
+#: src/window/tools/export.rs:152
+msgid "Export all passwords?"
+msgstr ""
+
+#: data/window.ui:1111
+#: src/window/tools.rs:80
+msgid "Export every password and field to a CSV file."
+msgstr ""
+
+#: src/backend/host.rs:457
+msgid "Export host GPG private key"
+msgstr ""
+
+#: src/backend/host.rs:439
+msgid "Export host GPG public keys"
+msgstr ""
+
+#: data/window.ui:1110
+#: src/window/tools/export.rs:173
+msgid "Export passwords"
+msgstr ""
+
+#: src/window/tools/export.rs:222
+msgid "Exported {count} password."
+msgstr ""
+
+#: src/window/tools/export.rs:224
+msgid "Exported {count} passwords."
+msgstr ""
+
+#: src/private_key/unlock.rs:316
+#: src/store/recipients_page/generate.rs:275
+msgid "FIDO2 PIN setup worker disconnected unexpectedly."
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:94
+msgid "FIDO2 private key manifest"
+msgstr ""
+
+#: src/backend/integrated/keys/store/mod.rs:13
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:989
+msgid "FIDO2 security key"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:325
+msgid "FIDO2 text envelope"
+msgstr ""
+
+#: src/support/git/sync.rs:71
+msgid "Failed to abort password store merge for {root}: {err}"
+msgstr ""
+
+#: src/support/git/sync.rs:65
+msgid "Failed to abort password store merge for {root}: {}"
+msgstr ""
+
+#: src/updater/linux.rs:228
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr ""
+
+#: src/support/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr ""
+
+#: src/main.rs:97
+msgid "Failed to apply process hardening: {err}"
+msgstr ""
+
+#: src/main.rs:533
+msgid "Failed to build shortcuts dialog."
+msgstr ""
+
+#: src/main.rs:195
+msgid "Failed to build the main window."
+msgstr ""
+
+#: src/main.rs:522
+msgid ""
+"Failed to build the shortcuts dialog.\nerror: {err}"
+msgstr ""
+
+#: src/updater/common.rs:406
+msgid "Failed to check for updates: {error}"
+msgstr ""
+
+#: src/support/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:296
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr ""
+
+#: src/store/recipients_page/export.rs:44
+msgid "Failed to copy key material '{}': {err}"
+msgstr ""
+
+#: src/clipboard.rs:172
+msgid "Failed to copy password entry: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:221
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr ""
+
+#: src/updater/linux.rs:238
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr ""
+
+#: src/support/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:286
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:608
+msgid "Failed to decode armored signature"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:300
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:393
+msgid "Failed to derive enough HKDF output."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:213
+msgid "Failed to discover hardware keys: {err}"
+msgstr ""
+
+#: src/updater/common.rs:563
+msgid "Failed to download the update: {error}"
+msgstr ""
+
+#: src/window/preferences.rs:334
+msgid "Failed to enable private-key sync: {err}"
+msgstr ""
+
+#: src/search_provider.rs:79
+msgid "Failed to export search provider object: {err}"
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:201
+msgid "Failed to generate experimental FIDO2-protected key: {err}"
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:144
+msgid "Failed to generate private key: {err}"
+msgstr ""
+
+#: src/window/build/widgets.rs:536
+msgid "Failed to get {id}"
+msgstr ""
+
+#: src/updater/common.rs:1119
+msgid "Failed to hash update file '{}': {error}"
+msgstr ""
+
+#: src/support/ui.rs:738
+msgid "Failed to hide notice '{notice_id}': {err}"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:71
+msgid "Failed to import hardware key: {err}"
+msgstr ""
+
+#: src/store/management/import.rs:469
+msgid "Failed to import passwords into '{}' from '{}': {err}"
+msgstr ""
+
+#: src/password/page/mod.rs:584
+msgid "Failed to import private key from pass file: {err}"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:47
+msgid "Failed to import private key: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:280
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr ""
+
+#: src/main.rs:106
+msgid "Failed to initialize libadwaita."
+msgstr ""
+
+#: src/store/git_page.rs:820
+msgid "Failed to inspect Git state before syncing '{store_for_sync}': {err}"
+msgstr ""
+
+#: src/store/git_page.rs:890
+msgid "Failed to inspect Git state for '{store}': {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:366
+msgid "Failed to inspect connected smartcard '{ident}': {err}"
+msgstr ""
+
+#: src/private_key/git.rs:53
+#: src/private_key/unlock.rs:258
+msgid "Failed to inspect connected smartcards for '{fingerprint}': {err}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:726
+msgid "Failed to inspect connected smartcards for recipients: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:387
+msgid "Failed to inspect connected smartcards while {context}: {err}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:654
+msgid "Failed to inspect host GPG private keys for recipients: {err}"
+msgstr ""
+
+#: src/support/git/status.rs:87
+msgid "Failed to inspect host Git work-tree state for '{root}', falling back to local Git state: {err}"
+msgstr ""
+
+#: src/password/page/mod.rs:675
+msgid "Failed to inspect private key in pass file: {err}"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:320
+msgid "Failed to inspect private key: {err}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:126
+msgid "Failed to inspect whether private key '{fingerprint}' is unlocked: {err}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:135
+msgid "Failed to inspect whether private key '{fingerprint}' requires unlocking: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:150
+msgid "Failed to install the downloaded update: {error}"
+msgstr ""
+
+#: src/search_provider.rs:204
+msgid "Failed to launch Keycord search result: {err}"
+msgstr ""
+
+#: src/search_provider.rs:229
+msgid "Failed to launch Keycord search window: {err}"
+msgstr ""
+
+#: src/support/git/audit.rs:306
+msgid "Failed to load host GPG public keys for audit verification, continuing with app keys only: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:713
+msgid "Failed to load managed FIDO2 key '{}': {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:687
+msgid "Failed to load managed hardware key '{}': {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:662
+msgid "Failed to load managed private key '{}': {err}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:708
+msgid "Failed to load private keys for recipients: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:88
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr ""
+
+#: src/password/list/row.rs:473
+msgid "Failed to move or rename password entry: {err}"
+msgstr ""
+
+#: src/password/page/mod.rs:284
+msgid "Failed to move password entry after save: {err}"
+msgstr ""
+
+#: src/password/passkey.rs:364
+msgid "Failed to normalize passkey private key: {err}"
+msgstr ""
+
+#: src/password/file/url.rs:46
+msgid ""
+"Failed to open URL in the default browser.\nURL: {uri_for_log}\nerror: {error}"
+msgstr ""
+
+#: src/window/docs.rs:1029
+msgid ""
+"Failed to open documentation link.\nURL: {uri_for_log}\nerror: {error}"
+msgstr ""
+
+#: src/password/list/row.rs:750
+msgid ""
+"Failed to open entry folder in the file manager.\nfolder: {folder_uri_for_log}\nerror: {error}"
+msgstr ""
+
+#: src/password/page/mod.rs:361
+msgid "Failed to open password entry: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:246
+#: src/logging/disabled.rs:88
+msgid "Failed to open stdin for command"
+msgstr ""
+
+#: src/support/file_picker.rs:354
+#: src/support/file_picker.rs:78
+msgid "Failed to open the file chooser: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:251
+msgid "Failed to open the save-file chooser: {err}"
+msgstr ""
+
+#: src/search_provider.rs:60
+msgid "Failed to parse search provider D-Bus XML: {err}"
+msgstr ""
+
+#: src/main.rs:118
+msgid "Failed to prepare managed private-key storage."
+msgstr ""
+
+#: src/updater/common.rs:434
+msgid "Failed to prepare update download target for {}: {error}"
+msgstr ""
+
+#: src/updater/linux.rs:245
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr ""
+
+#: src/support/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:289
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:261
+msgid "Failed to read command stderr: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:259
+msgid "Failed to read command stdout: {err}"
+msgstr ""
+
+#: src/support/git/audit.rs:540
+msgid "Failed to read host Git signature metadata for '{store_root}', continuing with local audit verification only: {err}"
+msgstr ""
+
+#: src/window/tools/export.rs:265
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr ""
+
+#: src/clipboard.rs:259
+msgid "Failed to read password entry for QR code: {err}"
+msgstr ""
+
+#: src/store/management.rs:337
+msgid "Failed to read password store folder: {err}"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:546
+msgid "Failed to read private key from clipboard: {err}"
+msgstr ""
+
+#: src/private_key/git.rs:40
+#: src/private_key/unlock.rs:245
+msgid "Failed to read private key protection for '{fingerprint}': {err}"
+msgstr ""
+
+#: src/private_key/git.rs:129
+#: src/private_key/unlock.rs:127
+#: src/private_key/unlock.rs:177
+#: src/private_key/unlock.rs:278
+#: src/private_key/unlock.rs:336
+#: src/private_key/unlock.rs:413
+msgid "Failed to read private key title for '{fingerprint}': {err}"
+msgstr ""
+
+#: src/password/passkey_request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr ""
+
+#: src/support/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:322
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:348
+msgid "Failed to read the selected hardware public key file"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:516
+msgid "Failed to read the selected private key file"
+msgstr ""
+
+#: src/updater/linux.rs:84
+msgid "Failed to read update file metadata: {error}"
+msgstr ""
+
+#: src/password/otp/mod.rs:286
+msgid "Failed to refresh OTP code: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:133
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr ""
+
+#: src/main.rs:102
+msgid "Failed to register resources."
+msgstr ""
+
+#: src/store/git_page.rs:697
+msgid "Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': {err}"
+msgstr ""
+
+#: src/password/list/mod.rs:911
+#: src/store/management.rs:128
+msgid "Failed to remove missing password stores: {err}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:1058
+msgid "Failed to remove private key '{}': {err}"
+msgstr ""
+
+#: src/password/otp/mod.rs:255
+msgid "Failed to render OTP code: {err}"
+msgstr ""
+
+#: src/search_provider.rs:291
+msgid "Failed to resolve current executable path: {err}"
+msgstr ""
+
+#: src/backend/integrated/entries.rs:248
+msgid "Failed to resolve integrated Git commit identity for {store_root}/{label}: {err}"
+msgstr ""
+
+#: src/store/recipients_page/save.rs:121
+msgid "Failed to resolve the locked private key for store recipients '{}:{}': {err}"
+msgstr ""
+
+#: src/clipboard.rs:236
+msgid "Failed to resolve the private key for QR retry: {resolve_err}"
+msgstr ""
+
+#: src/clipboard.rs:143
+msgid "Failed to resolve the private key for copy retry: {resolve_err}"
+msgstr ""
+
+#: src/password/page/linux.rs:72
+msgid "Failed to resolve the private key for this item: {err}"
+msgstr ""
+
+#: src/private_key/git.rs:170
+msgid "Failed to resolve the private key needed to sign the Git commit for {context}: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:138
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr ""
+
+#: src/logging/command/run.rs:211
+#: src/logging/disabled.rs:85
+msgid "Failed to run command: {err}"
+msgstr ""
+
+#: src/backend/integrated/git.rs:66
+#: src/backend/integrated/git.rs:95
+#: src/support/git/audit.rs:451
+#: src/support/git/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr ""
+
+#: src/backend/command.rs:60
+#: src/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr ""
+
+#: src/backend/command.rs:34
+#: src/support/pass_import.rs:52
+#: src/support/pass_import.rs:64
+msgid "Failed to run the host backend command: {err}"
+msgstr ""
+
+#: src/backend/integrated/git.rs:81
+msgid "Failed to run work-tree git command: {err}"
+msgstr ""
+
+#: src/support/git/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr ""
+
+#: src/window/tools/audit.rs:482
+msgid "Failed to save audit {filter_kind} filter selection: {err}"
+msgstr ""
+
+#: src/password/page/mod.rs:293
+msgid "Failed to save password entry: {err}"
+msgstr ""
+
+#: src/window/preferences.rs:467
+msgid "Failed to save preference ({context}): {}"
+msgstr ""
+
+#: src/store/recipients_page/save.rs:262
+msgid "Failed to save store recipients for '{}': {err}"
+msgstr ""
+
+#: src/store/management.rs:263
+#: src/store/management.rs:349
+#: src/store/management/clone.rs:229
+#: src/store/recipients_page/save.rs:226
+#: src/window/git/enabled.rs:198
+msgid "Failed to save stores: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:253
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr ""
+
+#: src/preferences/storage.rs:52
+msgid "Failed to serialize config: {e}"
+msgstr ""
+
+#: src/password/passkey.rs:98
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr ""
+
+#: src/private_key/unlock.rs:310
+msgid "Failed to set FIDO2 security key PIN: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:308
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:305
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:302
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:299
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:417
+msgid "Failed to set up hardware key: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr ""
+
+#: src/support/file_picker.rs:313
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr ""
+
+#: src/search_provider.rs:296
+msgid "Failed to spawn Keycord: {err}"
+msgstr ""
+
+#: src/support/background.rs:31
+msgid "Failed to spawn background worker '{name}': {err}"
+msgstr ""
+
+#: src/clipboard.rs:103
+msgid "Failed to spawn clipboard copy worker: {err}"
+msgstr ""
+
+#: src/logging/disabled.rs:95
+msgid "Failed to spawn command input writer: {err}"
+msgstr ""
+
+#: src/updater/common.rs:345
+msgid "Failed to spawn update check worker: {err}"
+msgstr ""
+
+#: src/updater/common.rs:477
+msgid "Failed to spawn update download worker: {err}"
+msgstr ""
+
+#: src/updater/linux.rs:99
+msgid "Failed to start Linux update install helper: {error}"
+msgstr ""
+
+#: src/updater/windows.rs:51
+msgid "Failed to start msiexec for update install: {error}"
+msgstr ""
+
+#: src/window/git/operations.rs:61
+msgid "Failed to start restore from Git: {err}"
+msgstr ""
+
+#: src/window/host_access.rs:188
+msgid "Failed to start the permission command: {err}"
+msgstr ""
+
+#: src/updater/common.rs:729
+msgid "Failed to start update install: {error}"
+msgstr ""
+
+#: src/password/page/standard.rs:28
+msgid "Failed to switch to the integrated backend: {}"
+msgstr ""
+
+#: src/window/git/operations.rs:82
+msgid "Failed to sync password store '{root}': {err}"
+msgstr ""
+
+#: src/store/git_page.rs:859
+msgid "Failed to sync password store '{store_for_result}': {err}"
+msgstr ""
+
+#: src/window/build/mod.rs:69
+msgid "Failed to sync private keys during startup: {err}"
+msgstr ""
+
+#: src/password/page/mod.rs:543
+msgid "Failed to sync private keys with the host after importing from a pass file: {err}"
+msgstr ""
+
+#: src/store/recipients_page/sync.rs:10
+msgid "Failed to sync private keys with the host: {err}"
+msgstr ""
+
+#: src/password/page/mod.rs:547
+#: src/store/recipients_page/sync.rs:13
+msgid "Failed to turn off private-key sync after an error: {}"
+msgstr ""
+
+#: src/private_key/git.rs:80
+#: src/private_key/unlock.rs:381
+msgid "Failed to unlock ripasso private key: {err}"
+msgstr ""
+
+#: src/window/tools/menu.rs:114
+msgid "Failed to update local app menu entry: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:254
+#: src/logging/disabled.rs:99
+msgid "Failed to wait for command: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:170
+#: src/logging/disabled.rs:102
+msgid "Failed to write command input: {err}"
+msgstr ""
+
+#: src/preferences/storage.rs:55
+msgid "Failed to write config file: {e}"
+msgstr ""
+
+#: src/window/tools/export.rs:277
+msgid "Failed to write password export to '{path}': {err}"
+msgstr ""
+
+#: src/password/list/row.rs:805
+msgid "Failed to {action}: delete step failed: {err}"
+msgstr ""
+
+#: src/password/list/row.rs:799
+msgid "Failed to {action}: read step failed: {err}"
+msgstr ""
+
+#: src/password/list/row.rs:808
+msgid "Failed to {action}: rename step failed: {err}"
+msgstr ""
+
+#: src/password/list/row.rs:815
+msgid ""
+"Failed to {action}: rollback failed.\nAction error: {action_error}\nRollback error: {rollback_error}"
+msgstr ""
+
+#: src/password/list/row.rs:802
+msgid "Failed to {action}: write step failed: {err}"
+msgstr ""
+
+#: src/password/list/store_filter.rs:83
+msgid "Failed to {action}: {err}"
+msgstr ""
+
+#: src/updater/common.rs:1230
+#: src/updater/common.rs:1234
+#: src/updater/common.rs:1238
+#: src/updater/common.rs:1242
+msgid "Failed to {context}: {error}"
+msgstr ""
+
+#: src/support/git/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr ""
+
+#: src/store/git_page.rs:328
+msgid "Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr ""
+
+#: src/password/file/types.rs:36
+msgid "Field names can't contain ':'."
+msgstr ""
+
+#: data/window.ui:1302
+#: data/window.ui:1342
+msgid "Field values"
+msgstr ""
+
+#: data/window.ui:48
+#: data/window.ui:89
+msgid "Filter results"
+msgstr ""
+
+#: data/shortcuts.ui:92
+#: data/window.ui:38
+msgid "Find item"
+msgstr ""
+
+#: data/window.ui:1089
+#: src/window/navigation/restore.rs:142
+#: src/window/tools.rs:67
+msgid "Find weak passwords"
+msgstr ""
+
+#: data/metainfo.xml:38
+msgid "Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV"
+msgstr ""
+
+#: data/metainfo.xml:196
+msgid "First release"
+msgstr ""
+
+#: data/metainfo.xml:148
+msgid "Fix back icon"
+msgstr ""
+
+#: data/metainfo.xml:173
+msgid "Fix optional Git synchronization"
+msgstr ""
+
+#: data/metainfo.xml:126
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr ""
+
+#: data/metainfo.xml:95
+msgid "Fixed permissions for smartcards"
+msgstr ""
+
+#: data/metainfo.xml:101
+msgid "Fixed the GNOME search provider."
+msgstr ""
+
+#: src/backend/integrated/git.rs:194
+msgid "GIT_{env_prefix}_EMAIL"
+msgstr ""
+
+#: src/backend/integrated/git.rs:196
+msgid "GIT_{env_prefix}_IDENT"
+msgstr ""
+
+#: src/backend/integrated/git.rs:193
+msgid "GIT_{env_prefix}_NAME"
+msgstr ""
+
+#: data/shortcuts.ui:271
+msgid "General"
+msgstr ""
+
+#: data/window.ui:1717
+#: src/store/recipients_page/generate.rs:291
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:759
+msgid "Generate or import a private key."
+msgstr ""
+
+#: data/shortcuts.ui:75
+#: data/window.ui:303
+msgid "Generate password"
+msgstr ""
+
+#: data/window.ui:1697
+#: data/window.ui:1923
+#: src/window/navigation/restore.rs:70
+msgid "Generate private key"
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:219
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr ""
+
+#: data/window.ui:1969
+msgid "Generating key"
+msgstr ""
+
+#: src/search_provider.rs:124
+msgid "GetInitialResultSet"
+msgstr ""
+
+#: src/search_provider.rs:130
+msgid "GetResultMetas"
+msgstr ""
+
+#: src/search_provider.rs:127
+msgid "GetSubsearchResultSet"
+msgstr ""
+
+#: data/window.ui:1819
+msgid "Git"
+msgstr ""
+
+#: src/backend/integrated/git.rs:138
+msgid "Git command did not return output."
+msgstr ""
+
+#: src/backend/integrated/git.rs:630
+msgid "Git commit signing unavailable for {store_root}: {err}. Falling back to an unsigned commit."
+msgstr ""
+
+#: src/window/navigation/restore.rs:151
+#: src/window/tools.rs:83
+msgid "Git history and verification"
+msgstr ""
+
+#: src/window/tools.rs:85
+msgid "Git isn't available in this runtime."
+msgstr ""
+
+#: src/store/git_page.rs:568
+msgid "Git remote dialog failed: {err}"
+msgstr ""
+
+#: data/window.ui:1845
+#: src/store/git_page.rs:917
+#: src/store/git_page.rs:918
+#: src/store/git_page.rs:923
+#: src/store/git_page.rs:924
+#: src/store/git_page.rs:971
+msgid "Git remotes"
+msgstr ""
+
+#: src/window/git/operations.rs:87
+msgid "Git sync completed."
+msgstr ""
+
+#: src/window/git/operations.rs:76
+msgid "Git sync skipped: no Git-backed password stores are configured."
+msgstr ""
+
+#: data/shortcuts.ui:145
+msgid "Go back"
+msgstr ""
+
+#: data/shortcuts.ui:151
+msgid "Go home"
+msgstr ""
+
+#: src/window/host_access.rs:108
+msgid "Grant"
+msgstr ""
+
+#: src/window/host_access.rs:354
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr ""
+
+#: src/window/host_access.rs:69
+msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
+msgstr ""
+
+#: src/window/host_access.rs:226
+msgid "Grant host access"
+msgstr ""
+
+#: src/window/preferences.rs:124
+msgid "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
+msgstr ""
+
+#: src/window/preferences.rs:295
+msgid "Grant host access first."
+msgstr ""
+
+#: src/store/git_page.rs:285
+msgid "Grant host access to fetch, merge, and push."
+msgstr ""
+
+#: src/window/host_access.rs:110
+msgid "Grant permission"
+msgstr ""
+
+#: src/window/host_access.rs:380
+msgid "Grant smartcard access"
+msgstr ""
+
+#: src/window/host_access.rs:256
+#: src/window/host_access.rs:396
+msgid "Grant smartcard access first."
+msgstr ""
+
+#: src/window/docs.rs:21
+#: src/window/docs_disabled.rs:6
+#: src/window/navigation/pages.rs:43
+msgid "Guides and reference"
+msgstr ""
+
+#: src/backend/integrated/git.rs:165
+#: src/support/git/status.rs:29
+msgid "HEAD^{commit}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/unsupported.rs:8
+msgid "Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr ""
+
+#: src/private_key/dialog.rs:100
+msgid "Hardware key PIN"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:68
+msgid "Hardware key added."
+msgstr ""
+
+#: data/window.ui:2019
+msgid "Hardware key admin PIN"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:296
+msgid "Hardware key generation worker disconnected unexpectedly."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:243
+msgid "Hardware key import worker disconnected unexpectedly."
+msgstr ""
+
+#: src/support/ui.rs:730
+msgid "Hide permanently"
+msgstr ""
+
+#: src/window/tools/audit.rs:1143
+msgid "Historical fallback"
+msgstr ""
+
+#: src/window/preferences.rs:384
+msgid "History recipients"
+msgstr ""
+
+#: src/window/controls.rs:559
+msgid "Home"
+msgstr ""
+
+#: data/window.ui:734
+#: src/preferences/mod.rs:54
+msgid "Host"
+msgstr ""
+
+#: src/window/tools/audit.rs:979
+msgid "Host Git (GPG)"
+msgstr ""
+
+#: src/window/tools/audit.rs:980
+msgid "Host Git (SSH)"
+msgstr ""
+
+#: data/window.ui:1897
+msgid "Host access"
+msgstr ""
+
+#: src/support/runtime.rs:34
+#: src/window/git/disabled.rs:30
+msgid "Host command features are only available on Linux."
+msgstr ""
+
+#: src/backend/host.rs:606
+msgid "Ignoring invalid host GPG public key while loading audit verification keys: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:244
+msgid "Ignoring invalid managed private-key {artifact_kind} '{}': {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:200
+msgid "Ignoring non-canonical managed private-key {artifact_kind} '{}'."
+msgstr ""
+
+#: data/window.ui:1563
+#: src/store/recipients_page/import.rs:346
+#: src/store/recipients_page/import.rs:514
+#: src/window/passkey_request.rs:58
+msgid "Import"
+msgstr ""
+
+#: src/backend/host_errors.rs:79
+msgid "Import a private key in Preferences"
+msgstr ""
+
+#: src/backend/integrated/keys/errors.rs:5
+msgid "Import a private key in Preferences before using the password store."
+msgstr ""
+
+#: data/window.ui:1713
+msgid "Import an existing private key or connect a hardware token."
+msgstr ""
+
+#: data/window.ui:1757
+#: src/store/recipients_page/import.rs:505
+msgid "Import hardware public key (Experimental)"
+msgstr ""
+
+#: src/backend/host.rs:471
+msgid "Import host GPG private key"
+msgstr ""
+
+#: data/window.ui:1783
+msgid "Import key"
+msgstr ""
+
+#: data/window.ui:1770
+msgid "Import key from clipboard"
+msgstr ""
+
+#: src/window/passkey_request.rs:53
+msgid "Import passkey?"
+msgstr ""
+
+#: data/metainfo.xml:35
+msgid "Import passkeys into ordinary encrypted pass entries and open local credential-exchange requests"
+msgstr ""
+
+#: data/window.ui:1540
+msgid "Import password (optional)"
+msgstr ""
+
+#: data/window.ui:1475
+#: src/store/management/import.rs:33
+#: src/store/management/import.rs:76
+#: src/window/navigation/restore.rs:60
+msgid "Import passwords"
+msgstr ""
+
+#: src/support/pass_import.rs:134
+msgid "Import passwords with pass import"
+msgstr ""
+
+#: src/store/recipients_page/import.rs:513
+msgid "Import private key"
+msgstr ""
+
+#: data/window.ui:615
+msgid "Import private key from this item"
+msgstr ""
+
+#: data/window.ui:1504
+msgid "Import source"
+msgstr ""
+
+#: data/window.ui:1499
+msgid "Importer"
+msgstr ""
+
+#: src/password/page/mod.rs:609
+#: src/store/recipients_page/import.rs:157
+msgid "Importing key"
+msgstr ""
+
+#: data/window.ui:1579
+msgid "Importing passwords"
+msgstr ""
+
+#: data/metainfo.xml:87
+msgid "Improved header actions and hid filters when they cannot affect the current view."
+msgstr ""
+
+#: data/metainfo.xml:108
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr ""
+
+#: data/metainfo.xml:111
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr ""
+
+#: data/window.ui:1157
+msgid "Information"
+msgstr ""
+
+#: src/support/git/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr ""
+
+#: data/window.ui:1132
+#: src/window/tools.rs:84
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr ""
+
+#: data/window.ui:1131
+#: data/window.ui:1422
+#: data/window.ui:1438
+#: src/window/navigation/restore.rs:150
+#: src/window/tools.rs:82
+msgid "Inspect change history"
+msgstr ""
+
+#: data/metainfo.xml:75
+msgid "Inspect change history and verify commits"
+msgstr ""
+
+#: src/backend/host.rs:425
+msgid "Inspect host GPG private keys"
+msgstr ""
+
+#: src/support/git/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr ""
+
+#: src/support/git/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr ""
+
+#: src/support/git/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr ""
+
+#: src/support/git/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr ""
+
+#: src/support/git/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr ""
+
+#: src/support/git/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr ""
+
+#: src/support/git/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr ""
+
+#: data/window.ui:1179
+msgid "Inspect recent app and command output."
+msgstr ""
+
+#: src/window/tools.rs:88
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr ""
+
+#: src/window/preferences.rs:168
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr ""
+
+#: src/updater/common.rs:41
+msgid "Install Update"
+msgstr ""
+
+#: src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr ""
+
+#: src/preferences/mod.rs:53
+msgid "Integrated"
+msgstr ""
+
+#: src/backend/integrated/git.rs:667
+msgid "Integrated backend Git commit failed for {store_root}: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:668
+msgid "Invalid FIDO2 device path: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:436
+msgid "Invalid FIDO2 encrypted data."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:530
+msgid "Invalid SHA256 digest length"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:535
+msgid "Invalid SHA384 digest length"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:540
+msgid "Invalid SHA512 digest length"
+msgstr ""
+
+#: src/backend/integrated/shared/crypto.rs:303
+#: src/backend/integrated/shared/crypto.rs:305
+#: src/backend/integrated/shared/crypto.rs:321
+#: src/backend/integrated/shared/crypto.rs:328
+msgid "Invalid all-keys encrypted password entry."
+msgstr ""
+
+#: src/support/git/audit.rs:481
+msgid "Invalid git cat-file batch output."
+msgstr ""
+
+#: src/support/git/audit.rs:493
+#: src/support/git/audit.rs:497
+#: src/support/git/audit.rs:505
+msgid "Invalid git cat-file header."
+msgstr ""
+
+#: src/support/git/audit.rs:585
+msgid "Invalid host Git signature metadata."
+msgstr ""
+
+#: src/password/passkey.rs:130
+#: src/password/passkey.rs:243
+#: src/password/passkey.rs:312
+#: src/password/passkey.rs:318
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr ""
+
+#: src/password/passkey.rs:112
+msgid "Invalid passkey JSON: {err}"
+msgstr ""
+
+#: src/password/passkey.rs:376
+msgid "Invalid passkey {label}: {err}"
+msgstr ""
+
+#: src/backend/integrated/git.rs:652
+#: src/backend/integrated/shared/paths.rs:27
+#: src/backend/integrated/shared/paths.rs:87
+#: src/backend/path_validation.rs:24
+msgid "Invalid password entry path."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:155
+#: src/backend/integrated/keys/cert.rs:172
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr ""
+
+#: src/backend/path_validation.rs:11
+msgid "Invalid recipients file path."
+msgstr ""
+
+#: src/password/passkey.rs:103
+msgid "Invalid stored passkey JSON: {err}"
+msgstr ""
+
+#: data/window.ui:741
+#: src/window/preferences.rs:120
+msgid "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:250
+msgid "Keep another selected private key available before removing this key."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:268
+msgid "Keep at least one selected private key available."
+msgstr ""
+
+#: data/window.ui:834
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr ""
+
+#: data/window.ui:821
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:266
+msgid "Keep this key selected while all selected private keys are required."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:1074
+msgid "Key file removed."
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:160
+msgid "Key generated."
+msgstr ""
+
+#: src/password/page/mod.rs:580
+#: src/store/recipients_page/import.rs:44
+msgid "Key imported."
+msgstr ""
+
+#: data/window.ui:1951
+#: src/private_key/dialog.rs:170
+#: src/private_key/dialog.rs:99
+msgid "Key password"
+msgstr ""
+
+#: data/metainfo.xml:5
+#: data/window.ui:175
+#: data/window.ui:4
+#: keycord.desktop:4
+#: src/backend/integrated/git.rs:351
+#: src/window/navigation/chrome.rs:7
+msgid "Keycord"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:252
+msgid "Keycord FIDO2-protected private key"
+msgstr ""
+
+#: src/window/tools/audit.rs:978
+msgid "Keycord OpenPGP"
+msgstr ""
+
+#: src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr ""
+
+#: src/updater/linux.rs:272
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr ""
+
+#: src/window/passkey_request.rs:75
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr ""
+
+#: src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr ""
+
+#: data/metainfo.xml:31
+msgid "Keycord is an adaptive graphical client for password folders that use the standard pass layout. Existing stores remain normal pass stores on disk, so they keep working with pass and other compatible tools."
+msgstr ""
+
+#: src/window/host_access.rs:222
+msgid "Keycord is running in a protected space, so some optional features stay off until you allow this. If you allow it, Keycord can use tools from your computer such as GPG, the Host backend, and pass import. If you don't, Keycord still works with the integrated backend."
+msgstr ""
+
+#: src/window/passkey_request.rs:24
+msgid "Keycord opened a credential export request that names {importer} as the importer and checked its structure. The local file does not authenticate that identity. Keycord does not yet generate CXP response archives, so no passkey data was released."
+msgstr ""
+
+#: src/updater/linux.rs:153
+msgid "Keycord update cleanup failed for '{}': {error}"
+msgstr ""
+
+#: src/updater/linux.rs:123
+msgid "Keycord update install failed: {error}"
+msgstr ""
+
+#: src/updater/linux.rs:169
+msgid "Keycord update restart failed for '{}': {error}"
+msgstr ""
+
+#: src/updater/linux.rs:163
+msgid "Keycord update restart skipped: no local executable directory found."
+msgstr ""
+
+#: src/window/preferences.rs:196
+msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
+msgstr ""
+
+#: data/window.ui:1655
+#: data/window.ui:1686
+#: src/store/recipients_page/list.rs:73
+msgid "Keys for this store"
+msgstr ""
+
+#: src/updater/common.rs:42
+msgid "Later"
+msgstr ""
+
+#: src/search_provider.rs:136
+msgid "LaunchSearch"
+msgstr ""
+
+#: data/window.ui:1541
+msgid "Leave this empty if the source does not use a password, for example a Chrome CSV."
+msgstr ""
+
+#: data/window.ui:374
+#: data/window.ui:895
+msgid "Length"
+msgstr ""
+
+#: src/updater/linux.rs:122
+msgid "Linux auto-install failed: {error}"
+msgstr ""
+
+#: src/updater/linux.rs:91
+msgid "Linux update is missing its cleanup directory."
+msgstr ""
+
+#: data/shortcuts.ui:89
+msgid "List"
+msgstr ""
+
+#: src/support/git/audit.rs:351
+msgid "List password store Git audit refs under {prefix}"
+msgstr ""
+
+#: src/support/git/remotes.rs:14
+msgid "List password store Git remotes"
+msgstr ""
+
+#: src/support/git/audit.rs:1054
+msgid "List recipient files for password store Git tree {object}"
+msgstr ""
+
+#: src/window/tools.rs:105
+msgid "Load more commits"
+msgstr ""
+
+#: src/password/list/placeholder.rs:10
+msgid "Loading"
+msgstr ""
+
+#: src/window/tools.rs:100
+msgid "Loading commits"
+msgstr ""
+
+#: src/window/tools.rs:87
+msgid "Loading data"
+msgstr ""
+
+#: src/window/tools.rs:56
+msgid "Loading field values"
+msgstr ""
+
+#: src/password/list/placeholder.rs:11
+msgid "Loading your items."
+msgstr ""
+
+#: src/window/git/operations.rs:16
+msgid "Local and remote commits are also waiting to sync"
+msgstr ""
+
+#: src/store/git_page.rs:317
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr ""
+
+#: src/store/git_page.rs:259
+msgid "Local and remote commits are waiting to sync."
+msgstr ""
+
+#: src/window/tools/audit.rs:921
+msgid "Local branch"
+msgstr ""
+
+#: src/window/git/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr ""
+
+#: src/window/git/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr ""
+
+#: src/window/git/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr ""
+
+#: src/window/git/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr ""
+
+#: src/window/git/operations.rs:19
+msgid "Local commits are also waiting to sync"
+msgstr ""
+
+#: src/store/git_page.rs:322
+msgid "Local commits are ready to push on '{branch}'."
+msgstr ""
+
+#: src/store/git_page.rs:262
+msgid "Local commits are waiting to sync."
+msgstr ""
+
+#: data/window.ui:2059
+#: src/window/navigation/pages.rs:31
+#: src/window/navigation/restore.rs:161
+msgid "Logs"
+msgstr ""
+
+#: src/updater/linux.rs:31
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr ""
+
+#: src/updater/windows.rs:12
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr ""
+
+#: src/setup.rs:361
+msgid "Looking up resource: {resource_path}"
+msgstr ""
+
+#: data/window.ui:396
+#: data/window.ui:919
+msgid "Lowercase letters"
+msgstr ""
+
+#: data/window.ui:183
+msgid "Main Menu"
+msgstr ""
+
+#: src/window/git/operations.rs:28
+msgid "Make an initial commit"
+msgstr ""
+
+#: src/window/git/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr ""
+
+#: src/support/git/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr ""
+
+#: src/store/git_page.rs:332
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr ""
+
+#: src/support/git/audit.rs:675
+msgid "Malformed Git commit headers."
+msgstr ""
+
+#: src/support/git/audit.rs:659
+msgid "Malformed Git commit object."
+msgstr ""
+
+#: src/support/git/audit.rs:691
+msgid "Malformed Git signature header."
+msgstr ""
+
+#: src/support/git/audit.rs:330
+#: src/support/git/audit_disabled.rs:109
+msgid "Malformed or unsupported signature"
+msgstr ""
+
+#: data/metainfo.xml:71
+msgid "Manage private keys"
+msgstr ""
+
+#: data/metainfo.xml:37
+msgid "Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization"
+msgstr ""
+
+#: data/metainfo.xml:67
+msgid "Manage stores"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:47
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:114
+msgid "Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:227
+msgid "Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:44
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr ""
+
+#: src/backend/host.rs:285
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr ""
+
+#: src/password/strength.rs:33
+msgid "Matches a common password"
+msgstr ""
+
+#: src/support/git/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr ""
+
+#: src/window/tools/audit.rs:1151
+msgid "Message"
+msgstr ""
+
+#: src/desktop_entry.rs:6
+msgid "MimeType={PASSKEY_MIME_TYPES}"
+msgstr ""
+
+#: data/window.ui:397
+#: data/window.ui:419
+#: data/window.ui:441
+#: data/window.ui:463
+#: data/window.ui:920
+#: data/window.ui:944
+#: data/window.ui:968
+#: data/window.ui:992
+msgid "Minimum count, 0 disables"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:458
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:438
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr ""
+
+#: src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr ""
+
+#: src/support/git/audit.rs:261
+msgid "Missing raw commit data for {}."
+msgstr ""
+
+#: src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr ""
+
+#: src/password/list/row.rs:154
+msgid "Move"
+msgstr ""
+
+#: src/password/list/row.rs:405
+#: src/password/list/row.rs:66
+msgid "Move pass file"
+msgstr ""
+
+#: data/shortcuts.ui:110
+msgid "Move selected pass file"
+msgstr ""
+
+#: src/password/list/row.rs:150
+#: src/password/list/row.rs:68
+msgid "Move to store"
+msgstr ""
+
+#: src/password/list/row.rs:556
+msgid "Moved."
+msgstr ""
+
+#: data/window.ui:1939
+#: data/window.ui:2007
+msgid "Name"
+msgstr ""
+
+#: data/shortcuts.ui:142
+msgid "Navigation"
+msgstr ""
+
+#: data/window.ui:850
+msgid "New Password Template"
+msgstr ""
+
+#: src/store/recipients_page/mod.rs:43
+msgid "New Store"
+msgstr ""
+
+#: data/window.ui:2025
+msgid "New hardware key PIN"
+msgstr ""
+
+#: src/password/new_item.rs:53
+#: src/password/page/mod.rs:419
+msgid "New item"
+msgstr ""
+
+#: src/private_key/dialog.rs:254
+msgid "New security key PIN"
+msgstr ""
+
+#: src/store/git_page.rs:201
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr ""
+
+#: src/window/tools.rs:89
+msgid "No Git-backed stores"
+msgstr ""
+
+#: src/window/tools.rs:86
+msgid "No Git-backed stores available."
+msgstr ""
+
+#: src/store/git_page.rs:245
+msgid "No branch yet."
+msgstr ""
+
+#: src/window/tools/audit.rs:1157
+msgid "No changed paths"
+msgstr ""
+
+#: src/window/tools.rs:102
+msgid "No commits loaded"
+msgstr ""
+
+#: src/setup.rs:142
+#: src/setup.rs:86
+msgid "No data directory found"
+msgstr ""
+
+#: src/main.rs:110
+msgid "No display available."
+msgstr ""
+
+#: src/setup.rs:138
+#: src/setup.rs:82
+msgid "No executable directory found"
+msgstr ""
+
+#: src/password/list/placeholder.rs:174
+#: src/password/list/placeholder.rs:43
+msgid "No folders added"
+msgstr ""
+
+#: src/password/list/placeholder.rs:169
+#: src/password/list/placeholder.rs:36
+msgid "No items yet"
+msgstr ""
+
+#: src/window/tools.rs:77
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr ""
+
+#: src/password/list/placeholder.rs:159
+#: src/password/list/placeholder.rs:51
+msgid "No matches"
+msgstr ""
+
+#: data/window.ui:1905
+msgid "No matching Git remotes"
+msgstr ""
+
+#: src/window/tools.rs:95
+msgid "No matching branches"
+msgstr ""
+
+#: src/window/docs.rs:23
+msgid "No matching docs"
+msgstr ""
+
+#: src/window/tools.rs:61
+msgid "No matching fields"
+msgstr ""
+
+#: data/window.ui:1020
+msgid "No matching preferences"
+msgstr ""
+
+#: src/window/tools.rs:78
+#: src/window/tools.rs:98
+msgid "No matching results"
+msgstr ""
+
+#: data/window.ui:1827
+msgid "No matching store keys"
+msgstr ""
+
+#: data/window.ui:1213
+msgid "No matching tools"
+msgstr ""
+
+#: src/window/tools.rs:65
+msgid "No matching values"
+msgstr ""
+
+#: src/store/git_page.rs:716
+msgid "No password store"
+msgstr ""
+
+#: src/store/management.rs:185
+msgid "No password stores"
+msgstr ""
+
+#: src/store/recipients.rs:167
+msgid "No recipients set"
+msgstr ""
+
+#: src/backend/integrated/git.rs:283
+msgid "No recipients were found"
+msgstr ""
+
+#: src/backend/integrated/shared/crypto.rs:230
+#: src/backend/integrated/shared/crypto.rs:253
+#: src/backend/integrated/shared/crypto.rs:351
+#: src/backend/integrated/shared/paths.rs:79
+#: src/backend/integrated/shared/recipients.rs:253
+msgid "No recipients were found for this password entry."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:758
+msgid "No recipients yet"
+msgstr ""
+
+#: src/store/git_page.rs:269
+msgid "No remotes configured."
+msgstr ""
+
+#: src/support/git/audit.rs:339
+#: src/support/git/audit_disabled.rs:118
+msgid "No resolvable standard recipient keys"
+msgstr ""
+
+#: src/window/tools.rs:58
+msgid "No searchable fields"
+msgstr ""
+
+#: src/support/git/audit.rs:329
+#: src/support/git/audit_disabled.rs:108
+msgid "No signature"
+msgstr ""
+
+#: src/window/tools.rs:63
+msgid "No values"
+msgstr ""
+
+#: src/window/tools.rs:75
+msgid "No weak passwords found"
+msgstr ""
+
+#: src/window/tools/audit.rs:981
+msgid "Not available"
+msgstr ""
+
+#: src/window/tools.rs:92
+msgid "Nothing selected"
+msgstr ""
+
+#: data/window.ui:440
+#: data/window.ui:967
+msgid "Numbers"
+msgstr ""
+
+#: data/window.ui:526
+msgid "OTP"
+msgstr ""
+
+#: src/password/otp/mod.rs:244
+msgid "OTP code"
+msgstr ""
+
+#: src/password/otp/mod.rs:220
+msgid "OTP secret"
+msgstr ""
+
+#: src/setup.rs:104
+msgid "One or more local install directories are not writable."
+msgstr ""
+
+#: data/metainfo.xml:135
+msgid "Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr ""
+
+#: src/main.rs:280
+msgid "Only regular files on the local filesystem are accepted."
+msgstr ""
+
+#: data/shortcuts.ui:163
+msgid "Open Git tools"
+msgstr ""
+
+#: src/password/list/placeholder.rs:175
+#: src/password/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr ""
+
+#: src/password/file/url.rs:33
+msgid "Open URL"
+msgstr ""
+
+#: data/window.ui:1439
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr ""
+
+#: data/shortcuts.ui:9
+msgid "Open a new item"
+msgstr ""
+
+#: src/store/git_page.rs:717
+msgid "Open a store first."
+msgstr ""
+
+#: src/password/page/mod.rs:174
+msgid "Open an item first."
+msgstr ""
+
+#: data/shortcuts.ui:257
+msgid "Open docs"
+msgstr ""
+
+#: src/main.rs:270
+msgid "Open exactly one passkey request at a time."
+msgstr ""
+
+#: data/window.ui:1167
+msgid "Open guides and reference."
+msgstr ""
+
+#: src/password/list/row.rs:70
+msgid "Open in File Manager"
+msgstr ""
+
+#: src/password/list/row.rs:56
+msgid "Open in New Window"
+msgstr ""
+
+#: data/shortcuts.ui:263
+#: data/window.ui:1178
+msgid "Open logs"
+msgstr ""
+
+#: data/metainfo.xml:33
+msgid "Open one or more password stores and search by name, store, field, regular expression, or structured find query"
+msgstr ""
+
+#: data/shortcuts.ui:274
+msgid "Open preferences"
+msgstr ""
+
+#: data/shortcuts.ui:21
+#: data/window.ui:148
+msgid "Open raw text"
+msgstr ""
+
+#: data/shortcuts.ui:210
+msgid "Open store 1 Git remotes"
+msgstr ""
+
+#: data/shortcuts.ui:174
+msgid "Open store 1 keys"
+msgstr ""
+
+#: data/shortcuts.ui:216
+msgid "Open store 2 Git remotes"
+msgstr ""
+
+#: data/shortcuts.ui:180
+msgid "Open store 2 keys"
+msgstr ""
+
+#: data/shortcuts.ui:222
+msgid "Open store 3 Git remotes"
+msgstr ""
+
+#: data/shortcuts.ui:186
+msgid "Open store 3 keys"
+msgstr ""
+
+#: data/shortcuts.ui:228
+msgid "Open store 4 Git remotes"
+msgstr ""
+
+#: data/shortcuts.ui:192
+msgid "Open store 4 keys"
+msgstr ""
+
+#: data/shortcuts.ui:234
+msgid "Open store 5 Git remotes"
+msgstr ""
+
+#: data/shortcuts.ui:198
+msgid "Open store 5 keys"
+msgstr ""
+
+#: data/shortcuts.ui:240
+msgid "Open store 6 Git remotes"
+msgstr ""
+
+#: data/shortcuts.ui:204
+msgid "Open store 6 keys"
+msgstr ""
+
+#: data/shortcuts.ui:251
+msgid "Open tools"
+msgstr ""
+
+#: src/password/page/mod.rs:91
+msgid "Opening"
+msgstr ""
+
+#: src/password/page/mod.rs:339
+msgid "Opening item"
+msgstr ""
+
+#: src/private_key/dialog.rs:95
+msgid "Or use a hardware key (Experimental)."
+msgstr ""
+
+#: data/window.ui:1712
+msgid "Other ways to add a key"
+msgstr ""
+
+#: data/window.ui:268
+msgid "Pass file"
+msgstr ""
+
+#: data/shortcuts.ui:6
+msgid "Pass files"
+msgstr ""
+
+#: src/store/management/import.rs:495
+msgid "Pass import worker disconnected unexpectedly while importing into '{store_for_error}' from '{source_for_error}'."
+msgstr ""
+
+#: src/password/page/mod.rs:628
+msgid "Pass-file private key import worker disconnected unexpectedly."
+msgstr ""
+
+#: src/password/file/row_ui.rs:51
+msgid "Passkey"
+msgstr ""
+
+#: src/password/passkey.rs:314
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr ""
+
+#: src/window/passkey_request.rs:22
+msgid "Passkey export request opened"
+msgstr ""
+
+#: src/password/passkey.rs:28
+msgid "PasskeyCredential"
+msgstr ""
+
+#: src/password/file/types.rs:96
+msgid "PasskeyFieldTemplate"
+msgstr ""
+
+#: data/metainfo.xml:83
+msgid "Passkeys can now be imported into ordinary encrypted pass entries, and local credential-exchange request files can be opened."
+msgstr ""
+
+#: data/window.ui:289
+msgid "Password"
+msgstr ""
+
+#: data/window.ui:891
+msgid "Password Generation"
+msgstr ""
+
+#: data/window.ui:196
+#: data/window.ui:804
+msgid "Password List"
+msgstr ""
+
+#: data/window.ui:694
+msgid "Password Stores"
+msgstr ""
+
+#: src/password/list/row.rs:140
+msgid "Password actions"
+msgstr ""
+
+#: src/backend/integrated/entries.rs:220
+msgid "Password entry '{label}' was not found."
+msgstr ""
+
+#: src/backend/integrated/entries.rs:181
+msgid "Password entry '{old_label}' was not found."
+msgstr ""
+
+#: src/backend/path_validation.rs:29
+msgid "Password entry name is empty."
+msgstr ""
+
+#: src/password/strength.rs:25
+msgid "Password is empty"
+msgstr ""
+
+#: src/password/strength.rs:28
+msgid "Password is only whitespace"
+msgstr ""
+
+#: data/metainfo.xml:55
+msgid "Password list"
+msgstr ""
+
+#: src/setup.rs:274
+msgid "Password manager"
+msgstr ""
+
+#: data/shortcuts.ui:63
+#: data/window.ui:313
+msgid "Password options"
+msgstr ""
+
+#: src/backend/integrated/git.rs:176
+msgid "Password store Git HEAD is missing for {store_root}; creating an initial commit."
+msgstr ""
+
+#: src/backend/integrated/git.rs:541
+msgid "Password store Git commit for {store_root} is unsigned because private key {fingerprint} is not unlocked in this session."
+msgstr ""
+
+#: src/support/git/repository.rs:70
+msgid "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
+msgstr ""
+
+#: src/support/git/repository.rs:75
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, network operations enabled."
+msgstr ""
+
+#: src/support/git/repository.rs:80
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, remote sync disabled in this backend."
+msgstr ""
+
+#: src/support/git/repository.rs:65
+msgid "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
+msgstr ""
+
+#: src/password/list/mod.rs:918
+msgid "Password store configuration: no stores are configured."
+msgstr ""
+
+#: src/password/list/mod.rs:922
+msgid "Password store configuration: {} configured store(s)."
+msgstr ""
+
+#: src/store/management/import.rs:465
+msgid "Passwords imported."
+msgstr ""
+
+#: src/password/new_item.rs:27
+msgid "Path or name"
+msgstr ""
+
+#: src/window/host_access.rs:205
+msgid "Permission command failed: {}"
+msgstr ""
+
+#: src/window/navigation/restore.rs:127
+#: src/window/tools.rs:51
+msgid "Pick a field from the current list."
+msgstr ""
+
+#: src/window/navigation/restore.rs:135
+#: src/window/tools.rs:52
+msgid "Pick a value from the current list."
+msgstr ""
+
+#: data/window.ui:673
+#: src/window/navigation/restore.rs:108
+#: src/window/preferences.rs:445
+msgid "Preferences"
+msgstr ""
+
+#: src/backend/integrated/git.rs:598
+msgid "Prepare local password store Git commit for {store_root} with {} path(s): {}."
+msgstr ""
+
+#: src/backend/integrated/git.rs:516
+msgid "Preparing password store Git commit for {store_root} with {name} <{email}> ({fingerprint})."
+msgstr ""
+
+#: src/backend/integrated/git.rs:524
+msgid "Preparing password store Git commit for {store_root} without signing because no recipients-derived private key was resolved."
+msgstr ""
+
+#: src/backend/integrated/git.rs:521
+msgid "Preparing password store Git commit for {store_root} without signing because private key {fingerprint} is not available in the app."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:159
+#: src/backend/integrated/keys/cert.rs:164
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:184
+msgid "Private key generation worker disconnected unexpectedly."
+msgstr ""
+
+#: src/password/page/mod.rs:599
+msgid "Private key import was requested without a window root."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:176
+msgid "Private key import worker disconnected unexpectedly."
+msgstr ""
+
+#: src/password/page/mod.rs:638
+msgid "Private key passphrase dialog was requested without a window root."
+msgstr ""
+
+#: src/private_key/git.rs:91
+#: src/private_key/unlock.rs:387
+msgid "Private key unlock worker disconnected unexpectedly."
+msgstr ""
+
+#: src/private_key/git.rs:95
+msgid "Private key unlock worker disconnected while preparing a Git signature for {fingerprint}."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:81
+msgid "Private keys can't be verified"
+msgstr ""
+
+#: src/window/preferences.rs:331
+msgid "Private keys synced."
+msgstr ""
+
+#: src/private_key/sync.rs:131
+#: src/private_key/sync.rs:174
+#: src/private_key/sync.rs:38
+#: src/window/preferences.rs:128
+#: src/window/preferences.rs:132
+msgid "Private-key sync with the host is only available on Linux."
+msgstr ""
+
+#: src/support/git/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr ""
+
+#: src/qr_code.rs:83
+#: src/qr_code.rs:88
+msgid "QR code"
+msgstr ""
+
+#: src/password/passkey.rs:247
+msgid "RP ID"
+msgstr ""
+
+#: data/window.ui:645
+#: src/password/page/mod.rs:441
+#: src/window/navigation/restore.rs:106
+msgid "Raw text"
+msgstr ""
+
+#: data/window.ui:1771
+msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
+msgstr ""
+
+#: src/support/git/audit.rs:614
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr ""
+
+#: src/support/git/audit.rs:553
+msgid "Read host Git signature metadata for password store commits"
+msgstr ""
+
+#: src/support/pass_import.rs:114
+msgid "Read pass import sources"
+msgstr ""
+
+#: src/main.rs:592
+msgid "Read pass version"
+msgstr ""
+
+#: src/backend/host.rs:128
+msgid "Read password entry"
+msgstr ""
+
+#: src/backend/host.rs:141
+msgid "Read password entry for clipboard copy"
+msgstr ""
+
+#: src/backend/integrated/git.rs:163
+msgid "Read password store Git HEAD"
+msgstr ""
+
+#: src/support/git/audit.rs:400
+msgid "Read password store Git audit log for {full_ref}"
+msgstr ""
+
+#: src/support/git/remotes.rs:31
+msgid "Read password store Git remote URL for {name}"
+msgstr ""
+
+#: src/support/git/audit.rs:1093
+msgid "Read password store Git tree file {object_path}"
+msgstr ""
+
+#: src/support/git/audit.rs:462
+msgid "Read raw password store Git commits"
+msgstr ""
+
+#: src/window/tools.rs:106
+msgid "Read the next {count} commits."
+msgstr ""
+
+#: src/window/tools.rs:74
+msgid "Reading password lines from the current list."
+msgstr ""
+
+#: src/window/tools.rs:101
+msgid "Reading recent Git history for this branch."
+msgstr ""
+
+#: src/window/tools.rs:57
+msgid "Reading searchable pass fields from the current list."
+msgstr ""
+
+#: src/window/tools/audit.rs:1127
+msgid "Reason"
+msgstr ""
+
+#: src/backend/integrated/shared/recipients.rs:139
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr ""
+
+#: src/backend/integrated/shared/recipients.rs:88
+msgid "Recipient '{recipient_id}' matches multiple keys in the app. Use a fingerprint instead."
+msgstr ""
+
+#: src/window/tools/audit.rs:1135
+msgid "Recipient source"
+msgstr ""
+
+#: data/window.ui:1660
+msgid "Recipients file"
+msgstr ""
+
+#: src/window/tools/audit.rs:971
+msgid "Recipients from the audited commit"
+msgstr ""
+
+#: data/window.ui:1693
+msgid "Recommended for new stores"
+msgstr ""
+
+#: src/backend/errors.rs:12
+#: src/backend/errors.rs:13
+#: src/backend/errors.rs:400
+#: src/backend/errors.rs:439
+#: src/backend/integrated/keys/fido2/common.rs:113
+#: src/backend/integrated/keys/fido2/common.rs:235
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr ""
+
+#: src/backend/errors.rs:385
+#: src/backend/errors.rs:424
+msgid "Reconnect the hardware key and try again."
+msgstr ""
+
+#: data/metainfo.xml:109
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr ""
+
+#: data/shortcuts.ui:134
+msgid "Refresh current list"
+msgstr ""
+
+#: src/updater/common.rs:419
+msgid "Refusing to download update {}: {error}"
+msgstr ""
+
+#: src/updater/common.rs:1148
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr ""
+
+#: src/updater/common.rs:1141
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr ""
+
+#: src/updater/common.rs:1134
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr ""
+
+#: src/store/git_page.rs:458
+msgid "Remote URL"
+msgstr ""
+
+#: src/store/git_page.rs:793
+msgid "Remote added."
+msgstr ""
+
+#: src/window/git/operations.rs:22
+msgid "Remote commits are also waiting to sync"
+msgstr ""
+
+#: src/store/git_page.rs:325
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr ""
+
+#: src/store/git_page.rs:265
+msgid "Remote commits are waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:455
+msgid "Remote name"
+msgstr ""
+
+#: src/store/git_page.rs:693
+msgid "Remote removed."
+msgstr ""
+
+#: src/store/git_page.rs:677
+msgid "Remote updated."
+msgstr ""
+
+#: src/window/tools/audit.rs:919
+msgid "Remote-tracking branch"
+msgstr ""
+
+#: data/window.ui:1881
+msgid "Remotes"
+msgstr ""
+
+#: data/window.ui:599
+msgid "Remove empty fields"
+msgstr ""
+
+#: src/setup.rs:27
+msgid "Remove from app menu"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:877
+msgid "Remove key"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:278
+msgid "Remove key file"
+msgstr ""
+
+#: src/backend/integrated/entries.rs:231
+msgid "Remove password for {label}"
+msgstr ""
+
+#: src/support/git/remotes.rs:109
+msgid "Remove password store Git remote"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:324
+msgid "Remove recipient"
+msgstr ""
+
+#: src/store/git_page.rs:643
+msgid "Remove remote"
+msgstr ""
+
+#: src/password/page/mod.rs:706
+msgid "Removed empty fields."
+msgstr ""
+
+#: data/metainfo.xml:118
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr ""
+
+#: src/password/list/row.rs:404
+#: src/password/list/row.rs:65
+msgid "Rename pass file"
+msgstr ""
+
+#: src/backend/host.rs:199
+msgid "Rename password entry"
+msgstr ""
+
+#: src/backend/integrated/entries.rs:206
+msgid "Rename password from {old_label} to {new_label}"
+msgstr ""
+
+#: src/support/git/remotes.rs:75
+msgid "Rename password store Git remote"
+msgstr ""
+
+#: data/shortcuts.ui:104
+msgid "Rename selected pass file"
+msgstr ""
+
+#: src/password/strength.rs:36
+msgid "Repeated single character"
+msgstr ""
+
+#: src/main.rs:556
+#: src/store/git_page.rs:738
+msgid "Repository"
+msgstr ""
+
+#: src/store/management/clone.rs:41
+msgid "Repository URL"
+msgstr ""
+
+#: src/store/git_page.rs:234
+msgid "Repository found and ready for remote management."
+msgstr ""
+
+#: src/store/git_page.rs:239
+msgid "Repository found. Check out a branch before syncing."
+msgstr ""
+
+#: src/store/git_page.rs:236
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr ""
+
+#: src/store/git_page.rs:226
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:205
+msgid "Repository found. Local changes must be committed or discarded before sync, and local and remote commits are waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:210
+msgid "Repository found. Local changes must be committed or discarded before sync, and local commits are waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:215
+msgid "Repository found. Local changes must be committed or discarded before sync, and remote commits are waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:220
+msgid "Repository found. Local changes must be committed or discarded before sync."
+msgstr ""
+
+#: src/store/git_page.rs:229
+msgid "Repository found. Local commits are waiting to sync."
+msgstr ""
+
+#: src/store/git_page.rs:232
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr ""
+
+#: data/window.ui:1802
+msgid "Require all selected private keys"
+msgstr ""
+
+#: src/backend/integrated/git.rs:191
+msgid "Resolve Git {role} identity"
+msgstr ""
+
+#: src/setup.rs:363
+msgid "Resource not found: {e}"
+msgstr ""
+
+#: src/window/host_access.rs:60
+msgid "Restart app to apply."
+msgstr ""
+
+#: src/store/management/clone.rs:144
+#: src/store/management/clone.rs:164
+#: src/store/management/clone.rs:67
+#: src/store/management/clone.rs:72
+#: src/window/git/operations.rs:55
+msgid "Restore password store"
+msgstr ""
+
+#: src/store/management/clone.rs:251
+msgid "Restore stopped unexpectedly for store '{store_for_disconnect}'."
+msgstr ""
+
+#: src/store/management/clone.rs:253
+#: src/window/git/enabled.rs:215
+msgid "Restore stopped unexpectedly."
+msgstr ""
+
+#: data/window.ui:156
+msgid "Restore store"
+msgstr ""
+
+#: src/store/management/clone.rs:26
+msgid "Restoring password store"
+msgstr ""
+
+#: src/window/git/enabled.rs:178
+msgid "Restoring store"
+msgstr ""
+
+#: src/window/preferences.rs:166
+msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
+msgstr ""
+
+#: src/password/page/mod.rs:895
+msgid "Retry-open was requested without an opened pass file."
+msgstr ""
+
+#: src/updater/common.rs:448
+msgid "Reusing cached update download for version {}."
+msgstr ""
+
+#: src/password/page/mod.rs:739
+msgid "Reverted."
+msgstr ""
+
+#: data/window.ui:140
+#: data/window.ui:622
+#: data/window.ui:623
+#: src/window/navigation/chrome.rs:12
+msgid "Save"
+msgstr ""
+
+#: data/shortcuts.ui:15
+msgid "Save current page or sync from home"
+msgstr ""
+
+#: src/window/build/mod.rs:220
+msgid "Save or discard your current changes before importing a passkey."
+msgstr ""
+
+#: src/backend/host.rs:175
+msgid "Save password entry"
+msgstr ""
+
+#: src/backend/host.rs:256
+msgid "Save password store recipients"
+msgstr ""
+
+#: src/password/page/mod.rs:268
+msgid "Saved."
+msgstr ""
+
+#: data/window.ui:1671
+msgid "Saving recipients file"
+msgstr ""
+
+#: src/private_key/git.rs:23
+msgid "Saving without a Git signature."
+msgstr ""
+
+#: data/window.ui:1090
+#: src/window/navigation/restore.rs:143
+#: src/window/tools.rs:68
+#: src/window/tools.rs:70
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr ""
+
+#: src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr ""
+
+#: src/window/tools.rs:73
+msgid "Scanning passwords"
+msgstr ""
+
+#: data/window.ui:1852
+msgid "Search Git remotes"
+msgstr ""
+
+#: data/window.ui:1238
+msgid "Search docs"
+msgstr ""
+
+#: data/window.ui:1308
+msgid "Search fields"
+msgstr ""
+
+#: data/window.ui:204
+msgid "Search names, stores, or fields"
+msgstr ""
+
+#: data/window.ui:680
+msgid "Search preferences"
+msgstr ""
+
+#: src/search_provider.rs:190
+msgid "Search provider ActivateResult received invalid parameters."
+msgstr ""
+
+#: src/search_provider.rs:154
+msgid "Search provider GetInitialResultSet received invalid parameters."
+msgstr ""
+
+#: src/search_provider.rs:172
+msgid "Search provider GetResultMetas received invalid parameters."
+msgstr ""
+
+#: src/search_provider.rs:163
+msgid "Search provider GetSubsearchResultSet received invalid parameters."
+msgstr ""
+
+#: src/search_provider.rs:223
+msgid "Search provider LaunchSearch received invalid parameters."
+msgstr ""
+
+#: src/search_provider.rs:84
+msgid "Search provider bus name acquired: {name}."
+msgstr ""
+
+#: src/search_provider.rs:89
+msgid "Search provider bus name released: {name}."
+msgstr ""
+
+#: src/search_provider.rs:65
+msgid "Search provider interface metadata is missing."
+msgstr ""
+
+#: src/search_provider.rs:96
+msgid "Search provider listening on {SEARCH_PROVIDER_BUS_NAME}{SEARCH_PROVIDER_OBJECT_PATH}."
+msgstr ""
+
+#: src/search_provider.rs:211
+msgid "Search provider received an invalid result identifier: {identifier:?}."
+msgstr ""
+
+#: data/window.ui:1430
+msgid "Search results"
+msgstr ""
+
+#: data/window.ui:1608
+msgid "Search store keys"
+msgstr ""
+
+#: data/window.ui:1046
+msgid "Search tools"
+msgstr ""
+
+#: data/window.ui:1348
+msgid "Search values"
+msgstr ""
+
+#: data/window.ui:1388
+msgid "Search weak passwords"
+msgstr ""
+
+#: src/private_key/dialog.rs:101
+msgid "Security key PIN"
+msgstr ""
+
+#: src/store/management.rs:330
+#: src/store/management/clone.rs:115
+#: src/store/management/import.rs:375
+#: src/store/management/import.rs:393
+msgid "Select"
+msgstr ""
+
+#: src/window/tools.rs:94
+msgid "Select at least one store and one branch in the filter menu."
+msgstr ""
+
+#: data/window.ui:1656
+#: data/window.ui:1687
+#: src/store/recipients_page/list.rs:75
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr ""
+
+#: src/password/strength.rs:46
+msgid "Sequential characters"
+msgstr ""
+
+#: src/backend/errors.rs:389
+#: src/backend/errors.rs:428
+#: src/backend/errors.rs:6
+#: src/backend/errors.rs:7
+#: src/backend/integrated/keys/fido2/common.rs:105
+#: src/backend/integrated/keys/fido2/common.rs:217
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr ""
+
+#: src/private_key/unlock.rs:103
+#: src/private_key/unlock.rs:65
+msgid "Set security key PIN"
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:262
+#: src/store/recipients_page/generate.rs:312
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr ""
+
+#: data/window.ui:1731
+#: data/window.ui:1991
+msgid "Set up new hardware key (Experimental)"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:293
+msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr ""
+
+#: data/window.ui:2037
+msgid "Setting up hardware key (Experimental)"
+msgstr ""
+
+#: src/password/strength.rs:57
+msgid "Short with limited character variety"
+msgstr ""
+
+#: data/window.ui:2105
+msgid "Show Logs"
+msgstr ""
+
+#: data/window.ui:550
+msgid "Show OTP as QR code"
+msgstr ""
+
+#: data/metainfo.xml:181
+msgid "Show disabled options instead of hiding them"
+msgstr ""
+
+#: data/shortcuts.ui:122
+msgid "Show hidden and duplicate entries"
+msgstr ""
+
+#: data/window.ui:331
+#: src/password/list/row.rs:132
+msgid "Show password as QR code"
+msgstr ""
+
+#: src/window/host_access.rs:122
+msgid "Show permission command as QR code"
+msgstr ""
+
+#: data/shortcuts.ui:280
+msgid "Show shortcuts"
+msgstr ""
+
+#: data/window.ui:790
+msgid "Show the last folder segment as the username."
+msgstr ""
+
+#: data/window.ui:776
+msgid "Show the pass file name as the username."
+msgstr ""
+
+#: data/window.ui:514
+msgid "Show username as QR code"
+msgstr ""
+
+#: src/clipboard.rs:76
+msgid "Show value as QR code"
+msgstr ""
+
+#: src/backend/integrated/git.rs:554
+#: src/backend/integrated/git.rs:566
+msgid "Signed password store Git commit for {store_root} with private key {fingerprint}."
+msgstr ""
+
+#: src/support/git/audit.rs:336
+#: src/support/git/audit_disabled.rs:115
+msgid "Signer not in the branch recipient set"
+msgstr ""
+
+#: src/support/git/audit.rs:333
+#: src/support/git/audit_disabled.rs:112
+msgid "Signing key not available in Keycord"
+msgstr ""
+
+#: src/backend/integrated/git.rs:547
+#: src/backend/integrated/git.rs:560
+msgid "Signing password store Git commit for {store_root} with {name} <{email}> ({fingerprint})."
+msgstr ""
+
+#: src/password/strength.rs:63
+msgid "Single character class and short"
+msgstr ""
+
+#: src/backend/integrated/git.rs:579
+msgid "Skip password store Git commit for {store_root}: Git commands are only available on Linux."
+msgstr ""
+
+#: src/backend/integrated/git.rs:585
+msgid "Skip password store Git commit for {store_root}: no paths were provided."
+msgstr ""
+
+#: src/backend/integrated/git.rs:605
+msgid "Skip password store Git commit for {store_root}: the staged paths have no changes."
+msgstr ""
+
+#: src/backend/integrated/git.rs:592
+msgid "Skip password store Git commit for {store_root}: the store is not a Git repository."
+msgstr ""
+
+#: src/private_key/sync.rs:82
+msgid "Skipping host GPG private key without a passphrase during sync: {fingerprint}"
+msgstr ""
+
+#: data/window.ui:809
+msgid "Sort entries by pass file name only."
+msgstr ""
+
+#: src/backend/integrated/git.rs:101
+msgid "Stage password store Git changes"
+msgstr ""
+
+#: data/window.ui:1891
+msgid "Status"
+msgstr ""
+
+#: src/password/page/mod.rs:102
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr ""
+
+#: data/window.ui:1490
+#: src/password/new_item.rs:23
+msgid "Store"
+msgstr ""
+
+#: src/store/recipients_page/save.rs:228
+msgid "Store created, but it wasn't added."
+msgstr ""
+
+#: src/store/management/import.rs:344
+msgid "Store import page state was not initialized."
+msgstr ""
+
+#: data/window.ui:1601
+#: src/store/recipients_page/mod.rs:278
+#: src/store/recipients_page/mod.rs:279
+#: src/store/recipients_page/mod.rs:44
+msgid "Store keys"
+msgstr ""
+
+#: src/store/management/clone.rs:241
+#: src/window/git/enabled.rs:194
+msgid "Store restored."
+msgstr ""
+
+#: data/window.ui:1546
+msgid "Store subfolder"
+msgstr ""
+
+#: src/store/git_page.rs:868
+msgid "Store sync stopped unexpectedly."
+msgstr ""
+
+#: src/store/git_page.rs:855
+msgid "Store synced."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:302
+msgid "Stored FIDO2 PIN is not valid UTF-8: {err}"
+msgstr ""
+
+#: data/shortcuts.ui:171
+#: data/window.ui:107
+#: data/window.ui:66
+msgid "Stores"
+msgstr ""
+
+#: src/store/management/clone.rs:146
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr ""
+
+#: src/store/management/import.rs:176
+msgid "Switch Backend to Host to use pass import."
+msgstr ""
+
+#: src/window/host_access.rs:66
+msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
+msgstr ""
+
+#: data/window.ui:462
+#: data/window.ui:991
+msgid "Symbols"
+msgstr ""
+
+#: data/metainfo.xml:39
+msgid "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
+msgstr ""
+
+#: src/store/git_page.rs:812
+msgid "Sync now"
+msgstr ""
+
+#: data/window.ui:740
+msgid "Sync private keys with the host"
+msgstr ""
+
+#: data/shortcuts.ui:128
+msgid "Sync stores"
+msgstr ""
+
+#: src/store/git_page.rs:837
+msgid "Syncing store"
+msgstr ""
+
+#: src/window/git/enabled.rs:270
+msgid "Syncing stores"
+msgstr ""
+
+#: data/window.ui:256
+msgid "Text Editor"
+msgstr ""
+
+#: src/backend/errors.rs:17
+#: src/backend/errors.rs:19
+#: src/backend/integrated/keys/fido2/common.rs:116
+#: src/backend/integrated/keys/fido2/common.rs:238
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr ""
+
+#: src/backend/errors.rs:395
+#: src/backend/errors.rs:434
+#: src/backend/errors.rs:8
+#: src/backend/errors.rs:9
+#: src/backend/integrated/keys/fido2/common.rs:109
+#: src/backend/integrated/keys/fido2/common.rs:226
+msgid "That FIDO2 security key must support PIN protection."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:1083
+msgid "That FIDO2-protected key could not be exported."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/key.rs:59
+msgid "That FIDO2-protected key data is invalid."
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:130
+#: src/backend/integrated/keys/store/storage.rs:159
+#: src/backend/integrated/keys/store/unlock.rs:303
+msgid "That FIDO2-protected key is invalid."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:182
+msgid "That OpenPGP key file does not include a private key."
+msgstr ""
+
+#: src/backend/errors.rs:451
+msgid "That data does not contain a private key."
+msgstr ""
+
+#: src/backend/errors.rs:407
+msgid "That file does not contain a private key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:790
+#: src/backend/integrated/keys/store/unlock.rs:356
+msgid "That hardware key cannot decrypt password store entries."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:1078
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr ""
+
+#: src/window/build/actions.rs:69
+msgid "That item is missing its store."
+msgstr ""
+
+#: src/backend/errors.rs:117
+#: src/backend/errors.rs:127
+msgid "That item no longer exists."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:1055
+msgid "That key does not have an exportable public key."
+msgstr ""
+
+#: src/backend/integrated/entries.rs:124
+#: src/backend/integrated/entries.rs:189
+msgid "That password entry already exists."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:303
+#: src/backend/integrated/keys/store/storage.rs:581
+#: src/backend/integrated/keys/store/storage.rs:603
+#: src/backend/integrated/keys/store/unlock.rs:346
+msgid "That private key cannot decrypt password store entries."
+msgstr ""
+
+#: src/backend/integrated/git.rs:399
+msgid "That private key cannot sign Git commits."
+msgstr ""
+
+#: src/backend/integrated/keys/store/mod.rs:10
+msgid "That private key is not stored in the app."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:766
+msgid "That private key must be password protected before you can import it."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:803
+msgid "That public key does not match the hardware decryption key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:817
+msgid "That public key does not match the hardware signing key."
+msgstr ""
+
+#: src/store/git_page.rs:419
+msgid "That remote URL already exists."
+msgstr ""
+
+#: src/store/git_page.rs:413
+msgid "That remote name already exists."
+msgstr ""
+
+#: src/window/tools/export.rs:153
+msgid "The CSV file will contain every password and field in plaintext. Anyone with access to the file can read them."
+msgstr ""
+
+#: src/password/passkey_request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr ""
+
+#: src/password/passkey_request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:672
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:107
+#: src/backend/integrated/keys/fido2/common.rs:223
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:810
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr ""
+
+#: src/backend/integrated/keys/errors.rs:9
+msgid "The available private keys cannot decrypt this item."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:247
+#: src/backend/integrated/keys/store/storage.rs:847
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:237
+#: src/backend/integrated/keys/store/storage.rs:838
+msgid "The connected hardware key does not match the stored signing key."
+msgstr ""
+
+#: src/window/tools.rs:97
+msgid "The current filters don't match any branches in the selected stores."
+msgstr ""
+
+#: src/window/tools.rs:60
+msgid "The current list doesn't have any searchable pass fields."
+msgstr ""
+
+#: src/password/passkey_request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr ""
+
+#: src/backend/errors.rs:421
+msgid "The hardware key PIN is blocked."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr ""
+
+#: src/updater/windows.rs:20
+msgid "The installer is ready to run."
+msgstr ""
+
+#: src/password/passkey.rs:267
+msgid "The passkey is missing a {label}."
+msgstr ""
+
+#: src/password/passkey_request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr ""
+
+#: src/password/passkey_request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr ""
+
+#: src/password/passkey_request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr ""
+
+#: src/password/passkey_request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr ""
+
+#: src/password/passkey.rs:353
+msgid "The passkey {label} is empty."
+msgstr ""
+
+#: src/password/passkey.rs:372
+msgid "The passkey {label} must use unpadded base64url."
+msgstr ""
+
+#: src/window/build/mod.rs:218
+msgid "The password editor is not available."
+msgstr ""
+
+#: src/store/recipients_page/generate.rs:70
+msgid "The passwords do not match."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:271
+msgid "The private key password is incorrect."
+msgstr ""
+
+#: src/private_key/dialog.rs:128
+msgid "The security key PINs do not match."
+msgstr ""
+
+#: src/window/passkey_request.rs:32
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr ""
+
+#: src/backend/host.rs:108
+#: src/backend/integrated/keys/errors.rs:11
+#: src/backend/integrated/shared/paths.rs:94
+msgid "The selected password store path is not a folder."
+msgstr ""
+
+#: src/support/file_picker.rs:44
+msgid "The selected path is not available locally. {}"
+msgstr ""
+
+#: src/backend/errors.rs:162
+msgid "The selected store path is not a folder."
+msgstr ""
+
+#: src/password/passkey.rs:105
+msgid "The stored JSON is not a passkey credential."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:364
+msgid "The stored public key has no signing subkey."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:345
+msgid "The stored public key has no transport-encryption subkey."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:332
+msgid "The stored public key is missing the hardware decryption key."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:352
+msgid "The stored public key is missing the hardware signing key."
+msgstr ""
+
+#: src/updater/linux.rs:144
+msgid "The update helper cleanup directory does not match the downloaded update location."
+msgstr ""
+
+#: src/updater/linux.rs:140
+msgid "The update helper executable has no parent directory."
+msgstr ""
+
+#: src/updater/linux.rs:39
+msgid "The update is ready to install."
+msgstr ""
+
+#: data/window.ui:851
+msgid "These lines are added after the password line when you create a new password entry. Leave it empty to start with a blank pass file."
+msgstr ""
+
+#: data/window.ui:892
+msgid "These settings are used when you generate or regenerate a password from the editor."
+msgstr ""
+
+#: src/backend/errors.rs:396
+#: src/backend/errors.rs:435
+msgid "This FIDO2 security key can't open your items."
+msgstr ""
+
+#: src/window/tools.rs:104
+msgid "This branch doesn't have any commits available to audit."
+msgstr ""
+
+#: src/password/passkey.rs:408
+msgid "This build does not include passkey support."
+msgstr ""
+
+#: src/window/tools.rs:64
+msgid "This field has no searchable values."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:463
+msgid "This hardware key already has OpenPGP keys. Import the matching public key file instead."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:486
+msgid "This hardware key already has OpenPGP keys. Use Add hardware key (Experimental) or import the matching public key file instead."
+msgstr ""
+
+#: src/backend/errors.rs:383
+#: src/backend/errors.rs:422
+msgid "This hardware key can't open your items."
+msgstr ""
+
+#: src/store/recipients_page/import.rs:469
+msgid "This hardware key has no OpenPGP key yet. Use Set up new hardware key (Experimental) instead."
+msgstr ""
+
+#: src/store/management/clone.rs:195
+msgid "This internal boundary carries the window, store-list, preferences, feedback, navigation, and clone request state into one asynchronous operation."
+msgstr ""
+
+#: src/window/build/widgets.rs:239
+msgid "This is a flat builder-to-widget registry; splitting it further would add indirection without reducing logic."
+msgstr ""
+
+#: src/window/controls.rs:350
+msgid "This is flat window-action wiring for the search control on every navigation page."
+msgstr ""
+
+#: src/password/list/row.rs:53
+msgid "This item can't be opened with the private keys currently available in the app. File actions are still available, but copy and move-to-store are disabled until a compatible private key is available."
+msgstr ""
+
+#: src/password/page/mod.rs:666
+msgid "This item does not contain an armored private key."
+msgstr ""
+
+#: src/backend/errors.rs:107
+#: src/backend/errors.rs:165
+#: src/backend/errors.rs:372
+#: src/backend/errors.rs:409
+#: src/backend/errors.rs:67
+#: src/password/undo.rs:82
+msgid "This key can't open your items."
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:294
+#: src/backend/integrated/keys/store/unlock.rs:232
+msgid "This private key is password protected."
+msgstr ""
+
+#: src/backend/integrated/keys/store/unlock.rs:275
+msgid "This private key requires a FIDO2 security key."
+msgstr ""
+
+#: src/backend/integrated/keys/store/unlock.rs:296
+msgid "This private key requires a different unlock method."
+msgstr ""
+
+#: src/backend/integrated/keys/store/unlock.rs:252
+msgid "This private key requires a hardware key."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:318
+msgid "This recipient is not available in the app."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:248
+msgid "This selected key is required while all selected private keys are required."
+msgstr ""
+
+#: src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr ""
+
+#: src/password/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr ""
+
+#: data/shortcuts.ui:248
+#: data/window.ui:1039
+#: data/window.ui:1059
+#: src/store/management/import.rs:302
+#: src/window/navigation/restore.rs:111
+#: src/window/tools.rs:48
+msgid "Tools"
+msgstr ""
+
+#: data/window.ui:375
+#: data/window.ui:896
+msgid "Total characters"
+msgstr ""
+
+#: src/backend/errors.rs:10
+#: src/backend/errors.rs:11
+#: src/backend/errors.rs:398
+#: src/backend/errors.rs:437
+#: src/backend/integrated/keys/fido2/common.rs:112
+#: src/backend/integrated/keys/fido2/common.rs:232
+msgid "Touch the FIDO2 security key and try again."
+msgstr ""
+
+#: src/private_key/unlock.rs:73
+#: src/store/recipients_page/generate.rs:221
+#: src/store/recipients_page/generate.rs:264
+msgid "Touch your key if it blinks."
+msgstr ""
+
+#: src/main.rs:557
+msgid "Translate"
+msgstr ""
+
+#: src/main.rs:550
+msgid "Translated by Nick."
+msgstr ""
+
+#: src/support/git/audit.rs:509
+msgid "Truncated git cat-file batch output."
+msgstr ""
+
+#: src/window/tools.rs:62
+msgid "Try a different field filter."
+msgstr ""
+
+#: src/window/tools.rs:99
+msgid "Try a different search term or load more commits."
+msgstr ""
+
+#: data/window.ui:1021
+#: data/window.ui:1214
+#: data/window.ui:1828
+#: data/window.ui:1906
+#: src/window/docs.rs:24
+#: src/window/tools.rs:79
+msgid "Try a different search term."
+msgstr ""
+
+#: src/window/tools.rs:66
+msgid "Try a different value filter."
+msgstr ""
+
+#: src/store/recipients_page/list.rs:713
+msgid "Try again from Preferences."
+msgstr ""
+
+#: src/password/list/placeholder.rs:160
+#: src/password/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr ""
+
+#: src/window/preferences.rs:199
+msgid "Turn On"
+msgstr ""
+
+#: src/window/preferences.rs:195
+msgid "Turn on private-key sync?"
+msgstr ""
+
+#: src/window/tools.rs:55
+#: src/window/tools.rs:72
+#: src/window/tools.rs:81
+msgid "Unavailable because no supported stores are loaded."
+msgstr ""
+
+#: data/shortcuts.ui:81
+msgid "Undo or revert changes"
+msgstr ""
+
+#: src/window/controls.rs:330
+msgid "Undone."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:417
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:431
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr ""
+
+#: src/support/git/audit.rs:500
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:323
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr ""
+
+#: src/support/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr ""
+
+#: src/search_provider.rs:140
+msgid "Unknown search provider method: {method_name}."
+msgstr ""
+
+#: data/metainfo.xml:59
+msgid "Unlock a pass file"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:270
+msgid "Unlock another selected private key before clearing this one."
+msgstr ""
+
+#: src/password/page/mod.rs:648
+#: src/password/page/mod.rs:92
+#: src/private_key/git.rs:144
+#: src/private_key/unlock.rs:142
+#: src/private_key/unlock.rs:437
+#: src/private_key/unlock.rs:52
+#: src/store/recipients_page/import.rs:310
+#: src/store/recipients_page/list.rs:973
+msgid "Unlock key"
+msgstr ""
+
+#: src/backend/errors.rs:106
+#: src/backend/errors.rs:164
+#: src/password/undo.rs:75
+msgid "Unlock the key in Preferences."
+msgstr ""
+
+#: src/password/page/mod.rs:112
+#: src/private_key/unlock.rs:74
+msgid "Unlock your key to continue."
+msgstr ""
+
+#: src/backend/host.rs:43
+#: src/store/recipients_page/list.rs:50
+msgid "Unnamed host private key"
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:83
+msgid "Unnamed private key"
+msgstr ""
+
+#: src/backend/integrated/keys/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr ""
+
+#: src/backend/errors.rs:27
+msgid "Unplug the other security keys, then try again."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:333
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:339
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:115
+msgid "Unsupported FIDO2 private key format {}."
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:121
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr ""
+
+#: src/updater/linux.rs:52
+msgid "Unsupported Linux update architecture: {}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:445
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:165
+msgid "Unsupported hardware key manifest format {}."
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:171
+msgid "Unsupported hardware key protection '{}'."
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:542
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr ""
+
+#: src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:585
+msgid "Unsupported signing algorithm: {:?}"
+msgstr ""
+
+#: src/window/tools/audit.rs:950
+msgid "Unverified"
+msgstr ""
+
+#: src/updater/common.rs:1121
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr ""
+
+#: src/updater/common.rs:913
+msgid "Update available"
+msgstr ""
+
+#: src/updater/common.rs:952
+msgid "Update download path has no parent directory."
+msgstr ""
+
+#: src/backend/integrated/entries.rs:118
+msgid "Update password for {label}"
+msgstr ""
+
+#: src/backend/integrated/git.rs:497
+msgid "Update password store Git HEAD"
+msgstr ""
+
+#: src/support/git/remotes.rs:92
+msgid "Update password store Git remote URL"
+msgstr ""
+
+#: src/backend/integrated/store.rs:170
+#: src/backend/integrated/store.rs:79
+msgid "Update password store recipients"
+msgstr ""
+
+#: src/updater/common.rs:1010
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr ""
+
+#: src/updater/common.rs:1114
+msgid "Update size mismatch for '{}'."
+msgstr ""
+
+#: data/window.ui:1672
+msgid "Updating all saved passwords to match the new access settings."
+msgstr ""
+
+#: data/window.ui:418
+#: data/window.ui:943
+msgid "Uppercase letters"
+msgstr ""
+
+#: src/main.rs:301
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr ""
+
+#: src/password/file/types.rs:42
+msgid "Use Add OTP secret instead."
+msgstr ""
+
+#: src/password/file/types.rs:45
+msgid "Use a passkey request instead."
+msgstr ""
+
+#: src/password/model.rs:121
+msgid "Use a single file name for the username."
+msgstr ""
+
+#: src/password/list/row.rs:644
+msgid "Use a single file name."
+msgstr ""
+
+#: data/window.ui:752
+msgid "Use commit-history recipients for audit verification"
+msgstr ""
+
+#: data/window.ui:775
+#: data/window.ui:808
+msgid "Use file name"
+msgstr ""
+
+#: data/window.ui:205
+msgid "Use find for fields. Use reg for patterns."
+msgstr ""
+
+#: data/window.ui:789
+msgid "Use folder name"
+msgstr ""
+
+#: data/window.ui:820
+msgid "Use folders with file name search"
+msgstr ""
+
+#: src/store/management/import.rs:34
+#: src/window/navigation/restore.rs:61
+msgid "Use pass import to import into an existing store."
+msgstr ""
+
+#: src/store/management/import.rs:180
+msgid "Use pass import with your custom pass command."
+msgstr ""
+
+#: data/window.ui:833
+msgid "Use store, folders, and file name"
+msgstr ""
+
+#: data/metainfo.xml:40
+msgid "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices"
+msgstr ""
+
+#: src/backend/errors.rs:376
+#: src/backend/errors.rs:413
+msgid "Use the matching hardware key."
+msgstr ""
+
+#: src/password/file/types.rs:39
+msgid "Use the username field instead."
+msgstr ""
+
+#: data/window.ui:772
+msgid "Used only when a pass file has no encrypted username field."
+msgstr ""
+
+#: data/window.ui:490
+#: data/window.ui:771
+msgid "Username"
+msgstr ""
+
+#: src/password/page/standard.rs:36
+msgid "Using Integrated instead."
+msgstr ""
+
+#: src/store/management/import.rs:302
+#: src/window/navigation/restore.rs:111
+#: src/window/tools.rs:49
+msgid "Utilities and maintenance"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:89
+msgid "Valid host keys may appear unavailable here while private-key sync is off."
+msgstr ""
+
+#: data/window.ui:1641
+#: src/store/recipients_page/list.rs:87
+msgid "Valid host keys may appear unavailable here."
+msgstr ""
+
+#: src/window/tools/audit.rs:1112
+msgid "Verification"
+msgstr ""
+
+#: src/window/tools/audit.rs:1119
+msgid "Verification method"
+msgstr ""
+
+#: src/window/tools/audit.rs:949
+msgid "Verified"
+msgstr ""
+
+#: src/password/strength.rs:60
+msgid "Very low character variety"
+msgstr ""
+
+#: data/window.ui:2089
+#: src/password/page/mod.rs:93
+#: src/private_key/unlock.rs:75
+#: src/store/management/clone.rs:28
+#: src/store/recipients_page/import.rs:159
+#: src/store/recipients_page/import.rs:233
+msgid "Wait a moment."
+msgstr ""
+
+#: data/window.ui:1382
+msgid "Weak passwords"
+msgstr ""
+
+#: data/window.ui:753
+msgid "When enabled, History can use recipients from earlier commits while verifying older encrypted entries."
+msgstr ""
+
+#: src/window/session.rs:91
+msgid "Widget was not attached to an application window when reading window session."
+msgstr ""
+
+#: src/window/build/assemble.rs:262
+msgid "Window Git actions: open-git, git-clone, and synchronize are {}."
+msgstr ""
+
+#: src/window/session.rs:96
+msgid "Window session was not initialized before use."
+msgstr ""
+
+#: src/support/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr ""
+
+#: data/window.ui:2085
+#: data/window.ui:2088
+#: src/window/navigation/pages.rs:57
+msgid "Working"
+msgstr ""
+
+#: src/backend/integrated/git.rs:477
+msgid "Write password store Git commit object"
+msgstr ""
+
+#: src/backend/integrated/git.rs:147
+msgid "Write password store Git tree"
+msgstr ""
+
+#: src/updater/common.rs:1065
+msgid "X-GitHub-Api-Version"
+msgstr ""
+
+#: data/metainfo.xml:191
+msgid "You can now generate new private keys."
+msgstr ""
+
+#: data/metainfo.xml:185
+msgid "You can now manage Git remotes"
+msgstr ""
+
+#: data/metainfo.xml:156
+msgid "You can now open pass files in a new window"
+msgstr ""
+
+#: data/metainfo.xml:165
+msgid "You can now use the field values as variables in search"
+msgstr ""
+
+#: data/window.ui:2156
+msgid "_About Keycord"
+msgstr ""
+
+#: data/window.ui:2126
+msgid "_Add item"
+msgstr ""
+
+#: data/window.ui:2130
+msgid "_Find item"
+msgstr ""
+
+#: data/window.ui:2152
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/window.ui:2143
+msgid "_Preferences"
+msgstr ""
+
+#: data/window.ui:2134
+msgid "_Synchronize with remote"
+msgstr ""
+
+#: data/window.ui:2139
+msgid "_Tools"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:511
+msgid "action timeout"
+msgstr ""
+
+#: src/backend/host_errors.rs:75
+msgid "already exists"
+msgstr ""
+
+#: src/support/git/mod.rs:4
+msgid "audit_disabled.rs"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:555
+msgid "authentication method blocked"
+msgstr ""
+
+#: src/backend/host_errors.rs:88
+msgid "available private keys cannot decrypt"
+msgstr ""
+
+#: src/main.rs:576
+#: src/main.rs:577
+msgid "backend: host"
+msgstr ""
+
+#: src/main.rs:571
+msgid "backend: ripasso"
+msgstr ""
+
+#: src/window/tools/audit.rs:474
+msgid "branch cleanup"
+msgstr ""
+
+#: src/updater/common.rs:1081
+msgid "build GitHub client"
+msgstr ""
+
+#: src/updater/common.rs:1093
+msgid "build download client"
+msgstr ""
+
+#: src/backend/host_errors.rs:87
+msgid "cannot decrypt password store entries"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/key.rs:109
+msgid "checked above"
+msgstr ""
+
+#: src/password/list/store_filter.rs:38
+msgid "clean stale store filter values"
+msgstr ""
+
+#: src/window/preferences.rs:536
+msgid "clear empty fields before save"
+msgstr ""
+
+#: src/setup.rs:416
+#: src/setup.rs:436
+#: src/setup.rs:461
+#: src/setup.rs:481
+msgid "clock should be after epoch"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:528
+msgid "collecting available private-key fingerprints"
+msgstr ""
+
+#: src/main.rs:101
+#: src/updater/linux.rs:131
+msgid "compiled.gresource"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:114
+msgid "condition of use not satisfied"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:552
+msgid "context error"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:549
+msgid "couldn't find card"
+msgstr ""
+
+#: src/setup.rs:487
+msgid "create bin dir"
+msgstr ""
+
+#: src/updater/common.rs:975
+msgid "create partial update file"
+msgstr ""
+
+#: src/setup.rs:464
+msgid "create root dir"
+msgstr ""
+
+#: src/setup.rs:488
+msgid "create search provider dir"
+msgstr ""
+
+#: src/setup.rs:440
+msgid "create target dir"
+msgstr ""
+
+#: src/setup.rs:419
+msgid "create temp dir"
+msgstr ""
+
+#: src/updater/common.rs:955
+msgid "create update download directory"
+msgstr ""
+
+#: src/password/passkey.rs:246
+#: src/password/passkey.rs:296
+msgid "credential ID"
+msgstr ""
+
+#: src/logging/store.rs:127
+msgid "credential URL regex should compile"
+msgstr ""
+
+#: src/updater/common.rs:1037
+msgid "decode GitHub release response"
+msgstr ""
+
+#: src/password/list/row.rs:590
+msgid "delete password entry"
+msgstr ""
+
+#: src/setup.rs:12
+msgid "desktop_entry.rs"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:506
+msgid "device not found"
+msgstr ""
+
+#: src/support/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr ""
+
+#: src/support/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr ""
+
+#: src/support/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr ""
+
+#: src/updater/mod.rs:15
+msgid "disabled.rs"
+msgstr ""
+
+#: src/window/mod.rs:6
+msgid "docs_disabled.rs"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:570
+msgid "does not support"
+msgstr ""
+
+#: src/updater/common.rs:972
+msgid "download release asset"
+msgstr ""
+
+#: src/support/validation.rs:10
+msgid "email validation regex should compile"
+msgstr ""
+
+#: src/backend/integrated/shared/crypto.rs:191
+msgid "empty password file"
+msgstr ""
+
+#: src/support/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr ""
+
+#: src/support/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr ""
+
+#: src/support/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:563
+msgid "enter the hardware key pin"
+msgstr ""
+
+#: src/password/list/row.rs:71
+msgid "entry.delete"
+msgstr ""
+
+#: src/password/list/row.rs:66
+msgid "entry.move"
+msgstr ""
+
+#: src/password/list/row.rs:68
+msgid "entry.move-store"
+msgstr ""
+
+#: src/password/list/row.rs:70
+msgid "entry.open-in-file-manager"
+msgstr ""
+
+#: src/password/list/row.rs:63
+msgid "entry.open-new-window"
+msgstr ""
+
+#: src/password/list/row.rs:65
+msgid "entry.rename-file"
+msgstr ""
+
+#: src/updater/common.rs:1020
+msgid "finalize update file"
+msgstr ""
+
+#: src/window/tools/field_values.rs:455
+msgid "find \"{}\" is \"{}\""
+msgstr ""
+
+#: src/window/host_access.rs:54
+msgid "flatpak override --user --device=all"
+msgstr ""
+
+#: src/window/host_access.rs:47
+msgid "flatpak override --user --socket=pcsc"
+msgstr ""
+
+#: src/window/host_access.rs:33
+msgid "flatpak override --user --talk-name=org.freedesktop.Flatpak"
+msgstr ""
+
+#: src/updater/common.rs:999
+msgid "flush partial update file"
+msgstr ""
+
+#: src/main.rs:385
+msgid "gdk-pixbuf-2.0"
+msgstr ""
+
+#: src/backend/integrated/git.rs:110
+msgid "git add"
+msgstr ""
+
+#: src/support/git/audit.rs:469
+msgid "git cat-file --batch"
+msgstr ""
+
+#: src/support/git/command.rs:48
+msgid "git command"
+msgstr ""
+
+#: src/backend/integrated/git.rs:130
+msgid "git diff --cached"
+msgstr ""
+
+#: src/support/git/status.rs:126
+msgid "git diff --quiet HEAD --"
+msgstr ""
+
+#: src/support/git/sync.rs:47
+msgid "git fetch --prune"
+msgstr ""
+
+#: src/support/git/audit.rs:360
+msgid "git for-each-ref"
+msgstr ""
+
+#: src/backend/integrated/git.rs:486
+msgid "git hash-object"
+msgstr ""
+
+#: src/support/git/repository.rs:58
+msgid "git init"
+msgstr ""
+
+#: src/support/git/audit.rs:411
+msgid "git log"
+msgstr ""
+
+#: src/support/git/audit.rs:564
+msgid "git log --no-walk=unsorted --format=%H%x00%G?..."
+msgstr ""
+
+#: src/support/git/status.rs:111
+msgid "git ls-files --cached --others --exclude-standard"
+msgstr ""
+
+#: src/support/git/status.rs:139
+msgid "git ls-files --others --exclude-standard"
+msgstr ""
+
+#: src/support/git/audit.rs:1065
+msgid "git ls-tree"
+msgstr ""
+
+#: src/support/git/sync.rs:66
+msgid "git merge --abort"
+msgstr ""
+
+#: src/support/git/sync.rs:99
+msgid "git merge --no-edit"
+msgstr ""
+
+#: src/support/git/sync.rs:115
+msgid "git push"
+msgstr ""
+
+#: src/support/git/remotes.rs:21
+msgid "git remote"
+msgstr ""
+
+#: src/support/git/remotes.rs:63
+msgid "git remote add"
+msgstr ""
+
+#: src/support/git/remotes.rs:38
+msgid "git remote get-url"
+msgstr ""
+
+#: src/support/git/remotes.rs:118
+msgid "git remote remove"
+msgstr ""
+
+#: src/support/git/remotes.rs:84
+msgid "git remote rename"
+msgstr ""
+
+#: src/support/git/remotes.rs:101
+msgid "git remote set-url"
+msgstr ""
+
+#: src/support/git/status.rs:257
+msgid "git rev-list --count"
+msgstr ""
+
+#: src/backend/integrated/git.rs:181
+#: src/support/git/status.rs:41
+msgid "git rev-parse -q --verify HEAD^{commit}"
+msgstr ""
+
+#: src/support/git/status.rs:285
+msgid "git rev-parse -q --verify refs/remotes/<remote>/<branch>^{commit}"
+msgstr ""
+
+#: src/support/git/audit.rs:1100
+msgid "git show"
+msgstr ""
+
+#: src/support/git/audit.rs:626
+msgid "git show --name-status"
+msgstr ""
+
+#: src/support/git/status.rs:71
+msgid "git symbolic-ref --quiet --short HEAD"
+msgstr ""
+
+#: src/backend/integrated/git.rs:509
+msgid "git update-ref"
+msgstr ""
+
+#: src/backend/integrated/git.rs:203
+msgid "git var"
+msgstr ""
+
+#: src/backend/integrated/git.rs:156
+msgid "git write-tree"
+msgstr ""
+
+#: src/main.rs:380
+msgid "glib-2.0"
+msgstr ""
+
+#: data/metainfo.xml:216
+msgid "gpg"
+msgstr ""
+
+#: src/backend/host.rs:485
+msgid "gpg --delete-secret-keys failed"
+msgstr ""
+
+#: src/backend/host.rs:442
+msgid "gpg --export failed"
+msgstr ""
+
+#: src/backend/host.rs:460
+msgid "gpg --export-secret-keys failed"
+msgstr ""
+
+#: src/backend/host.rs:474
+msgid "gpg --import failed"
+msgstr ""
+
+#: src/backend/host.rs:428
+msgid "gpg --list-secret-keys failed"
+msgstr ""
+
+#: src/main.rs:381
+msgid "gschemas.compiled"
+msgstr ""
+
+#: src/backend/integrated/keys/store/manifest.rs:203
+msgid "hardware key manifest"
+msgstr ""
+
+#: src/password/passkey_request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr ""
+
+#: src/password/passkey_request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr ""
+
+#: src/password/passkey_request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr ""
+
+#: src/password/passkey_request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr ""
+
+#: src/password/passkey_request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr ""
+
+#: src/password/passkey_request.rs:407
+msgid "hpke.key member"
+msgstr ""
+
+#: src/password/passkey_request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr ""
+
+#: src/password/passkey_request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr ""
+
+#: src/password/passkey_request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr ""
+
+#: src/password/passkey_request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr ""
+
+#: src/password/passkey_request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr ""
+
+#: src/password/passkey_request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr ""
+
+#: src/password/passkey_request.rs:412
+msgid "hpke.key.kty"
+msgstr ""
+
+#: src/password/passkey_request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr ""
+
+#: src/password/passkey_request.rs:463
+msgid "hpke.key.{member}"
+msgstr ""
+
+#: src/password/passkey_request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr ""
+
+#: src/password/passkey_request.rs:474
+#: src/password/passkey_request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr ""
+
+#: src/password/passkey_request.rs:362
+msgid "hpke.mode"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:509
+msgid "invalid option"
+msgstr ""
+
+#: src/backend/integrated/git.rs:282
+msgid "is not available in the app."
+msgstr ""
+
+#: src/window/docs.rs:25
+msgid "keycord-doc:"
+msgstr ""
+
+#: src/window/tools/export.rs:19
+msgid "keycord-passwords.csv"
+msgstr ""
+
+#: src/updater/mod.rs:18
+msgid "linux.rs"
+msgstr ""
+
+#: src/main.rs:462
+msgid "loaders-{hash:016x}.cache"
+msgstr ""
+
+#: src/main.rs:388
+#: src/main.rs:432
+msgid "loaders.cache"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:491
+msgid "loading the available key ring"
+msgstr ""
+
+#: src/setup.rs:493
+msgid "make search provider non-writable"
+msgstr ""
+
+#: src/setup.rs:445
+msgid "make target non-writable"
+msgstr ""
+
+#: src/backend/integrated/keys/store/paths.rs:23
+msgid "manifest.toml"
+msgstr ""
+
+#: src/main.rs:110
+msgid "missing display"
+msgstr ""
+
+#: src/password/list/row.rs:559
+msgid "move password entry to another store"
+msgstr ""
+
+#: src/window/preferences.rs:554
+msgid "new item template"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:503
+msgid "no credentials"
+msgstr ""
+
+#: src/backend/host_errors.rs:90
+msgid "no pkesk managed to decrypt the ciphertext"
+msgstr ""
+
+#: src/backend/host_errors.rs:89
+msgid "no pkesks managed to decrypt the ciphertext"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:550
+msgid "no smartcard"
+msgstr ""
+
+#: src/backend/host_errors.rs:66
+msgid "no such file or directory"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:504
+msgid "not found"
+msgstr ""
+
+#: src/backend/host_errors.rs:64
+msgid "not in the password store"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:565
+msgid "not transacted"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:511
+msgid "operation denied"
+msgstr ""
+
+#: src/window/git/enabled.rs:1
+msgid "operations.rs"
+msgstr ""
+
+#: data/metainfo.xml:217
+msgid "otp"
+msgstr ""
+
+#: data/metainfo.xml:215
+msgid "pass"
+msgstr ""
+
+#: src/backend/host.rs:130
+#: src/backend/host.rs:143
+msgid "pass failed"
+msgstr ""
+
+#: src/support/pass_import.rs:118
+msgid "pass import --list failed"
+msgstr ""
+
+#: src/support/pass_import.rs:151
+msgid "pass import failed"
+msgstr ""
+
+#: src/store/management/import.rs:184
+#: src/support/pass_import.rs:123
+msgid "pass import is not available."
+msgstr ""
+
+#: src/backend/host.rs:264
+msgid "pass init failed"
+msgstr ""
+
+#: src/backend/host.rs:184
+msgid "pass insert failed"
+msgstr ""
+
+#: src/backend/host.rs:207
+msgid "pass mv failed"
+msgstr ""
+
+#: src/backend/host.rs:228
+msgid "pass rm failed"
+msgstr ""
+
+#: data/metainfo.xml:219
+msgid "passkey"
+msgstr ""
+
+#: src/window/tools/export.rs:128
+msgid "passkey: [redacted]"
+msgstr ""
+
+#: src/window/build/mod.rs:223
+msgid "passkey: {storage_value}"
+msgstr ""
+
+#: data/metainfo.xml:214
+msgid "password"
+msgstr ""
+
+#: src/window/preferences.rs:736
+msgid "password generation"
+msgstr ""
+
+#: src/window/preferences.rs:680
+msgid "password list sort"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:115
+#: src/backend/integrated/keys/hardware/linux.rs:557
+msgid "password not checked"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:500
+msgid "pin auth blocked"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:499
+msgid "pin auth invalid"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:498
+#: src/backend/integrated/keys/hardware/linux.rs:559
+msgid "pin invalid"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:494
+msgid "pin not set"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:496
+#: src/backend/integrated/keys/hardware/linux.rs:563
+msgid "pin required"
+msgstr ""
+
+#: src/preferences/storage.rs:42
+msgid "preferences file"
+msgstr ""
+
+#: src/password/passkey.rs:251
+#: src/password/passkey.rs:360
+msgid "private key"
+msgstr ""
+
+#: src/window/preferences.rs:320
+#: src/window/preferences.rs:347
+msgid "private-key sync"
+msgstr ""
+
+#: src/backend/integrated/keys/store/paths.rs:27
+msgid "public.asc"
+msgstr ""
+
+#: src/updater/common.rs:1035
+msgid "read GitHub release response"
+msgstr ""
+
+#: src/setup.rs:425
+msgid "read marker"
+msgstr ""
+
+#: src/setup.rs:490
+msgid "read search provider metadata"
+msgstr ""
+
+#: src/setup.rs:498
+msgid "read search provider metadata for cleanup"
+msgstr ""
+
+#: src/setup.rs:442
+msgid "read target metadata"
+msgstr ""
+
+#: src/setup.rs:450
+msgid "read target metadata for cleanup"
+msgstr ""
+
+#: src/updater/common.rs:987
+msgid "read update bytes"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:551
+msgid "reader error"
+msgstr ""
+
+#: src/support/git/command.rs:49
+msgid "remote git command"
+msgstr ""
+
+#: src/support/git/command.rs:51
+msgid "remote work-tree git command"
+msgstr ""
+
+#: src/updater/common.rs:964
+msgid "remove stale partial update file"
+msgstr ""
+
+#: src/updater/common.rs:958
+msgid "remove stale update file"
+msgstr ""
+
+#: src/setup.rs:502
+msgid "restore search provider permissions"
+msgstr ""
+
+#: src/setup.rs:453
+msgid "restore target permissions"
+msgstr ""
+
+#: src/password/list/store_filter.rs:71
+msgid "save store filter selection"
+msgstr ""
+
+#: src/logging/store.rs:137
+msgid "scp remote regex should compile"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:113
+#: src/backend/integrated/keys/hardware/linux.rs:558
+msgid "security status not satisfied"
+msgstr ""
+
+#: src/backend/host_errors.rs:95
+msgid "selected password store path is not a folder"
+msgstr ""
+
+#: src/updater/common.rs:1033
+msgid "send GitHub release request"
+msgstr ""
+
+#: src/updater/common.rs:970
+msgid "send release asset request"
+msgstr ""
+
+#: src/updater/common.rs:1139
+msgid "sha256:"
+msgstr ""
+
+#: src/logging/command/run.rs:79
+msgid "signal {signal}"
+msgstr ""
+
+#: src/logging/command/run.rs:63
+msgid "stdin: [redacted]"
+msgstr ""
+
+#: src/logging/command/run.rs:65
+msgid "stdin: provided"
+msgstr ""
+
+#: src/window/tools/audit.rs:455
+msgid "store cleanup"
+msgstr ""
+
+#: src/password/list/search/query.rs:6
+msgid "store path"
+msgstr ""
+
+#: src/logging/command/streams.rs:81
+msgid "stream logger panicked while reading {label}"
+msgstr ""
+
+#: data/metainfo.xml:218
+msgid "totp"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:213
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:225
+msgid "unhandled curve: {other:?}"
+msgstr ""
+
+#: src/support/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr ""
+
+#: src/support/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/crypto.rs:285
+msgid "unsupported key type: {other:?}"
+msgstr ""
+
+#: src/updater/linux.rs:215
+msgid "update-{:032x}"
+msgstr ""
+
+#: src/password/passkey.rs:250
+#: src/password/passkey.rs:300
+msgid "user handle"
+msgstr ""
+
+#: src/window/preferences.rs:610
+msgid "username fallback"
+msgstr ""
+
+#: src/preferences/mod.rs:19
+msgid ""
+"username:\nemail:\nurl:"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:496
+msgid "uv invalid"
+msgstr ""
+
+#: src/backend/host_errors.rs:65
+msgid "was not found"
+msgstr ""
+
+#: src/updater/mod.rs:21
+msgid "windows.rs"
+msgstr ""
+
+#: src/support/git/command.rs:50
+msgid "work-tree git command"
+msgstr ""
+
+#: src/setup.rs:421
+msgid "write marker"
+msgstr ""
+
+#: src/updater/common.rs:993
+msgid "write update bytes"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:76
+#: src/backend/integrated/shared/crypto.rs:314
+msgid "writing hex into a string should not fail"
+msgstr ""
+
+#: src/updater/common.rs:1197
+msgid "{:.1} KiB"
+msgstr ""
+
+#: src/updater/common.rs:1195
+msgid "{:.1} MiB"
+msgstr ""
+
+#: src/main.rs:352
+msgid "{APP_WINDOW_TITLE}: {detail}"
+msgstr ""
+
+#: src/i18n.rs:75
+msgid "{DOMAIN}.mo"
+msgstr ""
+
+#: src/setup.rs:219
+#: src/setup.rs:374
+#: src/setup.rs:382
+#: src/setup.rs:397
+msgid "{GETTEXT_DOMAIN}.mo"
+msgstr ""
+
+#: src/backend/integrated/shared/crypto.rs:294
+msgid ""
+"{REQUIRE_ALL_PRIVATE_KEYS_LAYER_HEADER}\n{}"
+msgstr ""
+
+#: src/setup.rs:166
+#: src/setup.rs:349
+msgid "{SEARCH_PROVIDER_BUS_NAME}.service"
+msgstr ""
+
+#: src/backend/integrated/git.rs:47
+#: src/support/git/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr ""
+
+#: src/backend/integrated/git.rs:49
+#: src/support/git/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr ""
+
+#: src/backend/integrated/git.rs:51
+#: src/support/git/command.rs:27
+msgid "{action} failed: {}"
+msgstr ""
+
+#: src/password/otp/url.rs:91
+msgid "{base}?{}"
+msgstr ""
+
+#: src/store/git_page.rs:251
+msgid "{branch} (no commits yet)"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:76
+msgid "{byte:02X}"
+msgstr ""
+
+#: src/backend/integrated/shared/crypto.rs:314
+#: src/search_provider.rs:312
+#: src/updater/common.rs:1172
+msgid "{byte:02x}"
+msgstr ""
+
+#: src/updater/common.rs:1199
+msgid "{bytes} B"
+msgstr ""
+
+#: src/logging/command/run.rs:244
+msgid ""
+"{context}\n$ {command}\nfailed to open stdin"
+msgstr ""
+
+#: src/logging/command/streams.rs:61
+msgid ""
+"{context}\n$ {command}\nfailed to read {label}: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:157
+#: src/logging/command/run.rs:210
+msgid ""
+"{context}\n$ {command}\nfailed to start: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:133
+#: src/logging/command/run.rs:253
+msgid ""
+"{context}\n$ {command}\nfailed to wait: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:270
+msgid ""
+"{context}\n$ {command}\nfailed to write stdin: {err}"
+msgstr ""
+
+#: src/logging/command/run.rs:59
+msgid ""
+"{context}\n$ {command}\nstatus: {status}"
+msgstr ""
+
+#: src/logging/command/streams.rs:82
+msgid ""
+"{context}\n$ {command}\n{err}"
+msgstr ""
+
+#: src/logging/command/streams.rs:11
+msgid ""
+"{context}\n$ {command}\n{label}:"
+msgstr ""
+
+#: src/support/toml_safety.rs:40
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr ""
+
+#: src/support/toml_safety.rs:32
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr ""
+
+#: src/window/tools/audit.rs:931
+msgid "{count} commits loaded"
+msgstr ""
+
+#: src/window/tools/field_values.rs:476
+msgid "{count} matching item"
+msgstr ""
+
+#: src/window/tools/field_values.rs:478
+msgid "{count} matching items"
+msgstr ""
+
+#: src/store/recipients.rs:169
+msgid "{count} recipients"
+msgstr ""
+
+#: src/store/git_page.rs:271
+msgid "{count} remotes configured."
+msgstr ""
+
+#: src/window/tools/field_values.rs:467
+msgid "{count} unique value"
+msgstr ""
+
+#: src/window/tools/field_values.rs:469
+msgid "{count} unique values"
+msgstr ""
+
+#: src/backend/host_errors.rs:33
+msgid "{fallback_prefix}: {}"
+msgstr ""
+
+#: src/password/passkey_request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr ""
+
+#: src/password/passkey_request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr ""
+
+#: src/password/passkey_request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr ""
+
+#: src/password/passkey_request.rs:491
+#: src/password/passkey_request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr ""
+
+#: src/password/passkey_request.rs:524
+msgid "{field} must contain at least one value"
+msgstr ""
+
+#: src/password/passkey_request.rs:541
+msgid "{field} must not be empty"
+msgstr ""
+
+#: src/backend/integrated/shared/paths.rs:28
+msgid "{file_name}.{STANDARD_PASSWORD_ENTRY_EXTENSION}"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:856
+msgid "{fingerprint} - Hardware key"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:853
+msgid "{fingerprint} - Password protected"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:860
+msgid "{fingerprint} - Security key protected"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:1016
+msgid "{fingerprint} - Security token"
+msgstr ""
+
+#: src/store/recipients_page/list.rs:1018
+msgid "{fingerprint} - Security token ({detail})"
+msgstr ""
+
+#: src/support/git/status.rs:247
+msgid "{from}..{to}"
+msgstr ""
+
+#: src/support/file_picker.rs:348
+#: src/support/file_picker.rs:378
+msgid "{log_context}: {err}"
+msgstr ""
+
+#: src/backend/integrated/keys/fido2/common.rs:985
+msgid "{manufacturer} {product}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:1036
+#: src/backend/integrated/keys/store/storage.rs:952
+msgid "{name} <{email}>"
+msgstr ""
+
+#: src/support/git/audit.rs:1090
+msgid "{object}:{path}"
+msgstr ""
+
+#: src/backend/command.rs:9
+#: src/support/pass_import.rs:36
+#: src/support/pass_import.rs:41
+msgid "{prefix}: {}"
+msgstr ""
+
+#: src/main.rs:584
+msgid ""
+"{project}: {comments}\n\n{backend_details}"
+msgstr ""
+
+#: src/password/file/types.rs:112
+msgid "{raw_key}:{separator_spacing}{url}"
+msgstr ""
+
+#: src/password/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr ""
+
+#: src/window/tools/audit.rs:932
+msgid "{scope} · {loaded}"
+msgstr ""
+
+#: src/window/tools/audit.rs:924
+#: src/window/tools/audit.rs:927
+msgid "{scope} · {}"
+msgstr ""
+
+#: src/backend/integrated/keys/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr ""
+
+#: src/main.rs:350
+msgid ""
+"{summary}\nerror: {error}"
+msgstr ""
+
+#: src/main.rs:577
+msgid ""
+"{}\n{version}"
+msgstr ""
+
+#: src/backend/integrated/keys/store/storage.rs:995
+msgid "{} ({short_id})"
+msgstr ""
+
+#: src/updater/common.rs:1184
+msgid "{} of {} ({percentage:.0}%)"
+msgstr ""
+
+#: src/main.rs:570
+msgid ""
+"{} {RIPASSO_VERSION}\n{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+
+#: src/setup.rs:158
+#: src/setup.rs:305
+msgid "{}-passkey.xml"
+msgstr ""
+
+#: src/updater/linux.rs:184
+msgid "{}-{tag_name}.{arch}"
+msgstr ""
+
+#: src/setup.rs:153
+#: src/setup.rs:292
+#: src/setup.rs:53
+msgid "{}.desktop"
+msgstr ""
+
+#: src/setup.rs:162
+#: src/setup.rs:328
+msgid "{}.search-provider.ini"
+msgstr ""
+
+#: src/setup.rs:150
+#: src/setup.rs:364
+msgid "{}.svg"
+msgstr ""
+
+#: src/preferences/storage.rs:32
+#: src/preferences/storage.rs:33
+msgid "{}.toml"
+msgstr ""
+
+#: src/window/host_access.rs:169
+msgid "{}: {err}"
+msgstr ""
+

@@ -1,6 +1,6 @@
 # Het verhaal van geheimen
 
-Dit is een codegerichte rondgang door hoe Keycord geheime gegevens verplaatst vanaf het maken van een opslag tot het kopieren van een wachtwoord.
+Dit is een codegerichte rondgang door hoe Keycord geheime gegevens verplaatst vanaf het maken van een opslag tot het kopiëren van een wachtwoord.
 
 ## Verhaal 1: Een opslag wordt geboren
 
@@ -67,7 +67,7 @@ Wanneer een item wordt gelezen, bouwt [src/backend/integrated/entries.rs](../src
 
 - ontvangers voor het item
 - de geselecteerde "eigen" vingerafdruk, als die is geconfigureerd
-- elke geimporteerde beheerde sleutel
+- elke geïmporteerde beheerde sleutel
 
 Als de benodigde sleutel nog vergrendeld is, faalt het lezen met een locked-key-fout. De copy- en open-flow vangen die fout af en leiden terug naar de ontgrendeldialoog via [src/clipboard.rs](../src/clipboard.rs) of [src/private_key/unlock.rs](../src/private_key/unlock.rs).
 
@@ -124,7 +124,7 @@ Als het item opent, gaat het pass-bestand in platte tekst terug naar de gestruct
 
 Als de sleutel vergrendeld is, geeft Keycord een getypeerde fout door vanuit [src/backend/errors.rs](../src/backend/errors.rs), zodat de UI de ontbrekende ontgrendelstap kan vragen in plaats van alleen te falen.
 
-## Verhaal 7: Het wachtwoord kopieren
+## Verhaal 7: Het wachtwoord kopiëren
 
 De kopieerknop op elke wachtwoordrij wordt gekoppeld in [src/password/list/row.rs](../src/password/list/row.rs). Die roept [src/clipboard.rs](../src/clipboard.rs) aan.
 
@@ -134,6 +134,6 @@ Vanaf daar is het verhaal kort:
 2. Als dat lezen mislukt omdat de sleutel vergrendeld is, zoekt Keycord de voorkeursleutel op en toont het de ontgrendeldialoog.
 3. Als het lezen lukt, schrijft Keycord de eerste regel naar het klembord van het systeem en toont het knopfeedback.
 
-Het belangrijke detail is dat kopieren nog steeds een ontsleuteloperatie is. Het wachtwoord wordt nergens anders in de app als kant-en-klare platte tekst voor kopieren gecachet. Keycord gaat opnieuw door hetzelfde leespad, neemt de eerste regel en geeft die tekst aan het klembord.
+Het belangrijke detail is dat kopiëren nog steeds een ontsleuteloperatie is. Het wachtwoord wordt nergens anders in de app als kant-en-klare platte tekst voor kopiëren gecachet. Keycord gaat opnieuw door hetzelfde leespad, neemt de eerste regel en geeft die tekst aan het klembord.
 
 Als de Host-backend actief is, neemt [src/clipboard.rs](../src/clipboard.rs) een andere route en roept het `pass -c` aan. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels, experimentele gelaagde versleuteling en experimenteel FIDO2-gedrag leeft.

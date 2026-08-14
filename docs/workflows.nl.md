@@ -125,6 +125,27 @@ Hoe het werkt:
 
 Gebruik `find otp` in zoeken wanneer je elk item nodig hebt waarvoor OTP is ingeschakeld.
 
+## Passkeys opslaan en uitwisselingsverzoeken openen
+
+Met de `passkey`-feature bewaart Keycord passkeygegevens in een
+gereserveerd `passkey:`-veld in een gewoon pass-item. Het volledige item, inclusief het
+privésleutelmateriaal van de passkey, wordt beschermd door de normale OpenPGP-versleuteling van de
+opslag. Compatibele `pass`-hulpmiddelen kunnen dezelfde `.gpg`-bestanden blijven beheren en zien het
+gereserveerde veld als gewone ontsleutelde tekst.
+
+Keycord kan een lokaal CXP-exportverzoek voor passkeys openen. Voordat Keycord het als verzoek
+behandelt, controleert het of dit een begrensd, regulier lokaal bestand is en controleert het de
+structuur van de velden. Dit is het openen van een verzoek voor de uitwisseling van inloggegevens,
+geen live passkeyprovider voor webbrowsers. De naam van de importeur in een lokaal verzoek is niet
+geverifieerd. Het openen van een verzoek betekent niet dat er een versleuteld CXP-antwoord is
+aangemaakt.
+
+Keycord kan ook een standaard CXF-passkey openen. Na bevestiging maakt Keycord een nieuw, nog niet
+opgeslagen item in de geconfigureerde standaardopslag. Controleer de RP-ID en gebruikersnaam en
+gebruik daarna de normale opslagactie, zodat de gebruikelijke ontvangers en ontgrendelroute van de
+opslag de passkey beschermen. De ruwe editor en algemene CSV-export voor wachtwoorden geven het
+privésleutelmateriaal van passkeys niet vrij.
+
 ## Zoeken, zichtbaarheid, herladen en synchroniseren
 
 ### Zoeken
@@ -225,7 +246,7 @@ Je kunt kiezen:
 - een optioneel bronbestand of een optionele bronmap,
 - een optionele submap in de opslag.
 
-### Logs en helpers voor setup
+### Logs en installatiehulpmiddelen
 
 Linux-builds tonen een logweergave met `F12`.
 
@@ -234,7 +255,7 @@ De groep **Logs** kan het volgende bevatten:
 - **Documentatie**, waarmee de losse documentatiepagina wordt geopend,
 - **Loguitvoer openen**,
 - **Loguitvoer kopiëren** in reguliere builds,
-- een actie om de lokale appmenu-installatie te installeren of te verwijderen in builds met setup.
+- een actie om de app lokaal aan het toepassingsmenu toe te voegen of daaruit te verwijderen in builds met installatieondersteuning.
 
 ## Werkstromen voor ontvangers en sleutels
 
@@ -243,7 +264,7 @@ Voor wijzigingen op opslagniveau aan sleutels:
 1. Open **Wachtwoordopslagen** in Voorkeuren.
 2. Open de pagina **Opslagsleutels** van de doelopslag.
 3. Voeg ontvangers toe of verwijder ze.
-4. Genereer eventueel een privésleutel, importeer er een of koppel een experimentele hardwaresleutel.
+4. Genereer eventueel een met een wachtwoord beveiligde privésleutel of importeer er een uit een bestand of het klembord.
 5. Sla de wijzigingen op.
 
 Op Linux kan de Integrated-backend vereisen dat een beheerde privésleutel is ontgrendeld voordat Keycord items opnieuw kan versleutelen of de Git-commit kan ondertekenen. Als de dialoog voor het ontgrendelen van ondertekening wordt gesloten, kan het opslaan doorgaan zonder Git-handtekening.
