@@ -11,7 +11,6 @@ so they keep working with `pass` and other compatible tools.
 
 - Open one or more password stores and search by name, store, field, regular expression, or structured `find` query
 - Edit entries with form fields or raw pass-file text, generate passwords, and copy or show passwords, usernames, and one-time codes as QR codes
-- Import passkeys into ordinary encrypted `pass` entries and open local credential-exchange requests
 - Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
 - Manage store recipients, folder-specific `.gpg-id` files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization
 - Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV

@@ -32,7 +32,7 @@
     <ul>
       <li>Open one or more password stores and search by name, store, field, regular expression, or structured find query</li>
       <li>Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes</li>
-      <li>Import passkeys into ordinary encrypted pass entries and open local credential-exchange requests</li>
+      <!-- <li>Import passkeys into ordinary encrypted pass entries and open local credential-exchange requests</li> -->
       <li>Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend</li>
       <li>Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization</li>
       <li>Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV</li>
@@ -77,10 +77,14 @@
   </screenshots>
 
   <releases>
-    <release version="0.9.12" date="2026-07-21">
+    <!-- <release version="0.9.13" date="2026-09-18">
+      <description>
+        <p>Passkeys can now be imported into ordinary encrypted pass entries, and local credential-exchange request files can be opened.</p>
+      </description>
+    </release> -->
+    <release version="0.9.12" date="2026-08-15">
       <description>
         <ul>
-          <li>Passkeys can now be imported into ordinary encrypted pass entries, and local credential-exchange request files can be opened.</li>
           <li>Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands.</li>
           <li>Added entry filtering by password store and remembered history-inspection filters.</li>
           <li>Added CSV export for moving data to other tools.</li>

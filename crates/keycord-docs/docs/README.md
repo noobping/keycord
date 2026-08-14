@@ -26,7 +26,6 @@ Keycord reads and writes normal `pass` stores:
 
 - open one or more password stores and search by name, store, field, regular expression, or structured `find` query
 - edit entries with form fields or raw pass-file text, generate passwords, and copy or show passwords, usernames, and one-time codes as QR codes
-- import passkeys into ordinary encrypted `pass` entries and open local credential-exchange requests
 - add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend
 - manage store recipients, folder-specific `.gpg-id` files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization
 - find weak passwords, browse repeated field values, filter by store, and export password stores to CSV

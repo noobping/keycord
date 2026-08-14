@@ -26,7 +26,6 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 
 - open een of meer wachtwoordopslagen en zoek op naam, opslag, veld, reguliere expressie of gestructureerde `find`-zoekopdracht
 - bewerk items met formuliervelden of ruwe pass-bestandstekst, genereer wachtwoorden en kopieer of toon wachtwoorden, gebruikersnamen en eenmalige codes als QR-code
-- importeer passkeys in gewone versleutelde `pass`-items en open lokale verzoeken voor de uitwisseling van inloggegevens
 - voeg bestaande opslagen toe, maak nieuwe opslagen, importeer wachtwoorden op ondersteunde systemen of herstel een opslag uit Git met de Host-backend
 - beheer opslagontvangers, mapspecifieke `.gpg-id`-bestanden en met een wachtwoord beveiligde privésleutels, inclusief import uit bestanden of het klembord en optionele synchronisatie met GPG op de host
 - vind zwakke wachtwoorden, bekijk terugkerende veldwaarden, filter op opslag en exporteer wachtwoordopslagen naar CSV
