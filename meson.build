@@ -21,7 +21,7 @@ fidopin = get_option('fidopin')
 smartcard = get_option('smartcard')
 hardwarekey = get_option('hardwarekey')
 project_binary = 'keycord'
-cargo_command = 'cargo build --package keycord --locked'
+cargo_command = 'cargo build --package keycord'
 
 effective_cargo_features = cargo_features
 foreach feature_name, enabled : {
@@ -45,7 +45,7 @@ foreach feature_name, enabled : {
 endforeach
 
 if cargo_variant == 'release' or cargo_variant == 'translation'
-  cargo_command = 'cargo build --package keycord --locked --release'
+  cargo_command = 'cargo build --package keycord --release'
 endif
 
 message('Configured Meson wrapper variant "@0@" -> @1@'.format(cargo_variant, cargo_command))

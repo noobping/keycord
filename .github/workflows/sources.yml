@@ -54,7 +54,7 @@ jobs:
             echo "Cargo.lock must be committed before generating Flatpak sources." >&2
             exit 1
           fi
-          cargo metadata --locked --format-version 1 >/dev/null
+          cargo metadata --format-version 1 >/dev/null
 
       - name: Fetch flatpak-builder-tools
         run: |

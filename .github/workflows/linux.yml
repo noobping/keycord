@@ -88,10 +88,10 @@ jobs:
           echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
 
       - name: Verify passkey feature build
-        run: cargo test --package keycord --locked --no-run --no-default-features --features passkey
+        run: cargo test --package keycord --no-run --no-default-features --features passkey
 
       - name: Build
-        run: cargo build --package keycord --locked --release --features setup
+        run: cargo build --package keycord --release --features setup
 
       - name: Collect
         if: ${{ env.TAG_NAME != '' }}
