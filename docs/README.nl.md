@@ -20,7 +20,6 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 - één geheim per bestand
 - de eerste regel als wachtwoord
 - latere `key: value`-regels als gestructureerde velden
-- een gereserveerd `passkey:`-veld voor passkeygegevens wanneer passkeyondersteuning is ingeschakeld
 - `.gpg-id` voor opslagontvangers
 
 ## Keycord-functies
@@ -57,9 +56,6 @@ Keycord leest en schrijft gewone `pass`-opslagen:
 - Experimentele gelaagde versleuteling:
   - dit is experimenteel en Keycord-specifiek
   - andere `pass`-apps kunnen die items niet lezen
-- Passkeys:
-  - passkeyondersteuning is standaard ingeschakeld en kan tijdens het bouwen worden weggelaten door de Cargo-feature `passkey` uit te schakelen
-  - bij het openen van een CXP-verzoek controleert Keycord de structuur van een lokaal exportverzoek; dit is geen live passkeyprovider voor webbrowsers
 
 ## Begin
 

@@ -127,7 +127,7 @@ Use `find otp` in search when you need every entry that has OTP enabled.
 
 ## Store Passkeys And Open Exchange Requests
 
-With the default-enabled `passkey` feature, Keycord stores passkey credential data in a reserved
+With the `passkey` feature, Keycord stores passkey credential data in a reserved
 `passkey:` field inside an ordinary pass entry. The whole entry, including the passkey private key,
 is protected by the store's normal OpenPGP encryption. Compatible `pass` tools can continue to
 manage the same `.gpg` files, although they treat the reserved field as ordinary decrypted text.

@@ -2041,9 +2041,9 @@ msgstr ""
 msgid "Failed to serialize config: {e}"
 msgstr "Kon de configuratie niet serialiseren: {e}"
 
-#: src/password/passkey.rs:202
-msgid "Failed to serialize passkey data: {err}"
-msgstr "Kon de passkeygegevens niet serialiseren: {err}"
+#: src/password/passkey.rs:98
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "Kon de opgeslagen passkeygegevens niet serialiseren: {err}"
 
 #: src/private_key/unlock.rs:310
 msgid "Failed to set FIDO2 security key PIN: {err}"
@@ -2770,9 +2770,9 @@ msgstr "Ongeldige FIDO2-uitbreidingen in de passkey: {err}"
 msgid "Invalid passkey JSON: {err}"
 msgstr "Ongeldige passkey-JSON: {err}"
 
-#: src/password/passkey.rs:217
-msgid "Invalid passkey envelope: {err}"
-msgstr "Ongeldige passkey-envelop: {err}"
+#: src/password/passkey.rs:103
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "Ongeldige JSON van opgeslagen passkey: {err}"
 
 #: src/password/passkey.rs:484
 msgid "Invalid passkey {label}: {err}"
@@ -4898,6 +4898,10 @@ msgstr "Het geselecteerde pad is lokaal niet beschikbaar. {}"
 msgid "The selected store path is not a folder."
 msgstr "Het geselecteerde opslagpad is geen map."
 
+#: src/password/passkey.rs:105
+msgid "The stored JSON is not a passkey credential."
+msgstr "De opgeslagen JSON bevat geen passkey."
+
 #: src/backend/integrated/keys/hardware/crypto.rs:364
 msgid "The stored public key has no signing subkey."
 msgstr ""
@@ -5252,10 +5256,6 @@ msgstr "Niet-ondersteunde beveiliging '{}' voor hardwaresleutels."
 #: src/backend/integrated/keys/hardware/crypto.rs:542
 msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
 msgstr "Niet-ondersteund hash-algoritme voor RSA: {hash_algo:?}"
-
-#: src/password/passkey.rs:214
-msgid "Unsupported passkey envelope."
-msgstr "Niet-ondersteunde passkey-envelop."
 
 #: src/updater/common.rs:68
 msgid "Unsupported repository URL for updates: {repository}"
@@ -6013,10 +6013,6 @@ msgstr "is niet beschikbaar in de app."
 msgid "keycord-doc:"
 msgstr "keycord-doc:"
 
-#: src/password/passkey.rs:4
-msgid "keycord-passkey-v1:"
-msgstr "keycord-passkey-v1:"
-
 #: src/window/tools/export.rs:19
 msgid "keycord-passwords.csv"
 msgstr "keycord-wachtwoorden.csv"
@@ -6150,8 +6146,8 @@ msgid "passkey: [redacted]"
 msgstr "passkey: [weggelakt]"
 
 #: src/window/build/mod.rs:223
-msgid "passkey: {envelope}"
-msgstr "passkey: {envelope}"
+msgid "passkey: {storage_value}"
+msgstr "passkey: {storage_value}"
 
 #: data/metainfo.xml:213
 msgid "password"

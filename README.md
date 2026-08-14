@@ -42,7 +42,3 @@ Package names differ by distribution. This project was tested with Fedora packag
 sudo dnf install gpgme-devel clang pkg-config pkgconf-pkg-config nettle-devel libgpg-error-devel openssl-devel gtk4-devel gdk-pixbuf2-devel gcc gcc-c++ make gettext glib2-devel cairo-devel capnproto capnproto-devel pcsc-lite-devel pango-devel libadwaita-devel cargo mold clippy rustfmt \
     cmake libcbor-devel hidapi-devel libfido2-devel pcsc-lite pcsc-lite-ccid systemd-devel git pass pass-otp pinentry pinentry-gnome3 python-pass-import
 ```
-
-Passkey support is the separate Cargo feature `passkey` and is enabled by default. Use
-`cargo build --no-default-features` to build without it, or set the Meson option
-`-Dpasskey=false` when configuring a Meson build.

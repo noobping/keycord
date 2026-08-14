@@ -41,7 +41,7 @@ impl DynamicFieldTemplate {
         if title.eq_ignore_ascii_case("otpauth") {
             return Err("Use Add OTP secret instead.");
         }
-        if cfg!(feature = "passkey") && title.eq_ignore_ascii_case(PASSKEY_FIELD_KEY) {
+        if title.eq_ignore_ascii_case(PASSKEY_FIELD_KEY) {
             return Err("Use a passkey request instead.");
         }
 
@@ -77,7 +77,7 @@ pub enum OtpFieldTemplate {
 pub struct PasskeyFieldTemplate {
     pub(super) raw_key: String,
     pub(super) separator_spacing: String,
-    pub(super) encoded_value: String,
+    pub(super) storage_value: String,
     pub(super) credential: PasskeyCredential,
 }
 
@@ -85,7 +85,7 @@ impl PasskeyFieldTemplate {
     pub(super) fn line(&self) -> String {
         format!(
             "{}:{}{}",
-            self.raw_key, self.separator_spacing, self.encoded_value
+            self.raw_key, self.separator_spacing, self.storage_value
         )
     }
 }
@@ -96,7 +96,7 @@ impl fmt::Debug for PasskeyFieldTemplate {
             .debug_struct("PasskeyFieldTemplate")
             .field("raw_key", &self.raw_key)
             .field("separator_spacing", &self.separator_spacing)
-            .field("encoded_value", &"[redacted]")
+            .field("storage_value", &"[redacted]")
             .field("credential", &self.credential)
             .finish()
     }
@@ -221,14 +221,10 @@ mod tests {
             DynamicFieldTemplate::new("otpauth", None),
             Err("Use Add OTP secret instead.")
         );
-        if cfg!(feature = "passkey") {
-            assert_eq!(
-                DynamicFieldTemplate::new("passkey", None),
-                Err("Use a passkey request instead.")
-            );
-        } else {
-            assert!(DynamicFieldTemplate::new("passkey", None).is_ok());
-        }
+        assert_eq!(
+            DynamicFieldTemplate::new("passkey", None),
+            Err("Use a passkey request instead.")
+        );
         assert_eq!(
             DynamicFieldTemplate::new("api:key", None),
             Err("Field names can't contain ':'.")

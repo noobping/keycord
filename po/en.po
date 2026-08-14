@@ -396,7 +396,7 @@ msgstr "Can't undo the last change."
 #: src/password/list/row.rs:155
 #: src/updater/common.rs:696
 #: src/window/passkey_request.rs:57
-#: src/window/preferences.rs:210
+#: src/window/preferences.rs:198
 #: src/window/tools/export.rs:155
 msgid "Cancel"
 msgstr "Cancel"
@@ -446,11 +446,11 @@ msgstr "Checking for updates"
 msgid "Checking pass import availability."
 msgstr "Checking pass import availability."
 
-#: src/password/passkey.rs:297
+#: src/password/passkey.rs:189
 msgid "Choose a JSON object containing exactly one passkey credential."
 msgstr "Choose a JSON object containing exactly one passkey credential."
 
-#: src/password/passkey.rs:296
+#: src/password/passkey.rs:188
 msgid "Choose a JSON object containing one passkey credential."
 msgstr "Choose a JSON object containing one passkey credential."
 
@@ -662,7 +662,7 @@ msgstr "Connect the matching FIDO2 security key."
 msgid "Connect the matching hardware key before importing it."
 msgstr "Connect the matching hardware key before importing it."
 
-#: src/support/runtime.rs:170
+#: src/support/runtime.rs:174
 msgid "Context"
 msgstr "Context"
 
@@ -1007,7 +1007,7 @@ msgstr "Couldn't save store keys."
 msgid "Couldn't save that remote."
 msgstr "Couldn't save that remote."
 
-#: src/window/preferences.rs:482
+#: src/window/preferences.rs:470
 msgid "Couldn't save that setting."
 msgstr "Couldn't save that setting."
 
@@ -1038,7 +1038,7 @@ msgstr "Couldn't show the password as a QR code."
 msgid "Couldn't start the installer."
 msgstr "Couldn't start the installer."
 
-#: src/window/preferences.rs:351
+#: src/window/preferences.rs:339
 msgid "Couldn't sync private keys."
 msgstr "Couldn't sync private keys."
 
@@ -1209,7 +1209,7 @@ msgstr "Empty"
 msgid "Enabled for this result"
 msgstr "Enabled for this result"
 
-#: src/window/preferences.rs:236
+#: src/window/preferences.rs:224
 msgid "Enter a command."
 msgstr "Enter a command."
 
@@ -1236,7 +1236,7 @@ msgstr "Enter a name for the private key."
 msgid "Enter a name."
 msgstr "Enter a name."
 
-#: src/password/passkey.rs:394
+#: src/password/passkey.rs:286
 msgid "Enter a passkey username."
 msgstr "Enter a passkey username."
 
@@ -1256,7 +1256,7 @@ msgstr "Enter a repository URL."
 msgid "Enter a username."
 msgstr "Enter a username."
 
-#: src/password/passkey.rs:508
+#: src/password/passkey.rs:400
 msgid "Enter a valid PKCS#8 passkey private key."
 msgstr "Enter a valid PKCS#8 passkey private key."
 
@@ -1264,8 +1264,8 @@ msgstr "Enter a valid PKCS#8 passkey private key."
 msgid "Enter a valid email address."
 msgstr "Enter a valid email address."
 
-#: src/password/passkey.rs:433
-#: src/password/passkey.rs:452
+#: src/password/passkey.rs:325
+#: src/password/passkey.rs:344
 msgid "Enter a valid passkey RP ID."
 msgstr "Enter a valid passkey RP ID."
 
@@ -1527,7 +1527,7 @@ msgstr "Failed to discover hardware keys: {err}"
 msgid "Failed to download the update: {error}"
 msgstr "Failed to download the update: {error}"
 
-#: src/window/preferences.rs:346
+#: src/window/preferences.rs:334
 msgid "Failed to enable private-key sync: {err}"
 msgstr "Failed to enable private-key sync: {err}"
 
@@ -1676,7 +1676,7 @@ msgstr "Failed to move or rename password entry: {err}"
 msgid "Failed to move password entry after save: {err}"
 msgstr "Failed to move password entry after save: {err}"
 
-#: src/password/passkey.rs:472
+#: src/password/passkey.rs:364
 msgid "Failed to normalize passkey private key: {err}"
 msgstr "Failed to normalize passkey private key: {err}"
 
@@ -1906,7 +1906,7 @@ msgstr "Failed to save audit {filter_kind} filter selection: {err}"
 msgid "Failed to save password entry: {err}"
 msgstr "Failed to save password entry: {err}"
 
-#: src/window/preferences.rs:479
+#: src/window/preferences.rs:467
 msgid "Failed to save preference ({context}): {}"
 msgstr "Failed to save preference ({context}): {}"
 
@@ -1930,9 +1930,9 @@ msgstr "Failed to secure Linux update staging root '{}': {error}"
 msgid "Failed to serialize config: {e}"
 msgstr "Failed to serialize config: {e}"
 
-#: src/password/passkey.rs:202
-msgid "Failed to serialize passkey data: {err}"
-msgstr "Failed to serialize passkey data: {err}"
+#: src/password/passkey.rs:98
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "Failed to serialize stored passkey data: {err}"
 
 #: src/private_key/unlock.rs:310
 msgid "Failed to set FIDO2 security key PIN: {err}"
@@ -2290,11 +2290,11 @@ msgstr "Grant USB security key access for experimental FIDO2-protected private k
 msgid "Grant host access"
 msgstr "Grant host access"
 
-#: src/window/preferences.rs:123
+#: src/window/preferences.rs:124
 msgid "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
 msgstr "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
 
-#: src/window/preferences.rs:307
+#: src/window/preferences.rs:295
 msgid "Grant host access first."
 msgstr "Grant host access first."
 
@@ -2358,7 +2358,7 @@ msgstr "Hide permanently"
 msgid "Historical fallback"
 msgstr "Historical fallback"
 
-#: src/window/preferences.rs:396
+#: src/window/preferences.rs:384
 msgid "History recipients"
 msgstr "History recipients"
 
@@ -2561,7 +2561,7 @@ msgstr "Inspect recent app and command output."
 msgid "Inspecting Git-backed stores and discovering branches."
 msgstr "Inspecting Git-backed stores and discovering branches."
 
-#: src/window/preferences.rs:180
+#: src/window/preferences.rs:168
 msgid "Install Git to use commit-history recipients for audit verification."
 msgstr "Install Git to use commit-history recipients for audit verification."
 
@@ -2622,23 +2622,18 @@ msgstr "Invalid git cat-file header."
 msgid "Invalid host Git signature metadata."
 msgstr "Invalid host Git signature metadata."
 
-#: src/password/passkey.rs:146
-#: src/password/passkey.rs:161
-#: src/password/passkey.rs:351
-#: src/password/passkey.rs:420
-#: src/password/passkey.rs:426
+#: src/password/passkey.rs:130
+#: src/password/passkey.rs:243
+#: src/password/passkey.rs:312
+#: src/password/passkey.rs:318
 msgid "Invalid passkey FIDO2 extensions: {err}"
 msgstr "Invalid passkey FIDO2 extensions: {err}"
 
-#: src/password/passkey.rs:223
+#: src/password/passkey.rs:112
 msgid "Invalid passkey JSON: {err}"
 msgstr "Invalid passkey JSON: {err}"
 
-#: src/password/passkey.rs:217
-msgid "Invalid passkey envelope: {err}"
-msgstr "Invalid passkey envelope: {err}"
-
-#: src/password/passkey.rs:484
+#: src/password/passkey.rs:376
 msgid "Invalid passkey {label}: {err}"
 msgstr "Invalid passkey {label}: {err}"
 
@@ -2658,8 +2653,12 @@ msgstr "Invalid private key fingerprint '{value}': {err}"
 msgid "Invalid recipients file path."
 msgstr "Invalid recipients file path."
 
+#: src/password/passkey.rs:103
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "Invalid stored passkey JSON: {err}"
+
 #: data/window.ui:741
-#: src/window/preferences.rs:119
+#: src/window/preferences.rs:120
 msgid "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
 msgstr "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
 
@@ -2763,7 +2762,7 @@ msgstr "Keycord update restart failed for '{}': {error}"
 msgid "Keycord update restart skipped: no local executable directory found."
 msgstr "Keycord update restart skipped: no local executable directory found."
 
-#: src/window/preferences.rs:208
+#: src/window/preferences.rs:196
 msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
 msgstr "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
 
@@ -3413,7 +3412,7 @@ msgstr "Pass-file private key import worker disconnected unexpectedly."
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/password/passkey.rs:422
+#: src/password/passkey.rs:314
 msgid "Passkey FIDO2 extensions must be a JSON object."
 msgstr "Passkey FIDO2 extensions must be a JSON object."
 
@@ -3421,7 +3420,7 @@ msgstr "Passkey FIDO2 extensions must be a JSON object."
 msgid "Passkey export request opened"
 msgstr "Passkey export request opened"
 
-#: src/password/passkey.rs:40
+#: src/password/passkey.rs:28
 msgid "PasskeyCredential"
 msgstr "PasskeyCredential"
 
@@ -3543,7 +3542,7 @@ msgstr "Pick a value from the current list."
 
 #: data/window.ui:673
 #: src/window/navigation/restore.rs:108
-#: src/window/preferences.rs:457
+#: src/window/preferences.rs:445
 msgid "Preferences"
 msgstr "Preferences"
 
@@ -3597,15 +3596,15 @@ msgstr "Private key unlock worker disconnected while preparing a Git signature f
 msgid "Private keys can't be verified"
 msgstr "Private keys can't be verified"
 
-#: src/window/preferences.rs:343
+#: src/window/preferences.rs:331
 msgid "Private keys synced."
 msgstr "Private keys synced."
 
 #: src/private_key/sync.rs:131
 #: src/private_key/sync.rs:174
 #: src/private_key/sync.rs:38
-#: src/window/preferences.rs:127
-#: src/window/preferences.rs:131
+#: src/window/preferences.rs:128
+#: src/window/preferences.rs:132
 msgid "Private-key sync with the host is only available on Linux."
 msgstr "Private-key sync with the host is only available on Linux."
 
@@ -3618,7 +3617,7 @@ msgstr "Push password store Git branch {branch} to {remote}"
 msgid "QR code"
 msgstr "QR code"
 
-#: src/password/passkey.rs:355
+#: src/password/passkey.rs:247
 msgid "RP ID"
 msgstr "RP ID"
 
@@ -3957,7 +3956,7 @@ msgstr "Restoring password store"
 msgid "Restoring store"
 msgstr "Restoring store"
 
-#: src/window/preferences.rs:178
+#: src/window/preferences.rs:166
 msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
 msgstr "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
 
@@ -4536,7 +4535,7 @@ msgstr "The hardware key did not return a signing fingerprint."
 msgid "The installer is ready to run."
 msgstr "The installer is ready to run."
 
-#: src/password/passkey.rs:375
+#: src/password/passkey.rs:267
 msgid "The passkey is missing a {label}."
 msgstr "The passkey is missing a {label}."
 
@@ -4556,11 +4555,11 @@ msgstr "The passkey request is malformed: {0}"
 msgid "The passkey request source is not a regular local file: {path:?}"
 msgstr "The passkey request source is not a regular local file: {path:?}"
 
-#: src/password/passkey.rs:461
+#: src/password/passkey.rs:353
 msgid "The passkey {label} is empty."
 msgstr "The passkey {label} is empty."
 
-#: src/password/passkey.rs:480
+#: src/password/passkey.rs:372
 msgid "The passkey {label} must use unpadded base64url."
 msgstr "The passkey {label} must use unpadded base64url."
 
@@ -4597,6 +4596,10 @@ msgstr "The selected path is not available locally. {}"
 #: src/backend/errors.rs:162
 msgid "The selected store path is not a folder."
 msgstr "The selected store path is not a folder."
+
+#: src/password/passkey.rs:105
+msgid "The stored JSON is not a passkey credential."
+msgstr "The stored JSON is not a passkey credential."
 
 #: src/backend/integrated/keys/hardware/crypto.rs:364
 msgid "The stored public key has no signing subkey."
@@ -4643,7 +4646,7 @@ msgstr "This FIDO2 security key can't open your items."
 msgid "This branch doesn't have any commits available to audit."
 msgstr "This branch doesn't have any commits available to audit."
 
-#: src/password/passkey.rs:516
+#: src/password/passkey.rs:408
 msgid "This build does not include passkey support."
 msgstr "This build does not include passkey support."
 
@@ -4801,11 +4804,11 @@ msgstr "Try again from Preferences."
 msgid "Try another query or filter."
 msgstr "Try another query or filter."
 
-#: src/window/preferences.rs:211
+#: src/window/preferences.rs:199
 msgid "Turn On"
 msgstr "Turn On"
 
-#: src/window/preferences.rs:207
+#: src/window/preferences.rs:195
 msgid "Turn on private-key sync?"
 msgstr "Turn on private-key sync?"
 
@@ -4929,10 +4932,6 @@ msgstr "Unsupported hardware key protection '{}'."
 #: src/backend/integrated/keys/hardware/crypto.rs:542
 msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
 msgstr "Unsupported hash algorithm for RSA: {hash_algo:?}"
-
-#: src/password/passkey.rs:214
-msgid "Unsupported passkey envelope."
-msgstr "Unsupported passkey envelope."
 
 #: src/updater/common.rs:68
 msgid "Unsupported repository URL for updates: {repository}"
@@ -5251,7 +5250,7 @@ msgstr "checked above"
 msgid "clean stale store filter values"
 msgstr "clean stale store filter values"
 
-#: src/window/preferences.rs:548
+#: src/window/preferences.rs:536
 msgid "clear empty fields before save"
 msgstr "clear empty fields before save"
 
@@ -5311,8 +5310,8 @@ msgstr "create temp dir"
 msgid "create update download directory"
 msgstr "create update download directory"
 
-#: src/password/passkey.rs:354
-#: src/password/passkey.rs:404
+#: src/password/passkey.rs:246
+#: src/password/passkey.rs:296
 msgid "credential ID"
 msgstr "credential ID"
 
@@ -5690,10 +5689,6 @@ msgstr "is not available in the app."
 msgid "keycord-doc:"
 msgstr "keycord-doc:"
 
-#: src/password/passkey.rs:4
-msgid "keycord-passkey-v1:"
-msgstr "keycord-passkey-v1:"
-
 #: src/window/tools/export.rs:19
 msgid "keycord-passwords.csv"
 msgstr "keycord-passwords.csv"
@@ -5735,7 +5730,7 @@ msgstr "missing display"
 msgid "move password entry to another store"
 msgstr "move password entry to another store"
 
-#: src/window/preferences.rs:566
+#: src/window/preferences.rs:554
 msgid "new item template"
 msgstr "new item template"
 
@@ -5830,18 +5825,18 @@ msgid "passkey: [redacted]"
 msgstr "passkey: [redacted]"
 
 #: src/window/build/mod.rs:223
-msgid "passkey: {envelope}"
-msgstr "passkey: {envelope}"
+msgid "passkey: {storage_value}"
+msgstr "passkey: {storage_value}"
 
 #: data/metainfo.xml:214
 msgid "password"
 msgstr "password"
 
-#: src/window/preferences.rs:748
+#: src/window/preferences.rs:736
 msgid "password generation"
 msgstr "password generation"
 
-#: src/window/preferences.rs:692
+#: src/window/preferences.rs:680
 msgid "password list sort"
 msgstr "password list sort"
 
@@ -5876,13 +5871,13 @@ msgstr "pin required"
 msgid "preferences file"
 msgstr "preferences file"
 
-#: src/password/passkey.rs:359
-#: src/password/passkey.rs:468
+#: src/password/passkey.rs:251
+#: src/password/passkey.rs:360
 msgid "private key"
 msgstr "private key"
 
-#: src/window/preferences.rs:332
-#: src/window/preferences.rs:359
+#: src/window/preferences.rs:320
+#: src/window/preferences.rs:347
 msgid "private-key sync"
 msgstr "private-key sync"
 
@@ -6027,12 +6022,12 @@ msgstr "unsupported key type: {other:?}"
 msgid "update-{:032x}"
 msgstr "update-{:032x}"
 
-#: src/password/passkey.rs:358
-#: src/password/passkey.rs:408
+#: src/password/passkey.rs:250
+#: src/password/passkey.rs:300
 msgid "user handle"
 msgstr "user handle"
 
-#: src/window/preferences.rs:622
+#: src/window/preferences.rs:610
 msgid "username fallback"
 msgstr "username fallback"
 
