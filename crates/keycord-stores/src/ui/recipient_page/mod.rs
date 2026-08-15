@@ -1,21 +1,26 @@
 use crate::recipients::{
-    read_store_private_key_requirement, read_store_private_key_requirement_for_scope,
-    read_store_recipients, read_store_recipients_for_scope, ROOT_STORE_RECIPIENTS_SCOPE,
+    read_store_private_key_requirement_for_scope, read_store_recipients_for_scope,
+    relevant_store_recipient_scopes, ROOT_STORE_RECIPIENTS_SCOPE,
 };
 use crate::ui::ports::StoreUiPorts;
 use crate::StoreRecipientsPrivateKeyRequirement;
-use adw::gtk::{Button, CheckButton, Widget};
+use adw::gtk::{Box as GtkBox, Button, CheckButton, Stack, Widget};
 use adw::prelude::*;
 use adw::{
     ActionRow, ApplicationWindow, ComboRow, NavigationPage, NavigationView, PreferencesGroup,
-    ToastOverlay,
+    StatusPage, ToastOverlay,
 };
 use keycord_keys::ui::{KeyManagementUiState, KeyRecipientWorkflowPorts};
 use keycord_preferences::ui::PreferencesPageSearchState;
 use keycord_runtime::i18n::gettext;
+use keycord_runtime::log_error;
 use keycord_shell::actions::register_window_action;
+use keycord_shell::background::spawn_result_task;
 use keycord_shell::navigation::{WindowPageState, APP_WINDOW_TITLE};
-use keycord_shell::ui::{focus_first_preferences_group_child_in_order, reveal_navigation_page};
+use keycord_shell::ui::{
+    focus_first_preferences_group_child_in_order, reveal_navigation_page,
+    visible_navigation_page_is,
+};
 use std::cell::{Cell, RefCell};
 use std::rc::Rc;
 
@@ -47,12 +52,17 @@ pub struct StoreRecipientsPageState {
     pub saved_private_key_requirement: Rc<Cell<StoreRecipientsPrivateKeyRequirement>>,
     pub save_in_flight: Rc<Cell<bool>>,
     pub save_queued: Rc<Cell<bool>>,
+    load_generation: Rc<Cell<u64>>,
+    loading: Rc<Cell<bool>>,
     pub(crate) git_rows: Rc<RefCell<Vec<Widget>>>,
 }
 
 #[derive(Clone)]
 pub struct StoreRecipientsPlatformState {
     pub overlay: ToastOverlay,
+    pub recipients_stack: Stack,
+    pub recipients_content: GtkBox,
+    pub recipients_loading: StatusPage,
     pub scope_group: PreferencesGroup,
     pub saving_group: PreferencesGroup,
     pub scope_list: PreferencesGroup,
@@ -63,6 +73,18 @@ pub struct StoreRecipientsPlatformState {
     pub git_list: PreferencesGroup,
     pub require_all_row: ActionRow,
     pub require_all_check: CheckButton,
+}
+
+impl StoreRecipientsPlatformState {
+    pub fn show_loading(&self) {
+        self.recipients_stack
+            .set_visible_child(&self.recipients_loading);
+    }
+
+    pub fn show_content(&self) {
+        self.recipients_stack
+            .set_visible_child(&self.recipients_content);
+    }
 }
 
 impl StoreRecipientsPageState {
@@ -103,6 +125,8 @@ impl StoreRecipientsPageState {
             )),
             save_in_flight: Rc::new(Cell::new(false)),
             save_queued: Rc::new(Cell::new(false)),
+            load_generation: Rc::new(Cell::new(0)),
+            loading: Rc::new(Cell::new(false)),
             git_rows,
         }
     }
@@ -118,6 +142,10 @@ impl StoreRecipientsPageState {
     pub fn recipients_are_dirty(&self) -> bool {
         *self.recipients.borrow() != *self.saved_recipients.borrow()
             || self.private_key_requirement.get() != self.saved_private_key_requirement.get()
+    }
+
+    pub fn is_loading(&self) -> bool {
+        self.loading.get()
     }
 
     /// Clear Git-contributed rows without exposing the Stores UI row registry.
@@ -154,10 +182,119 @@ fn ordered_store_recipients_lists(state: &StoreRecipientsPageState) -> [Preferen
     ]
 }
 
+#[derive(Clone)]
+enum StoreRecipientValuesLoad {
+    KeepCurrent,
+    ReadFromStore,
+    Provided {
+        recipients: Vec<String>,
+        private_key_requirement: StoreRecipientsPrivateKeyRequirement,
+    },
+}
+
+struct StoreRecipientsPageLoad {
+    scopes: Vec<String>,
+    selected_scope: String,
+    values: Option<(Vec<String>, StoreRecipientsPrivateKeyRequirement)>,
+}
+
+fn next_load_generation(current: u64) -> u64 {
+    current.wrapping_add(1).max(1)
+}
+
+fn normalized_loaded_scopes(mut scopes: Vec<String>) -> Vec<String> {
+    if scopes.is_empty() {
+        scopes.push(ROOT_STORE_RECIPIENTS_SCOPE.to_string());
+    }
+    scopes
+}
+
+fn load_store_recipients_page(
+    request: &StoreRecipientsRequest,
+    uses_integrated_backend: bool,
+    current_scope: String,
+    values: StoreRecipientValuesLoad,
+) -> StoreRecipientsPageLoad {
+    let mut scopes = normalized_loaded_scopes(if uses_integrated_backend {
+        relevant_store_recipient_scopes(&request.store)
+    } else {
+        Vec::new()
+    });
+    if matches!(&values, StoreRecipientValuesLoad::Provided { .. })
+        && !scopes.iter().any(|scope| scope == &current_scope)
+    {
+        scopes.insert(0, current_scope.clone());
+    }
+    let selected_scope = if scopes.iter().any(|scope| scope == &current_scope) {
+        current_scope.clone()
+    } else {
+        scopes
+            .first()
+            .cloned()
+            .unwrap_or_else(|| ROOT_STORE_RECIPIENTS_SCOPE.to_string())
+    };
+    let values = match values {
+        StoreRecipientValuesLoad::KeepCurrent if selected_scope == current_scope => None,
+        StoreRecipientValuesLoad::KeepCurrent | StoreRecipientValuesLoad::ReadFromStore => Some((
+            read_store_recipients_for_scope(&request.store, &selected_scope),
+            read_store_private_key_requirement_for_scope(&request.store, &selected_scope),
+        )),
+        StoreRecipientValuesLoad::Provided {
+            recipients,
+            private_key_requirement,
+        } => Some((recipients, private_key_requirement)),
+    };
+    StoreRecipientsPageLoad {
+        scopes,
+        selected_scope,
+        values,
+    }
+}
+
+fn begin_store_recipients_loading(state: &StoreRecipientsPageState) -> u64 {
+    let generation = next_load_generation(state.load_generation.get());
+    state.load_generation.set(generation);
+    state.loading.set(true);
+    state.platform.show_loading();
+    if visible_navigation_page_is(&state.nav, &state.page) {
+        state.find.set_visible(false);
+    }
+    generation
+}
+
+fn store_recipients_load_is_current(
+    state: &StoreRecipientsPageState,
+    generation: u64,
+    request: &StoreRecipientsRequest,
+) -> bool {
+    state.load_generation.get() == generation && state.current_request().as_ref() == Some(request)
+}
+
+fn finish_store_recipients_loading(
+    state: &StoreRecipientsPageState,
+    generation: u64,
+    request: &StoreRecipientsRequest,
+) {
+    if !store_recipients_load_is_current(state, generation, request) {
+        return;
+    }
+    state.loading.set(false);
+    state.platform.show_content();
+    state.search.sync();
+    if visible_navigation_page_is(&state.nav, &state.page) {
+        sync_store_recipients_page_header(state);
+        let _ =
+            focus_first_preferences_group_child_in_order(&ordered_store_recipients_lists(state));
+    }
+}
+
 pub fn present_store_recipients_dialog(state: &StoreRecipientsPageState) {
     sync_store_recipients_page_header(state);
     reveal_navigation_page(&state.nav, &state.page);
-    let _ = focus_first_preferences_group_child_in_order(&ordered_store_recipients_lists(state));
+    if !state.is_loading() {
+        let _ =
+            focus_first_preferences_group_child_in_order(&ordered_store_recipients_lists(state));
+    }
 }
 
 pub fn handle_store_recipients_subpage_back(state: &StoreRecipientsPageState) -> bool {
@@ -200,10 +337,10 @@ pub fn connect_store_recipients_controls(state: &StoreRecipientsPageState) {
                 mode::ensure_standard_recipient_actions_allowed(&state_for_policy)
             }),
             on_key_changed: Rc::new(move || {
-                rebuild_store_recipients_list(&state_for_change);
+                refresh_store_recipients_key_inventory(&state_for_change);
             }),
             on_key_access_changed: Rc::new(move || {
-                rebuild_store_recipients_list(&state_for_access_change);
+                refresh_store_recipients_key_inventory(&state_for_access_change);
             }),
             on_generation_page_closed: Rc::new(move |reopen_recipient_page| {
                 if reopen_recipient_page {
@@ -222,6 +359,21 @@ pub fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
     state.search.sync();
 }
 
+fn refresh_store_recipients_key_inventory(state: &StoreRecipientsPageState) {
+    let Some(request) = state.current_request() else {
+        return;
+    };
+    let generation = begin_store_recipients_loading(state);
+    let state_for_loaded = state.clone();
+    let request_for_loaded = request.clone();
+    list::refresh_store_recipients_list(
+        state,
+        Rc::new(move || {
+            finish_store_recipients_loading(&state_for_loaded, generation, &request_for_loaded);
+        }),
+    );
+}
+
 pub fn register_store_recipients_reload_action(
     window: &ApplicationWindow,
     state: &StoreRecipientsPageState,
@@ -232,7 +384,7 @@ pub fn register_store_recipients_reload_action(
             return;
         }
 
-        rebuild_store_recipients_list(&state);
+        start_store_recipients_page_load(&state, StoreRecipientValuesLoad::KeepCurrent, false);
     });
 }
 
@@ -240,42 +392,144 @@ pub fn sync_store_recipients_page_header(state: &StoreRecipientsPageState) {
     let Some(request) = state.current_request() else {
         state.page.set_title(&gettext("Store keys"));
         (state.ports.navigation.show_secondary_page)("Store keys", APP_WINDOW_TITLE, false);
-        state.find.set_visible(true);
+        state.find.set_visible(!state.is_loading());
         return;
     };
 
     state.page.set_title(&gettext(request.mode.page_title()));
     (state.ports.navigation.show_secondary_page)(request.mode.page_title(), &request.store, false);
-    state.find.set_visible(true);
+    state.find.set_visible(!state.is_loading());
+}
+
+fn apply_store_recipients_page_load(
+    state: &StoreRecipientsPageState,
+    load: StoreRecipientsPageLoad,
+) {
+    *state.recipient_scope_dirs.borrow_mut() = load.scopes;
+    *state.selected_recipient_scope.borrow_mut() = load.selected_scope;
+    if let Some((recipients, private_key_requirement)) = load.values {
+        *state.recipients.borrow_mut() = recipients.clone();
+        *state.saved_recipients.borrow_mut() = recipients;
+        state.private_key_requirement.set(private_key_requirement);
+        state
+            .saved_private_key_requirement
+            .set(private_key_requirement);
+    }
+}
+
+fn fallback_store_recipients_page_load(
+    values: StoreRecipientValuesLoad,
+) -> StoreRecipientsPageLoad {
+    let values = match values {
+        StoreRecipientValuesLoad::Provided {
+            recipients,
+            private_key_requirement,
+        } => Some((recipients, private_key_requirement)),
+        StoreRecipientValuesLoad::KeepCurrent | StoreRecipientValuesLoad::ReadFromStore => None,
+    };
+    StoreRecipientsPageLoad {
+        scopes: vec![ROOT_STORE_RECIPIENTS_SCOPE.to_string()],
+        selected_scope: ROOT_STORE_RECIPIENTS_SCOPE.to_string(),
+        values,
+    }
+}
+
+fn complete_store_recipients_page_load(
+    state: &StoreRecipientsPageState,
+    generation: u64,
+    request: StoreRecipientsRequest,
+    load: StoreRecipientsPageLoad,
+    queue_initial_autosave: bool,
+) {
+    if !store_recipients_load_is_current(state, generation, &request) {
+        return;
+    }
+    apply_store_recipients_page_load(state, load);
+    let state_for_loaded = state.clone();
+    let request_for_loaded = request.clone();
+    list::refresh_store_recipients_list(
+        state,
+        Rc::new(move || {
+            finish_store_recipients_loading(&state_for_loaded, generation, &request_for_loaded);
+        }),
+    );
+    if queue_initial_autosave && request.mode.creates_store() {
+        queue_store_recipients_autosave(state);
+    }
+}
+
+fn start_store_recipients_page_load(
+    state: &StoreRecipientsPageState,
+    values: StoreRecipientValuesLoad,
+    queue_initial_autosave: bool,
+) {
+    let Some(request) = state.current_request() else {
+        return;
+    };
+    let generation = begin_store_recipients_loading(state);
+    let uses_integrated_backend = state.ports.preferences.uses_integrated_backend();
+    let current_scope = state.current_recipient_scope();
+    let request_for_worker = request.clone();
+    let values_for_worker = values.clone();
+    let state_for_result = state.clone();
+    let request_for_result = request.clone();
+    let state_for_disconnect = state.clone();
+    let request_for_disconnect = request;
+    spawn_result_task(
+        move || {
+            load_store_recipients_page(
+                &request_for_worker,
+                uses_integrated_backend,
+                current_scope,
+                values_for_worker,
+            )
+        },
+        move |load| {
+            complete_store_recipients_page_load(
+                &state_for_result,
+                generation,
+                request_for_result,
+                load,
+                queue_initial_autosave,
+            );
+        },
+        move || {
+            log_error("Store-key page loader disconnected unexpectedly.");
+            complete_store_recipients_page_load(
+                &state_for_disconnect,
+                generation,
+                request_for_disconnect,
+                fallback_store_recipients_page_load(values),
+                queue_initial_autosave,
+            );
+        },
+    );
 }
 
 fn show_store_recipients_page(
     state: &StoreRecipientsPageState,
     request: StoreRecipientsRequest,
-    initial_recipients: Vec<String>,
-    private_key_requirement: StoreRecipientsPrivateKeyRequirement,
+    values: StoreRecipientValuesLoad,
 ) {
-    let mode = request.mode;
-    *state.request.borrow_mut() = Some(request);
+    *state.request.borrow_mut() = Some(request.clone());
     *state.recipient_scope_dirs.borrow_mut() = Vec::new();
     *state.selected_recipient_scope.borrow_mut() = ROOT_STORE_RECIPIENTS_SCOPE.to_string();
-    *state.recipients.borrow_mut() = initial_recipients.clone();
-    *state.saved_recipients.borrow_mut() = initial_recipients;
-    state.private_key_requirement.set(private_key_requirement);
-    state
-        .saved_private_key_requirement
-        .set(private_key_requirement);
+    if matches!(&values, StoreRecipientValuesLoad::ReadFromStore) {
+        state.recipients.borrow_mut().clear();
+        state.saved_recipients.borrow_mut().clear();
+        state
+            .private_key_requirement
+            .set(StoreRecipientsPrivateKeyRequirement::AnyManagedKey);
+        state
+            .saved_private_key_requirement
+            .set(StoreRecipientsPrivateKeyRequirement::AnyManagedKey);
+    }
     state.save_in_flight.set(false);
     state.save_queued.set(false);
     state.key_management.reset_recipient_navigation();
     state.platform.options_group.set_visible(true);
-    rebuild_store_recipients_list(state);
-    state.search.sync();
+    start_store_recipients_page_load(state, values, request.mode.creates_store());
     present_store_recipients_dialog(state);
-
-    if mode.creates_store() {
-        queue_store_recipients_autosave(state);
-    }
 }
 
 pub fn show_store_recipients_create_page(
@@ -286,24 +540,24 @@ pub fn show_store_recipients_create_page(
     show_store_recipients_page(
         state,
         StoreRecipientsRequest::create(store),
-        initial_recipients,
-        StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
+        StoreRecipientValuesLoad::Provided {
+            recipients: initial_recipients,
+            private_key_requirement: StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
+        },
     );
 }
 
 pub fn show_store_recipients_edit_page(state: &StoreRecipientsPageState, store: impl Into<String>) {
-    let store = store.into();
     show_store_recipients_page(
         state,
-        StoreRecipientsRequest::edit(store.clone()),
-        read_store_recipients(&store),
-        read_store_private_key_requirement(&store),
+        StoreRecipientsRequest::edit(store),
+        StoreRecipientValuesLoad::ReadFromStore,
     );
 }
 
 #[cfg(test)]
 mod tests {
-    use super::StoreRecipientsMode;
+    use super::{next_load_generation, normalized_loaded_scopes, StoreRecipientsMode};
 
     #[test]
     fn mode_titles_match_their_behavior() {
@@ -321,5 +575,18 @@ mod tests {
             StoreRecipientsMode::Edit.save_failure_message(),
             "Couldn't save store keys."
         );
+    }
+
+    #[test]
+    fn page_load_generations_never_use_the_idle_generation() {
+        assert_eq!(next_load_generation(0), 1);
+        assert_eq!(next_load_generation(41), 42);
+        assert_eq!(next_load_generation(u64::MAX), 1);
+    }
+
+    #[test]
+    fn a_store_without_discovered_scopes_still_loads_the_default_scope() {
+        assert_eq!(normalized_loaded_scopes(Vec::new()), ["."]);
+        assert_eq!(normalized_loaded_scopes(vec!["team".to_string()]), ["team"]);
     }
 }

@@ -76,6 +76,10 @@ pub const fn uses_in_app_grant(host_command_access: bool) -> bool {
     host_command_access
 }
 
+const fn grant_retry_enabled(command_succeeded: bool) -> bool {
+    !command_succeeded
+}
+
 fn append_grant_button(
     row: &ActionRow,
     overlay: &ToastOverlay,
@@ -99,7 +103,7 @@ fn append_grant_button(
         spawn_result_task(
             move || run_permission_command(),
             move |result| {
-                button_for_result.set_sensitive(true);
+                button_for_result.set_sensitive(grant_retry_enabled(result.is_ok()));
                 match result {
                     Ok(()) => {
                         overlay_for_result.add_toast(Toast::new(&gettext(PERMISSION_SUCCESS_TOAST)))
@@ -176,11 +180,17 @@ fn find_named_descendant_action_row(
 
 #[cfg(test)]
 mod tests {
-    use super::uses_in_app_grant;
+    use super::{grant_retry_enabled, uses_in_app_grant};
 
     #[test]
     fn host_command_access_selects_in_app_grant() {
         assert!(!uses_in_app_grant(false));
         assert!(uses_in_app_grant(true));
+    }
+
+    #[test]
+    fn successful_grants_stay_disabled_while_failures_allow_retry() {
+        assert!(!grant_retry_enabled(true));
+        assert!(grant_retry_enabled(false));
     }
 }

@@ -94,6 +94,8 @@ pub struct KeyManagementUiState {
     pub(crate) private_generation_in_flight: Rc<Cell<bool>>,
     pub(crate) hardware_generation_in_flight: Rc<Cell<bool>>,
     pub(crate) recipient_rows: Rc<RefCell<Vec<Widget>>>,
+    recipient_list_state: recipient_list::RecipientListState,
+    recipient_sync_to_host_pending: Rc<Cell<bool>>,
     reopen_recipient_page: Rc<Cell<bool>>,
     workflow: Rc<RefCell<Option<KeyRecipientWorkflowPorts>>>,
     controls_connected: Rc<Cell<bool>>,
@@ -148,6 +150,8 @@ impl KeyManagementUiState {
             private_generation_in_flight: Rc::new(Cell::new(false)),
             hardware_generation_in_flight: Rc::new(Cell::new(false)),
             recipient_rows: Rc::new(RefCell::new(Vec::new())),
+            recipient_list_state: recipient_list::RecipientListState::default(),
+            recipient_sync_to_host_pending: Rc::new(Cell::new(false)),
             reopen_recipient_page: Rc::new(Cell::new(false)),
             workflow: Rc::new(RefCell::new(None)),
             controls_connected: Rc::new(Cell::new(false)),
@@ -257,6 +261,15 @@ impl KeyManagementUiState {
         recipient_list::rebuild_recipient_key_list(self, context);
     }
 
+    /// Refresh key inventory away from the GTK thread, then render the newest request.
+    pub fn refresh_recipient_key_list(
+        &self,
+        context: RecipientKeyListContext,
+        on_loaded: Rc<dyn Fn()>,
+    ) {
+        recipient_list::refresh_recipient_key_list(self, context, on_loaded);
+    }
+
     /// Search groups contributed by the Keys-owned portion of the recipient page.
     pub fn recipient_search_groups(&self) -> [SearchablePreferencesGroup; 4] {
         let add_key_widgets = vec![
@@ -310,14 +323,6 @@ impl KeyManagementUiState {
         (self.ports.prompt_unlock)(&self.overlay, fingerprint, after_unlock, on_finish);
     }
 
-    pub fn refresh_recipient_key_inventory(&self) -> bool {
-        let outcome = key_sync::sync_from_host(self);
-        if matches!(outcome, key_sync::KeySyncOutcome::Succeeded) {
-            (self.ports.refresh_key_consumers)(&self.window);
-        }
-        !matches!(outcome, key_sync::KeySyncOutcome::Failed)
-    }
-
     pub(crate) fn standard_actions_allowed(&self) -> bool {
         self.workflow
             .borrow()
@@ -326,7 +331,7 @@ impl KeyManagementUiState {
     }
 
     pub(crate) fn notify_key_changed(&self) {
-        let _ = key_sync::sync_to_host(self);
+        self.recipient_sync_to_host_pending.set(true);
         (self.ports.refresh_key_consumers)(&self.window);
         if let Some(ports) = self.workflow.borrow().as_ref() {
             (ports.on_key_changed)();

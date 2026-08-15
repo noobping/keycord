@@ -11,10 +11,12 @@ use adw::prelude::*;
 use adw::{ActionRow, Toast};
 use keycord_runtime::i18n::gettext;
 use keycord_runtime::log_error;
+use keycord_shell::background::spawn_result_task;
 use keycord_shell::ui::{
     add_persistent_hide_button_with, add_tracked_preferences_group_child, append_info_group_row,
     clear_tracked_preferences_group, dim_label_icon, flat_icon_button_with_tooltip,
 };
+use std::cell::RefCell;
 use std::collections::HashSet;
 use std::rc::Rc;
 
@@ -42,6 +44,7 @@ pub struct RecipientKeyListPolicy {
 }
 
 /// Per-refresh Store context without Store domain types or a Stores dependency.
+#[derive(Clone)]
 pub struct RecipientKeyListContext {
     pub current_recipients: Vec<String>,
     pub uses_integrated_backend: bool,
@@ -54,6 +57,137 @@ enum AvailableRecipientKey {
     Managed(ManagedRipassoPrivateKey),
     ConnectedSmartcard(ConnectedSmartcardKey),
     HostOnly(HostGpgPrivateKeySummary),
+}
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+struct AvailableRecipientKeySnapshot {
+    key: AvailableRecipientKey,
+    unlocked: bool,
+    requires_unlock: bool,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+struct RecipientKeyAccess {
+    unlocked: bool,
+    requires_unlock: bool,
+}
+
+impl AvailableRecipientKeySnapshot {
+    fn fingerprint(&self) -> &str {
+        self.key.fingerprint()
+    }
+
+    fn user_ids(&self) -> &[String] {
+        self.key.user_ids()
+    }
+
+    fn currently_usable(&self) -> bool {
+        self.unlocked || !self.requires_unlock
+    }
+
+    fn access(&self) -> RecipientKeyAccess {
+        RecipientKeyAccess {
+            unlocked: self.unlocked,
+            requires_unlock: self.requires_unlock,
+        }
+    }
+}
+
+#[derive(Clone, Debug)]
+struct RecipientKeyInventorySnapshot {
+    keys: Result<Vec<AvailableRecipientKeySnapshot>, String>,
+    smartcard_error: Option<String>,
+    host_error: Option<String>,
+}
+
+impl RecipientKeyInventorySnapshot {
+    fn disconnected() -> Self {
+        Self {
+            keys: Err("The private-key inventory worker stopped unexpectedly.".to_string()),
+            smartcard_error: None,
+            host_error: None,
+        }
+    }
+}
+
+#[derive(Debug)]
+struct RecipientKeyInventoryLoad {
+    snapshot: RecipientKeyInventorySnapshot,
+    sync_result: Option<Result<(), String>>,
+    refresh_consumers_after_sync: bool,
+}
+
+struct PendingRecipientKeyList {
+    context: RecipientKeyListContext,
+    on_loaded: Rc<dyn Fn()>,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum InventoryLoadBegin {
+    Start(u64),
+    Queue(u64),
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum InventoryLoadFinish {
+    Apply,
+    StartQueued(u64),
+    Ignore,
+}
+
+#[derive(Default, Debug)]
+struct InventoryLoadController {
+    generation: u64,
+    running: Option<u64>,
+    queued: bool,
+}
+
+impl InventoryLoadController {
+    fn begin(&mut self) -> InventoryLoadBegin {
+        self.generation = self.generation.wrapping_add(1).max(1);
+        if self.running.is_some() {
+            self.queued = true;
+            InventoryLoadBegin::Queue(self.generation)
+        } else {
+            self.running = Some(self.generation);
+            InventoryLoadBegin::Start(self.generation)
+        }
+    }
+
+    fn finish(&mut self, generation: u64) -> InventoryLoadFinish {
+        if self.running != Some(generation) {
+            return InventoryLoadFinish::Ignore;
+        }
+        if self.queued {
+            self.queued = false;
+            self.running = Some(self.generation);
+            InventoryLoadFinish::StartQueued(self.generation)
+        } else {
+            self.running = None;
+            if self.generation == generation {
+                InventoryLoadFinish::Apply
+            } else {
+                InventoryLoadFinish::Ignore
+            }
+        }
+    }
+}
+
+#[derive(Clone)]
+pub(super) struct RecipientListState {
+    inventory: Rc<RefCell<Option<RecipientKeyInventorySnapshot>>>,
+    controller: Rc<RefCell<InventoryLoadController>>,
+    queued: Rc<RefCell<Option<PendingRecipientKeyList>>>,
+}
+
+impl Default for RecipientListState {
+    fn default() -> Self {
+        Self {
+            inventory: Rc::new(RefCell::new(None)),
+            controller: Rc::new(RefCell::new(InventoryLoadController::default())),
+            queued: Rc::new(RefCell::new(None)),
+        }
+    }
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -169,7 +303,7 @@ fn inspect_private_key_lock_state(fingerprint: &str) -> (bool, bool) {
 
 fn recipient_matches_key(
     recipient: &str,
-    key: &AvailableRecipientKey,
+    key: &AvailableRecipientKeySnapshot,
     matcher: &RecipientKeyMatcher,
 ) -> bool {
     matcher(recipient, key.fingerprint(), key.user_ids())
@@ -177,7 +311,7 @@ fn recipient_matches_key(
 
 fn selected_key_count(
     recipients: &[String],
-    keys: &[AvailableRecipientKey],
+    keys: &[AvailableRecipientKeySnapshot],
     matcher: &RecipientKeyMatcher,
 ) -> usize {
     keys.iter()
@@ -189,23 +323,9 @@ fn selected_key_count(
         .count()
 }
 
-fn key_is_currently_usable(key: &AvailableRecipientKey) -> bool {
-    match key {
-        AvailableRecipientKey::Managed(key) => {
-            let (unlocked, requires_unlock) = inspect_private_key_lock_state(&key.fingerprint);
-            unlocked || !requires_unlock
-        }
-        AvailableRecipientKey::ConnectedSmartcard(key) => {
-            let (unlocked, requires_unlock) = inspect_private_key_lock_state(&key.fingerprint);
-            unlocked || !requires_unlock
-        }
-        AvailableRecipientKey::HostOnly(_) => true,
-    }
-}
-
 fn selected_usable_key_count(
     recipients: &[String],
-    keys: &[AvailableRecipientKey],
+    keys: &[AvailableRecipientKeySnapshot],
     matcher: &RecipientKeyMatcher,
 ) -> usize {
     keys.iter()
@@ -213,14 +333,14 @@ fn selected_usable_key_count(
             recipients
                 .iter()
                 .any(|recipient| recipient_matches_key(recipient, key, matcher))
-                && key_is_currently_usable(key)
+                && key.currently_usable()
         })
         .count()
 }
 
 fn unresolved_recipients(
     recipients: &[String],
-    keys: &[AvailableRecipientKey],
+    keys: &[AvailableRecipientKeySnapshot],
     matcher: &RecipientKeyMatcher,
 ) -> Vec<String> {
     let mut unresolved = Vec::new();
@@ -271,33 +391,78 @@ fn merge_available_recipient_keys(
     keys
 }
 
-fn load_available_recipient_keys(
-    state: &KeyManagementUiState,
-    managed_keys: Vec<ManagedRipassoPrivateKey>,
-    connected_smartcards: Vec<ConnectedSmartcardKey>,
-    uses_host_backend: bool,
-) -> (Vec<AvailableRecipientKey>, bool) {
-    if !uses_host_backend {
-        return (
-            merge_available_recipient_keys(managed_keys, connected_smartcards, Vec::new()),
-            false,
-        );
-    }
+fn snapshot_available_recipient_keys(
+    keys: Vec<AvailableRecipientKey>,
+) -> Vec<AvailableRecipientKeySnapshot> {
+    keys.into_iter()
+        .map(|key| {
+            let (unlocked, requires_unlock) = match &key {
+                AvailableRecipientKey::Managed(key) => {
+                    inspect_private_key_lock_state(&key.fingerprint)
+                }
+                AvailableRecipientKey::ConnectedSmartcard(key) => {
+                    inspect_private_key_lock_state(&key.fingerprint)
+                }
+                AvailableRecipientKey::HostOnly(_) => (true, false),
+            };
+            AvailableRecipientKeySnapshot {
+                key,
+                unlocked,
+                requires_unlock,
+            }
+        })
+        .collect()
+}
 
-    match (state.ports.list_host_private_keys)() {
-        Ok(host_keys) => (
-            merge_available_recipient_keys(managed_keys, connected_smartcards, host_keys),
-            false,
-        ),
+fn load_recipient_key_inventory(
+    uses_integrated_backend: bool,
+    uses_host_backend: bool,
+    sync_enabled: bool,
+    sync_private_keys: super::SyncPrivateKeys,
+    refresh_consumers_after_sync: bool,
+    list_host_private_keys: super::ListHostPrivateKeys,
+) -> RecipientKeyInventoryLoad {
+    let sync_result = sync_enabled.then(|| sync_private_keys());
+    let managed_keys = match list_ripasso_private_keys() {
+        Ok(keys) => keys,
         Err(err) => {
-            log_error(format!(
-                "Failed to inspect host GPG private keys for recipients: {err}"
-            ));
-            (
-                merge_available_recipient_keys(managed_keys, connected_smartcards, Vec::new()),
-                true,
-            )
+            return RecipientKeyInventoryLoad {
+                snapshot: RecipientKeyInventorySnapshot {
+                    keys: Err(err),
+                    smartcard_error: None,
+                    host_error: None,
+                },
+                sync_result,
+                refresh_consumers_after_sync,
+            };
         }
+    };
+    let (connected_smartcards, smartcard_error) = if uses_integrated_backend {
+        match list_connected_smartcard_keys() {
+            Ok(keys) => (keys, None),
+            Err(err) => (Vec::new(), Some(err)),
+        }
+    } else {
+        (Vec::new(), None)
+    };
+    let (host_keys, host_error) = if uses_host_backend {
+        match list_host_private_keys() {
+            Ok(keys) => (keys, None),
+            Err(err) => (Vec::new(), Some(err)),
+        }
+    } else {
+        (Vec::new(), None)
+    };
+    let keys = merge_available_recipient_keys(managed_keys, connected_smartcards, host_keys);
+
+    RecipientKeyInventoryLoad {
+        snapshot: RecipientKeyInventorySnapshot {
+            keys: Ok(snapshot_available_recipient_keys(keys)),
+            smartcard_error,
+            host_error,
+        },
+        sync_result,
+        refresh_consumers_after_sync,
     }
 }
 
@@ -431,12 +596,16 @@ fn copy_text(state: &KeyManagementUiState, text: &str, button: &adw::gtk::Button
 fn append_managed_key_row(
     state: &KeyManagementUiState,
     key: &ManagedRipassoPrivateKey,
+    access: RecipientKeyAccess,
     active: bool,
     selected_keys: usize,
     selected_usable_keys: usize,
     context: &RecipientKeyListContext,
 ) {
-    let (unlocked, requires_unlock) = inspect_private_key_lock_state(&key.fingerprint);
+    let RecipientKeyAccess {
+        unlocked,
+        requires_unlock,
+    } = access;
     let usable = unlocked || !requires_unlock;
     let toggle_message = (context.policy.toggle_blocked_message)(
         active,
@@ -564,12 +733,16 @@ fn connected_smartcard_subtitle(key: &ConnectedSmartcardKey) -> String {
 fn append_smartcard_key_row(
     state: &KeyManagementUiState,
     key: &ConnectedSmartcardKey,
+    access: RecipientKeyAccess,
     active: bool,
     selected_keys: usize,
     selected_usable_keys: usize,
     context: &RecipientKeyListContext,
 ) {
-    let (unlocked, requires_unlock) = inspect_private_key_lock_state(&key.fingerprint);
+    let RecipientKeyAccess {
+        unlocked,
+        requires_unlock,
+    } = access;
     let toggle_message = (context.policy.toggle_blocked_message)(
         active,
         unlocked || !requires_unlock,
@@ -607,9 +780,10 @@ fn append_smartcard_key_row(
     copy_button.connect_clicked(move |_| copy_text(&state, &fingerprint, &button));
 }
 
-pub(super) fn rebuild_recipient_key_list(
+fn render_recipient_key_list(
     state: &KeyManagementUiState,
     context: RecipientKeyListContext,
+    inventory: RecipientKeyInventorySnapshot,
 ) {
     clear_tracked_preferences_group(
         &state.widgets.recipient_keys_group,
@@ -617,7 +791,17 @@ pub(super) fn rebuild_recipient_key_list(
     );
     sync_verification_warning(state, None);
 
-    let managed_keys = match list_ripasso_private_keys() {
+    if let Some(err) = &inventory.smartcard_error {
+        log_error(format!(
+            "Failed to inspect connected smartcards for recipients: {err}"
+        ));
+    }
+    if let Some(err) = &inventory.host_error {
+        log_error(format!(
+            "Failed to inspect host GPG private keys for recipients: {err}"
+        ));
+    }
+    let keys = match inventory.keys {
         Ok(keys) => keys,
         Err(err) => {
             log_error(format!("Failed to load private keys for recipients: {err}"));
@@ -631,25 +815,6 @@ pub(super) fn rebuild_recipient_key_list(
             return;
         }
     };
-    let connected_smartcards = if context.uses_integrated_backend {
-        match list_connected_smartcard_keys() {
-            Ok(keys) => keys,
-            Err(err) => {
-                log_error(format!(
-                    "Failed to inspect connected smartcards for recipients: {err}"
-                ));
-                Vec::new()
-            }
-        }
-    } else {
-        Vec::new()
-    };
-    let (keys, host_inspection_failed) = load_available_recipient_keys(
-        state,
-        managed_keys,
-        connected_smartcards,
-        context.uses_host_backend,
-    );
     let unresolved = unresolved_recipients(
         &context.current_recipients,
         &keys,
@@ -661,7 +826,7 @@ pub(super) fn rebuild_recipient_key_list(
         verification_warning(
             context.uses_host_backend,
             (state.ports.private_key_sync_enabled)(),
-            host_inspection_failed,
+            inventory.host_error.is_some(),
         ),
     );
 
@@ -694,10 +859,12 @@ pub(super) fn rebuild_recipient_key_list(
         if !(context.policy.show_choice)(active) {
             continue;
         }
-        match key {
+        let access = key.access();
+        match key.key {
             AvailableRecipientKey::Managed(key) => append_managed_key_row(
                 state,
                 &key,
+                access,
                 active,
                 selected_keys,
                 selected_usable_keys,
@@ -706,6 +873,7 @@ pub(super) fn rebuild_recipient_key_list(
             AvailableRecipientKey::ConnectedSmartcard(key) => append_smartcard_key_row(
                 state,
                 &key,
+                access,
                 active,
                 selected_keys,
                 selected_usable_keys,
@@ -719,6 +887,132 @@ pub(super) fn rebuild_recipient_key_list(
                 selected_usable_keys,
                 &context,
             ),
+        }
+    }
+}
+
+pub(super) fn rebuild_recipient_key_list(
+    state: &KeyManagementUiState,
+    context: RecipientKeyListContext,
+) {
+    let inventory = state.recipient_list_state.inventory.borrow().clone();
+    if let Some(inventory) = inventory {
+        render_recipient_key_list(state, context, inventory);
+    }
+}
+
+fn handle_inventory_sync_result(state: &KeyManagementUiState, result: &RecipientKeyInventoryLoad) {
+    match result.sync_result.as_ref() {
+        Some(Ok(())) if result.refresh_consumers_after_sync => {
+            (state.ports.refresh_key_consumers)(&state.window)
+        }
+        Some(Ok(())) => {}
+        Some(Err(err)) => super::key_sync::handle_sync_failure(state, err),
+        None => {}
+    }
+}
+
+fn finish_recipient_key_inventory_load(
+    state: &KeyManagementUiState,
+    generation: u64,
+    pending: PendingRecipientKeyList,
+    result: Option<RecipientKeyInventoryLoad>,
+) {
+    if let Some(result) = &result {
+        handle_inventory_sync_result(state, result);
+    }
+    let finish = state
+        .recipient_list_state
+        .controller
+        .borrow_mut()
+        .finish(generation);
+    match finish {
+        InventoryLoadFinish::Apply => {
+            let inventory = result
+                .map(|result| result.snapshot)
+                .unwrap_or_else(RecipientKeyInventorySnapshot::disconnected);
+            state
+                .recipient_list_state
+                .inventory
+                .replace(Some(inventory.clone()));
+            render_recipient_key_list(state, pending.context, inventory);
+            (pending.on_loaded)();
+        }
+        InventoryLoadFinish::StartQueued(generation) => {
+            let Some(queued) = state.recipient_list_state.queued.borrow_mut().take() else {
+                return;
+            };
+            start_recipient_key_inventory_load(state, generation, queued);
+        }
+        InventoryLoadFinish::Ignore => {}
+    }
+}
+
+fn start_recipient_key_inventory_load(
+    state: &KeyManagementUiState,
+    generation: u64,
+    pending: PendingRecipientKeyList,
+) {
+    let uses_integrated_backend = pending.context.uses_integrated_backend;
+    let uses_host_backend = pending.context.uses_host_backend;
+    let sync_enabled = (state.ports.private_key_sync_enabled)();
+    let sync_to_host = state.recipient_sync_to_host_pending.replace(false);
+    let sync_private_keys = if sync_to_host {
+        state.ports.sync_private_keys_to_host.clone()
+    } else {
+        state.ports.sync_private_keys_from_host.clone()
+    };
+    let list_host_private_keys = state.ports.list_host_private_keys.clone();
+    let state_for_result = state.clone();
+    let state_for_disconnect = state.clone();
+    let pending_for_disconnect = PendingRecipientKeyList {
+        context: pending.context.clone(),
+        on_loaded: pending.on_loaded.clone(),
+    };
+    spawn_result_task(
+        move || {
+            load_recipient_key_inventory(
+                uses_integrated_backend,
+                uses_host_backend,
+                sync_enabled,
+                sync_private_keys,
+                !sync_to_host,
+                list_host_private_keys,
+            )
+        },
+        move |result| {
+            finish_recipient_key_inventory_load(
+                &state_for_result,
+                generation,
+                pending,
+                Some(result),
+            );
+        },
+        move || {
+            log_error("Private-key inventory worker disconnected unexpectedly.");
+            finish_recipient_key_inventory_load(
+                &state_for_disconnect,
+                generation,
+                pending_for_disconnect,
+                None,
+            );
+        },
+    );
+}
+
+pub(super) fn refresh_recipient_key_list(
+    state: &KeyManagementUiState,
+    context: RecipientKeyListContext,
+    on_loaded: Rc<dyn Fn()>,
+) {
+    let pending = PendingRecipientKeyList { context, on_loaded };
+    let begin = state.recipient_list_state.controller.borrow_mut().begin();
+    match begin {
+        InventoryLoadBegin::Start(generation) => {
+            start_recipient_key_inventory_load(state, generation, pending);
+        }
+        InventoryLoadBegin::Queue(_) => {
+            state.recipient_list_state.queued.replace(Some(pending));
         }
     }
 }
@@ -744,6 +1038,14 @@ mod tests {
                     .iter()
                     .any(|user_id| user_id.eq_ignore_ascii_case(recipient))
         })
+    }
+
+    fn snapshot(key: AvailableRecipientKey) -> AvailableRecipientKeySnapshot {
+        AvailableRecipientKeySnapshot {
+            key,
+            unlocked: true,
+            requires_unlock: false,
+        }
     }
 
     #[test]
@@ -781,7 +1083,7 @@ mod tests {
                 "Token User <token@example.com>".to_string(),
                 "missing@example.com".to_string(),
             ],
-            &[AvailableRecipientKey::ConnectedSmartcard(
+            &[snapshot(AvailableRecipientKey::ConnectedSmartcard(
                 ConnectedSmartcardKey {
                     fingerprint: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_string(),
                     user_ids: vec!["Token User <token@example.com>".to_string()],
@@ -792,7 +1094,7 @@ mod tests {
                         reader_hint: Some("Reader A".to_string()),
                     },
                 },
-            )],
+            ))],
             &matcher(),
         );
         assert_eq!(unresolved, vec!["missing@example.com".to_string()]);
@@ -801,14 +1103,14 @@ mod tests {
     #[test]
     fn selected_count_only_tracks_matching_keys() {
         let keys = vec![
-            AvailableRecipientKey::Managed(password_key(
+            snapshot(AvailableRecipientKey::Managed(password_key(
                 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "Alice <alice@example.com>",
-            )),
-            AvailableRecipientKey::HostOnly(HostGpgPrivateKeySummary {
+            ))),
+            snapshot(AvailableRecipientKey::HostOnly(HostGpgPrivateKeySummary {
                 fingerprint: "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB".to_string(),
                 user_ids: vec!["Bob <bob@example.com>".to_string()],
-            }),
+            })),
         ];
         assert_eq!(
             selected_key_count(
@@ -842,5 +1144,25 @@ mod tests {
             assert_eq!(verification_warning(true, false, true), None);
             assert_eq!(verification_warning(false, false, false), None);
         }
+    }
+
+    #[test]
+    fn inventory_loads_are_single_flight_and_coalesce_to_the_latest_request() {
+        let mut controller = InventoryLoadController::default();
+        assert_eq!(controller.begin(), InventoryLoadBegin::Start(1));
+        assert_eq!(controller.begin(), InventoryLoadBegin::Queue(2));
+        assert_eq!(controller.begin(), InventoryLoadBegin::Queue(3));
+        assert_eq!(controller.finish(1), InventoryLoadFinish::StartQueued(3));
+        assert_eq!(controller.finish(3), InventoryLoadFinish::Apply);
+    }
+
+    #[test]
+    fn stale_inventory_completion_cannot_replace_the_current_load() {
+        let mut controller = InventoryLoadController::default();
+        assert_eq!(controller.begin(), InventoryLoadBegin::Start(1));
+        assert_eq!(controller.begin(), InventoryLoadBegin::Queue(2));
+        assert_eq!(controller.finish(2), InventoryLoadFinish::Ignore);
+        assert_eq!(controller.finish(1), InventoryLoadFinish::StartQueued(2));
+        assert_eq!(controller.finish(2), InventoryLoadFinish::Apply);
     }
 }

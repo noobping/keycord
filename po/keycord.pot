@@ -31,7 +31,7 @@ msgstr ""
 msgid "1 recipient"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:302
+#: crates/keycord-git/src/ui/store_page.rs:305
 msgid "1 remote configured."
 msgstr ""
 
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Add OTP field"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:578
+#: crates/keycord-git/src/ui/store_page.rs:614
 msgid "Add a Git remote for this store."
 msgstr ""
 
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Add a private key in Preferences."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:320
+#: crates/keycord-git/src/ui/store_page.rs:323
 msgid "Add a remote to initialize a Git repository first."
 msgstr ""
 
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Add at least one recipient to keep saving changes."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:323
+#: crates/keycord-git/src/ui/store_page.rs:326
 msgid "Add at least one remote before syncing."
 msgstr ""
 
@@ -202,8 +202,8 @@ msgstr ""
 msgid "Add password store Git remote"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:577
-#: crates/keycord-git/src/ui/store_page.rs:587
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
 msgid "Add remote"
 msgstr ""
 
@@ -322,7 +322,7 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:152
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
 msgid "Back to Preferences"
 msgstr ""
 
@@ -335,7 +335,7 @@ msgstr ""
 msgid "Backend"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:690
+#: crates/keycord-git/src/ui/store_page.rs:726
 msgid "Branch"
 msgstr ""
 
@@ -422,7 +422,7 @@ msgid "Check out a branch before syncing this store."
 msgstr ""
 
 #: crates/keycord-git/src/operations.rs:32
-#: crates/keycord-git/src/ui/store_page.rs:367
+#: crates/keycord-git/src/ui/store_page.rs:370
 msgid "Check out a branch before syncing."
 msgstr ""
 
@@ -430,7 +430,7 @@ msgstr ""
 msgid "Check staged password store Git changes"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:701
+#: crates/keycord-git/src/ui/store_page.rs:737
 msgid "Check the logs for details."
 msgstr ""
 
@@ -508,7 +508,7 @@ msgstr ""
 msgid "Choose store folder to restore"
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:173
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
 msgid "Choose which folder-specific .gpg-id file to manage."
 msgstr ""
 
@@ -579,19 +579,19 @@ msgstr ""
 msgid "Commit or discard local changes before syncing this store. Remote commits are also waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:341
+#: crates/keycord-git/src/ui/store_page.rs:344
 msgid "Commit or discard local changes before syncing."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:327
+#: crates/keycord-git/src/ui/store_page.rs:330
 msgid "Commit or discard local changes before syncing. Local and remote commits are also waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:332
+#: crates/keycord-git/src/ui/store_page.rs:335
 msgid "Commit or discard local changes before syncing. Local commits are also waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:337
+#: crates/keycord-git/src/ui/store_page.rs:340
 msgid "Commit or discard local changes before syncing. Remote commits are also waiting to sync."
 msgstr ""
 
@@ -691,8 +691,8 @@ msgstr ""
 msgid "Copy experimental FIDO2-protected private key"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:531
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:585
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
 msgid "Copy fingerprint"
 msgstr ""
 
@@ -766,7 +766,7 @@ msgstr ""
 msgid "Couldn't check for updates."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:492
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
 msgid "Couldn't copy that key."
 msgstr ""
 
@@ -863,17 +863,17 @@ msgstr ""
 msgid "Couldn't initialize the FIDO2 security key."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:388
-#: crates/keycord-git/src/ui/store_page.rs:631
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
 msgid "Couldn't inspect Git remotes."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:700
+#: crates/keycord-git/src/ui/store_page.rs:736
 msgid "Couldn't inspect Git state"
 msgstr ""
 
 #: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:68
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
 msgid "Couldn't inspect host GPG keys"
 msgstr ""
 
@@ -886,7 +886,7 @@ msgid "Couldn't install the update."
 msgstr ""
 
 #: crates/keycord-entries/src/ui/page/mod.rs:548
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:23
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
 msgid "Couldn't keep private keys synced. Sync was turned off."
 msgstr ""
 
@@ -898,7 +898,7 @@ msgstr ""
 msgid "Couldn't load data"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
 msgid "Couldn't load private keys"
 msgstr ""
 
@@ -971,11 +971,11 @@ msgstr ""
 msgid "Couldn't read the clipboard."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:505
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
 msgid "Couldn't remove that key."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:507
+#: crates/keycord-git/src/ui/store_page.rs:543
 msgid "Couldn't remove that remote."
 msgstr ""
 
@@ -1040,7 +1040,7 @@ msgstr ""
 msgid "Couldn't sync private keys."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:670
+#: crates/keycord-git/src/ui/store_page.rs:706
 msgid "Couldn't sync store."
 msgstr ""
 
@@ -1154,7 +1154,7 @@ msgstr ""
 msgid "Delete selected pass file"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:285
+#: crates/keycord-git/src/ui/store_page.rs:288
 msgid "Detached HEAD"
 msgstr ""
 
@@ -1185,8 +1185,8 @@ msgstr ""
 msgid "Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:446
-#: crates/keycord-git/src/ui/store_page.rs:466
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
 msgid "Edit remote"
 msgstr ""
 
@@ -1355,12 +1355,12 @@ msgstr ""
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:205
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
 msgid "Experimental multi-layer encryption. When on, every selected key must be unlocked and other pass apps will not be able to read these items."
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:200
-#: crates/keycord-stores/src/ui/recipient_page/list.rs:162
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
 msgid "Experimental store options"
 msgstr ""
 
@@ -1488,7 +1488,7 @@ msgstr ""
 msgid "Failed to configure Windows save-file picker options: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:487
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:656
 msgid "Failed to copy key material '{}': {err}"
 msgstr ""
 
@@ -1608,11 +1608,11 @@ msgstr ""
 msgid "Failed to initialize translations: {error}"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:627
+#: crates/keycord-git/src/ui/store_page.rs:663
 msgid "Failed to inspect Git state before syncing '{store_for_sync}': {err}"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:697
+#: crates/keycord-git/src/ui/store_page.rs:733
 msgid "Failed to inspect Git state for '{store}': {err}"
 msgstr ""
 
@@ -1625,7 +1625,7 @@ msgstr ""
 msgid "Failed to inspect connected smartcards for '{fingerprint}': {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:639
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:796
 msgid "Failed to inspect connected smartcards for recipients: {err}"
 msgstr ""
 
@@ -1633,7 +1633,7 @@ msgstr ""
 msgid "Failed to inspect connected smartcards while {context}: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:294
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:801
 msgid "Failed to inspect host GPG private keys for recipients: {err}"
 msgstr ""
 
@@ -1649,11 +1649,11 @@ msgstr ""
 msgid "Failed to inspect private key: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:152
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:286
 msgid "Failed to inspect whether private key '{fingerprint}' is unlocked: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:161
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:295
 msgid "Failed to inspect whether private key '{fingerprint}' requires unlocking: {err}"
 msgstr ""
 
@@ -1685,7 +1685,7 @@ msgstr ""
 msgid "Failed to load managed private key '{}': {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:623
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:807
 msgid "Failed to load private keys for recipients: {err}"
 msgstr ""
 
@@ -1846,7 +1846,7 @@ msgstr ""
 msgid "Failed to register resources."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:503
+#: crates/keycord-git/src/ui/store_page.rs:539
 msgid "Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': {err}"
 msgstr ""
 
@@ -1855,7 +1855,7 @@ msgstr ""
 msgid "Failed to remove missing password stores: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:501
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:670
 msgid "Failed to remove private key '{fingerprint}': {err}"
 msgstr ""
 
@@ -2051,7 +2051,7 @@ msgstr ""
 msgid "Failed to sync password store '{root}': {err}"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:666
+#: crates/keycord-git/src/ui/store_page.rs:702
 msgid "Failed to sync password store '{store_for_result}': {err}"
 msgstr ""
 
@@ -2063,12 +2063,12 @@ msgstr ""
 msgid "Failed to sync private keys with the host after importing from a pass file: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:9
 msgid "Failed to sync private keys with the host: {err}"
 msgstr ""
 
 #: crates/keycord-entries/src/ui/page/mod.rs:544
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:19
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:12
 msgid "Failed to turn off private-key sync after an error: {save_err}"
 msgstr ""
 
@@ -2133,7 +2133,7 @@ msgstr ""
 msgid "Fetch password store Git remote {remote}"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:360
+#: crates/keycord-git/src/ui/store_page.rs:363
 msgid "Fetch, merge, and push the current '{branch}' branch across all remotes."
 msgstr ""
 
@@ -2210,7 +2210,7 @@ msgstr ""
 msgid "Generate FIDO2-protected key (Experimental)"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:673
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr ""
 
@@ -2245,7 +2245,7 @@ msgstr ""
 msgid "GetSubsearchResultSet"
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:221
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
 msgid "Git"
 msgstr ""
 
@@ -2270,12 +2270,16 @@ msgid "Git remote dialog failed: {err}"
 msgstr ""
 
 #: crates/keycord-git/data/window-store-page.fragment.ui:3
-#: crates/keycord-git/src/ui/store_page.rs:713
-#: crates/keycord-git/src/ui/store_page.rs:714
-#: crates/keycord-git/src/ui/store_page.rs:719
-#: crates/keycord-git/src/ui/store_page.rs:720
-#: crates/keycord-git/src/ui/store_page.rs:770
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
 msgid "Git remotes"
+msgstr ""
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
 msgstr ""
 
 #: crates/keycord-git/src/operations.rs:85
@@ -2318,7 +2322,7 @@ msgstr ""
 msgid "Grant host access first."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:317
+#: crates/keycord-git/src/ui/store_page.rs:320
 msgid "Grant host access to fetch, merge, and push."
 msgstr ""
 
@@ -2469,7 +2473,7 @@ msgstr ""
 #: crates/keycord-stores/data/window-pages.fragment.ui:3
 #: crates/keycord-stores/src/ui/management/import.rs:32
 #: crates/keycord-stores/src/ui/management/import.rs:54
-#: crates/keycord-stores/src/ui/widgets.rs:192
+#: crates/keycord-stores/src/ui/widgets.rs:203
 msgid "Import passwords"
 msgstr ""
 
@@ -2576,6 +2580,10 @@ msgstr ""
 
 #: crates/keycord-git/src/ui/audit.rs:48
 msgid "Inspecting Git-backed stores and discovering branches."
+msgstr ""
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
 msgstr ""
 
 #: crates/keycord-preferences/src/ui/settings.rs:405
@@ -2691,7 +2699,7 @@ msgstr ""
 msgid "Keep this key selected while all selected private keys are required."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:511
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
 msgid "Key file removed."
 msgstr ""
 
@@ -2777,8 +2785,8 @@ msgid "Keycord will first make its private-key list match the GPG private keys o
 msgstr ""
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:22
-#: crates/keycord-stores/data/window-pages.fragment.ui:167
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
 msgid "Keys for this store"
 msgstr ""
 
@@ -2828,6 +2836,7 @@ msgid "Load more commits"
 msgstr ""
 
 #: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
 msgid "Loading"
 msgstr ""
 
@@ -2843,6 +2852,10 @@ msgstr ""
 msgid "Loading field values"
 msgstr ""
 
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr ""
+
 #: crates/keycord-entries/src/ui/list/placeholder.rs:10
 msgid "Loading your items."
 msgstr ""
@@ -2851,11 +2864,11 @@ msgstr ""
 msgid "Local and remote commits are also waiting to sync"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:349
+#: crates/keycord-git/src/ui/store_page.rs:352
 msgid "Local and remote commits are waiting to sync on '{branch}'."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:291
+#: crates/keycord-git/src/ui/store_page.rs:294
 msgid "Local and remote commits are waiting to sync."
 msgstr ""
 
@@ -2883,11 +2896,11 @@ msgstr ""
 msgid "Local commits are also waiting to sync"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:354
+#: crates/keycord-git/src/ui/store_page.rs:357
 msgid "Local commits are ready to push on '{branch}'."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:294
+#: crates/keycord-git/src/ui/store_page.rs:297
 msgid "Local commits are waiting to sync."
 msgstr ""
 
@@ -2929,7 +2942,7 @@ msgstr ""
 msgid "Make an initial commit on '{branch}' before syncing this store."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:364
+#: crates/keycord-git/src/ui/store_page.rs:367
 msgid "Make an initial commit on '{branch}' before syncing."
 msgstr ""
 
@@ -3076,7 +3089,7 @@ msgstr ""
 msgid "New security key PIN"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:233
+#: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
 msgstr ""
 
@@ -3088,7 +3101,7 @@ msgstr ""
 msgid "No Git-backed stores available."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:277
+#: crates/keycord-git/src/ui/store_page.rs:280
 msgid "No branch yet."
 msgstr ""
 
@@ -3158,7 +3171,7 @@ msgstr ""
 msgid "No matching results"
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:229
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
 msgid "No matching store keys"
 msgstr ""
 
@@ -3170,7 +3183,7 @@ msgstr ""
 msgid "No matching values"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:522
+#: crates/keycord-git/src/ui/store_page.rs:558
 msgid "No password store"
 msgstr ""
 
@@ -3194,11 +3207,11 @@ msgstr ""
 msgid "No recipients were found for this password entry."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:672
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
 msgid "No recipients yet"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:301
+#: crates/keycord-git/src/ui/store_page.rs:304
 msgid "No remotes configured."
 msgstr ""
 
@@ -3280,7 +3293,7 @@ msgstr ""
 msgid "Open a new item"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:523
+#: crates/keycord-git/src/ui/store_page.rs:559
 msgid "Open a store first."
 msgstr ""
 
@@ -3591,12 +3604,16 @@ msgstr ""
 msgid "Private key unlock worker disconnected while preparing a Git signature for {fingerprint}."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:69
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
 msgid "Private keys can't be verified"
 msgstr ""
 
 #: crates/keycord-preferences/src/ui/settings.rs:372
 msgid "Private keys synced."
+msgstr ""
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:992
+msgid "Private-key inventory worker disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-keys/src/sync.rs:152
@@ -3708,7 +3725,7 @@ msgstr ""
 msgid "Recipient source"
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:172
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
 msgid "Recipients file"
 msgstr ""
 
@@ -3762,7 +3779,7 @@ msgstr ""
 msgid "Remote URL"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:599
+#: crates/keycord-git/src/ui/store_page.rs:635
 msgid "Remote added."
 msgstr ""
 
@@ -3770,11 +3787,11 @@ msgstr ""
 msgid "Remote commits are also waiting to sync"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:357
+#: crates/keycord-git/src/ui/store_page.rs:360
 msgid "Remote commits are ready to merge into '{branch}'."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:297
+#: crates/keycord-git/src/ui/store_page.rs:300
 msgid "Remote commits are waiting to sync."
 msgstr ""
 
@@ -3782,11 +3799,11 @@ msgstr ""
 msgid "Remote name"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:499
+#: crates/keycord-git/src/ui/store_page.rs:535
 msgid "Remote removed."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:483
+#: crates/keycord-git/src/ui/store_page.rs:519
 msgid "Remote updated."
 msgstr ""
 
@@ -3806,11 +3823,11 @@ msgstr ""
 msgid "Remove from app menu"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:458
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
 msgid "Remove key"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:345
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
 msgid "Remove key file"
 msgstr ""
 
@@ -3822,11 +3839,11 @@ msgstr ""
 msgid "Remove password store Git remote"
 msgstr ""
 
-#: crates/keycord-stores/src/ui/recipient_page/list.rs:47
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
 msgid "Remove recipient"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:449
+#: crates/keycord-git/src/ui/store_page.rs:485
 msgid "Remove remote"
 msgstr ""
 
@@ -3863,7 +3880,7 @@ msgstr ""
 msgid "Repeated single character"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:544
+#: crates/keycord-git/src/ui/store_page.rs:580
 #: crates/keycord-shell/src/application.rs:318
 msgid "Repository"
 msgstr ""
@@ -3872,47 +3889,47 @@ msgstr ""
 msgid "Repository URL"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:266
+#: crates/keycord-git/src/ui/store_page.rs:269
 msgid "Repository found and ready for remote management."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:271
+#: crates/keycord-git/src/ui/store_page.rs:274
 msgid "Repository found. Check out a branch before syncing."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:268
+#: crates/keycord-git/src/ui/store_page.rs:271
 msgid "Repository found. Create the first commit on '{branch}' before syncing."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:258
+#: crates/keycord-git/src/ui/store_page.rs:261
 msgid "Repository found. Local and remote commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:237
+#: crates/keycord-git/src/ui/store_page.rs:240
 msgid "Repository found. Local changes must be committed or discarded before sync, and local and remote commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:242
+#: crates/keycord-git/src/ui/store_page.rs:245
 msgid "Repository found. Local changes must be committed or discarded before sync, and local commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:247
+#: crates/keycord-git/src/ui/store_page.rs:250
 msgid "Repository found. Local changes must be committed or discarded before sync, and remote commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:252
+#: crates/keycord-git/src/ui/store_page.rs:255
 msgid "Repository found. Local changes must be committed or discarded before sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:261
+#: crates/keycord-git/src/ui/store_page.rs:264
 msgid "Repository found. Local commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:264
+#: crates/keycord-git/src/ui/store_page.rs:267
 msgid "Repository found. Remote commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:204
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
 msgid "Require all selected private keys"
 msgstr ""
 
@@ -4000,7 +4017,7 @@ msgstr ""
 msgid "Saved."
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:183
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
 msgid "Saving recipients file"
 msgstr ""
 
@@ -4086,7 +4103,7 @@ msgstr ""
 msgid "Search results"
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:136
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
 msgid "Search store keys"
 msgstr ""
 
@@ -4118,8 +4135,8 @@ msgid "Select at least one store and one branch in the filter menu."
 msgstr ""
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
-#: crates/keycord-stores/data/window-pages.fragment.ui:168
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
 msgid "Select the private keys that can unlock passwords in this store."
 msgstr ""
 
@@ -4282,8 +4299,8 @@ msgstr ""
 
 #: crates/keycord-stores/data/window-pages.fragment.ui:129
 #: crates/keycord-stores/src/recipient_page.rs:17
-#: crates/keycord-stores/src/ui/recipient_page/mod.rs:241
-#: crates/keycord-stores/src/ui/recipient_page/mod.rs:242
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
 msgid "Store keys"
 msgstr ""
 
@@ -4296,12 +4313,16 @@ msgstr ""
 msgid "Store subfolder"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:675
+#: crates/keycord-git/src/ui/store_page.rs:711
 msgid "Store sync stopped unexpectedly."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:662
+#: crates/keycord-git/src/ui/store_page.rs:698
 msgid "Store synced."
+msgstr ""
+
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:497
+msgid "Store-key page loader disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-fido/src/service.rs:181
@@ -4336,7 +4357,7 @@ msgstr ""
 msgid "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:619
+#: crates/keycord-git/src/ui/store_page.rs:655
 msgid "Sync now"
 msgstr ""
 
@@ -4348,7 +4369,7 @@ msgstr ""
 msgid "Sync stores"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:644
+#: crates/keycord-git/src/ui/store_page.rs:680
 msgid "Syncing store"
 msgstr ""
 
@@ -4583,6 +4604,10 @@ msgstr ""
 msgid "The private key password is incorrect."
 msgstr ""
 
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr ""
+
 #: crates/keycord-fido/src/ui.rs:307
 msgid "The security key PINs do not match."
 msgstr ""
@@ -4712,7 +4737,7 @@ msgstr ""
 msgid "This private key requires a hardware key."
 msgstr ""
 
-#: crates/keycord-stores/src/ui/recipient_page/list.rs:41
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
 msgid "This recipient is not available in the app."
 msgstr ""
 
@@ -4779,7 +4804,7 @@ msgstr ""
 #: crates/keycord-git/data/window-store-page.fragment.ui:64
 #: crates/keycord-preferences/data/window-page.fragment.ui:351
 #: crates/keycord-shell/data/window.ui:137
-#: crates/keycord-stores/data/window-pages.fragment.ui:230
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
 msgid "Try a different search term."
 msgstr ""
 
@@ -4787,7 +4812,7 @@ msgstr ""
 msgid "Try a different value filter."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:628
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
 msgid "Try again from Preferences."
 msgstr ""
 
@@ -4848,7 +4873,7 @@ msgstr ""
 #: crates/keycord-fido/src/ui.rs:527
 #: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:392
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
 #: crates/keycord-keys/src/ui/unlock.rs:56
 #: crates/keycord-keys/src/ui/unlock.rs:64
@@ -4968,7 +4993,7 @@ msgstr ""
 msgid "Update size mismatch for '{}'."
 msgstr ""
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:184
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
 msgid "Updating all saved passwords to match the new access settings."
 msgstr ""
 
@@ -5019,7 +5044,7 @@ msgid "Use folders with file name search"
 msgstr ""
 
 #: crates/keycord-stores/src/ui/management/import.rs:33
-#: crates/keycord-stores/src/ui/widgets.rs:193
+#: crates/keycord-stores/src/ui/widgets.rs:204
 msgid "Use pass import to import into an existing store."
 msgstr ""
 
@@ -5062,12 +5087,12 @@ msgstr ""
 msgid "Utilities and maintenance"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:77
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
 msgid "Valid host keys may appear unavailable here while private-key sync is off."
 msgstr ""
 
 #: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:75
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
 msgid "Valid host keys may appear unavailable here."
 msgstr ""
 
@@ -6116,7 +6141,7 @@ msgstr ""
 msgid "{base}?{}"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:283
+#: crates/keycord-git/src/ui/store_page.rs:286
 msgid "{branch} (no commits yet)"
 msgstr ""
 
@@ -6204,7 +6229,7 @@ msgstr ""
 msgid "{count} recipients"
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:303
+#: crates/keycord-git/src/ui/store_page.rs:306
 msgid "{count} remotes configured."
 msgstr ""
 
@@ -6267,11 +6292,11 @@ msgstr ""
 msgid "{fingerprint} - Security key protected"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:556
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:558
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr ""
 
