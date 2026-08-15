@@ -670,7 +670,7 @@ msgstr "Context"
 #: crates/keycord-entries/src/ui/page/mod.rs:782
 #: crates/keycord-entries/src/ui/page/mod.rs:792
 #: crates/keycord-entries/src/ui/page/mod.rs:802
-#: crates/keycord-shell/src/optional_permission.rs:153
+#: crates/keycord-shell/src/optional_permission.rs:147
 #: src/window/tool_hub/menu.rs:66
 msgid "Copied."
 msgstr "Copied."
@@ -712,7 +712,7 @@ msgstr "Copy password"
 msgid "Copy password to clipboard"
 msgstr "Copy password to clipboard"
 
-#: crates/keycord-shell/src/optional_permission.rs:139
+#: crates/keycord-shell/src/optional_permission.rs:138
 msgid "Copy permission command"
 msgstr "Copy permission command"
 
@@ -839,7 +839,7 @@ msgstr "Couldn't generate the hardware signing key"
 msgid "Couldn't generate the key."
 msgstr "Couldn't generate the key."
 
-#: crates/keycord-shell/src/optional_permission.rs:15
+#: crates/keycord-shell/src/optional_permission.rs:14
 msgid "Couldn't grant permission."
 msgstr "Couldn't grant permission."
 
@@ -2305,7 +2305,7 @@ msgstr "Go back"
 msgid "Go home"
 msgstr "Go home"
 
-#: crates/keycord-shell/src/optional_permission.rs:89
+#: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Grant"
 
@@ -2333,7 +2333,7 @@ msgstr "Grant host access first."
 msgid "Grant host access to fetch, merge, and push."
 msgstr "Grant host access to fetch, merge, and push."
 
-#: crates/keycord-shell/src/optional_permission.rs:91
+#: crates/keycord-shell/src/optional_permission.rs:90
 msgid "Grant permission"
 msgstr "Grant permission"
 
@@ -3948,7 +3948,7 @@ msgstr "Resolve Git {role} identity"
 msgid "Resource not found: {e}"
 msgstr "Resource not found: {e}"
 
-#: crates/keycord-shell/src/optional_permission.rs:14
+#: crates/keycord-shell/src/optional_permission.rs:13
 msgid "Restart app to apply."
 msgstr "Restart app to apply."
 
@@ -4208,10 +4208,6 @@ msgstr "Show hidden and duplicate entries"
 #: crates/keycord-entries/src/ui/list/row.rs:131
 msgid "Show password as QR code"
 msgstr "Show password as QR code"
-
-#: crates/keycord-shell/src/optional_permission.rs:141
-msgid "Show permission command as QR code"
-msgstr "Show permission command as QR code"
 
 #: crates/keycord-shell/data/shortcuts.ui:49
 msgid "Show shortcuts"
@@ -6226,7 +6222,7 @@ msgstr "{context} exceeds the supported TOML nesting depth of {}."
 msgid "{context} exceeds the supported TOML size limit of {} bytes."
 msgstr "{context} exceeds the supported TOML size limit of {} bytes."
 
-#: crates/keycord-shell/src/optional_permission.rs:112
+#: crates/keycord-shell/src/optional_permission.rs:111
 msgid "{context}: {error}"
 msgstr "{context}: {error}"
 
