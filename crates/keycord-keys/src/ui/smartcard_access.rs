@@ -67,6 +67,9 @@ pub fn sync_hardware_key_access_with_flatpak(
     for row in hardware_rows {
         row.set_sensitive(presentation.sensitive);
         row.set_tooltip_text(tooltip.as_deref());
+        if !presentation.show_hardware_rows {
+            row.set_visible(false);
+        }
     }
 
     if let Some(row) = find_named_action_row(group, SMARTCARD_ACCESS_ROW_NAME) {
@@ -84,12 +87,20 @@ pub fn sync_hardware_key_access_with_flatpak(
         copy_command: flatpak_smartcard_override_command(&access.app_id),
         command_context: SMARTCARD_PERMISSION_CONTEXT,
     };
+    let hardware_rows_for_hide = hardware_rows
+        .iter()
+        .map(|row| (*row).clone())
+        .collect::<Vec<_>>();
     let ports = OptionalPermissionRowPorts {
         host_command_access: access.host_command_access,
         persist_hidden_notice: access.persist_hidden_notice.clone(),
         run_permission_command: access.run_permission_command.clone(),
         copy_text: access.copy_text.clone(),
-        on_hide: Rc::new(|| {}),
+        on_hide: Rc::new(move || {
+            for row in &hardware_rows_for_hide {
+                row.set_visible(false);
+            }
+        }),
     };
     ensure_optional_permission_row(group, overlay, &spec, &ports).set_visible(true);
 }
@@ -113,6 +124,7 @@ pub fn flatpak_smartcard_override_args(app_id: &str) -> Vec<String> {
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 struct SmartcardAccessPresentation {
     sensitive: bool,
+    show_hardware_rows: bool,
     show_permission_row: bool,
     tooltip: Option<&'static str>,
 }
@@ -125,6 +137,7 @@ const fn flatpak_access_presentation(
 ) -> SmartcardAccessPresentation {
     SmartcardAccessPresentation {
         sensitive: enabled && smartcard_access_granted,
+        show_hardware_rows: enabled && (smartcard_access_granted || !notice_hidden),
         show_permission_row: enabled && !smartcard_access_granted && !notice_hidden,
         tooltip: if enabled && !smartcard_access_granted {
             Some(SMARTCARD_ACCESS_REQUIRED_TOOLTIP)
@@ -160,6 +173,7 @@ mod tests {
             flatpak_access_presentation(true, false, false),
             SmartcardAccessPresentation {
                 sensitive: false,
+                show_hardware_rows: true,
                 show_permission_row: true,
                 tooltip: Some(SMARTCARD_ACCESS_REQUIRED_TOOLTIP),
             }
@@ -168,10 +182,37 @@ mod tests {
             flatpak_access_presentation(true, true, false),
             SmartcardAccessPresentation {
                 sensitive: true,
+                show_hardware_rows: true,
                 show_permission_row: false,
                 tooltip: None,
             }
         );
-        assert!(!flatpak_access_presentation(true, false, true).show_permission_row);
+        assert_eq!(
+            flatpak_access_presentation(true, false, true),
+            SmartcardAccessPresentation {
+                sensitive: false,
+                show_hardware_rows: false,
+                show_permission_row: false,
+                tooltip: Some(SMARTCARD_ACCESS_REQUIRED_TOOLTIP),
+            }
+        );
+        assert_eq!(
+            flatpak_access_presentation(true, true, true),
+            SmartcardAccessPresentation {
+                sensitive: true,
+                show_hardware_rows: true,
+                show_permission_row: false,
+                tooltip: None,
+            }
+        );
+        assert_eq!(
+            flatpak_access_presentation(false, true, true),
+            SmartcardAccessPresentation {
+                sensitive: false,
+                show_hardware_rows: false,
+                show_permission_row: false,
+                tooltip: None,
+            }
+        );
     }
 }
