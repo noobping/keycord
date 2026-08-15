@@ -418,7 +418,7 @@ impl Checker {
     }
 
     fn check_no_root_declarative_ui(&mut self, root: &Path) {
-        // Root data is a generated, crate-qualified copy of canonical crate-owned files.
+        // Root data is a generated, flat merge of canonical crate-owned files.
         let directory = root.join("src");
         match recursive_files(&directory) {
             Ok(files) => {
@@ -3003,7 +3003,7 @@ pub(in crate::window) struct WindowWidgets {
             "keycord-architecture-generated-data-{}-{unique}",
             std::process::id()
         ));
-        let generated = root.join("data/keycord-git/window-page.fragment.ui");
+        let generated = root.join("data/window-page.fragment.ui");
         let forbidden = root.join("src/window.ui");
         fs::create_dir_all(generated.parent().unwrap()).unwrap();
         fs::create_dir_all(forbidden.parent().unwrap()).unwrap();
