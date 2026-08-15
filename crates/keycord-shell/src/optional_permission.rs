@@ -1,7 +1,6 @@
 //! Generic presentation for optional sandbox permissions.
 
 use crate::background::spawn_result_task;
-use crate::qr_code::{connect_qr_button, copy_qr_button_group};
 use crate::ui::{add_persistent_hide_button_with, flat_icon_button_with_tooltip};
 use adw::gtk::{Align, Box as GtkBox, Button, Orientation};
 use adw::prelude::*;
@@ -56,7 +55,7 @@ pub fn ensure_optional_permission_row(
     if uses_in_app_grant(ports.host_command_access) {
         append_grant_button(&row, overlay, spec, ports);
     } else {
-        append_copy_buttons(&row, overlay, spec, ports);
+        append_copy_button(&row, overlay, spec, ports);
     }
 
     row.set_widget_name(spec.row_name);
@@ -129,7 +128,7 @@ fn append_grant_button(
     row.add_suffix(&suffix);
 }
 
-fn append_copy_buttons(
+fn append_copy_button(
     row: &ActionRow,
     overlay: &ToastOverlay,
     spec: &OptionalPermissionRowSpec,
@@ -137,14 +136,9 @@ fn append_copy_buttons(
 ) {
     let copy_button =
         flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy permission command");
-    let (button_group, qr_button) =
-        copy_qr_button_group(&copy_button, "Show permission command as QR code");
-    row.add_suffix(&button_group);
+    row.add_suffix(&copy_button);
 
     let command = spec.copy_command.clone();
-    let command_for_qr = command.clone();
-    connect_qr_button(&qr_button, overlay, move || command_for_qr.clone());
-
     let copy_text = ports.copy_text.clone();
     let overlay = overlay.clone();
     let feedback_button = copy_button.clone();
