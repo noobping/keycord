@@ -1,16 +1,22 @@
-                    <child>
-                      <object class="GtkButton" id="save_button">
-                        <property name="icon-name">document-save-symbolic</property>
-                        <property name="tooltip-text" translatable="yes">Save</property>
-                        <property name="action-name">win.save-password</property>
-                        <property name="visible">false</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="open_raw_button">
-                        <property name="icon-name">text-x-generic-symbolic</property>
-                        <property name="tooltip-text" translatable="yes">Open raw text</property>
-                        <property name="action-name">win.open-raw-pass-file</property>
-                        <property name="visible">false</property>
-                      </object>
-                    </child>
+            <child type="start">
+              <object class="GtkButton" id="save_button">
+                <property name="icon-name">document-save-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Save</property>
+                <property name="action-name">win.save-password</property>
+                <property name="visible">false</property>
+                <style>
+                  <class name="flat" />
+                </style>
+              </object>
+            </child>
+            <child type="start">
+              <object class="GtkButton" id="open_raw_button">
+                <property name="icon-name">text-x-generic-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Open raw text</property>
+                <property name="action-name">win.open-raw-pass-file</property>
+                <property name="visible">false</property>
+                <style>
+                  <class name="flat" />
+                </style>
+              </object>
+            </child>

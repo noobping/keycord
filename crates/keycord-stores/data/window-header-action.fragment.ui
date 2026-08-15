@@ -1,8 +1,11 @@
-                    <child>
-                      <object class="GtkButton" id="store_button">
-                        <property name="icon-name">folder-new-symbolic</property>
-                        <property name="tooltip-text" translatable="yes">Add or create store</property>
-                        <property name="action-name">win.open-store-picker</property>
-                        <property name="visible">false</property>
-                      </object>
-                    </child>
+            <child type="start">
+              <object class="GtkButton" id="store_button">
+                <property name="icon-name">folder-new-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Add or create store</property>
+                <property name="action-name">win.open-store-picker</property>
+                <property name="visible">false</property>
+                <style>
+                  <class name="flat" />
+                </style>
+              </object>
+            </child>

@@ -10,29 +10,21 @@
         <child type="top">
           <object class="AdwHeaderBar">
             <child type="start">
-              <object class="GtkBox">
-                <child>
-                  <object class="GtkBox">
-                    <style>
-                      <class name="linked" />
-                    </style>
-                    <child>
-                      <object class="GtkButton" id="back_button">
-                        <property name="icon-name">go-previous-symbolic</property>
-                        <property name="tooltip-text" translatable="yes">Back</property>
-                        <property name="action-name">win.back</property>
-                        <property name="visible">false</property>
-                      </object>
-                    </child>
-                    <!-- keycord-window-fragment:entries-header-list -->
-                    <!-- keycord-window-fragment:git-header-audit-filter -->
-                    <!-- keycord-window-fragment:entries-header-editor -->
-                    <!-- keycord-window-fragment:git-header-action -->
-                    <!-- keycord-window-fragment:stores-header-action -->
-                  </object>
-                </child>
+              <object class="GtkButton" id="back_button">
+                <property name="icon-name">go-previous-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Back</property>
+                <property name="action-name">win.back</property>
+                <property name="visible">false</property>
+                <style>
+                  <class name="flat" />
+                </style>
               </object>
             </child>
+            <!-- keycord-window-fragment:entries-header-list -->
+            <!-- keycord-window-fragment:git-header-audit-filter -->
+            <!-- keycord-window-fragment:entries-header-editor -->
+            <!-- keycord-window-fragment:git-header-action -->
+            <!-- keycord-window-fragment:stores-header-action -->
             <child type="title">
               <object class="AdwWindowTitle" id="window_title">
                 <property name="title" translatable="yes">Keycord</property>
@@ -45,6 +37,7 @@
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="tooltip-text" translatable="yes">Main Menu</property>
                 <property name="menu-model">primary_menu</property>
+                <property name="has-frame">false</property>
               </object>
             </child>
           </object>

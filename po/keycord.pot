@@ -330,7 +330,7 @@ msgstr ""
 msgid "Available version:"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:22
+#: crates/keycord-shell/data/window.ui:15
 msgid "Back"
 msgstr ""
 
@@ -351,7 +351,7 @@ msgstr ""
 msgid "Branch"
 msgstr ""
 
-#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:36
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
 msgid "Branches"
 msgstr ""
 
@@ -359,7 +359,7 @@ msgstr ""
 #: crates/keycord-lifecycle/data/keycord.desktop.in:5
 #: crates/keycord-lifecycle/data/metainfo.xml:6
 #: crates/keycord-lifecycle/src/desktop.rs:2
-#: crates/keycord-shell/data/window.ui:39
+#: crates/keycord-shell/data/window.ui:31
 #: src/composition/navigation.rs:11
 msgid "Browse and edit password stores"
 msgstr ""
@@ -704,8 +704,8 @@ msgstr ""
 msgid "Copy fingerprint"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:120
-#: crates/keycord-shell/data/window.ui:126
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
 msgid "Copy logs"
 msgstr ""
 
@@ -723,7 +723,7 @@ msgstr ""
 msgid "Copy permission command"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:121
+#: crates/keycord-shell/data/window.ui:114
 msgid "Copy recent app and command output to the clipboard."
 msgstr ""
 
@@ -2146,13 +2146,13 @@ msgstr ""
 msgid "Field values"
 msgstr ""
 
-#: crates/keycord-entries/data/window-header-list.fragment.ui:22
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
 msgid "Filter results"
 msgstr ""
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
-#: crates/keycord-entries/data/window-header-list.fragment.ui:12
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
 msgid "Find item"
 msgstr ""
 
@@ -2510,7 +2510,7 @@ msgstr ""
 msgid "Improved search, filtering, keyboard navigation, and entry editing."
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:98
+#: crates/keycord-shell/data/window.ui:91
 msgid "Information"
 msgstr ""
 
@@ -2566,7 +2566,7 @@ msgstr ""
 msgid "Inspect password store Git untracked files"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:109
+#: crates/keycord-shell/data/window.ui:102
 msgid "Inspect recent app and command output."
 msgstr ""
 
@@ -2710,7 +2710,7 @@ msgstr ""
 #: crates/keycord-git/src/integrated.rs:285
 #: crates/keycord-lifecycle/data/keycord.desktop.in:4
 #: crates/keycord-lifecycle/data/metainfo.xml:5
-#: crates/keycord-shell/data/window.ui:38
+#: crates/keycord-shell/data/window.ui:30
 #: crates/keycord-shell/data/window.ui:4
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
@@ -2887,7 +2887,7 @@ msgstr ""
 msgid "Local commits are waiting to sync."
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:173
+#: crates/keycord-shell/data/window.ui:166
 #: crates/keycord-shell/src/window_widgets.rs:128
 msgid "Logs"
 msgstr ""
@@ -2909,7 +2909,7 @@ msgstr ""
 msgid "Lowercase letters"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:46
+#: crates/keycord-shell/data/window.ui:38
 msgid "Main Menu"
 msgstr ""
 
@@ -3162,7 +3162,7 @@ msgstr ""
 msgid "No matching store keys"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:143
+#: crates/keycord-shell/data/window.ui:136
 msgid "No matching tools"
 msgstr ""
 
@@ -3309,7 +3309,7 @@ msgid "Open in New Window"
 msgstr ""
 
 #: crates/keycord-shell/data/shortcuts.ui:37
-#: crates/keycord-shell/data/window.ui:108
+#: crates/keycord-shell/data/window.ui:101
 msgid "Open logs"
 msgstr ""
 
@@ -3322,7 +3322,7 @@ msgid "Open preferences"
 msgstr ""
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
-#: crates/keycord-entries/data/window-header-editor.fragment.ui:12
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
 msgid "Open raw text"
 msgstr ""
 
@@ -4086,7 +4086,7 @@ msgstr ""
 msgid "Search store keys"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:70
+#: crates/keycord-shell/data/window.ui:63
 msgid "Search tools"
 msgstr ""
 
@@ -4305,8 +4305,8 @@ msgstr ""
 msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
 msgstr ""
 
-#: crates/keycord-entries/data/window-header-list.fragment.ui:40
-#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:24
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
 msgid "Stores"
 msgstr ""
@@ -4725,8 +4725,8 @@ msgid "Too short ({length} characters)"
 msgstr ""
 
 #: crates/keycord-shell/data/shortcuts.ui:27
-#: crates/keycord-shell/data/window.ui:63
-#: crates/keycord-shell/data/window.ui:83
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
 #: crates/keycord-stores/src/ui/management/import.rs:228
 #: src/window/tool_hub.rs:50
 msgid "Tools"
@@ -4774,7 +4774,7 @@ msgstr ""
 #: crates/keycord-entries/src/ui/tools/mod.rs:64
 #: crates/keycord-git/data/window-store-page.fragment.ui:64
 #: crates/keycord-preferences/data/window-page.fragment.ui:351
-#: crates/keycord-shell/data/window.ui:144
+#: crates/keycord-shell/data/window.ui:137
 #: crates/keycord-stores/data/window-pages.fragment.ui:230
 msgid "Try a different search term."
 msgstr ""
@@ -5150,7 +5150,7 @@ msgstr ""
 msgid "You can now use the field values as variables in search"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:221
+#: crates/keycord-shell/data/window.ui:214
 msgid "_About Keycord"
 msgstr ""
 
@@ -5162,7 +5162,7 @@ msgstr ""
 msgid "_Find item"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:217
+#: crates/keycord-shell/data/window.ui:210
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
@@ -5174,7 +5174,7 @@ msgstr ""
 msgid "_Synchronize with remote"
 msgstr ""
 
-#: crates/keycord-shell/data/window.ui:211
+#: crates/keycord-shell/data/window.ui:204
 msgid "_Tools"
 msgstr ""
 
