@@ -36,7 +36,9 @@ pub struct GitActionPorts {
     pub set_application_busy: Rc<dyn Fn(bool)>,
 }
 
+// Non-Linux builds register inert Git actions and only read the window field.
 #[derive(Clone)]
+#[cfg_attr(not(target_os = "linux"), allow(dead_code))]
 pub struct GitActionState {
     window: ApplicationWindow,
     overlay: ToastOverlay,

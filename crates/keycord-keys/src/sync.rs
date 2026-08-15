@@ -47,6 +47,7 @@ pub fn preflight_host_to_app_private_key_sync(
 
     #[cfg(not(target_os = "linux"))]
     {
+        let _ = host;
         Err("Private-key sync with the host is only available on Linux.".to_string())
     }
 }
@@ -147,6 +148,7 @@ fn sync_host_private_keys_to_app(host: &dyn HostPrivateKeySyncPort) -> Result<()
 
     #[cfg(not(target_os = "linux"))]
     {
+        let _ = host;
         Err("Private-key sync with the host is only available on Linux.".to_string())
     }
 }
@@ -190,6 +192,7 @@ fn sync_app_private_keys_to_host(host: &dyn HostPrivateKeySyncPort) -> Result<()
 
     #[cfg(not(target_os = "linux"))]
     {
+        let _ = host;
         Err("Private-key sync with the host is only available on Linux.".to_string())
     }
 }
