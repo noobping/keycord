@@ -2,8 +2,8 @@
 
 use super::{
     app_id, desktop_file, metadata, resources, search_provider_bus_name,
-    search_provider_object_path, translations, write_install_assets, ApplicationBuildConfig,
-    GETTEXT_DOMAIN, RESOURCE_ID,
+    search_provider_object_path, translations, workspace_data, write_install_assets,
+    ApplicationBuildConfig, GETTEXT_DOMAIN, RESOURCE_ID,
 };
 
 pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
@@ -49,8 +49,6 @@ pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
     );
     println!("cargo:rustc-env=AVAILABLE_LOCALES={}", locales.join(":"));
 
-    emit_rerun_directives();
-
     if !config.setup {
         write_install_assets(
             &config.source_root.join("crates/keycord-lifecycle/data"),
@@ -62,6 +60,11 @@ pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
         )
         .expect("Can not build lifecycle install assets");
     }
+
+    workspace_data::merge_workspace_data(config.source_root)
+        .expect("Can not merge workspace data into the root data directory");
+
+    emit_rerun_directives();
 }
 
 fn emit_rerun_directives() {

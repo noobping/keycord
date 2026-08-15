@@ -48,7 +48,7 @@ pub(super) fn build_catalogs(
     fs::create_dir_all(&po_dir).expect("Failed to create po directory");
 
     let mut catalog = Catalog::new();
-    collect_ui_strings_from_dir(source_root, &source_root.join("data"), &mut catalog);
+    // Root data contains generated copies; canonical translatable UI lives with its owning crate.
     collect_ui_strings_from_dir(source_root, &source_root.join("crates"), &mut catalog);
     collect_metainfo_strings(
         source_root,

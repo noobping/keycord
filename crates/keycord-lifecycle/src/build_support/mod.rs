@@ -16,6 +16,7 @@ mod resources;
 mod translations;
 #[cfg(target_os = "windows")]
 mod windows;
+mod workspace_data;
 
 pub use assets::write_install_assets;
 pub use pipeline::run_application_build;

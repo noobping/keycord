@@ -418,22 +418,21 @@ impl Checker {
     }
 
     fn check_no_root_declarative_ui(&mut self, root: &Path) {
-        for relative_directory in ["data", "src"] {
-            let directory = root.join(relative_directory);
-            match recursive_files(&directory) {
-                Ok(files) => {
-                    for path in files {
-                        if path.extension().and_then(|extension| extension.to_str()) == Some("ui") {
-                            self.violations.push(format!(
-                                "{}: declarative UI must live in Shell's skeleton or a subject crate fragment",
-                                relative_path(root, &path)
-                            ));
-                        }
+        // Root data is a generated, crate-qualified copy of canonical crate-owned files.
+        let directory = root.join("src");
+        match recursive_files(&directory) {
+            Ok(files) => {
+                for path in files {
+                    if path.extension().and_then(|extension| extension.to_str()) == Some("ui") {
+                        self.violations.push(format!(
+                            "{}: declarative UI must live in Shell's skeleton or a subject crate fragment",
+                            relative_path(root, &path)
+                        ));
                     }
                 }
-                Err(error) if error.kind() == io::ErrorKind::NotFound => {}
-                Err(error) => self.io_violation(&directory, error),
             }
+            Err(error) if error.kind() == io::ErrorKind::NotFound => {}
+            Err(error) => self.io_violation(&directory, error),
         }
     }
 
@@ -2992,6 +2991,32 @@ pub(in crate::window) struct WindowWidgets {
             fragment_identity("crates/keycord-docs/data/shortcuts-.fragment.ui"),
             None
         );
+    }
+
+    #[test]
+    fn generated_root_data_is_not_treated_as_canonical_ui() {
+        let unique = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .expect("clock should be after epoch")
+            .as_nanos();
+        let root = std::env::temp_dir().join(format!(
+            "keycord-architecture-generated-data-{}-{unique}",
+            std::process::id()
+        ));
+        let generated = root.join("data/keycord-git/window-page.fragment.ui");
+        let forbidden = root.join("src/window.ui");
+        fs::create_dir_all(generated.parent().unwrap()).unwrap();
+        fs::create_dir_all(forbidden.parent().unwrap()).unwrap();
+        fs::write(generated, "<object />").unwrap();
+        fs::write(&forbidden, "<object />").unwrap();
+
+        let mut checker = Checker::default();
+        checker.check_no_root_declarative_ui(&root);
+
+        assert_eq!(checker.violations.len(), 1);
+        assert!(checker.violations[0].starts_with("src/window.ui:"));
+
+        let _ = fs::remove_dir_all(root);
     }
 
     #[test]
