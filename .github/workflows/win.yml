@@ -23,6 +23,7 @@ jobs:
       MSYS2_PATH: C:\tools\msys64
       PKG_CONFIG_PATH: C:\tools\msys64\mingw64\lib\nettle3\pkgconfig;C:\tools\msys64\mingw64\lib\pkgconfig
       PKG_CONFIG_PATH_x86_64_pc_windows_gnu: C:\tools\msys64\mingw64\lib\nettle3\pkgconfig;C:\tools\msys64\mingw64\lib\pkgconfig
+      CARGO_TARGET_X86_64_PC_WINDOWS_GNU_RUSTFLAGS: -Lnative=C:/tools/msys64/mingw64/lib/nettle3
       GETTEXT_SYSTEM: 1
 
     steps:
