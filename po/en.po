@@ -363,6 +363,10 @@ msgstr "Browse field values"
 msgid "Browse unique field values from the current list."
 msgstr "Browse unique field values from the current list."
 
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "CSV files"
+
 #: crates/keycord-passkey/src/request.rs:94
 msgid "CXP export request version {0} is not supported."
 msgstr "CXP export request version {0} is not supported."
@@ -923,8 +927,8 @@ msgid "Couldn't open that item."
 msgstr "Couldn't open that item."
 
 #: crates/keycord-shell/src/file_picker.rs:22
-#: crates/keycord-shell/src/file_picker.rs:252
-#: crates/keycord-shell/src/file_picker.rs:266
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
 msgid "Couldn't open the file chooser."
 msgstr "Couldn't open the file chooser."
 
@@ -1483,7 +1487,7 @@ msgstr "Failed to check for updates: {error}"
 msgid "Failed to configure Windows file picker options: {err}"
 msgstr "Failed to configure Windows file picker options: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:296
+#: crates/keycord-shell/src/file_picker.rs:311
 msgid "Failed to configure Windows save-file picker options: {err}"
 msgstr "Failed to configure Windows save-file picker options: {err}"
 
@@ -1511,7 +1515,7 @@ msgstr "Failed to create Linux update staging root '{}': {error}"
 msgid "Failed to create the Windows file picker: {err}"
 msgstr "Failed to create the Windows file picker: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:286
+#: crates/keycord-shell/src/file_picker.rs:301
 msgid "Failed to create the Windows save-file picker: {err}"
 msgstr "Failed to create the Windows save-file picker: {err}"
 
@@ -1595,7 +1599,7 @@ msgstr "Failed to import private key: {err}"
 msgid "Failed to initialize COM for the file picker: {err}"
 msgstr "Failed to initialize COM for the file picker: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:280
+#: crates/keycord-shell/src/file_picker.rs:295
 msgid "Failed to initialize COM for the save-file picker: {err}"
 msgstr "Failed to initialize COM for the save-file picker: {err}"
 
@@ -1730,12 +1734,12 @@ msgstr "Failed to open password entry: {err}"
 msgid "Failed to open stdin for command"
 msgstr "Failed to open stdin for command"
 
-#: crates/keycord-shell/src/file_picker.rs:354
+#: crates/keycord-shell/src/file_picker.rs:377
 #: crates/keycord-shell/src/file_picker.rs:78
 msgid "Failed to open the file chooser: {err}"
 msgstr "Failed to open the file chooser: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:251
+#: crates/keycord-shell/src/file_picker.rs:253
 msgid "Failed to open the save-file chooser: {err}"
 msgstr "Failed to open the save-file chooser: {err}"
 
@@ -1767,7 +1771,7 @@ msgstr "Failed to read Linux update staging root metadata '{}': {error}"
 msgid "Failed to read Windows file picker options: {err}"
 msgstr "Failed to read Windows file picker options: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:289
+#: crates/keycord-shell/src/file_picker.rs:304
 msgid "Failed to read Windows save-file picker options: {err}"
 msgstr "Failed to read Windows save-file picker options: {err}"
 
@@ -1820,7 +1824,7 @@ msgstr "Failed to read the passkey request file {path:?}: {source}"
 msgid "Failed to read the selected Windows path: {err}"
 msgstr "Failed to read the selected Windows path: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:322
+#: crates/keycord-shell/src/file_picker.rs:345
 msgid "Failed to read the selected Windows save path: {err}"
 msgstr "Failed to read the selected Windows save path: {err}"
 
@@ -1949,6 +1953,10 @@ msgstr "Failed to save stores: {err}"
 msgid "Failed to secure Linux update staging root '{}': {error}"
 msgstr "Failed to secure Linux update staging root '{}': {error}"
 
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Failed to select the Windows save-file type: {err}"
+
 #: crates/keycord-preferences/src/storage.rs:54
 msgid "Failed to serialize config: {e}"
 msgstr "Failed to serialize config: {e}"
@@ -1969,21 +1977,25 @@ msgstr "Failed to set the Windows file picker button label: {err}"
 msgid "Failed to set the Windows file picker title: {err}"
 msgstr "Failed to set the Windows file picker title: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:308
+#: crates/keycord-shell/src/file_picker.rs:331
 msgid "Failed to set the Windows save-file extension: {err}"
 msgstr "Failed to set the Windows save-file extension: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:305
+#: crates/keycord-shell/src/file_picker.rs:328
 msgid "Failed to set the Windows save-file name: {err}"
 msgstr "Failed to set the Windows save-file name: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:302
+#: crates/keycord-shell/src/file_picker.rs:317
 msgid "Failed to set the Windows save-file picker button label: {err}"
 msgstr "Failed to set the Windows save-file picker button label: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:299
+#: crates/keycord-shell/src/file_picker.rs:314
 msgid "Failed to set the Windows save-file picker title: {err}"
 msgstr "Failed to set the Windows save-file picker title: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Failed to set the Windows save-file types: {err}"
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:231
 msgid "Failed to set up hardware key: {err}"
@@ -1993,7 +2005,7 @@ msgstr "Failed to set up hardware key: {err}"
 msgid "Failed to show the Windows file picker: {err}"
 msgstr "Failed to show the Windows file picker: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:313
+#: crates/keycord-shell/src/file_picker.rs:336
 msgid "Failed to show the Windows save-file picker: {err}"
 msgstr "Failed to show the Windows save-file picker: {err}"
 
@@ -6284,8 +6296,8 @@ msgstr "{fingerprint} - Security token ({detail})"
 msgid "{from}..{to}"
 msgstr "{from}..{to}"
 
-#: crates/keycord-shell/src/file_picker.rs:348
-#: crates/keycord-shell/src/file_picker.rs:378
+#: crates/keycord-shell/src/file_picker.rs:371
+#: crates/keycord-shell/src/file_picker.rs:401
 msgid "{log_context}: {err}"
 msgstr "{log_context}: {err}"
 
