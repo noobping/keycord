@@ -1,6 +1,7 @@
 //! Passkey credentials and local credential-exchange workflows.
 
 mod credential;
+mod mime;
 
 #[cfg(feature = "passkey")]
 pub use credential::{
@@ -11,14 +12,10 @@ pub use credential::{
     decode_passkey_storage_value, PasskeyCredential, PasskeyRegistrationState, PasskeyStorageEntry,
     PASSKEY_FIELD_KEY,
 };
+pub use mime::{PASSKEY_MIME_PACKAGE, PASSKEY_MIME_TYPES};
 
 #[cfg(feature = "passkey")]
 pub mod request;
 
 #[cfg(feature = "ui")]
 pub mod ui;
-
-pub const PASSKEY_MIME_PACKAGE: &str =
-    include_str!("../data/io.github.noobping.keycord-passkey.xml");
-pub const PASSKEY_MIME_TYPES: &str =
-    "application/vnd.keycord.passkey-request+json;application/vnd.keycord.passkey+json;";

@@ -4,6 +4,9 @@ use keycord_lifecycle::build_support::{
 use std::env;
 use std::path::PathBuf;
 
+#[path = "crates/keycord-passkey/src/mime.rs"]
+mod passkey_mime;
+
 fn main() {
     let source_root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let out_dir = PathBuf::from(env::var_os("OUT_DIR").expect("OUT_DIR not set for build script"));
@@ -19,8 +22,8 @@ fn main() {
         debug: cfg!(debug_assertions),
         flatpak: cfg!(feature = "flatpak"),
         passkey_mime: cfg!(feature = "passkey").then_some(PasskeyMimeConfig {
-            mime_types: keycord_passkey::PASSKEY_MIME_TYPES,
-            package: keycord_passkey::PASSKEY_MIME_PACKAGE,
+            mime_types: passkey_mime::PASSKEY_MIME_TYPES,
+            package: passkey_mime::PASSKEY_MIME_PACKAGE,
         }),
         setup: cfg!(feature = "setup"),
         target_os: target_os.as_deref(),
