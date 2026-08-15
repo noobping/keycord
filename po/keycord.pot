@@ -669,7 +669,7 @@ msgstr ""
 #: crates/keycord-entries/src/ui/page/mod.rs:782
 #: crates/keycord-entries/src/ui/page/mod.rs:792
 #: crates/keycord-entries/src/ui/page/mod.rs:802
-#: crates/keycord-shell/src/optional_permission.rs:149
+#: crates/keycord-shell/src/optional_permission.rs:153
 #: src/window/tool_hub/menu.rs:66
 msgid "Copied."
 msgstr ""
@@ -711,7 +711,7 @@ msgstr ""
 msgid "Copy password to clipboard"
 msgstr ""
 
-#: crates/keycord-shell/src/optional_permission.rs:135
+#: crates/keycord-shell/src/optional_permission.rs:139
 msgid "Copy permission command"
 msgstr ""
 
@@ -1009,7 +1009,7 @@ msgstr ""
 msgid "Couldn't save that setting."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:92
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
 #: crates/keycord-git/src/ui/audit.rs:629
 msgid "Couldn't save the filter selection."
 msgstr ""
@@ -1850,7 +1850,7 @@ msgstr ""
 msgid "Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': {err}"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1054
+#: crates/keycord-entries/src/ui/list/mod.rs:1057
 #: crates/keycord-stores/src/ui/management/mod.rs:72
 msgid "Failed to remove missing password stores: {err}"
 msgstr ""
@@ -2118,7 +2118,7 @@ msgstr ""
 msgid "Failed to {action}: write step failed: {err}"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:91
+#: crates/keycord-entries/src/ui/list/store_filter.rs:110
 msgid "Failed to {action}: {err}"
 msgstr ""
 
@@ -2298,7 +2298,7 @@ msgstr ""
 msgid "Go home"
 msgstr ""
 
-#: crates/keycord-shell/src/optional_permission.rs:85
+#: crates/keycord-shell/src/optional_permission.rs:89
 msgid "Grant"
 msgstr ""
 
@@ -2326,7 +2326,7 @@ msgstr ""
 msgid "Grant host access to fetch, merge, and push."
 msgstr ""
 
-#: crates/keycord-shell/src/optional_permission.rs:87
+#: crates/keycord-shell/src/optional_permission.rs:91
 msgid "Grant permission"
 msgstr ""
 
@@ -3517,11 +3517,11 @@ msgstr ""
 msgid "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1061
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
 msgid "Password store configuration: no stores are configured."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1065
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
 msgid "Password store configuration: {} configured store(s)."
 msgstr ""
 
@@ -4194,7 +4194,7 @@ msgstr ""
 msgid "Show password as QR code"
 msgstr ""
 
-#: crates/keycord-shell/src/optional_permission.rs:137
+#: crates/keycord-shell/src/optional_permission.rs:141
 msgid "Show permission command as QR code"
 msgstr ""
 
@@ -5246,7 +5246,7 @@ msgstr ""
 msgid "cannot decrypt password store entries"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:37
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
 msgid "clean stale store filter values"
 msgstr ""
 
@@ -5961,7 +5961,7 @@ msgstr ""
 msgid "restore target permissions"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:69
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
 msgid "save store filter selection"
 msgstr ""
 
@@ -6201,7 +6201,7 @@ msgstr ""
 msgid "{context} exceeds the supported TOML size limit of {} bytes."
 msgstr ""
 
-#: crates/keycord-shell/src/optional_permission.rs:108
+#: crates/keycord-shell/src/optional_permission.rs:112
 msgid "{context}: {error}"
 msgstr ""
 
