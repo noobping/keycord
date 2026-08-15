@@ -116,7 +116,6 @@ dirs-next = "2.0.0"
 
 [build-dependencies]
 keycord-lifecycle = { workspace = true, features = ["build-support"] }
-keycord-passkey = { workspace = true, default-features = false }
 
 [dev-dependencies]
 keycord-fido = { workspace = true, features = ["test-support"] }
