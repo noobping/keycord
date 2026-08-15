@@ -1,6 +1,8 @@
 //! Stores-owned builder widgets, focus policy, and shortcut metadata.
 
-use adw::gtk::{Builder, Button, CheckButton, ScrolledWindow, SearchEntry, Stack, Widget};
+use adw::gtk::{
+    Box as GtkBox, Builder, Button, CheckButton, ScrolledWindow, SearchEntry, Stack, Widget,
+};
 use adw::prelude::*;
 use adw::{
     ActionRow, ComboRow, EntryRow, NavigationPage, PasswordEntryRow, PreferencesGroup,
@@ -32,6 +34,9 @@ pub struct StoresWindowWidgets {
     pub import_target_path_row: EntryRow,
     pub import_button: Button,
     pub recipients_page: NavigationPage,
+    pub recipients_stack: Stack,
+    pub recipients_content: GtkBox,
+    pub recipients_loading: StatusPage,
     pub recipients_search_entry: SearchEntry,
     pub recipients_preferences_page: PreferencesPage,
     pub recipients_back_row: ActionRow,
@@ -69,6 +74,9 @@ impl StoresWindowWidgets {
             import_target_path_row: required!("store_import_target_path_row"),
             import_button: required!("store_import_button"),
             recipients_page: required!("store_recipients_page"),
+            recipients_stack: required!("store_recipients_stack"),
+            recipients_content: required!("store_recipients_content"),
+            recipients_loading: required!("store_recipients_loading"),
             recipients_search_entry: required!("store_recipients_search_entry"),
             recipients_preferences_page: required!("store_recipients_preferences_page"),
             recipients_back_row: required!("store_recipients_back_row"),
@@ -90,6 +98,9 @@ impl StoresWindowWidgets {
     ) -> super::recipient_page::StoreRecipientsPlatformState {
         super::recipient_page::StoreRecipientsPlatformState {
             overlay: overlay.clone(),
+            recipients_stack: self.recipients_stack.clone(),
+            recipients_content: self.recipients_content.clone(),
+            recipients_loading: self.recipients_loading.clone(),
             scope_group: self.recipients_scope_group.clone(),
             saving_group: self.recipients_saving_group.clone(),
             scope_list: self.recipients_scope_group.clone(),

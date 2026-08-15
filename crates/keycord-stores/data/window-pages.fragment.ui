@@ -128,22 +128,24 @@
                   <object class="AdwNavigationPage" id="store_recipients_page">
                     <property name="title" translatable="yes">Store keys</property>
                     <child>
-                      <object class="GtkBox">
-                        <property name="orientation">vertical</property>
+                      <object class="GtkStack" id="store_recipients_stack">
                         <child>
-                          <object class="GtkSearchEntry" id="store_recipients_search_entry">
-                            <property name="visible">false</property>
-                            <property name="placeholder-text" translatable="yes">Search store keys</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkScrolledWindow" id="store_recipients_page_scrolled">
-                            <property name="vscrollbar-policy">automatic</property>
-                            <property name="hscrollbar-policy">never</property>
-                            <property name="propagate-natural-width">true</property>
-                            <property name="propagate-natural-height">true</property>
+                          <object class="GtkBox" id="store_recipients_content">
+                            <property name="orientation">vertical</property>
                             <child>
-                              <object class="AdwPreferencesPage" id="store_recipients_preferences_page">
+                              <object class="GtkSearchEntry" id="store_recipients_search_entry">
+                                <property name="visible">false</property>
+                                <property name="placeholder-text" translatable="yes">Search store keys</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkScrolledWindow" id="store_recipients_page_scrolled">
+                                <property name="vscrollbar-policy">automatic</property>
+                                <property name="hscrollbar-policy">never</property>
+                                <property name="propagate-natural-width">true</property>
+                                <property name="propagate-natural-height">true</property>
+                                <child>
+                                  <object class="AdwPreferencesPage" id="store_recipients_preferences_page">
                             <child>
                               <object class="AdwPreferencesGroup">
                                 <property name="visible">false</property>
@@ -231,6 +233,27 @@
                                     <property name="activatable">False</property>
                                   </object>
                                 </child>
+                              </object>
+                            </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwStatusPage" id="store_recipients_loading">
+                            <property name="title" translatable="yes">Loading keys</property>
+                            <property name="description" translatable="yes">Inspecting private keys and connected hardware.</property>
+                            <property name="hexpand">true</property>
+                            <property name="vexpand">true</property>
+                            <child>
+                              <object class="GtkSpinner">
+                                <property name="spinning">true</property>
+                                <property name="margin-top">24</property>
+                                <property name="margin-bottom">24</property>
+                                <property name="margin-start">24</property>
+                                <property name="margin-end">24</property>
                               </object>
                             </child>
                           </object>

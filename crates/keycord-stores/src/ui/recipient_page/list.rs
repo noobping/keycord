@@ -11,10 +11,7 @@ use crate::recipient_page::{
     recipient_scope_label, set_private_key_recipient_values, show_recipient_scope_selector,
     show_require_all_private_keys_option, show_store_options_title_above_git_row,
 };
-use crate::{
-    relevant_store_recipient_scopes, StoreRecipientsPrivateKeyRequirement,
-    ROOT_STORE_RECIPIENTS_SCOPE,
-};
+use crate::{StoreRecipientsPrivateKeyRequirement, ROOT_STORE_RECIPIENTS_SCOPE};
 use adw::gtk::StringList;
 use adw::prelude::*;
 use adw::ActionRow;
@@ -65,14 +62,7 @@ fn append_unresolved_recipient_rows(state: &StoreRecipientsPageState, recipients
 }
 
 fn available_recipient_scopes(state: &StoreRecipientsPageState) -> Vec<String> {
-    let Some(request) = state.current_request() else {
-        return vec![ROOT_STORE_RECIPIENTS_SCOPE.to_string()];
-    };
-    if !state.ports.preferences.uses_integrated_backend() {
-        return vec![ROOT_STORE_RECIPIENTS_SCOPE.to_string()];
-    }
-
-    let scopes = relevant_store_recipient_scopes(&request.store);
+    let scopes = state.recipient_scope_dirs.borrow().clone();
     if scopes.is_empty() {
         vec![ROOT_STORE_RECIPIENTS_SCOPE.to_string()]
     } else {
@@ -223,9 +213,7 @@ pub(super) fn connect_recipient_scope_control(state: &StoreRecipientsPageState) 
     });
 }
 
-pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
-    (state.ports.git.rebuild_recipient_row)(state);
-    let _ = state.key_management.refresh_recipient_key_inventory();
+fn recipient_key_list_context(state: &StoreRecipientsPageState) -> RecipientKeyListContext {
     sync_store_recipients_busy_indicator(state);
     sync_recipient_scope_row(state);
 
@@ -241,50 +229,61 @@ pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
 
     let state_for_toggle = state.clone();
     let state_before_rows = state.clone();
+    RecipientKeyListContext {
+        current_recipients,
+        uses_integrated_backend,
+        uses_host_backend,
+        policy: RecipientKeyListPolicy {
+            recipient_matches: Rc::new(recipient_matches_parts),
+            show_choice: Rc::new(move |active| {
+                show_standard_private_key_choice(selection_mode, active)
+            }),
+            toggle_blocked_message: Rc::new(move |active, usable, selected, usable_selected| {
+                private_key_toggle_block_message(
+                    active,
+                    usable,
+                    require_all,
+                    selected,
+                    usable_selected,
+                )
+                .map(str::to_string)
+            }),
+            delete_blocked_message: Rc::new(move |active, selected| {
+                private_key_delete_block_message(active, require_all, selected).map(str::to_string)
+            }),
+            on_toggle: Rc::new(move |fingerprint, user_ids, enabled| {
+                if set_private_key_recipient_values(
+                    &mut state_for_toggle.recipients.borrow_mut(),
+                    &fingerprint,
+                    &user_ids,
+                    enabled,
+                ) {
+                    super::rebuild_store_recipients_list(&state_for_toggle);
+                    queue_store_recipients_autosave(&state_for_toggle);
+                }
+            }),
+            before_key_rows: Rc::new(move |has_keys, unresolved| {
+                sync_private_key_requirement_row(&state_before_rows, has_keys);
+                append_unresolved_recipient_rows(&state_before_rows, &unresolved);
+            }),
+        },
+    }
+}
+
+pub(super) fn rebuild_store_recipients_list(state: &StoreRecipientsPageState) {
+    let context = recipient_key_list_context(state);
+    state.key_management.rebuild_recipient_key_list(context);
+}
+
+pub(super) fn refresh_store_recipients_list(
+    state: &StoreRecipientsPageState,
+    on_loaded: Rc<dyn Fn()>,
+) {
+    (state.ports.git.rebuild_recipient_row)(state);
+    let context = recipient_key_list_context(state);
     state
         .key_management
-        .rebuild_recipient_key_list(RecipientKeyListContext {
-            current_recipients,
-            uses_integrated_backend,
-            uses_host_backend,
-            policy: RecipientKeyListPolicy {
-                recipient_matches: Rc::new(recipient_matches_parts),
-                show_choice: Rc::new(move |active| {
-                    show_standard_private_key_choice(selection_mode, active)
-                }),
-                toggle_blocked_message: Rc::new(
-                    move |active, usable, selected, usable_selected| {
-                        private_key_toggle_block_message(
-                            active,
-                            usable,
-                            require_all,
-                            selected,
-                            usable_selected,
-                        )
-                        .map(str::to_string)
-                    },
-                ),
-                delete_blocked_message: Rc::new(move |active, selected| {
-                    private_key_delete_block_message(active, require_all, selected)
-                        .map(str::to_string)
-                }),
-                on_toggle: Rc::new(move |fingerprint, user_ids, enabled| {
-                    if set_private_key_recipient_values(
-                        &mut state_for_toggle.recipients.borrow_mut(),
-                        &fingerprint,
-                        &user_ids,
-                        enabled,
-                    ) {
-                        super::rebuild_store_recipients_list(&state_for_toggle);
-                        queue_store_recipients_autosave(&state_for_toggle);
-                    }
-                }),
-                before_key_rows: Rc::new(move |has_keys, unresolved| {
-                    sync_private_key_requirement_row(&state_before_rows, has_keys);
-                    append_unresolved_recipient_rows(&state_before_rows, &unresolved);
-                }),
-            },
-        });
+        .refresh_recipient_key_list(context, on_loaded);
 }
 
 #[cfg(test)]

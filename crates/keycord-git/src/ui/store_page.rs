@@ -13,11 +13,12 @@ use adw::{
 use keycord_preferences::ui::PreferencesPageSearchState;
 use keycord_runtime::capabilities::{has_host_permission, supports_host_command_features};
 use keycord_runtime::{i18n::gettext, log_error};
-use keycord_shell::background::spawn_result_task_with_finalizer;
+use keycord_shell::background::{spawn_result_task, spawn_result_task_with_finalizer};
 use keycord_shell::navigation::{
     finish_transient_navigation_page, push_navigation_page_if_needed, reveal_navigation_page,
     show_secondary_page_chrome, HasWindowChrome, WindowChrome, WindowPageState, APP_WINDOW_TITLE,
 };
+use keycord_shell::object_data::{cloned_data, set_cloned_data};
 use keycord_shell::ui::{
     add_tracked_preferences_group_child, append_action_group_row_with_button,
     append_info_group_row, clear_tracked_preferences_group, dim_label_icon,
@@ -28,6 +29,8 @@ use std::cell::{Cell, RefCell};
 use std::rc::Rc;
 
 use super::window_widgets::GitWindowWidgets;
+
+const STORE_RECIPIENTS_GIT_ROW_REFRESH_ID_KEY: &str = "keycord-store-recipients-git-row-refresh-id";
 
 pub type AppendOptionalHostAccessRow =
     Rc<dyn Fn(&PreferencesGroup, &ToastOverlay) -> Option<ActionRow>>;
@@ -395,6 +398,39 @@ fn store_git_row_state_for_store(store: &str) -> StoreGitRowState {
     store_git_row_state(store_git_repository_status(store))
 }
 
+fn next_store_recipients_git_row_refresh_id(list: &PreferencesGroup) -> u64 {
+    let refresh_id = cloned_data::<_, u64>(list, STORE_RECIPIENTS_GIT_ROW_REFRESH_ID_KEY)
+        .unwrap_or_default()
+        .wrapping_add(1)
+        .max(1);
+    set_cloned_data(list, STORE_RECIPIENTS_GIT_ROW_REFRESH_ID_KEY, refresh_id);
+    refresh_id
+}
+
+fn store_recipients_git_row_refresh_is_current(
+    state: &StoreRecipientsPageState,
+    refresh_id: u64,
+    store: &str,
+) -> bool {
+    cloned_data::<_, u64>(
+        &state.platform.git_list,
+        STORE_RECIPIENTS_GIT_ROW_REFRESH_ID_KEY,
+    ) == Some(refresh_id)
+        && state.current_request().is_some_and(|request| {
+            request.store == store
+                && matches!(
+                    request.mode,
+                    StoreRecipientsMode::Edit | StoreRecipientsMode::Create
+                )
+        })
+}
+
+fn apply_store_recipients_git_row_state(row: &ActionRow, row_state: &StoreGitRowState) {
+    row.set_subtitle(&row_state.subtitle);
+    row.set_sensitive(row_state.enabled);
+    row.set_activatable(row_state.enabled);
+}
+
 fn update_store_git_remote(
     store: &str,
     current_name: &str,
@@ -743,6 +779,7 @@ pub fn rebuild_store_recipients_git_row(
     git_page: &StoreGitPageState,
     state: &StoreRecipientsPageState,
 ) {
+    let refresh_id = next_store_recipients_git_row_refresh_id(&state.platform.git_list);
     state.clear_git_rows();
     if !supports_host_command_features() {
         state.platform.git_group.set_visible(false);
@@ -763,21 +800,54 @@ pub fn rebuild_store_recipients_git_row(
     }
 
     let store = request.store.clone();
-    let row_state = store_git_row_state_for_store(&store);
-    let git_page = git_page.clone();
+    let git_page_for_action = git_page.clone();
+    let store_for_action = store.clone();
     let row = append_translated_action_row_with_button(
         &state.platform.git_list,
         &gettext("Git remotes"),
-        &row_state.subtitle,
+        &gettext("Loading"),
         "go-next-symbolic",
         move || {
-            show_store_git_page_from_recipients(&git_page, store.clone());
+            show_store_git_page_from_recipients(&git_page_for_action, store_for_action.clone());
         },
     );
     state.track_git_row(&row.clone().upcast());
     row.add_prefix(&dim_label_icon("git-symbolic"));
-    row.set_sensitive(row_state.enabled);
-    row.set_activatable(row_state.enabled);
+    row.set_sensitive(false);
+    row.set_activatable(false);
+
+    let store_for_worker = store.clone();
+    let state_for_result = state.clone();
+    let row_for_result = row.clone();
+    let store_for_result = store.clone();
+    let state_for_disconnect = state.clone();
+    let row_for_disconnect = row;
+    spawn_result_task(
+        move || store_git_row_state_for_store(&store_for_worker),
+        move |row_state| {
+            if store_recipients_git_row_refresh_is_current(
+                &state_for_result,
+                refresh_id,
+                &store_for_result,
+            ) {
+                apply_store_recipients_git_row_state(&row_for_result, &row_state);
+                state_for_result.search.sync();
+            }
+        },
+        move || {
+            if store_recipients_git_row_refresh_is_current(
+                &state_for_disconnect,
+                refresh_id,
+                &store,
+            ) {
+                apply_store_recipients_git_row_state(
+                    &row_for_disconnect,
+                    &store_git_row_state(Err("Git status worker disconnected".to_string())),
+                );
+                state_for_disconnect.search.sync();
+            }
+        },
+    );
 }
 
 #[cfg(test)]
