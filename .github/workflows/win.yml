@@ -103,7 +103,7 @@ jobs:
         run: rustup target add x86_64-pc-windows-gnu
 
       - name: Build
-        run: cargo build --package keycord --locked --release --target x86_64-pc-windows-gnu
+        run: cargo build --package keycord --features fidopin,hardwarekey --locked --release --target x86_64-pc-windows-gnu
 
       - name: Bundle
         shell: pwsh
