@@ -1007,7 +1007,7 @@ msgstr "Couldn't save that remote."
 msgid "Couldn't save that setting."
 msgstr "Couldn't save that setting."
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:92
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
 #: crates/keycord-git/src/ui/audit.rs:629
 msgid "Couldn't save the filter selection."
 msgstr "Couldn't save the filter selection."
@@ -1852,7 +1852,7 @@ msgstr "Failed to register resources."
 msgid "Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': {err}"
 msgstr "Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': {err}"
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1054
+#: crates/keycord-entries/src/ui/list/mod.rs:1057
 #: crates/keycord-stores/src/ui/management/mod.rs:72
 msgid "Failed to remove missing password stores: {err}"
 msgstr "Failed to remove missing password stores: {err}"
@@ -2113,7 +2113,7 @@ msgstr ""
 msgid "Failed to {action}: write step failed: {err}"
 msgstr "Failed to {action}: write step failed: {err}"
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:91
+#: crates/keycord-entries/src/ui/list/store_filter.rs:110
 msgid "Failed to {action}: {err}"
 msgstr "Failed to {action}: {err}"
 
@@ -2452,6 +2452,10 @@ msgstr "Import key from clipboard"
 #: crates/keycord-passkey/src/ui.rs:159
 msgid "Import passkey?"
 msgstr "Import passkey?"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid "Import passkeys and open local credential-exchange requests"
+msgstr "Import passkeys and open local credential-exchange requests"
 
 #: crates/keycord-stores/data/window-pages.fragment.ui:68
 msgid "Import password (optional)"
@@ -3425,6 +3429,10 @@ msgstr "PasskeyCredential"
 msgid "PasskeyFieldTemplate"
 msgstr "PasskeyFieldTemplate"
 
+#: crates/keycord-lifecycle/data/metainfo.xml:82
+msgid "Passkeys can now be imported, and local credential-exchange request files can be opened."
+msgstr "Passkeys can now be imported, and local credential-exchange request files can be opened."
+
 #: crates/keycord-entries/data/window-pages.fragment.ui:96
 msgid "Password"
 msgstr "Password"
@@ -3499,11 +3507,11 @@ msgstr "Password store Git state: {root} -> Git repository detected, local commi
 msgid "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
 msgstr "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1061
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
 msgid "Password store configuration: no stores are configured."
 msgstr "Password store configuration: no stores are configured."
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1065
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
 msgid "Password store configuration: {} configured store(s)."
 msgstr "Password store configuration: {} configured store(s)."
 
@@ -5216,7 +5224,7 @@ msgstr "build download client"
 msgid "cannot decrypt password store entries"
 msgstr "cannot decrypt password store entries"
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:37
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
 msgid "clean stale store filter values"
 msgstr "clean stale store filter values"
 
@@ -5931,7 +5939,7 @@ msgstr "restore search provider permissions"
 msgid "restore target permissions"
 msgstr "restore target permissions"
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:69
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
 msgid "save store filter selection"
 msgstr "save store filter selection"
 
