@@ -2,7 +2,11 @@
 
 use crate::object_data::{cloned_data, set_cloned_data};
 use adw::gio::{self, ApplicationFlags, SimpleAction};
-use adw::gtk::{gdk::Display, glib::ExitCode, Builder, IconTheme, License};
+use adw::gtk::{
+    gdk::Display,
+    glib::{self, ExitCode},
+    Builder, IconTheme, License,
+};
 use adw::prelude::*;
 use adw::{Application, ApplicationWindow, ShortcutsDialog};
 use keycord_runtime::i18n::gettext;
@@ -124,20 +128,18 @@ pub fn run_application<WindowCommand: 'static, AfterPresent: 'static>(
         about_comments,
         activation,
     } = callbacks;
+    let application_title = gettext(about.application_title);
+    glib::set_application_name(&application_title);
 
     #[cfg(target_os = "windows")]
     configure_windows_runtime_environment(application_id);
 
     if let Err(error) = register_resources() {
-        return startup_error(
-            about.application_title,
-            "Failed to register resources.",
-            &error,
-        );
+        return startup_error(&application_title, "Failed to register resources.", &error);
     }
     if let Err(error) = adw::init() {
         return startup_error(
-            about.application_title,
+            &application_title,
             "Failed to initialize libadwaita.",
             &error.to_string(),
         );
@@ -145,7 +147,7 @@ pub fn run_application<WindowCommand: 'static, AfterPresent: 'static>(
 
     let Some(display) = Display::default() else {
         return startup_error(
-            about.application_title,
+            &application_title,
             "No display available.",
             "missing display",
         );
@@ -155,7 +157,7 @@ pub fn run_application<WindowCommand: 'static, AfterPresent: 'static>(
 
     for hook in startup_hooks {
         if let Err(error) = (hook.callback)() {
-            return startup_error(about.application_title, hook.failure_summary, &error);
+            return startup_error(&application_title, hook.failure_summary, &error);
         }
     }
 
@@ -216,7 +218,7 @@ pub fn run_application<WindowCommand: 'static, AfterPresent: 'static>(
             }
             Err(error) => {
                 report_startup_error(
-                    about.application_title,
+                    &application_title,
                     "Failed to build the main window.",
                     &error,
                 );

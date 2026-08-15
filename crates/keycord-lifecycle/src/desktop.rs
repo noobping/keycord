@@ -59,6 +59,28 @@ pub fn desktop_file(
         .replace("@MIME_TYPES@", mime_types.trim_end())
 }
 
+pub fn with_desktop_localizations(desktop_entry: &str, localized_source: &str) -> String {
+    let mut rendered = desktop_entry.trim_end_matches('\n').to_string();
+    rendered.push('\n');
+
+    for line in localized_source.lines() {
+        let Some((key, _)) = line.split_once('=') else {
+            continue;
+        };
+        let Some((_, locale)) = key.split_once('[') else {
+            continue;
+        };
+        if !locale.ends_with(']') {
+            continue;
+        }
+
+        rendered.push_str(line);
+        rendered.push('\n');
+    }
+
+    rendered
+}
+
 pub fn search_provider_file(app_id: &str, bus_name: &str, object_path: &str) -> String {
     SEARCH_PROVIDER_FILE_TEMPLATE
         .replace("@APP_ID@", app_id)
@@ -117,6 +139,20 @@ mod tests {
         for asset in rendered {
             assert!(!asset.contains('@'), "unresolved install-asset token");
         }
+    }
+
+    #[test]
+    fn desktop_localizations_are_copied_without_replacing_base_fields() {
+        let base = "[Desktop Entry]\nName=Keycord\nComment=Browse stores\nExec=keycord\n";
+        let localized = "[Desktop Entry]\nName=Keycord\nName[nl]=Sleutelkoord\nComment[nl]=Wachtwoordopslagen bekijken\nExec=ignored\n";
+
+        let rendered = with_desktop_localizations(base, localized);
+
+        assert!(rendered.contains("Name=Keycord\n"));
+        assert!(rendered.contains("Name[nl]=Sleutelkoord\n"));
+        assert!(rendered.contains("Comment[nl]=Wachtwoordopslagen bekijken\n"));
+        assert!(rendered.contains("Exec=keycord\n"));
+        assert!(!rendered.contains("Exec=ignored"));
     }
 
     #[test]

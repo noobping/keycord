@@ -23,21 +23,9 @@ msgstr "-----BEGIN SSH SIGNATURE-----"
 msgid "-----END PGP PRIVATE KEY BLOCK-----"
 msgstr "-----END PGP PRIVATE KEY BLOCK-----"
 
-#: crates/keycord-git/src/audit.rs:268
-msgid "--format=%(refname)%00%(refname:short)%00"
-msgstr "--format=%(refname)%00%(refname:short)%00"
-
-#: crates/keycord-git/src/audit.rs:460
-msgid "--format=%H%x00%G?%x00%GS%x00%GK%x00%GF%x00%GP%x1f"
-msgstr "--format=%H%x00%G?%x00%GS%x00%GK%x00%GF%x00%GP%x1f"
-
 #: crates/keycord-git/src/audit.rs:320
 msgid "--format=%H%x00%h%x00%s%x00%an <%ae>%x00%aI%x00%cn <%ce>%x00%cI%x00"
 msgstr "--format=%H%x00%h%x00%s%x00%an <%ae>%x00%aI%x00%cn <%ce>%x00%cI%x00"
-
-#: src/composition/host_access.rs:44
-msgid "--talk-name=org.freedesktop.Flatpak"
-msgstr "--talk-name=org.freedesktop.Flatpak"
 
 #: crates/keycord-stores/src/recipients.rs:193
 msgid "1 recipient"
@@ -203,7 +191,7 @@ msgstr "Add optional GPG synchronization"
 msgid "Add or create store"
 msgstr "Add or create store"
 
-#: crates/keycord-lifecycle/src/setup.rs:88
+#: crates/keycord-lifecycle/src/setup.rs:91
 msgid "Add or remove this build from the local app menu."
 msgstr "Add or remove this build from the local app menu."
 
@@ -232,7 +220,7 @@ msgstr "Add the option to copy the logs"
 msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
 msgstr "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
 
-#: crates/keycord-lifecycle/src/setup.rs:69
+#: crates/keycord-lifecycle/src/setup.rs:72
 msgid "Add to app menu"
 msgstr "Add to app menu"
 
@@ -1080,7 +1068,7 @@ msgstr "Couldn't unlock the hardware key."
 msgid "Couldn't unlock the key."
 msgstr "Couldn't unlock the key."
 
-#: crates/keycord-lifecycle/src/setup.rs:101
+#: crates/keycord-lifecycle/src/setup.rs:104
 msgid "Couldn't update the app menu."
 msgstr "Couldn't update the app menu."
 
@@ -1345,7 +1333,7 @@ msgstr "Enter the security key PIN."
 msgid "Escape"
 msgstr "Escape"
 
-#: crates/keycord-lifecycle/src/setup.rs:541
+#: crates/keycord-lifecycle/src/setup.rs:547
 msgid "Exec=/tmp/keycord %f"
 msgstr "Exec=/tmp/keycord %f"
 
@@ -1473,15 +1461,15 @@ msgstr "Failed to allocate a temporary file name."
 msgid "Failed to apply process hardening: {error}"
 msgstr "Failed to apply process hardening: {error}"
 
-#: crates/keycord-shell/src/application.rs:290
+#: crates/keycord-shell/src/application.rs:292
 msgid "Failed to build shortcuts dialog."
 msgstr "Failed to build shortcuts dialog."
 
-#: crates/keycord-shell/src/application.rs:220
+#: crates/keycord-shell/src/application.rs:222
 msgid "Failed to build the main window."
 msgstr "Failed to build the main window."
 
-#: crates/keycord-shell/src/application.rs:280
+#: crates/keycord-shell/src/application.rs:282
 msgid ""
 "Failed to build the shortcuts dialog.\nerror: {error}"
 msgstr ""
@@ -1611,7 +1599,7 @@ msgstr "Failed to initialize COM for the file picker: {err}"
 msgid "Failed to initialize COM for the save-file picker: {err}"
 msgstr "Failed to initialize COM for the save-file picker: {err}"
 
-#: crates/keycord-shell/src/application.rs:141
+#: crates/keycord-shell/src/application.rs:143
 msgid "Failed to initialize libadwaita."
 msgstr "Failed to initialize libadwaita."
 
@@ -1852,11 +1840,11 @@ msgstr "Failed to read update file metadata: {error}"
 msgid "Failed to refresh OTP code: {err}"
 msgstr "Failed to refresh OTP code: {err}"
 
-#: src/setup.rs:26
+#: src/setup.rs:28
 msgid "Failed to register resources for Linux update install: {error}"
 msgstr "Failed to register resources for Linux update install: {error}"
 
-#: crates/keycord-shell/src/application.rs:134
+#: crates/keycord-shell/src/application.rs:138
 msgid "Failed to register resources."
 msgstr "Failed to register resources."
 
@@ -2083,7 +2071,7 @@ msgstr "Failed to turn off private-key sync after an error: {save_err}"
 msgid "Failed to unlock ripasso private key: {err}"
 msgstr "Failed to unlock ripasso private key: {err}"
 
-#: crates/keycord-lifecycle/src/setup.rs:100
+#: crates/keycord-lifecycle/src/setup.rs:103
 msgid "Failed to update local app menu entry: {err}"
 msgstr "Failed to update local app menu entry: {err}"
 
@@ -2907,7 +2895,7 @@ msgstr "Looking for a newer Linux standalone build on GitHub Releases."
 msgid "Looking for a newer Windows installer on GitHub Releases."
 msgstr "Looking for a newer Windows installer on GitHub Releases."
 
-#: crates/keycord-lifecycle/src/setup.rs:441
+#: crates/keycord-lifecycle/src/setup.rs:445
 msgid "Looking up resource: {resource_path}"
 msgstr "Looking up resource: {resource_path}"
 
@@ -2995,10 +2983,6 @@ msgstr "Merge password store Git branch {target}"
 #: crates/keycord-git/src/ui/audit.rs:1287
 msgid "Message"
 msgstr "Message"
-
-#: crates/keycord-lifecycle/src/desktop.rs:41
-msgid "MimeType={}"
-msgstr "MimeType={}"
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:204
 #: crates/keycord-entries/data/window-pages.fragment.ui:226
@@ -3107,17 +3091,17 @@ msgstr "No changed paths"
 msgid "No commits loaded"
 msgstr "No commits loaded"
 
-#: crates/keycord-lifecycle/src/setup.rs:171
-#: crates/keycord-lifecycle/src/setup.rs:229
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
 msgid "No data directory found"
 msgstr "No data directory found"
 
-#: crates/keycord-shell/src/application.rs:149
+#: crates/keycord-shell/src/application.rs:151
 msgid "No display available."
 msgstr "No display available."
 
-#: crates/keycord-lifecycle/src/setup.rs:167
-#: crates/keycord-lifecycle/src/setup.rs:225
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
 msgid "No executable directory found"
 msgstr "No executable directory found"
 
@@ -3254,7 +3238,7 @@ msgstr "OTP code"
 msgid "OTP secret"
 msgstr "OTP secret"
 
-#: crates/keycord-lifecycle/src/setup.rs:188
+#: crates/keycord-lifecycle/src/setup.rs:191
 msgid "One or more local install directories are not writable."
 msgstr "One or more local install directories are not writable."
 
@@ -3805,7 +3789,7 @@ msgstr "Remotes"
 msgid "Remove empty fields"
 msgstr "Remove empty fields"
 
-#: crates/keycord-lifecycle/src/setup.rs:67
+#: crates/keycord-lifecycle/src/setup.rs:70
 msgid "Remove from app menu"
 msgstr "Remove from app menu"
 
@@ -3867,7 +3851,7 @@ msgid "Repeated single character"
 msgstr "Repeated single character"
 
 #: crates/keycord-git/src/ui/store_page.rs:544
-#: crates/keycord-shell/src/application.rs:316
+#: crates/keycord-shell/src/application.rs:318
 msgid "Repository"
 msgstr "Repository"
 
@@ -3923,7 +3907,7 @@ msgstr "Require all selected private keys"
 msgid "Resolve Git {role} identity"
 msgstr "Resolve Git {role} identity"
 
-#: crates/keycord-lifecycle/src/setup.rs:443
+#: crates/keycord-lifecycle/src/setup.rs:447
 msgid "Resource not found: {e}"
 msgstr "Resource not found: {e}"
 
@@ -4757,7 +4741,7 @@ msgstr "Touch the FIDO2 security key and try again."
 msgid "Touch your key if it blinks."
 msgstr "Touch your key if it blinks."
 
-#: crates/keycord-shell/src/application.rs:317
+#: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
 msgstr "Translate"
 
@@ -5240,11 +5224,11 @@ msgstr "clean stale store filter values"
 msgid "clear empty fields before save"
 msgstr "clear empty fields before save"
 
-#: crates/keycord-lifecycle/src/setup.rs:520
-#: crates/keycord-lifecycle/src/setup.rs:556
-#: crates/keycord-lifecycle/src/setup.rs:576
-#: crates/keycord-lifecycle/src/setup.rs:601
-#: crates/keycord-lifecycle/src/setup.rs:621
+#: crates/keycord-lifecycle/src/setup.rs:526
+#: crates/keycord-lifecycle/src/setup.rs:564
+#: crates/keycord-lifecycle/src/setup.rs:584
+#: crates/keycord-lifecycle/src/setup.rs:609
+#: crates/keycord-lifecycle/src/setup.rs:629
 msgid "clock should be after epoch"
 msgstr "clock should be after epoch"
 
@@ -5253,7 +5237,7 @@ msgid "collecting available private-key fingerprints"
 msgstr "collecting available private-key fingerprints"
 
 #: src/main.rs:93
-#: src/setup.rs:24
+#: src/setup.rs:26
 msgid "compiled.gresource"
 msgstr "compiled.gresource"
 
@@ -5269,15 +5253,15 @@ msgstr "context error"
 msgid "couldn't find card"
 msgstr "couldn't find card"
 
-#: crates/keycord-lifecycle/src/setup.rs:526
+#: crates/keycord-lifecycle/src/setup.rs:532
 msgid "create MIME packages dir"
 msgstr "create MIME packages dir"
 
-#: crates/keycord-lifecycle/src/setup.rs:525
+#: crates/keycord-lifecycle/src/setup.rs:531
 msgid "create applications dir"
 msgstr "create applications dir"
 
-#: crates/keycord-lifecycle/src/setup.rs:627
+#: crates/keycord-lifecycle/src/setup.rs:635
 msgid "create bin dir"
 msgstr "create bin dir"
 
@@ -5285,19 +5269,19 @@ msgstr "create bin dir"
 msgid "create partial update file"
 msgstr "create partial update file"
 
-#: crates/keycord-lifecycle/src/setup.rs:604
+#: crates/keycord-lifecycle/src/setup.rs:612
 msgid "create root dir"
 msgstr "create root dir"
 
-#: crates/keycord-lifecycle/src/setup.rs:628
+#: crates/keycord-lifecycle/src/setup.rs:636
 msgid "create search provider dir"
 msgstr "create search provider dir"
 
-#: crates/keycord-lifecycle/src/setup.rs:580
+#: crates/keycord-lifecycle/src/setup.rs:588
 msgid "create target dir"
 msgstr "create target dir"
 
-#: crates/keycord-lifecycle/src/setup.rs:559
+#: crates/keycord-lifecycle/src/setup.rs:567
 msgid "create temp dir"
 msgstr "create temp dir"
 
@@ -5426,7 +5410,7 @@ msgstr "flatpak override --user --talk-name=org.freedesktop.Flatpak"
 msgid "flush partial update file"
 msgstr "flush partial update file"
 
-#: crates/keycord-shell/src/application.rs:361
+#: crates/keycord-shell/src/application.rs:363
 msgid "gdk-pixbuf-2.0"
 msgstr "gdk-pixbuf-2.0"
 
@@ -5559,7 +5543,7 @@ msgstr "git var"
 msgid "git write-tree"
 msgstr "git write-tree"
 
-#: crates/keycord-shell/src/application.rs:356
+#: crates/keycord-shell/src/application.rs:358
 msgid "glib-2.0"
 msgstr "glib-2.0"
 
@@ -5587,7 +5571,7 @@ msgstr "gpg --import failed"
 msgid "gpg --list-secret-keys failed"
 msgstr "gpg --list-secret-keys failed"
 
-#: crates/keycord-shell/src/application.rs:357
+#: crates/keycord-shell/src/application.rs:359
 msgid "gschemas.compiled"
 msgstr "gschemas.compiled"
 
@@ -5689,7 +5673,7 @@ msgstr "keycord-passwords.csv"
 msgid "keycord.toml"
 msgstr "keycord.toml"
 
-#: crates/keycord-lifecycle/src/setup.rs:62
+#: crates/keycord-lifecycle/src/setup.rs:65
 msgid "lifecycle install configuration must be initialized"
 msgstr "lifecycle install configuration must be initialized"
 
@@ -5697,12 +5681,12 @@ msgstr "lifecycle install configuration must be initialized"
 msgid "linux.rs"
 msgstr "linux.rs"
 
-#: crates/keycord-shell/src/application.rs:440
+#: crates/keycord-shell/src/application.rs:442
 msgid "loaders-{hash:016x}.cache"
 msgstr "loaders-{hash:016x}.cache"
 
-#: crates/keycord-shell/src/application.rs:365
-#: crates/keycord-shell/src/application.rs:410
+#: crates/keycord-shell/src/application.rs:367
+#: crates/keycord-shell/src/application.rs:412
 msgid "loaders.cache"
 msgstr "loaders.cache"
 
@@ -5710,11 +5694,11 @@ msgstr "loaders.cache"
 msgid "loading the available key ring"
 msgstr "loading the available key ring"
 
-#: crates/keycord-lifecycle/src/setup.rs:633
+#: crates/keycord-lifecycle/src/setup.rs:641
 msgid "make search provider non-writable"
 msgstr "make search provider non-writable"
 
-#: crates/keycord-lifecycle/src/setup.rs:585
+#: crates/keycord-lifecycle/src/setup.rs:593
 msgid "make target non-writable"
 msgstr "make target non-writable"
 
@@ -5722,7 +5706,7 @@ msgstr "make target non-writable"
 msgid "manifest.toml"
 msgstr "manifest.toml"
 
-#: crates/keycord-shell/src/application.rs:150
+#: crates/keycord-shell/src/application.rs:152
 msgid "missing display"
 msgstr "missing display"
 
@@ -5818,7 +5802,7 @@ msgstr "pass rm failed"
 msgid "passkey"
 msgstr "passkey"
 
-#: crates/keycord-lifecycle/src/setup.rs:535
+#: crates/keycord-lifecycle/src/setup.rs:541
 msgid "passkey MIME config"
 msgstr "passkey MIME config"
 
@@ -5887,31 +5871,31 @@ msgstr "public.asc"
 msgid "read GitHub release response"
 msgstr "read GitHub release response"
 
-#: crates/keycord-lifecycle/src/setup.rs:545
+#: crates/keycord-lifecycle/src/setup.rs:553
 msgid "read MIME package"
 msgstr "read MIME package"
 
-#: crates/keycord-lifecycle/src/setup.rs:540
+#: crates/keycord-lifecycle/src/setup.rs:546
 msgid "read desktop file"
 msgstr "read desktop file"
 
-#: crates/keycord-lifecycle/src/setup.rs:565
+#: crates/keycord-lifecycle/src/setup.rs:573
 msgid "read marker"
 msgstr "read marker"
 
-#: crates/keycord-lifecycle/src/setup.rs:630
+#: crates/keycord-lifecycle/src/setup.rs:638
 msgid "read search provider metadata"
 msgstr "read search provider metadata"
 
-#: crates/keycord-lifecycle/src/setup.rs:638
+#: crates/keycord-lifecycle/src/setup.rs:646
 msgid "read search provider metadata for cleanup"
 msgstr "read search provider metadata for cleanup"
 
-#: crates/keycord-lifecycle/src/setup.rs:582
+#: crates/keycord-lifecycle/src/setup.rs:590
 msgid "read target metadata"
 msgstr "read target metadata"
 
-#: crates/keycord-lifecycle/src/setup.rs:590
+#: crates/keycord-lifecycle/src/setup.rs:598
 msgid "read target metadata for cleanup"
 msgstr "read target metadata for cleanup"
 
@@ -5939,11 +5923,11 @@ msgstr "remove stale partial update file"
 msgid "remove stale update file"
 msgstr "remove stale update file"
 
-#: crates/keycord-lifecycle/src/setup.rs:642
+#: crates/keycord-lifecycle/src/setup.rs:650
 msgid "restore search provider permissions"
 msgstr "restore search provider permissions"
 
-#: crates/keycord-lifecycle/src/setup.rs:593
+#: crates/keycord-lifecycle/src/setup.rs:601
 msgid "restore target permissions"
 msgstr "restore target permissions"
 
@@ -6059,15 +6043,15 @@ msgstr "windows.rs"
 msgid "work-tree git command"
 msgstr "work-tree git command"
 
-#: crates/keycord-lifecycle/src/setup.rs:537
+#: crates/keycord-lifecycle/src/setup.rs:543
 msgid "write MIME package"
 msgstr "write MIME package"
 
-#: crates/keycord-lifecycle/src/setup.rs:534
+#: crates/keycord-lifecycle/src/setup.rs:540
 msgid "write desktop file"
 msgstr "write desktop file"
 
-#: crates/keycord-lifecycle/src/setup.rs:561
+#: crates/keycord-lifecycle/src/setup.rs:569
 msgid "write marker"
 msgstr "write marker"
 
@@ -6113,7 +6097,7 @@ msgstr "{action} failed: {stdout}"
 msgid "{action} failed: {}"
 msgstr "{action} failed: {}"
 
-#: crates/keycord-lifecycle/src/setup.rs:388
+#: crates/keycord-lifecycle/src/setup.rs:392
 msgid "{app_id}-passkey.xml"
 msgstr "{app_id}-passkey.xml"
 
@@ -6342,13 +6326,13 @@ msgstr "{scope} · {}"
 msgid "{step}: {err}"
 msgstr "{step}: {err}"
 
-#: crates/keycord-shell/src/application.rs:326
+#: crates/keycord-shell/src/application.rs:328
 msgid ""
 "{summary}\nerror: {error}"
 msgstr ""
 "{summary}\nerror: {error}"
 
-#: crates/keycord-shell/src/application.rs:328
+#: crates/keycord-shell/src/application.rs:330
 msgid "{title}: {detail}"
 msgstr "{title}: {detail}"
 
@@ -6372,7 +6356,7 @@ msgid ""
 msgstr ""
 "{} {RIPASSO_VERSION}\n{} {SEQUOIA_OPENPGP_VERSION}"
 
-#: crates/keycord-lifecycle/src/setup.rs:244
+#: crates/keycord-lifecycle/src/setup.rs:247
 msgid "{}-passkey.xml"
 msgstr "{}-passkey.xml"
 
@@ -6380,32 +6364,32 @@ msgstr "{}-passkey.xml"
 msgid "{}.SearchProvider"
 msgstr "{}.SearchProvider"
 
-#: crates/keycord-lifecycle/src/setup.rs:140
-#: crates/keycord-lifecycle/src/setup.rs:240
-#: crates/keycord-lifecycle/src/setup.rs:372
+#: crates/keycord-lifecycle/src/setup.rs:143
+#: crates/keycord-lifecycle/src/setup.rs:243
+#: crates/keycord-lifecycle/src/setup.rs:376
 msgid "{}.desktop"
 msgstr "{}.desktop"
 
-#: crates/keycord-lifecycle/src/setup.rs:306
-#: crates/keycord-lifecycle/src/setup.rs:454
-#: crates/keycord-lifecycle/src/setup.rs:462
-#: crates/keycord-lifecycle/src/setup.rs:477
+#: crates/keycord-lifecycle/src/setup.rs:309
+#: crates/keycord-lifecycle/src/setup.rs:458
+#: crates/keycord-lifecycle/src/setup.rs:466
+#: crates/keycord-lifecycle/src/setup.rs:481
 #: crates/keycord-runtime/src/i18n.rs:137
 msgid "{}.mo"
 msgstr "{}.mo"
 
-#: crates/keycord-lifecycle/src/setup.rs:248
-#: crates/keycord-lifecycle/src/setup.rs:410
+#: crates/keycord-lifecycle/src/setup.rs:251
+#: crates/keycord-lifecycle/src/setup.rs:414
 msgid "{}.search-provider.ini"
 msgstr "{}.search-provider.ini"
 
-#: crates/keycord-lifecycle/src/setup.rs:252
-#: crates/keycord-lifecycle/src/setup.rs:429
+#: crates/keycord-lifecycle/src/setup.rs:255
+#: crates/keycord-lifecycle/src/setup.rs:433
 msgid "{}.service"
 msgstr "{}.service"
 
-#: crates/keycord-lifecycle/src/setup.rs:237
-#: crates/keycord-lifecycle/src/setup.rs:444
+#: crates/keycord-lifecycle/src/setup.rs:240
+#: crates/keycord-lifecycle/src/setup.rs:448
 msgid "{}.svg"
 msgstr "{}.svg"
 

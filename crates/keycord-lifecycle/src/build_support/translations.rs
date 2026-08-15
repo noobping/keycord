@@ -247,6 +247,59 @@ fn collect_desktop_strings(source_root: &Path, path: &Path, source: &str, catalo
     }
 }
 
+pub(super) fn merge_desktop_translations(source_root: &Path, source: &str) -> String {
+    let po_dir = source_root.join("po");
+    let translations = discover_po_locales(&po_dir)
+        .into_iter()
+        .map(|locale| {
+            let entries = parse_po_entries(
+                &fs::read_to_string(po_dir.join(format!("{locale}.po")))
+                    .unwrap_or_else(|err| panic!("Failed to read {locale} translation: {err}")),
+            );
+            let messages = entries
+                .into_iter()
+                .filter(|entry| !entry.msgid.is_empty() && !entry.msgstr.is_empty())
+                .map(|entry| (entry.msgid, entry.msgstr))
+                .collect::<BTreeMap<_, _>>();
+            (locale, messages)
+        })
+        .collect::<Vec<_>>();
+
+    let mut output = String::new();
+    for raw_line in source.lines() {
+        writeln!(output, "{raw_line}").expect("Failed to render desktop entry");
+
+        let line = raw_line.trim();
+        let Some((key, value)) = line.split_once('=') else {
+            continue;
+        };
+        if key.contains('[')
+            || !matches!(key, "Name" | "GenericName" | "Comment" | "Keywords")
+            || value.is_empty()
+        {
+            continue;
+        }
+
+        for (locale, messages) in &translations {
+            let Some(translation) = messages.get(value) else {
+                continue;
+            };
+            let translation = escape_desktop_value(translation);
+            writeln!(output, "{key}[{locale}]={translation}")
+                .expect("Failed to render localized desktop entry");
+        }
+    }
+
+    output
+}
+
+fn escape_desktop_value(value: &str) -> String {
+    value
+        .replace('\\', "\\\\")
+        .replace('\n', "\\n")
+        .replace('\r', "")
+}
+
 fn add_metainfo_text(
     source_root: &Path,
     catalog: &mut Catalog,
@@ -531,6 +584,10 @@ fn looks_translatable_rust_string(value: &str) -> bool {
     }
 
     if trimmed.starts_with('#') || trimmed.chars().any(|ch| ch == '\u{1b}') {
+        return false;
+    }
+
+    if !trimmed.chars().any(char::is_whitespace) && trimmed.contains('=') {
         return false;
     }
 
@@ -1118,8 +1175,9 @@ fn source_reference(source_root: &Path, path: &Path, line: usize) -> String {
 mod tests {
     use super::{
         collect_desktop_strings, collect_rust_strings, collect_ui_strings,
-        non_application_rust_source_dir, render_pot_catalog, source_reference, Catalog,
-        NON_APPLICATION_RUST_DIRECTORY_NAMES, NON_APPLICATION_RUST_SOURCE_DIRS,
+        merge_desktop_translations, non_application_rust_source_dir, render_pot_catalog,
+        source_reference, Catalog, NON_APPLICATION_RUST_DIRECTORY_NAMES,
+        NON_APPLICATION_RUST_SOURCE_DIRS,
     };
     use std::path::{Path, PathBuf};
 
@@ -1178,6 +1236,18 @@ mod tests {
                 "`{message}` should be attributed to {relative_path}"
             );
         }
+    }
+
+    #[test]
+    fn desktop_metadata_includes_the_dutch_application_name() {
+        let rendered = merge_desktop_translations(
+            &application_root(),
+            "[Desktop Entry]\nName=Keycord\nComment=Browse and edit password stores\n",
+        );
+
+        assert!(rendered.contains("Name=Keycord\n"));
+        assert!(rendered.contains("Name[nl]=Sleutelkoord\n"));
+        assert!(rendered.contains("Comment[nl]=Wachtwoordopslagen bekijken en bewerken\n"));
     }
 
     #[test]

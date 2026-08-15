@@ -105,6 +105,26 @@ fn meson_renders_tracked_lifecycle_metadata_templates() {
 }
 
 #[test]
+fn meson_installs_localized_application_metadata_and_catalogs() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR"))
+        .parent()
+        .and_then(Path::parent)
+        .expect("Lifecycle crate should live below the application root");
+    let meson = fs::read_to_string(root.join("meson.build")).expect("read root meson.build");
+    let po_meson = fs::read_to_string(root.join("po/meson.build")).expect("read po/meson.build");
+    let linguas = fs::read_to_string(root.join("po/LINGUAS")).expect("read po/LINGUAS");
+
+    assert!(meson.contains("i18n = import('i18n')"));
+    assert!(meson.contains("subdir('po')"));
+    assert!(meson.contains("type: 'desktop'"));
+    assert!(meson.contains("output: 'io.github.noobping.keycord.desktop'"));
+    assert!(meson.contains("type: 'xml'"));
+    assert!(meson.contains("output: 'io.github.noobping.keycord.metainfo.xml'"));
+    assert!(po_meson.contains("i18n.gettext('keycord'"));
+    assert_eq!(linguas.split_whitespace().collect::<Vec<_>>(), ["en", "nl"]);
+}
+
+#[test]
 fn flatpak_build_consumes_the_locked_offline_cargo_sources() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"))
         .parent()

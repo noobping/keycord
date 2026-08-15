@@ -8,6 +8,9 @@ cargo = find_program('cargo', required: false)
 flatpak_spawn = find_program('flatpak-spawn', required: false)
 shell = find_program('sh')
 gnome = import('gnome')
+i18n = import('i18n')
+
+subdir('po')
 
 cargo_variant = get_option('cargo_variant')
 cargo_features = get_option('cargo_features')
@@ -159,10 +162,19 @@ else
   lifecycle_metadata.set('MIME_TYPES', '')
 endif
 
-desktop_file = configure_file(
+desktop_template = configure_file(
   input: 'crates/keycord-lifecycle/data/keycord.desktop.in',
-  output: 'keycord.desktop',
+  output: 'keycord.desktop.in',
   configuration: lifecycle_metadata,
+)
+
+desktop_file = i18n.merge_file(
+  input: desktop_template,
+  output: 'io.github.noobping.keycord.desktop',
+  po_dir: 'po',
+  type: 'desktop',
+  install: true,
+  install_dir: join_paths(get_option('datadir'), 'applications'),
 )
 
 search_provider_file = configure_file(
@@ -212,12 +224,6 @@ install_data(
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps'),
 )
 
-install_data(
-  desktop_file,
-  rename: 'io.github.noobping.keycord.desktop',
-  install_dir: join_paths(get_option('datadir'), 'applications'),
-)
-
 if passkey
   install_data(
     'crates/keycord-passkey/data/io.github.noobping.keycord-passkey.xml',
@@ -243,9 +249,18 @@ install_data(
   install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas'),
 )
 
-install_data(
-  'crates/keycord-lifecycle/data/metainfo.xml',
-  rename: 'io.github.noobping.keycord.metainfo.xml',
+metainfo_template = configure_file(
+  input: 'crates/keycord-lifecycle/data/metainfo.xml',
+  output: 'keycord.metainfo.xml',
+  copy: true,
+)
+
+metainfo_file = i18n.merge_file(
+  input: metainfo_template,
+  output: 'io.github.noobping.keycord.metainfo.xml',
+  po_dir: 'po',
+  type: 'xml',
+  install: true,
   install_dir: join_paths(get_option('datadir'), 'metainfo'),
 )
 

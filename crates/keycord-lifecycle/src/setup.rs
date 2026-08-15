@@ -12,7 +12,8 @@ use std::{
 use std::sync::OnceLock;
 
 use crate::desktop::{
-    desktop_file, search_provider_file, search_provider_service_file, PasskeyMimeConfig,
+    desktop_file, search_provider_file, search_provider_service_file, with_desktop_localizations,
+    PasskeyMimeConfig,
 };
 
 #[cfg(feature = "ui")]
@@ -29,11 +30,13 @@ use keycord_shell::ui::append_action_row_with_button;
 #[derive(Clone, Copy, Debug)]
 pub struct InstallConfig {
     pub product_name: &'static str,
+    pub display_name: &'static str,
     pub product_description: &'static str,
     pub app_id: &'static str,
     pub gettext_domain: &'static str,
     pub locale_dir: &'static str,
     pub available_locales: &'static str,
+    pub localized_desktop_entry: &'static str,
     pub resource_id: &'static str,
     pub search_provider_bus_name: &'static str,
     pub search_provider_object_path: &'static str,
@@ -364,10 +367,11 @@ fn write_desktop_file(
     let contents = desktop_file(
         config.app_id,
         &bin_path.display().to_string(),
-        config.product_name,
+        config.display_name,
         config.product_description,
         config.passkey_mime,
     );
+    let contents = with_desktop_localizations(&contents, config.localized_desktop_entry);
 
     let file = apps_path.join(format!("{}.desktop", config.app_id));
     fs::write(&file, contents)?;
@@ -499,11 +503,13 @@ pub(crate) fn test_install_config() -> InstallConfig {
 
     InstallConfig {
         product_name: "keycord",
+        display_name: "Keycord",
         product_description: "Browse and edit password stores",
         app_id: "io.github.noobping.keycord",
         gettext_domain: "keycord",
         locale_dir: "",
         available_locales: "",
+        localized_desktop_entry: "[Desktop Entry]\nName=Keycord\nName[nl]=Sleutelkoord\n",
         resource_id: "/io/github/noobping/keycord",
         search_provider_bus_name: "io.github.noobping.keycord.SearchProvider",
         search_provider_object_path: "/io/github/noobping/keycord/SearchProvider",
@@ -539,6 +545,8 @@ fn install_outputs_use_supplied_passkey_mime_configuration() {
     let desktop = fs::read_to_string(applications.join("io.github.noobping.keycord.desktop"))
         .expect("read desktop file");
     assert!(desktop.contains("Exec=/tmp/keycord %f\n"));
+    assert!(desktop.contains("Name=Keycord\n"));
+    assert!(desktop.contains("Name[nl]=Sleutelkoord\n"));
     assert!(desktop.contains("MimeType=application/vnd.example.passkey+json;\n"));
     assert_eq!(
         fs::read_to_string(packages.join("io.github.noobping.keycord-passkey.xml"))

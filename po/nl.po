@@ -541,7 +541,7 @@ msgid ""
 "Choose how Keycord opens your data. Integrated is the default. Use Host to "
 "run your own command."
 msgstr ""
-"Kies hoe Keycord je gegevens opent. 'Integrated' is de standaard. Gebruik "
+"Kies hoe Sleutelkoord je gegevens opent. 'Integrated' is de standaard. Gebruik "
 "'Host' om je eigen opdracht uit te voeren."
 
 #: crates/keycord-preferences/data/window-page.fragment.ui:135
@@ -607,7 +607,7 @@ msgstr "Sluiten"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:46
 msgid "Close Keycord to install the update?"
-msgstr "Keycord sluiten om de update te installeren?"
+msgstr "Sleutelkoord sluiten om de update te installeren?"
 
 #: crates/keycord-runtime/src/command.rs:313
 msgid "Command input writer panicked."
@@ -1466,8 +1466,8 @@ msgid ""
 "Restart Keycord after granting access."
 msgstr ""
 "Experimentele met FIDO2 beveiligde privésleutels hebben USB-apparaattoegang "
-"nodig voordat Keycord een verbonden beveiligingssleutel kan gebruiken om "
-"beveiligde privésleutels te ontgrendelen. Start Keycord opnieuw nadat je "
+"nodig voordat Sleutelkoord een verbonden beveiligingssleutel kan gebruiken om "
+"beveiligde privésleutels te ontgrendelen. Start Sleutelkoord opnieuw nadat je "
 "toegang hebt gegeven."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
@@ -1477,7 +1477,7 @@ msgid ""
 "keys remain available without this."
 msgstr ""
 "Experimentele hardwaresleutelworkflows hebben PC/SC-toegang nodig om "
-"verbonden OpenPGP-smartcards of YubiKeys te gebruiken. Start Keycord daarna "
+"verbonden OpenPGP-smartcards of YubiKeys te gebruiken. Start Sleutelkoord daarna "
 "opnieuw. Met wachtwoord beveiligde sleutels blijven beschikbaar zonder dit."
 
 #: crates/keycord-stores/data/window-pages.fragment.ui:205
@@ -1570,7 +1570,7 @@ msgstr "FIDO2-privésleutelmanifest"
 msgid "FIDO2 private-key support is disabled in this build of Keycord."
 msgstr ""
 "Ondersteuning voor met FIDO2 beveiligde privésleutels is uitgeschakeld in "
-"deze build van Keycord."
+"deze build van Sleutelkoord."
 
 #: crates/keycord-fido/src/service.rs:339
 msgid "FIDO2 security key"
@@ -1578,7 +1578,7 @@ msgstr "FIDO2-beveiligingssleutel"
 
 #: crates/keycord-keys/src/fido2/disabled.rs:3
 msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "FIDO2-ondersteuning is uitgeschakeld in deze build van Keycord."
+msgstr "FIDO2-ondersteuning is uitgeschakeld in deze build van Sleutelkoord."
 
 #: crates/keycord-fido/src/envelope.rs:104
 msgid "FIDO2 text envelope"
@@ -1830,11 +1830,11 @@ msgstr "Kon de gedownloade update niet installeren: {error}"
 
 #: crates/keycord-lifecycle/src/search_provider.rs:265
 msgid "Failed to launch Keycord search result: {err}"
-msgstr "Kon het Keycord-zoekresultaat niet openen: {err}"
+msgstr "Kon het Sleutelkoord-zoekresultaat niet openen: {err}"
 
 #: crates/keycord-lifecycle/src/search_provider.rs:290
 msgid "Failed to launch Keycord search window: {err}"
-msgstr "Kon het Keycord-zoekvenster niet openen: {err}"
+msgstr "Kon het Sleutelkoord-zoekvenster niet openen: {err}"
 
 #: crates/keycord-git/src/audit.rs:237
 msgid ""
@@ -2215,7 +2215,7 @@ msgstr "Kon de Windows-bestandskiezer niet tonen: {err}"
 
 #: crates/keycord-lifecycle/src/search_provider.rs:356
 msgid "Failed to spawn Keycord: {err}"
-msgstr "Kon Keycord niet starten: {err}"
+msgstr "Kon Sleutelkoord niet starten: {err}"
 
 #: crates/keycord-runtime/src/worker.rs:27
 msgid "Failed to spawn background worker '{name}': {err}"
@@ -2560,7 +2560,7 @@ msgid ""
 "Grant host access first if you want Keycord to keep its private keys in step "
 "with your computer's GPG private keys."
 msgstr ""
-"Geef eerst hosttoegang als je wilt dat Keycord zijn privésleutels synchroon "
+"Geef eerst hosttoegang als je wilt dat Sleutelkoord zijn privésleutels synchroon "
 "houdt met de GPG-privésleutels van je computer."
 
 #: crates/keycord-preferences/src/ui/settings.rs:339
@@ -2861,7 +2861,7 @@ msgstr "Update installeren"
 #: crates/keycord-lifecycle/src/updater/common.rs:48
 msgid "Installing the update will close Keycord. Unsaved changes will be lost."
 msgstr ""
-"Door de update te installeren wordt Keycord gesloten. Niet-opgeslagen "
+"Door de update te installeren wordt Sleutelkoord gesloten. Niet-opgeslagen "
 "wijzigingen gaan verloren."
 
 #: crates/keycord-preferences/src/preferences.rs:47
@@ -2946,7 +2946,7 @@ msgid ""
 "Keep Keycord's private keys and your computer's GPG private keys in step "
 "when host access is available."
 msgstr ""
-"Houd de privésleutels van Keycord en de GPG-privésleutels van je computer "
+"Houd de privésleutels van Sleutelkoord en de GPG-privésleutels van je computer "
 "synchroon wanneer hosttoegang beschikbaar is."
 
 #: crates/keycord-stores/src/recipient_page.rs:143
@@ -3000,32 +3000,32 @@ msgstr "Sleutelwachtwoord"
 #: crates/keycord-shell/data/window.ui:38 crates/keycord-shell/data/window.ui:4
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
-msgstr "Keycord"
+msgstr "Sleutelkoord"
 
 #: crates/keycord-fido/src/service.rs:105
 msgid "Keycord FIDO2-protected private key"
-msgstr "Met FIDO2 beveiligde Keycord-privésleutel"
+msgstr "Met FIDO2 beveiligde Sleutelkoord-privésleutel"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
-msgstr "Keycord OpenPGP"
+msgstr "Sleutelkoord OpenPGP"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:37
 msgid "Keycord Update"
-msgstr "Keycord-update"
+msgstr "Sleutelkoord-update"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:271
 msgid "Keycord couldn't finish installing the downloaded Linux update."
 msgstr ""
-"Keycord kon de installatie van de gedownloade Linux-update niet voltooien."
+"Sleutelkoord kon de installatie van de gedownloade Linux-update niet voltooien."
 
 #: crates/keycord-passkey/src/ui.rs:186
 msgid "Keycord couldn't prepare the passkey item. {error}"
-msgstr "Keycord kon het passkeyitem niet voorbereiden. {error}"
+msgstr "Sleutelkoord kon het passkeyitem niet voorbereiden. {error}"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:43
 msgid "Keycord is already up to date."
-msgstr "Keycord is al bijgewerkt naar de nieuwste versie."
+msgstr "Sleutelkoord is al bijgewerkt naar de nieuwste versie."
 
 #: crates/keycord-lifecycle/data/metainfo.xml:31
 msgid ""
@@ -3033,7 +3033,7 @@ msgid ""
 "standard pass layout. Existing stores remain normal pass stores on disk, so "
 "they keep working with pass and other compatible tools."
 msgstr ""
-"Keycord is een adaptieve grafische client voor wachtwoordmappen met de "
+"Sleutelkoord is een adaptieve grafische client voor wachtwoordmappen met de "
 "standaardindeling van pass. Bestaande opslagen blijven gewone pass-opslagen "
 "op schijf en werken daardoor ook met pass en andere compatibele hulpmiddelen."
 
@@ -3044,10 +3044,10 @@ msgid ""
 "computer such as GPG, the Host backend, and pass import. If you don't, "
 "Keycord still works with the integrated backend."
 msgstr ""
-"Keycord draait in een beschermde omgeving, dus sommige optionele functies "
-"blijven uit totdat je dit toestaat. Als je dit toestaat, kan Keycord "
+"Sleutelkoord draait in een beschermde omgeving, dus sommige optionele functies "
+"blijven uit totdat je dit toestaat. Als je dit toestaat, kan Sleutelkoord "
 "hulpmiddelen van je computer gebruiken, zoals GPG, de backend 'Host' en "
-"'pass import'. Als je dat niet doet, werkt Keycord nog steeds met de backend "
+"'pass import'. Als je dat niet doet, werkt Sleutelkoord nog steeds met de backend "
 "'Integrated'."
 
 #: crates/keycord-passkey/src/ui.rs:125
@@ -3057,27 +3057,27 @@ msgid ""
 "that identity. Keycord does not yet generate CXP response archives, so no "
 "passkey data was released."
 msgstr ""
-"Keycord heeft een exportverzoek voor inloggegevens geopend waarin {importer} "
+"Sleutelkoord heeft een exportverzoek voor inloggegevens geopend waarin {importer} "
 "als importeur staat en heeft de structuur gecontroleerd. Het lokale bestand "
-"verifieert die identiteit niet. Keycord maakt nog geen CXP-"
+"verifieert die identiteit niet. Sleutelkoord maakt nog geen CXP-"
 "antwoordarchieven, dus er zijn geen passkeygegevens vrijgegeven."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:152
 msgid "Keycord update cleanup failed for '{}': {error}"
-msgstr "Opschonen van Keycord-update voor '{}' mislukt: {error}"
+msgstr "Opschonen van Sleutelkoord-update voor '{}' mislukt: {error}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:124
 msgid "Keycord update install failed: {error}"
-msgstr "Installatie van Keycord-update mislukt: {error}"
+msgstr "Installatie van Sleutelkoord-update mislukt: {error}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:168
 msgid "Keycord update restart failed for '{}': {error}"
-msgstr "Het opnieuw starten na de Keycord-update is mislukt voor '{}': {error}"
+msgstr "Het opnieuw starten na de Sleutelkoord-update is mislukt voor '{}': {error}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:162
 msgid "Keycord update restart skipped: no local executable directory found."
 msgstr ""
-"Opnieuw starten na de Keycord-update overgeslagen: geen lokale programmamap "
+"Opnieuw starten na de Sleutelkoord-update overgeslagen: geen lokale programmamap "
 "gevonden."
 
 #: crates/keycord-preferences/src/ui/settings.rs:288
@@ -3087,10 +3087,10 @@ msgid ""
 "Keycord will update the host too. Keys that only exist in Keycord may be "
 "removed during the first sync."
 msgstr ""
-"Keycord brengt eerst zijn lijst met privésleutels in overeenstemming met de "
+"Sleutelkoord brengt eerst zijn lijst met privésleutels in overeenstemming met de "
 "GPG-privésleutels op je computer. Daarna werkt het maken, importeren of "
-"verwijderen van een privésleutel in Keycord ook de host bij. Sleutels die "
-"alleen in Keycord bestaan, kunnen tijdens de eerste synchronisatie worden "
+"verwijderen van een privésleutel in Sleutelkoord ook de host bij. Sleutels die "
+"alleen in Sleutelkoord bestaan, kunnen tijdens de eerste synchronisatie worden "
 "verwijderd."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
@@ -3297,7 +3297,7 @@ msgstr "Beheer wachtwoordopslagen"
 #: crates/keycord-keys/src/store/storage.rs:48
 msgid "Managed hardware-key setup is disabled in this build of Keycord."
 msgstr ""
-"Beheerde installatie van hardwaresleutels is uitgeschakeld in deze Keycord-"
+"Beheerde installatie van hardwaresleutels is uitgeschakeld in deze Sleutelkoord-"
 "build."
 
 #: crates/keycord-keys/src/store/storage.rs:115
@@ -3317,7 +3317,7 @@ msgstr ""
 #: crates/keycord-keys/src/store/storage.rs:45
 msgid "Managed smartcard add/import is disabled in this build of Keycord."
 msgstr ""
-"Beheerd toevoegen/importeren van smartcards is uitgeschakeld in deze Keycord-"
+"Beheerd toevoegen/importeren van smartcards is uitgeschakeld in deze Sleutelkoord-"
 "build."
 
 #: crates/keycord-stores/src/host.rs:11
@@ -4684,7 +4684,7 @@ msgstr "Ondertekenaar staat niet in de ontvangerslijst van de branch"
 
 #: crates/keycord-git/src/audit_types.rs:97
 msgid "Signing key not available in Keycord"
-msgstr "Ondertekeningssleutel niet beschikbaar in Keycord"
+msgstr "Ondertekeningssleutel niet beschikbaar in Sleutelkoord"
 
 #: crates/keycord-git/src/integrated.rs:474
 #: crates/keycord-git/src/integrated.rs:485
@@ -5719,7 +5719,7 @@ msgstr "Je kunt veldwaarden nu als variabelen in zoeken gebruiken"
 
 #: crates/keycord-shell/data/window.ui:221
 msgid "_About Keycord"
-msgstr "_Over Keycord"
+msgstr "_Over Sleutelkoord"
 
 #: crates/keycord-entries/data/window-menu-items.fragment.ui:2
 msgid "_Add item"

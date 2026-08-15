@@ -2,8 +2,8 @@
 
 use super::{
     app_id, desktop_file, metadata, resources, search_provider_bus_name,
-    search_provider_object_path, translations, workspace_data, write_install_assets,
-    ApplicationBuildConfig, GETTEXT_DOMAIN, RESOURCE_ID,
+    search_provider_object_path, translations, workspace_data, write_if_changed,
+    write_install_assets, ApplicationBuildConfig, GETTEXT_DOMAIN, RESOURCE_ID,
 };
 
 pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
@@ -14,6 +14,7 @@ pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
     println!("cargo:rustc-env=APP_ID={app_id}");
     println!("cargo:rustc-env=RESOURCE_ID={RESOURCE_ID}");
     println!("cargo:rustc-env=GETTEXT_DOMAIN={GETTEXT_DOMAIN}");
+    println!("cargo:rustc-env=DISPLAY_NAME={}", config.display_name);
     println!("cargo:rustc-env=SEARCH_PROVIDER_BUS_NAME={search_provider_bus_name}");
     println!("cargo:rustc-env=SEARCH_PROVIDER_OBJECT_PATH={search_provider_object_path}");
 
@@ -43,6 +44,12 @@ pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
         config.package_version,
         &desktop_entry,
     );
+    let localized_desktop_entry =
+        translations::merge_desktop_translations(config.source_root, &desktop_entry);
+    write_if_changed(
+        &config.out_dir.join("keycord.desktop"),
+        &localized_desktop_entry,
+    );
     println!(
         "cargo:rustc-env=LOCALEDIR={}",
         config.out_dir.join("locale").display()
@@ -54,9 +61,7 @@ pub fn run_application_build(config: &ApplicationBuildConfig<'_>) {
             &config.source_root.join("crates/keycord-lifecycle/data"),
             app_id,
             config.package_name,
-            config.display_name,
-            config.package_description,
-            config.passkey_mime,
+            &localized_desktop_entry,
         )
         .expect("Can not build lifecycle install assets");
     }
