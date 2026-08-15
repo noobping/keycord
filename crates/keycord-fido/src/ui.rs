@@ -544,6 +544,7 @@ where
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 struct AccessPresentation {
     sensitive: bool,
+    show_generation_rows: bool,
     show_permission_row: bool,
     tooltip: Option<&'static str>,
 }
@@ -552,6 +553,7 @@ fn access_presentation(enabled: bool, access: Option<&UsbAccessPorts>) -> Access
     let Some(access) = access else {
         return AccessPresentation {
             sensitive: enabled,
+            show_generation_rows: enabled,
             show_permission_row: false,
             tooltip: (!enabled).then_some(BACKEND_REQUIRED_TOOLTIP),
         };
@@ -559,6 +561,7 @@ fn access_presentation(enabled: bool, access: Option<&UsbAccessPorts>) -> Access
 
     AccessPresentation {
         sensitive: enabled && access.usb_access_granted,
+        show_generation_rows: enabled && (access.usb_access_granted || !access.notice_hidden),
         show_permission_row: enabled && !access.usb_access_granted && !access.notice_hidden,
         tooltip: if !enabled {
             Some(BACKEND_REQUIRED_TOOLTIP)
@@ -582,6 +585,9 @@ pub fn sync_generation_access(
     for row in generation_rows {
         row.set_sensitive(presentation.sensitive);
         row.set_tooltip_text(tooltip.as_deref());
+        if !presentation.show_generation_rows {
+            row.set_visible(false);
+        }
     }
 
     if let Some(row) = find_named_action_row(group, USB_ACCESS_ROW_NAME) {
@@ -594,12 +600,13 @@ pub fn sync_generation_access(
     let Some(access) = access else {
         return;
     };
-    ensure_usb_access_row(group, overlay, access).set_visible(true);
+    ensure_usb_access_row(group, overlay, generation_rows, access).set_visible(true);
 }
 
 fn ensure_usb_access_row(
     group: &PreferencesGroup,
     overlay: &ToastOverlay,
+    generation_rows: &[&ActionRow],
     access: &UsbAccessPorts,
 ) -> ActionRow {
     let spec = OptionalPermissionRowSpec {
@@ -610,12 +617,20 @@ fn ensure_usb_access_row(
         copy_command: flatpak_usb_override_command(&access.app_id),
         command_context: USB_PERMISSION_CONTEXT,
     };
+    let generation_rows_for_hide = generation_rows
+        .iter()
+        .map(|row| (*row).clone())
+        .collect::<Vec<_>>();
     let ports = OptionalPermissionRowPorts {
         host_command_access: access.host_command_access,
         persist_hidden_notice: access.persist_hidden_notice.clone(),
         run_permission_command: access.run_permission_command.clone(),
         copy_text: access.copy_text.clone(),
-        on_hide: Rc::new(|| {}),
+        on_hide: Rc::new(move || {
+            for row in &generation_rows_for_hide {
+                row.set_visible(false);
+            }
+        }),
     };
     ensure_optional_permission_row(group, overlay, &spec, &ports)
 }
@@ -625,9 +640,12 @@ mod tests {
     use super::{
         access_presentation, flatpak_usb_override_args, flatpak_usb_override_command,
         generation_visible, pin_entry_error_message, pin_retry_prompt, pin_setup_error_message,
-        AccessPresentation, PinRetryPrompt,
+        AccessPresentation, PinRetryPrompt, UsbAccessPorts, BACKEND_REQUIRED_TOOLTIP,
+        PERMISSION_REQUIRED_TOOLTIP,
     };
     use crate::FidoErrorKind;
+    use std::rc::Rc;
+    use std::sync::Arc;
 
     #[test]
     fn generation_visibility_follows_workflow_and_capability_policy() {
@@ -680,11 +698,70 @@ mod tests {
             access_presentation(true, None),
             AccessPresentation {
                 sensitive: true,
+                show_generation_rows: true,
                 show_permission_row: false,
                 tooltip: None,
             }
         );
-        assert!(!access_presentation(false, None).sensitive);
+        assert_eq!(
+            access_presentation(false, None),
+            AccessPresentation {
+                sensitive: false,
+                show_generation_rows: false,
+                show_permission_row: false,
+                tooltip: Some(BACKEND_REQUIRED_TOOLTIP),
+            }
+        );
+    }
+
+    #[test]
+    fn dismissed_usb_notice_hides_generation_until_access_is_granted() {
+        let access = |usb_access_granted, notice_hidden| UsbAccessPorts {
+            app_id: "io.example.Keycord".to_string(),
+            usb_access_granted,
+            host_command_access: false,
+            notice_hidden,
+            persist_hidden_notice: Rc::new(|_| Ok(())),
+            run_permission_command: Arc::new(|| Ok(())),
+            copy_text: Rc::new(|_, _, _| true),
+        };
+
+        assert_eq!(
+            access_presentation(true, Some(&access(false, false))),
+            AccessPresentation {
+                sensitive: false,
+                show_generation_rows: true,
+                show_permission_row: true,
+                tooltip: Some(PERMISSION_REQUIRED_TOOLTIP),
+            }
+        );
+        assert_eq!(
+            access_presentation(true, Some(&access(false, true))),
+            AccessPresentation {
+                sensitive: false,
+                show_generation_rows: false,
+                show_permission_row: false,
+                tooltip: Some(PERMISSION_REQUIRED_TOOLTIP),
+            }
+        );
+        assert_eq!(
+            access_presentation(true, Some(&access(true, true))),
+            AccessPresentation {
+                sensitive: true,
+                show_generation_rows: true,
+                show_permission_row: false,
+                tooltip: None,
+            }
+        );
+        assert_eq!(
+            access_presentation(false, Some(&access(true, true))),
+            AccessPresentation {
+                sensitive: false,
+                show_generation_rows: false,
+                show_permission_row: false,
+                tooltip: Some(BACKEND_REQUIRED_TOOLTIP),
+            }
+        );
     }
 
     #[test]
