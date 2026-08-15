@@ -13,20 +13,23 @@ use keycord_shell::ui::{clear_box_children, navigation_stack_is_root};
 use keycord_stores::labels::{shortened_store_label_for_path, shortened_store_label_map};
 use std::collections::BTreeSet;
 
-fn render_password_list_store_filter(
-    filter_store_box: &GtkBox,
+fn included_password_list_store_roots(
+    store_roots: &[String],
+    stored_included: Option<&BTreeSet<String>>,
+) -> BTreeSet<String> {
+    let available = store_roots.iter().cloned().collect::<BTreeSet<_>>();
+    reconciled_included_filter_values(stored_included, &available)
+}
+
+pub(super) fn reconcile_password_list_store_filter(
     list: &ListBox,
     overlay: &ToastOverlay,
     ports: &EntryListUiPorts,
-) {
-    clear_box_children(filter_store_box);
-
-    let store_roots = (ports.preferences.store_roots)();
-    let available = store_roots.iter().cloned().collect::<BTreeSet<_>>();
-    let store_labels = shortened_store_label_map(&store_roots);
+    store_roots: &[String],
+) -> BTreeSet<String> {
     let stored_included = (ports.preferences.included_store_roots)()
         .map(|roots| roots.into_iter().collect::<BTreeSet<_>>());
-    let included = reconciled_included_filter_values(stored_included.as_ref(), &available);
+    let included = included_password_list_store_roots(store_roots, stored_included.as_ref());
     if stored_included
         .as_ref()
         .is_some_and(|stored| stored != &included)
@@ -40,6 +43,22 @@ fn render_password_list_store_filter(
     if let Some(controller) = search_controller_for_list(list) {
         controller.set_included_store_roots(list, included.clone());
     }
+
+    included
+}
+
+fn render_password_list_store_filter(
+    filter_store_box: &GtkBox,
+    list: &ListBox,
+    overlay: &ToastOverlay,
+    ports: &EntryListUiPorts,
+) {
+    clear_box_children(filter_store_box);
+
+    let store_roots = (ports.preferences.store_roots)();
+    let available = store_roots.iter().cloned().collect::<BTreeSet<_>>();
+    let store_labels = shortened_store_label_map(&store_roots);
+    let included = reconcile_password_list_store_filter(list, overlay, ports, &store_roots);
 
     for store_root in store_roots {
         let label = shortened_store_label_for_path(&store_root, &store_labels);
@@ -146,5 +165,26 @@ pub fn configure_password_list_store_filter(
                     &ports,
                 );
             });
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::included_password_list_store_roots;
+    use std::collections::BTreeSet;
+
+    #[test]
+    fn first_store_is_included_after_empty_initial_configuration() {
+        let first_store = "/tmp/personal".to_string();
+        let store_roots = vec![first_store.clone()];
+
+        assert_eq!(
+            included_password_list_store_roots(&store_roots, None),
+            BTreeSet::from([first_store.clone()])
+        );
+        assert_eq!(
+            included_password_list_store_roots(&store_roots, Some(&BTreeSet::new())),
+            BTreeSet::from([first_store])
+        );
     }
 }

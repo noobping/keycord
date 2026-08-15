@@ -16,6 +16,7 @@ use self::row::{
 };
 use self::search::{search_controller_for_list, SearchFilterController};
 pub use self::store_filter::configure_password_list_store_filter;
+use self::store_filter::reconcile_password_list_store_filter;
 use crate::model::{CollectItemsOptions, PassEntry};
 use crate::ui::actions::configure_password_save_button;
 use adw::glib::{self, Propagation};
@@ -332,13 +333,15 @@ pub fn load_passwords_async(
     let render_generation = start_password_list_render_cycle(list);
 
     prune_missing_store_dirs(ports);
-    let has_store_dirs = !(ports.preferences.stores)().is_empty();
+    let store_roots = (ports.preferences.store_roots)();
+    let has_store_dirs = !store_roots.is_empty();
     let sort_mode =
         (ports.preferences.sort_mode)().render_mode(password_list_search_is_active(list));
-    let store_labels = Rc::new(shortened_store_label_map(&(ports.preferences.store_roots)()));
+    let store_labels = Rc::new(shortened_store_label_map(&store_roots));
     if let Some(controller) = search_controller_for_list(list) {
         controller.begin_reload(has_store_dirs);
     }
+    reconcile_password_list_store_filter(list, overlay, ports, &store_roots);
     let git_available = has_host_permission();
     log_store_git_state(ports);
 
