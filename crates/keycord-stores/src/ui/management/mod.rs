@@ -2,7 +2,6 @@ mod clone;
 mod import;
 
 use self::clone::append_store_clone_row;
-#[cfg(target_os = "linux")]
 pub use self::clone::prompt_store_clone;
 pub use self::import::{
     initialize_store_import_page, schedule_store_import_row, StoreImportPageState,
