@@ -223,13 +223,15 @@ pub fn choose_local_save_file_path(
     title: &str,
     accept_label: &str,
     initial_name: &str,
-    extension: &str,
+    file_type: (&str, &str),
     overlay: &ToastOverlay,
     on_selected: impl Fn(String) + 'static,
 ) {
+    let (file_type_label, extension) = file_type;
+
     #[cfg(target_os = "linux")]
     {
-        let _ = extension;
+        let _ = (file_type_label, extension);
         let dialog = FileDialog::builder()
             .title(gettext(title))
             .accept_label(gettext(accept_label))
@@ -258,7 +260,13 @@ pub fn choose_local_save_file_path(
     #[cfg(target_os = "windows")]
     {
         let _ = window;
-        match choose_windows_save_path(title, accept_label, initial_name, extension) {
+        match choose_windows_save_path(
+            title,
+            accept_label,
+            initial_name,
+            file_type_label,
+            extension,
+        ) {
             Ok(Some(path)) => on_selected(path),
             Ok(None) => {}
             Err(err) => {
@@ -269,11 +277,18 @@ pub fn choose_local_save_file_path(
     }
 }
 
+#[cfg(any(target_os = "windows", test))]
+fn save_file_type_spec(file_type_label: &str, extension: &str) -> (String, String) {
+    let pattern = format!("*.{extension}");
+    (format!("{file_type_label} ({pattern})"), pattern)
+}
+
 #[cfg(target_os = "windows")]
 fn choose_windows_save_path(
     title: &str,
     accept_label: &str,
     initial_name: &str,
+    file_type_label: &str,
     extension: &str,
 ) -> Result<Option<String>, String> {
     let _com = w::CoInitializeEx(co::COINIT::APARTMENTTHREADED)
@@ -300,6 +315,14 @@ fn choose_windows_save_path(
     dialog
         .SetOkButtonLabel(accept_label)
         .map_err(|err| format!("Failed to set the Windows save-file picker button label: {err}"))?;
+    let (file_type_description, file_type_pattern) =
+        save_file_type_spec(file_type_label, extension);
+    dialog
+        .SetFileTypes(&[(file_type_description.as_str(), file_type_pattern.as_str())])
+        .map_err(|err| format!("Failed to set the Windows save-file types: {err}"))?;
+    dialog
+        .SetFileTypeIndex(1)
+        .map_err(|err| format!("Failed to select the Windows save-file type: {err}"))?;
     dialog
         .SetFileName(initial_name)
         .map_err(|err| format!("Failed to set the Windows save-file name: {err}"))?;
@@ -391,7 +414,15 @@ pub fn choose_file_bytes(
 
 #[cfg(test)]
 mod tests {
-    use super::LocalPathKind;
+    use super::{save_file_type_spec, LocalPathKind};
+
+    #[test]
+    fn save_file_type_spec_includes_label_and_extension() {
+        assert_eq!(
+            save_file_type_spec("CSV files", "csv"),
+            ("CSV files (*.csv)".to_string(), "*.csv".to_string())
+        );
+    }
 
     #[test]
     fn local_path_messages_match_the_selection_kind() {

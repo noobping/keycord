@@ -50,7 +50,7 @@ impl EntryToolsState {
             "Export passwords",
             "Export",
             EXPORT_FILE_NAME,
-            "csv",
+            ("CSV files", "csv"),
             &self.overlay,
             move |path| state.start_password_export(path),
         );
