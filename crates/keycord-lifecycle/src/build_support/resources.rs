@@ -215,7 +215,14 @@ fn read_composed_window_ui(source_root: &Path) -> Result<String, String> {
 }
 
 fn compose_window_ui(skeleton: &str, fragments: &[(&str, String)]) -> Result<String, String> {
-    compose_marked_fragments(skeleton, WINDOW_UI_FRAGMENT_NAMESPACE, fragments)
+    let composed = compose_marked_fragments(skeleton, WINDOW_UI_FRAGMENT_NAMESPACE, fragments)?;
+    let document = roxmltree::Document::parse(&composed)
+        .map_err(|err| format!("composed window UI is not well-formed XML: {err}"))?;
+    if !document.root_element().has_tag_name("interface") {
+        return Err("composed window UI root must be <interface>".to_string());
+    }
+
+    Ok(composed)
 }
 
 fn with_translation_domain(source: String, gettext_domain: &str) -> String {
@@ -385,16 +392,25 @@ mod tests {
 
     #[test]
     fn window_ui_fragments_are_inserted_in_marker_order() {
-        let skeleton = "before\n  <!-- keycord-window-fragment:first -->\nmiddle\n<!-- keycord-window-fragment:second -->\nafter\n";
+        let skeleton = "<interface>\n  <!-- keycord-window-fragment:first -->\n  <middle />\n  <!-- keycord-window-fragment:second -->\n</interface>\n";
         let fragments = [
-            ("first", "first fragment\n".to_string()),
-            ("second", "second fragment\n".to_string()),
+            ("first", "  <first />\n".to_string()),
+            ("second", "  <second />\n".to_string()),
         ];
 
         assert_eq!(
             compose_window_ui(skeleton, &fragments).unwrap(),
-            "before\nfirst fragment\nmiddle\nsecond fragment\nafter\n"
+            "<interface>\n  <first />\n  <middle />\n  <second />\n</interface>\n"
         );
+    }
+
+    #[test]
+    fn window_ui_composition_rejects_mismatched_xml_tags() {
+        let skeleton = "<interface>\n<!-- keycord-window-fragment:broken -->\n</interface>\n";
+        let err = compose_window_ui(skeleton, &[("broken", "<property></child>\n".to_string())])
+            .expect_err("mismatched XML tags must fail composition");
+
+        assert!(err.contains("not well-formed XML"));
     }
 
     #[test]
@@ -442,14 +458,14 @@ mod tests {
         let translatable = translatable_text_values(&composed);
 
         // Captured from the single Shell-owned template immediately before it was split.
-        assert_eq!((ids.len(), fnv1a(&ids)), (218, 18_383_675_735_159_309_518));
+        assert_eq!((ids.len(), fnv1a(&ids)), (221, 310_705_445_291_682_508));
         assert_eq!(
             (actions.len(), fnv1a(&actions)),
             (22, 11_318_150_571_725_618_109)
         );
         assert_eq!(
             (translatable.len(), fnv1a(&translatable)),
-            (211, 12_225_990_844_024_775_634)
+            (213, 135_236_841_047_613_721)
         );
     }
 }
