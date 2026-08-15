@@ -8,7 +8,7 @@ pub(super) fn merge_workspace_data(source_root: &Path) -> io::Result<()> {
     let crates_dir = source_root.join("crates");
     let destination_root = source_root.join("data");
     fs::create_dir_all(&destination_root)?;
-    remove_legacy_owner_directories(&destination_root)?;
+    remove_legacy_wrapper_directories(&destination_root)?;
 
     for crate_dir in sorted_directory_entries(&crates_dir)? {
         if !crate_dir.file_type()?.is_dir() {
@@ -23,16 +23,16 @@ pub(super) fn merge_workspace_data(source_root: &Path) -> io::Result<()> {
             Err(error) => return Err(error),
         }
 
-        merge_directory(&source_data, &destination_root)?;
+        merge_crate_data(&source_data, &destination_root)?;
     }
 
     Ok(())
 }
 
-fn remove_legacy_owner_directories(destination_root: &Path) -> io::Result<()> {
+fn remove_legacy_wrapper_directories(destination_root: &Path) -> io::Result<()> {
     for entry in sorted_directory_entries(destination_root)? {
         let name = entry.file_name();
-        if !name.to_string_lossy().starts_with("keycord-") {
+        if name != "branding" && !name.to_string_lossy().starts_with("keycord-") {
             continue;
         }
 
@@ -44,7 +44,19 @@ fn remove_legacy_owner_directories(destination_root: &Path) -> io::Result<()> {
     Ok(())
 }
 
+fn merge_crate_data(source: &Path, destination: &Path) -> io::Result<()> {
+    merge_directory_contents(source, destination, true)
+}
+
 fn merge_directory(source: &Path, destination: &Path) -> io::Result<()> {
+    merge_directory_contents(source, destination, false)
+}
+
+fn merge_directory_contents(
+    source: &Path,
+    destination: &Path,
+    flatten_branding: bool,
+) -> io::Result<()> {
     ensure_directory(destination)?;
 
     for entry in sorted_directory_entries(source)? {
@@ -53,7 +65,11 @@ fn merge_directory(source: &Path, destination: &Path) -> io::Result<()> {
         let file_type = entry.file_type()?;
 
         if file_type.is_dir() {
-            merge_directory(&source_path, &destination_path)?;
+            if flatten_branding && entry.file_name() == "branding" {
+                merge_directory(&source_path, destination)?;
+            } else {
+                merge_directory(&source_path, &destination_path)?;
+            }
         } else if file_type.is_file() {
             copy_file_if_changed(&source_path, &destination_path)?;
         } else {
@@ -151,6 +167,14 @@ mod tests {
             root.join("crates/keycord-beta/data/symbolic/apps/beta.svg"),
             b"beta icon",
         );
+        write(
+            root.join("crates/keycord-alpha/data/branding/scalable/apps/app.svg"),
+            b"application icon",
+        );
+        write(
+            root.join("crates/keycord-alpha/data/branding/keycord.ico"),
+            b"windows icon",
+        );
 
         merge_workspace_data(&root).expect("merge workspace data");
 
@@ -163,6 +187,15 @@ mod tests {
             fs::read(root.join("data/symbolic/apps/beta.svg")).unwrap(),
             b"beta icon"
         );
+        assert_eq!(
+            fs::read(root.join("data/scalable/apps/app.svg")).unwrap(),
+            b"application icon"
+        );
+        assert_eq!(
+            fs::read(root.join("data/keycord.ico")).unwrap(),
+            b"windows icon"
+        );
+        assert!(!root.join("data/branding").exists());
         assert!(!root.join("data/keycord-alpha").exists());
         assert!(!root.join("data/keycord-beta").exists());
 
@@ -219,12 +252,13 @@ mod tests {
     }
 
     #[test]
-    fn legacy_owner_directories_are_removed_without_touching_root_files() {
+    fn legacy_wrapper_directories_are_removed_without_touching_root_files() {
         let root = temporary_directory("workspace-data-legacy-owner");
         write(root.join("crates/keycord-alpha/data/alpha.txt"), b"alpha");
         write(root.join("crates/keycord-beta/data/beta.txt"), b"beta");
         write(root.join("data/keycord-alpha/stale.txt"), b"stale alpha");
         write(root.join("data/keycord-beta/stale.txt"), b"stale beta");
+        write(root.join("data/branding/stale.txt"), b"stale branding");
         write(root.join("data/keycord-search-provider.ini"), b"root file");
         write(root.join("data/resources.xml"), b"root owned");
 
@@ -232,6 +266,7 @@ mod tests {
 
         assert!(!root.join("data/keycord-alpha").exists());
         assert!(!root.join("data/keycord-beta").exists());
+        assert!(!root.join("data/branding").exists());
         assert_eq!(fs::read(root.join("data/alpha.txt")).unwrap(), b"alpha");
         assert_eq!(fs::read(root.join("data/beta.txt")).unwrap(), b"beta");
         assert_eq!(
