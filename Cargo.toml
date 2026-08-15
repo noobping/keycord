@@ -30,7 +30,7 @@ resolver = "2"
 
 [workspace.package]
 authors = ["noobping <hello@noobping.dev>"]
-version = "0.9.12"
+version = "0.9.13"
 edition = "2021"
 license = "GPL-3.0-only"
 homepage = "https://github.com/noobping/keycord"
@@ -74,6 +74,7 @@ flatpak = [
     "audit",
     "smartcard",
     "logging",
+    "passkey",
     "keycord-preferences/flatpak",
     "keycord-git/flatpak",
     "keycord-lifecycle/flatpak",
