@@ -35,8 +35,7 @@ You can translate Keycord using [weblate](https://hosted.weblate.org/projects/ke
 
 ## Development
 
-The root package is the application composition layer; implementation is split into focused
-subject crates. See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and dependency rules.
+The root package is the application composition layer; implementation is split into subject crates. See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and dependency rules.
 
 Package names differ by distribution. This project was tested with Fedora packages:
 
