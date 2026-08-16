@@ -35,7 +35,7 @@ Shell runtime dependency.
 Branding is split at the packaging boundary. Lifecycle owns installed/build artifacts such as app
 icons, metadata, desktop files, and installers. Shell owns the product name, subtitle, About label,
 and stable icon-name reference rendered by its in-app window chrome; `APP_WINDOW_TITLE` is that
-presentation contract, not a second installed branding asset.
+presentation contract.
 
 Each UI-owning crate also loads its fragment into a subject widget bundle and owns that bundle's
 focus, search, shortcut, and page-presentation policy. The root `WindowWidgets` value is only an
