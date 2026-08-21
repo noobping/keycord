@@ -425,17 +425,17 @@ impl Preferences {
         )
     }
 
-    pub fn translation_help_notification_shown(&self) -> bool {
+    pub fn translation_help_notification_sent(&self) -> bool {
         self.read_preference(
-            |settings| settings.boolean("translation-help-notification-shown"),
-            |cfg| cfg.translation_help_notification_shown.unwrap_or(false),
+            |settings| settings.boolean("translation-help-notification-sent"),
+            |cfg| cfg.translation_help_notification_sent.unwrap_or(false),
         )
     }
 
-    pub fn set_translation_help_notification_shown(&self, shown: bool) -> Result<(), BoolError> {
+    pub fn set_translation_help_notification_sent(&self, sent: bool) -> Result<(), BoolError> {
         self.write_preference(
-            |settings| settings.set_boolean("translation-help-notification-shown", shown),
-            |cfg| cfg.translation_help_notification_shown = Some(shown),
+            |settings| settings.set_boolean("translation-help-notification-sent", sent),
+            |cfg| cfg.translation_help_notification_sent = Some(sent),
         )
     }
 
@@ -766,9 +766,9 @@ mod tests {
     }
 
     #[test]
-    fn translation_help_notification_defaults_to_not_shown() {
+    fn translation_help_notification_defaults_to_not_sent() {
         assert_eq!(
-            crate::storage::PreferenceFile::default().translation_help_notification_shown,
+            crate::storage::PreferenceFile::default().translation_help_notification_sent,
             None
         );
     }
