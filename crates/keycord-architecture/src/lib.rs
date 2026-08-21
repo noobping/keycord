@@ -1600,14 +1600,16 @@ fn fragment_registry(source: &str, constant: &str) -> Option<Vec<(String, String
         .find("];")
         .map(|offset| array_start + offset)?;
     let values = quoted_values(&source[array_start..array_end]);
-    if !values.chunks_exact(2).remainder().is_empty() {
+    let (pairs, remainder) = values.as_chunks::<2>();
+    if !remainder.is_empty() {
         return None;
     }
-    let mut registry = Vec::new();
-    for pair in values.chunks_exact(2) {
-        registry.push((pair[0].clone(), pair[1].clone()));
-    }
-    Some(registry)
+    Some(
+        pairs
+            .iter()
+            .map(|[first, second]| (first.clone(), second.clone()))
+            .collect(),
+    )
 }
 
 fn extract_after(source: &str, prefix: &str) -> BTreeSet<String> {
