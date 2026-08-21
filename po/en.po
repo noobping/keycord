@@ -1549,7 +1549,7 @@ msgstr "Failed to secure Linux update staging root '{}': {error}"
 msgid "Failed to select the Windows save-file type: {err}"
 msgstr "Failed to select the Windows save-file type: {err}"
 
-#: crates/keycord-preferences/src/storage.rs:54
+#: crates/keycord-preferences/src/storage.rs:55
 msgid "Failed to serialize config: {e}"
 msgstr "Failed to serialize config: {e}"
 
@@ -1617,7 +1617,7 @@ msgstr "Failed to wait for command: {error}"
 msgid "Failed to write command input: {error}"
 msgstr "Failed to write command input: {error}"
 
-#: crates/keycord-preferences/src/storage.rs:57
+#: crates/keycord-preferences/src/storage.rs:58
 msgid "Failed to write config file: {e}"
 msgstr "Failed to write config file: {e}"
 
@@ -1820,6 +1820,10 @@ msgstr "Hardware key added."
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
 msgid "Hardware key admin PIN"
 msgstr "Hardware key admin PIN"
+
+#: src/translation_help.rs:42
+msgid "Help translate Keycord"
+msgstr "Help translate Keycord"
 
 #: crates/keycord-shell/src/ui.rs:899
 msgid "Hide permanently"
@@ -2665,6 +2669,10 @@ msgstr "Open Preferences to add a store folder."
 #: crates/keycord-entries/src/file/url.rs:33
 msgid "Open URL"
 msgstr "Open URL"
+
+#: src/translation_help.rs:46
+msgid "Open Weblate"
+msgstr "Open Weblate"
 
 #: crates/keycord-git/data/window-audit-page.fragment.ui:20
 msgid "Open a Git-backed store to inspect branches and commits."
@@ -3980,6 +3988,10 @@ msgstr "Touch your key if it blinks."
 msgid "Translate"
 msgstr "Translate"
 
+#: src/translation_help.rs:44
+msgid "Translate Keycord into a new language or help improve an existing translation on Weblate."
+msgstr "Translate Keycord into a new language or help improve an existing translation on Weblate."
+
 #: src/main.rs:85
 msgid "Translated by Nick."
 msgstr "Translated by Nick."
@@ -4641,7 +4653,7 @@ msgstr "password generation"
 msgid "password list sort"
 msgstr "password list sort"
 
-#: crates/keycord-preferences/src/storage.rs:44
+#: crates/keycord-preferences/src/storage.rs:45
 msgid "preferences file"
 msgstr "preferences file"
 
