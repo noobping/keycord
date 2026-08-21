@@ -3,9 +3,11 @@ use adw::prelude::*;
 use adw::{ApplicationWindow, ComboRow, Dialog, EntryRow, PreferencesGroup, PreferencesPage};
 use keycord_runtime::i18n::gettext;
 use keycord_shell::actions::register_window_action;
+use keycord_shell::filters::reconciled_included_filter_values;
 use keycord_shell::ui::{connect_entry_row_apply_button_to_nonempty_text, dialog_content_shell};
 use keycord_stores::labels::shortened_store_labels;
 use std::cell::RefCell;
+use std::collections::BTreeSet;
 use std::rc::Rc;
 
 #[derive(Clone)]
@@ -16,10 +18,14 @@ pub struct NewPasswordDialogState {
     pub error_label: Label,
     pub store_roots: Rc<RefCell<Vec<String>>>,
     store_roots_source: Rc<dyn Fn() -> Vec<String>>,
+    included_store_roots_source: Rc<dyn Fn() -> Option<Vec<String>>>,
 }
 
 impl NewPasswordDialogState {
-    pub fn new(store_roots_source: impl Fn() -> Vec<String> + 'static) -> Self {
+    pub fn new(
+        store_roots_source: impl Fn() -> Vec<String> + 'static,
+        included_store_roots_source: impl Fn() -> Option<Vec<String>> + 'static,
+    ) -> Self {
         let (dialog, store_dropdown, path_entry, error_label) = build_new_password_dialog();
         Self {
             dialog,
@@ -28,6 +34,7 @@ impl NewPasswordDialogState {
             error_label,
             store_roots: Rc::new(RefCell::new(Vec::new())),
             store_roots_source: Rc::new(store_roots_source),
+            included_store_roots_source: Rc::new(included_store_roots_source),
         }
     }
 }
@@ -98,8 +105,26 @@ fn selected_store_position(stores: &[String], selected: Option<&str>) -> u32 {
         .unwrap_or(INVALID_LIST_POSITION)
 }
 
+fn filtered_new_password_store_roots(
+    stores: &[String],
+    stored_included: Option<&[String]>,
+) -> Vec<String> {
+    let available = stores.iter().cloned().collect::<BTreeSet<_>>();
+    let stored_included =
+        stored_included.map(|roots| roots.iter().cloned().collect::<BTreeSet<_>>());
+    let included = reconciled_included_filter_values(stored_included.as_ref(), &available);
+
+    stores
+        .iter()
+        .filter(|store| included.contains(*store))
+        .cloned()
+        .collect()
+}
+
 pub fn sync_new_password_store_selector(state: &NewPasswordDialogState) {
-    let stores = (state.store_roots_source)();
+    let configured_stores = (state.store_roots_source)();
+    let stored_included = (state.included_store_roots_source)();
+    let stores = filtered_new_password_store_roots(&configured_stores, stored_included.as_deref());
     let labels = shortened_store_labels(&stores);
     let selected = selected_new_password_store(state);
     state.store_roots.borrow_mut().clone_from(&stores);
@@ -149,7 +174,9 @@ pub fn clear_new_password_dialog_error(state: &NewPasswordDialogState) {
 
 #[cfg(test)]
 mod tests {
-    use super::{resolve_selected_store, selected_store_position};
+    use super::{
+        filtered_new_password_store_roots, resolve_selected_store, selected_store_position,
+    };
     use adw::gtk::INVALID_LIST_POSITION;
 
     #[test]
@@ -175,5 +202,37 @@ mod tests {
         assert_eq!(selected_store_position(&stores, None), 0);
         assert_eq!(selected_store_position(&stores, Some("/missing/store")), 0);
         assert_eq!(selected_store_position(&[], None), INVALID_LIST_POSITION);
+    }
+
+    #[test]
+    fn new_password_stores_follow_the_store_filter_in_configured_order() {
+        let stores = vec![
+            "personal".to_string(),
+            "work".to_string(),
+            "shared".to_string(),
+        ];
+        let included = vec!["shared".to_string(), "work".to_string()];
+
+        assert_eq!(
+            filtered_new_password_store_roots(&stores, Some(&included)),
+            vec!["work".to_string(), "shared".to_string()]
+        );
+    }
+
+    #[test]
+    fn unusable_store_filters_fall_back_to_all_stores() {
+        let stores = vec!["personal".to_string(), "work".to_string()];
+        let empty = Vec::new();
+        let stale = vec!["missing".to_string()];
+
+        assert_eq!(filtered_new_password_store_roots(&stores, None), stores);
+        assert_eq!(
+            filtered_new_password_store_roots(&stores, Some(&empty)),
+            stores
+        );
+        assert_eq!(
+            filtered_new_password_store_roots(&stores, Some(&stale)),
+            stores
+        );
     }
 }

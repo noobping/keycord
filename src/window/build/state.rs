@@ -25,7 +25,10 @@ use std::rc::Rc;
 use std::sync::Arc;
 
 pub(super) fn new_password_dialog_state(_widgets: &WindowWidgets) -> NewPasswordDialogState {
-    NewPasswordDialogState::new(|| Preferences::new().store_roots())
+    NewPasswordDialogState::new(
+        || Preferences::new().store_roots(),
+        || Preferences::new().filter_included_store_roots(),
+    )
 }
 
 pub(super) fn password_page_state(

@@ -122,7 +122,7 @@ msgstr "Add a store to use pass import."
 msgid "Add a store with a Git repository to inspect history here."
 msgstr "Add a store with a Git repository to inspect history here."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:187
+#: crates/keycord-lifecycle/data/metainfo.xml:186
 msgid "Add advanced search"
 msgstr "Add advanced search"
 
@@ -147,19 +147,19 @@ msgstr "Add at least one recipient to keep saving changes."
 msgid "Add at least one remote before syncing."
 msgstr "Add at least one remote before syncing."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:158
+#: crates/keycord-lifecycle/data/metainfo.xml:157
 msgid "Add documentation"
 msgstr "Add documentation"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:36
+#: crates/keycord-lifecycle/data/metainfo.xml:35
 msgid "Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend"
 msgstr "Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:145
+#: crates/keycord-lifecycle/data/metainfo.xml:144
 msgid "Add experimental FIDO2 support"
 msgstr "Add experimental FIDO2 support"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:167
+#: crates/keycord-lifecycle/data/metainfo.xml:166
 msgid "Add experimental OpenPGP hardware key support for private keys"
 msgstr "Add experimental OpenPGP hardware key support for private keys"
 
@@ -181,7 +181,7 @@ msgstr "Add item"
 msgid "Add missing fields"
 msgstr "Add missing fields"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:188
+#: crates/keycord-lifecycle/data/metainfo.xml:187
 msgid "Add optional GPG synchronization"
 msgstr "Add optional GPG synchronization"
 
@@ -208,11 +208,11 @@ msgstr "Add password store Git remote"
 msgid "Add remote"
 msgstr "Add remote"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:159
+#: crates/keycord-lifecycle/data/metainfo.xml:158
 msgid "Add search provider"
 msgstr "Add search provider"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:176
+#: crates/keycord-lifecycle/data/metainfo.xml:175
 msgid "Add the option to copy the logs"
 msgstr "Add the option to copy the logs"
 
@@ -224,39 +224,39 @@ msgstr "Add the passkey for {username} on {rp_id} to your default pass store? Yo
 msgid "Add to app menu"
 msgstr "Add to app menu"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:186
+#: crates/keycord-lifecycle/data/metainfo.xml:185
 msgid "Add tools page"
 msgstr "Add tools page"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:90
+#: crates/keycord-lifecycle/data/metainfo.xml:89
 msgid "Added CSV export for moving data to other tools."
 msgstr "Added CSV export for moving data to other tools."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:114
+#: crates/keycord-lifecycle/data/metainfo.xml:113
 msgid "Added Git history inspection with commit verification details."
 msgstr "Added Git history inspection with commit verification details."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:88
+#: crates/keycord-lifecycle/data/metainfo.xml:87
 msgid "Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands."
 msgstr "Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:89
+#: crates/keycord-lifecycle/data/metainfo.xml:88
 msgid "Added entry filtering by password store and remembered history-inspection filters."
 msgstr "Added entry filtering by password store and remembered history-inspection filters."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:131
+#: crates/keycord-lifecycle/data/metainfo.xml:130
 msgid "Added experimental FIDO2 guides and progress indicators."
 msgstr "Added experimental FIDO2 guides and progress indicators."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:123
+#: crates/keycord-lifecycle/data/metainfo.xml:122
 msgid "Added experimental FIDO2-protected OpenPGP keys."
 msgstr "Added experimental FIDO2-protected OpenPGP keys."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:111
+#: crates/keycord-lifecycle/data/metainfo.xml:110
 msgid "Added folder-specific recipient editing for .gpg-id files."
 msgstr "Added folder-specific recipient editing for .gpg-id files."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:98
+#: crates/keycord-lifecycle/data/metainfo.xml:97
 msgid "Added hybrid sorting mode"
 msgstr "Added hybrid sorting mode"
 
@@ -293,6 +293,10 @@ msgstr "App runtime: debug={}, flatpak={}, logging={}, host-access={}."
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
 msgid "Apply template"
 msgstr "Apply template"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "Apply the filter when creating new pass files."
 
 #: crates/keycord-git/src/audit_disabled.rs:10
 #: crates/keycord-git/src/audit_disabled.rs:20
@@ -398,7 +402,7 @@ msgstr "Can't undo the last change."
 msgid "Cancel"
 msgstr "Cancel"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:138
+#: crates/keycord-lifecycle/data/metainfo.xml:137
 msgid "Change the default to use the filename as the username."
 msgstr "Change the default to use the filename as the username."
 
@@ -406,7 +410,7 @@ msgstr "Change the default to use the filename as the username."
 msgid "Changed paths"
 msgstr "Changed paths"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:178
+#: crates/keycord-lifecycle/data/metainfo.xml:177
 msgid "Changed the app icon to a keycord"
 msgstr "Changed the app icon to a keycord"
 
@@ -1092,7 +1096,7 @@ msgstr "Couldn't verify the requested hardware key PIN"
 msgid "Create a new FIDO2-protected key."
 msgstr "Create a new FIDO2-protected key."
 
-#: crates/keycord-entries/src/ui/new_item.rs:68
+#: crates/keycord-entries/src/ui/new_item.rs:75
 msgid "Create a new pass file."
 msgstr "Create a new pass file."
 
@@ -1179,7 +1183,7 @@ msgstr "Documentation"
 msgid "Downloaded"
 msgstr "Downloaded"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:63
+#: crates/keycord-lifecycle/data/metainfo.xml:62
 msgid "Edit a password entry"
 msgstr "Edit a password entry"
 
@@ -1341,7 +1345,7 @@ msgstr "Escape"
 msgid "Exec=/tmp/keycord %f"
 msgstr "Exec=/tmp/keycord %f"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:168
+#: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Expand the password editor with cleanup actions"
 
@@ -2168,31 +2172,31 @@ msgstr "Find item"
 msgid "Find weak passwords"
 msgstr "Find weak passwords"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:38
+#: crates/keycord-lifecycle/data/metainfo.xml:37
 msgid "Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV"
 msgstr "Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:200
+#: crates/keycord-lifecycle/data/metainfo.xml:199
 msgid "First release"
 msgstr "First release"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:152
+#: crates/keycord-lifecycle/data/metainfo.xml:151
 msgid "Fix back icon"
 msgstr "Fix back icon"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:177
+#: crates/keycord-lifecycle/data/metainfo.xml:176
 msgid "Fix optional Git synchronization"
 msgstr "Fix optional Git synchronization"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:130
+#: crates/keycord-lifecycle/data/metainfo.xml:129
 msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
 msgstr "Fixed OTP bug where valid secrets were incorrectly invalidated."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:99
+#: crates/keycord-lifecycle/data/metainfo.xml:98
 msgid "Fixed permissions for smartcards"
 msgstr "Fixed permissions for smartcards"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:105
+#: crates/keycord-lifecycle/data/metainfo.xml:104
 msgid "Fixed the GNOME search provider."
 msgstr "Fixed the GNOME search provider."
 
@@ -2469,10 +2473,6 @@ msgstr "Import key from clipboard"
 msgid "Import passkey?"
 msgstr "Import passkey?"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:35
-msgid "Import passkeys and open local credential-exchange requests"
-msgstr "Import passkeys and open local credential-exchange requests"
-
 #: crates/keycord-stores/data/window-pages.fragment.ui:68
 msgid "Import password (optional)"
 msgstr "Import password (optional)"
@@ -2513,15 +2513,15 @@ msgstr "Importing key"
 msgid "Importing passwords"
 msgstr "Importing passwords"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:91
+#: crates/keycord-lifecycle/data/metainfo.xml:90
 msgid "Improved header actions and hid filters when they cannot affect the current view."
 msgstr "Improved header actions and hid filters when they cannot affect the current view."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:112
+#: crates/keycord-lifecycle/data/metainfo.xml:111
 msgid "Improved recipient selection when a store has many possible keys."
 msgstr "Improved recipient selection when a store has many possible keys."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:115
+#: crates/keycord-lifecycle/data/metainfo.xml:114
 msgid "Improved search, filtering, keyboard navigation, and entry editing."
 msgstr "Improved search, filtering, keyboard navigation, and entry editing."
 
@@ -2545,7 +2545,7 @@ msgstr "Inspect Git history across stores and verify commit signatures."
 msgid "Inspect change history"
 msgstr "Inspect change history"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:75
+#: crates/keycord-lifecycle/data/metainfo.xml:74
 msgid "Inspect change history and verify commits"
 msgstr "Inspect change history and verify commits"
 
@@ -2969,15 +2969,15 @@ msgstr "Malformed Git signature header."
 msgid "Malformed or unsupported signature"
 msgstr "Malformed or unsupported signature"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:71
+#: crates/keycord-lifecycle/data/metainfo.xml:70
 msgid "Manage private keys"
 msgstr "Manage private keys"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:37
+#: crates/keycord-lifecycle/data/metainfo.xml:36
 msgid "Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization"
 msgstr "Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:67
+#: crates/keycord-lifecycle/data/metainfo.xml:66
 msgid "Manage stores"
 msgstr "Manage stores"
 
@@ -3087,7 +3087,7 @@ msgstr "New Store"
 msgid "New hardware key PIN"
 msgstr "New hardware key PIN"
 
-#: crates/keycord-entries/src/ui/new_item.rs:67
+#: crates/keycord-entries/src/ui/new_item.rs:74
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "New item"
@@ -3271,7 +3271,7 @@ msgstr "OTP secret"
 msgid "One or more local install directories are not writable."
 msgstr "One or more local install directories are not writable."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:139
+#: crates/keycord-lifecycle/data/metainfo.xml:138
 msgid "Only enable experimental FIDO2 features if the integrated backend is used."
 msgstr "Only enable experimental FIDO2 features if the integrated backend is used."
 
@@ -3454,10 +3454,6 @@ msgstr "PasskeyCredential"
 msgid "PasskeyFieldTemplate"
 msgstr "PasskeyFieldTemplate"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:82
-msgid "Passkeys can now be imported, and local credential-exchange request files can be opened."
-msgstr "Passkeys can now be imported, and local credential-exchange request files can be opened."
-
 #: crates/keycord-entries/data/window-pages.fragment.ui:96
 msgid "Password"
 msgstr "Password"
@@ -3499,7 +3495,7 @@ msgstr "Password is empty"
 msgid "Password is only whitespace"
 msgstr "Password is only whitespace"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:55
+#: crates/keycord-lifecycle/data/metainfo.xml:54
 msgid "Password list"
 msgstr "Password list"
 
@@ -3544,7 +3540,7 @@ msgstr "Password store configuration: {} configured store(s)."
 msgid "Passwords imported."
 msgstr "Passwords imported."
 
-#: crates/keycord-entries/src/ui/new_item.rs:41
+#: crates/keycord-entries/src/ui/new_item.rs:48
 msgid "Path or name"
 msgstr "Path or name"
 
@@ -3758,7 +3754,7 @@ msgstr "Reconnect the FIDO2 security key and try again."
 msgid "Reconnect the hardware key and try again."
 msgstr "Reconnect the hardware key and try again."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:113
+#: crates/keycord-lifecycle/data/metainfo.xml:112
 msgid "Reduced secret exposure in GNOME search, command failures, and logs."
 msgstr "Reduced secret exposure in GNOME search, command failures, and logs."
 
@@ -3858,7 +3854,7 @@ msgstr "Remove remote"
 msgid "Removed empty fields."
 msgstr "Removed empty fields."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:122
+#: crates/keycord-lifecycle/data/metainfo.xml:121
 msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
 msgstr "Removed the FIDO2 backed password stores feature from the flatpak app."
 
@@ -4196,7 +4192,7 @@ msgstr "Show Logs"
 msgid "Show OTP as QR code"
 msgstr "Show OTP as QR code"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:185
+#: crates/keycord-lifecycle/data/metainfo.xml:184
 msgid "Show disabled options instead of hiding them"
 msgstr "Show disabled options instead of hiding them"
 
@@ -4287,7 +4283,7 @@ msgstr "Status"
 msgid "Step {current}/{total}: touch your key if it blinks."
 msgstr "Step {current}/{total}: touch your key if it blinks."
 
-#: crates/keycord-entries/src/ui/new_item.rs:37
+#: crates/keycord-entries/src/ui/new_item.rs:44
 #: crates/keycord-stores/data/window-pages.fragment.ui:18
 msgid "Store"
 msgstr "Store"
@@ -4356,7 +4352,7 @@ msgstr "Switch to the Integrated backend to use experimental FIDO2-protected pri
 msgid "Symbols"
 msgstr "Symbols"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:39
+#: crates/keycord-lifecycle/data/metainfo.xml:38
 msgid "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
 msgstr "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
 
@@ -4864,7 +4860,7 @@ msgstr "Unexpectedly read token information without a buffer."
 msgid "Unknown search provider method: {method_name}."
 msgstr "Unknown search provider method: {method_name}."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:59
+#: crates/keycord-lifecycle/data/metainfo.xml:58
 msgid "Unlock a pass file"
 msgstr "Unlock a pass file"
 
@@ -5059,7 +5055,7 @@ msgstr "Use pass import with your custom pass command."
 msgid "Use store, folders, and file name"
 msgstr "Use store, folders, and file name"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:40
+#: crates/keycord-lifecycle/data/metainfo.xml:39
 msgid "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices"
 msgstr "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices"
 
@@ -5166,19 +5162,19 @@ msgstr "Write password store Git tree"
 msgid "X-GitHub-Api-Version"
 msgstr "X-GitHub-Api-Version"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:195
+#: crates/keycord-lifecycle/data/metainfo.xml:194
 msgid "You can now generate new private keys."
 msgstr "You can now generate new private keys."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:189
+#: crates/keycord-lifecycle/data/metainfo.xml:188
 msgid "You can now manage Git remotes"
 msgstr "You can now manage Git remotes"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:160
+#: crates/keycord-lifecycle/data/metainfo.xml:159
 msgid "You can now open pass files in a new window"
 msgstr "You can now open pass files in a new window"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:169
+#: crates/keycord-lifecycle/data/metainfo.xml:168
 msgid "You can now use the field values as variables in search"
 msgstr "You can now use the field values as variables in search"
 
@@ -5588,7 +5584,7 @@ msgstr "git write-tree"
 msgid "glib-2.0"
 msgstr "glib-2.0"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:220
+#: crates/keycord-lifecycle/data/metainfo.xml:219
 msgid "gpg"
 msgstr "gpg"
 
@@ -5797,11 +5793,11 @@ msgstr "not transacted"
 msgid "operation denied"
 msgstr "operation denied"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:221
+#: crates/keycord-lifecycle/data/metainfo.xml:220
 msgid "otp"
 msgstr "otp"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:219
+#: crates/keycord-lifecycle/data/metainfo.xml:218
 msgid "pass"
 msgstr "pass"
 
@@ -5839,10 +5835,6 @@ msgstr "pass mv failed"
 msgid "pass rm failed"
 msgstr "pass rm failed"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:223
-msgid "passkey"
-msgstr "passkey"
-
 #: crates/keycord-lifecycle/src/setup.rs:541
 msgid "passkey MIME config"
 msgstr "passkey MIME config"
@@ -5851,7 +5843,7 @@ msgstr "passkey MIME config"
 msgid "passkey: [redacted]"
 msgstr "passkey: [redacted]"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:218
+#: crates/keycord-lifecycle/data/metainfo.xml:217
 msgid "password"
 msgstr "password"
 
@@ -6025,7 +6017,7 @@ msgstr "store path"
 msgid "stream logger panicked while reading {label}"
 msgstr "stream logger panicked while reading {label}"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:222
+#: crates/keycord-lifecycle/data/metainfo.xml:221
 msgid "totp"
 msgstr "totp"
 
