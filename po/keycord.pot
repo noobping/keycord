@@ -181,6 +181,10 @@ msgstr ""
 msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
 msgstr ""
 
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid "Add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+msgstr ""
+
 #: crates/keycord-lifecycle/src/setup.rs:72
 msgid "Add to app menu"
 msgstr ""
@@ -295,6 +299,10 @@ msgstr ""
 #: crates/keycord-preferences/data/window-page.fragment.ui:54
 #: crates/keycord-preferences/data/window-page.fragment.ui:59
 msgid "Backend"
+msgstr ""
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
 msgstr ""
 
 #: crates/keycord-git/src/ui/store_page.rs:726
@@ -1025,6 +1033,10 @@ msgstr ""
 msgid "Create a new FIDO2-protected key."
 msgstr ""
 
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr ""
+
 #: crates/keycord-entries/src/ui/new_item.rs:75
 msgid "Create a new pass file."
 msgstr ""
@@ -1272,18 +1284,6 @@ msgstr ""
 #: crates/keycord-stores/data/window-pages.fragment.ui:202
 #: crates/keycord-stores/src/ui/recipient_page/list.rs:152
 msgid "Experimental store options"
-msgstr ""
-
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
-msgid "Experimental: add the public key already stored on the connected OpenPGP smartcard or YubiKey."
-msgstr ""
-
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
-msgid "Experimental: bind a public key file to the connected hardware key."
-msgstr ""
-
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
-msgid "Experimental: create a new OpenPGP key on a blank connected smartcard or YubiKey."
 msgstr ""
 
 #: crates/keycord-entries/src/ui/tools/export.rs:33

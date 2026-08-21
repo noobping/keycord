@@ -181,6 +181,10 @@ msgstr "Add the option to copy the logs"
 msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
 msgstr "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
 
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid "Add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+msgstr "Add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+
 #: crates/keycord-lifecycle/src/setup.rs:72
 msgid "Add to app menu"
 msgstr "Add to app menu"
@@ -296,6 +300,10 @@ msgstr "Back to Store keys"
 #: crates/keycord-preferences/data/window-page.fragment.ui:59
 msgid "Backend"
 msgstr "Backend"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "Bind a public key file to the connected hardware key."
 
 #: crates/keycord-git/src/ui/store_page.rs:726
 msgid "Branch"
@@ -1025,6 +1033,10 @@ msgstr "Couldn't verify the requested hardware key PIN"
 msgid "Create a new FIDO2-protected key."
 msgstr "Create a new FIDO2-protected key."
 
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+
 #: crates/keycord-entries/src/ui/new_item.rs:75
 msgid "Create a new pass file."
 msgstr "Create a new pass file."
@@ -1273,18 +1285,6 @@ msgstr "Experimental multi-layer encryption. When on, every selected key must be
 #: crates/keycord-stores/src/ui/recipient_page/list.rs:152
 msgid "Experimental store options"
 msgstr "Experimental store options"
-
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
-msgid "Experimental: add the public key already stored on the connected OpenPGP smartcard or YubiKey."
-msgstr "Experimental: add the public key already stored on the connected OpenPGP smartcard or YubiKey."
-
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
-msgid "Experimental: bind a public key file to the connected hardware key."
-msgstr "Experimental: bind a public key file to the connected hardware key."
-
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
-msgid "Experimental: create a new OpenPGP key on a blank connected smartcard or YubiKey."
-msgstr "Experimental: create a new OpenPGP key on a blank connected smartcard or YubiKey."
 
 #: crates/keycord-entries/src/ui/tools/export.rs:33
 #: crates/keycord-entries/src/ui/tools/export.rs:51
