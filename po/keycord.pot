@@ -7,41 +7,12 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: crates/keycord-entries/src/ui/page/mod.rs:91
-msgid "-----BEGIN PGP PRIVATE KEY BLOCK-----"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:623
-msgid "-----BEGIN PGP SIGNATURE-----"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:625
-msgid "-----BEGIN SSH SIGNATURE-----"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:92
-msgid "-----END PGP PRIVATE KEY BLOCK-----"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:320
-msgid "--format=%H%x00%h%x00%s%x00%an <%ae>%x00%aI%x00%cn <%ce>%x00%cI%x00"
-msgstr ""
-
 #: crates/keycord-stores/src/recipients.rs:193
 msgid "1 recipient"
 msgstr ""
 
 #: crates/keycord-git/src/ui/store_page.rs:305
 msgid "1 remote configured."
-msgstr ""
-
-#: crates/keycord-docs/src/enabled.rs:1056
-msgid "<a href=\"{}\">{}</a>"
-msgstr ""
-
-#: crates/keycord-shell/src/theme.rs:261
-msgid ""
-"@define-color accent_bg_color {background};\n@define-color accent_fg_color {foreground};\n@define-color accent_color {accent};\n:root {{\n  --accent-bg-color: {background};\n  --accent-fg-color: {foreground};\n  --accent-color: {accent};\n}}"
 msgstr ""
 
 #: crates/keycord-preferences/data/window-page.fragment.ui:25
@@ -54,11 +25,6 @@ msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/windows.rs:17
 msgid "A newer Windows release is available."
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:128
-#: crates/keycord-stores/src/host.rs:54
-msgid "A private key for this item is locked."
 msgstr ""
 
 #: crates/keycord-keys/src/lib.rs:36
@@ -75,10 +41,6 @@ msgstr ""
 
 #: crates/keycord-git/data/window-store-page.fragment.ui:44
 msgid "Actions"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:181
-msgid "ActivateResult"
 msgstr ""
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
@@ -285,10 +247,6 @@ msgstr ""
 msgid "An item with that name already exists."
 msgstr ""
 
-#: crates/keycord-runtime/src/capabilities.rs:21
-msgid "App runtime: debug={}, flatpak={}, logging={}, host-access={}."
-msgstr ""
-
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
 msgid "Apply template"
 msgstr ""
@@ -417,10 +375,6 @@ msgstr ""
 msgid "Check for _Updates"
 msgstr ""
 
-#: crates/keycord-git/src/operations.rs:31
-msgid "Check out a branch before syncing"
-msgstr ""
-
 #: crates/keycord-git/src/sync.rs:137
 msgid "Check out a branch before syncing this store."
 msgstr ""
@@ -465,6 +419,14 @@ msgstr ""
 
 #: crates/keycord-stores/src/ui/management/mod.rs:220
 msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr ""
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr ""
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
 msgstr ""
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
@@ -563,10 +525,6 @@ msgstr ""
 msgid "Commit loading stopped unexpectedly."
 msgstr ""
 
-#: crates/keycord-git/src/operations.rs:25
-msgid "Commit or discard local changes before syncing"
-msgstr ""
-
 #: crates/keycord-git/src/sync.rs:29
 msgid "Commit or discard local changes before syncing this store."
 msgstr ""
@@ -599,10 +557,6 @@ msgstr ""
 msgid "Commit or discard local changes before syncing. Remote commits are also waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/audit.rs:634
-msgid "Commit verification keeps the Git and recipient evidence explicit at the audit boundary."
-msgstr ""
-
 #: crates/keycord-git/src/ui/audit.rs:1244
 msgid "Committed"
 msgstr ""
@@ -630,7 +584,6 @@ msgstr ""
 
 #: crates/keycord-fido/src/native.rs:279
 #: crates/keycord-fido/src/native.rs:454
-#: crates/keycord-keys/src/error.rs:258
 msgid "Connect only one FIDO2 security key before continuing."
 msgstr ""
 
@@ -656,7 +609,6 @@ msgstr ""
 
 #: crates/keycord-fido/src/error.rs:31
 #: crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:15
 #: crates/keycord-keys/src/error.rs:16
 msgid "Connect the matching FIDO2 security key."
 msgstr ""
@@ -757,11 +709,6 @@ msgstr ""
 msgid "Couldn't add the hardware key."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/row.rs:798
-msgid ""
-"Couldn't build a new window.\nerror: {err}"
-msgstr ""
-
 #: crates/keycord-keys/src/hardware/linux.rs:355
 msgid "Couldn't certify the generated hardware key"
 msgstr ""
@@ -808,22 +755,6 @@ msgstr ""
 
 #: crates/keycord-keys/src/hardware/crypto.rs:182
 msgid "Couldn't find key with matching fingerprint"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:789
-msgid "Couldn't find the application to open a new window."
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:238
-msgid "Couldn't find the application window for the Git signing unlock dialog."
-msgstr ""
-
-#: crates/keycord-keys/src/ui/unlock.rs:353
-msgid "Couldn't find the application window for the private key unlock dialog."
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:780
-msgid "Couldn't find the current window to open a new one."
 msgstr ""
 
 #: crates/keycord-keys/src/hardware/linux.rs:303
@@ -1110,10 +1041,6 @@ msgstr ""
 msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:571
-msgid "Created {} password store Git commit {commit_oid} for {store_root}."
-msgstr ""
-
 #: crates/keycord-git/src/audit_types.rs:95
 msgid "Cryptographically invalid signature"
 msgstr ""
@@ -1124,18 +1051,6 @@ msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:917
 msgid "Current version:"
-msgstr ""
-
-#: crates/keycord-passkey/src/request.rs:66
-msgid "CxpHpkeParameters"
-msgstr ""
-
-#: crates/keycord-runtime/src/secure_fs.rs:234
-msgid "D:P(A;;FA;;;SY)(A;;FA;;;{user_sid})"
-msgstr ""
-
-#: crates/keycord-runtime/src/secure_fs.rs:235
-msgid "D:P(A;OICI;FA;;;SY)(A;OICI;FA;;;{user_sid})"
 msgstr ""
 
 #: crates/keycord-stores/src/recipient_page.rs:175
@@ -1293,7 +1208,6 @@ msgstr ""
 
 #: crates/keycord-fido/src/error.rs:23
 #: crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:5
 #: crates/keycord-keys/src/error.rs:6
 #: crates/keycord-keys/src/store/unlock.rs:258
 msgid "Enter the FIDO2 security key PIN."
@@ -1339,16 +1253,8 @@ msgstr ""
 msgid "Escape"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:547
-msgid "Exec=/tmp/keycord %f"
-msgstr ""
-
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
-msgstr ""
-
-#: crates/keycord-fido/src/ui.rs:197
-msgid "Experimental FIDO2-protected key generation worker disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-fido/src/ui.rs:37
@@ -1415,18 +1321,6 @@ msgstr ""
 msgid "Exported {count} passwords."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/dialog.rs:273
-#: crates/keycord-keys/src/ui/dialog.rs:45
-#: crates/keycord-keys/src/ui/dialog.rs:60
-#: crates/keycord-keys/src/ui/unlock.rs:84
-msgid "FIDO UI is dispatched first"
-msgstr ""
-
-#: crates/keycord-fido/src/ui.rs:225
-#: crates/keycord-keys/src/ui/unlock.rs:262
-msgid "FIDO2 PIN setup worker disconnected unexpectedly."
-msgstr ""
-
 #: crates/keycord-fido/src/manifest.rs:38
 msgid "FIDO2 private key manifest"
 msgstr ""
@@ -1447,24 +1341,12 @@ msgstr ""
 msgid "FIDO2 text envelope"
 msgstr ""
 
-#: crates/keycord-git/src/sync.rs:71
-msgid "Failed to abort password store merge for {root}: {err}"
-msgstr ""
-
-#: crates/keycord-git/src/sync.rs:65
-msgid "Failed to abort password store merge for {root}: {}"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr ""
 
 #: crates/keycord-runtime/src/secure_fs.rs:109
 msgid "Failed to allocate a temporary file name."
-msgstr ""
-
-#: src/main.rs:65
-msgid "Failed to apply process hardening: {error}"
 msgstr ""
 
 #: crates/keycord-shell/src/application.rs:292
@@ -1475,33 +1357,12 @@ msgstr ""
 msgid "Failed to build the main window."
 msgstr ""
 
-#: crates/keycord-shell/src/application.rs:282
-msgid ""
-"Failed to build the shortcuts dialog.\nerror: {error}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:406
-msgid "Failed to check for updates: {error}"
-msgstr ""
-
 #: crates/keycord-shell/src/file_picker.rs:127
 msgid "Failed to configure Windows file picker options: {err}"
 msgstr ""
 
 #: crates/keycord-shell/src/file_picker.rs:311
 msgid "Failed to configure Windows save-file picker options: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:656
-msgid "Failed to copy key material '{}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/clipboard.rs:142
-msgid "Failed to copy password entry: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/clipboard.rs:66
-msgid "Failed to copy password with the host command: {err}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:220
@@ -1532,18 +1393,6 @@ msgstr ""
 msgid "Failed to derive enough HKDF output."
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:81
-msgid "Failed to discover hardware keys: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:563
-msgid "Failed to download the update: {error}"
-msgstr ""
-
-#: crates/keycord-preferences/src/ui/settings.rs:375
-msgid "Failed to enable private-key sync: {err}"
-msgstr ""
-
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
 msgstr ""
@@ -1552,20 +1401,8 @@ msgstr ""
 msgid "Failed to export passkey JSON: {err}"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/search_provider.rs:108
-msgid "Failed to export search provider object: {err}"
-msgstr ""
-
-#: crates/keycord-fido/src/ui.rs:155
-msgid "Failed to generate experimental FIDO2-protected key: {}"
-msgstr ""
-
 #: crates/keycord-passkey/src/credential.rs:436
 msgid "Failed to generate passkey key material: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:79
-msgid "Failed to generate private key: {err}"
 msgstr ""
 
 #: crates/keycord-shell/src/ui.rs:29
@@ -1574,26 +1411,6 @@ msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1109
 msgid "Failed to hash update file '{}': {error}"
-msgstr ""
-
-#: crates/keycord-shell/src/ui.rs:907
-msgid "Failed to hide notice '{notice_id}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:102
-msgid "Failed to import hardware key: {err}"
-msgstr ""
-
-#: crates/keycord-stores/src/ui/management/import.rs:394
-msgid "Failed to import passwords into '{}' from '{}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:580
-msgid "Failed to import private key from pass file: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:204
-msgid "Failed to import private key: {err}"
 msgstr ""
 
 #: crates/keycord-shell/src/file_picker.rs:101
@@ -1608,141 +1425,20 @@ msgstr ""
 msgid "Failed to initialize libadwaita."
 msgstr ""
 
-#: src/composition/localization.rs:29
-msgid "Failed to initialize translations: {error}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/store_page.rs:663
-msgid "Failed to inspect Git state before syncing '{store_for_sync}': {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/store_page.rs:733
-msgid "Failed to inspect Git state for '{store}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:367
-msgid "Failed to inspect connected smartcard '{ident}': {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:173
-#: crates/keycord-keys/src/ui/unlock.rs:201
-msgid "Failed to inspect connected smartcards for '{fingerprint}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:796
-msgid "Failed to inspect connected smartcards for recipients: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:392
-msgid "Failed to inspect connected smartcards while {context}: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:801
-msgid "Failed to inspect host GPG private keys for recipients: {err}"
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:87
-msgid "Failed to inspect host Git work-tree state for '{root}', falling back to local Git state: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:662
-msgid "Failed to inspect private key in pass file: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:260
-msgid "Failed to inspect private key: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:286
-msgid "Failed to inspect whether private key '{fingerprint}' is unlocked: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:295
-msgid "Failed to inspect whether private key '{fingerprint}' requires unlocking: {err}"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:149
 msgid "Failed to install the downloaded update: {error}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:265
-msgid "Failed to launch Keycord search result: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:290
-msgid "Failed to launch Keycord search window: {err}"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:237
-msgid "Failed to load host GPG public keys for audit verification, continuing with app keys only: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:706
-msgid "Failed to load managed FIDO2 key '{}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:680
-msgid "Failed to load managed hardware key '{}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:655
-msgid "Failed to load managed private key '{}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:807
-msgid "Failed to load private keys for recipients: {err}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:89
 msgid "Failed to make the downloaded update executable: {error}"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/list/row.rs:483
-msgid "Failed to move or rename password entry: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:286
-msgid "Failed to move password entry after save: {err}"
-msgstr ""
-
 #: crates/keycord-passkey/src/credential.rs:413
 msgid "Failed to normalize passkey private key: {err}"
 msgstr ""
 
-#: crates/keycord-entries/src/file/url.rs:46
-msgid ""
-"Failed to open URL in the default browser.\nURL: {uri_for_log}\nerror: {error}"
-msgstr ""
-
-#: crates/keycord-docs/src/enabled.rs:1019
-msgid ""
-"Failed to open documentation link.\nURL: {uri_for_log}\nerror: {error}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:767
-msgid ""
-"Failed to open entry folder in the file manager.\nfolder: {folder_uri_for_log}\nerror: {error}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:357
-msgid "Failed to open password entry: {err}"
-msgstr ""
-
 #: crates/keycord-runtime/src/command.rs:386
 msgid "Failed to open stdin for command"
-msgstr ""
-
-#: crates/keycord-shell/src/file_picker.rs:377
-#: crates/keycord-shell/src/file_picker.rs:78
-msgid "Failed to open the file chooser: {err}"
-msgstr ""
-
-#: crates/keycord-shell/src/file_picker.rs:253
-msgid "Failed to open the save-file chooser: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:89
-msgid "Failed to parse search provider D-Bus XML: {err}"
 msgstr ""
 
 #: src/main.rs:97
@@ -1755,10 +1451,6 @@ msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:438
 msgid "Failed to prepare passkey key material: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:434
-msgid "Failed to prepare update download target for {}: {error}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:244
@@ -1781,37 +1473,8 @@ msgstr ""
 msgid "Failed to read command stdout: {error}"
 msgstr ""
 
-#: crates/keycord-git/src/audit.rs:443
-msgid "Failed to read host Git signature metadata for '{store_root}', continuing with local audit verification only: {err}"
-msgstr ""
-
 #: crates/keycord-entries/src/ui/tools/export.rs:135
 msgid "Failed to read password entry '{}' from '{}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/clipboard.rs:237
-msgid "Failed to read password entry for QR code: {err}"
-msgstr ""
-
-#: crates/keycord-stores/src/ui/management/mod.rs:259
-msgid "Failed to read password store folder: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:299
-msgid "Failed to read private key from clipboard: {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:160
-#: crates/keycord-keys/src/ui/unlock.rs:188
-msgid "Failed to read private key protection for '{fingerprint}': {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:252
-#: crates/keycord-keys/src/ui/unlock.rs:124
-#: crates/keycord-keys/src/ui/unlock.rs:222
-#: crates/keycord-keys/src/ui/unlock.rs:283
-#: crates/keycord-keys/src/ui/unlock.rs:363
-msgid "Failed to read private key title for '{fingerprint}': {err}"
 msgstr ""
 
 #: crates/keycord-passkey/src/request.rs:82
@@ -1838,10 +1501,6 @@ msgstr ""
 msgid "Failed to read update file metadata: {error}"
 msgstr ""
 
-#: crates/keycord-entries/src/otp/mod.rs:286
-msgid "Failed to refresh OTP code: {err}"
-msgstr ""
-
 #: src/setup.rs:28
 msgid "Failed to register resources for Linux update install: {error}"
 msgstr ""
@@ -1850,49 +1509,8 @@ msgstr ""
 msgid "Failed to register resources."
 msgstr ""
 
-#: crates/keycord-git/src/ui/store_page.rs:539
-msgid "Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/mod.rs:1057
-#: crates/keycord-stores/src/ui/management/mod.rs:72
-msgid "Failed to remove missing password stores: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:670
-msgid "Failed to remove private key '{fingerprint}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/otp/mod.rs:255
-msgid "Failed to render OTP code: {err}"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/search_provider.rs:351
 msgid "Failed to resolve current executable path: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/integrated.rs:731
-msgid "Failed to resolve integrated Git commit identity for {store_root}/{label}: {err}"
-msgstr ""
-
-#: crates/keycord-stores/src/ui/recipient_page/save.rs:95
-msgid "Failed to resolve the locked private key for store recipients '{}:{}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/clipboard.rs:210
-msgid "Failed to resolve the private key for QR retry: {resolve_err}"
-msgstr ""
-
-#: crates/keycord-entries/src/clipboard.rs:113
-msgid "Failed to resolve the private key for copy retry: {resolve_err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/linux.rs:69
-msgid "Failed to resolve the private key for this item: {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:297
-msgid "Failed to resolve the private key needed to sign the Git commit for {context}: {err}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:137
@@ -1923,30 +1541,6 @@ msgstr ""
 msgid "Failed to run {}: {err}"
 msgstr ""
 
-#: crates/keycord-git/src/ui/audit.rs:626
-msgid "Failed to save audit {filter_kind} filter selection: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:295
-msgid "Failed to save password entry: {err}"
-msgstr ""
-
-#: crates/keycord-preferences/src/ui/settings.rs:465
-msgid "Failed to save preference ({context}): {}"
-msgstr ""
-
-#: crates/keycord-stores/src/ui/recipient_page/save.rs:228
-msgid "Failed to save store recipients for '{}': {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/actions/enabled.rs:86
-#: crates/keycord-stores/src/ui/management/clone.rs:220
-#: crates/keycord-stores/src/ui/management/mod.rs:191
-#: crates/keycord-stores/src/ui/management/mod.rs:272
-#: crates/keycord-stores/src/ui/recipient_page/save.rs:192
-msgid "Failed to save stores: {err}"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:252
 msgid "Failed to secure Linux update staging root '{}': {error}"
 msgstr ""
@@ -1961,10 +1555,6 @@ msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:123
 msgid "Failed to serialize stored passkey data: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/unlock.rs:256
-msgid "Failed to set FIDO2 security key PIN: {err}"
 msgstr ""
 
 #: crates/keycord-shell/src/file_picker.rs:133
@@ -1995,10 +1585,6 @@ msgstr ""
 msgid "Failed to set the Windows save-file types: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:231
-msgid "Failed to set up hardware key: {err}"
-msgstr ""
-
 #: crates/keycord-shell/src/file_picker.rs:138
 msgid "Failed to show the Windows file picker: {err}"
 msgstr ""
@@ -2011,22 +1597,6 @@ msgstr ""
 msgid "Failed to spawn Keycord: {err}"
 msgstr ""
 
-#: crates/keycord-runtime/src/worker.rs:27
-msgid "Failed to spawn background worker '{name}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/clipboard.rs:70
-msgid "Failed to spawn clipboard copy worker: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:345
-msgid "Failed to spawn update check worker: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:477
-msgid "Failed to spawn update download worker: {err}"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:100
 msgid "Failed to start Linux update install helper: {error}"
 msgstr ""
@@ -2035,54 +1605,8 @@ msgstr ""
 msgid "Failed to start msiexec for update install: {error}"
 msgstr ""
 
-#: crates/keycord-git/src/operations.rs:61
-msgid "Failed to start restore from Git: {err}"
-msgstr ""
-
 #: src/composition/host_access.rs:186
 msgid "Failed to start the permission command: {error}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:729
-msgid "Failed to start update install: {error}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/standard.rs:28
-msgid "Failed to switch to the integrated backend: {err}"
-msgstr ""
-
-#: crates/keycord-git/src/operations.rs:80
-msgid "Failed to sync password store '{root}': {err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/store_page.rs:702
-msgid "Failed to sync password store '{store_for_result}': {err}"
-msgstr ""
-
-#: src/window/build/mod.rs:66
-msgid "Failed to sync private keys during startup: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:540
-msgid "Failed to sync private keys with the host after importing from a pass file: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:9
-msgid "Failed to sync private keys with the host: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:544
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:12
-msgid "Failed to turn off private-key sync after an error: {save_err}"
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:202
-#: crates/keycord-keys/src/ui/unlock.rs:330
-msgid "Failed to unlock ripasso private key: {err}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:103
-msgid "Failed to update local app menu entry: {err}"
 msgstr ""
 
 #: crates/keycord-runtime/src/command.rs:396
@@ -2099,31 +1623,6 @@ msgstr ""
 
 #: crates/keycord-entries/src/ui/tools/export.rs:142
 msgid "Failed to write password export to '{path}': {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:822
-msgid "Failed to {action}: delete step failed: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:816
-msgid "Failed to {action}: read step failed: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:825
-msgid "Failed to {action}: rename step failed: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:832
-msgid ""
-"Failed to {action}: rollback failed.\nAction error: {action_error}\nRollback error: {rollback_error}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:819
-msgid "Failed to {action}: write step failed: {err}"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/store_filter.rs:110
-msgid "Failed to {action}: {err}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1220
@@ -2193,18 +1692,6 @@ msgstr ""
 msgid "Fixed the GNOME search provider."
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:144
-msgid "GIT_{env_prefix}_EMAIL"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:146
-msgid "GIT_{env_prefix}_IDENT"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:143
-msgid "GIT_{env_prefix}_NAME"
-msgstr ""
-
 #: crates/keycord-shell/data/shortcuts.ui:45
 msgid "General"
 msgstr ""
@@ -2237,18 +1724,6 @@ msgstr ""
 msgid "Generating key"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/search_provider.rs:166
-msgid "GetInitialResultSet"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:174
-msgid "GetResultMetas"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:170
-msgid "GetSubsearchResultSet"
-msgstr ""
-
 #: crates/keycord-stores/data/window-pages.fragment.ui:223
 msgid "Git"
 msgstr ""
@@ -2257,20 +1732,12 @@ msgstr ""
 msgid "Git command did not return output."
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:561
-msgid "Git commit signing unavailable for {store_root}: {err}. Falling back to an unsigned commit."
-msgstr ""
-
 #: crates/keycord-git/src/ui/audit.rs:38
 msgid "Git history and verification"
 msgstr ""
 
 #: crates/keycord-git/src/ui/audit.rs:45
 msgid "Git isn't available in this runtime."
-msgstr ""
-
-#: crates/keycord-git/src/ui/remote.rs:219
-msgid "Git remote dialog failed: {err}"
 msgstr ""
 
 #: crates/keycord-git/data/window-store-page.fragment.ui:3
@@ -2284,14 +1751,6 @@ msgstr ""
 
 #: crates/keycord-git/src/ui/store_page.rs:845
 msgid "Git status worker disconnected"
-msgstr ""
-
-#: crates/keycord-git/src/operations.rs:85
-msgid "Git sync completed."
-msgstr ""
-
-#: crates/keycord-git/src/operations.rs:74
-msgid "Git sync skipped: no Git-backed password stores are configured."
 msgstr ""
 
 #: crates/keycord-shell/data/shortcuts.ui:10
@@ -2346,11 +1805,6 @@ msgstr ""
 msgid "Guides and reference"
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:115
-#: crates/keycord-git/src/status.rs:29
-msgid "HEAD^{commit}"
-msgstr ""
-
 #: crates/keycord-keys/src/hardware/unsupported.rs:8
 msgid "Hardware OpenPGP keys are not supported in this build or on this platform."
 msgstr ""
@@ -2365,14 +1819,6 @@ msgstr ""
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
 msgid "Hardware key admin PIN"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:172
-msgid "Hardware key generation worker disconnected unexpectedly."
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:128
-msgid "Hardware key import worker disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-shell/src/ui.rs:899
@@ -2413,28 +1859,11 @@ msgstr ""
 msgid "Host command features are only available on Linux."
 msgstr ""
 
-#: crates/keycord-keys/src/host_gpg.rs:323
-msgid "Ignoring invalid host GPG public key while loading audit verification keys: {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:245
-msgid "Ignoring invalid managed private-key {artifact_kind} '{}': {err}"
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:201
-msgid "Ignoring non-canonical managed private-key {artifact_kind} '{}'."
-msgstr ""
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:189
 #: crates/keycord-keys/src/ui/key_management/private.rs:277
 #: crates/keycord-passkey/src/ui.rs:164
 #: crates/keycord-stores/data/window-pages.fragment.ui:91
 msgid "Import"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:123
-#: crates/keycord-stores/src/host.rs:52
-msgid "Import a private key in Preferences"
 msgstr ""
 
 #: crates/keycord-keys/src/lib.rs:34
@@ -2602,10 +2031,6 @@ msgstr ""
 msgid "Integrated"
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:596
-msgid "Integrated backend Git commit failed for {store_root}: {err}"
-msgstr ""
-
 #: crates/keycord-fido/src/cache.rs:191
 msgid "Invalid FIDO2 binding fingerprint '{value}'."
 msgstr ""
@@ -2764,22 +2189,6 @@ msgstr ""
 msgid "Keycord opened a credential export request that names {importer} as the importer and checked its structure. The local file does not authenticate that identity. Keycord does not yet generate CXP response archives, so no passkey data was released."
 msgstr ""
 
-#: crates/keycord-lifecycle/src/updater/linux.rs:152
-msgid "Keycord update cleanup failed for '{}': {error}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:124
-msgid "Keycord update install failed: {error}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:168
-msgid "Keycord update restart failed for '{}': {error}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:162
-msgid "Keycord update restart skipped: no local executable directory found."
-msgstr ""
-
 #: crates/keycord-preferences/src/ui/settings.rs:288
 msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
 msgstr ""
@@ -2794,10 +2203,6 @@ msgstr ""
 msgid "Later"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/search_provider.rs:184
-msgid "LaunchSearch"
-msgstr ""
-
 #: crates/keycord-stores/data/window-pages.fragment.ui:69
 msgid "Leave this empty if the source does not use a password, for example a Chrome CSV."
 msgstr ""
@@ -2805,10 +2210,6 @@ msgstr ""
 #: crates/keycord-entries/data/window-pages.fragment.ui:181
 #: crates/keycord-preferences/data/window-page.fragment.ui:225
 msgid "Length"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:123
-msgid "Linux auto-install failed: {error}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:92
@@ -2860,10 +2261,6 @@ msgstr ""
 msgid "Loading your items."
 msgstr ""
 
-#: crates/keycord-git/src/operations.rs:16
-msgid "Local and remote commits are also waiting to sync"
-msgstr ""
-
 #: crates/keycord-git/src/ui/store_page.rs:352
 msgid "Local and remote commits are waiting to sync on '{branch}'."
 msgstr ""
@@ -2892,10 +2289,6 @@ msgstr ""
 msgid "Local changes found. Remote commits are also waiting to sync."
 msgstr ""
 
-#: crates/keycord-git/src/operations.rs:19
-msgid "Local commits are also waiting to sync"
-msgstr ""
-
 #: crates/keycord-git/src/ui/store_page.rs:357
 msgid "Local commits are ready to push on '{branch}'."
 msgstr ""
@@ -2917,10 +2310,6 @@ msgstr ""
 msgid "Looking for a newer Windows installer on GitHub Releases."
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:445
-msgid "Looking up resource: {resource_path}"
-msgstr ""
-
 #: crates/keycord-entries/data/window-pages.fragment.ui:203
 #: crates/keycord-preferences/data/window-page.fragment.ui:249
 msgid "Lowercase letters"
@@ -2928,10 +2317,6 @@ msgstr ""
 
 #: crates/keycord-shell/data/window.ui:38
 msgid "Main Menu"
-msgstr ""
-
-#: crates/keycord-git/src/operations.rs:28
-msgid "Make an initial commit"
 msgstr ""
 
 #: crates/keycord-git/src/operations.rs:29
@@ -3195,10 +2580,6 @@ msgstr ""
 msgid "No recipients set"
 msgstr ""
 
-#: src/composition/backend/integrated/git.rs:34
-msgid "No recipients were found"
-msgstr ""
-
 #: crates/keycord-entries/src/integrated.rs:293
 #: crates/keycord-entries/src/integrated.rs:320
 #: crates/keycord-entries/src/integrated.rs:850
@@ -3391,10 +2772,6 @@ msgstr ""
 msgid "Open tools"
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:49
-msgid "OpenPGP card certificate construction requires each card key and timestamp"
-msgstr ""
-
 #: crates/keycord-entries/src/ui/page/mod.rs:88
 msgid "Opening"
 msgstr ""
@@ -3419,14 +2796,6 @@ msgstr ""
 msgid "Pass files"
 msgstr ""
 
-#: crates/keycord-stores/src/ui/management/import.rs:421
-msgid "Pass import worker disconnected unexpectedly while importing into '{store_for_error}' from '{source_for_error}'."
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:613
-msgid "Pass-file private key import worker disconnected unexpectedly."
-msgstr ""
-
 #: crates/keycord-entries/src/file/row_ui.rs:46
 msgid "Passkey"
 msgstr ""
@@ -3437,14 +2806,6 @@ msgstr ""
 
 #: crates/keycord-passkey/src/ui.rs:123
 msgid "Passkey export request opened"
-msgstr ""
-
-#: crates/keycord-passkey/src/credential.rs:37
-msgid "PasskeyCredential"
-msgstr ""
-
-#: crates/keycord-entries/src/file/types.rs:100
-msgid "PasskeyFieldTemplate"
 msgstr ""
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:96
@@ -3497,14 +2858,6 @@ msgstr ""
 msgid "Password options"
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:126
-msgid "Password store Git HEAD is missing for {store_root}; creating an initial commit."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:468
-msgid "Password store Git commit for {store_root} is unsigned because private key {fingerprint} is not unlocked in this session."
-msgstr ""
-
 #: crates/keycord-git/src/repository.rs:70
 msgid "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
 msgstr ""
@@ -3554,46 +2907,9 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:524
-msgid "Prepare local password store Git commit for {store_root} with {} path(s): {}."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:441
-msgid "Preparing password store Git commit for {store_root} with {name} <{email}> ({fingerprint})."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:449
-msgid "Preparing password store Git commit for {store_root} without signing because no recipients-derived private key was resolved."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:446
-msgid "Preparing password store Git commit for {store_root} without signing because private key {fingerprint} is not available in the app."
-msgstr ""
-
 #: crates/keycord-keys/src/cert.rs:157
 #: crates/keycord-keys/src/cert.rs:162
 msgid "Private key fingerprint '{value}' does not have the expected length."
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:113
-msgid "Private key generation worker disconnected unexpectedly."
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:595
-msgid "Private key import was requested without a window root."
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:237
-msgid "Private key import worker disconnected unexpectedly."
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:623
-msgid "Private key passphrase dialog was requested without a window root."
-msgstr ""
-
-#: crates/keycord-git/src/ui/signing.rs:213
-#: crates/keycord-keys/src/ui/unlock.rs:336
-msgid "Private key unlock worker disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-git/src/ui/signing.rs:217
@@ -3606,10 +2922,6 @@ msgstr ""
 
 #: crates/keycord-preferences/src/ui/settings.rs:372
 msgid "Private keys synced."
-msgstr ""
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:992
-msgid "Private-key inventory worker disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-keys/src/sync.rs:152
@@ -3735,7 +3047,6 @@ msgstr ""
 
 #: crates/keycord-fido/src/error.rs:35
 #: crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:13
 #: crates/keycord-keys/src/error.rs:14
 #: crates/keycord-keys/src/error.rs:214
 #: crates/keycord-keys/src/error.rs:253
@@ -3753,10 +3064,6 @@ msgstr ""
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
 msgid "Refresh current list"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:419
-msgid "Refusing to download update {}: {error}"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1138
@@ -3777,10 +3084,6 @@ msgstr ""
 
 #: crates/keycord-git/src/ui/store_page.rs:635
 msgid "Remote added."
-msgstr ""
-
-#: crates/keycord-git/src/operations.rs:22
-msgid "Remote commits are also waiting to sync"
 msgstr ""
 
 #: crates/keycord-git/src/ui/store_page.rs:360
@@ -3949,10 +3252,6 @@ msgstr ""
 msgid "Restore password store"
 msgstr ""
 
-#: crates/keycord-stores/src/ui/management/clone.rs:241
-msgid "Restore stopped unexpectedly for store '{store_for_disconnect}'."
-msgstr ""
-
 #: crates/keycord-git/src/ui/actions/enabled.rs:103
 #: crates/keycord-stores/src/ui/management/clone.rs:243
 msgid "Restore stopped unexpectedly."
@@ -3972,14 +3271,6 @@ msgstr ""
 
 #: crates/keycord-preferences/src/ui/settings.rs:403
 msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
-msgstr ""
-
-#: crates/keycord-entries/src/ui/page/mod.rs:922
-msgid "Retry-open was requested without an opened pass file."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:448
-msgid "Reusing cached update download for version {}."
 msgstr ""
 
 #: crates/keycord-entries/src/ui/page/mod.rs:726
@@ -4055,46 +3346,6 @@ msgstr ""
 msgid "Search preferences"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/search_provider.rs:251
-msgid "Search provider ActivateResult received invalid parameters."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:205
-msgid "Search provider GetInitialResultSet received invalid parameters."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:230
-msgid "Search provider GetResultMetas received invalid parameters."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:217
-msgid "Search provider GetSubsearchResultSet received invalid parameters."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:284
-msgid "Search provider LaunchSearch received invalid parameters."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:113
-msgid "Search provider bus name acquired: {name}."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:118
-msgid "Search provider bus name released: {name}."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:94
-msgid "Search provider interface metadata is missing."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:125
-msgid "Search provider listening on {}{}."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:272
-msgid "Search provider received an invalid result identifier: {identifier:?}."
-msgstr ""
-
 #: crates/keycord-git/data/window-audit-page.fragment.ui:11
 msgid "Search results"
 msgstr ""
@@ -4144,7 +3395,6 @@ msgstr ""
 #: crates/keycord-fido/src/transport.rs:27
 #: crates/keycord-keys/src/error.rs:203
 #: crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:7
 #: crates/keycord-keys/src/error.rs:8
 msgid "Set a PIN on the FIDO2 security key first."
 msgstr ""
@@ -4218,11 +3468,6 @@ msgstr ""
 msgid "Show value as QR code"
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:479
-#: crates/keycord-git/src/integrated.rs:491
-msgid "Signed password store Git commit for {store_root} with private key {fingerprint}."
-msgstr ""
-
 #: crates/keycord-git/src/audit_types.rs:100
 msgid "Signer not in the branch recipient set"
 msgstr ""
@@ -4231,33 +3476,8 @@ msgstr ""
 msgid "Signing key not available in Keycord"
 msgstr ""
 
-#: crates/keycord-git/src/integrated.rs:474
-#: crates/keycord-git/src/integrated.rs:485
-msgid "Signing password store Git commit for {store_root} with {name} <{email}> ({fingerprint})."
-msgstr ""
-
 #: crates/keycord-entries/src/strength.rs:63
 msgid "Single character class and short"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:505
-msgid "Skip password store Git commit for {store_root}: Git commands are only available on Linux."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:511
-msgid "Skip password store Git commit for {store_root}: no paths were provided."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:531
-msgid "Skip password store Git commit for {store_root}: the staged paths have no changes."
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:518
-msgid "Skip password store Git commit for {store_root}: the store is not a Git repository."
-msgstr ""
-
-#: crates/keycord-keys/src/sync.rs:102
-msgid "Skipping host GPG private key without a passphrase during sync: {fingerprint}"
 msgstr ""
 
 #: crates/keycord-preferences/data/window-page.fragment.ui:139
@@ -4285,10 +3505,6 @@ msgstr ""
 msgid "Store created, but it wasn't added."
 msgstr ""
 
-#: crates/keycord-stores/src/ui/management/import.rs:270
-msgid "Store import page state was not initialized."
-msgstr ""
-
 #: crates/keycord-stores/data/window-pages.fragment.ui:129
 #: crates/keycord-stores/src/recipient_page.rs:17
 #: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
@@ -4311,10 +3527,6 @@ msgstr ""
 
 #: crates/keycord-git/src/ui/store_page.rs:698
 msgid "Store synced."
-msgstr ""
-
-#: crates/keycord-stores/src/ui/recipient_page/mod.rs:497
-msgid "Store-key page loader disconnected unexpectedly."
 msgstr ""
 
 #: crates/keycord-fido/src/service.rs:181
@@ -4375,7 +3587,6 @@ msgstr ""
 
 #: crates/keycord-fido/src/error.rs:37
 #: crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:18
 #: crates/keycord-keys/src/error.rs:20
 msgid "That FIDO2 security key does not support the hmac-secret extension."
 msgstr ""
@@ -4385,7 +3596,6 @@ msgstr ""
 #: crates/keycord-keys/src/error.rs:10
 #: crates/keycord-keys/src/error.rs:209
 #: crates/keycord-keys/src/error.rs:248
-#: crates/keycord-keys/src/error.rs:9
 msgid "That FIDO2 security key must support PIN protection."
 msgstr ""
 
@@ -4613,10 +3823,6 @@ msgstr ""
 msgid "The selected password store path is not a folder."
 msgstr ""
 
-#: crates/keycord-shell/src/file_picker.rs:44
-msgid "The selected path is not available locally. {}"
-msgstr ""
-
 #: crates/keycord-stores/src/error.rs:35
 msgid "The selected store path is not a folder."
 msgstr ""
@@ -4760,7 +3966,6 @@ msgstr ""
 
 #: crates/keycord-fido/src/error.rs:33
 #: crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:11
 #: crates/keycord-keys/src/error.rs:12
 #: crates/keycord-keys/src/error.rs:212
 #: crates/keycord-keys/src/error.rs:251
@@ -4847,10 +4052,6 @@ msgstr ""
 
 #: crates/keycord-runtime/src/secure_fs.rs:256
 msgid "Unexpectedly read token information without a buffer."
-msgstr ""
-
-#: crates/keycord-lifecycle/src/search_provider.rs:188
-msgid "Unknown search provider method: {method_name}."
 msgstr ""
 
 #: crates/keycord-lifecycle/data/metainfo.xml:58
@@ -5121,18 +4322,6 @@ msgstr ""
 msgid "When enabled, History can use recipients from earlier commits while verifying older encrypted entries."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/session.rs:39
-msgid "Widget was not attached to an application window when reading window session."
-msgstr ""
-
-#: src/window/build/assemble.rs:247
-msgid "Window Git actions: open-git, git-clone, and synchronize are {}."
-msgstr ""
-
-#: crates/keycord-entries/src/ui/session.rs:44
-msgid "Window session was not initialized before use."
-msgstr ""
-
 #: crates/keycord-shell/src/uri.rs:23
 msgid "Windows ShellExecute failed: {err}"
 msgstr ""
@@ -5149,10 +4338,6 @@ msgstr ""
 
 #: crates/keycord-git/src/integrated.rs:97
 msgid "Write password store Git tree"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/common.rs:1063
-msgid "X-GitHub-Api-Version"
 msgstr ""
 
 #: crates/keycord-lifecycle/data/metainfo.xml:194
@@ -5199,27 +4384,6 @@ msgstr ""
 msgid "_Tools"
 msgstr ""
 
-#: crates/keycord-fido/src/native.rs:62
-msgid "action timeout"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:105
-msgid "already exists"
-msgstr ""
-
-#: crates/keycord-git/src/lib.rs:21
-msgid "audit_disabled.rs"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:555
-msgid "authentication method blocked"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:110
-#: crates/keycord-stores/src/host.rs:57
-msgid "available private keys cannot decrypt"
-msgstr ""
-
 #: src/composition/about.rs:21
 #: src/composition/about.rs:22
 msgid "backend: host"
@@ -5241,11 +4405,6 @@ msgstr ""
 msgid "build download client"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:109
-#: crates/keycord-stores/src/host.rs:56
-msgid "cannot decrypt password store entries"
-msgstr ""
-
 #: crates/keycord-entries/src/ui/list/store_filter.rs:40
 msgid "clean stale store filter values"
 msgstr ""
@@ -5254,65 +4413,12 @@ msgstr ""
 msgid "clear empty fields before save"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:526
-#: crates/keycord-lifecycle/src/setup.rs:564
-#: crates/keycord-lifecycle/src/setup.rs:584
-#: crates/keycord-lifecycle/src/setup.rs:609
-#: crates/keycord-lifecycle/src/setup.rs:629
-msgid "clock should be after epoch"
-msgstr ""
-
 #: crates/keycord-keys/src/store/storage.rs:527
 msgid "collecting available private-key fingerprints"
 msgstr ""
 
-#: src/main.rs:93
-#: src/setup.rs:26
-msgid "compiled.gresource"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:114
-msgid "condition of use not satisfied"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:552
-msgid "context error"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:549
-msgid "couldn't find card"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:532
-msgid "create MIME packages dir"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:531
-msgid "create applications dir"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:635
-msgid "create bin dir"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:973
 msgid "create partial update file"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:612
-msgid "create root dir"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:636
-msgid "create search provider dir"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:588
-msgid "create target dir"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:567
-msgid "create temp dir"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:953
@@ -5324,24 +4430,12 @@ msgstr ""
 msgid "credential ID"
 msgstr ""
 
-#: crates/keycord-runtime/src/diagnostics.rs:121
-msgid "credential URL regex should compile"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1035
 msgid "decode GitHub release response"
 msgstr ""
 
 #: crates/keycord-entries/src/ui/list/row.rs:602
 msgid "delete password entry"
-msgstr ""
-
-#: crates/keycord-fido/src/service.rs:213
-msgid "device checked above"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:57
-msgid "device not found"
 msgstr ""
 
 #: crates/keycord-runtime/src/hardening.rs:28
@@ -5356,20 +4450,8 @@ msgstr ""
 msgid "disable process dumpability: {err}"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/updater/mod.rs:15
-msgid "disabled.rs"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:570
-msgid "does not support"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:970
 msgid "download release asset"
-msgstr ""
-
-#: crates/keycord-runtime/src/validation.rs:12
-msgid "email validation regex should compile"
 msgstr ""
 
 #: crates/keycord-entries/src/integrated.rs:798
@@ -5388,193 +4470,16 @@ msgstr ""
 msgid "enable strict handle checks: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/linux.rs:563
-msgid "enter the hardware key pin"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:68
-msgid "entry.delete"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:63
-msgid "entry.move"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:65
-msgid "entry.move-store"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:67
-msgid "entry.open-in-file-manager"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:60
-msgid "entry.open-new-window"
-msgstr ""
-
-#: crates/keycord-entries/src/ui/list/row.rs:62
-msgid "entry.rename-file"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1018
 msgid "finalize update file"
-msgstr ""
-
-#: crates/keycord-entries/src/tools/field_values.rs:88
-msgid "find \"{}\" is \"{}\""
-msgstr ""
-
-#: crates/keycord-fido/src/ui.rs:273
-msgid "flatpak override --user --device=all {app_id}"
-msgstr ""
-
-#: crates/keycord-keys/src/ui/smartcard_access.rs:110
-msgid "flatpak override --user --socket=pcsc {app_id}"
-msgstr ""
-
-#: src/composition/host_access.rs:37
-msgid "flatpak override --user --talk-name=org.freedesktop.Flatpak"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:997
 msgid "flush partial update file"
 msgstr ""
 
-#: crates/keycord-shell/src/application.rs:363
-msgid "gdk-pixbuf-2.0"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:61
-msgid "git add"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:371
-msgid "git cat-file --batch"
-msgstr ""
-
 #: crates/keycord-git/src/command.rs:48
 msgid "git command"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:81
-msgid "git diff --cached"
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:126
-msgid "git diff --quiet HEAD --"
-msgstr ""
-
-#: crates/keycord-git/src/sync.rs:47
-msgid "git fetch --prune"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:274
-msgid "git for-each-ref"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:411
-msgid "git hash-object"
-msgstr ""
-
-#: crates/keycord-git/src/repository.rs:58
-msgid "git init"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:325
-msgid "git log"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:467
-msgid "git log --no-walk=unsorted --format=%H%x00%G?..."
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:111
-msgid "git ls-files --cached --others --exclude-standard"
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:139
-msgid "git ls-files --others --exclude-standard"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:975
-msgid "git ls-tree"
-msgstr ""
-
-#: crates/keycord-git/src/sync.rs:66
-msgid "git merge --abort"
-msgstr ""
-
-#: crates/keycord-git/src/sync.rs:99
-msgid "git merge --no-edit"
-msgstr ""
-
-#: crates/keycord-git/src/sync.rs:115
-msgid "git push"
-msgstr ""
-
-#: crates/keycord-git/src/remotes.rs:23
-msgid "git remote"
-msgstr ""
-
-#: crates/keycord-git/src/remotes.rs:65
-msgid "git remote add"
-msgstr ""
-
-#: crates/keycord-git/src/remotes.rs:40
-msgid "git remote get-url"
-msgstr ""
-
-#: crates/keycord-git/src/remotes.rs:120
-msgid "git remote remove"
-msgstr ""
-
-#: crates/keycord-git/src/remotes.rs:86
-msgid "git remote rename"
-msgstr ""
-
-#: crates/keycord-git/src/remotes.rs:103
-msgid "git remote set-url"
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:257
-msgid "git rev-list --count"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:131
-#: crates/keycord-git/src/status.rs:41
-msgid "git rev-parse -q --verify HEAD^{commit}"
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:285
-msgid "git rev-parse -q --verify refs/remotes/<remote>/<branch>^{commit}"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:1010
-msgid "git show"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:529
-msgid "git show --name-status"
-msgstr ""
-
-#: crates/keycord-git/src/status.rs:71
-msgid "git symbolic-ref --quiet --short HEAD"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:434
-msgid "git update-ref"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:153
-msgid "git var"
-msgstr ""
-
-#: crates/keycord-git/src/integrated.rs:106
-msgid "git write-tree"
-msgstr ""
-
-#: crates/keycord-shell/src/application.rs:358
-msgid "glib-2.0"
 msgstr ""
 
 #: crates/keycord-lifecycle/data/metainfo.xml:219
@@ -5599,10 +4504,6 @@ msgstr ""
 
 #: crates/keycord-keys/src/host_gpg.rs:111
 msgid "gpg --list-secret-keys failed"
-msgstr ""
-
-#: crates/keycord-shell/src/application.rs:359
-msgid "gschemas.compiled"
 msgstr ""
 
 #: crates/keycord-keys/src/store/manifest.rs:179
@@ -5657,16 +4558,8 @@ msgstr ""
 msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
 msgstr ""
 
-#: crates/keycord-passkey/src/request.rs:412
-msgid "hpke.key.kty"
-msgstr ""
-
 #: crates/keycord-passkey/src/request.rs:436
 msgid "hpke.key.x has the wrong length for KEM {kem}"
-msgstr ""
-
-#: crates/keycord-passkey/src/request.rs:463
-msgid "hpke.key.{member}"
 msgstr ""
 
 #: crates/keycord-passkey/src/request.rs:482
@@ -5678,62 +4571,8 @@ msgstr ""
 msgid "hpke.key.{member} must use unpadded base64url"
 msgstr ""
 
-#: crates/keycord-passkey/src/request.rs:362
-msgid "hpke.mode"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:60
-msgid "invalid option"
-msgstr ""
-
-#: src/composition/backend/integrated/git.rs:33
-msgid "is not available in the app."
-msgstr ""
-
-#: crates/keycord-docs/src/enabled.rs:22
-msgid "keycord-doc:"
-msgstr ""
-
-#: crates/keycord-entries/src/tools/export.rs:5
-msgid "keycord-passwords.csv"
-msgstr ""
-
-#: crates/keycord-preferences/src/storage.rs:34
-#: crates/keycord-preferences/src/storage.rs:35
-msgid "keycord.toml"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:65
-msgid "lifecycle install configuration must be initialized"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/mod.rs:18
-msgid "linux.rs"
-msgstr ""
-
-#: crates/keycord-shell/src/application.rs:442
-msgid "loaders-{hash:016x}.cache"
-msgstr ""
-
-#: crates/keycord-shell/src/application.rs:367
-#: crates/keycord-shell/src/application.rs:412
-msgid "loaders.cache"
-msgstr ""
-
 #: crates/keycord-keys/src/store/storage.rs:494
 msgid "loading the available key ring"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:641
-msgid "make search provider non-writable"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:593
-msgid "make target non-writable"
-msgstr ""
-
-#: crates/keycord-keys/src/store/paths.rs:27
-msgid "manifest.toml"
 msgstr ""
 
 #: crates/keycord-shell/src/application.rs:152
@@ -5746,44 +4585,6 @@ msgstr ""
 
 #: crates/keycord-preferences/src/ui/settings.rs:525
 msgid "new item template"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:54
-msgid "no credentials"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:112
-#: crates/keycord-stores/src/host.rs:59
-msgid "no pkesk managed to decrypt the ciphertext"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:111
-#: crates/keycord-stores/src/host.rs:58
-msgid "no pkesks managed to decrypt the ciphertext"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:550
-msgid "no smartcard"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:96
-msgid "no such file or directory"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:55
-msgid "not found"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:94
-msgid "not in the password store"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:565
-msgid "not transacted"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:62
-msgid "operation denied"
 msgstr ""
 
 #: crates/keycord-lifecycle/data/metainfo.xml:220
@@ -5828,14 +4629,6 @@ msgstr ""
 msgid "pass rm failed"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:541
-msgid "passkey MIME config"
-msgstr ""
-
-#: crates/keycord-entries/src/tools/export.rs:145
-msgid "passkey: [redacted]"
-msgstr ""
-
 #: crates/keycord-lifecycle/data/metainfo.xml:217
 msgid "password"
 msgstr ""
@@ -5846,33 +4639,6 @@ msgstr ""
 
 #: crates/keycord-preferences/src/ui/settings.rs:652
 msgid "password list sort"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:115
-#: crates/keycord-keys/src/hardware/linux.rs:557
-msgid "password not checked"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:51
-msgid "pin auth blocked"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:50
-msgid "pin auth invalid"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:49
-#: crates/keycord-keys/src/hardware/linux.rs:559
-msgid "pin invalid"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:45
-msgid "pin not set"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:47
-#: crates/keycord-keys/src/hardware/linux.rs:563
-msgid "pin required"
 msgstr ""
 
 #: crates/keycord-preferences/src/storage.rs:44
@@ -5889,48 +4655,12 @@ msgstr ""
 msgid "private-key sync"
 msgstr ""
 
-#: crates/keycord-keys/src/store/paths.rs:31
-msgid "public.asc"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1033
 msgid "read GitHub release response"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:553
-msgid "read MIME package"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:546
-msgid "read desktop file"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:573
-msgid "read marker"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:638
-msgid "read search provider metadata"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:646
-msgid "read search provider metadata for cleanup"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:590
-msgid "read target metadata"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:598
-msgid "read target metadata for cleanup"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:985
 msgid "read update bytes"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:551
-msgid "reader error"
 msgstr ""
 
 #: crates/keycord-git/src/command.rs:49
@@ -5949,29 +4679,8 @@ msgstr ""
 msgid "remove stale update file"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:650
-msgid "restore search provider permissions"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:601
-msgid "restore target permissions"
-msgstr ""
-
 #: crates/keycord-entries/src/ui/list/store_filter.rs:88
 msgid "save store filter selection"
-msgstr ""
-
-#: crates/keycord-runtime/src/diagnostics.rs:131
-msgid "scp remote regex should compile"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/linux.rs:113
-#: crates/keycord-keys/src/hardware/linux.rs:558
-msgid "security status not satisfied"
-msgstr ""
-
-#: crates/keycord-stores/src/host.rs:50
-msgid "selected password store path is not a folder"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1031
@@ -5982,32 +4691,12 @@ msgstr ""
 msgid "send release asset request"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/updater/common.rs:1129
-msgid "sha256:"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:130
-msgid "signal {signal}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:114
-msgid "stdin: [redacted]"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:116
-msgid "stdin: provided"
-msgstr ""
-
 #: crates/keycord-git/src/ui/audit.rs:601
 msgid "store cleanup"
 msgstr ""
 
 #: crates/keycord-entries/src/search.rs:8
 msgid "store path"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:224
-msgid "stream logger panicked while reading {label}"
 msgstr ""
 
 #: crates/keycord-lifecycle/data/metainfo.xml:221
@@ -6034,10 +4723,6 @@ msgstr ""
 msgid "unsupported key type: {other:?}"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/updater/linux.rs:214
-msgid "update-{:032x}"
-msgstr ""
-
 #: crates/keycord-passkey/src/credential.rs:299
 #: crates/keycord-passkey/src/credential.rs:349
 msgid "user handle"
@@ -6047,45 +4732,12 @@ msgstr ""
 msgid "username fallback"
 msgstr ""
 
-#: crates/keycord-preferences/src/preferences.rs:10
-msgid ""
-"username:\nemail:\nurl:"
-msgstr ""
-
-#: crates/keycord-fido/src/native.rs:47
-msgid "uv invalid"
-msgstr ""
-
-#: crates/keycord-entries/src/host.rs:95
-msgid "was not found"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/mod.rs:21
-msgid "windows.rs"
-msgstr ""
-
 #: crates/keycord-git/src/command.rs:50
 msgid "work-tree git command"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:543
-msgid "write MIME package"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:540
-msgid "write desktop file"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:569
-msgid "write marker"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:991
 msgid "write update bytes"
-msgstr ""
-
-#: crates/keycord-entries/src/integrated.rs:824
-msgid "writing hex into a string should not fail"
 msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1187
@@ -6094,19 +4746,6 @@ msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1185
 msgid "{:.1} MiB"
-msgstr ""
-
-#: crates/keycord-passkey/src/credential.rs:115
-msgid "{PASSKEY_FIELD_KEY}: {storage_value}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:183
-msgid "{PRODUCT_NAME}-{tag_name}.{arch}"
-msgstr ""
-
-#: crates/keycord-entries/src/integrated.rs:805
-msgid ""
-"{REQUIRE_ALL_PRIVATE_KEYS_LAYER_HEADER}\n{}"
 msgstr ""
 
 #: crates/keycord-git/src/command.rs:23
@@ -6121,72 +4760,12 @@ msgstr ""
 msgid "{action} failed: {}"
 msgstr ""
 
-#: crates/keycord-lifecycle/src/setup.rs:392
-msgid "{app_id}-passkey.xml"
-msgstr ""
-
-#: crates/keycord-entries/src/otp/url.rs:91
-msgid "{base}?{}"
-msgstr ""
-
 #: crates/keycord-git/src/ui/store_page.rs:286
 msgid "{branch} (no commits yet)"
 msgstr ""
 
-#: crates/keycord-fido/src/service.rs:326
-msgid "{byte:02X}"
-msgstr ""
-
-#: crates/keycord-entries/src/integrated.rs:824
-#: crates/keycord-lifecycle/src/search_provider.rs:372
-#: crates/keycord-lifecycle/src/updater/common.rs:1162
-msgid "{byte:02x}"
-msgstr ""
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1189
 msgid "{bytes} B"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:385
-msgid ""
-"{context}\n$ {command_text}\nfailed to open stdin"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:292
-#: crates/keycord-runtime/src/command.rs:350
-msgid ""
-"{context}\n$ {command_text}\nfailed to start: {error}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:266
-#: crates/keycord-runtime/src/command.rs:394
-msgid ""
-"{context}\n$ {command_text}\nfailed to wait: {error}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:412
-msgid ""
-"{context}\n$ {command_text}\nfailed to write stdin: {error}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:204
-msgid ""
-"{context}\n$ {command}\nfailed to read {label}: {error}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:110
-msgid ""
-"{context}\n$ {command}\nstatus: {status}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:225
-msgid ""
-"{context}\n$ {command}\n{error}"
-msgstr ""
-
-#: crates/keycord-runtime/src/command.rs:154
-msgid ""
-"{context}\n$ {command}\n{label}:"
 msgstr ""
 
 #: crates/keycord-runtime/src/bounded_toml.rs:35
@@ -6195,10 +4774,6 @@ msgstr ""
 
 #: crates/keycord-runtime/src/bounded_toml.rs:27
 msgid "{context} exceeds the supported TOML size limit of {} bytes."
-msgstr ""
-
-#: crates/keycord-shell/src/optional_permission.rs:111
-msgid "{context}: {error}"
 msgstr ""
 
 #: crates/keycord-git/src/ui/audit.rs:1067
@@ -6264,8 +4839,8 @@ msgstr ""
 msgid "{field} must not be empty"
 msgstr ""
 
-#: crates/keycord-stores/src/paths.rs:26
-msgid "{file_name}.{STANDARD_PASSWORD_ENTRY_EXTENSION}"
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
 msgstr ""
 
 #: crates/keycord-keys/src/ui/managed_key.rs:9
@@ -6288,15 +4863,6 @@ msgstr ""
 msgid "{fingerprint} - Security token ({detail})"
 msgstr ""
 
-#: crates/keycord-git/src/status.rs:247
-msgid "{from}..{to}"
-msgstr ""
-
-#: crates/keycord-shell/src/file_picker.rs:371
-#: crates/keycord-shell/src/file_picker.rs:401
-msgid "{log_context}: {err}"
-msgstr ""
-
 #: crates/keycord-fido/src/service.rs:335
 msgid "{manufacturer} {product}"
 msgstr ""
@@ -6304,10 +4870,6 @@ msgstr ""
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
 msgid "{name} <{email}>"
-msgstr ""
-
-#: crates/keycord-git/src/audit.rs:1000
-msgid "{object}:{path}"
 msgstr ""
 
 #: crates/keycord-entries/src/import.rs:36
@@ -6318,10 +4880,6 @@ msgstr ""
 #: src/composition/about.rs:29
 msgid ""
 "{project}: {comments}\n\n{backend_details}"
-msgstr ""
-
-#: crates/keycord-entries/src/file/types.rs:116
-msgid "{raw_key}:{separator_spacing}{url}"
 msgstr ""
 
 #: crates/keycord-entries/src/otp/mod.rs:301
@@ -6346,10 +4904,6 @@ msgid ""
 "{summary}\nerror: {error}"
 msgstr ""
 
-#: crates/keycord-shell/src/application.rs:330
-msgid "{title}: {detail}"
-msgstr ""
-
 #: src/composition/about.rs:22
 msgid ""
 "{}\n{version}"
@@ -6366,42 +4920,5 @@ msgstr ""
 #: src/composition/about.rs:15
 msgid ""
 "{} {RIPASSO_VERSION}\n{} {SEQUOIA_OPENPGP_VERSION}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:247
-msgid "{}-passkey.xml"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/desktop.rs:31
-msgid "{}.SearchProvider"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:143
-#: crates/keycord-lifecycle/src/setup.rs:243
-#: crates/keycord-lifecycle/src/setup.rs:376
-msgid "{}.desktop"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:309
-#: crates/keycord-lifecycle/src/setup.rs:458
-#: crates/keycord-lifecycle/src/setup.rs:466
-#: crates/keycord-lifecycle/src/setup.rs:481
-#: crates/keycord-runtime/src/i18n.rs:137
-msgid "{}.mo"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:251
-#: crates/keycord-lifecycle/src/setup.rs:414
-msgid "{}.search-provider.ini"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:255
-#: crates/keycord-lifecycle/src/setup.rs:433
-msgid "{}.service"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:240
-#: crates/keycord-lifecycle/src/setup.rs:448
-msgid "{}.svg"
 msgstr ""
 

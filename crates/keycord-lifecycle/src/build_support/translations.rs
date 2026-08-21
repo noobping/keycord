@@ -404,6 +404,15 @@ fn non_application_rust_source_dir(source_root: &Path, path: &Path) -> bool {
 fn collect_rust_strings_from_file(source_root: &Path, path: &Path, catalog: &mut Catalog) {
     let source = fs::read_to_string(path)
         .unwrap_or_else(|err| panic!("Failed to read {}: {err}", path.display()));
+    collect_rust_strings_from_source(source_root, path, &source, catalog);
+}
+
+fn collect_rust_strings_from_source(
+    source_root: &Path,
+    path: &Path,
+    source: &str,
+    catalog: &mut Catalog,
+) {
     let bytes = source.as_bytes();
     let mut index = 0usize;
     let mut line = 1usize;
@@ -423,26 +432,15 @@ fn collect_rust_strings_from_file(source_root: &Path, path: &Path, catalog: &mut
             continue;
         }
 
-        if bytes[index] == b'/' && bytes.get(index + 1) == Some(&b'/') {
-            index += 2;
-            while index < bytes.len() && bytes[index] != b'\n' {
-                index += 1;
-            }
+        if skip_test_item(bytes, &mut index, &mut line) {
             continue;
         }
 
-        if bytes[index] == b'/' && bytes.get(index + 1) == Some(&b'*') {
-            index += 2;
-            while index + 1 < bytes.len() {
-                if bytes[index] == b'\n' {
-                    line += 1;
-                }
-                if bytes[index] == b'*' && bytes[index + 1] == b'/' {
-                    index += 2;
-                    break;
-                }
-                index += 1;
-            }
+        if skip_non_error_rust_attribute(bytes, &mut index, &mut line) {
+            continue;
+        }
+
+        if skip_rust_comment(bytes, &mut index, &mut line) {
             continue;
         }
 
@@ -470,6 +468,7 @@ fn collect_rust_strings_from_file(source_root: &Path, path: &Path, catalog: &mut
             continue;
         }
 
+        let literal_start = index;
         let literal_line = line;
         index += 1;
         let mut value = String::new();
@@ -507,7 +506,10 @@ fn collect_rust_strings_from_file(source_root: &Path, path: &Path, catalog: &mut
             }
         }
 
-        if looks_translatable_rust_string(&value) {
+        if looks_translatable_rust_string(&value)
+            && (rust_literal_is_explicitly_translatable(source, literal_start)
+                || !rust_literal_has_non_translatable_context(source, literal_start))
+        {
             add_catalog_message(
                 catalog,
                 value.trim(),
@@ -515,6 +517,88 @@ fn collect_rust_strings_from_file(source_root: &Path, path: &Path, catalog: &mut
             );
         }
     }
+}
+
+fn rust_literal_is_explicitly_translatable(source: &str, literal_start: usize) -> bool {
+    ["gettext", "ngettext", "pgettext"]
+        .iter()
+        .any(|function| rust_literal_is_inside_call(source, literal_start, function))
+}
+
+fn rust_literal_has_non_translatable_context(source: &str, literal_start: usize) -> bool {
+    let prefix = source[..literal_start].trim_end();
+    const IMMEDIATE_PREFIXES: &[&str] = &[
+        ".contains(",
+        ".ends_with(",
+        ".expect(",
+        ".expect_err(",
+        ".starts_with(",
+        ".strip_prefix(",
+        ".strip_suffix(",
+        "assert!(",
+        "assert_eq!(",
+        "assert_ne!(",
+        "debug_assert!(",
+        "debug_assert_eq!(",
+        "debug_assert_ne!(",
+        "panic!(",
+        "unreachable!(",
+    ];
+
+    IMMEDIATE_PREFIXES
+        .iter()
+        .any(|candidate| prefix.ends_with(candidate))
+        || [
+            "eprintln",
+            "log_error",
+            "log_info",
+            "log_warning",
+            "message_contains_any",
+            "println",
+        ]
+        .iter()
+        .any(|function| rust_literal_is_inside_call(source, literal_start, function))
+}
+
+fn rust_literal_is_inside_call(source: &str, literal_start: usize, function: &str) -> bool {
+    let prefix = &source[..literal_start];
+    [format!("{function}("), format!("{function}!(")]
+        .iter()
+        .any(|needle| {
+            prefix
+                .match_indices(needle)
+                .any(|(call_start, _)| rust_call_is_open(&prefix[call_start + needle.len()..]))
+        })
+}
+
+fn rust_call_is_open(source: &str) -> bool {
+    let bytes = source.as_bytes();
+    let mut index = 0usize;
+    let mut depth = 1usize;
+    let mut line = 0usize;
+
+    while index < bytes.len() {
+        if skip_raw_string(bytes, &mut index, &mut line)
+            || skip_rust_comment(bytes, &mut index, &mut line)
+            || skip_rust_quoted_literal(bytes, &mut index, &mut line)
+        {
+            continue;
+        }
+
+        match bytes[index] {
+            b'(' => depth += 1,
+            b')' => {
+                depth = depth.saturating_sub(1);
+                if depth == 0 {
+                    return false;
+                }
+            }
+            _ => {}
+        }
+        index += 1;
+    }
+
+    true
 }
 
 fn push_unescaped_rust_char(bytes: &[u8], index: &mut usize, value: &mut String) {
@@ -569,6 +653,10 @@ fn push_unescaped_rust_char(bytes: &[u8], index: &mut usize, value: &mut String)
 fn looks_translatable_rust_string(value: &str) -> bool {
     let trimmed = value.trim();
     if trimmed.is_empty() {
+        return false;
+    }
+
+    if looks_like_non_translatable_rust_syntax(trimmed) {
         return false;
     }
 
@@ -656,18 +744,172 @@ fn looks_translatable_rust_string(value: &str) -> bool {
         && trimmed.chars().any(|ch| ch.is_ascii_lowercase())
 }
 
-fn looks_like_char_literal(bytes: &[u8], index: usize) -> bool {
-    let mut cursor = index + 1;
-    while cursor < bytes.len() && cursor <= index + 6 {
-        match bytes[cursor] {
-            b'\\' => cursor += 2,
-            b'\'' => return true,
-            b'\n' => return false,
-            _ => cursor += 1,
+fn looks_like_non_translatable_rust_syntax(value: &str) -> bool {
+    looks_like_ascii_armor_boundary(value)
+        || value.starts_with("--")
+        || value.starts_with("*.")
+        || value.starts_with("Exec=")
+        || value.starts_with("flatpak override ")
+        || (value.starts_with("git ") && value != "git command")
+        || value.starts_with("GIT_{")
+        || value.starts_with("HEAD^")
+        || looks_like_markup_template(value)
+        || value.starts_with("@define-color ")
+        || value.starts_with("D:P(")
+        || matches!(
+            value,
+            "passkey: [redacted]" | "stdin: [redacted]" | "stdin: provided"
+        )
+        || value.starts_with("signal {")
+        || value.starts_with("stream logger panicked while reading ")
+        || value.contains("\n$ ")
+        || value == "find \"{}\" is \"{}\""
+        || value.starts_with("{REQUIRE_ALL_PRIVATE_KEYS_LAYER_HEADER}\n")
+        || looks_like_constant_placeholder_record(value)
+        || looks_like_technical_identifier(value)
+        || looks_like_field_template(value)
+}
+
+fn looks_like_markup_template(value: &str) -> bool {
+    if !value.starts_with('<') {
+        return false;
+    }
+
+    let mut inside_tag = false;
+    let mut inside_placeholder = false;
+    let mut saw_tag = false;
+    for ch in value.chars() {
+        match ch {
+            '<' if !inside_placeholder => {
+                inside_tag = true;
+                saw_tag = true;
+            }
+            '>' if inside_tag => inside_tag = false,
+            '{' if !inside_tag => inside_placeholder = true,
+            '}' if inside_placeholder => inside_placeholder = false,
+            _ if !inside_tag && !inside_placeholder && ch.is_alphabetic() => return false,
+            _ => {}
         }
     }
 
-    false
+    saw_tag
+}
+
+fn looks_like_constant_placeholder_record(value: &str) -> bool {
+    let Some((field, stored_value)) = value.split_once(": ") else {
+        return false;
+    };
+    let Some(field) = field
+        .strip_prefix('{')
+        .and_then(|field| field.strip_suffix('}'))
+    else {
+        return false;
+    };
+
+    !field.is_empty()
+        && field
+            .chars()
+            .all(|ch| ch.is_ascii_uppercase() || ch.is_ascii_digit() || ch == '_')
+        && stored_value.starts_with('{')
+        && stored_value.ends_with('}')
+}
+
+fn looks_like_ascii_armor_boundary(value: &str) -> bool {
+    let Some(body) = value
+        .strip_prefix("-----BEGIN ")
+        .or_else(|| value.strip_prefix("-----END "))
+    else {
+        return false;
+    };
+
+    body.ends_with("-----")
+}
+
+fn looks_like_technical_identifier(value: &str) -> bool {
+    if value.chars().any(char::is_whitespace) {
+        return false;
+    }
+
+    if value.starts_with('{') && value.contains('}') {
+        return true;
+    }
+
+    if value.starts_with("update-{") && value.ends_with('}') {
+        return true;
+    }
+
+    if value.starts_with("X-") {
+        return true;
+    }
+
+    if value
+        .chars()
+        .next()
+        .is_some_and(|first| first.is_ascii_lowercase())
+        && (value.contains('.') || value.ends_with(':'))
+    {
+        return true;
+    }
+
+    value
+        .chars()
+        .all(|ch| ch.is_ascii_alphanumeric() || ch == '_')
+        && value.chars().skip(1).any(|ch| ch.is_ascii_uppercase())
+}
+
+fn looks_like_field_template(value: &str) -> bool {
+    let mut lines = value.lines();
+    let Some(first) = lines.next() else {
+        return false;
+    };
+    let rest = lines.collect::<Vec<_>>();
+    !rest.is_empty()
+        && std::iter::once(first)
+            .chain(rest)
+            .all(|line| field_template_name(line.trim()).is_some())
+}
+
+fn field_template_name(line: &str) -> Option<&str> {
+    let name = line.strip_suffix(':')?;
+    (!name.is_empty()
+        && name
+            .chars()
+            .all(|ch| ch.is_ascii_alphanumeric() || matches!(ch, '_' | '-')))
+    .then_some(name)
+}
+
+fn looks_like_char_literal(bytes: &[u8], index: usize) -> bool {
+    let mut cursor = index + 1;
+    let Some(first) = bytes.get(cursor).copied() else {
+        return false;
+    };
+
+    if first == b'\\' {
+        cursor += 1;
+        match bytes.get(cursor).copied() {
+            Some(b'u') if bytes.get(cursor + 1) == Some(&b'{') => {
+                cursor += 2;
+                while cursor < bytes.len() && bytes[cursor] != b'}' {
+                    cursor += 1;
+                }
+                cursor += usize::from(cursor < bytes.len());
+            }
+            Some(b'x') => cursor = (cursor + 3).min(bytes.len()),
+            Some(_) => cursor += 1,
+            None => return false,
+        }
+    } else {
+        let width = match first {
+            0x00..=0x7f => 1,
+            0xc0..=0xdf => 2,
+            0xe0..=0xef => 3,
+            0xf0..=0xf7 => 4,
+            _ => return false,
+        };
+        cursor = (cursor + width).min(bytes.len());
+    }
+
+    bytes.get(cursor) == Some(&b'\'')
 }
 
 fn skip_raw_string(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
@@ -710,75 +952,149 @@ fn skip_raw_string(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
 }
 
 fn skip_cfg_test_item(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
-    const PREFIX: &[u8] = b"#[cfg(";
-    if !bytes[*index..].starts_with(PREFIX) {
+    let Some(attribute_end) = find_rust_attribute_end(bytes, *index) else {
+        return false;
+    };
+    let attribute = std::str::from_utf8(&bytes[*index + 2..attribute_end - 1])
+        .unwrap_or_default()
+        .trim();
+    if !cfg_attribute_requires_test(attribute) {
         return false;
     }
 
-    let predicate_start = *index + PREFIX.len();
-    let mut cursor = predicate_start;
-    let mut depth = 1usize;
-    while cursor < bytes.len() && depth > 0 {
-        match bytes[cursor] {
-            b'(' => depth += 1,
-            b')' => depth -= 1,
-            _ => {}
-        }
-        cursor += 1;
-    }
-    if depth != 0 || bytes.get(cursor) != Some(&b']') {
+    advance_rust_cursor(bytes, index, line, attribute_end);
+    skip_following_rust_item(bytes, index, line);
+    true
+}
+
+fn skip_test_item(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
+    let Some(attribute_end) = find_rust_attribute_end(bytes, *index) else {
+        return false;
+    };
+    let attribute = std::str::from_utf8(&bytes[*index + 2..attribute_end - 1]).unwrap_or_default();
+    if rust_attribute_name(attribute) != Some("test") {
         return false;
     }
 
-    let predicate_end = cursor - 1;
-    let is_test_item = bytes[predicate_start..predicate_end]
-        .split(|byte| !(byte.is_ascii_alphanumeric() || *byte == b'_'))
-        .any(|token| token == b"test");
-    if !is_test_item {
-        return false;
-    }
+    advance_rust_cursor(bytes, index, line, attribute_end);
+    skip_following_rust_item(bytes, index, line);
+    true
+}
 
-    *index = cursor + 1;
+fn skip_following_rust_item(bytes: &[u8], index: &mut usize, line: &mut usize) {
     while *index < bytes.len() {
+        if skip_raw_string(bytes, index, line)
+            || skip_rust_comment(bytes, index, line)
+            || skip_rust_quoted_literal(bytes, index, line)
+        {
+            continue;
+        }
+
         match bytes[*index] {
+            b'{' => {
+                *index += 1;
+                skip_rust_block(bytes, index, line);
+                return;
+            }
+            b';' => {
+                *index += 1;
+                return;
+            }
             b'\n' => {
                 *line += 1;
                 *index += 1;
             }
-            b' ' | b'\t' | b'\r' => *index += 1,
-            _ => break,
+            _ => *index += 1,
         }
     }
+}
 
-    while *index < bytes.len() && bytes[*index] != b'{' && bytes[*index] != b';' {
-        if bytes[*index] == b'\n' {
-            *line += 1;
+fn skip_rust_block(bytes: &[u8], index: &mut usize, line: &mut usize) {
+    let mut depth = 1usize;
+    while *index < bytes.len() && depth > 0 {
+        if skip_raw_string(bytes, index, line)
+            || skip_rust_comment(bytes, index, line)
+            || skip_rust_quoted_literal(bytes, index, line)
+        {
+            continue;
         }
-        *index += 1;
-    }
 
-    if *index >= bytes.len() {
-        return true;
-    }
-
-    if bytes[*index] == b';' {
-        *index += 1;
-        return true;
-    }
-
-    let mut depth = 0usize;
-    while *index < bytes.len() {
         match bytes[*index] {
             b'{' => {
                 depth += 1;
                 *index += 1;
             }
             b'}' => {
-                depth = depth.saturating_sub(1);
+                depth -= 1;
                 *index += 1;
-                if depth == 0 {
-                    break;
+            }
+            b'\n' => {
+                *line += 1;
+                *index += 1;
+            }
+            _ => *index += 1,
+        }
+    }
+}
+
+fn skip_rust_comment(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
+    if bytes.get(*index..*index + 2) == Some(b"//") {
+        *index += 2;
+        while *index < bytes.len() {
+            if bytes[*index] == b'\n' {
+                *line += 1;
+                *index += 1;
+                break;
+            }
+            *index += 1;
+        }
+        return true;
+    }
+
+    if bytes.get(*index..*index + 2) != Some(b"/*") {
+        return false;
+    }
+
+    *index += 2;
+    let mut depth = 1usize;
+    while *index < bytes.len() && depth > 0 {
+        if bytes.get(*index..*index + 2) == Some(b"/*") {
+            depth += 1;
+            *index += 2;
+        } else if bytes.get(*index..*index + 2) == Some(b"*/") {
+            depth -= 1;
+            *index += 2;
+        } else {
+            if bytes[*index] == b'\n' {
+                *line += 1;
+            }
+            *index += 1;
+        }
+    }
+
+    true
+}
+
+fn skip_rust_quoted_literal(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
+    let delimiter = match bytes.get(*index) {
+        Some(b'"') => b'"',
+        Some(b'\'') if looks_like_char_literal(bytes, *index) => b'\'',
+        _ => return false,
+    };
+
+    *index += 1;
+    while *index < bytes.len() {
+        match bytes[*index] {
+            b'\\' => {
+                *index += 1;
+                if bytes.get(*index) == Some(&b'\n') {
+                    *line += 1;
                 }
+                *index = (*index + 1).min(bytes.len());
+            }
+            byte if byte == delimiter => {
+                *index += 1;
+                break;
             }
             b'\n' => {
                 *line += 1;
@@ -788,6 +1104,142 @@ fn skip_cfg_test_item(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool
         }
     }
 
+    true
+}
+
+fn find_rust_attribute_end(bytes: &[u8], start: usize) -> Option<usize> {
+    if bytes.get(start..start + 2) != Some(b"#[") {
+        return None;
+    }
+
+    let mut index = start + 2;
+    let mut depth = 1usize;
+    let mut ignored_line = 0usize;
+    while index < bytes.len() {
+        if skip_raw_string(bytes, &mut index, &mut ignored_line)
+            || skip_rust_comment(bytes, &mut index, &mut ignored_line)
+            || skip_rust_quoted_literal(bytes, &mut index, &mut ignored_line)
+        {
+            continue;
+        }
+
+        match bytes[index] {
+            b'[' => {
+                depth += 1;
+                index += 1;
+            }
+            b']' => {
+                depth -= 1;
+                index += 1;
+                if depth == 0 {
+                    return Some(index);
+                }
+            }
+            _ => index += 1,
+        }
+    }
+
+    None
+}
+
+fn rust_attribute_name(attribute: &str) -> Option<&str> {
+    let path = attribute
+        .trim_start()
+        .split(|ch: char| !(ch.is_ascii_alphanumeric() || matches!(ch, '_' | ':')))
+        .next()?;
+    (!path.is_empty()).then(|| path.rsplit("::").next().unwrap_or(path))
+}
+
+fn cfg_attribute_requires_test(attribute: &str) -> bool {
+    if rust_attribute_name(attribute) != Some("cfg") {
+        return false;
+    }
+
+    let Some(arguments) = attribute
+        .trim_start()
+        .strip_prefix("cfg")
+        .map(str::trim_start)
+        .and_then(|arguments| arguments.strip_prefix('('))
+        .and_then(|arguments| arguments.strip_suffix(')'))
+    else {
+        return false;
+    };
+    cfg_expression_requires_test(arguments)
+}
+
+fn cfg_expression_requires_test(expression: &str) -> bool {
+    let expression = expression.trim();
+    if expression == "test" {
+        return true;
+    }
+
+    let Some(arguments) = expression
+        .strip_prefix("all")
+        .map(str::trim_start)
+        .and_then(|arguments| arguments.strip_prefix('('))
+        .and_then(|arguments| arguments.strip_suffix(')'))
+    else {
+        return false;
+    };
+
+    top_level_cfg_arguments(arguments)
+        .into_iter()
+        .any(cfg_expression_requires_test)
+}
+
+fn top_level_cfg_arguments(arguments: &str) -> Vec<&str> {
+    let bytes = arguments.as_bytes();
+    let mut result = Vec::new();
+    let mut start = 0usize;
+    let mut depth = 0usize;
+    let mut quote = false;
+    let mut index = 0usize;
+
+    while index < bytes.len() {
+        match bytes[index] {
+            b'\\' if quote => index = (index + 2).min(bytes.len()),
+            b'"' => {
+                quote = !quote;
+                index += 1;
+            }
+            b'(' if !quote => {
+                depth += 1;
+                index += 1;
+            }
+            b')' if !quote => {
+                depth = depth.saturating_sub(1);
+                index += 1;
+            }
+            b',' if !quote && depth == 0 => {
+                result.push(arguments[start..index].trim());
+                index += 1;
+                start = index;
+            }
+            _ => index += 1,
+        }
+    }
+    result.push(arguments[start..].trim());
+    result
+}
+
+fn advance_rust_cursor(bytes: &[u8], index: &mut usize, line: &mut usize, end: usize) {
+    *line += bytes[*index..end]
+        .iter()
+        .filter(|byte| **byte == b'\n')
+        .count();
+    *index = end;
+}
+
+fn skip_non_error_rust_attribute(bytes: &[u8], index: &mut usize, line: &mut usize) -> bool {
+    let Some(attribute_end) = find_rust_attribute_end(bytes, *index) else {
+        return false;
+    };
+    let attribute = std::str::from_utf8(&bytes[*index + 2..attribute_end - 1]).unwrap_or_default();
+    if rust_attribute_name(attribute) == Some("error") {
+        return false;
+    }
+
+    advance_rust_cursor(bytes, index, line, attribute_end);
     true
 }
 
@@ -1174,10 +1626,10 @@ fn source_reference(source_root: &Path, path: &Path, line: usize) -> String {
 #[cfg(test)]
 mod tests {
     use super::{
-        collect_desktop_strings, collect_rust_strings, collect_ui_strings,
-        merge_desktop_translations, non_application_rust_source_dir, render_pot_catalog,
-        source_reference, Catalog, NON_APPLICATION_RUST_DIRECTORY_NAMES,
-        NON_APPLICATION_RUST_SOURCE_DIRS,
+        collect_desktop_strings, collect_rust_strings, collect_rust_strings_from_source,
+        collect_ui_strings, looks_translatable_rust_string, merge_desktop_translations,
+        non_application_rust_source_dir, render_pot_catalog, source_reference, Catalog,
+        NON_APPLICATION_RUST_DIRECTORY_NAMES, NON_APPLICATION_RUST_SOURCE_DIRS,
     };
     use std::path::{Path, PathBuf};
 
@@ -1278,6 +1730,134 @@ mod tests {
                 );
             }
         }
+    }
+
+    #[test]
+    fn machine_readable_rust_literals_are_not_translatable() {
+        for value in [
+            "-----BEGIN PGP PRIVATE KEY BLOCK-----",
+            "-----END PGP PRIVATE KEY BLOCK-----",
+            "-----BEGIN PGP SIGNATURE-----",
+            "-----BEGIN SSH SIGNATURE-----",
+            "--format=%H%x00%h%x00%s",
+            "*.{extension}",
+            "flatpak override --user --device=all {app_id}",
+            "git rev-parse -q --verify HEAD^{commit}",
+            "GIT_{env_prefix}_NAME",
+            "HEAD^{commit}",
+            "entry.open-new-window",
+            "GetInitialResultSet",
+            "keycord.toml",
+            "update-{:032x}",
+            "{app_id}-passkey.xml",
+            "{PASSKEY_FIELD_KEY}: {storage_value}",
+            "stdin: [redacted]",
+            "stdin: provided",
+            "passkey: [redacted]",
+            "find \"{}\" is \"{}\"",
+            "{context}\n$ {command}\nstatus: {status}",
+            "<a href=\"{}\">{}</a>",
+            "@define-color accent_bg_color {background};",
+            "D:P(A;;FA;;;SY)",
+            "username:\nemail:\nurl:",
+        ] {
+            assert!(!looks_translatable_rust_string(value), "leaked `{value}`");
+        }
+
+        for value in [
+            "This item does not contain an armored private key.",
+            "Run the Git command again.",
+            "The pass command failed.",
+            "Choose which folder-specific .gpg-id file to manage.",
+            "Step {current}/{total}: touch your key if it blinks.",
+            "The value is [redacted].",
+            "{name}: {status}",
+            "<b>Important warning</b>",
+        ] {
+            assert!(
+                looks_translatable_rust_string(value),
+                "hid user-facing `{value}`"
+            );
+        }
+    }
+
+    #[test]
+    fn rust_test_and_attribute_literals_are_not_translatable() {
+        let source_root = Path::new("/workspace/keycord");
+        let path = source_root.join("src/example.rs");
+        let source = r##"
+const VISIBLE: &str = "Visible user-facing message.";
+
+#[expect(dead_code, reason = "Technical lint reason")]
+const UNUSED: &str = "Another visible user-facing message.";
+
+#[some_attribute('a, reason = "Technical lifetime attribute reason")]
+const ATTRIBUTE_LIFETIME: &str = "Visible after a lifetime attribute.";
+
+#[error ("lowercase user-facing error.")]
+struct Error;
+
+#[cfg(not(test))]
+const NOT_TEST: &str = "Visible behind not test.";
+
+#[cfg(feature = "test-support")]
+const TEST_SUPPORT: &str = "Visible behind a test-support feature.";
+
+#[cfg(any(test, target_os = "linux"))]
+const SOMETIMES_PRODUCTION: &str = "Visible behind an any predicate.";
+
+#[cfg(all(unix, test))]
+const ONLY_TEST: &str = "Technical all-test literal";
+
+#[test]
+fn standalone_test() {
+    let closing_brace = "}";
+    let raw_closing_brace = r#"}"#;
+    let closing_brace_char = '}';
+    let escaped_closing_brace_char = '\u{7d}';
+    // }
+    /* nested { /* } */ } */
+    assert!(false, "Technical test assertion after braces");
+}
+
+const AFTER_TEST: &str = "Visible after the standalone test.";
+
+fn technical_contexts(message: &str) {
+    let _ = message.contains("Technical matcher needle");
+    let _ = message_contains_any(message, &["Technical array needle"]);
+    let _ = Regex::new("pattern").expect("Technical expectation");
+    unreachable!("Technical unreachable message");
+    log_info(format!("Technical log message: {message}"));
+    log_info(gettext("Explicitly translated log message."));
+    println!("Technical console message: {message}");
+    eprintln!("Technical console detail: {}", "Technical nested console argument");
+}
+"##;
+        let mut catalog = Catalog::new();
+
+        collect_rust_strings_from_source(source_root, &path, source, &mut catalog);
+
+        assert!(catalog.contains_key("Visible user-facing message."));
+        assert!(catalog.contains_key("Another visible user-facing message."));
+        assert!(catalog.contains_key("Visible after a lifetime attribute."));
+        assert!(catalog.contains_key("lowercase user-facing error."));
+        assert!(catalog.contains_key("Visible behind not test."));
+        assert!(catalog.contains_key("Visible behind a test-support feature."));
+        assert!(catalog.contains_key("Visible behind an any predicate."));
+        assert!(catalog.contains_key("Visible after the standalone test."));
+        assert!(catalog.contains_key("Explicitly translated log message."));
+        assert!(!catalog.contains_key("Technical lint reason"));
+        assert!(!catalog.contains_key("Technical lifetime attribute reason"));
+        assert!(!catalog.contains_key("Technical all-test literal"));
+        assert!(!catalog.contains_key("Technical test assertion after braces"));
+        assert!(!catalog.contains_key("Technical matcher needle"));
+        assert!(!catalog.contains_key("Technical array needle"));
+        assert!(!catalog.contains_key("Technical expectation"));
+        assert!(!catalog.contains_key("Technical unreachable message"));
+        assert!(!catalog.contains_key("Technical log message: {message}"));
+        assert!(!catalog.contains_key("Technical console message: {message}"));
+        assert!(!catalog.contains_key("Technical console detail: {}"));
+        assert!(!catalog.contains_key("Technical nested console argument"));
     }
 
     #[test]

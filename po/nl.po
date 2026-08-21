@@ -10,69 +10,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: crates/keycord-entries/src/ui/page/mod.rs:91
-msgid "-----BEGIN PGP PRIVATE KEY BLOCK-----"
-msgstr "-----BEGIN PGP PRIVATE KEY BLOCK-----"
-
-#: crates/keycord-git/src/audit.rs:623
-msgid "-----BEGIN PGP SIGNATURE-----"
-msgstr "-----BEGIN PGP SIGNATURE-----"
-
-#: crates/keycord-git/src/audit.rs:625
-msgid "-----BEGIN SSH SIGNATURE-----"
-msgstr "-----BEGIN SSH SIGNATURE-----"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:92
-msgid "-----END PGP PRIVATE KEY BLOCK-----"
-msgstr "-----END PGP PRIVATE KEY BLOCK-----"
-
-#: crates/keycord-git/src/audit.rs:268
-msgid "--format=%(refname)%00%(refname:short)%00"
-msgstr "--format=%(refname)%00%(refname:short)%00"
-
-#: crates/keycord-git/src/audit.rs:460
-msgid "--format=%H%x00%G?%x00%GS%x00%GK%x00%GF%x00%GP%x1f"
-msgstr "--format=%H%x00%G?%x00%GS%x00%GK%x00%GF%x00%GP%x1f"
-
-#: crates/keycord-git/src/audit.rs:320
-msgid "--format=%H%x00%h%x00%s%x00%an <%ae>%x00%aI%x00%cn <%ce>%x00%cI%x00"
-msgstr "--format=%H%x00%h%x00%s%x00%an <%ae>%x00%aI%x00%cn <%ce>%x00%cI%x00"
-
-#: src/composition/host_access.rs:44
-msgid "--talk-name=org.freedesktop.Flatpak"
-msgstr "--talk-name=org.freedesktop.Flatpak"
-
 #: crates/keycord-stores/src/recipients.rs:193
 msgid "1 recipient"
 msgstr "1 ontvanger"
 
-#: crates/keycord-git/src/ui/store_page.rs:302
+#: crates/keycord-git/src/ui/store_page.rs:305
 msgid "1 remote configured."
 msgstr "1 remote geconfigureerd."
-
-#: crates/keycord-docs/src/enabled.rs:1056
-msgid "<a href=\"{}\">{}</a>"
-msgstr "<a href=\"{}\">{}</a>"
-
-#: crates/keycord-shell/src/theme.rs:261
-msgid ""
-"@define-color accent_bg_color {background};\n"
-"@define-color accent_fg_color {foreground};\n"
-"@define-color accent_color {accent};\n"
-":root {{\n"
-"  --accent-bg-color: {background};\n"
-"  --accent-fg-color: {foreground};\n"
-"  --accent-color: {accent};\n"
-"}}"
-msgstr ""
-"@define-color accent_bg_color {background};\n"
-"@define-color accent_fg_color {foreground};\n"
-"@define-color accent_color {accent};\n"
-":root {{\n"
-"  --accent-bg-color: {background};\n"
-"  --accent-fg-color: {foreground};\n"
-"  --accent-color: {accent};\n"
-"}}"
 
 #: crates/keycord-preferences/data/window-page.fragment.ui:25
 msgid "A list of folders that contain your password data."
@@ -85,10 +29,6 @@ msgstr "Er is een nieuwere zelfstandige Linux-build beschikbaar."
 #: crates/keycord-lifecycle/src/updater/windows.rs:17
 msgid "A newer Windows release is available."
 msgstr "Er is een nieuwere Windows-release beschikbaar."
-
-#: crates/keycord-entries/src/host.rs:128 crates/keycord-stores/src/host.rs:54
-msgid "A private key for this item is locked."
-msgstr "Een privésleutel voor dit item is vergrendeld."
 
 #: crates/keycord-keys/src/lib.rs:36
 msgid "A private key for this item is locked. Unlock it in Preferences."
@@ -107,16 +47,12 @@ msgstr "Over"
 msgid "Actions"
 msgstr "Acties"
 
-#: crates/keycord-lifecycle/src/search_provider.rs:181
-msgid "ActivateResult"
-msgstr "ActivateResult"
-
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
 #: crates/keycord-entries/data/window-pages.fragment.ui:414
 msgid "Add OTP field"
 msgstr "OTP-veld toevoegen"
 
-#: crates/keycord-git/src/ui/store_page.rs:578
+#: crates/keycord-git/src/ui/store_page.rs:614
 msgid "Add a Git remote for this store."
 msgstr "Voeg een Git-remote voor deze opslag toe."
 
@@ -134,7 +70,7 @@ msgstr "Voeg eerst een wachtwoord toe aan die sleutel."
 msgid "Add a private key in Preferences."
 msgstr "Voeg een privésleutel toe in Voorkeuren."
 
-#: crates/keycord-git/src/ui/store_page.rs:320
+#: crates/keycord-git/src/ui/store_page.rs:323
 msgid "Add a remote to initialize a Git repository first."
 msgstr "Voeg eerst een remote toe om een Git-repository te initialiseren."
 
@@ -152,7 +88,7 @@ msgstr ""
 "Voeg een opslag met een Git-repository toe om hier de geschiedenis te "
 "bekijken."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:183
+#: crates/keycord-lifecycle/data/metainfo.xml:186
 msgid "Add advanced search"
 msgstr "Voeg geavanceerd zoeken toe"
 
@@ -175,15 +111,15 @@ msgstr "Voeg een Git-remote voor deze opslag toe."
 msgid "Add at least one recipient to keep saving changes."
 msgstr "Voeg minstens één remote toe voordat je synchroniseert."
 
-#: crates/keycord-git/src/ui/store_page.rs:323
+#: crates/keycord-git/src/ui/store_page.rs:326
 msgid "Add at least one remote before syncing."
 msgstr "Voeg minstens één remote toe voordat je synchroniseert."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:154
+#: crates/keycord-lifecycle/data/metainfo.xml:157
 msgid "Add documentation"
 msgstr "Voeg documentatie toe"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:36
+#: crates/keycord-lifecycle/data/metainfo.xml:35
 msgid ""
 "Add existing stores, create new stores, import passwords on supported "
 "systems, or restore a store from Git with the Host backend"
@@ -191,11 +127,11 @@ msgstr ""
 "Voeg bestaande opslagen toe, maak nieuwe opslagen, importeer wachtwoorden op "
 "ondersteunde systemen of herstel een opslag vanuit Git met de Host-backend"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:141
+#: crates/keycord-lifecycle/data/metainfo.xml:144
 msgid "Add experimental FIDO2 support"
 msgstr "Experimentele FIDO2-ondersteuning toevoegen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:163
+#: crates/keycord-lifecycle/data/metainfo.xml:166
 msgid "Add experimental OpenPGP hardware key support for private keys"
 msgstr ""
 "Experimentele OpenPGP-hardwaresleutelondersteuning voor privésleutels "
@@ -219,17 +155,17 @@ msgstr "Item toevoegen"
 msgid "Add missing fields"
 msgstr "Ontbrekende velden toevoegen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:184
+#: crates/keycord-lifecycle/data/metainfo.xml:187
 msgid "Add optional GPG synchronization"
 msgstr "Voeg optionele GPG-synchronisatie toe"
 
 #: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
 #: crates/keycord-stores/data/window-header-action.fragment.ui:4
-#: crates/keycord-stores/src/ui/management/mod.rs:220
+#: crates/keycord-stores/src/ui/management/mod.rs:219
 msgid "Add or create store"
 msgstr "Opslag toevoegen of maken"
 
-#: crates/keycord-lifecycle/src/setup.rs:88
+#: crates/keycord-lifecycle/src/setup.rs:91
 msgid "Add or remove this build from the local app menu."
 msgstr "Voeg deze versie toe aan het lokale appmenu of verwijder deze daaruit."
 
@@ -241,16 +177,16 @@ msgstr "Wachtwoord toevoegen voor {label}"
 msgid "Add password store Git remote"
 msgstr "Git-remote voor wachtwoordopslag toevoegen"
 
-#: crates/keycord-git/src/ui/store_page.rs:577
-#: crates/keycord-git/src/ui/store_page.rs:587
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
 msgid "Add remote"
 msgstr "Remote toevoegen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:155
+#: crates/keycord-lifecycle/data/metainfo.xml:158
 msgid "Add search provider"
 msgstr "Voeg zoekprovider toe"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:172
+#: crates/keycord-lifecycle/data/metainfo.xml:175
 msgid "Add the option to copy the logs"
 msgstr "Voeg de optie toe om de logboeken te kopiëren"
 
@@ -262,26 +198,26 @@ msgstr ""
 "Wil je de passkey voor {username} bij {rp_id} toevoegen aan je "
 "standaardopslag van pass? Je kunt hem vóór het opslaan controleren."
 
-#: crates/keycord-lifecycle/src/setup.rs:69
+#: crates/keycord-lifecycle/src/setup.rs:72
 msgid "Add to app menu"
 msgstr "Aan appmenu toevoegen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:182
+#: crates/keycord-lifecycle/data/metainfo.xml:185
 msgid "Add tools page"
 msgstr "Voeg een hulpmiddelenpagina toe"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:86
+#: crates/keycord-lifecycle/data/metainfo.xml:89
 msgid "Added CSV export for moving data to other tools."
 msgstr ""
 "CSV-export toegevoegd om gegevens naar andere hulpmiddelen over te zetten."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:110
+#: crates/keycord-lifecycle/data/metainfo.xml:113
 msgid "Added Git history inspection with commit verification details."
 msgstr ""
 "Inspectie van de Git-geschiedenis toegevoegd, met details over "
 "commitverificatie."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:84
+#: crates/keycord-lifecycle/data/metainfo.xml:87
 msgid ""
 "Added QR code views for passwords, usernames, one-time codes, other entry "
 "fields, and permission commands."
@@ -289,7 +225,7 @@ msgstr ""
 "QR-codeweergaven toegevoegd voor wachtwoorden, gebruikersnamen, eenmalige "
 "codes, andere velden en machtigingsopdrachten."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:85
+#: crates/keycord-lifecycle/data/metainfo.xml:88
 msgid ""
 "Added entry filtering by password store and remembered history-inspection "
 "filters."
@@ -297,19 +233,19 @@ msgstr ""
 "Filteren op wachtwoordopslag toegevoegd; filters voor geschiedenisinspectie "
 "worden nu onthouden."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:127
+#: crates/keycord-lifecycle/data/metainfo.xml:130
 msgid "Added experimental FIDO2 guides and progress indicators."
 msgstr "Experimentele FIDO2-handleidingen en voortgangsindicatoren toegevoegd."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:119
+#: crates/keycord-lifecycle/data/metainfo.xml:122
 msgid "Added experimental FIDO2-protected OpenPGP keys."
 msgstr "Experimentele met FIDO2 beveiligde OpenPGP-sleutels toegevoegd."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:107
+#: crates/keycord-lifecycle/data/metainfo.xml:110
 msgid "Added folder-specific recipient editing for .gpg-id files."
 msgstr "Bewerken van ontvangers in mapspecifieke .gpg-id-bestanden toegevoegd."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:94
+#: crates/keycord-lifecycle/data/metainfo.xml:97
 msgid "Added hybrid sorting mode"
 msgstr "Hybride sorteermodus toegevoegd"
 
@@ -338,16 +274,13 @@ msgstr "Smartcardtoegang toestaan (experimenteel)"
 msgid "An item with that name already exists."
 msgstr "Er bestaat al een item met die naam."
 
-#: crates/keycord-runtime/src/capabilities.rs:21
-#, fuzzy
-msgid "App runtime: debug={}, flatpak={}, logging={}, host-access={}."
-msgstr ""
-"App-runtime: debug={}, setup={}, flatpak={}, docs={}, logging={}, audit={}, "
-"hosttoegang={}, smartcard={}, hardwarekey={}, fidokey={}."
-
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
 msgid "Apply template"
 msgstr "Sjabloon toepassen"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr ""
 
 #: crates/keycord-git/src/audit_disabled.rs:10
 #: crates/keycord-git/src/audit_disabled.rs:20
@@ -378,11 +311,11 @@ msgstr ""
 msgid "Available version:"
 msgstr "Beschikbare versie:"
 
-#: crates/keycord-shell/data/window.ui:22
+#: crates/keycord-shell/data/window.ui:15
 msgid "Back"
 msgstr "Terug"
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:152
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
 msgid "Back to Preferences"
 msgstr "Terug naar Voorkeuren"
 
@@ -395,11 +328,11 @@ msgstr "Terug naar Opslagsleutels"
 msgid "Backend"
 msgstr "Backend"
 
-#: crates/keycord-git/src/ui/store_page.rs:690
+#: crates/keycord-git/src/ui/store_page.rs:726
 msgid "Branch"
 msgstr "Branch"
 
-#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:36
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
 msgid "Branches"
 msgstr "Branches"
 
@@ -407,7 +340,7 @@ msgstr "Branches"
 #: crates/keycord-lifecycle/data/keycord.desktop.in:5
 #: crates/keycord-lifecycle/data/metainfo.xml:6
 #: crates/keycord-lifecycle/src/desktop.rs:2
-#: crates/keycord-shell/data/window.ui:39 src/composition/navigation.rs:11
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
 msgid "Browse and edit password stores"
 msgstr "Wachtwoordopslagen bekijken en bewerken"
 
@@ -457,7 +390,7 @@ msgstr "Kan de laatste wijziging niet ongedaan maken."
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:134
+#: crates/keycord-lifecycle/data/metainfo.xml:137
 msgid "Change the default to use the filename as the username."
 msgstr "Gebruik standaard de naam van het pass-bestand als gebruikersnaam."
 
@@ -465,7 +398,7 @@ msgstr "Gebruik standaard de naam van het pass-bestand als gebruikersnaam."
 msgid "Changed paths"
 msgstr "Gewijzigde paden"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:174
+#: crates/keycord-lifecycle/data/metainfo.xml:177
 msgid "Changed the app icon to a keycord"
 msgstr "App-pictogram gewijzigd naar een sleutelkoord"
 
@@ -473,17 +406,13 @@ msgstr "App-pictogram gewijzigd naar een sleutelkoord"
 msgid "Check for _Updates"
 msgstr "Controleren op _updates"
 
-#: crates/keycord-git/src/operations.rs:31
-msgid "Check out a branch before syncing"
-msgstr "Schakel eerst over naar een branch voordat je synchroniseert"
-
 #: crates/keycord-git/src/sync.rs:137
 msgid "Check out a branch before syncing this store."
 msgstr ""
 "Schakel eerst over naar een branch voordat je deze opslag synchroniseert."
 
 #: crates/keycord-git/src/operations.rs:32
-#: crates/keycord-git/src/ui/store_page.rs:367
+#: crates/keycord-git/src/ui/store_page.rs:370
 msgid "Check out a branch before syncing."
 msgstr "Schakel eerst over naar een branch voordat je synchroniseert."
 
@@ -491,7 +420,7 @@ msgstr "Schakel eerst over naar een branch voordat je synchroniseert."
 msgid "Check staged password store Git changes"
 msgstr "Klaargezette Git-wijzigingen van de wachtwoordopslag controleren"
 
-#: crates/keycord-git/src/ui/store_page.rs:701
+#: crates/keycord-git/src/ui/store_page.rs:737
 msgid "Check the logs for details."
 msgstr "Bekijk de loguitvoer voor meer informatie."
 
@@ -520,9 +449,17 @@ msgstr "Kies een bestand of map als de importeur er één nodig heeft."
 msgid "Choose a folder and restore it from a Git repository."
 msgstr "Kies een map en herstel die vanuit een Git-repository."
 
-#: crates/keycord-stores/src/ui/management/mod.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:220
 msgid "Choose a folder. If it is empty, it becomes a store."
 msgstr "Kies een map. Als die leeg is, wordt het een opslag."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr ""
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr ""
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
 msgid ""
@@ -545,8 +482,8 @@ msgid ""
 "Choose how Keycord opens your data. Integrated is the default. Use Host to "
 "run your own command."
 msgstr ""
-"Kies hoe Sleutelkoord je gegevens opent. 'Integrated' is de standaard. Gebruik "
-"'Host' om je eigen opdracht uit te voeren."
+"Kies hoe Sleutelkoord je gegevens opent. 'Integrated' is de standaard. "
+"Gebruik 'Host' om je eigen opdracht uit te voeren."
 
 #: crates/keycord-preferences/data/window-page.fragment.ui:135
 msgid "Choose how pass files are ordered on the home page."
@@ -568,7 +505,7 @@ msgstr "Kies bronbestand"
 msgid "Choose source folder"
 msgstr "Kies bronmap"
 
-#: crates/keycord-stores/src/ui/management/mod.rs:252
+#: crates/keycord-stores/src/ui/management/mod.rs:251
 msgid "Choose store folder"
 msgstr "Kies opslagmap"
 
@@ -576,7 +513,7 @@ msgstr "Kies opslagmap"
 msgid "Choose store folder to restore"
 msgstr "Kies opslagmap om te herstellen"
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:173
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
 msgid "Choose which folder-specific .gpg-id file to manage."
 msgstr "Kies welk mapspecifiek .gpg-id-bestand je wilt beheren."
 
@@ -625,10 +562,6 @@ msgstr "Commit"
 msgid "Commit loading stopped unexpectedly."
 msgstr "Het laden van commits is onverwacht gestopt."
 
-#: crates/keycord-git/src/operations.rs:25
-msgid "Commit or discard local changes before syncing"
-msgstr "Leg lokale wijzigingen vast of verwerp ze voordat je synchroniseert"
-
 #: crates/keycord-git/src/sync.rs:29
 msgid "Commit or discard local changes before syncing this store."
 msgstr ""
@@ -659,11 +592,11 @@ msgstr ""
 "Leg lokale wijzigingen vast of verwerp ze voordat je deze opslag "
 "synchroniseert. Ook externe commits wachten nog op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:341
+#: crates/keycord-git/src/ui/store_page.rs:344
 msgid "Commit or discard local changes before syncing."
 msgstr "Leg lokale wijzigingen vast of verwerp ze voordat je synchroniseert."
 
-#: crates/keycord-git/src/ui/store_page.rs:327
+#: crates/keycord-git/src/ui/store_page.rs:330
 msgid ""
 "Commit or discard local changes before syncing. Local and remote commits are "
 "also waiting to sync."
@@ -671,7 +604,7 @@ msgstr ""
 "Leg lokale wijzigingen vast of verwerp ze voordat je synchroniseert. Ook "
 "lokale en externe commits wachten nog op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:332
+#: crates/keycord-git/src/ui/store_page.rs:335
 msgid ""
 "Commit or discard local changes before syncing. Local commits are also "
 "waiting to sync."
@@ -679,19 +612,13 @@ msgstr ""
 "Leg lokale wijzigingen vast of verwerp ze voordat je synchroniseert. Ook "
 "lokale commits wachten nog op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:337
+#: crates/keycord-git/src/ui/store_page.rs:340
 msgid ""
 "Commit or discard local changes before syncing. Remote commits are also "
 "waiting to sync."
 msgstr ""
 "Leg lokale wijzigingen vast of verwerp ze voordat je synchroniseert. Ook "
 "externe commits wachten nog op synchronisatie."
-
-#: crates/keycord-git/src/audit.rs:634
-msgid ""
-"Commit verification keeps the Git and recipient evidence explicit at the "
-"audit boundary."
-msgstr ""
 
 #: crates/keycord-git/src/ui/audit.rs:1244
 msgid "Committed"
@@ -701,7 +628,7 @@ msgstr "Commitdatum"
 msgid "Committer"
 msgstr "Committer"
 
-#: crates/keycord-fido/src/ui.rs:409
+#: crates/keycord-fido/src/ui.rs:414
 msgid "Confirm new security key PIN"
 msgstr "Nieuwe PIN van de beveiligingssleutel bevestigen"
 
@@ -709,7 +636,7 @@ msgstr "Nieuwe PIN van de beveiligingssleutel bevestigen"
 msgid "Confirm password"
 msgstr "Wachtwoord bevestigen"
 
-#: crates/keycord-fido/src/ui.rs:299
+#: crates/keycord-fido/src/ui.rs:304
 msgid "Confirm the new security key PIN."
 msgstr "Bevestig de nieuwe PIN van de beveiligingssleutel."
 
@@ -719,7 +646,6 @@ msgid "Connect a hardware key first."
 msgstr "Verbind eerst een hardwaresleutel."
 
 #: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-#: crates/keycord-keys/src/error.rs:258
 msgid "Connect only one FIDO2 security key before continuing."
 msgstr "Verbind slechts één FIDO2-beveiligingssleutel voordat je doorgaat."
 
@@ -744,7 +670,7 @@ msgid "Connect the hardware key first."
 msgstr "Verbind eerst de hardwaresleutel."
 
 #: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:15 crates/keycord-keys/src/error.rs:16
+#: crates/keycord-keys/src/error.rs:16
 msgid "Connect the matching FIDO2 security key."
 msgstr "Verbind de bijpassende FIDO2-beveiligingssleutel."
 
@@ -760,7 +686,7 @@ msgstr "Context"
 #: crates/keycord-entries/src/ui/page/mod.rs:782
 #: crates/keycord-entries/src/ui/page/mod.rs:792
 #: crates/keycord-entries/src/ui/page/mod.rs:802
-#: crates/keycord-shell/src/optional_permission.rs:149
+#: crates/keycord-shell/src/optional_permission.rs:147
 #: src/window/tool_hub/menu.rs:66
 msgid "Copied."
 msgstr "Gekopieerd."
@@ -782,13 +708,13 @@ msgstr "Publieke sleutel met ASCII-pantser kopiëren"
 msgid "Copy experimental FIDO2-protected private key"
 msgstr "Experimentele met FIDO2 beveiligde privésleutel kopiëren"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:531
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:585
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
 msgid "Copy fingerprint"
 msgstr "Vingerafdruk kopiëren"
 
-#: crates/keycord-shell/data/window.ui:120
-#: crates/keycord-shell/data/window.ui:126
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
 msgid "Copy logs"
 msgstr "Loguitvoer kopiëren"
 
@@ -802,11 +728,11 @@ msgstr "Wachtwoord kopiëren"
 msgid "Copy password to clipboard"
 msgstr "Wachtwoord naar klembord kopiëren"
 
-#: crates/keycord-shell/src/optional_permission.rs:135
+#: crates/keycord-shell/src/optional_permission.rs:138
 msgid "Copy permission command"
 msgstr "Machtigingsopdracht kopiëren"
 
-#: crates/keycord-shell/data/window.ui:121
+#: crates/keycord-shell/data/window.ui:114
 msgid "Copy recent app and command output to the clipboard."
 msgstr "Kopieer recente app- en opdrachtuitvoer naar het klembord."
 
@@ -835,7 +761,7 @@ msgstr "Kon de thuismap niet bepalen."
 
 #: crates/keycord-git/src/ui/actions/enabled.rs:89
 #: crates/keycord-stores/src/ui/management/clone.rs:221
-#: crates/keycord-stores/src/ui/management/mod.rs:275
+#: crates/keycord-stores/src/ui/management/mod.rs:274
 msgid "Couldn't add that folder."
 msgstr "Kon die map niet toevoegen."
 
@@ -843,14 +769,6 @@ msgstr "Kon die map niet toevoegen."
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:175
 msgid "Couldn't add the hardware key."
 msgstr "Kon de hardwaresleutel niet toevoegen."
-
-#: crates/keycord-entries/src/ui/list/row.rs:798
-msgid ""
-"Couldn't build a new window.\n"
-"error: {err}"
-msgstr ""
-"Kon geen nieuw venster maken.\n"
-"fout: {err}"
 
 #: crates/keycord-keys/src/hardware/linux.rs:355
 msgid "Couldn't certify the generated hardware key"
@@ -860,7 +778,7 @@ msgstr "Kon de gegenereerde hardwaresleutel niet certificeren"
 msgid "Couldn't check for updates."
 msgstr "Kon niet op updates controleren."
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:492
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
 msgid "Couldn't copy that key."
 msgstr "Kon die sleutel niet kopiëren."
 
@@ -900,26 +818,6 @@ msgstr "Kon de wachtwoorden niet exporteren."
 msgid "Couldn't find key with matching fingerprint"
 msgstr "Kon geen sleutel met overeenkomende vingerafdruk vinden"
 
-#: crates/keycord-entries/src/ui/list/row.rs:789
-msgid "Couldn't find the application to open a new window."
-msgstr "Kon de toepassing voor het openen van een nieuw venster niet vinden."
-
-#: crates/keycord-git/src/ui/signing.rs:238
-msgid "Couldn't find the application window for the Git signing unlock dialog."
-msgstr ""
-"Kon het applicatievenster voor de ontgrendeldialoog voor Git-ondertekening "
-"niet vinden."
-
-#: crates/keycord-keys/src/ui/unlock.rs:353
-msgid "Couldn't find the application window for the private key unlock dialog."
-msgstr ""
-"Kon het applicatievenster voor de ontgrendeldialoog van de privésleutel niet "
-"vinden."
-
-#: crates/keycord-entries/src/ui/list/row.rs:780
-msgid "Couldn't find the current window to open a new one."
-msgstr "Kon het huidige venster niet vinden om een nieuw venster te openen."
-
 #: crates/keycord-keys/src/hardware/linux.rs:303
 msgid "Couldn't generate the hardware decryption key"
 msgstr "Kon de hardware-decryptiesleutel niet genereren"
@@ -928,13 +826,13 @@ msgstr "Kon de hardware-decryptiesleutel niet genereren"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Kon de hardware-ondertekeningssleutel niet genereren"
 
-#: crates/keycord-fido/src/ui.rs:197 crates/keycord-fido/src/ui.rs:223
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
 msgstr "Kon de sleutel niet genereren."
 
-#: crates/keycord-shell/src/optional_permission.rs:15
+#: crates/keycord-shell/src/optional_permission.rs:14
 msgid "Couldn't grant permission."
 msgstr "Kon geen machtiging verlenen."
 
@@ -959,17 +857,17 @@ msgstr "Kon de sleutel niet importeren."
 msgid "Couldn't initialize the FIDO2 security key."
 msgstr "Kon de FIDO2-beveiligingssleutel niet initialiseren."
 
-#: crates/keycord-git/src/ui/store_page.rs:388
-#: crates/keycord-git/src/ui/store_page.rs:631
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
 msgid "Couldn't inspect Git remotes."
 msgstr "Kon Git-remotes niet inspecteren."
 
-#: crates/keycord-git/src/ui/store_page.rs:700
+#: crates/keycord-git/src/ui/store_page.rs:736
 msgid "Couldn't inspect Git state"
 msgstr "Kon Git-status niet inspecteren"
 
 #: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:68
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
 msgid "Couldn't inspect host GPG keys"
 msgstr "Kon host-GPG-sleutels niet inspecteren"
 
@@ -982,7 +880,7 @@ msgid "Couldn't install the update."
 msgstr "Kon de update niet installeren."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:548
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:23
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
 msgid "Couldn't keep private keys synced. Sync was turned off."
 msgstr ""
 "Kon privésleutels niet synchroon houden. Synchronisatie is uitgeschakeld."
@@ -995,7 +893,7 @@ msgstr "Kon commits niet laden."
 msgid "Couldn't load data"
 msgstr "Kon gegevens niet laden"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
 msgid "Couldn't load private keys"
 msgstr "Kon privésleutels niet laden"
 
@@ -1022,8 +920,8 @@ msgid "Couldn't open that item."
 msgstr "Kon dat item niet openen."
 
 #: crates/keycord-shell/src/file_picker.rs:22
-#: crates/keycord-shell/src/file_picker.rs:252
-#: crates/keycord-shell/src/file_picker.rs:266
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
 msgid "Couldn't open the file chooser."
 msgstr "Kon de bestandskiezer niet openen."
 
@@ -1060,7 +958,7 @@ msgstr ""
 msgid "Couldn't read that file."
 msgstr "Kon dat bestand niet lezen."
 
-#: crates/keycord-stores/src/ui/management/mod.rs:262
+#: crates/keycord-stores/src/ui/management/mod.rs:261
 msgid "Couldn't read that folder."
 msgstr "Kon die map niet lezen."
 
@@ -1072,11 +970,11 @@ msgstr "Kon die sleutel niet lezen."
 msgid "Couldn't read the clipboard."
 msgstr "Kon het klembord niet lezen."
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:505
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
 msgid "Couldn't remove that key."
 msgstr "Kon die sleutel niet verwijderen."
 
-#: crates/keycord-git/src/ui/store_page.rs:507
+#: crates/keycord-git/src/ui/store_page.rs:543
 msgid "Couldn't remove that remote."
 msgstr "Kon die remote niet verwijderen."
 
@@ -1110,7 +1008,7 @@ msgstr "Kon die remote niet opslaan."
 msgid "Couldn't save that setting."
 msgstr "Kon die instelling niet opslaan."
 
-#: crates/keycord-entries/src/ui/list/store_filter.rs:92
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
 #: crates/keycord-git/src/ui/audit.rs:629
 msgid "Couldn't save the filter selection."
 msgstr "Kon de filterselectie niet opslaan."
@@ -1141,7 +1039,7 @@ msgstr "Kon het installatieprogramma niet starten."
 msgid "Couldn't sync private keys."
 msgstr "Kon privésleutels niet synchroniseren."
 
-#: crates/keycord-git/src/ui/store_page.rs:670
+#: crates/keycord-git/src/ui/store_page.rs:706
 msgid "Couldn't sync store."
 msgstr "Kon de opslag niet synchroniseren."
 
@@ -1171,7 +1069,7 @@ msgstr "Kon de hardwaresleutel niet ontgrendelen."
 msgid "Couldn't unlock the key."
 msgstr "Kon de sleutel niet ontgrendelen."
 
-#: crates/keycord-lifecycle/src/setup.rs:101
+#: crates/keycord-lifecycle/src/setup.rs:104
 msgid "Couldn't update the app menu."
 msgstr "Kon het appmenu niet bijwerken."
 
@@ -1191,7 +1089,7 @@ msgstr "Kon de gevraagde hardwaresleutel-PIN niet verifiëren"
 msgid "Create a new FIDO2-protected key."
 msgstr "Maak een nieuwe, met FIDO2 beveiligde sleutel."
 
-#: crates/keycord-entries/src/ui/new_item.rs:68
+#: crates/keycord-entries/src/ui/new_item.rs:75
 msgid "Create a new pass file."
 msgstr "Maak een nieuw pass-bestand."
 
@@ -1211,10 +1109,6 @@ msgstr ""
 "Experimenteel: maak een nieuwe OpenPGP-sleutel op een lege verbonden "
 "smartcard of YubiKey."
 
-#: crates/keycord-git/src/integrated.rs:571
-msgid "Created {} password store Git commit {commit_oid} for {store_root}."
-msgstr "{} Git-commit {commit_oid} voor wachtwoordopslag {store_root} gemaakt."
-
 #: crates/keycord-git/src/audit_types.rs:95
 msgid "Cryptographically invalid signature"
 msgstr "Cryptografisch ongeldige handtekening"
@@ -1226,18 +1120,6 @@ msgstr "Ontvangers in de nieuwste commit op de huidige branch"
 #: crates/keycord-lifecycle/src/updater/common.rs:917
 msgid "Current version:"
 msgstr "Huidige versie:"
-
-#: crates/keycord-passkey/src/request.rs:66
-msgid "CxpHpkeParameters"
-msgstr "CxpHpkeParameters"
-
-#: crates/keycord-runtime/src/secure_fs.rs:234
-msgid "D:P(A;;FA;;;SY)(A;;FA;;;{user_sid})"
-msgstr "D:P(A;;FA;;;SY)(A;;FA;;;{user_sid})"
-
-#: crates/keycord-runtime/src/secure_fs.rs:235
-msgid "D:P(A;OICI;FA;;;SY)(A;OICI;FA;;;{user_sid})"
-msgstr "D:P(A;OICI;FA;;;SY)(A;OICI;FA;;;{user_sid})"
 
 #: crates/keycord-stores/src/recipient_page.rs:175
 msgid "Default"
@@ -1259,7 +1141,7 @@ msgstr "Wachtwoorditem verwijderen"
 msgid "Delete selected pass file"
 msgstr "Geselecteerd pass-bestand verwijderen"
 
-#: crates/keycord-git/src/ui/store_page.rs:285
+#: crates/keycord-git/src/ui/store_page.rs:288
 msgid "Detached HEAD"
 msgstr "Losgekoppelde HEAD"
 
@@ -1286,7 +1168,7 @@ msgstr "Documentatie"
 msgid "Downloaded"
 msgstr "Gedownload"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:63
+#: crates/keycord-lifecycle/data/metainfo.xml:62
 msgid "Edit a password entry"
 msgstr "Een wachtwoorditem bewerken"
 
@@ -1300,8 +1182,8 @@ msgstr ""
 "genereer wachtwoorden, kopieer veldwaarden en toon wachtwoorden, "
 "gebruikersnamen, eenmalige codes of andere velden als QR-codes"
 
-#: crates/keycord-git/src/ui/store_page.rs:446
-#: crates/keycord-git/src/ui/store_page.rs:466
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
 msgid "Edit remote"
 msgstr "Remote bewerken"
 
@@ -1403,7 +1285,7 @@ msgid "Enter an email address."
 msgstr "Voer een e-mailadres in."
 
 #: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:5 crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/error.rs:6
 #: crates/keycord-keys/src/store/unlock.rs:258
 msgid "Enter the FIDO2 security key PIN."
 msgstr "Voer de PIN van de FIDO2-beveiligingssleutel in."
@@ -1431,7 +1313,7 @@ msgstr "Voer het sleutelwachtwoord in."
 msgid "Enter the new hardware key PIN."
 msgstr "Voer de nieuwe PIN van de hardwaresleutel in."
 
-#: crates/keycord-fido/src/ui.rs:296
+#: crates/keycord-fido/src/ui.rs:301
 msgid "Enter the new security key PIN."
 msgstr "Voer de nieuwe PIN van de beveiligingssleutel in."
 
@@ -1440,7 +1322,7 @@ msgstr "Voer de nieuwe PIN van de beveiligingssleutel in."
 msgid "Enter the private key password."
 msgstr "Voer het wachtwoord van de privésleutel in."
 
-#: crates/keycord-fido/src/ui.rs:291
+#: crates/keycord-fido/src/ui.rs:296
 msgid "Enter the security key PIN."
 msgstr "Voer de PIN van de beveiligingssleutel in."
 
@@ -1448,20 +1330,9 @@ msgstr "Voer de PIN van de beveiligingssleutel in."
 msgid "Escape"
 msgstr "Escape"
 
-#: crates/keycord-lifecycle/src/setup.rs:541
-msgid "Exec=/tmp/keycord %f"
-msgstr ""
-
-#: crates/keycord-lifecycle/data/metainfo.xml:164
+#: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Breid de wachtwoordeditor uit met opschoonacties"
-
-#: crates/keycord-fido/src/ui.rs:192
-msgid ""
-"Experimental FIDO2-protected key generation worker disconnected unexpectedly."
-msgstr ""
-"Het experimentele proces voor het genereren van met FIDO2 beveiligde "
-"sleutels werd onverwacht verbroken."
 
 #: crates/keycord-fido/src/ui.rs:37
 msgid ""
@@ -1470,9 +1341,9 @@ msgid ""
 "Restart Keycord after granting access."
 msgstr ""
 "Experimentele met FIDO2 beveiligde privésleutels hebben USB-apparaattoegang "
-"nodig voordat Sleutelkoord een verbonden beveiligingssleutel kan gebruiken om "
-"beveiligde privésleutels te ontgrendelen. Start Sleutelkoord opnieuw nadat je "
-"toegang hebt gegeven."
+"nodig voordat Sleutelkoord een verbonden beveiligingssleutel kan gebruiken "
+"om beveiligde privésleutels te ontgrendelen. Start Sleutelkoord opnieuw "
+"nadat je toegang hebt gegeven."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1481,10 +1352,11 @@ msgid ""
 "keys remain available without this."
 msgstr ""
 "Experimentele hardwaresleutelworkflows hebben PC/SC-toegang nodig om "
-"verbonden OpenPGP-smartcards of YubiKeys te gebruiken. Start Sleutelkoord daarna "
-"opnieuw. Met wachtwoord beveiligde sleutels blijven beschikbaar zonder dit."
+"verbonden OpenPGP-smartcards of YubiKeys te gebruiken. Start Sleutelkoord "
+"daarna opnieuw. Met wachtwoord beveiligde sleutels blijven beschikbaar "
+"zonder dit."
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:205
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
 msgid ""
 "Experimental multi-layer encryption. When on, every selected key must be "
 "unlocked and other pass apps will not be able to read these items."
@@ -1493,8 +1365,8 @@ msgstr ""
 "geselecteerde sleutel worden ontgrendeld en kunnen andere pass-apps deze "
 "items niet lezen."
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:200
-#: crates/keycord-stores/src/ui/recipient_page/list.rs:162
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
 msgid "Experimental store options"
 msgstr "Experimentele opslagopties"
 
@@ -1555,17 +1427,6 @@ msgstr "{count} wachtwoord geëxporteerd."
 msgid "Exported {count} passwords."
 msgstr "{count} wachtwoorden geëxporteerd."
 
-#: crates/keycord-keys/src/ui/dialog.rs:273
-#: crates/keycord-keys/src/ui/dialog.rs:45
-#: crates/keycord-keys/src/ui/dialog.rs:60
-#: crates/keycord-keys/src/ui/unlock.rs:84
-msgid "FIDO UI is dispatched first"
-msgstr ""
-
-#: crates/keycord-fido/src/ui.rs:220 crates/keycord-keys/src/ui/unlock.rs:262
-msgid "FIDO2 PIN setup worker disconnected unexpectedly."
-msgstr "Worker voor het instellen van de FIDO2-PIN is onverwacht verbroken."
-
 #: crates/keycord-fido/src/manifest.rs:38
 msgid "FIDO2 private key manifest"
 msgstr "FIDO2-privésleutelmanifest"
@@ -1588,17 +1449,6 @@ msgstr "FIDO2-ondersteuning is uitgeschakeld in deze build van Sleutelkoord."
 msgid "FIDO2 text envelope"
 msgstr "FIDO2 text envelope"
 
-#: crates/keycord-git/src/sync.rs:71
-msgid "Failed to abort password store merge for {root}: {err}"
-msgstr ""
-"Kon de Git-samenvoeging van de wachtwoordopslag voor {root} niet afbreken: "
-"{err}"
-
-#: crates/keycord-git/src/sync.rs:65
-msgid "Failed to abort password store merge for {root}: {}"
-msgstr ""
-"Kon de Git-samenvoeging van de wachtwoordopslag voor {root} niet afbreken: {}"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Kon geen privé Linux-update-stagingmap toewijzen."
@@ -1607,52 +1457,21 @@ msgstr "Kon geen privé Linux-update-stagingmap toewijzen."
 msgid "Failed to allocate a temporary file name."
 msgstr "Kon geen tijdelijke bestandsnaam toewijzen."
 
-#: src/main.rs:65
-#, fuzzy
-msgid "Failed to apply process hardening: {error}"
-msgstr "Kon procesbeveiliging niet toepassen: {err}"
-
-#: crates/keycord-shell/src/application.rs:290
+#: crates/keycord-shell/src/application.rs:292
 msgid "Failed to build shortcuts dialog."
 msgstr "Kon het sneltoetsenvenster niet maken."
 
-#: crates/keycord-shell/src/application.rs:220
+#: crates/keycord-shell/src/application.rs:222
 msgid "Failed to build the main window."
 msgstr "Kon het hoofdvenster niet maken."
-
-#: crates/keycord-shell/src/application.rs:280
-#, fuzzy
-msgid ""
-"Failed to build the shortcuts dialog.\n"
-"error: {error}"
-msgstr ""
-"Kon het sneltoetsenvenster niet maken.\n"
-"fout: {err}"
-
-#: crates/keycord-lifecycle/src/updater/common.rs:406
-msgid "Failed to check for updates: {error}"
-msgstr "Kon niet op updates controleren: {error}"
 
 #: crates/keycord-shell/src/file_picker.rs:127
 msgid "Failed to configure Windows file picker options: {err}"
 msgstr "Kon opties voor de Windows-bestandskiezer niet configureren: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:296
+#: crates/keycord-shell/src/file_picker.rs:311
 msgid "Failed to configure Windows save-file picker options: {err}"
 msgstr "Kon de opties van de Windows-bestandskiezer niet instellen: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:487
-msgid "Failed to copy key material '{}': {err}"
-msgstr "Kon sleutelmateriaal '{}' niet kopiëren: {err}"
-
-#: crates/keycord-entries/src/clipboard.rs:142
-msgid "Failed to copy password entry: {err}"
-msgstr "Kon het wachtwoorditem niet kopiëren: {err}"
-
-#: crates/keycord-entries/src/clipboard.rs:66
-#, fuzzy
-msgid "Failed to copy password with the host command: {err}"
-msgstr "Kon het wachtwoorditem niet kopiëren: {err}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:220
 msgid "Failed to create Linux update staging directory '{}': {error}"
@@ -1666,7 +1485,7 @@ msgstr "Kon Linux-update-staginghoofdmap '{}' niet maken: {error}"
 msgid "Failed to create the Windows file picker: {err}"
 msgstr "Kon de Windows-bestandskiezer niet maken: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:286
+#: crates/keycord-shell/src/file_picker.rs:301
 msgid "Failed to create the Windows save-file picker: {err}"
 msgstr "Kon de Windows-bestandskiezer voor opslaan niet maken: {err}"
 
@@ -1682,18 +1501,6 @@ msgstr "Kon ontsleutelde UTF-8-gegevens niet decoderen"
 msgid "Failed to derive enough HKDF output."
 msgstr "Kon niet genoeg HKDF-uitvoer afleiden."
 
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:81
-msgid "Failed to discover hardware keys: {err}"
-msgstr "Kon hardwaresleutels niet vinden: {err}"
-
-#: crates/keycord-lifecycle/src/updater/common.rs:563
-msgid "Failed to download the update: {error}"
-msgstr "Kon de update niet downloaden: {error}"
-
-#: crates/keycord-preferences/src/ui/settings.rs:375
-msgid "Failed to enable private-key sync: {err}"
-msgstr "Kon privésleutelsynchronisatie niet inschakelen: {err}"
-
 #: crates/keycord-passkey/src/credential.rs:441
 #, fuzzy
 msgid "Failed to encode passkey key material: {err}"
@@ -1704,22 +1511,9 @@ msgstr "Kon sleutelmateriaal '{}' niet kopiëren: {err}"
 msgid "Failed to export passkey JSON: {err}"
 msgstr "Ongeldige JSON van opgeslagen passkey: {err}"
 
-#: crates/keycord-lifecycle/src/search_provider.rs:108
-msgid "Failed to export search provider object: {err}"
-msgstr "Kon het zoekproviderobject niet exporteren: {err}"
-
-#: crates/keycord-fido/src/ui.rs:150
-#, fuzzy
-msgid "Failed to generate experimental FIDO2-protected key: {}"
-msgstr "Kon experimentele met FIDO2 beveiligde sleutel niet genereren: {err}"
-
 #: crates/keycord-passkey/src/credential.rs:436
 #, fuzzy
 msgid "Failed to generate passkey key material: {err}"
-msgstr "Kon privésleutel niet genereren: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:79
-msgid "Failed to generate private key: {err}"
 msgstr "Kon privésleutel niet genereren: {err}"
 
 #: crates/keycord-shell/src/ui.rs:29
@@ -1730,206 +1524,33 @@ msgstr "Kon {id} niet ophalen"
 msgid "Failed to hash update file '{}': {error}"
 msgstr "Kon updatebestand '{}' niet hashen: {error}"
 
-#: crates/keycord-shell/src/ui.rs:907
-msgid "Failed to hide notice '{notice_id}': {err}"
-msgstr "Kon melding '{notice_id}' niet verbergen: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:102
-msgid "Failed to import hardware key: {err}"
-msgstr "Kon de hardwaresleutel niet importeren: {err}"
-
-#: crates/keycord-stores/src/ui/management/import.rs:394
-msgid "Failed to import passwords into '{}' from '{}': {err}"
-msgstr "Kon wachtwoorden uit '{}' niet in '{}' importeren: {err}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:580
-msgid "Failed to import private key from pass file: {err}"
-msgstr "Kon privésleutel niet uit pass-bestand importeren: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:204
-msgid "Failed to import private key: {err}"
-msgstr "Kon privésleutel niet importeren: {err}"
-
 #: crates/keycord-shell/src/file_picker.rs:101
 msgid "Failed to initialize COM for the file picker: {err}"
 msgstr "Kon COM voor de bestandskiezer niet initialiseren: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:280
+#: crates/keycord-shell/src/file_picker.rs:295
 msgid "Failed to initialize COM for the save-file picker: {err}"
 msgstr "Kon COM niet initialiseren voor de bestandskiezer: {err}"
 
-#: crates/keycord-shell/src/application.rs:141
+#: crates/keycord-shell/src/application.rs:143
 msgid "Failed to initialize libadwaita."
 msgstr "Kon libadwaita niet initialiseren."
-
-#: src/composition/localization.rs:29
-#, fuzzy
-msgid "Failed to initialize translations: {error}"
-msgstr "Kon opslagen niet opslaan: {err}"
-
-#: crates/keycord-git/src/ui/store_page.rs:627
-msgid "Failed to inspect Git state before syncing '{store_for_sync}': {err}"
-msgstr ""
-"Kon de Git-status vóór synchronisatie van '{store_for_sync}' niet "
-"inspecteren: {err}"
-
-#: crates/keycord-git/src/ui/store_page.rs:697
-msgid "Failed to inspect Git state for '{store}': {err}"
-msgstr "Kon de Git-status voor '{store}' niet inspecteren: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:367
-msgid "Failed to inspect connected smartcard '{ident}': {err}"
-msgstr "Kon verbonden smartcard '{ident}' niet inspecteren: {err}"
-
-#: crates/keycord-git/src/ui/signing.rs:173
-#: crates/keycord-keys/src/ui/unlock.rs:201
-msgid "Failed to inspect connected smartcards for '{fingerprint}': {err}"
-msgstr "Kon verbonden smartcards voor '{fingerprint}' niet inspecteren: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:639
-msgid "Failed to inspect connected smartcards for recipients: {err}"
-msgstr "Kon verbonden smartcards voor ontvangers niet inspecteren: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:392
-msgid "Failed to inspect connected smartcards while {context}: {err}"
-msgstr "Kon verbonden smartcards niet inspecteren tijdens {context}: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:294
-msgid "Failed to inspect host GPG private keys for recipients: {err}"
-msgstr "Kon host-GPG-privésleutels voor ontvangers niet inspecteren: {err}"
-
-#: crates/keycord-git/src/status.rs:87
-msgid ""
-"Failed to inspect host Git work-tree state for '{root}', falling back to "
-"local Git state: {err}"
-msgstr ""
-"Kon de host-Git-status van de werkboom voor '{root}' niet inspecteren; er "
-"wordt teruggevallen op de lokale Git-status: {err}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:662
-msgid "Failed to inspect private key in pass file: {err}"
-msgstr "Kon privésleutel in pass-bestand niet inspecteren: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:260
-msgid "Failed to inspect private key: {err}"
-msgstr "Kon privésleutel niet inspecteren: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:152
-msgid ""
-"Failed to inspect whether private key '{fingerprint}' is unlocked: {err}"
-msgstr ""
-"Kon niet controleren of privésleutel '{fingerprint}' ontgrendeld is: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:161
-msgid ""
-"Failed to inspect whether private key '{fingerprint}' requires unlocking: "
-"{err}"
-msgstr ""
-"Kon niet controleren of privésleutel '{fingerprint}' ontgrendeling vereist: "
-"{err}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:149
 msgid "Failed to install the downloaded update: {error}"
 msgstr "Kon de gedownloade update niet installeren: {error}"
 
-#: crates/keycord-lifecycle/src/search_provider.rs:265
-msgid "Failed to launch Keycord search result: {err}"
-msgstr "Kon het Sleutelkoord-zoekresultaat niet openen: {err}"
-
-#: crates/keycord-lifecycle/src/search_provider.rs:290
-msgid "Failed to launch Keycord search window: {err}"
-msgstr "Kon het Sleutelkoord-zoekvenster niet openen: {err}"
-
-#: crates/keycord-git/src/audit.rs:237
-msgid ""
-"Failed to load host GPG public keys for audit verification, continuing with "
-"app keys only: {err}"
-msgstr ""
-"Kon host-GPG-publieke sleutels niet laden voor auditverificatie; er wordt "
-"alleen doorgegaan met appsleutels: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:706
-msgid "Failed to load managed FIDO2 key '{}': {err}"
-msgstr "Kon beheerde FIDO2-sleutel '{}' niet laden: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:680
-msgid "Failed to load managed hardware key '{}': {err}"
-msgstr "Kon beheerde hardwaresleutel '{}' niet laden: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:655
-msgid "Failed to load managed private key '{}': {err}"
-msgstr "Kon beheerde privésleutel '{}' niet laden: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:623
-msgid "Failed to load private keys for recipients: {err}"
-msgstr "Kon privésleutels voor ontvangers niet laden: {err}"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:89
 msgid "Failed to make the downloaded update executable: {error}"
 msgstr "Kon de gedownloade update niet uitvoerbaar maken: {error}"
-
-#: crates/keycord-entries/src/ui/list/row.rs:483
-msgid "Failed to move or rename password entry: {err}"
-msgstr "Kon het wachtwoorditem niet verplaatsen of hernoemen: {err}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:286
-msgid "Failed to move password entry after save: {err}"
-msgstr "Kon het wachtwoorditem na het opslaan niet verplaatsen: {err}"
 
 #: crates/keycord-passkey/src/credential.rs:413
 msgid "Failed to normalize passkey private key: {err}"
 msgstr "Kon de passkeyprivésleutel niet normaliseren: {err}"
 
-#: crates/keycord-entries/src/file/url.rs:46
-msgid ""
-"Failed to open URL in the default browser.\n"
-"URL: {uri_for_log}\n"
-"error: {error}"
-msgstr ""
-"Kon de URL niet openen in de standaardbrowser.\n"
-"URL: {uri_for_log}\n"
-"fout: {error}"
-
-#: crates/keycord-docs/src/enabled.rs:1019
-msgid ""
-"Failed to open documentation link.\n"
-"URL: {uri_for_log}\n"
-"error: {error}"
-msgstr ""
-"Kon de documentatielink niet openen.\n"
-"URL: {uri_for_log}\n"
-"fout: {error}"
-
-#: crates/keycord-entries/src/ui/list/row.rs:767
-msgid ""
-"Failed to open entry folder in the file manager.\n"
-"folder: {folder_uri_for_log}\n"
-"error: {error}"
-msgstr ""
-"Kon de map van het item niet openen in de bestandsbeheerder.\n"
-"map: {folder_uri_for_log}\n"
-"fout: {error}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:357
-msgid "Failed to open password entry: {err}"
-msgstr "Kon het wachtwoorditem niet openen: {err}"
-
 #: crates/keycord-runtime/src/command.rs:386
 msgid "Failed to open stdin for command"
 msgstr "Kon stdin voor opdracht niet openen"
-
-#: crates/keycord-shell/src/file_picker.rs:354
-#: crates/keycord-shell/src/file_picker.rs:78
-msgid "Failed to open the file chooser: {err}"
-msgstr "Kon de bestandskiezer niet openen: {err}"
-
-#: crates/keycord-shell/src/file_picker.rs:251
-msgid "Failed to open the save-file chooser: {err}"
-msgstr "Kon de bestandskiezer voor opslaan niet openen: {err}"
-
-#: crates/keycord-lifecycle/src/search_provider.rs:89
-msgid "Failed to parse search provider D-Bus XML: {err}"
-msgstr "Kon zoekprovider-D-Bus-XML niet parseren: {err}"
 
 #: src/main.rs:97
 msgid "Failed to prepare managed private-key storage."
@@ -1945,11 +1566,6 @@ msgstr "Kon de passkeyprivésleutel niet normaliseren: {err}"
 msgid "Failed to prepare passkey key material: {err}"
 msgstr "Kon sleutelmateriaal '{}' niet kopiëren: {err}"
 
-#: crates/keycord-lifecycle/src/updater/common.rs:434
-msgid "Failed to prepare update download target for {}: {error}"
-msgstr ""
-"Kon de downloadlocatie voor de update van {} niet voorbereiden: {error}"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:244
 msgid "Failed to read Linux update staging root metadata '{}': {error}"
 msgstr "Kon metadata van Linux-update-staginghoofdmap '{}' niet lezen: {error}"
@@ -1958,7 +1574,7 @@ msgstr "Kon metadata van Linux-update-staginghoofdmap '{}' niet lezen: {error}"
 msgid "Failed to read Windows file picker options: {err}"
 msgstr "Kon opties van de Windows-bestandskiezer niet lezen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:289
+#: crates/keycord-shell/src/file_picker.rs:304
 msgid "Failed to read Windows save-file picker options: {err}"
 msgstr "Kon de opties van de Windows-bestandskiezer niet lezen: {err}"
 
@@ -1972,42 +1588,9 @@ msgstr "Kon stderr van opdracht niet lezen: {err}"
 msgid "Failed to read command stdout: {error}"
 msgstr "Kon stdout van opdracht niet lezen: {err}"
 
-#: crates/keycord-git/src/audit.rs:443
-msgid ""
-"Failed to read host Git signature metadata for '{store_root}', continuing "
-"with local audit verification only: {err}"
-msgstr ""
-"Kon host-Git-handtekeningmetadata voor '{store_root}' niet lezen; er wordt "
-"alleen doorgegaan met lokale auditverificatie: {err}"
-
 #: crates/keycord-entries/src/ui/tools/export.rs:135
 msgid "Failed to read password entry '{}' from '{}': {err}"
 msgstr "Kon het wachtwoorditem '{}' niet uit '{}' lezen: {err}"
-
-#: crates/keycord-entries/src/clipboard.rs:237
-msgid "Failed to read password entry for QR code: {err}"
-msgstr "Kon het wachtwoorditem voor de QR-code niet lezen: {err}"
-
-#: crates/keycord-stores/src/ui/management/mod.rs:260
-msgid "Failed to read password store folder: {err}"
-msgstr "Kon de map van de wachtwoordopslag niet lezen: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:299
-msgid "Failed to read private key from clipboard: {err}"
-msgstr "Kon privésleutel niet van het klembord lezen: {err}"
-
-#: crates/keycord-git/src/ui/signing.rs:160
-#: crates/keycord-keys/src/ui/unlock.rs:188
-msgid "Failed to read private key protection for '{fingerprint}': {err}"
-msgstr "Kon de beveiliging van privésleutel '{fingerprint}' niet lezen: {err}"
-
-#: crates/keycord-git/src/ui/signing.rs:252
-#: crates/keycord-keys/src/ui/unlock.rs:124
-#: crates/keycord-keys/src/ui/unlock.rs:222
-#: crates/keycord-keys/src/ui/unlock.rs:283
-#: crates/keycord-keys/src/ui/unlock.rs:363
-msgid "Failed to read private key title for '{fingerprint}': {err}"
-msgstr "Kon de titel van privésleutel '{fingerprint}' niet lezen: {err}"
 
 #: crates/keycord-passkey/src/request.rs:82
 msgid "Failed to read the passkey request file {path:?}: {source}"
@@ -2017,7 +1600,7 @@ msgstr "Kon het passkeyverzoekbestand {path:?} niet lezen: {source}"
 msgid "Failed to read the selected Windows path: {err}"
 msgstr "Kon het geselecteerde Windows-pad niet lezen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:322
+#: crates/keycord-shell/src/file_picker.rs:345
 msgid "Failed to read the selected Windows save path: {err}"
 msgstr "Kon het geselecteerde Windows-opslagpad niet lezen: {err}"
 
@@ -2033,81 +1616,18 @@ msgstr "Kon het geselecteerde privésleutelbestand niet lezen"
 msgid "Failed to read update file metadata: {error}"
 msgstr "Kon metadata van updatebestand niet lezen: {error}"
 
-#: crates/keycord-entries/src/otp/mod.rs:286
-msgid "Failed to refresh OTP code: {err}"
-msgstr "Kon de OTP-code niet verversen: {err}"
-
-#: src/setup.rs:26
+#: src/setup.rs:28
 msgid "Failed to register resources for Linux update install: {error}"
 msgstr ""
 "Kon bronnen voor de installatie van de Linux-update niet registreren: {error}"
 
-#: crates/keycord-shell/src/application.rs:134
+#: crates/keycord-shell/src/application.rs:138
 msgid "Failed to register resources."
 msgstr "Kon bronnen niet registreren."
-
-#: crates/keycord-git/src/ui/store_page.rs:503
-msgid ""
-"Failed to remove Git remote '{name_for_delete}' from '{store_for_delete}': "
-"{err}"
-msgstr ""
-"Kon Git-remote '{name_for_delete}' niet uit '{store_for_delete}' "
-"verwijderen: {err}"
-
-#: crates/keycord-entries/src/ui/list/mod.rs:1054
-#: crates/keycord-stores/src/ui/management/mod.rs:73
-msgid "Failed to remove missing password stores: {err}"
-msgstr "Kon ontbrekende wachtwoordopslagen niet verwijderen: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:501
-#, fuzzy
-msgid "Failed to remove private key '{fingerprint}': {err}"
-msgstr "Kon privésleutel '{}' niet verwijderen: {err}"
-
-#: crates/keycord-entries/src/otp/mod.rs:255
-msgid "Failed to render OTP code: {err}"
-msgstr "Kon de OTP-code niet weergeven: {err}"
 
 #: crates/keycord-lifecycle/src/search_provider.rs:351
 msgid "Failed to resolve current executable path: {err}"
 msgstr "Kon het pad van het huidige uitvoerbare bestand niet bepalen: {err}"
-
-#: crates/keycord-entries/src/integrated.rs:731
-msgid ""
-"Failed to resolve integrated Git commit identity for {store_root}/{label}: "
-"{err}"
-msgstr ""
-"Kon de identiteit van de Integrated-Git-commit voor {store_root}/{label} "
-"niet bepalen: {err}"
-
-#: crates/keycord-stores/src/ui/recipient_page/save.rs:95
-msgid ""
-"Failed to resolve the locked private key for store recipients '{}:{}': {err}"
-msgstr ""
-"Kon de vergrendelde privésleutel voor opslagontvangers '{}:{}' niet vinden: "
-"{err}"
-
-#: crates/keycord-entries/src/clipboard.rs:210
-msgid "Failed to resolve the private key for QR retry: {resolve_err}"
-msgstr ""
-"Kon de privésleutel voor een nieuwe QR-poging niet vinden: {resolve_err}"
-
-#: crates/keycord-entries/src/clipboard.rs:113
-msgid "Failed to resolve the private key for copy retry: {resolve_err}"
-msgstr ""
-"Kon de privésleutel voor een nieuwe kopieerpoging niet vinden: {resolve_err}"
-
-#: crates/keycord-entries/src/ui/page/linux.rs:69
-msgid "Failed to resolve the private key for this item: {err}"
-msgstr "Kon de privésleutel voor dit item niet vinden: {err}"
-
-#: crates/keycord-git/src/ui/signing.rs:297
-msgid ""
-"Failed to resolve the private key needed to sign the Git commit for "
-"{context}: {err}"
-msgstr ""
-"Kon de privésleutel voor het ondertekenen van de Git-commit voor {context} "
-"niet vinden: {err}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:137
 msgid "Failed to resolve the update helper executable: {error}"
@@ -2137,37 +1657,15 @@ msgstr "Kon de host-backendopdracht niet uitvoeren: {err}"
 msgid "Failed to run {}: {err}"
 msgstr "Kon {} niet uitvoeren: {err}"
 
-#: crates/keycord-git/src/ui/audit.rs:626
-msgid "Failed to save audit {filter_kind} filter selection: {err}"
-msgstr ""
-"Kon de selectie van het {filter_kind}-filter voor de geschiedenisinspectie "
-"niet opslaan: {err}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:295
-msgid "Failed to save password entry: {err}"
-msgstr "Kon het wachtwoorditem niet opslaan: {err}"
-
-#: crates/keycord-preferences/src/ui/settings.rs:465
-msgid "Failed to save preference ({context}): {}"
-msgstr "Kon voorkeur ({context}) niet opslaan: {}"
-
-#: crates/keycord-stores/src/ui/recipient_page/save.rs:228
-msgid "Failed to save store recipients for '{}': {err}"
-msgstr "Kon de opslagontvangers voor '{}' niet opslaan: {err}"
-
-#: crates/keycord-git/src/ui/actions/enabled.rs:86
-#: crates/keycord-stores/src/ui/management/clone.rs:220
-#: crates/keycord-stores/src/ui/management/mod.rs:192
-#: crates/keycord-stores/src/ui/management/mod.rs:273
-#: crates/keycord-stores/src/ui/recipient_page/save.rs:192
-msgid "Failed to save stores: {err}"
-msgstr "Kon opslagen niet opslaan: {err}"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:252
 msgid "Failed to secure Linux update staging root '{}': {error}"
 msgstr ""
 "Kon de hoofdmap voor het klaarzetten van de Linux-update '{}' niet "
 "beveiligen: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr ""
 
 #: crates/keycord-preferences/src/storage.rs:54
 msgid "Failed to serialize config: {e}"
@@ -2177,10 +1675,6 @@ msgstr "Kon de configuratie niet serialiseren: {e}"
 msgid "Failed to serialize stored passkey data: {err}"
 msgstr "Kon de opgeslagen passkeygegevens niet serialiseren: {err}"
 
-#: crates/keycord-keys/src/ui/unlock.rs:256
-msgid "Failed to set FIDO2 security key PIN: {err}"
-msgstr "Kon de PIN van de FIDO2-beveiligingssleutel niet instellen: {err}"
-
 #: crates/keycord-shell/src/file_picker.rs:133
 msgid "Failed to set the Windows file picker button label: {err}"
 msgstr "Kon het knoplabel van de Windows-bestandskiezer niet instellen: {err}"
@@ -2189,55 +1683,37 @@ msgstr "Kon het knoplabel van de Windows-bestandskiezer niet instellen: {err}"
 msgid "Failed to set the Windows file picker title: {err}"
 msgstr "Kon de titel van de Windows-bestandskiezer niet instellen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:308
+#: crates/keycord-shell/src/file_picker.rs:331
 msgid "Failed to set the Windows save-file extension: {err}"
 msgstr "Kon de Windows-bestandsextensie niet instellen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:305
+#: crates/keycord-shell/src/file_picker.rs:328
 msgid "Failed to set the Windows save-file name: {err}"
 msgstr "Kon de Windows-bestandsnaam niet instellen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:302
+#: crates/keycord-shell/src/file_picker.rs:317
 msgid "Failed to set the Windows save-file picker button label: {err}"
 msgstr "Kon het knoplabel van de Windows-bestandskiezer niet instellen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:299
+#: crates/keycord-shell/src/file_picker.rs:314
 msgid "Failed to set the Windows save-file picker title: {err}"
 msgstr "Kon de titel van de Windows-bestandskiezer niet instellen: {err}"
 
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:231
-msgid "Failed to set up hardware key: {err}"
-msgstr "Kon hardwaresleutel niet instellen: {err}"
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr ""
 
 #: crates/keycord-shell/src/file_picker.rs:138
 msgid "Failed to show the Windows file picker: {err}"
 msgstr "Kon de Windows-bestandskiezer niet tonen: {err}"
 
-#: crates/keycord-shell/src/file_picker.rs:313
+#: crates/keycord-shell/src/file_picker.rs:336
 msgid "Failed to show the Windows save-file picker: {err}"
 msgstr "Kon de Windows-bestandskiezer niet tonen: {err}"
 
 #: crates/keycord-lifecycle/src/search_provider.rs:356
 msgid "Failed to spawn Keycord: {err}"
 msgstr "Kon Sleutelkoord niet starten: {err}"
-
-#: crates/keycord-runtime/src/worker.rs:27
-msgid "Failed to spawn background worker '{name}': {err}"
-msgstr "Kon achtergrondtaak '{name}' niet starten: {err}"
-
-#: crates/keycord-entries/src/clipboard.rs:70
-msgid "Failed to spawn clipboard copy worker: {err}"
-msgstr ""
-"Kon de achtergrondtaak voor kopiëren naar het klembord niet starten: {err}"
-
-#: crates/keycord-lifecycle/src/updater/common.rs:345
-msgid "Failed to spawn update check worker: {err}"
-msgstr "Kon de achtergrondtaak voor updatecontrole niet starten: {err}"
-
-#: crates/keycord-lifecycle/src/updater/common.rs:477
-msgid "Failed to spawn update download worker: {err}"
-msgstr ""
-"Kon de achtergrondtaak voor het downloaden van updates niet starten: {err}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:100
 msgid "Failed to start Linux update install helper: {error}"
@@ -2248,62 +1724,10 @@ msgstr ""
 msgid "Failed to start msiexec for update install: {error}"
 msgstr "Kon msiexec niet starten voor het installeren van de update: {error}"
 
-#: crates/keycord-git/src/operations.rs:61
-msgid "Failed to start restore from Git: {err}"
-msgstr "Kon het herstellen uit Git niet starten: {err}"
-
 #: src/composition/host_access.rs:186
 #, fuzzy
 msgid "Failed to start the permission command: {error}"
 msgstr "Kon de machtigingsopdracht niet starten: {err}"
-
-#: crates/keycord-lifecycle/src/updater/common.rs:729
-msgid "Failed to start update install: {error}"
-msgstr "Kon update-installatie niet starten: {error}"
-
-#: crates/keycord-entries/src/ui/page/standard.rs:28
-#, fuzzy
-msgid "Failed to switch to the integrated backend: {err}"
-msgstr "Kon niet overschakelen naar de backend 'Integrated': {}"
-
-#: crates/keycord-git/src/operations.rs:80
-msgid "Failed to sync password store '{root}': {err}"
-msgstr "Kon wachtwoordopslag '{root}' niet synchroniseren: {err}"
-
-#: crates/keycord-git/src/ui/store_page.rs:666
-msgid "Failed to sync password store '{store_for_result}': {err}"
-msgstr "Kon wachtwoordopslag '{store_for_result}' niet synchroniseren: {err}"
-
-#: src/window/build/mod.rs:66
-msgid "Failed to sync private keys during startup: {err}"
-msgstr "Kon privésleutels niet synchroniseren tijdens het opstarten: {err}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:540
-msgid ""
-"Failed to sync private keys with the host after importing from a pass file: "
-"{err}"
-msgstr ""
-"Kon privésleutels na import uit een pass-bestand niet met de host "
-"synchroniseren: {err}"
-
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
-msgid "Failed to sync private keys with the host: {err}"
-msgstr "Kon privésleutels niet met de host synchroniseren: {err}"
-
-#: crates/keycord-entries/src/ui/page/mod.rs:544
-#: crates/keycord-keys/src/ui/key_management/key_sync.rs:19
-#, fuzzy
-msgid "Failed to turn off private-key sync after an error: {save_err}"
-msgstr "Kon privésleutelsynchronisatie na een fout niet uitschakelen: {}"
-
-#: crates/keycord-git/src/ui/signing.rs:202
-#: crates/keycord-keys/src/ui/unlock.rs:330
-msgid "Failed to unlock ripasso private key: {err}"
-msgstr "Kon ripasso-privésleutel niet ontgrendelen: {err}"
-
-#: crates/keycord-lifecycle/src/setup.rs:100
-msgid "Failed to update local app menu entry: {err}"
-msgstr "Kon het lokale appmenu-item niet bijwerken: {err}"
 
 #: crates/keycord-runtime/src/command.rs:396
 #, fuzzy
@@ -2323,36 +1747,6 @@ msgstr "Kon het configuratiebestand niet schrijven: {e}"
 msgid "Failed to write password export to '{path}': {err}"
 msgstr "Kon de wachtwoordexport niet naar '{path}' schrijven: {err}"
 
-#: crates/keycord-entries/src/ui/list/row.rs:822
-msgid "Failed to {action}: delete step failed: {err}"
-msgstr "Kon {action} niet uitvoeren: stap voor verwijderen mislukt: {err}"
-
-#: crates/keycord-entries/src/ui/list/row.rs:816
-msgid "Failed to {action}: read step failed: {err}"
-msgstr "Kon {action} niet uitvoeren: leesstap mislukt: {err}"
-
-#: crates/keycord-entries/src/ui/list/row.rs:825
-msgid "Failed to {action}: rename step failed: {err}"
-msgstr "Kon {action} niet uitvoeren: hernoemstap mislukt: {err}"
-
-#: crates/keycord-entries/src/ui/list/row.rs:832
-msgid ""
-"Failed to {action}: rollback failed.\n"
-"Action error: {action_error}\n"
-"Rollback error: {rollback_error}"
-msgstr ""
-"Kon {action} niet uitvoeren: terugdraaiing mislukt.\n"
-"Actiefout: {action_error}\n"
-"Fout bij terugdraaiing: {rollback_error}"
-
-#: crates/keycord-entries/src/ui/list/row.rs:819
-msgid "Failed to {action}: write step failed: {err}"
-msgstr "Kon {action} niet uitvoeren: schrijfstap mislukt: {err}"
-
-#: crates/keycord-entries/src/ui/list/store_filter.rs:91
-msgid "Failed to {action}: {err}"
-msgstr "{action} is mislukt: {err}"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1220
 #: crates/keycord-lifecycle/src/updater/common.rs:1224
 #: crates/keycord-lifecycle/src/updater/common.rs:1228
@@ -2364,7 +1758,7 @@ msgstr "Mislukt bij {context}: {error}"
 msgid "Fetch password store Git remote {remote}"
 msgstr "Git-remote {remote} van wachtwoordopslag ophalen"
 
-#: crates/keycord-git/src/ui/store_page.rs:360
+#: crates/keycord-git/src/ui/store_page.rs:363
 msgid ""
 "Fetch, merge, and push the current '{branch}' branch across all remotes."
 msgstr ""
@@ -2380,13 +1774,13 @@ msgstr "Veldnamen mogen geen ':' bevatten."
 msgid "Field values"
 msgstr "Veldwaarden"
 
-#: crates/keycord-entries/data/window-header-list.fragment.ui:22
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
 msgid "Filter results"
 msgstr "Resultaten filteren"
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
-#: crates/keycord-entries/data/window-header-list.fragment.ui:12
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
 msgid "Find item"
 msgstr "Item zoeken"
 
@@ -2395,7 +1789,7 @@ msgstr "Item zoeken"
 msgid "Find weak passwords"
 msgstr "Zwakke wachtwoorden vinden"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:38
+#: crates/keycord-lifecycle/data/metainfo.xml:37
 msgid ""
 "Find weak passwords, browse repeated field values, filter by store, and "
 "export password stores to CSV"
@@ -2403,53 +1797,41 @@ msgstr ""
 "Vind zwakke wachtwoorden, bekijk terugkerende veldwaarden, filter op opslag "
 "en exporteer wachtwoordopslagen naar CSV"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:196
+#: crates/keycord-lifecycle/data/metainfo.xml:199
 msgid "First release"
 msgstr "Eerste release"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:148
+#: crates/keycord-lifecycle/data/metainfo.xml:151
 msgid "Fix back icon"
 msgstr "Pictogram voor teruggaan herstellen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:173
+#: crates/keycord-lifecycle/data/metainfo.xml:176
 msgid "Fix optional Git synchronization"
 msgstr "Herstel optionele Git-synchronisatie"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:126
+#: crates/keycord-lifecycle/data/metainfo.xml:129
 msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
 msgstr ""
 "OTP-fout opgelost waarbij geldige geheimen onterecht ongeldig werden gemaakt."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:95
+#: crates/keycord-lifecycle/data/metainfo.xml:98
 msgid "Fixed permissions for smartcards"
 msgstr "Machtigingen voor smartcards hersteld"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:101
+#: crates/keycord-lifecycle/data/metainfo.xml:104
 msgid "Fixed the GNOME search provider."
 msgstr "Probleem met de GNOME-zoekprovider opgelost."
-
-#: crates/keycord-git/src/integrated.rs:144
-msgid "GIT_{env_prefix}_EMAIL"
-msgstr "GIT_{env_prefix}_EMAIL"
-
-#: crates/keycord-git/src/integrated.rs:146
-msgid "GIT_{env_prefix}_IDENT"
-msgstr "GIT_{env_prefix}_IDENT"
-
-#: crates/keycord-git/src/integrated.rs:143
-msgid "GIT_{env_prefix}_NAME"
-msgstr "GIT_{env_prefix}_NAME"
 
 #: crates/keycord-shell/data/shortcuts.ui:45
 msgid "General"
 msgstr "Algemeen"
 
 #: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:233
+#: crates/keycord-fido/src/ui.rs:238
 msgid "Generate FIDO2-protected key (Experimental)"
 msgstr "Met FIDO2 beveiligde sleutel genereren (experimenteel)"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:673
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Genereer of importeer een privésleutel."
 
@@ -2464,7 +1846,7 @@ msgstr "Wachtwoord genereren"
 msgid "Generate private key"
 msgstr "Privésleutel genereren"
 
-#: crates/keycord-fido/src/ui.rs:167
+#: crates/keycord-fido/src/ui.rs:172
 msgid "Generating FIDO2-protected key (Experimental)"
 msgstr "Experimentele met FIDO2 beveiligde sleutel genereren"
 
@@ -2472,33 +1854,13 @@ msgstr "Experimentele met FIDO2 beveiligde sleutel genereren"
 msgid "Generating key"
 msgstr "Sleutel genereren"
 
-#: crates/keycord-lifecycle/src/search_provider.rs:166
-msgid "GetInitialResultSet"
-msgstr "GetInitialResultSet"
-
-#: crates/keycord-lifecycle/src/search_provider.rs:174
-msgid "GetResultMetas"
-msgstr "GetResultMetas"
-
-#: crates/keycord-lifecycle/src/search_provider.rs:170
-msgid "GetSubsearchResultSet"
-msgstr "GetSubsearchResultSet"
-
-#: crates/keycord-stores/data/window-pages.fragment.ui:221
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
 msgid "Git"
 msgstr "Git"
 
 #: crates/keycord-git/src/integrated.rs:88
 msgid "Git command did not return output."
 msgstr "Git-opdracht gaf geen uitvoer terug."
-
-#: crates/keycord-git/src/integrated.rs:561
-msgid ""
-"Git commit signing unavailable for {store_root}: {err}. Falling back to an "
-"unsigned commit."
-msgstr ""
-"Git-commitondertekening niet beschikbaar voor {store_root}: {err}. Er wordt "
-"teruggevallen op een niet-ondertekende commit."
 
 #: crates/keycord-git/src/ui/audit.rs:38
 msgid "Git history and verification"
@@ -2508,28 +1870,18 @@ msgstr "Git-geschiedenis en verificatie"
 msgid "Git isn't available in this runtime."
 msgstr "Git is niet beschikbaar in deze runtime."
 
-#: crates/keycord-git/src/ui/remote.rs:219
-msgid "Git remote dialog failed: {err}"
-msgstr "Git-remotedialoog mislukt: {err}"
-
 #: crates/keycord-git/data/window-store-page.fragment.ui:3
-#: crates/keycord-git/src/ui/store_page.rs:713
-#: crates/keycord-git/src/ui/store_page.rs:714
-#: crates/keycord-git/src/ui/store_page.rs:719
-#: crates/keycord-git/src/ui/store_page.rs:720
-#: crates/keycord-git/src/ui/store_page.rs:770
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
 msgid "Git remotes"
 msgstr "Git-remotes"
 
-#: crates/keycord-git/src/operations.rs:85
-msgid "Git sync completed."
-msgstr "Git-synchronisatie voltooid."
-
-#: crates/keycord-git/src/operations.rs:74
-msgid "Git sync skipped: no Git-backed password stores are configured."
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
 msgstr ""
-"Git-synchronisatie overgeslagen: er zijn geen op Git gebaseerde "
-"wachtwoordopslagen geconfigureerd."
 
 #: crates/keycord-shell/data/shortcuts.ui:10
 msgid "Go back"
@@ -2539,7 +1891,7 @@ msgstr "Teruggaan"
 msgid "Go home"
 msgstr "Naar start"
 
-#: crates/keycord-shell/src/optional_permission.rs:85
+#: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Toestaan"
 
@@ -2564,18 +1916,18 @@ msgid ""
 "Grant host access first if you want Keycord to keep its private keys in step "
 "with your computer's GPG private keys."
 msgstr ""
-"Geef eerst hosttoegang als je wilt dat Sleutelkoord zijn privésleutels synchroon "
-"houdt met de GPG-privésleutels van je computer."
+"Geef eerst hosttoegang als je wilt dat Sleutelkoord zijn privésleutels "
+"synchroon houdt met de GPG-privésleutels van je computer."
 
 #: crates/keycord-preferences/src/ui/settings.rs:339
 msgid "Grant host access first."
 msgstr "Geef eerst hosttoegang."
 
-#: crates/keycord-git/src/ui/store_page.rs:317
+#: crates/keycord-git/src/ui/store_page.rs:320
 msgid "Grant host access to fetch, merge, and push."
 msgstr "Geef hosttoegang om op te halen, samen te voegen en te pushen."
 
-#: crates/keycord-shell/src/optional_permission.rs:87
+#: crates/keycord-shell/src/optional_permission.rs:90
 msgid "Grant permission"
 msgstr "Toestemming verlenen"
 
@@ -2590,10 +1942,6 @@ msgstr "Geef eerst smartcardtoegang."
 #: crates/keycord-docs/src/lib.rs:15
 msgid "Guides and reference"
 msgstr "Handleidingen en naslaginformatie"
-
-#: crates/keycord-git/src/integrated.rs:115 crates/keycord-git/src/status.rs:29
-msgid "HEAD^{commit}"
-msgstr "HEAD^{commit}"
 
 #: crates/keycord-keys/src/hardware/unsupported.rs:8
 msgid ""
@@ -2613,15 +1961,6 @@ msgstr "Hardwaresleutel toegevoegd."
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
 msgid "Hardware key admin PIN"
 msgstr "Beheer-PIN van hardwaresleutel"
-
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:172
-msgid "Hardware key generation worker disconnected unexpectedly."
-msgstr ""
-"De worker voor het genereren van hardwaresleutels werd onverwacht verbroken."
-
-#: crates/keycord-keys/src/ui/key_management/hardware.rs:128
-msgid "Hardware key import worker disconnected unexpectedly."
-msgstr "De importwerker voor hardwaresleutels is onverwacht verbroken."
 
 #: crates/keycord-shell/src/ui.rs:899
 msgid "Hide permanently"
@@ -2661,34 +2000,12 @@ msgstr "Hosttoegang"
 msgid "Host command features are only available on Linux."
 msgstr "Functies met hostopdrachten zijn alleen beschikbaar op Linux."
 
-#: crates/keycord-keys/src/host_gpg.rs:323
-msgid ""
-"Ignoring invalid host GPG public key while loading audit verification keys: "
-"{err}"
-msgstr ""
-"Ongeldige host-GPG-publieke sleutel wordt genegeerd tijdens het laden van "
-"auditverificatiesleutels: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:245
-msgid "Ignoring invalid managed private-key {artifact_kind} '{}': {err}"
-msgstr ""
-"Ongeldige beheerde privésleutel-{artifact_kind} '{}' wordt genegeerd: {err}"
-
-#: crates/keycord-keys/src/store/storage.rs:201
-msgid "Ignoring non-canonical managed private-key {artifact_kind} '{}'."
-msgstr ""
-"Niet-canonieke beheerde privésleutel-{artifact_kind} '{}' wordt genegeerd."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:189
 #: crates/keycord-keys/src/ui/key_management/private.rs:277
 #: crates/keycord-passkey/src/ui.rs:164
 #: crates/keycord-stores/data/window-pages.fragment.ui:91
 msgid "Import"
 msgstr "Importeren"
-
-#: crates/keycord-entries/src/host.rs:123 crates/keycord-stores/src/host.rs:52
-msgid "Import a private key in Preferences"
-msgstr "Een privésleutel importeren in Voorkeuren"
 
 #: crates/keycord-keys/src/lib.rs:34
 msgid "Import a private key in Preferences before using the password store."
@@ -2721,14 +2038,6 @@ msgstr "Sleutel van klembord importeren"
 msgid "Import passkey?"
 msgstr "Passkey importeren?"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:35
-msgid ""
-"Import passkeys into ordinary encrypted pass entries and open local "
-"credential-exchange requests"
-msgstr ""
-"Importeer passkeys in gewone versleutelde pass-items en open lokale "
-"verzoeken voor de uitwisseling van inloggegevens"
-
 #: crates/keycord-stores/data/window-pages.fragment.ui:68
 msgid "Import password (optional)"
 msgstr "Importwachtwoord (optioneel)"
@@ -2736,7 +2045,7 @@ msgstr "Importwachtwoord (optioneel)"
 #: crates/keycord-stores/data/window-pages.fragment.ui:3
 #: crates/keycord-stores/src/ui/management/import.rs:32
 #: crates/keycord-stores/src/ui/management/import.rs:54
-#: crates/keycord-stores/src/ui/widgets.rs:192
+#: crates/keycord-stores/src/ui/widgets.rs:203
 msgid "Import passwords"
 msgstr "Wachtwoorden importeren"
 
@@ -2769,7 +2078,7 @@ msgstr "Sleutel importeren"
 msgid "Importing passwords"
 msgstr "Wachtwoorden importeren"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:87
+#: crates/keycord-lifecycle/data/metainfo.xml:90
 msgid ""
 "Improved header actions and hid filters when they cannot affect the current "
 "view."
@@ -2777,16 +2086,16 @@ msgstr ""
 "Kopbalkacties verbeterd en filters verborgen wanneer ze de huidige weergave "
 "niet kunnen beïnvloeden."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:108
+#: crates/keycord-lifecycle/data/metainfo.xml:111
 msgid "Improved recipient selection when a store has many possible keys."
 msgstr ""
 "Ontvangerselectie verbeterd wanneer een opslag veel mogelijke sleutels heeft."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:111
+#: crates/keycord-lifecycle/data/metainfo.xml:114
 msgid "Improved search, filtering, keyboard navigation, and entry editing."
 msgstr "Zoeken, filteren, toetsenbordnavigatie en itembewerking verbeterd."
 
-#: crates/keycord-shell/data/window.ui:98
+#: crates/keycord-shell/data/window.ui:91
 msgid "Information"
 msgstr "Informatie"
 
@@ -2808,7 +2117,7 @@ msgstr ""
 msgid "Inspect change history"
 msgstr "Wijzigingsgeschiedenis inspecteren"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:75
+#: crates/keycord-lifecycle/data/metainfo.xml:74
 msgid "Inspect change history and verify commits"
 msgstr "Wijzigingsgeschiedenis bekijken en commits verifiëren"
 
@@ -2844,7 +2153,7 @@ msgstr "Bijgehouden Git-wijzigingen van wachtwoordopslag inspecteren"
 msgid "Inspect password store Git untracked files"
 msgstr "Niet-bijgehouden Git-bestanden van wachtwoordopslag inspecteren"
 
-#: crates/keycord-shell/data/window.ui:109
+#: crates/keycord-shell/data/window.ui:102
 msgid "Inspect recent app and command output."
 msgstr "Recente app- en opdrachtsuitvoer inspecteren."
 
@@ -2875,11 +2184,6 @@ msgstr ""
 #: crates/keycord-preferences/src/preferences.rs:47
 msgid "Integrated"
 msgstr "Integrated"
-
-#: crates/keycord-git/src/integrated.rs:596
-msgid "Integrated backend Git commit failed for {store_root}: {err}"
-msgstr ""
-"Git-commit van de Integrated-backend voor {store_root} is mislukt: {err}"
 
 #: crates/keycord-fido/src/cache.rs:191
 #, fuzzy
@@ -2954,8 +2258,8 @@ msgid ""
 "Keep Keycord's private keys and your computer's GPG private keys in step "
 "when host access is available."
 msgstr ""
-"Houd de privésleutels van Sleutelkoord en de GPG-privésleutels van je computer "
-"synchroon wanneer hosttoegang beschikbaar is."
+"Houd de privésleutels van Sleutelkoord en de GPG-privésleutels van je "
+"computer synchroon wanneer hosttoegang beschikbaar is."
 
 #: crates/keycord-stores/src/recipient_page.rs:143
 msgid "Keep another selected private key available before removing this key."
@@ -2982,11 +2286,11 @@ msgstr ""
 "Houd deze sleutel geselecteerd zolang alle geselecteerde privésleutels "
 "vereist zijn."
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:511
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
 msgid "Key file removed."
 msgstr "Sleutelbestand verwijderd."
 
-#: crates/keycord-fido/src/ui.rs:146
+#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Sleutel gegenereerd."
@@ -3005,7 +2309,7 @@ msgstr "Sleutelwachtwoord"
 #: crates/keycord-git/src/integrated.rs:285
 #: crates/keycord-lifecycle/data/keycord.desktop.in:4
 #: crates/keycord-lifecycle/data/metainfo.xml:5
-#: crates/keycord-shell/data/window.ui:38 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Sleutelkoord"
@@ -3025,7 +2329,8 @@ msgstr "Sleutelkoord-update"
 #: crates/keycord-lifecycle/src/updater/linux.rs:271
 msgid "Keycord couldn't finish installing the downloaded Linux update."
 msgstr ""
-"Sleutelkoord kon de installatie van de gedownloade Linux-update niet voltooien."
+"Sleutelkoord kon de installatie van de gedownloade Linux-update niet "
+"voltooien."
 
 #: crates/keycord-passkey/src/ui.rs:186
 msgid "Keycord couldn't prepare the passkey item. {error}"
@@ -3052,11 +2357,11 @@ msgid ""
 "computer such as GPG, the Host backend, and pass import. If you don't, "
 "Keycord still works with the integrated backend."
 msgstr ""
-"Sleutelkoord draait in een beschermde omgeving, dus sommige optionele functies "
-"blijven uit totdat je dit toestaat. Als je dit toestaat, kan Sleutelkoord "
-"hulpmiddelen van je computer gebruiken, zoals GPG, de backend 'Host' en "
-"'pass import'. Als je dat niet doet, werkt Sleutelkoord nog steeds met de backend "
-"'Integrated'."
+"Sleutelkoord draait in een beschermde omgeving, dus sommige optionele "
+"functies blijven uit totdat je dit toestaat. Als je dit toestaat, kan "
+"Sleutelkoord hulpmiddelen van je computer gebruiken, zoals GPG, de backend "
+"'Host' en 'pass import'. Als je dat niet doet, werkt Sleutelkoord nog steeds "
+"met de backend 'Integrated'."
 
 #: crates/keycord-passkey/src/ui.rs:125
 msgid ""
@@ -3065,28 +2370,10 @@ msgid ""
 "that identity. Keycord does not yet generate CXP response archives, so no "
 "passkey data was released."
 msgstr ""
-"Sleutelkoord heeft een exportverzoek voor inloggegevens geopend waarin {importer} "
-"als importeur staat en heeft de structuur gecontroleerd. Het lokale bestand "
-"verifieert die identiteit niet. Sleutelkoord maakt nog geen CXP-"
-"antwoordarchieven, dus er zijn geen passkeygegevens vrijgegeven."
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:152
-msgid "Keycord update cleanup failed for '{}': {error}"
-msgstr "Opschonen van Sleutelkoord-update voor '{}' mislukt: {error}"
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:124
-msgid "Keycord update install failed: {error}"
-msgstr "Installatie van Sleutelkoord-update mislukt: {error}"
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:168
-msgid "Keycord update restart failed for '{}': {error}"
-msgstr "Het opnieuw starten na de Sleutelkoord-update is mislukt voor '{}': {error}"
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:162
-msgid "Keycord update restart skipped: no local executable directory found."
-msgstr ""
-"Opnieuw starten na de Sleutelkoord-update overgeslagen: geen lokale programmamap "
-"gevonden."
+"Sleutelkoord heeft een exportverzoek voor inloggegevens geopend waarin "
+"{importer} als importeur staat en heeft de structuur gecontroleerd. Het "
+"lokale bestand verifieert die identiteit niet. Sleutelkoord maakt nog geen "
+"CXP-antwoordarchieven, dus er zijn geen passkeygegevens vrijgegeven."
 
 #: crates/keycord-preferences/src/ui/settings.rs:288
 msgid ""
@@ -3095,25 +2382,21 @@ msgid ""
 "Keycord will update the host too. Keys that only exist in Keycord may be "
 "removed during the first sync."
 msgstr ""
-"Sleutelkoord brengt eerst zijn lijst met privésleutels in overeenstemming met de "
-"GPG-privésleutels op je computer. Daarna werkt het maken, importeren of "
-"verwijderen van een privésleutel in Sleutelkoord ook de host bij. Sleutels die "
-"alleen in Sleutelkoord bestaan, kunnen tijdens de eerste synchronisatie worden "
-"verwijderd."
+"Sleutelkoord brengt eerst zijn lijst met privésleutels in overeenstemming "
+"met de GPG-privésleutels op je computer. Daarna werkt het maken, importeren "
+"of verwijderen van een privésleutel in Sleutelkoord ook de host bij. "
+"Sleutels die alleen in Sleutelkoord bestaan, kunnen tijdens de eerste "
+"synchronisatie worden verwijderd."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:22
-#: crates/keycord-stores/data/window-pages.fragment.ui:167
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
 msgid "Keys for this store"
 msgstr "Sleutels voor deze opslag"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:42
 msgid "Later"
 msgstr "Later"
-
-#: crates/keycord-lifecycle/src/search_provider.rs:184
-msgid "LaunchSearch"
-msgstr "LaunchSearch"
 
 #: crates/keycord-stores/data/window-pages.fragment.ui:69
 msgid ""
@@ -3127,10 +2410,6 @@ msgstr ""
 #: crates/keycord-preferences/data/window-page.fragment.ui:225
 msgid "Length"
 msgstr "Lengte"
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:123
-msgid "Linux auto-install failed: {error}"
-msgstr "Linux-auto-installatie mislukt: {error}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:92
 msgid "Linux update is missing its cleanup directory."
@@ -3158,6 +2437,7 @@ msgid "Load more commits"
 msgstr "Meer commits laden"
 
 #: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
 msgid "Loading"
 msgstr "Laden"
 
@@ -3181,15 +2461,11 @@ msgstr "Sleutels laden"
 msgid "Loading your items."
 msgstr "Items laden."
 
-#: crates/keycord-git/src/operations.rs:16
-msgid "Local and remote commits are also waiting to sync"
-msgstr "Lokale en externe commits wachten ook op synchronisatie"
-
-#: crates/keycord-git/src/ui/store_page.rs:349
+#: crates/keycord-git/src/ui/store_page.rs:352
 msgid "Local and remote commits are waiting to sync on '{branch}'."
 msgstr "Lokale en externe commits wachten op synchronisatie op '{branch}'."
 
-#: crates/keycord-git/src/ui/store_page.rs:291
+#: crates/keycord-git/src/ui/store_page.rs:294
 msgid "Local and remote commits are waiting to sync."
 msgstr "Lokale en externe commits wachten op synchronisatie."
 
@@ -3217,19 +2493,15 @@ msgid "Local changes found. Remote commits are also waiting to sync."
 msgstr ""
 "Lokale wijzigingen gevonden. Externe commits wachten ook op synchronisatie."
 
-#: crates/keycord-git/src/operations.rs:19
-msgid "Local commits are also waiting to sync"
-msgstr "Lokale commits wachten ook op synchronisatie"
-
-#: crates/keycord-git/src/ui/store_page.rs:354
+#: crates/keycord-git/src/ui/store_page.rs:357
 msgid "Local commits are ready to push on '{branch}'."
 msgstr "Lokale commits zijn klaar om op '{branch}' te worden gepusht."
 
-#: crates/keycord-git/src/ui/store_page.rs:294
+#: crates/keycord-git/src/ui/store_page.rs:297
 msgid "Local commits are waiting to sync."
 msgstr "Lokale commits wachten op synchronisatie."
 
-#: crates/keycord-shell/data/window.ui:173
+#: crates/keycord-shell/data/window.ui:166
 #: crates/keycord-shell/src/window_widgets.rs:128
 msgid "Logs"
 msgstr "Loguitvoer"
@@ -3242,22 +2514,14 @@ msgstr "Zoeken naar een nieuwere zelfstandige Linux-build op GitHub Releases."
 msgid "Looking for a newer Windows installer on GitHub Releases."
 msgstr "Zoeken naar een nieuwere Windows-installer op GitHub Releases."
 
-#: crates/keycord-lifecycle/src/setup.rs:441
-msgid "Looking up resource: {resource_path}"
-msgstr "Resource opzoeken: {resource_path}"
-
 #: crates/keycord-entries/data/window-pages.fragment.ui:203
 #: crates/keycord-preferences/data/window-page.fragment.ui:249
 msgid "Lowercase letters"
 msgstr "Kleine letters"
 
-#: crates/keycord-shell/data/window.ui:46
+#: crates/keycord-shell/data/window.ui:38
 msgid "Main Menu"
 msgstr "Hoofdmenu"
-
-#: crates/keycord-git/src/operations.rs:28
-msgid "Make an initial commit"
-msgstr "Maak een eerste commit"
 
 #: crates/keycord-git/src/operations.rs:29
 msgid "Make an initial commit before syncing."
@@ -3268,7 +2532,7 @@ msgid "Make an initial commit on '{branch}' before syncing this store."
 msgstr ""
 "Maak een eerste commit op '{branch}' voordat je deze opslag synchroniseert."
 
-#: crates/keycord-git/src/ui/store_page.rs:364
+#: crates/keycord-git/src/ui/store_page.rs:367
 msgid "Make an initial commit on '{branch}' before syncing."
 msgstr "Maak een eerste commit op '{branch}' voordat je synchroniseert."
 
@@ -3288,11 +2552,11 @@ msgstr "Ongeldige Git-handtekeningheader."
 msgid "Malformed or unsupported signature"
 msgstr "Ongeldige of niet-ondersteunde handtekening"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:71
+#: crates/keycord-lifecycle/data/metainfo.xml:70
 msgid "Manage private keys"
 msgstr "Beheer privésleutels"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:37
+#: crates/keycord-lifecycle/data/metainfo.xml:36
 msgid ""
 "Manage store recipients, folder-specific .gpg-id files, and password-"
 "protected private keys, including file and clipboard imports and optional "
@@ -3302,15 +2566,15 @@ msgstr ""
 "wachtwoord beveiligde privésleutels, waaronder import uit bestanden en het "
 "klembord en optionele synchronisatie met GPG op de host"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:67
+#: crates/keycord-lifecycle/data/metainfo.xml:66
 msgid "Manage stores"
 msgstr "Beheer wachtwoordopslagen"
 
 #: crates/keycord-keys/src/store/storage.rs:48
 msgid "Managed hardware-key setup is disabled in this build of Keycord."
 msgstr ""
-"Beheerde installatie van hardwaresleutels is uitgeschakeld in deze Sleutelkoord-"
-"build."
+"Beheerde installatie van hardwaresleutels is uitgeschakeld in deze "
+"Sleutelkoord-build."
 
 #: crates/keycord-keys/src/store/storage.rs:115
 msgid ""
@@ -3329,8 +2593,8 @@ msgstr ""
 #: crates/keycord-keys/src/store/storage.rs:45
 msgid "Managed smartcard add/import is disabled in this build of Keycord."
 msgstr ""
-"Beheerd toevoegen/importeren van smartcards is uitgeschakeld in deze Sleutelkoord-"
-"build."
+"Beheerd toevoegen/importeren van smartcards is uitgeschakeld in deze "
+"Sleutelkoord-build."
 
 #: crates/keycord-stores/src/host.rs:11
 msgid "Managing nested .gpg-id files requires the Integrated backend."
@@ -3349,10 +2613,6 @@ msgstr "Git-branch {target} van wachtwoordopslag samenvoegen"
 #: crates/keycord-git/src/ui/audit.rs:1287
 msgid "Message"
 msgstr "Bericht"
-
-#: crates/keycord-lifecycle/src/desktop.rs:41
-msgid "MimeType={}"
-msgstr ""
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:204
 #: crates/keycord-entries/data/window-pages.fragment.ui:226
@@ -3428,16 +2688,16 @@ msgstr "Nieuwe opslag"
 msgid "New hardware key PIN"
 msgstr "Nieuwe PIN van hardwaresleutel"
 
-#: crates/keycord-entries/src/ui/new_item.rs:67
+#: crates/keycord-entries/src/ui/new_item.rs:74
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Nieuw item"
 
-#: crates/keycord-fido/src/ui.rs:405
+#: crates/keycord-fido/src/ui.rs:410
 msgid "New security key PIN"
 msgstr "Nieuwe PIN van de beveiligingssleutel"
 
-#: crates/keycord-git/src/ui/store_page.rs:233
+#: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
 msgstr ""
 "Nog geen Git-repository. Voeg een remote toe om er een te initialiseren."
@@ -3450,7 +2710,7 @@ msgstr "Geen Git-opslagen"
 msgid "No Git-backed stores available."
 msgstr "Geen Git-opslagen beschikbaar."
 
-#: crates/keycord-git/src/ui/store_page.rs:277
+#: crates/keycord-git/src/ui/store_page.rs:280
 msgid "No branch yet."
 msgstr "Nog geen branch."
 
@@ -3462,17 +2722,17 @@ msgstr "Geen gewijzigde paden"
 msgid "No commits loaded"
 msgstr "Geen commits geladen"
 
-#: crates/keycord-lifecycle/src/setup.rs:171
-#: crates/keycord-lifecycle/src/setup.rs:229
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
 msgid "No data directory found"
 msgstr "Geen gegevensmap gevonden"
 
-#: crates/keycord-shell/src/application.rs:149
+#: crates/keycord-shell/src/application.rs:151
 msgid "No display available."
 msgstr "Geen beeldscherm beschikbaar."
 
-#: crates/keycord-lifecycle/src/setup.rs:167
-#: crates/keycord-lifecycle/src/setup.rs:225
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
 msgid "No executable directory found"
 msgstr "Geen map met uitvoerbare bestanden gevonden"
 
@@ -3522,11 +2782,11 @@ msgstr "Geen overeenkomende voorkeuren"
 msgid "No matching results"
 msgstr "Geen overeenkomende resultaten"
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:229
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
 msgid "No matching store keys"
 msgstr "Geen overeenkomende opslagsleutels"
 
-#: crates/keycord-shell/data/window.ui:143
+#: crates/keycord-shell/data/window.ui:136
 msgid "No matching tools"
 msgstr "Geen overeenkomende hulpmiddelen"
 
@@ -3534,7 +2794,7 @@ msgstr "Geen overeenkomende hulpmiddelen"
 msgid "No matching values"
 msgstr "Geen overeenkomende waarden"
 
-#: crates/keycord-git/src/ui/store_page.rs:522
+#: crates/keycord-git/src/ui/store_page.rs:558
 msgid "No password store"
 msgstr "Geen wachtwoordopslag"
 
@@ -3546,10 +2806,6 @@ msgstr "Geen wachtwoordopslagen"
 msgid "No recipients set"
 msgstr "Geen ontvangers ingesteld"
 
-#: src/composition/backend/integrated/git.rs:34
-msgid "No recipients were found"
-msgstr "Geen ontvangers gevonden"
-
 #: crates/keycord-entries/src/integrated.rs:293
 #: crates/keycord-entries/src/integrated.rs:320
 #: crates/keycord-entries/src/integrated.rs:850
@@ -3558,11 +2814,11 @@ msgstr "Geen ontvangers gevonden"
 msgid "No recipients were found for this password entry."
 msgstr "Er zijn geen ontvangers gevonden voor dit wachtwoorditem."
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:672
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
 msgid "No recipients yet"
 msgstr "Nog geen ontvangers"
 
-#: crates/keycord-git/src/ui/store_page.rs:301
+#: crates/keycord-git/src/ui/store_page.rs:304
 msgid "No remotes configured."
 msgstr "Geen remotes geconfigureerd."
 
@@ -3611,11 +2867,11 @@ msgstr "OTP-code"
 msgid "OTP secret"
 msgstr "OTP-geheim"
 
-#: crates/keycord-lifecycle/src/setup.rs:188
+#: crates/keycord-lifecycle/src/setup.rs:191
 msgid "One or more local install directories are not writable."
 msgstr "Een of meer lokale installatiemappen zijn niet beschrijfbaar."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:135
+#: crates/keycord-lifecycle/data/metainfo.xml:138
 msgid ""
 "Only enable experimental FIDO2 features if the integrated backend is used."
 msgstr ""
@@ -3647,7 +2903,7 @@ msgstr "Open een Git-opslag om branches en commits te inspecteren."
 msgid "Open a new item"
 msgstr "Een nieuw item openen"
 
-#: crates/keycord-git/src/ui/store_page.rs:523
+#: crates/keycord-git/src/ui/store_page.rs:559
 msgid "Open a store first."
 msgstr "Open eerst een opslag."
 
@@ -3676,7 +2932,7 @@ msgid "Open in New Window"
 msgstr "In nieuw venster openen"
 
 #: crates/keycord-shell/data/shortcuts.ui:37
-#: crates/keycord-shell/data/window.ui:108
+#: crates/keycord-shell/data/window.ui:101
 msgid "Open logs"
 msgstr "Loguitvoer openen"
 
@@ -3693,7 +2949,7 @@ msgid "Open preferences"
 msgstr "Voorkeuren openen"
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
-#: crates/keycord-entries/data/window-header-editor.fragment.ui:12
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
 msgid "Open raw text"
 msgstr "Ruwe tekst openen"
 
@@ -3749,11 +3005,6 @@ msgstr "Sleutels van opslag 6 openen"
 msgid "Open tools"
 msgstr "Hulpmiddelen openen"
 
-#: crates/keycord-keys/src/hardware/crypto.rs:49
-msgid ""
-"OpenPGP card certificate construction requires each card key and timestamp"
-msgstr ""
-
 #: crates/keycord-entries/src/ui/page/mod.rs:88
 msgid "Opening"
 msgstr "Openen"
@@ -3778,19 +3029,6 @@ msgstr "Pass-bestand"
 msgid "Pass files"
 msgstr "Pass-bestanden"
 
-#: crates/keycord-stores/src/ui/management/import.rs:421
-msgid ""
-"Pass import worker disconnected unexpectedly while importing into "
-"'{store_for_error}' from '{source_for_error}'."
-msgstr ""
-"Worker voor pass-import onverwacht verbroken tijdens importeren naar "
-"'{store_for_error}' vanuit '{source_for_error}'."
-
-#: crates/keycord-entries/src/ui/page/mod.rs:613
-msgid "Pass-file private key import worker disconnected unexpectedly."
-msgstr ""
-"Worker voor import van privésleutel uit pass-bestand is onverwacht verbroken."
-
 #: crates/keycord-entries/src/file/row_ui.rs:46
 msgid "Passkey"
 msgstr "Passkey"
@@ -3802,23 +3040,6 @@ msgstr "FIDO2-uitbreidingen van een passkey moeten een JSON-object zijn."
 #: crates/keycord-passkey/src/ui.rs:123
 msgid "Passkey export request opened"
 msgstr "Passkey-exportverzoek geopend"
-
-#: crates/keycord-passkey/src/credential.rs:37
-msgid "PasskeyCredential"
-msgstr "PasskeyCredential"
-
-#: crates/keycord-entries/src/file/types.rs:100
-msgid "PasskeyFieldTemplate"
-msgstr "PasskeyFieldTemplate"
-
-#: crates/keycord-lifecycle/data/metainfo.xml:83
-msgid ""
-"Passkeys can now be imported into ordinary encrypted pass entries, and local "
-"credential-exchange request files can be opened."
-msgstr ""
-"Passkeys kunnen nu in gewone versleutelde pass-items worden geïmporteerd. "
-"Ook kunnen lokale verzoekbestanden voor de uitwisseling van inloggegevens "
-"worden geopend."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:96
 msgid "Password"
@@ -3861,7 +3082,7 @@ msgstr "Wachtwoord is leeg"
 msgid "Password is only whitespace"
 msgstr "Wachtwoord bestaat alleen uit witruimte"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:55
+#: crates/keycord-lifecycle/data/metainfo.xml:54
 msgid "Password list"
 msgstr "Wachtwoordenlijst"
 
@@ -3869,22 +3090,6 @@ msgstr "Wachtwoordenlijst"
 #: crates/keycord-entries/data/window-pages.fragment.ui:120
 msgid "Password options"
 msgstr "Wachtwoordopties"
-
-#: crates/keycord-git/src/integrated.rs:126
-msgid ""
-"Password store Git HEAD is missing for {store_root}; creating an initial "
-"commit."
-msgstr ""
-"Git HEAD van wachtwoordopslag ontbreekt voor {store_root}; er wordt een "
-"eerste commit gemaakt."
-
-#: crates/keycord-git/src/integrated.rs:468
-msgid ""
-"Password store Git commit for {store_root} is unsigned because private key "
-"{fingerprint} is not unlocked in this session."
-msgstr ""
-"De Git-commit voor wachtwoordopslag {store_root} is niet ondertekend omdat "
-"privésleutel {fingerprint} in deze sessie niet is ontgrendeld."
 
 #: crates/keycord-git/src/repository.rs:70
 msgid ""
@@ -3919,12 +3124,12 @@ msgstr ""
 "Git-status van wachtwoordopslag: {root} -> geen Git-repository gedetecteerd, "
 "lokale commits uitgeschakeld, netwerkbewerkingen uitgeschakeld."
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1061
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
 msgid "Password store configuration: no stores are configured."
 msgstr ""
 "Configuratie van wachtwoordopslag: er zijn geen opslagen geconfigureerd."
 
-#: crates/keycord-entries/src/ui/list/mod.rs:1065
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
 msgid "Password store configuration: {} configured store(s)."
 msgstr "Configuratie van wachtwoordopslag: {} geconfigureerde opslag(en)."
 
@@ -3932,7 +3137,7 @@ msgstr "Configuratie van wachtwoordopslag: {} geconfigureerde opslag(en)."
 msgid "Passwords imported."
 msgstr "Wachtwoorden geïmporteerd."
 
-#: crates/keycord-entries/src/ui/new_item.rs:41
+#: crates/keycord-entries/src/ui/new_item.rs:48
 msgid "Path or name"
 msgstr "Pad of naam"
 
@@ -3954,67 +3159,10 @@ msgstr "Kies een waarde uit de huidige lijst."
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: crates/keycord-git/src/integrated.rs:524
-msgid ""
-"Prepare local password store Git commit for {store_root} with {} path(s): {}."
-msgstr ""
-"Lokale Git-commit voor wachtwoordopslag voorbereiden voor {store_root} met "
-"{} pad(en): {}."
-
-#: crates/keycord-git/src/integrated.rs:441
-msgid ""
-"Preparing password store Git commit for {store_root} with {name} <{email}> "
-"({fingerprint})."
-msgstr ""
-"Git-commit voor wachtwoordopslag voorbereiden voor {store_root} met {name} "
-"<{email}> ({fingerprint})."
-
-#: crates/keycord-git/src/integrated.rs:449
-msgid ""
-"Preparing password store Git commit for {store_root} without signing because "
-"no recipients-derived private key was resolved."
-msgstr ""
-"Git-commit voor wachtwoordopslag wordt voorbereid voor {store_root} zonder "
-"ondertekening, omdat op basis van de ontvangers geen privésleutel kon worden "
-"bepaald."
-
-#: crates/keycord-git/src/integrated.rs:446
-msgid ""
-"Preparing password store Git commit for {store_root} without signing because "
-"private key {fingerprint} is not available in the app."
-msgstr ""
-"Git-commit voor wachtwoordopslag wordt voorbereid voor {store_root} zonder "
-"ondertekening, omdat privésleutel {fingerprint} niet beschikbaar is in de "
-"app."
-
 #: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
 msgid "Private key fingerprint '{value}' does not have the expected length."
 msgstr ""
 "Vingerafdruk van privésleutel '{value}' heeft niet de verwachte lengte."
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:113
-msgid "Private key generation worker disconnected unexpectedly."
-msgstr "Worker voor privésleutelgeneratie onverwacht verbroken."
-
-#: crates/keycord-entries/src/ui/page/mod.rs:595
-msgid "Private key import was requested without a window root."
-msgstr ""
-"Import van een privésleutel is aangevraagd zonder bovenliggend venster."
-
-#: crates/keycord-keys/src/ui/key_management/private.rs:237
-msgid "Private key import worker disconnected unexpectedly."
-msgstr "De importwerker voor privésleutels is onverwacht verbroken."
-
-#: crates/keycord-entries/src/ui/page/mod.rs:623
-msgid "Private key passphrase dialog was requested without a window root."
-msgstr ""
-"Het dialoogvenster voor de wachtwoordzin van de privésleutel is aangevraagd "
-"zonder bovenliggend venster."
-
-#: crates/keycord-git/src/ui/signing.rs:213
-#: crates/keycord-keys/src/ui/unlock.rs:336
-msgid "Private key unlock worker disconnected unexpectedly."
-msgstr "Worker voor ontgrendeling van privésleutels onverwacht verbroken."
 
 #: crates/keycord-git/src/ui/signing.rs:217
 msgid ""
@@ -4024,7 +3172,7 @@ msgstr ""
 "Worker voor ontgrendeling van privésleutels werd verbroken tijdens het "
 "voorbereiden van een Git-handtekening voor {fingerprint}."
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:69
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
 msgid "Private keys can't be verified"
 msgstr "Privésleutels kunnen niet worden geverifieerd"
 
@@ -4032,8 +3180,8 @@ msgstr "Privésleutels kunnen niet worden geverifieerd"
 msgid "Private keys synced."
 msgstr "Privésleutels gesynchroniseerd."
 
-#: crates/keycord-keys/src/sync.rs:150 crates/keycord-keys/src/sync.rs:193
-#: crates/keycord-keys/src/sync.rs:50
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
 #: crates/keycord-preferences/src/ui/settings.rs:227
 #: crates/keycord-preferences/src/ui/settings.rs:231
 #: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
@@ -4148,7 +3296,7 @@ msgstr ""
 msgid "Recipient source"
 msgstr "Herkomst van ontvangers"
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:172
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
 msgid "Recipients file"
 msgstr "Ontvangersbestand"
 
@@ -4161,8 +3309,8 @@ msgid "Recommended for new stores"
 msgstr "Aanbevolen voor nieuwe opslagen"
 
 #: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:13 crates/keycord-keys/src/error.rs:14
-#: crates/keycord-keys/src/error.rs:214 crates/keycord-keys/src/error.rs:253
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
 msgid "Reconnect the FIDO2 security key and try again."
 msgstr "Verbind de FIDO2-beveiligingssleutel opnieuw en probeer het opnieuw."
 
@@ -4170,7 +3318,7 @@ msgstr "Verbind de FIDO2-beveiligingssleutel opnieuw en probeer het opnieuw."
 msgid "Reconnect the hardware key and try again."
 msgstr "Verbind de hardwaresleutel opnieuw en probeer het opnieuw."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:109
+#: crates/keycord-lifecycle/data/metainfo.xml:112
 msgid "Reduced secret exposure in GNOME search, command failures, and logs."
 msgstr ""
 "Blootstelling van geheimen in GNOME-zoekresultaten, mislukte opdrachten en "
@@ -4179,10 +3327,6 @@ msgstr ""
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
 msgid "Refresh current list"
 msgstr "Huidige lijst vernieuwen"
-
-#: crates/keycord-lifecycle/src/updater/common.rs:419
-msgid "Refusing to download update {}: {error}"
-msgstr "Download van update {} geweigerd: {error}"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1138
 msgid "Release asset '{}' has an invalid SHA-256 digest."
@@ -4200,19 +3344,15 @@ msgstr "Release-asset '{}' mist een GitHub-SHA-256-digest."
 msgid "Remote URL"
 msgstr "Remote-URL"
 
-#: crates/keycord-git/src/ui/store_page.rs:599
+#: crates/keycord-git/src/ui/store_page.rs:635
 msgid "Remote added."
 msgstr "Remote toegevoegd."
 
-#: crates/keycord-git/src/operations.rs:22
-msgid "Remote commits are also waiting to sync"
-msgstr "Externe commits wachten ook op synchronisatie"
-
-#: crates/keycord-git/src/ui/store_page.rs:357
+#: crates/keycord-git/src/ui/store_page.rs:360
 msgid "Remote commits are ready to merge into '{branch}'."
 msgstr "Externe commits zijn klaar om in '{branch}' te worden samengevoegd."
 
-#: crates/keycord-git/src/ui/store_page.rs:297
+#: crates/keycord-git/src/ui/store_page.rs:300
 msgid "Remote commits are waiting to sync."
 msgstr "Externe commits wachten op synchronisatie."
 
@@ -4220,11 +3360,11 @@ msgstr "Externe commits wachten op synchronisatie."
 msgid "Remote name"
 msgstr "Remotenaam"
 
-#: crates/keycord-git/src/ui/store_page.rs:499
+#: crates/keycord-git/src/ui/store_page.rs:535
 msgid "Remote removed."
 msgstr "Remote verwijderd."
 
-#: crates/keycord-git/src/ui/store_page.rs:483
+#: crates/keycord-git/src/ui/store_page.rs:519
 msgid "Remote updated."
 msgstr "Remote bijgewerkt."
 
@@ -4240,15 +3380,15 @@ msgstr "Remotes"
 msgid "Remove empty fields"
 msgstr "Lege velden verwijderen"
 
-#: crates/keycord-lifecycle/src/setup.rs:67
+#: crates/keycord-lifecycle/src/setup.rs:70
 msgid "Remove from app menu"
 msgstr "Uit appmenu verwijderen"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:458
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
 msgid "Remove key"
 msgstr "Sleutel verwijderen"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:345
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
 msgid "Remove key file"
 msgstr "Sleutelbestand verwijderen"
 
@@ -4260,11 +3400,11 @@ msgstr "Wachtwoord voor {label} verwijderen"
 msgid "Remove password store Git remote"
 msgstr "Git-remote van wachtwoordopslag verwijderen"
 
-#: crates/keycord-stores/src/ui/recipient_page/list.rs:47
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
 msgid "Remove recipient"
 msgstr "Ontvanger verwijderen"
 
-#: crates/keycord-git/src/ui/store_page.rs:449
+#: crates/keycord-git/src/ui/store_page.rs:485
 msgid "Remove remote"
 msgstr "Remote verwijderen"
 
@@ -4272,7 +3412,7 @@ msgstr "Remote verwijderen"
 msgid "Removed empty fields."
 msgstr "Lege velden verwijderd."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:118
+#: crates/keycord-lifecycle/data/metainfo.xml:121
 msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
 msgstr ""
 "De functie voor met FIDO2 beveiligde wachtwoordopslagen uit de Flatpak-app "
@@ -4303,8 +3443,8 @@ msgstr "Geselecteerd pass-bestand hernoemen"
 msgid "Repeated single character"
 msgstr "Eén teken wordt steeds herhaald"
 
-#: crates/keycord-git/src/ui/store_page.rs:544
-#: crates/keycord-shell/src/application.rs:316
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
 msgid "Repository"
 msgstr "Repository"
 
@@ -4312,28 +3452,28 @@ msgstr "Repository"
 msgid "Repository URL"
 msgstr "Repository-URL"
 
-#: crates/keycord-git/src/ui/store_page.rs:266
+#: crates/keycord-git/src/ui/store_page.rs:269
 msgid "Repository found and ready for remote management."
 msgstr "Repository gevonden en klaar voor remotebeheer."
 
-#: crates/keycord-git/src/ui/store_page.rs:271
+#: crates/keycord-git/src/ui/store_page.rs:274
 msgid "Repository found. Check out a branch before syncing."
 msgstr ""
 "Repository gevonden. Schakel eerst over naar een branch voordat je "
 "synchroniseert."
 
-#: crates/keycord-git/src/ui/store_page.rs:268
+#: crates/keycord-git/src/ui/store_page.rs:271
 msgid "Repository found. Create the first commit on '{branch}' before syncing."
 msgstr ""
 "Repository gevonden. Maak eerst de eerste commit op '{branch}' voordat je "
 "synchroniseert."
 
-#: crates/keycord-git/src/ui/store_page.rs:258
+#: crates/keycord-git/src/ui/store_page.rs:261
 msgid "Repository found. Local and remote commits are waiting to sync."
 msgstr ""
 "Repository gevonden. Lokale en externe commits wachten op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:237
+#: crates/keycord-git/src/ui/store_page.rs:240
 msgid ""
 "Repository found. Local changes must be committed or discarded before sync, "
 "and local and remote commits are waiting to sync."
@@ -4342,7 +3482,7 @@ msgstr ""
 "gecommit of verworpen, en lokale en externe commits wachten op "
 "synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:242
+#: crates/keycord-git/src/ui/store_page.rs:245
 msgid ""
 "Repository found. Local changes must be committed or discarded before sync, "
 "and local commits are waiting to sync."
@@ -4350,7 +3490,7 @@ msgstr ""
 "Repository gevonden. Lokale wijzigingen moeten voor synchronisatie worden "
 "gecommit of verworpen, en lokale commits wachten op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:247
+#: crates/keycord-git/src/ui/store_page.rs:250
 msgid ""
 "Repository found. Local changes must be committed or discarded before sync, "
 "and remote commits are waiting to sync."
@@ -4358,22 +3498,22 @@ msgstr ""
 "Repository gevonden. Lokale wijzigingen moeten voor synchronisatie worden "
 "gecommit of verworpen, en externe commits wachten op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:252
+#: crates/keycord-git/src/ui/store_page.rs:255
 msgid ""
 "Repository found. Local changes must be committed or discarded before sync."
 msgstr ""
 "Repository gevonden. Lokale wijzigingen moeten voor synchronisatie worden "
 "gecommit of verworpen."
 
-#: crates/keycord-git/src/ui/store_page.rs:261
+#: crates/keycord-git/src/ui/store_page.rs:264
 msgid "Repository found. Local commits are waiting to sync."
 msgstr "Repository gevonden. Lokale commits wachten op synchronisatie."
 
-#: crates/keycord-git/src/ui/store_page.rs:264
+#: crates/keycord-git/src/ui/store_page.rs:267
 msgid "Repository found. Remote commits are waiting to sync."
 msgstr "Repository gevonden. Externe commits wachten op synchronisatie."
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:204
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
 msgid "Require all selected private keys"
 msgstr "Alle geselecteerde privésleutels vereisen"
 
@@ -4381,11 +3521,11 @@ msgstr "Alle geselecteerde privésleutels vereisen"
 msgid "Resolve Git {role} identity"
 msgstr "Git-identiteit voor {role} bepalen"
 
-#: crates/keycord-lifecycle/src/setup.rs:443
+#: crates/keycord-lifecycle/src/setup.rs:447
 msgid "Resource not found: {e}"
 msgstr "Resource niet gevonden: {e}"
 
-#: crates/keycord-shell/src/optional_permission.rs:14
+#: crates/keycord-shell/src/optional_permission.rs:13
 msgid "Restart app to apply."
 msgstr "Start de app opnieuw om dit toe te passen."
 
@@ -4396,11 +3536,6 @@ msgstr "Start de app opnieuw om dit toe te passen."
 #: crates/keycord-stores/src/ui/management/clone.rs:68
 msgid "Restore password store"
 msgstr "Wachtwoordopslag herstellen"
-
-#: crates/keycord-stores/src/ui/management/clone.rs:241
-msgid "Restore stopped unexpectedly for store '{store_for_disconnect}'."
-msgstr ""
-"Het herstellen van opslag '{store_for_disconnect}' is onverwacht gestopt."
 
 #: crates/keycord-git/src/ui/actions/enabled.rs:103
 #: crates/keycord-stores/src/ui/management/clone.rs:243
@@ -4427,14 +3562,6 @@ msgstr ""
 "Probeer de autorisatie opnieuw met ontvangersbestanden uit de "
 "commitgeschiedenis wanneer de ontvangers van de huidige branch de "
 "ondertekenaar niet kunnen autoriseren."
-
-#: crates/keycord-entries/src/ui/page/mod.rs:922
-msgid "Retry-open was requested without an opened pass file."
-msgstr "Opnieuw openen werd aangevraagd zonder een geopend pass-bestand."
-
-#: crates/keycord-lifecycle/src/updater/common.rs:448
-msgid "Reusing cached update download for version {}."
-msgstr "Gecachte updatedownload voor versie {} wordt hergebruikt."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:726
 msgid "Reverted."
@@ -4469,7 +3596,7 @@ msgstr "Ontvangers van wachtwoordopslag opslaan"
 msgid "Saved."
 msgstr "Opgeslagen."
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:183
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
 msgid "Saving recipients file"
 msgstr "Ontvangersbestand opslaan"
 
@@ -4513,56 +3640,15 @@ msgstr "Zoek op namen, opslagen of velden"
 msgid "Search preferences"
 msgstr "Voorkeuren doorzoeken"
 
-#: crates/keycord-lifecycle/src/search_provider.rs:251
-msgid "Search provider ActivateResult received invalid parameters."
-msgstr "Zoekprovider-ActivateResult ontving ongeldige parameters."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:205
-msgid "Search provider GetInitialResultSet received invalid parameters."
-msgstr "Zoekprovider-GetInitialResultSet ontving ongeldige parameters."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:230
-msgid "Search provider GetResultMetas received invalid parameters."
-msgstr "Zoekprovider-GetResultMetas ontving ongeldige parameters."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:217
-msgid "Search provider GetSubsearchResultSet received invalid parameters."
-msgstr "Zoekprovider-GetSubsearchResultSet ontving ongeldige parameters."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:284
-msgid "Search provider LaunchSearch received invalid parameters."
-msgstr "Zoekprovider-LaunchSearch ontving ongeldige parameters."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:113
-msgid "Search provider bus name acquired: {name}."
-msgstr "Busnaam van zoekprovider verkregen: {name}."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:118
-msgid "Search provider bus name released: {name}."
-msgstr "Busnaam van zoekprovider vrijgegeven: {name}."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:94
-msgid "Search provider interface metadata is missing."
-msgstr "Interface-metadata van de zoekprovider ontbreekt."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:125
-#, fuzzy
-msgid "Search provider listening on {}{}."
-msgstr "Busnaam van zoekprovider verkregen: {name}."
-
-#: crates/keycord-lifecycle/src/search_provider.rs:272
-msgid "Search provider received an invalid result identifier: {identifier:?}."
-msgstr "Zoekprovider ontving een ongeldige resultaat-ID: {identifier:?}."
-
 #: crates/keycord-git/data/window-audit-page.fragment.ui:11
 msgid "Search results"
 msgstr "Zoekresultaten"
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:136
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
 msgid "Search store keys"
 msgstr "Opslagsleutels doorzoeken"
 
-#: crates/keycord-shell/data/window.ui:70
+#: crates/keycord-shell/data/window.ui:63
 msgid "Search tools"
 msgstr "Hulpmiddelen doorzoeken"
 
@@ -4574,14 +3660,14 @@ msgstr "Waarden doorzoeken"
 msgid "Search weak passwords"
 msgstr "Zwakke wachtwoorden zoeken"
 
-#: crates/keycord-fido/src/ui.rs:332
+#: crates/keycord-fido/src/ui.rs:337
 msgid "Security key PIN"
 msgstr "PIN van beveiligingssleutel"
 
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
-#: crates/keycord-stores/src/ui/management/mod.rs:253
+#: crates/keycord-stores/src/ui/management/mod.rs:252
 msgid "Select"
 msgstr "Selecteren"
 
@@ -4590,8 +3676,8 @@ msgid "Select at least one store and one branch in the filter menu."
 msgstr "Selecteer minstens één opslag en één branch in het filtermenu."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
-#: crates/keycord-stores/data/window-pages.fragment.ui:168
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
 msgid "Select the private keys that can unlock passwords in this store."
 msgstr ""
 "Selecteer de privésleutels die wachtwoorden in deze opslag kunnen "
@@ -4603,15 +3689,15 @@ msgstr "Opeenvolgende tekens"
 
 #: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
 #: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:7 crates/keycord-keys/src/error.rs:8
+#: crates/keycord-keys/src/error.rs:8
 msgid "Set a PIN on the FIDO2 security key first."
 msgstr "Stel eerst een PIN in op de FIDO2-beveiligingssleutel."
 
-#: crates/keycord-fido/src/ui.rs:528 crates/keycord-keys/src/ui/unlock.rs:77
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
 msgid "Set security key PIN"
 msgstr "Pincode voor beveiligingssleutel instellen"
 
-#: crates/keycord-fido/src/ui.rs:209 crates/keycord-fido/src/ui.rs:245
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
 msgid "Set security key PIN (Experimental FIDO2)"
 msgstr "PIN voor beveiligingssleutel instellen (experimenteel FIDO2)"
 
@@ -4644,7 +3730,7 @@ msgstr "Loguitvoer tonen"
 msgid "Show OTP as QR code"
 msgstr "OTP als QR-code tonen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:181
+#: crates/keycord-lifecycle/data/metainfo.xml:184
 msgid "Show disabled options instead of hiding them"
 msgstr "Toon uitgeschakelde opties in plaats van ze te verbergen"
 
@@ -4677,15 +3763,6 @@ msgstr "Gebruikersnaam als QR-code tonen"
 msgid "Show value as QR code"
 msgstr "Waarde als QR-code tonen"
 
-#: crates/keycord-git/src/integrated.rs:479
-#: crates/keycord-git/src/integrated.rs:491
-msgid ""
-"Signed password store Git commit for {store_root} with private key "
-"{fingerprint}."
-msgstr ""
-"Git-commit voor wachtwoordopslag {store_root} is ondertekend met "
-"privésleutel {fingerprint}."
-
 #: crates/keycord-git/src/audit_types.rs:100
 msgid "Signer not in the branch recipient set"
 msgstr "Ondertekenaar staat niet in de ontvangerslijst van de branch"
@@ -4694,56 +3771,9 @@ msgstr "Ondertekenaar staat niet in de ontvangerslijst van de branch"
 msgid "Signing key not available in Keycord"
 msgstr "Ondertekeningssleutel niet beschikbaar in Sleutelkoord"
 
-#: crates/keycord-git/src/integrated.rs:474
-#: crates/keycord-git/src/integrated.rs:485
-msgid ""
-"Signing password store Git commit for {store_root} with {name} <{email}> "
-"({fingerprint})."
-msgstr ""
-"Git-commit van wachtwoordopslag {store_root} ondertekenen met {name} <{email}"
-"> ({fingerprint})."
-
 #: crates/keycord-entries/src/strength.rs:63
 msgid "Single character class and short"
 msgstr "Eén tekenklasse en kort"
-
-#: crates/keycord-git/src/integrated.rs:505
-msgid ""
-"Skip password store Git commit for {store_root}: Git commands are only "
-"available on Linux."
-msgstr ""
-"Git-commit van wachtwoordopslag {store_root} overgeslagen: Git-opdrachten "
-"zijn alleen beschikbaar op Linux."
-
-#: crates/keycord-git/src/integrated.rs:511
-msgid ""
-"Skip password store Git commit for {store_root}: no paths were provided."
-msgstr ""
-"Git-commit van wachtwoordopslag {store_root} overgeslagen: er zijn geen "
-"paden opgegeven."
-
-#: crates/keycord-git/src/integrated.rs:531
-msgid ""
-"Skip password store Git commit for {store_root}: the staged paths have no "
-"changes."
-msgstr ""
-"Git-commit van wachtwoordopslag {store_root} overgeslagen: de klaargezette "
-"paden bevatten geen wijzigingen."
-
-#: crates/keycord-git/src/integrated.rs:518
-msgid ""
-"Skip password store Git commit for {store_root}: the store is not a Git "
-"repository."
-msgstr ""
-"Git-commit van wachtwoordopslag {store_root} overgeslagen: de opslag is geen "
-"Git-repository."
-
-#: crates/keycord-keys/src/sync.rs:101
-msgid ""
-"Skipping host GPG private key without a passphrase during sync: {fingerprint}"
-msgstr ""
-"GPG-privésleutel op de host zonder wachtwoordzin overgeslagen tijdens "
-"synchronisatie: {fingerprint}"
 
 #: crates/keycord-preferences/data/window-page.fragment.ui:139
 msgid "Sort entries by pass file name only."
@@ -4761,7 +3791,7 @@ msgstr "Status"
 msgid "Step {current}/{total}: touch your key if it blinks."
 msgstr "Stap {current}/{total}: raak je sleutel aan als die knippert."
 
-#: crates/keycord-entries/src/ui/new_item.rs:37
+#: crates/keycord-entries/src/ui/new_item.rs:44
 #: crates/keycord-stores/data/window-pages.fragment.ui:18
 msgid "Store"
 msgstr "Opslag"
@@ -4770,14 +3800,10 @@ msgstr "Opslag"
 msgid "Store created, but it wasn't added."
 msgstr "Opslag gemaakt, maar niet toegevoegd."
 
-#: crates/keycord-stores/src/ui/management/import.rs:270
-msgid "Store import page state was not initialized."
-msgstr "Status van de pagina voor opslagimport is niet geïnitialiseerd."
-
 #: crates/keycord-stores/data/window-pages.fragment.ui:129
 #: crates/keycord-stores/src/recipient_page.rs:17
-#: crates/keycord-stores/src/ui/recipient_page/mod.rs:241
-#: crates/keycord-stores/src/ui/recipient_page/mod.rs:242
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
 msgid "Store keys"
 msgstr "Opslagsleutels"
 
@@ -4790,11 +3816,11 @@ msgstr "Opslag hersteld."
 msgid "Store subfolder"
 msgstr "Opslagsubmap"
 
-#: crates/keycord-git/src/ui/store_page.rs:675
+#: crates/keycord-git/src/ui/store_page.rs:711
 msgid "Store sync stopped unexpectedly."
 msgstr "Synchronisatie van opslag is onverwacht gestopt."
 
-#: crates/keycord-git/src/ui/store_page.rs:662
+#: crates/keycord-git/src/ui/store_page.rs:698
 msgid "Store synced."
 msgstr "Opslag gesynchroniseerd."
 
@@ -4804,8 +3830,8 @@ msgstr "Opslag gesynchroniseerd."
 msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
 msgstr "Opgeslagen FIDO2-PIN is geen geldige UTF-8: {err}"
 
-#: crates/keycord-entries/data/window-header-list.fragment.ui:40
-#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:24
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
 msgid "Stores"
 msgstr "Opslagen"
@@ -4833,7 +3859,7 @@ msgstr ""
 msgid "Symbols"
 msgstr "Symbolen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:39
+#: crates/keycord-lifecycle/data/metainfo.xml:38
 msgid ""
 "Sync Git-backed stores, manage remotes, sign changes, and inspect history "
 "with commit verification details"
@@ -4841,7 +3867,7 @@ msgstr ""
 "Synchroniseer Git-opslagen, beheer remotes, onderteken wijzigingen en bekijk "
 "de geschiedenis met details over commitverificatie"
 
-#: crates/keycord-git/src/ui/store_page.rs:619
+#: crates/keycord-git/src/ui/store_page.rs:655
 msgid "Sync now"
 msgstr "Nu synchroniseren"
 
@@ -4853,7 +3879,7 @@ msgstr "Privésleutels met de host synchroniseren"
 msgid "Sync stores"
 msgstr "Opslagen synchroniseren"
 
-#: crates/keycord-git/src/ui/store_page.rs:644
+#: crates/keycord-git/src/ui/store_page.rs:680
 msgid "Syncing store"
 msgstr "Opslag synchroniseren"
 
@@ -4866,14 +3892,14 @@ msgid "Text Editor"
 msgstr "Teksteditor"
 
 #: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:18 crates/keycord-keys/src/error.rs:20
+#: crates/keycord-keys/src/error.rs:20
 msgid "That FIDO2 security key does not support the hmac-secret extension."
 msgstr ""
 "Die FIDO2-beveiligingssleutel ondersteunt de hmac-secret-extensie niet."
 
 #: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
 #: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248 crates/keycord-keys/src/error.rs:9
+#: crates/keycord-keys/src/error.rs:248
 msgid "That FIDO2 security key must support PIN protection."
 msgstr "Die FIDO2-beveiligingssleutel moet PIN-bescherming ondersteunen."
 
@@ -5102,7 +4128,11 @@ msgstr "De wachtwoorden komen niet overeen."
 msgid "The private key password is incorrect."
 msgstr "Het wachtwoord van de privésleutel is onjuist."
 
-#: crates/keycord-fido/src/ui.rs:302
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr ""
+
+#: crates/keycord-fido/src/ui.rs:307
 msgid "The security key PINs do not match."
 msgstr "De PIN's van de beveiligingssleutel komen niet overeen."
 
@@ -5115,10 +4145,6 @@ msgstr ""
 #: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
 msgid "The selected password store path is not a folder."
 msgstr "Het geselecteerde pad van de wachtwoordopslag is geen map."
-
-#: crates/keycord-shell/src/file_picker.rs:44
-msgid "The selected path is not available locally. {}"
-msgstr "Het geselecteerde pad is lokaal niet beschikbaar. {}"
 
 #: crates/keycord-stores/src/error.rs:35
 msgid "The selected store path is not a folder."
@@ -5263,7 +4289,7 @@ msgstr "Deze privésleutel vereist een andere ontgrendelingsmethode."
 msgid "This private key requires a hardware key."
 msgstr "Deze privésleutel vereist een hardwaresleutel."
 
-#: crates/keycord-stores/src/ui/recipient_page/list.rs:41
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
 msgid "This recipient is not available in the app."
 msgstr "Deze ontvanger is niet beschikbaar in de app."
 
@@ -5283,8 +4309,8 @@ msgid "Too short ({length} characters)"
 msgstr "Te kort ({length} tekens)"
 
 #: crates/keycord-shell/data/shortcuts.ui:27
-#: crates/keycord-shell/data/window.ui:63
-#: crates/keycord-shell/data/window.ui:83
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
 #: crates/keycord-stores/src/ui/management/import.rs:228
 #: src/window/tool_hub.rs:50
 msgid "Tools"
@@ -5296,8 +4322,8 @@ msgid "Total characters"
 msgstr "Totaal aantal tekens"
 
 #: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:11 crates/keycord-keys/src/error.rs:12
-#: crates/keycord-keys/src/error.rs:212 crates/keycord-keys/src/error.rs:251
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
 msgid "Touch the FIDO2 security key and try again."
 msgstr "Raak de FIDO2-beveiligingssleutel aan en probeer het opnieuw."
 
@@ -5305,7 +4331,7 @@ msgstr "Raak de FIDO2-beveiligingssleutel aan en probeer het opnieuw."
 msgid "Touch your key if it blinks."
 msgstr "Raak je sleutel aan als die knippert."
 
-#: crates/keycord-shell/src/application.rs:317
+#: crates/keycord-shell/src/application.rs:319
 #, fuzzy
 msgid "Translate"
 msgstr "Vertaald door Nick."
@@ -5330,8 +4356,8 @@ msgstr "Probeer een andere zoekterm of laad meer commits."
 #: crates/keycord-entries/src/ui/tools/mod.rs:64
 #: crates/keycord-git/data/window-store-page.fragment.ui:64
 #: crates/keycord-preferences/data/window-page.fragment.ui:351
-#: crates/keycord-shell/data/window.ui:144
-#: crates/keycord-stores/data/window-pages.fragment.ui:230
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
 msgid "Try a different search term."
 msgstr "Probeer een andere zoekterm."
 
@@ -5339,7 +4365,7 @@ msgstr "Probeer een andere zoekterm."
 msgid "Try a different value filter."
 msgstr "Probeer een ander waardefilter."
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:628
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
 msgid "Try again from Preferences."
 msgstr "Probeer het opnieuw via Voorkeuren."
 
@@ -5384,11 +4410,7 @@ msgstr "Onverwacht aantal overeenkomende publieke subsleutels: {count}"
 msgid "Unexpectedly read token information without a buffer."
 msgstr "Er is onverwacht tokeninformatie gelezen zonder buffer."
 
-#: crates/keycord-lifecycle/src/search_provider.rs:188
-msgid "Unknown search provider method: {method_name}."
-msgstr "Onbekende zoekprovidermethode: {method_name}."
-
-#: crates/keycord-lifecycle/data/metainfo.xml:59
+#: crates/keycord-lifecycle/data/metainfo.xml:58
 msgid "Unlock a pass file"
 msgstr "Ontgrendel een pass-bestand"
 
@@ -5397,9 +4419,9 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Ontgrendel een andere geselecteerde privésleutel voordat je deze wist."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:522 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:392
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
 #: crates/keycord-keys/src/ui/unlock.rs:56
 #: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
@@ -5521,7 +4543,7 @@ msgstr ""
 msgid "Update size mismatch for '{}'."
 msgstr "Grootte van update '{}' komt niet overeen."
 
-#: crates/keycord-stores/data/window-pages.fragment.ui:184
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
 msgid "Updating all saved passwords to match the new access settings."
 msgstr ""
 "Alle opgeslagen wachtwoorden worden bijgewerkt zodat ze overeenkomen met de "
@@ -5574,7 +4596,7 @@ msgid "Use folders with file name search"
 msgstr "Mappen gebruiken bij zoeken op bestandsnaam"
 
 #: crates/keycord-stores/src/ui/management/import.rs:33
-#: crates/keycord-stores/src/ui/widgets.rs:193
+#: crates/keycord-stores/src/ui/widgets.rs:204
 msgid "Use pass import to import into an existing store."
 msgstr "Gebruik 'pass import' om in een bestaande opslag te importeren."
 
@@ -5586,7 +4608,7 @@ msgstr "Gebruik 'pass import' met je aangepaste pass-opdracht."
 msgid "Use store, folders, and file name"
 msgstr "Opslag, mappen en bestandsnaam gebruiken"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:40
+#: crates/keycord-lifecycle/data/metainfo.xml:39
 msgid ""
 "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop "
 "and mobile devices"
@@ -5622,7 +4644,7 @@ msgstr "De Integrated-backend wordt in plaats daarvan gebruikt."
 msgid "Utilities and maintenance"
 msgstr "Hulpprogramma's en onderhoud"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:77
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
 msgid ""
 "Valid host keys may appear unavailable here while private-key sync is off."
 msgstr ""
@@ -5630,7 +4652,7 @@ msgstr ""
 "privésleutelsynchronisatie uit staat."
 
 #: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:75
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
 msgid "Valid host keys may appear unavailable here."
 msgstr "Geldige hostsleutels kunnen hier onbeschikbaar lijken."
 
@@ -5671,22 +4693,6 @@ msgstr ""
 "Wanneer dit is ingeschakeld, kan Geschiedenis ontvangers uit eerdere commits "
 "gebruiken bij het verifiëren van oudere versleutelde items."
 
-#: crates/keycord-entries/src/ui/session.rs:39
-msgid ""
-"Widget was not attached to an application window when reading window session."
-msgstr ""
-"Widget was niet aan een applicatievenster gekoppeld tijdens het lezen van de "
-"venstersessie."
-
-#: src/window/build/assemble.rs:247
-msgid "Window Git actions: open-git, git-clone, and synchronize are {}."
-msgstr ""
-"Git-acties van het venster: open-git, git-clone en synchronize zijn {}."
-
-#: crates/keycord-entries/src/ui/session.rs:44
-msgid "Window session was not initialized before use."
-msgstr "Venstersessie was niet geïnitialiseerd voor gebruik."
-
 #: crates/keycord-shell/src/uri.rs:23
 msgid "Windows ShellExecute failed: {err}"
 msgstr "Windows ShellExecute mislukte: {err}"
@@ -5705,27 +4711,23 @@ msgstr "Git-commitobject van wachtwoordopslag schrijven"
 msgid "Write password store Git tree"
 msgstr "Git-tree van wachtwoordopslag schrijven"
 
-#: crates/keycord-lifecycle/src/updater/common.rs:1063
-msgid "X-GitHub-Api-Version"
-msgstr "X-GitHub-Api-Version"
-
-#: crates/keycord-lifecycle/data/metainfo.xml:191
+#: crates/keycord-lifecycle/data/metainfo.xml:194
 msgid "You can now generate new private keys."
 msgstr "Je kunt nu nieuwe privésleutels genereren."
 
-#: crates/keycord-lifecycle/data/metainfo.xml:185
+#: crates/keycord-lifecycle/data/metainfo.xml:188
 msgid "You can now manage Git remotes"
 msgstr "Je kunt nu Git-remotes beheren"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:156
+#: crates/keycord-lifecycle/data/metainfo.xml:159
 msgid "You can now open pass files in a new window"
 msgstr "Je kunt pass-bestanden nu in een nieuw venster openen"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:165
+#: crates/keycord-lifecycle/data/metainfo.xml:168
 msgid "You can now use the field values as variables in search"
 msgstr "Je kunt veldwaarden nu als variabelen in zoeken gebruiken"
 
-#: crates/keycord-shell/data/window.ui:221
+#: crates/keycord-shell/data/window.ui:214
 msgid "_About Keycord"
 msgstr "_Over Sleutelkoord"
 
@@ -5737,7 +4739,7 @@ msgstr "_Item toevoegen"
 msgid "_Find item"
 msgstr "_Item zoeken"
 
-#: crates/keycord-shell/data/window.ui:217
+#: crates/keycord-shell/data/window.ui:210
 msgid "_Keyboard Shortcuts"
 msgstr "_Sneltoetsen"
 
@@ -5749,29 +4751,9 @@ msgstr "_Voorkeuren"
 msgid "_Synchronize with remote"
 msgstr "_Met remote synchroniseren"
 
-#: crates/keycord-shell/data/window.ui:211
+#: crates/keycord-shell/data/window.ui:204
 msgid "_Tools"
 msgstr "_Hulpmiddelen"
-
-#: crates/keycord-fido/src/native.rs:62
-msgid "action timeout"
-msgstr "time-out van actie"
-
-#: crates/keycord-entries/src/host.rs:105
-msgid "already exists"
-msgstr "bestaat al"
-
-#: crates/keycord-git/src/lib.rs:21
-msgid "audit_disabled.rs"
-msgstr "audit_disabled.rs"
-
-#: crates/keycord-keys/src/hardware/linux.rs:555
-msgid "authentication method blocked"
-msgstr "authenticatiemethode geblokkeerd"
-
-#: crates/keycord-entries/src/host.rs:110 crates/keycord-stores/src/host.rs:57
-msgid "available private keys cannot decrypt"
-msgstr "beschikbare privésleutels kunnen niet ontsleutelen"
 
 #: src/composition/about.rs:21 src/composition/about.rs:22
 msgid "backend: host"
@@ -5793,11 +4775,7 @@ msgstr "GitHub-client bouwen"
 msgid "build download client"
 msgstr "downloadclient bouwen"
 
-#: crates/keycord-entries/src/host.rs:109 crates/keycord-stores/src/host.rs:56
-msgid "cannot decrypt password store entries"
-msgstr "kan items in de wachtwoordopslag niet ontsleutelen"
-
-#: crates/keycord-entries/src/ui/list/store_filter.rs:37
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
 msgid "clean stale store filter values"
 msgstr "verouderde opslagfilterwaarden opschonen"
 
@@ -5805,67 +4783,13 @@ msgstr "verouderde opslagfilterwaarden opschonen"
 msgid "clear empty fields before save"
 msgstr "lege velden wissen voor opslaan"
 
-#: crates/keycord-lifecycle/src/setup.rs:520
-#: crates/keycord-lifecycle/src/setup.rs:556
-#: crates/keycord-lifecycle/src/setup.rs:576
-#: crates/keycord-lifecycle/src/setup.rs:601
-#: crates/keycord-lifecycle/src/setup.rs:621
-msgid "clock should be after epoch"
-msgstr "klok moet na de Unix-epoch staan"
-
 #: crates/keycord-keys/src/store/storage.rs:527
 msgid "collecting available private-key fingerprints"
 msgstr "beschikbare vingerafdrukken van privésleutels verzamelen"
 
-#: src/main.rs:93 src/setup.rs:24
-msgid "compiled.gresource"
-msgstr "compiled.gresource"
-
-#: crates/keycord-keys/src/hardware/linux.rs:114
-msgid "condition of use not satisfied"
-msgstr "gebruiksvoorwaarde niet voldaan"
-
-#: crates/keycord-keys/src/hardware/linux.rs:552
-msgid "context error"
-msgstr "contextfout"
-
-#: crates/keycord-keys/src/hardware/linux.rs:549
-msgid "couldn't find card"
-msgstr "kon kaart niet vinden"
-
-#: crates/keycord-lifecycle/src/setup.rs:526
-#, fuzzy
-msgid "create MIME packages dir"
-msgstr "doelmap maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:525
-#, fuzzy
-msgid "create applications dir"
-msgstr "bin-map maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:627
-msgid "create bin dir"
-msgstr "bin-map maken"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:973
 msgid "create partial update file"
 msgstr "gedeeltelijk updatebestand maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:604
-msgid "create root dir"
-msgstr "hoofdmap maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:628
-msgid "create search provider dir"
-msgstr "map voor zoekprovider maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:580
-msgid "create target dir"
-msgstr "doelmap maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:559
-msgid "create temp dir"
-msgstr "tijdelijke map maken"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:953
 msgid "create update download directory"
@@ -5876,10 +4800,6 @@ msgstr "downloadmap voor updates maken"
 msgid "credential ID"
 msgstr "credential-ID"
 
-#: crates/keycord-runtime/src/diagnostics.rs:121
-msgid "credential URL regex should compile"
-msgstr "regex voor credential-URL moet compileren"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1035
 msgid "decode GitHub release response"
 msgstr "GitHub-releaseantwoord decoderen"
@@ -5887,15 +4807,6 @@ msgstr "GitHub-releaseantwoord decoderen"
 #: crates/keycord-entries/src/ui/list/row.rs:602
 msgid "delete password entry"
 msgstr "wachtwoorditem verwijderen"
-
-#: crates/keycord-fido/src/service.rs:213
-#, fuzzy
-msgid "device checked above"
-msgstr "hierboven gecontroleerd"
-
-#: crates/keycord-fido/src/native.rs:57
-msgid "device not found"
-msgstr "apparaat niet gevonden"
 
 #: crates/keycord-runtime/src/hardening.rs:28
 msgid "disable core dumps: {err}"
@@ -5909,21 +4820,9 @@ msgstr "uitbreidingspunten uitschakelen: {err}"
 msgid "disable process dumpability: {err}"
 msgstr "proces-dumpbaarheid uitschakelen: {err}"
 
-#: crates/keycord-lifecycle/src/updater/mod.rs:15
-msgid "disabled.rs"
-msgstr "disabled.rs"
-
-#: crates/keycord-keys/src/hardware/linux.rs:570
-msgid "does not support"
-msgstr "ondersteunt niet"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:970
 msgid "download release asset"
 msgstr "releasebestand downloaden"
-
-#: crates/keycord-runtime/src/validation.rs:12
-msgid "email validation regex should compile"
-msgstr "e-mailvalidatieregex moet compileren"
 
 #: crates/keycord-entries/src/integrated.rs:798
 msgid "empty password file"
@@ -5941,197 +4840,19 @@ msgstr "DEP inschakelen: {err}"
 msgid "enable strict handle checks: {err}"
 msgstr "strikte handle-controles inschakelen: {err}"
 
-#: crates/keycord-keys/src/hardware/linux.rs:563
-msgid "enter the hardware key pin"
-msgstr "voer de pincode van de hardwaresleutel in"
-
-#: crates/keycord-entries/src/ui/list/row.rs:68
-msgid "entry.delete"
-msgstr "entry.delete"
-
-#: crates/keycord-entries/src/ui/list/row.rs:63
-msgid "entry.move"
-msgstr "entry.move"
-
-#: crates/keycord-entries/src/ui/list/row.rs:65
-msgid "entry.move-store"
-msgstr "entry.move-store"
-
-#: crates/keycord-entries/src/ui/list/row.rs:67
-msgid "entry.open-in-file-manager"
-msgstr "entry.open-in-file-manager"
-
-#: crates/keycord-entries/src/ui/list/row.rs:60
-msgid "entry.open-new-window"
-msgstr "entry.open-new-window"
-
-#: crates/keycord-entries/src/ui/list/row.rs:62
-msgid "entry.rename-file"
-msgstr "entry.rename-file"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1018
 msgid "finalize update file"
 msgstr "updatebestand afronden"
-
-#: crates/keycord-entries/src/tools/field_values.rs:88
-msgid "find \"{}\" is \"{}\""
-msgstr "find \"{}\" is \"{}\""
-
-#: crates/keycord-fido/src/ui.rs:268
-#, fuzzy
-msgid "flatpak override --user --device=all {app_id}"
-msgstr "flatpak override --user --device=all"
-
-#: crates/keycord-keys/src/ui/smartcard_access.rs:99
-#, fuzzy
-msgid "flatpak override --user --socket=pcsc {app_id}"
-msgstr "flatpak override --user --socket=pcsc"
-
-#: src/composition/host_access.rs:37
-msgid "flatpak override --user --talk-name=org.freedesktop.Flatpak"
-msgstr "flatpak override --user --talk-name=org.freedesktop.Flatpak"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:997
 msgid "flush partial update file"
 msgstr "gedeeltelijk updatebestand wegschrijven"
 
-#: crates/keycord-shell/src/application.rs:361
-msgid "gdk-pixbuf-2.0"
-msgstr "gdk-pixbuf-2.0"
-
-#: crates/keycord-git/src/integrated.rs:61
-msgid "git add"
-msgstr "git add"
-
-#: crates/keycord-git/src/audit.rs:371
-msgid "git cat-file --batch"
-msgstr "git cat-file --batch"
-
 #: crates/keycord-git/src/command.rs:48
 msgid "git command"
 msgstr "Git-opdracht"
 
-#: crates/keycord-git/src/integrated.rs:81
-msgid "git diff --cached"
-msgstr "git diff --cached"
-
-#: crates/keycord-git/src/status.rs:126
-msgid "git diff --quiet HEAD --"
-msgstr "git diff --quiet HEAD --"
-
-#: crates/keycord-git/src/sync.rs:47
-msgid "git fetch --prune"
-msgstr "git fetch --prune"
-
-#: crates/keycord-git/src/audit.rs:274
-msgid "git for-each-ref"
-msgstr "git for-each-ref"
-
-#: crates/keycord-git/src/integrated.rs:411
-msgid "git hash-object"
-msgstr "git hash-object"
-
-#: crates/keycord-git/src/repository.rs:58
-msgid "git init"
-msgstr "git init"
-
-#: crates/keycord-git/src/audit.rs:325
-msgid "git log"
-msgstr "git log"
-
-#: crates/keycord-git/src/audit.rs:467
-msgid "git log --no-walk=unsorted --format=%H%x00%G?..."
-msgstr "git log --no-walk=unsorted --format=%H%x00%G?..."
-
-#: crates/keycord-git/src/status.rs:111
-msgid "git ls-files --cached --others --exclude-standard"
-msgstr "git ls-files --cached --others --exclude-standard"
-
-#: crates/keycord-git/src/status.rs:139
-msgid "git ls-files --others --exclude-standard"
-msgstr "git ls-files --others --exclude-standard"
-
-#: crates/keycord-git/src/audit.rs:975
-msgid "git ls-tree"
-msgstr "git ls-tree"
-
-#: crates/keycord-git/src/sync.rs:66
-msgid "git merge --abort"
-msgstr "git merge --abort"
-
-#: crates/keycord-git/src/sync.rs:99
-msgid "git merge --no-edit"
-msgstr "git merge --no-edit"
-
-#: crates/keycord-git/src/sync.rs:115
-msgid "git push"
-msgstr "git push"
-
-#: crates/keycord-git/src/remotes.rs:23
-msgid "git remote"
-msgstr "git remote"
-
-#: crates/keycord-git/src/remotes.rs:65
-msgid "git remote add"
-msgstr "git remote add"
-
-#: crates/keycord-git/src/remotes.rs:40
-msgid "git remote get-url"
-msgstr "git remote get-url"
-
-#: crates/keycord-git/src/remotes.rs:120
-msgid "git remote remove"
-msgstr "git remote remove"
-
-#: crates/keycord-git/src/remotes.rs:86
-msgid "git remote rename"
-msgstr "git remote rename"
-
-#: crates/keycord-git/src/remotes.rs:103
-msgid "git remote set-url"
-msgstr "git remote set-url"
-
-#: crates/keycord-git/src/status.rs:257
-msgid "git rev-list --count"
-msgstr "git rev-list --count"
-
-#: crates/keycord-git/src/integrated.rs:131 crates/keycord-git/src/status.rs:41
-msgid "git rev-parse -q --verify HEAD^{commit}"
-msgstr "git rev-parse -q --verify HEAD^{commit}"
-
-#: crates/keycord-git/src/status.rs:285
-msgid "git rev-parse -q --verify refs/remotes/<remote>/<branch>^{commit}"
-msgstr "git rev-parse -q --verify refs/remotes/<remote>/<branch>^{commit}"
-
-#: crates/keycord-git/src/audit.rs:1010
-msgid "git show"
-msgstr "git show"
-
-#: crates/keycord-git/src/audit.rs:529
-msgid "git show --name-status"
-msgstr "git show --name-status"
-
-#: crates/keycord-git/src/status.rs:71
-msgid "git symbolic-ref --quiet --short HEAD"
-msgstr "git symbolic-ref --quiet --short HEAD"
-
-#: crates/keycord-git/src/integrated.rs:434
-msgid "git update-ref"
-msgstr "git update-ref"
-
-#: crates/keycord-git/src/integrated.rs:153
-msgid "git var"
-msgstr "git var"
-
-#: crates/keycord-git/src/integrated.rs:106
-msgid "git write-tree"
-msgstr "git write-tree"
-
-#: crates/keycord-shell/src/application.rs:356
-msgid "glib-2.0"
-msgstr "glib-2.0"
-
-#: crates/keycord-lifecycle/data/metainfo.xml:216
+#: crates/keycord-lifecycle/data/metainfo.xml:219
 msgid "gpg"
 msgstr "gpg"
 
@@ -6154,10 +4875,6 @@ msgstr "`gpg --import` mislukt"
 #: crates/keycord-keys/src/host_gpg.rs:111
 msgid "gpg --list-secret-keys failed"
 msgstr "`gpg --list-secret-keys` mislukt"
-
-#: crates/keycord-shell/src/application.rs:357
-msgid "gschemas.compiled"
-msgstr "gschemas.compiled"
 
 #: crates/keycord-keys/src/store/manifest.rs:179
 msgid "hardware key manifest"
@@ -6211,17 +4928,9 @@ msgstr "hpke.key gebruikt het niet-ondersteunde sleuteltype {key_type:?}"
 msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
 msgstr "hpke.key {key_type}/{curve} komt niet overeen met KEM {kem}"
 
-#: crates/keycord-passkey/src/request.rs:412
-msgid "hpke.key.kty"
-msgstr "hpke.key.kty"
-
 #: crates/keycord-passkey/src/request.rs:436
 msgid "hpke.key.x has the wrong length for KEM {kem}"
 msgstr "hpke.key.x heeft de verkeerde lengte voor KEM {kem}"
-
-#: crates/keycord-passkey/src/request.rs:463
-msgid "hpke.key.{member}"
-msgstr "hpke.key.{member}"
 
 #: crates/keycord-passkey/src/request.rs:482
 msgid "hpke.key.{member} must not be empty"
@@ -6232,66 +4941,11 @@ msgstr "hpke.key.{member} mag niet leeg zijn"
 msgid "hpke.key.{member} must use unpadded base64url"
 msgstr "hpke.key.{member} moet base64url zonder opvulling gebruiken"
 
-#: crates/keycord-passkey/src/request.rs:362
-msgid "hpke.mode"
-msgstr "hpke.mode"
-
-#: crates/keycord-fido/src/native.rs:60
-msgid "invalid option"
-msgstr "ongeldige optie"
-
-#: src/composition/backend/integrated/git.rs:33
-msgid "is not available in the app."
-msgstr "is niet beschikbaar in de app."
-
-#: crates/keycord-docs/src/enabled.rs:22
-msgid "keycord-doc:"
-msgstr "keycord-doc:"
-
-#: crates/keycord-entries/src/tools/export.rs:5
-msgid "keycord-passwords.csv"
-msgstr "keycord-wachtwoorden.csv"
-
-#: crates/keycord-preferences/src/storage.rs:34
-#: crates/keycord-preferences/src/storage.rs:35
-#, fuzzy
-msgid "keycord.toml"
-msgstr "keycord-doc:"
-
-#: crates/keycord-lifecycle/src/setup.rs:62
-msgid "lifecycle install configuration must be initialized"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/mod.rs:18
-msgid "linux.rs"
-msgstr "linux.rs"
-
-#: crates/keycord-shell/src/application.rs:440
-msgid "loaders-{hash:016x}.cache"
-msgstr "loaders-{hash:016x}.cache"
-
-#: crates/keycord-shell/src/application.rs:365
-#: crates/keycord-shell/src/application.rs:410
-msgid "loaders.cache"
-msgstr "loaders.cache"
-
 #: crates/keycord-keys/src/store/storage.rs:494
 msgid "loading the available key ring"
 msgstr "de beschikbare sleutelring laden"
 
-#: crates/keycord-lifecycle/src/setup.rs:633
-msgid "make search provider non-writable"
-msgstr "zoekprovider niet beschrijfbaar maken"
-
-#: crates/keycord-lifecycle/src/setup.rs:585
-msgid "make target non-writable"
-msgstr "doel niet beschrijfbaar maken"
-
-#: crates/keycord-keys/src/store/paths.rs:27
-msgid "manifest.toml"
-msgstr "manifest.toml"
-
-#: crates/keycord-shell/src/application.rs:150
+#: crates/keycord-shell/src/application.rs:152
 msgid "missing display"
 msgstr "ontbrekend beeldscherm"
 
@@ -6303,47 +4957,11 @@ msgstr "wachtwoorditem naar een andere opslag verplaatsen"
 msgid "new item template"
 msgstr "sjabloon voor nieuw item"
 
-#: crates/keycord-fido/src/native.rs:54
-msgid "no credentials"
-msgstr "geen credentials"
-
-#: crates/keycord-entries/src/host.rs:112 crates/keycord-stores/src/host.rs:59
-msgid "no pkesk managed to decrypt the ciphertext"
-msgstr "geen pkesk kon de cijfertekst ontsleutelen"
-
-#: crates/keycord-entries/src/host.rs:111 crates/keycord-stores/src/host.rs:58
-msgid "no pkesks managed to decrypt the ciphertext"
-msgstr "geen pkesks konden de cijfertekst ontsleutelen"
-
-#: crates/keycord-keys/src/hardware/linux.rs:550
-msgid "no smartcard"
-msgstr "geen smartcard"
-
-#: crates/keycord-entries/src/host.rs:96
-msgid "no such file or directory"
-msgstr "bestand of map bestaat niet"
-
-#: crates/keycord-fido/src/native.rs:55
-msgid "not found"
-msgstr "niet gevonden"
-
-#: crates/keycord-entries/src/host.rs:94
-msgid "not in the password store"
-msgstr "niet in de wachtwoordopslag"
-
-#: crates/keycord-keys/src/hardware/linux.rs:565
-msgid "not transacted"
-msgstr "niet verwerkt"
-
-#: crates/keycord-fido/src/native.rs:62
-msgid "operation denied"
-msgstr "bewerking geweigerd"
-
-#: crates/keycord-lifecycle/data/metainfo.xml:217
+#: crates/keycord-lifecycle/data/metainfo.xml:220
 msgid "otp"
 msgstr "otp"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:215
+#: crates/keycord-lifecycle/data/metainfo.xml:218
 msgid "pass"
 msgstr "pass"
 
@@ -6381,19 +4999,7 @@ msgstr "`pass mv` mislukt"
 msgid "pass rm failed"
 msgstr "`pass rm` mislukt"
 
-#: crates/keycord-lifecycle/data/metainfo.xml:219
-msgid "passkey"
-msgstr "passkey"
-
-#: crates/keycord-lifecycle/src/setup.rs:535
-msgid "passkey MIME config"
-msgstr ""
-
-#: crates/keycord-entries/src/tools/export.rs:145
-msgid "passkey: [redacted]"
-msgstr "passkey: [weggelakt]"
-
-#: crates/keycord-lifecycle/data/metainfo.xml:214
+#: crates/keycord-lifecycle/data/metainfo.xml:217
 msgid "password"
 msgstr "wachtwoord"
 
@@ -6404,33 +5010,6 @@ msgstr "wachtwoordgeneratie"
 #: crates/keycord-preferences/src/ui/settings.rs:652
 msgid "password list sort"
 msgstr "sortering van wachtwoordlijst"
-
-#: crates/keycord-keys/src/hardware/linux.rs:115
-#: crates/keycord-keys/src/hardware/linux.rs:557
-msgid "password not checked"
-msgstr "wachtwoord niet gecontroleerd"
-
-#: crates/keycord-fido/src/native.rs:51
-msgid "pin auth blocked"
-msgstr "PIN-authenticatie geblokkeerd"
-
-#: crates/keycord-fido/src/native.rs:50
-msgid "pin auth invalid"
-msgstr "PIN-authenticatie ongeldig"
-
-#: crates/keycord-fido/src/native.rs:49
-#: crates/keycord-keys/src/hardware/linux.rs:559
-msgid "pin invalid"
-msgstr "PIN ongeldig"
-
-#: crates/keycord-fido/src/native.rs:45
-msgid "pin not set"
-msgstr "PIN niet ingesteld"
-
-#: crates/keycord-fido/src/native.rs:47
-#: crates/keycord-keys/src/hardware/linux.rs:563
-msgid "pin required"
-msgstr "PIN vereist"
 
 #: crates/keycord-preferences/src/storage.rs:44
 msgid "preferences file"
@@ -6446,49 +5025,13 @@ msgstr "privésleutel"
 msgid "private-key sync"
 msgstr "privésleutelsynchronisatie"
 
-#: crates/keycord-keys/src/store/paths.rs:31
-msgid "public.asc"
-msgstr "public.asc"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:1033
 msgid "read GitHub release response"
 msgstr "GitHub-releaseantwoord lezen"
 
-#: crates/keycord-lifecycle/src/setup.rs:545
-msgid "read MIME package"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:540
-msgid "read desktop file"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:565
-msgid "read marker"
-msgstr "markering lezen"
-
-#: crates/keycord-lifecycle/src/setup.rs:630
-msgid "read search provider metadata"
-msgstr "metadata van zoekprovider lezen"
-
-#: crates/keycord-lifecycle/src/setup.rs:638
-msgid "read search provider metadata for cleanup"
-msgstr "metadata van zoekprovider lezen voor opschonen"
-
-#: crates/keycord-lifecycle/src/setup.rs:582
-msgid "read target metadata"
-msgstr "doelmetadata lezen"
-
-#: crates/keycord-lifecycle/src/setup.rs:590
-msgid "read target metadata for cleanup"
-msgstr "doelmetadata lezen voor opschonen"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:985
 msgid "read update bytes"
 msgstr "bytes van updatebestand lezen"
-
-#: crates/keycord-keys/src/hardware/linux.rs:551
-msgid "reader error"
-msgstr "leesfout"
 
 #: crates/keycord-git/src/command.rs:49
 msgid "remote git command"
@@ -6506,30 +5049,9 @@ msgstr "verouderd gedeeltelijk updatebestand verwijderen"
 msgid "remove stale update file"
 msgstr "verouderd updatebestand verwijderen"
 
-#: crates/keycord-lifecycle/src/setup.rs:642
-msgid "restore search provider permissions"
-msgstr "rechten van zoekprovider herstellen"
-
-#: crates/keycord-lifecycle/src/setup.rs:593
-msgid "restore target permissions"
-msgstr "rechten van doel herstellen"
-
-#: crates/keycord-entries/src/ui/list/store_filter.rs:69
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
 msgid "save store filter selection"
 msgstr "opslagfilterselectie opslaan"
-
-#: crates/keycord-runtime/src/diagnostics.rs:131
-msgid "scp remote regex should compile"
-msgstr "regex voor scp-remote moet compileren"
-
-#: crates/keycord-keys/src/hardware/linux.rs:113
-#: crates/keycord-keys/src/hardware/linux.rs:558
-msgid "security status not satisfied"
-msgstr "beveiligingsstatus niet voldaan"
-
-#: crates/keycord-stores/src/host.rs:50
-msgid "selected password store path is not a folder"
-msgstr "geselecteerd pad van de wachtwoordopslag is geen map"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1031
 msgid "send GitHub release request"
@@ -6539,22 +5061,6 @@ msgstr "GitHub-releaseverzoek verzenden"
 msgid "send release asset request"
 msgstr "aanvraag voor releasebestand verzenden"
 
-#: crates/keycord-lifecycle/src/updater/common.rs:1129
-msgid "sha256:"
-msgstr "sha256:"
-
-#: crates/keycord-runtime/src/command.rs:130
-msgid "signal {signal}"
-msgstr "signaal {signal}"
-
-#: crates/keycord-runtime/src/command.rs:114
-msgid "stdin: [redacted]"
-msgstr "stdin: [weggelakt]"
-
-#: crates/keycord-runtime/src/command.rs:116
-msgid "stdin: provided"
-msgstr "stdin: opgegeven"
-
 #: crates/keycord-git/src/ui/audit.rs:601
 msgid "store cleanup"
 msgstr "opslagfilters opschonen"
@@ -6563,11 +5069,7 @@ msgstr "opslagfilters opschonen"
 msgid "store path"
 msgstr "opslagpad"
 
-#: crates/keycord-runtime/src/command.rs:224
-msgid "stream logger panicked while reading {label}"
-msgstr "Er trad een panic op in de streamlogger tijdens het lezen van {label}"
-
-#: crates/keycord-lifecycle/data/metainfo.xml:218
+#: crates/keycord-lifecycle/data/metainfo.xml:221
 msgid "totp"
 msgstr "totp"
 
@@ -6591,10 +5093,6 @@ msgstr "onbekende Windows-hardeningfout"
 msgid "unsupported key type: {other:?}"
 msgstr "niet-ondersteund sleuteltype: {other:?}"
 
-#: crates/keycord-lifecycle/src/updater/linux.rs:214
-msgid "update-{:032x}"
-msgstr "update-{:032x}"
-
 #: crates/keycord-passkey/src/credential.rs:299
 #: crates/keycord-passkey/src/credential.rs:349
 msgid "user handle"
@@ -6604,52 +5102,13 @@ msgstr "gebruikers-ID"
 msgid "username fallback"
 msgstr "terugval voor gebruikersnaam"
 
-#: crates/keycord-preferences/src/preferences.rs:10
-msgid ""
-"username:\n"
-"email:\n"
-"url:"
-msgstr ""
-"gebruikersnaam:\n"
-"e-mail:\n"
-"url:"
-
-#: crates/keycord-fido/src/native.rs:47
-msgid "uv invalid"
-msgstr "uv ongeldig"
-
-#: crates/keycord-entries/src/host.rs:95
-msgid "was not found"
-msgstr "werd niet gevonden"
-
-#: crates/keycord-lifecycle/src/updater/mod.rs:21
-msgid "windows.rs"
-msgstr "windows.rs"
-
 #: crates/keycord-git/src/command.rs:50
 msgid "work-tree git command"
 msgstr "Git-opdracht met werkmap"
 
-#: crates/keycord-lifecycle/src/setup.rs:537
-#, fuzzy
-msgid "write MIME package"
-msgstr "markeringsbestand schrijven"
-
-#: crates/keycord-lifecycle/src/setup.rs:534
-msgid "write desktop file"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/setup.rs:561
-msgid "write marker"
-msgstr "markeringsbestand schrijven"
-
 #: crates/keycord-lifecycle/src/updater/common.rs:991
 msgid "write update bytes"
 msgstr "bytes van updatebestand schrijven"
-
-#: crates/keycord-entries/src/integrated.rs:824
-msgid "writing hex into a string should not fail"
-msgstr "hexadecimale tekst naar een tekenreeks schrijven mag niet mislukken"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1187
 msgid "{:.1} KiB"
@@ -6658,23 +5117,6 @@ msgstr "{:.1} KiB"
 #: crates/keycord-lifecycle/src/updater/common.rs:1185
 msgid "{:.1} MiB"
 msgstr "{:.1} MiB"
-
-#: crates/keycord-passkey/src/credential.rs:115
-msgid "{PASSKEY_FIELD_KEY}: {storage_value}"
-msgstr ""
-
-#: crates/keycord-lifecycle/src/updater/linux.rs:183
-#, fuzzy
-msgid "{PRODUCT_NAME}-{tag_name}.{arch}"
-msgstr "{}-{tag_name}.{arch}"
-
-#: crates/keycord-entries/src/integrated.rs:805
-msgid ""
-"{REQUIRE_ALL_PRIVATE_KEYS_LAYER_HEADER}\n"
-"{}"
-msgstr ""
-"{REQUIRE_ALL_PRIVATE_KEYS_LAYER_HEADER}\n"
-"{}"
 
 #: crates/keycord-git/src/command.rs:23
 msgid "{action} failed: {stderr}"
@@ -6688,120 +5130,13 @@ msgstr "{action} mislukt: {stdout}"
 msgid "{action} failed: {}"
 msgstr "{action} mislukt: {}"
 
-#: crates/keycord-lifecycle/src/setup.rs:388
-#, fuzzy
-msgid "{app_id}-passkey.xml"
-msgstr "{}-passkey.xml"
-
-#: crates/keycord-entries/src/otp/url.rs:91
-msgid "{base}?{}"
-msgstr "{base}?{}"
-
-#: crates/keycord-git/src/ui/store_page.rs:283
+#: crates/keycord-git/src/ui/store_page.rs:286
 msgid "{branch} (no commits yet)"
 msgstr "{branch} (nog geen commits)"
-
-#: crates/keycord-fido/src/service.rs:326
-msgid "{byte:02X}"
-msgstr "{byte:02X}"
-
-#: crates/keycord-entries/src/integrated.rs:824
-#: crates/keycord-lifecycle/src/search_provider.rs:372
-#: crates/keycord-lifecycle/src/updater/common.rs:1162
-msgid "{byte:02x}"
-msgstr "{byte:02x}"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1189
 msgid "{bytes} B"
 msgstr "{bytes} B"
-
-#: crates/keycord-runtime/src/command.rs:385
-#, fuzzy
-msgid ""
-"{context}\n"
-"$ {command_text}\n"
-"failed to open stdin"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"kon stdin niet openen"
-
-#: crates/keycord-runtime/src/command.rs:292
-#: crates/keycord-runtime/src/command.rs:350
-#, fuzzy
-msgid ""
-"{context}\n"
-"$ {command_text}\n"
-"failed to start: {error}"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"starten mislukt: {err}"
-
-#: crates/keycord-runtime/src/command.rs:266
-#: crates/keycord-runtime/src/command.rs:394
-#, fuzzy
-msgid ""
-"{context}\n"
-"$ {command_text}\n"
-"failed to wait: {error}"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"wachten mislukt: {err}"
-
-#: crates/keycord-runtime/src/command.rs:412
-#, fuzzy
-msgid ""
-"{context}\n"
-"$ {command_text}\n"
-"failed to write stdin: {error}"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"schrijven naar stdin mislukt: {err}"
-
-#: crates/keycord-runtime/src/command.rs:204
-#, fuzzy
-msgid ""
-"{context}\n"
-"$ {command}\n"
-"failed to read {label}: {error}"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"kon {label} niet lezen: {err}"
-
-#: crates/keycord-runtime/src/command.rs:110
-msgid ""
-"{context}\n"
-"$ {command}\n"
-"status: {status}"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"status: {status}"
-
-#: crates/keycord-runtime/src/command.rs:225
-#, fuzzy
-msgid ""
-"{context}\n"
-"$ {command}\n"
-"{error}"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"{err}"
-
-#: crates/keycord-runtime/src/command.rs:154
-msgid ""
-"{context}\n"
-"$ {command}\n"
-"{label}:"
-msgstr ""
-"{context}\n"
-"$ {command}\n"
-"{label}:"
 
 #: crates/keycord-runtime/src/bounded_toml.rs:35
 msgid "{context} exceeds the supported TOML nesting depth of {}."
@@ -6811,11 +5146,6 @@ msgstr "{context} overschrijdt de ondersteunde TOML-nestingsdiepte van {}."
 msgid "{context} exceeds the supported TOML size limit of {} bytes."
 msgstr ""
 "{context} overschrijdt de ondersteunde TOML-groottelimiet van {} bytes."
-
-#: crates/keycord-shell/src/optional_permission.rs:108
-#, fuzzy
-msgid "{context}: {error}"
-msgstr "{log_context}: {err}"
 
 #: crates/keycord-git/src/ui/audit.rs:1067
 msgid "{count} commits loaded"
@@ -6833,7 +5163,7 @@ msgstr "{count} overeenkomende items"
 msgid "{count} recipients"
 msgstr "{count} ontvangers"
 
-#: crates/keycord-git/src/ui/store_page.rs:303
+#: crates/keycord-git/src/ui/store_page.rs:306
 msgid "{count} remotes configured."
 msgstr "{count} remotes geconfigureerd."
 
@@ -6880,9 +5210,9 @@ msgstr "{field} moet minstens één waarde bevatten"
 msgid "{field} must not be empty"
 msgstr "{field} mag niet leeg zijn"
 
-#: crates/keycord-stores/src/paths.rs:26
-msgid "{file_name}.{STANDARD_PASSWORD_ENTRY_EXTENSION}"
-msgstr "{file_name}.{STANDARD_PASSWORD_ENTRY_EXTENSION}"
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr ""
 
 #: crates/keycord-keys/src/ui/managed_key.rs:9
 msgid "{fingerprint} - Hardware key"
@@ -6896,22 +5226,13 @@ msgstr "{fingerprint} - Met wachtwoord beveiligd"
 msgid "{fingerprint} - Security key protected"
 msgstr "{fingerprint} - Beveiligd met beveiligingssleutel"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:556
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Beveiligingstoken"
 
-#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:558
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Beveiligingstoken ({detail})"
-
-#: crates/keycord-git/src/status.rs:247
-msgid "{from}..{to}"
-msgstr "{from}..{to}"
-
-#: crates/keycord-shell/src/file_picker.rs:348
-#: crates/keycord-shell/src/file_picker.rs:378
-msgid "{log_context}: {err}"
-msgstr "{log_context}: {err}"
 
 #: crates/keycord-fido/src/service.rs:335
 msgid "{manufacturer} {product}"
@@ -6921,10 +5242,6 @@ msgstr "{manufacturer} {product}"
 #: crates/keycord-keys/src/store/storage.rs:958
 msgid "{name} <{email}>"
 msgstr "{name} <{email}>"
-
-#: crates/keycord-git/src/audit.rs:1000
-msgid "{object}:{path}"
-msgstr "{object}:{path}"
 
 #: crates/keycord-entries/src/import.rs:36
 #: crates/keycord-entries/src/import.rs:41
@@ -6940,10 +5257,6 @@ msgstr ""
 "{project}: {comments}\n"
 "\n"
 "{backend_details}"
-
-#: crates/keycord-entries/src/file/types.rs:116
-msgid "{raw_key}:{separator_spacing}{url}"
-msgstr "{raw_key}:{separator_spacing}{url}"
 
 #: crates/keycord-entries/src/otp/mod.rs:301
 msgid "{remaining}s remaining"
@@ -6962,18 +5275,13 @@ msgstr "{scope} · {}"
 msgid "{step}: {err}"
 msgstr "{step}: {err}"
 
-#: crates/keycord-shell/src/application.rs:326
+#: crates/keycord-shell/src/application.rs:328
 msgid ""
 "{summary}\n"
 "error: {error}"
 msgstr ""
 "{summary}\n"
 "fout: {error}"
-
-#: crates/keycord-shell/src/application.rs:328
-#, fuzzy
-msgid "{title}: {detail}"
-msgstr "{name} <{email}>"
 
 #: src/composition/about.rs:22
 msgid ""
@@ -6998,46 +5306,6 @@ msgid ""
 msgstr ""
 "{} {RIPASSO_VERSION}\n"
 "{} {SEQUOIA_OPENPGP_VERSION}"
-
-#: crates/keycord-lifecycle/src/setup.rs:244
-msgid "{}-passkey.xml"
-msgstr "{}-passkey.xml"
-
-#: crates/keycord-lifecycle/src/desktop.rs:31
-#, fuzzy
-msgid "{}.SearchProvider"
-msgstr "{}.search-provider.ini"
-
-#: crates/keycord-lifecycle/src/setup.rs:140
-#: crates/keycord-lifecycle/src/setup.rs:240
-#: crates/keycord-lifecycle/src/setup.rs:372
-msgid "{}.desktop"
-msgstr "{}.desktop"
-
-#: crates/keycord-lifecycle/src/setup.rs:306
-#: crates/keycord-lifecycle/src/setup.rs:454
-#: crates/keycord-lifecycle/src/setup.rs:462
-#: crates/keycord-lifecycle/src/setup.rs:477
-#: crates/keycord-runtime/src/i18n.rs:137
-#, fuzzy
-msgid "{}.mo"
-msgstr "{DOMAIN}.mo"
-
-#: crates/keycord-lifecycle/src/setup.rs:248
-#: crates/keycord-lifecycle/src/setup.rs:410
-msgid "{}.search-provider.ini"
-msgstr "{}.search-provider.ini"
-
-#: crates/keycord-lifecycle/src/setup.rs:252
-#: crates/keycord-lifecycle/src/setup.rs:429
-#, fuzzy
-msgid "{}.service"
-msgstr "{}.svg"
-
-#: crates/keycord-lifecycle/src/setup.rs:237
-#: crates/keycord-lifecycle/src/setup.rs:444
-msgid "{}.svg"
-msgstr "{}.svg"
 
 #~ msgid "Bad locale path"
 #~ msgstr "Ongeldig pad voor de landinstelling"
