@@ -6,7 +6,7 @@ Keycord is a graphical app for standard [`pass`](https://www.passwordstore.org/)
 
 - [Getting Started](getting-started.md): setup, stores, first items, and first searches
 - [Search Guide](search.md): plain search, `reg`, and `find`
-- [Workflows](workflows.md): editing, OTP, passkeys, tools, exports, shortcuts, and maintenance
+- [Workflows](workflows.md): editing, OTP, tools, exports, shortcuts, and maintenance
 - [Permissions and Backends](permissions-and-backends.md): Integrated vs Host, Flatpak permissions, Git, and key sync
 - [Story of Secrets](story-of-secrets.md): code-oriented walkthrough of store creation, entry encryption, unlock paths, and clipboard copy
 - [Teams and Organizations](teams-and-organizations.md): shared stores, recipients, onboarding, offboarding, and bootstrap patterns

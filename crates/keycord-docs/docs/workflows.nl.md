@@ -125,27 +125,6 @@ Hoe het werkt:
 
 Gebruik `find otp` in zoeken wanneer je elk item nodig hebt waarvoor OTP is ingeschakeld.
 
-## Passkeys opslaan en uitwisselingsverzoeken openen
-
-Met de `passkey`-feature bewaart Keycord passkeygegevens in een
-gereserveerd `passkey:`-veld in een gewoon pass-item. Het volledige item, inclusief het
-privésleutelmateriaal van de passkey, wordt beschermd door de normale OpenPGP-versleuteling van de
-opslag. Compatibele `pass`-hulpmiddelen kunnen dezelfde `.gpg`-bestanden blijven beheren en zien het
-gereserveerde veld als gewone ontsleutelde tekst.
-
-Keycord kan een lokaal CXP-exportverzoek voor passkeys openen. Voordat Keycord het als verzoek
-behandelt, controleert het of dit een begrensd, regulier lokaal bestand is en controleert het de
-structuur van de velden. Dit is het openen van een verzoek voor de uitwisseling van inloggegevens,
-geen live passkeyprovider voor webbrowsers. De naam van de importeur in een lokaal verzoek is niet
-geverifieerd. Het openen van een verzoek betekent niet dat er een versleuteld CXP-antwoord is
-aangemaakt.
-
-Keycord kan ook een standaard CXF-passkey openen. Na bevestiging maakt Keycord een nieuw, nog niet
-opgeslagen item in de geconfigureerde standaardopslag. Controleer de RP-ID en gebruikersnaam en
-gebruik daarna de normale opslagactie, zodat de gebruikelijke ontvangers en ontgrendelroute van de
-opslag de passkey beschermen. De ruwe editor en algemene CSV-export voor wachtwoorden geven het
-privésleutelmateriaal van passkeys niet vrij.
-
 ## Zoeken, zichtbaarheid, herladen en synchroniseren
 
 ### Zoeken

@@ -26,7 +26,6 @@ Keycord behandelt deze regels speciaal:
 
 - `username:`, `user:` en `login:` verwijzen naar het veld voor de gebruikersnaam
 - `otpauth://...` of `otpauth: otpauth://...` wordt het OTP-veld
-- `passkey: {"type":"passkey",...}` bevat één compact standaard-CXF-passkeyobject in JSON
 - andere `key: value`-regels worden doorzoekbare velden
 - regels zonder dubbele punt blijven behouden als ruwe tekst, maar zijn geen gestructureerde zoekvelden
 
@@ -34,16 +33,6 @@ Keycord behandelt deze regels speciaal:
 
 - Standaardeditor: wachtwoord, gebruikersnaam, OTP en dynamische velden
 - Ruwe editor: het volledige pass-bestand als tekst; niet beschikbaar voor items met passkeymateriaal
-
-### Passkeys
-
-Keycord bewaart een passkey in een item in de standaard `pass`-opslag (doorgaans `~/.password-store`) of in een andere geconfigureerde opslag;
-er wordt geen afzonderlijke passkeydatabase gebruikt. 
-Wanneer je een standaard CXF-passkeybestand opent, vraagt Keycord om bevestiging en maakt het daarna in de standaardopslag een nieuw item dat je kunt controleren en versleuteld kunt opslaan.
-Keycord herkent en controleert ook de structuur van lokale CXP-exportverzoeken voor passkeys wanneer je die met de app opent.
-
-Deze route voor lokale uitwisseling maakt Keycord niet tot een live passkeyprovider voor
-webbrowsers en beweert niet dat er een versleuteld CXP-antwoord is aangemaakt.
 
 ## Backends
 

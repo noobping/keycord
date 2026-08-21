@@ -47,10 +47,6 @@ Docs reports documentation availability, Git reports audit availability, FIDO an
 their device/key capabilities, and Lifecycle reports setup availability. Runtime exposes only
 cross-cutting process/environment capabilities.
 
-FIDO and passkeys are deliberately separate. FIDO covers physical security tokens used to protect
-managed private keys; passkey covers credential-exchange data stored in password entries. Neither
-subject is a compatibility alias for the other.
-
 ## Boundary rules
 
 - A behavior has one compiled implementation. The root has no compatibility re-export tree;

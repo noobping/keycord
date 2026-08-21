@@ -6,7 +6,7 @@ Keycord is een grafische app voor standaard [`pass`](https://www.passwordstore.o
 
 - [Aan de slag](getting-started.md): installatie, opslagen, eerste items en eerste zoekopdrachten
 - [Zoekgids](search.md): gewoon zoeken, `reg` en `find`
-- [Werkstromen](workflows.md): bewerken, OTP, passkeys, hulpmiddelen, export, sneltoetsen en onderhoud
+- [Werkstromen](workflows.md): bewerken, OTP, hulpmiddelen, export, sneltoetsen en onderhoud
 - [Machtigingen en backends](permissions-and-backends.md): Integrated vs Host, Flatpak-machtigingen, Git en sleutelsynchronisatie
 - [Het verhaal van geheimen](story-of-secrets.md): codegerichte rondgang door het maken van opslagen, versleuteling van items, ontgrendelpaden en kopiëren naar het klembord
 - [Teams, werkgroepen en organisaties](teams-and-organizations.md): gedeelde opslagen, ontvangers, onboarding, offboarding en bootstrap-patronen

@@ -15,8 +15,6 @@ The check enforces:
 - every `crates/keycord-*` package is a workspace member, is private, and has an
   empty default feature set;
 - internal workspace dependencies disable default features;
-- FIDO and Passkey do not depend on one another, and Lifecycle has no normal
-  dependency on Passkey;
 - every subject UI fragment lives under its owner's `data` directory, has exactly
   one reachable composition marker, and appears in the deterministic registry in
   composition order (including intentionally nested markers);
