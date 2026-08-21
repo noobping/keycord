@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: keycord 0.9.13\n"
-"PO-Revision-Date: 2026-07-19 15:28+0200\n"
-"Last-Translator: Codex\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-08-21 15:53+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Dutch\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,14 +102,12 @@ msgid "Add another store first."
 msgstr "Voeg eerst nog een opslag toe."
 
 #: crates/keycord-stores/src/recipient_page.rs:23
-#, fuzzy
 msgid "Add at least one recipient to create this store."
-msgstr "Voeg een Git-remote voor deze opslag toe."
+msgstr "Voeg minstens één ontvanger toe om deze opslag aan te maken."
 
 #: crates/keycord-stores/src/recipient_page.rs:24
-#, fuzzy
 msgid "Add at least one recipient to keep saving changes."
-msgstr "Voeg minstens één remote toe voordat je synchroniseert."
+msgstr "Voeg minstens één ontvanger toe om wijzigingen te kunnen blijven opslaan."
 
 #: crates/keycord-git/src/ui/store_page.rs:326
 msgid "Add at least one remote before syncing."
@@ -280,7 +278,7 @@ msgstr "Sjabloon toepassen"
 
 #: crates/keycord-lifecycle/data/metainfo.xml:81
 msgid "Apply the filter when creating new pass files."
-msgstr ""
+msgstr "Pas het filter toe wanneer je nieuwe pass-bestanden maakt."
 
 #: crates/keycord-git/src/audit_disabled.rs:10
 #: crates/keycord-git/src/audit_disabled.rs:20
@@ -455,11 +453,11 @@ msgstr "Kies een map. Als die leeg is, wordt het een opslag."
 
 #: crates/keycord-shell/src/file_picker.rs:30
 msgid "Choose a local file."
-msgstr ""
+msgstr "Kies een lokaal bestand."
 
 #: crates/keycord-shell/src/file_picker.rs:31
 msgid "Choose a local folder."
-msgstr ""
+msgstr "Kies een lokale map."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
 msgid ""
@@ -1103,11 +1101,8 @@ msgstr ""
 "Maak een met wachtwoord beveiligde privésleutel voor wachtwoordopslagen."
 
 #: crates/keycord-keys/src/ui/widgets.rs:133
-#, fuzzy
 msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
-msgstr ""
-"Experimenteel: maak een nieuwe OpenPGP-sleutel op een lege verbonden "
-"smartcard of YubiKey."
+msgstr "Maak een OpenPGP-sleutel op een lege, aangesloten smartcard of YubiKey."
 
 #: crates/keycord-git/src/audit_types.rs:95
 msgid "Cryptographically invalid signature"
@@ -1502,19 +1497,16 @@ msgid "Failed to derive enough HKDF output."
 msgstr "Kon niet genoeg HKDF-uitvoer afleiden."
 
 #: crates/keycord-passkey/src/credential.rs:441
-#, fuzzy
 msgid "Failed to encode passkey key material: {err}"
-msgstr "Kon sleutelmateriaal '{}' niet kopiëren: {err}"
+msgstr "Kon het sleutelmateriaal van de passkey niet coderen: {err}"
 
 #: crates/keycord-passkey/src/credential.rs:171
-#, fuzzy
 msgid "Failed to export passkey JSON: {err}"
-msgstr "Ongeldige JSON van opgeslagen passkey: {err}"
+msgstr "Kon de JSON van de passkey niet exporteren: {err}"
 
 #: crates/keycord-passkey/src/credential.rs:436
-#, fuzzy
 msgid "Failed to generate passkey key material: {err}"
-msgstr "Kon privésleutel niet genereren: {err}"
+msgstr "Kon het sleutelmateriaal voor de passkey niet genereren: {err}"
 
 #: crates/keycord-shell/src/ui.rs:29
 msgid "Failed to get {id}"
@@ -1557,14 +1549,12 @@ msgid "Failed to prepare managed private-key storage."
 msgstr "Kon de opslag voor beheerde privésleutels niet voorbereiden."
 
 #: crates/keycord-passkey/src/credential.rs:434
-#, fuzzy
 msgid "Failed to prepare passkey key generation: {err}"
-msgstr "Kon de passkeyprivésleutel niet normaliseren: {err}"
+msgstr "Kon het aanmaken van de sleutel voor de passkey niet voorbereiden: {err}"
 
 #: crates/keycord-passkey/src/credential.rs:438
-#, fuzzy
 msgid "Failed to prepare passkey key material: {err}"
-msgstr "Kon sleutelmateriaal '{}' niet kopiëren: {err}"
+msgstr "Kon het sleutelmateriaal van de passkey niet voorbereiden: {err}"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:244
 msgid "Failed to read Linux update staging root metadata '{}': {error}"
@@ -1579,14 +1569,12 @@ msgid "Failed to read Windows save-file picker options: {err}"
 msgstr "Kon de opties van de Windows-bestandskiezer niet lezen: {err}"
 
 #: crates/keycord-runtime/src/command.rs:403
-#, fuzzy
 msgid "Failed to read command stderr: {error}"
-msgstr "Kon stderr van opdracht niet lezen: {err}"
+msgstr "Kon stderr van de opdracht niet lezen: {error}"
 
 #: crates/keycord-runtime/src/command.rs:401
-#, fuzzy
 msgid "Failed to read command stdout: {error}"
-msgstr "Kon stdout van opdracht niet lezen: {err}"
+msgstr "Kon stdout van de opdracht niet lezen: {error}"
 
 #: crates/keycord-entries/src/ui/tools/export.rs:135
 msgid "Failed to read password entry '{}' from '{}': {err}"
@@ -1634,9 +1622,8 @@ msgid "Failed to resolve the update helper executable: {error}"
 msgstr "Kon het uitvoerbare updatehulpprogramma niet vinden: {error}"
 
 #: crates/keycord-runtime/src/command.rs:352
-#, fuzzy
 msgid "Failed to run command: {error}"
-msgstr "Kon opdracht niet uitvoeren: {err}"
+msgstr "Kon de opdracht niet uitvoeren: {error}"
 
 #: crates/keycord-git/src/command.rs:109
 #: crates/keycord-git/src/repository.rs:53
@@ -1665,7 +1652,7 @@ msgstr ""
 
 #: crates/keycord-shell/src/file_picker.rs:325
 msgid "Failed to select the Windows save-file type: {err}"
-msgstr ""
+msgstr "Kon het bestandstype in het Windows-dialoogvenster 'Opslaan als' niet selecteren: {err}"
 
 #: crates/keycord-preferences/src/storage.rs:54
 msgid "Failed to serialize config: {e}"
@@ -1701,7 +1688,7 @@ msgstr "Kon de titel van de Windows-bestandskiezer niet instellen: {err}"
 
 #: crates/keycord-shell/src/file_picker.rs:322
 msgid "Failed to set the Windows save-file types: {err}"
-msgstr ""
+msgstr "Kon de bestandstypen voor het Windows-dialoogvenster 'Opslaan als' niet instellen: {err}"
 
 #: crates/keycord-shell/src/file_picker.rs:138
 msgid "Failed to show the Windows file picker: {err}"
@@ -1725,19 +1712,16 @@ msgid "Failed to start msiexec for update install: {error}"
 msgstr "Kon msiexec niet starten voor het installeren van de update: {error}"
 
 #: src/composition/host_access.rs:186
-#, fuzzy
 msgid "Failed to start the permission command: {error}"
-msgstr "Kon de machtigingsopdracht niet starten: {err}"
+msgstr "Kon de machtigingsopdracht niet starten: {error}"
 
 #: crates/keycord-runtime/src/command.rs:396
-#, fuzzy
 msgid "Failed to wait for command: {error}"
-msgstr "Kon niet op opdracht wachten: {err}"
+msgstr "Kon niet op de opdracht wachten: {error}"
 
 #: crates/keycord-runtime/src/command.rs:306
-#, fuzzy
 msgid "Failed to write command input: {error}"
-msgstr "Kon opdrachtsinvoer niet schrijven: {err}"
+msgstr "Kon de opdrachtinvoer niet schrijven: {error}"
 
 #: crates/keycord-preferences/src/storage.rs:57
 msgid "Failed to write config file: {e}"
@@ -1881,7 +1865,7 @@ msgstr "Git-remotes"
 
 #: crates/keycord-git/src/ui/store_page.rs:845
 msgid "Git status worker disconnected"
-msgstr ""
+msgstr "Het ophalen van de Git-status is onverwacht gestopt"
 
 #: crates/keycord-shell/data/shortcuts.ui:10
 msgid "Go back"
@@ -2186,14 +2170,12 @@ msgid "Integrated"
 msgstr "Integrated"
 
 #: crates/keycord-fido/src/cache.rs:191
-#, fuzzy
 msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Ongeldige vingerafdruk van privésleutel '{value}': {err}"
+msgstr "Ongeldige vingerafdruk voor de FIDO2-koppeling '{value}'."
 
 #: crates/keycord-fido/src/native.rs:223
-#, fuzzy
 msgid "Invalid FIDO2 device path: {error}"
-msgstr "Ongeldig FIDO2-apparaatpad: {err}"
+msgstr "Ongeldig FIDO2-apparaatpad: {error}"
 
 #: crates/keycord-fido/src/crypto.rs:99
 msgid "Invalid FIDO2 encrypted data."
@@ -3142,9 +3124,8 @@ msgid "Path or name"
 msgstr "Pad of naam"
 
 #: src/composition/host_access.rs:192
-#, fuzzy
 msgid "Permission command failed"
-msgstr "Machtigingsopdracht mislukt: {}"
+msgstr "Machtigingsopdracht mislukt"
 
 #: crates/keycord-entries/src/ui/tools/mod.rs:40
 msgid "Pick a field from the current list."
@@ -3826,9 +3807,8 @@ msgstr "Opslag gesynchroniseerd."
 
 #: crates/keycord-fido/src/service.rs:181
 #: crates/keycord-fido/src/service.rs:272
-#, fuzzy
 msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Opgeslagen FIDO2-PIN is geen geldige UTF-8: {err}"
+msgstr "Opgeslagen FIDO2-PIN is geen geldige UTF-8: {error}"
 
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
@@ -4059,14 +4039,12 @@ msgid "The file is not a CXP passkey export request."
 msgstr "Het bestand is geen CXP-exportverzoek voor passkeys."
 
 #: crates/keycord-runtime/src/i18n.rs:101
-#, fuzzy
 msgid "The gettext domain contains an embedded NUL byte."
-msgstr ""
-"De PIN van de FIDO2-beveiligingssleutel bevat een niet-ondersteunde NUL-byte."
+msgstr "Het gettext-domein bevat een ingesloten NUL-byte."
 
 #: crates/keycord-runtime/src/i18n.rs:104
 msgid "The gettext locale path contains an embedded NUL byte."
-msgstr ""
+msgstr "Het gettext-pad voor landinstellingen bevat een ingesloten NUL-byte."
 
 #: crates/keycord-keys/src/error.rs:235
 msgid "The hardware key PIN is blocked."
@@ -4130,7 +4108,7 @@ msgstr "Het wachtwoord van de privésleutel is onjuist."
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
 msgid "The private-key inventory worker stopped unexpectedly."
-msgstr ""
+msgstr "Het inventariseren van privésleutels is onverwacht gestopt."
 
 #: crates/keycord-fido/src/ui.rs:307
 msgid "The security key PINs do not match."
@@ -4332,9 +4310,8 @@ msgid "Touch your key if it blinks."
 msgstr "Raak je sleutel aan als die knippert."
 
 #: crates/keycord-shell/src/application.rs:319
-#, fuzzy
 msgid "Translate"
-msgstr "Vertaald door Nick."
+msgstr "Vertalen"
 
 #: src/main.rs:85
 msgid "Translated by Nick."
@@ -5181,9 +5158,8 @@ msgstr "{fallback_prefix}: {}"
 
 #: crates/keycord-keys/src/host_gpg.rs:200
 #: crates/keycord-runtime/src/command.rs:21
-#, fuzzy
 msgid "{fallback}: {}"
-msgstr "{fallback_prefix}: {}"
+msgstr "{fallback}: {}"
 
 #: crates/keycord-passkey/src/request.rs:551
 msgid "{field} contains invalid whitespace or control characters"
@@ -5212,7 +5188,7 @@ msgstr "{field} mag niet leeg zijn"
 
 #: crates/keycord-shell/src/file_picker.rs:283
 msgid "{file_type_label} ({pattern})"
-msgstr ""
+msgstr "{file_type_label} ({pattern})"
 
 #: crates/keycord-keys/src/ui/managed_key.rs:9
 msgid "{fingerprint} - Hardware key"
