@@ -425,6 +425,20 @@ impl Preferences {
         )
     }
 
+    pub fn translation_help_notification_shown(&self) -> bool {
+        self.read_preference(
+            |settings| settings.boolean("translation-help-notification-shown"),
+            |cfg| cfg.translation_help_notification_shown.unwrap_or(false),
+        )
+    }
+
+    pub fn set_translation_help_notification_shown(&self, shown: bool) -> Result<(), BoolError> {
+        self.write_preference(
+            |settings| settings.set_boolean("translation-help-notification-shown", shown),
+            |cfg| cfg.translation_help_notification_shown = Some(shown),
+        )
+    }
+
     pub fn filter_included_store_roots(&self) -> Option<Vec<String>> {
         self.read_preference(
             |settings| {
@@ -747,6 +761,14 @@ mod tests {
     fn audit_history_recipient_fallback_defaults_to_disabled() {
         assert_eq!(
             crate::storage::PreferenceFile::default().audit_use_commit_history_recipients,
+            None
+        );
+    }
+
+    #[test]
+    fn translation_help_notification_defaults_to_not_shown() {
+        assert_eq!(
+            crate::storage::PreferenceFile::default().translation_help_notification_shown,
             None
         );
     }

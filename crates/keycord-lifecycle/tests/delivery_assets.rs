@@ -121,7 +121,10 @@ fn meson_installs_localized_application_metadata_and_catalogs() {
     assert!(meson.contains("type: 'xml'"));
     assert!(meson.contains("output: 'io.github.noobping.keycord.metainfo.xml'"));
     assert!(po_meson.contains("i18n.gettext('keycord'"));
-    assert_eq!(linguas.split_whitespace().collect::<Vec<_>>(), ["en", "nl"]);
+    assert_eq!(
+        linguas.split_whitespace().collect::<Vec<_>>(),
+        ["de", "en", "es", "fr", "it", "nl", "pl", "pt"]
+    );
 }
 
 #[test]
