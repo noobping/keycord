@@ -9,6 +9,7 @@ mod setup;
 mod composition;
 #[cfg(target_os = "linux")]
 mod search_provider;
+mod translation_help;
 mod updater;
 mod window;
 
@@ -34,7 +35,6 @@ use std::ffi::OsString;
 const APP_ID: &str = env!("APP_ID");
 const RESOURCE_ID: &str = env!("RESOURCE_ID");
 const ISSUE_URL: &str = concat!(env!("CARGO_PKG_REPOSITORY"), "/issues");
-const TRANSLATION_URL: &str = "https://hosted.weblate.org/projects/keycord";
 #[cfg(feature = "passkey")]
 const OPEN_PASSKEY_REQUEST_KEY: &str = "open-passkey-request";
 struct MainWindowCommand {
@@ -81,7 +81,7 @@ fn application_config() -> ApplicationConfig {
             homepage: env!("CARGO_PKG_HOMEPAGE"),
             repository_url: env!("CARGO_PKG_REPOSITORY"),
             issue_url: ISSUE_URL,
-            translation_url: TRANSLATION_URL,
+            translation_url: translation_help::TRANSLATION_URL,
             translator_credits: "Translated by Nick.",
         },
     }
@@ -97,7 +97,10 @@ fn application_callbacks() -> ApplicationCallbacks<MainWindowCommand, AfterWindo
             "Failed to prepare managed private-key storage.",
             || composition::backend::prepare_startup().map(|_| ()),
         )],
-        register_actions: Box::new(updater::register_app_actions),
+        register_actions: Box::new(|app| {
+            updater::register_app_actions(app);
+            translation_help::register_app_actions(app);
+        }),
         handle_open: Box::new(handle_open_files),
         handle_command_line: Box::new(dispatch_command_line_args),
         shutdown_hooks: vec![
@@ -109,7 +112,7 @@ fn application_callbacks() -> ApplicationCallbacks<MainWindowCommand, AfterWindo
             take_request: Box::new(take_activation_request),
             dispatch_existing_window: Box::new(dispatch_existing_window),
             create_window: Box::new(create_window),
-            new_window_presented: Box::new(updater::after_window_presented),
+            new_window_presented: Box::new(new_window_presented),
             after_present: Box::new(after_window_presented),
         },
     }
@@ -153,6 +156,11 @@ fn create_window(
     command: MainWindowCommand,
 ) -> Result<ApplicationWindow, String> {
     window::create_main_window(app, command.query, command.pass_file)
+}
+
+fn new_window_presented(app: &Application, window: &ApplicationWindow) {
+    updater::after_window_presented(app, window);
+    translation_help::show_notification_once(app);
 }
 
 fn after_window_presented(_window: &ApplicationWindow, _pending: AfterWindowPresent) {
