@@ -124,8 +124,8 @@ fn meson_installs_localized_application_metadata_and_catalogs() {
     assert_eq!(
         linguas.split_whitespace().collect::<Vec<_>>(),
         [
-            "ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "it", "ja", "nb",
-            "nl", "pl", "pt", "pt_BR", "ro", "ru", "sv", "tr", "zh_CN",
+            "ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "is", "it", "ja",
+            "ko", "nb", "nl", "pl", "pt", "pt_BR", "ro", "ru", "sv", "tr", "uk", "zh_CN",
         ]
     );
 }
