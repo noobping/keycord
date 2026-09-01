@@ -1,0 +1,5291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-01 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Finnish\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "1 vastaanottaja"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "1 etätietovarasto määritetty."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "Luettelo kansioista, joissa salasanatietosi sijaitsevat."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "Uudempi erillinen Linux-versio on saatavilla."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "Uudempi Windows-versio on saatavilla."
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr ""
+"Tämän merkinnän yksityinen avain on lukittu. Avaa sen lukitus asetuksissa."
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "Keskeytä salasanavaraston Git-yhdistäminen"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "Tietoja"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "Toiminnot"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "Lisää OTP-kenttä"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "Lisää varastolle Git-etätietovarasto."
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "Lisää kansio."
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "Lisää ensin salasana kyseiseen avaimeen."
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "Lisää yksityinen avain asetuksissa."
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr "Lisää ensin etätietovarasto Git-tietovaraston alustamiseksi."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "Lisää ensin varastokansio."
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "Lisää varasto, jotta voit käyttää pass-tuontia."
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr ""
+"Lisää Git-tietovaraston sisältävä varasto, jotta voit tarkastella historiaa "
+"täällä."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "Lisää tarkennettu haku"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "Aloita lisäämällä merkintä."
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "Lisää ensin toinen varasto."
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "Lisää vähintään yksi vastaanottaja varaston luomiseksi."
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr ""
+"Lisää vähintään yksi vastaanottaja, jotta muutoksia voi edelleen tallentaa."
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "Lisää vähintään yksi etätietovarasto ennen synkronointia."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "Lisää ohjeet"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid ""
+"Add existing stores, create new stores, import passwords on supported "
+"systems, or restore a store from Git with the Host backend"
+msgstr ""
+"Lisää olemassa olevia varastoja, luo uusia, tuo salasanoja tuetuissa "
+"järjestelmissä tai palauta varasto Gitistä Host-taustaosan avulla"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "Lisää kokeellinen FIDO2-tuki"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr ""
+"Lisää kokeellinen OpenPGP-laitteistoavainten tuki yksityisille avaimille"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "Lisää kenttä"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "Lisää laitteistoavain (kokeellinen)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "Lisää merkintä"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "Lisää puuttuvat kentät"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "Lisää valinnainen GPG-synkronointi"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "Lisää tai luo varasto"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr ""
+"Lisää tämä versio paikalliseen sovellusvalikkoon tai poista se valikosta."
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "Lisää salasana kohteelle {label}"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "Lisää salasanavaraston Git-etätietovarasto"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "Lisää etätietovarasto"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "Lisää hakupalvelu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "Lisää lokien kopiointitoiminto"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid ""
+"Add the passkey for {username} on {rp_id} to your default pass store? You "
+"can review it before saving."
+msgstr ""
+"Lisätäänkö käyttäjän {username} pääsyavain palvelussa {rp_id} "
+"oletusarvoiseen pass-varastoosi? Voit tarkistaa sen ennen tallentamista."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid ""
+"Add the public key already stored on the connected OpenPGP smartcard or "
+"YubiKey."
+msgstr ""
+"Lisää yhdistetyllä OpenPGP-älykortilla tai YubiKeyllä jo oleva julkinen "
+"avain."
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "Lisää sovellusvalikkoon"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "Lisää työkalusivu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr "Lisättiin CSV-vienti tietojen siirtämiseksi muihin työkaluihin."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr "Lisättiin Git-historian tarkastelu ja committien varmennustiedot."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid ""
+"Added QR code views for passwords, usernames, one-time codes, other entry "
+"fields, and permission commands."
+msgstr ""
+"Lisättiin QR-koodinäkymät salasanoille, käyttäjätunnuksille, "
+"kertakäyttökoodeille, muille merkintäkentille ja käyttöoikeuskomennoille."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid ""
+"Added entry filtering by password store and remembered history-inspection "
+"filters."
+msgstr ""
+"Lisättiin merkintöjen suodatus salasanavaraston mukaan ja historian "
+"tarkastelusuodattimien muistaminen."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "Lisättiin kokeelliset FIDO2-ohjeet ja edistymisen ilmaisimet."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "Lisättiin kokeelliset FIDO2-suojatut OpenPGP-avaimet."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ""
+"Lisättiin kansiokohtainen vastaanottajien muokkaus .gpg-id-tiedostoissa."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "Lisättiin yhdistelty lajittelutapa"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "Lisättiin puuttuvat mallipohjan kentät."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "Lisätään laitteistoavainta"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr "Salli USB-suojausavaimen käyttö (kokeellinen FIDO2)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "Salli pääsy tämän laitteen sovelluksiin"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "Salli älykortin käyttö (kokeellinen)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "Samanniminen merkintä on jo olemassa."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "Käytä mallipohjaa"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "Käytä suodatinta uusia pass-tiedostoja luotaessa."
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "Tarkastustoiminnot eivät ole käytössä tässä versiossa."
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "Tarkastus pysähtyi odottamatta."
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "Tekijä"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "Luotu"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid ""
+"Automatically remove blank username, field, and OTP lines when saving a pass "
+"file."
+msgstr ""
+"Poista tyhjät käyttäjätunnus-, kenttä- ja OTP-rivit automaattisesti pass-"
+"tiedostoa tallennettaessa."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "Saatavilla oleva versio:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "Takaisin"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "Takaisin asetuksiin"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "Takaisin varaston avaimiin"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "Taustaosa"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "Liitä julkisen avaimen tiedosto yhdistettyyn laitteistoavaimeen."
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "Haara"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "Haarat"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "Selaa ja muokkaa salasanavarastoja"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "Selaa kenttien arvoja"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "Selaa nykyisen luettelon yksilöllisiä kenttäarvoja."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "CSV-tiedostot"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "CXP-vientipyynnön versiota {0} ei tueta."
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr "CXP-vastaustilaa {0:?} ei tueta avatussa pyyntötiedostossa."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "Tätä merkintää ei voi avata."
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "Kyseistä muutosta ei voi kumota."
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "Viimeisintä muutosta ei voi kumota."
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "Peru"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr "Vaihda oletukseksi tiedostonimen käyttäminen käyttäjätunnuksena."
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "Muuttuneet polut"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr "Sovelluksen kuvakkeeksi vaihdettiin avainnauha"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "Tarkista _päivitykset"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "Ota haara käyttöön ennen tämän varaston synkronointia."
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "Ota haara käyttöön ennen synkronointia."
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "Tarkista salasanavaraston valmistellut Git-muutokset"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "Katso lisätietoja lokeista."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "Tarkistetaan päivityksiä"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "Tarkistetaan pass-tuonnin saatavuutta."
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr ""
+"Valitse JSON-objekti, joka sisältää täsmälleen yhden pääsyavaimen "
+"tunnistetiedon."
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr "Valitse JSON-objekti, joka sisältää yhden pääsyavaimen tunnistetiedon."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "Valitse tiedosto tai kansio, jos tuontityökalu tarvitsee sellaisen."
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "Valitse kansio ja palauta se Git-tietovarastosta."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "Valitse kansio. Jos se on tyhjä, siitä tehdään varasto."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "Valitse paikallinen tiedosto."
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "Valitse paikallinen kansio."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid ""
+"Choose a private key file or experimental FIDO2-protected private key file."
+msgstr ""
+"Valitse yksityisen avaimen tiedosto tai kokeellinen FIDO2-suojatun "
+"yksityisen avaimen tiedosto."
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "Valitse varasto."
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "Valitse tuontityökalu."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid ""
+"Choose how Keycord opens your data. Integrated is the default. Use Host to "
+"run your own command."
+msgstr ""
+"Valitse, miten Keycord avaa tietosi. Oletuksena on Integroitu. Host-"
+"asetuksella voit suorittaa oman komentosi."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "Valitse pass-tiedostojen järjestys etusivulla."
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "Valitse tuotava lähdetiedosto"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "Valitse tuotava lähdekansio"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "Valitse lähdetiedosto"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "Valitse lähdekansio"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "Valitse varastokansio"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "Valitse palautettava varastokansio"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr "Valitse hallittava kansiokohtainen .gpg-id-tiedosto."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "Siivoa pass-tiedosto"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "Poista tyhjät kentät ennen tallennusta"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "Tyhjennä haku"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "Tyhjennä lähdepolku"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "Leikepöydällä ei ole avainta."
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "Leikepöytä ei ole käytettävissä."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "Sulje"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "Suljetaanko Keycord päivityksen asentamiseksi?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "Komennon syötteen kirjoittaja kaatui."
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "Commit"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "Committien lataaminen pysähtyi odottamatta."
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen tämän varaston synkronointia."
+
+#: crates/keycord-git/src/sync.rs:12
+msgid ""
+"Commit or discard local changes before syncing this store. Local and remote "
+"commits are also waiting to sync."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen tämän varaston "
+"synkronointia. Myös paikallisia ja etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/sync.rs:18
+msgid ""
+"Commit or discard local changes before syncing this store. Local commits are "
+"also waiting to sync."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen tämän varaston "
+"synkronointia. Myös paikallisia committeja odottaa synkronointia."
+
+#: crates/keycord-git/src/sync.rs:24
+msgid ""
+"Commit or discard local changes before syncing this store. Remote commits "
+"are also waiting to sync."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen tämän varaston "
+"synkronointia. Myös etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr "Commitoi tai hylkää paikalliset muutokset ennen synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid ""
+"Commit or discard local changes before syncing. Local and remote commits are "
+"also waiting to sync."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen synkronointia. Myös "
+"paikallisia ja etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid ""
+"Commit or discard local changes before syncing. Local commits are also "
+"waiting to sync."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen synkronointia. Myös "
+"paikallisia committeja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid ""
+"Commit or discard local changes before syncing. Remote commits are also "
+"waiting to sync."
+msgstr ""
+"Commitoi tai hylkää paikalliset muutokset ennen synkronointia. Myös "
+"etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "Commitoitu"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "Commitoija"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "Vahvista suojausavaimen uusi PIN-koodi"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "Vahvista salasana"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "Vahvista suojausavaimen uusi PIN-koodi."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "Yhdistä ensin laitteistoavain."
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "Yhdistä vain yksi FIDO2-suojausavain ennen jatkamista."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "Yhdistä vain yksi laitteistoavain ennen sen lisäämistä."
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "Yhdistä FIDO2-suojausavain ja yritä uudelleen."
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "Yhdistä ensin FIDO2-suojausavain."
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "Yhdistä laitteistoavain ja yritä uudelleen."
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "Yhdistä ensin laitteistoavain."
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "Yhdistä oikea FIDO2-suojausavain."
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "Yhdistä oikea laitteistoavain ennen sen tuomista."
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "Konteksti"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "Kopioitu."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "Kopioi OTP-koodi"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "Kopioi ASCII-koodattu yksityinen avain"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "Kopioi ASCII-koodattu julkinen avain"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "Kopioi kokeellinen FIDO2-suojattu yksityinen avain"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "Kopioi sormenjälki"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "Kopioi lokit"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "Kopioi salasana"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "Kopioi salasana leikepöydälle"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "Kopioi käyttöoikeuskomento"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr "Kopioi sovelluksen ja komentojen viimeisin tuloste leikepöydälle."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "Kopioi valitun merkinnän salasana"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "Kopioi käyttäjätunnus"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "Kopioi arvo"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "Datakansion sijaintia ei voitu selvittää."
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "Kotikansion sijaintia ei voitu selvittää."
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "Kyseistä kansiota ei voitu lisätä."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "Laitteistoavainta ei voitu lisätä."
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "Luotua laitteistoavainta ei voitu varmentaa"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "Päivityksiä ei voitu tarkistaa."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "Kyseistä avainta ei voitu kopioida."
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "Salasanaa ei voitu kopioida."
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr "Julkisen avaimen varmennetta ei voitu luoda laitteistoavaimelle."
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "Varastoa ei voitu luoda."
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "FIDO2-salattujen tietojen salausta ei voitu purkaa."
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "Merkintää ei voitu poistaa."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "Päivitystä ei voitu ladata."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "Salasanoja ei voitu viedä."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "Sormenjälkeä vastaavaa avainta ei löytynyt"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "Laitteiston salauksenpurkuavainta ei voitu luoda"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "Laitteiston allekirjoitusavainta ei voitu luoda"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "Avainta ei voitu luoda."
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "Käyttöoikeutta ei voitu myöntää."
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "Pääsyavainta ei voitu tuoda"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "Salasanoja ei voitu tuoda."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "Avainta ei voitu tuoda."
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "FIDO2-suojausavainta ei voitu alustaa."
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Git-etätietovarastoja ei voitu tarkastaa."
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Git-tilaa ei voitu tarkastaa"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "Isäntäjärjestelmän GPG-avaimia ei voitu tarkastaa"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "Laitteistoavainta ei voitu tarkastaa."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "Päivitystä ei voitu asentaa."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr ""
+"Yksityisiä avaimia ei voitu pitää synkronoituina. Synkronointi poistettiin "
+"käytöstä."
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "Committeja ei voitu ladata."
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "Tietoja ei voitu ladata"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "Yksityisiä avaimia ei voitu ladata"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "Koodia ei voitu ladata."
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "Merkintää ei voitu siirtää."
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "Uutta ikkunaa ei voitu avata."
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "Pääsyavainpyyntöä ei voitu avata"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "Kyseistä merkintää ei voitu avata."
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "Tiedostonvalitsinta ei voitu avata."
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "Kansionvalitsinta ei voitu avata."
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "Kansiota ei voitu avata."
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "Tuontisivua ei voitu avata."
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "Linkkiä ei voitu avata."
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "Työkaluja ei voitu valmistella käyttöön."
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid ""
+"Couldn't present the Git signing unlock dialog. Continuing without a "
+"signature."
+msgstr ""
+"Git-allekirjoituksen lukituksen avausikkunaa ei voitu näyttää. Jatketaan "
+"ilman allekirjoitusta."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "Kyseistä tiedostoa ei voitu lukea."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "Kyseistä kansiota ei voitu lukea."
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "Kyseistä avainta ei voitu lukea."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "Leikepöytää ei voitu lukea."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "Kyseistä avainta ei voitu poistaa."
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "Kyseistä etätietovarastoa ei voitu poistaa."
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "Merkintää ei voitu nimetä uudelleen."
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr "Laitteistoavaimen ylläpitoistuntoa ei voitu avata uudelleen"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "Varastoa ei voitu palauttaa."
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "Muutoksia ei voitu tallentaa."
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "Varaston avaimia ei voitu tallentaa."
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "Kyseistä etätietovarastoa ei voitu tallentaa."
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "Kyseistä asetusta ei voitu tallentaa."
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "Suodatinvalintaa ei voitu tallentaa."
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "Luotua laitteiston julkista avainta ei voitu sarjallistaa"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "Laitteistoavaimen haltijan nimeä ei voitu asettaa"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "Laitteistoavaimen käyttäjän PIN-koodia ei voitu asettaa"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "Salasanaa ei voitu näyttää QR-koodina."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "Asennusohjelmaa ei voitu käynnistää."
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "Yksityisiä avaimia ei voitu synkronoida."
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "Varastoa ei voitu synkronoida."
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "Varastoja ei voitu synkronoida."
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid ""
+"Couldn't unlock private key {fingerprint_for_failure} for Git signing. "
+"Continuing without a signature."
+msgstr ""
+"Yksityisen avaimen {fingerprint_for_failure} lukitusta ei voitu avata Git-"
+"allekirjoitusta varten. Jatketaan ilman allekirjoitusta."
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "FIDO2-suojausavaimen lukitusta ei voitu avata."
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "Laitteistoavaimen lukitusta ei voitu avata."
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "Avaimen lukitusta ei voitu avata."
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "Sovellusvalikkoa ei voitu päivittää."
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "Koodia ei voitu päivittää."
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "Laitteistoavaimen ylläpitäjän PIN-koodia ei voitu tarkistaa"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "Pyydettyä laitteistoavaimen PIN-koodia ei voitu tarkistaa"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "Luo uusi FIDO2-suojattu avain."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr ""
+"Luo uusi OpenPGP-avain tyhjälle yhdistetylle älykortille tai YubiKeylle."
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "Luo uusi pass-tiedosto."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "Luo uusi salasanalla suojattu avain."
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr "Luo salasanavarastoille salasanalla suojattu yksityinen avain."
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "Luo OpenPGP-avain tyhjälle yhdistetylle älykortille tai YubiKeylle."
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "Kryptografisesti virheellinen allekirjoitus"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "Nykyisen haaran kärjen vastaanottajat"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "Nykyinen versio:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "Oletus"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "Poista"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "Poista isäntäjärjestelmän yksityinen GPG-avain"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "Poista salasanamerkintä"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "Poista valittu pass-tiedosto"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "Irrotettu HEAD"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "Tiedot"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid ""
+"Dismissed the Git signing unlock prompt for {context_for_close}. Continuing "
+"without a signature."
+msgstr ""
+"Git-allekirjoituksen lukituksen avauspyyntö ohitettiin kohteelle "
+"{context_for_close}. Jatketaan ilman allekirjoitusta."
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "Ohjeet"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "Ladattu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "Muokkaa salasanamerkintää"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid ""
+"Edit entries with form fields or raw pass-file text, generate passwords, "
+"copy field values, and show passwords, usernames, one-time codes, or other "
+"fields as QR codes"
+msgstr ""
+"Muokkaa merkintöjä lomakekenttien tai pass-tiedoston raakatekstin avulla, "
+"luo salasanoja, kopioi kenttäarvoja ja näytä salasanat, käyttäjätunnukset, "
+"kertakäyttökoodit tai muut kentät QR-koodeina"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "Muokkaa etätietovarastoa"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "Sähköposti"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "Sähköpostikentissä on käytettävä kelvollista sähköpostiosoitetta."
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "Tyhjä"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "Käytössä tässä tuloksessa"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "Anna komento."
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "Anna kentän nimi."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "Anna avaimen salasana."
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "Anna laitteistoavaimelle nimi."
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "Anna yksityiselle avaimelle nimi."
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "Anna nimi."
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "Anna pääsyavaimen käyttäjätunnus."
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "Anna etätietovaraston URL-osoite."
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "Anna etätietovaraston nimi."
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "Anna tietovaraston URL-osoite."
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "Anna käyttäjätunnus."
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "Anna kelvollinen PKCS#8-muotoinen pääsyavaimen yksityinen avain."
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "Anna kelvollinen sähköpostiosoite."
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "Anna kelvollinen pääsyavaimen RP-tunnus."
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "Anna HTTP- tai HTTPS-osoite."
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "Anna OTP-salaisuus."
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "Anna laitteistoavaimen sähköpostiosoite."
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "Anna yksityisen avaimen sähköpostiosoite."
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "Anna sähköpostiosoite."
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "Anna FIDO2-suojausavaimen PIN-koodi."
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "Anna laitteistoavaimen PIN-koodi."
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "Anna laitteistoavaimen ylläpitäjän PIN-koodi."
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "Anna avaimen salasana."
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "Anna laitteistoavaimen uusi PIN-koodi."
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "Anna suojausavaimen uusi PIN-koodi."
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "Anna yksityisen avaimen salasana."
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "Anna suojausavaimen PIN-koodi."
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "Laajenna salasanaeditoria siivoustoiminnoilla"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid ""
+"Experimental FIDO2-protected private keys need USB device access before "
+"Keycord can use a connected security key to unlock protected private keys. "
+"Restart Keycord after granting access."
+msgstr ""
+"Kokeelliset FIDO2-suojatut yksityiset avaimet tarvitsevat USB-laitteen "
+"käyttöoikeuden, ennen kuin Keycord voi avata suojattujen yksityisten "
+"avainten lukituksen yhdistetyllä suojausavaimella. Käynnistä Keycord "
+"uudelleen myönnettyäsi käyttöoikeuden."
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid ""
+"Experimental hardware-key workflows need PC/SC access to use connected "
+"OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected "
+"keys remain available without this."
+msgstr ""
+"Kokeelliset laitteistoavaintoiminnot tarvitsevat PC/SC-käyttöoikeuden "
+"yhdistettyjen OpenPGP-älykorttien tai YubiKey-avainten käyttöön. Käynnistä "
+"sitten Keycord uudelleen. Salasanalla suojatut avaimet toimivat ilman "
+"tätäkin."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid ""
+"Experimental multi-layer encryption. When on, every selected key must be "
+"unlocked and other pass apps will not be able to read these items."
+msgstr ""
+"Kokeellinen monikerroksinen salaus. Kun toiminto on käytössä, jokaisen "
+"valitun avaimen lukitus on avattava eivätkä muut pass-sovellukset pysty "
+"lukemaan näitä merkintöjä."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "Kokeelliset varastoasetukset"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "Vie"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "Viedäänkö kaikki salasanat?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "Vie kaikki salasanat ja kentät CSV-tiedostoon."
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "Vie isäntäjärjestelmän yksityinen GPG-avain"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "Vie isäntäjärjestelmän julkiset GPG-avaimet"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "Vie salasanat"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "Vietiin {count} salasana."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "Vietiin {count} salasanaa."
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "FIDO2-yksityisavaimen manifesti"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr "FIDO2-yksityisavainten tuki ei ole käytössä tässä Keycord-versiossa."
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "FIDO2-suojausavain"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr "FIDO2-tuki ei ole käytössä tässä Keycord-versiossa."
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "FIDO2-tekstikuori"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr ""
+"Linux-päivityksen yksityisen valmisteluhakemiston varaaminen epäonnistui."
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "Väliaikaisen tiedostonimen varaaminen epäonnistui."
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "Pikanäppäinikkunan muodostaminen epäonnistui."
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "Pääikkunan muodostaminen epäonnistui."
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr ""
+"Windowsin tiedostonvalitsimen asetusten määrittäminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr ""
+"Windowsin tallennusvalitsimen asetusten määrittäminen epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr ""
+"Linux-päivityksen valmisteluhakemiston '{}' luominen epäonnistui: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr "Linux-päivityksen valmistelujuuren '{}' luominen epäonnistui: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Windowsin tiedostonvalitsimen luominen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr "Windowsin tallennusvalitsimen luominen epäonnistui: {err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "ASCII-koodatun allekirjoituksen purkaminen epäonnistui"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "Salauksesta puretun UTF-8-datan dekoodaus epäonnistui"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "Riittävän HKDF-tulosteen johtaminen epäonnistui."
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr "Pääsyavaimen avainmateriaalin koodaus epäonnistui: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "Pääsyavaimen JSON-vienti epäonnistui: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "Pääsyavaimen avainmateriaalin luominen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "Kohteen {id} noutaminen epäonnistui"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr "Päivitystiedoston '{}' tiivisteen laskeminen epäonnistui: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "COMin alustaminen tiedostonvalitsinta varten epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr "COMin alustaminen tallennusvalitsinta varten epäonnistui: {err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "libadwaitan alustaminen epäonnistui."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "Ladatun päivityksen asentaminen epäonnistui: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr "Ladatun päivityksen merkitseminen suoritettavaksi epäonnistui: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "Pääsyavaimen yksityisen avaimen normalisointi epäonnistui: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "Komennon vakiosyötteen avaaminen epäonnistui"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr ""
+"Hallittujen yksityisten avainten tallennustilan valmistelu epäonnistui."
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "Pääsyavaimen avaimenluonnin valmistelu epäonnistui: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr "Pääsyavaimen avainmateriaalin valmistelu epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr ""
+"Linux-päivityksen valmistelujuuren metatietojen '{}' lukeminen epäonnistui: "
+"{error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Windowsin tiedostonvalitsimen asetusten lukeminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr "Windowsin tallennusvalitsimen asetusten lukeminen epäonnistui: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "Komennon virhetulosteen lukeminen epäonnistui: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "Komennon vakiotulosteen lukeminen epäonnistui: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "Salasanamerkinnän '{}' lukeminen kohteesta '{}' epäonnistui: {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr "Pääsyavaimen pyyntötiedoston {path:?} lukeminen epäonnistui: {source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "Valitun Windows-polun lukeminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "Valitun Windows-tallennuspolun lukeminen epäonnistui: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "Valitun laitteiston julkisen avaimen tiedoston lukeminen epäonnistui"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "Valitun yksityisen avaimen tiedoston lukeminen epäonnistui"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "Päivitystiedoston metatietojen lukeminen epäonnistui: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr "Linux-päivityksen asennusresurssien rekisteröinti epäonnistui: {error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "Resurssien rekisteröinti epäonnistui."
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr ""
+"Nykyisen suoritettavan tiedoston polun selvittäminen epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr "Päivityksen apuohjelman selvittäminen epäonnistui: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "Komennon suorittaminen epäonnistui: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "git-komennon suorittaminen epäonnistui: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr ""
+"Isäntäjärjestelmän ohjelman '{program}' suorittaminen epäonnistui: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "Host-taustaosan komennon suorittaminen epäonnistui: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "Komennon {} suorittaminen epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr ""
+"Linux-päivityksen valmistelujuuren '{}' suojaaminen epäonnistui: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Windows-tallennustiedoston tyypin valitseminen epäonnistui: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "Asetusten sarjallistaminen epäonnistui: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "Tallennettujen pääsyavaintietojen sarjallistaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr ""
+"Windowsin tiedostonvalitsimen painiketekstin asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr "Windowsin tiedostonvalitsimen otsikon asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr "Windows-tallennustiedoston päätteen asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Windows-tallennustiedoston nimen asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr ""
+"Windowsin tallennusvalitsimen painiketekstin asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr "Windowsin tallennusvalitsimen otsikon asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Windows-tallennustiedoston tyyppien asettaminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Windowsin tiedostonvalitsimen näyttäminen epäonnistui: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr "Windowsin tallennusvalitsimen näyttäminen epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Keycordin käynnistäminen epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr "Linux-päivityksen asennusapurin käynnistäminen epäonnistui: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr ""
+"msiexecin käynnistäminen päivityksen asennusta varten epäonnistui: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "Käyttöoikeuskomennon käynnistäminen epäonnistui: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "Komennon valmistumisen odottaminen epäonnistui: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "Komennon syötteen kirjoittaminen epäonnistui: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "Asetustiedoston kirjoittaminen epäonnistui: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "Salasanaviennin kirjoittaminen tiedostoon '{path}' epäonnistui: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "Toiminto {context} epäonnistui: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr "Nouda salasanavaraston Git-etätietovarasto {remote}"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid ""
+"Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr ""
+"Nouda ja yhdistä muutokset sekä lähetä nykyinen '{branch}'-haara kaikkiin "
+"etätietovarastoihin."
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "Kenttien nimissä ei voi olla kaksoispistettä ':'."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "Kenttäarvot"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "Suodata tuloksia"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "Etsi merkintä"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "Etsi heikot salasanat"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid ""
+"Find weak passwords, browse repeated field values, filter by store, and "
+"export password stores to CSV"
+msgstr ""
+"Etsi heikkoja salasanoja, selaa toistuvia kenttäarvoja, suodata varaston "
+"mukaan ja vie salasanavarastoja CSV-muodossa"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "Ensimmäinen julkaisu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "Korjaa takaisin-kuvake"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "Korjaa valinnainen Git-synkronointi"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr ""
+"Korjattiin OTP-virhe, joka tulkitsi kelvolliset salaisuudet virheellisiksi."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "Korjattiin älykorttien käyttöoikeudet"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "Korjattiin GNOME-hakupalvelu."
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "Yleiset"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "Luo FIDO2-suojattu avain (kokeellinen)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "Luo tai tuo yksityinen avain."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "Luo salasana"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "Luo yksityinen avain"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "Luodaan FIDO2-suojattua avainta (kokeellinen)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "Luodaan avainta"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Git-komento ei palauttanut tulostetta."
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "Git-historia ja varmennus"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "Git ei ole käytettävissä tässä suoritusympäristössä."
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Git-etätietovarastot"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Git-tilan taustaprosessin yhteys katkesi"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "Siirry takaisin"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "Siirry etusivulle"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "Myönnä"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "Myönnä USB-suojausavaimen käyttöoikeus (kokeellinen FIDO2)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid ""
+"Grant USB security key access for experimental FIDO2-protected private keys "
+"first."
+msgstr ""
+"Myönnä ensin USB-suojausavaimen käyttöoikeus kokeellisia FIDO2-suojattuja "
+"yksityisiä avaimia varten."
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "Myönnä pääsy isäntäjärjestelmään"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid ""
+"Grant host access first if you want Keycord to keep its private keys in step "
+"with your computer's GPG private keys."
+msgstr ""
+"Myönnä ensin pääsy isäntäjärjestelmään, jos haluat Keycordin pitävän "
+"yksityiset avaimensa synkronoituina tietokoneesi yksityisten GPG-avainten "
+"kanssa."
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "Myönnä ensin pääsy isäntäjärjestelmään."
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr ""
+"Myönnä pääsy isäntäjärjestelmään noutamista, yhdistämistä ja lähettämistä "
+"varten."
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "Myönnä käyttöoikeus"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "Myönnä älykortin käyttöoikeus"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "Myönnä ensin älykortin käyttöoikeus."
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "Oppaat ja viitemateriaali"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid ""
+"Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr ""
+"Laitteistopohjaisia OpenPGP-avaimia ei tueta tässä versiossa tai tällä "
+"alustalla."
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "Laitteistoavaimen PIN-koodi"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "Laitteistoavain lisättiin."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "Laitteistoavaimen ylläpitäjän PIN-koodi"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Auta Keycordin kääntämisessä"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "Piilota pysyvästi"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "Historiaan perustuva varavalinta"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "Historian vastaanottajat"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "Etusivu"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Host"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Host Git (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Host Git (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "Pääsy isäntäjärjestelmään"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr ""
+"Isäntäjärjestelmän komentoja käyttävät ominaisuudet ovat käytettävissä vain "
+"Linuxissa."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "Tuo"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr "Tuo yksityinen avain asetuksissa ennen salasanavaraston käyttämistä."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "Tuo olemassa oleva yksityinen avain tai yhdistä laitteistoavain."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "Tuo laitteiston julkinen avain (kokeellinen)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "Tuo isäntäjärjestelmän yksityinen GPG-avain"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "Tuo avain"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "Tuo avain leikepöydältä"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "Tuodaanko pääsyavain?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "Tuonnin salasana (valinnainen)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "Tuo salasanoja"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "Tuo salasanoja pass-tuonnilla"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "Tuo yksityinen avain"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "Tuo yksityinen avain tästä merkinnästä"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "Tuonnin lähde"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "Tuontityökalu"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "Tuodaan avainta"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "Tuodaan salasanoja"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid ""
+"Improved header actions and hid filters when they cannot affect the current "
+"view."
+msgstr ""
+"Parannettiin otsakepalkin toimintoja ja piilotettiin suodattimet, kun ne "
+"eivät vaikuta nykyiseen näkymään."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr ""
+"Parannettiin vastaanottajien valintaa varastoissa, joissa on paljon "
+"mahdollisia avaimia."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr ""
+"Parannettiin hakua, suodatusta, näppäimistökäyttöä ja merkintöjen muokkausta."
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "Tiedot"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "Alusta salasanavaraston Git-tietovarasto"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr ""
+"Tarkastele varastojen Git-historiaa ja tarkista committien allekirjoitukset."
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "Tarkastele muutoshistoriaa"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "Tarkastele muutoshistoriaa ja tarkista commitit"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "Tarkastele isäntäjärjestelmän yksityisiä GPG-avaimia"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "Tarkastele salasanavaraston Git HEAD -tilaa"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "Tarkastele salasanavaraston Git-haaraa"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr "Tarkastele salasanavaraston Git-tiedostoja ennen ensimmäistä committia"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr "Tarkastele salasanavaraston Git-etähaaraa {remote}/{branch}"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr "Tarkastele salasanavaraston Git-versioaluetta {range}"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "Tarkastele salasanavaraston Git-seurattuja muutoksia"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "Tarkastele salasanavaraston Git-seuraamattomia tiedostoja"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "Tarkastele sovelluksen ja komentojen viimeisimpiä tulosteita."
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Tarkastetaan Git-pohjaisia varastoja ja etsitään haaroja."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "Tarkastetaan yksityisiä avaimia ja yhdistettyä laitteistoa."
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr ""
+"Asenna Git, jotta voit käyttää commithistorian vastaanottajia tarkastuksessa."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "Asenna päivitys"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr ""
+"Päivityksen asentaminen sulkee Keycordin. Tallentamattomat muutokset "
+"menetetään."
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Integroitu"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "Virheellinen FIDO2-sidonnan sormenjälki '{value}'."
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "Virheellinen FIDO2-laitteen polku: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "Virheelliset FIDO2-salatut tiedot."
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "Virheellinen kaikilla avaimilla salattu salasanamerkintä."
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "git cat-file -komennon erätuloste on virheellinen."
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "git cat-file -komennon otsake on virheellinen."
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "Virheelliset isäntäjärjestelmän Git-allekirjoituksen metatiedot."
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "Virheelliset pääsyavaimen FIDO2-laajennukset: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "Virheellinen pääsyavaimen JSON: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "Virheellinen pääsyavaimen {label}: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "Virheellinen salasanamerkinnän polku."
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "Virheellinen yksityisen avaimen sormenjälki '{value}': {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "Virheellinen vastaanottajatiedoston polku."
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "Virheellinen tallennetun pääsyavaimen JSON: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid ""
+"Keep Keycord's private keys and your computer's GPG private keys in step "
+"when host access is available."
+msgstr ""
+"Pidä Keycordin yksityiset avaimet samoina tietokoneesi yksityisten GPG-"
+"avainten kanssa, kun pääsy isäntäjärjestelmään on käytettävissä."
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr ""
+"Varmista toisen valitun yksityisen avaimen saatavuus ennen tämän avaimen "
+"poistamista."
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "Pidä vähintään yksi valittu yksityinen avain saatavilla."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr ""
+"Ryhmittele merkinnät ensin varaston ja kansion, sitten tiedostonimen mukaan."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr ""
+"Säilytä kansiot luettelossa, mutta lajittele hakutulokset pass-tiedostonimen "
+"mukaan."
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr ""
+"Pidä tämä avain valittuna, kun kaikkia valittuja yksityisiä avaimia "
+"vaaditaan."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "Avaintiedosto poistettiin."
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "Avain luotiin."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "Avain tuotiin."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "Avaimen salasana"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Keycordin FIDO2-suojattu yksityinen avain"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Keycord-päivitys"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr "Keycord ei voinut viimeistellä ladatun Linux-päivityksen asennusta."
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "Keycord ei voinut valmistella pääsyavainmerkintää. {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord on jo ajan tasalla."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid ""
+"Keycord is an adaptive graphical client for password folders that use the "
+"standard pass layout. Existing stores remain normal pass stores on disk, so "
+"they keep working with pass and other compatible tools."
+msgstr ""
+"Keycord on mukautuva graafinen asiakasohjelma salasanakansioille, jotka "
+"käyttävät passin vakiomuotoa. Olemassa olevat varastot säilyvät levyllä "
+"tavallisina pass-varastoina, joten niitä voi käyttää edelleen passilla ja "
+"muilla yhteensopivilla työkaluilla."
+
+#: src/composition/host_access.rs:64
+msgid ""
+"Keycord is running in a protected space, so some optional features stay off "
+"until you allow this. If you allow it, Keycord can use tools from your "
+"computer such as GPG, the Host backend, and pass import. If you don't, "
+"Keycord still works with the integrated backend."
+msgstr ""
+"Keycord toimii suojatussa tilassa, joten osa valinnaisista ominaisuuksista "
+"ei ole käytössä ennen kuin annat luvan. Luvan saatuaan Keycord voi käyttää "
+"tietokoneesi työkaluja, kuten GPG:tä, Host-taustaosaa ja pass-tuontia. Ilman "
+"lupaa Keycord toimii edelleen integroidulla taustaosalla."
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid ""
+"Keycord opened a credential export request that names {importer} as the "
+"importer and checked its structure. The local file does not authenticate "
+"that identity. Keycord does not yet generate CXP response archives, so no "
+"passkey data was released."
+msgstr ""
+"Keycord avasi tunnistetietojen vientipyynnön, jossa tuontityökaluksi on "
+"nimetty {importer}, ja tarkisti pyynnön rakenteen. Paikallinen tiedosto ei "
+"todenna tätä identiteettiä. Keycord ei vielä luo CXP-vastausarkistoja, joten "
+"pääsyavaintietoja ei luovutettu."
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid ""
+"Keycord will first make its private-key list match the GPG private keys on "
+"your computer. After that, creating, importing, or deleting a private key in "
+"Keycord will update the host too. Keys that only exist in Keycord may be "
+"removed during the first sync."
+msgstr ""
+"Keycord synkronoi ensin yksityisten avaintensa luettelon tietokoneesi "
+"yksityisten GPG-avainten kanssa. Sen jälkeen yksityisen avaimen luominen, "
+"tuominen tai poistaminen Keycordissa päivittää myös isäntäjärjestelmän. Vain "
+"Keycordissa olevia avaimia saatetaan poistaa ensimmäisen synkronoinnin "
+"aikana."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "Tämän varaston avaimet"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "Myöhemmin"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid ""
+"Leave this empty if the source does not use a password, for example a Chrome "
+"CSV."
+msgstr ""
+"Jätä kenttä tyhjäksi, jos lähde ei käytä salasanaa, esimerkiksi tuotaessa "
+"Chromen CSV-tiedostoa."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "Pituus"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Linux-päivitykseltä puuttuu siivoushakemisto."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "Luettelo"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr "Luettele salasanavaraston Git-tarkastusviitteet kohteen {prefix} alla"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "Luettele salasanavaraston Git-etätietovarastot"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr "Luettele vastaanottajatiedostot salasanavaraston Git-puussa {object}"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "Lataa lisää committeja"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "Ladataan"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "Ladataan committeja"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "Ladataan tietoja"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "Ladataan kenttäarvoja"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "Ladataan avaimia"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "Ladataan merkintöjäsi."
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr ""
+"Haarassa '{branch}' on paikallisia ja etäcommitteja odottamassa "
+"synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "Paikallisia ja etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "Paikallinen haara"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr "Paikallisia muutoksia löytyi. Commitoi tai hylkää ne ensin."
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr ""
+"Paikallisia muutoksia löytyi. Myös paikallisia ja etäcommitteja odottaa "
+"synkronointia."
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr ""
+"Paikallisia muutoksia löytyi. Myös paikallisia committeja odottaa "
+"synkronointia."
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr ""
+"Paikallisia muutoksia löytyi. Myös etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "Haaran '{branch}' paikalliset commitit ovat valmiita lähetettäviksi."
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "Paikallisia committeja odottaa synkronointia."
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "Lokit"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "Etsitään uudempaa erillistä Linux-versiota GitHub-julkaisuista."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "Etsitään uudempaa Windows-asennusohjelmaa GitHub-julkaisuista."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "Pienet kirjaimet"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "Päävalikko"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "Luo ensimmäinen commit ennen synkronointia."
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr ""
+"Luo ensimmäinen commit haaraan '{branch}' ennen tämän varaston synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "Luo ensimmäinen commit haaraan '{branch}' ennen synkronointia."
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "Virheellisesti muodostetut Git-commitin otsakkeet."
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "Virheellisesti muodostettu Git-commitobjekti."
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "Virheellisesti muodostettu Git-allekirjoituksen otsake."
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "Virheellisesti muodostettu tai tukematon allekirjoitus"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "Hallitse yksityisiä avaimia"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid ""
+"Manage store recipients, folder-specific .gpg-id files, and password-"
+"protected private keys, including file and clipboard imports and optional "
+"host GPG synchronization"
+msgstr ""
+"Hallitse varaston vastaanottajia, kansiokohtaisia .gpg-id-tiedostoja ja "
+"salasanalla suojattuja yksityisiä avaimia, mukaan lukien tuonti tiedostosta "
+"ja leikepöydältä sekä valinnainen synkronointi isäntäjärjestelmän GPG:n "
+"kanssa"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "Hallitse varastoja"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr ""
+"Hallittu laitteistoavaimen määritys ei ole käytössä tässä Keycord-versiossa."
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid ""
+"Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr ""
+"Hallittujen yksityisten avainten data '{}' ei vastaa pyydettyä sormenjälkeä "
+"'{}'."
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid ""
+"Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr ""
+"Hallittu yksityisen avaimen kohde ({artifact_kind}) '{}' ei vastaa kanonista "
+"polkua '{}'."
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr ""
+"Hallittu älykortin lisäys ja tuonti eivät ole käytössä tässä Keycord-"
+"versiossa."
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr ""
+"Sisäkkäisten .gpg-id-tiedostojen hallinta vaatii Integroidun taustaosan."
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "Vastaa yleistä salasanaa"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "Yhdistä salasanavaraston Git-haara {target}"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "Viesti"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "Vähimmäismäärä, 0 poistaa käytöstä"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "Tallennetulta laitteistoavaimelta puuttuu OpenPGP-varmenne."
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "Tallennetulta yksityiseltä avaimelta puuttuu OpenPGP-varmenne."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "Tietovaraston URL-osoitteesta puuttuu omistaja: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "Commitin {} raakatiedot puuttuvat."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "Tietovaraston URL-osoitteesta puuttuu tietovaraston nimi: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "Siirrä"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "Siirrä pass-tiedosto"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "Siirrä valittu pass-tiedosto"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "Siirrä varastoon"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "Siirretty."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "Nimi"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "Siirtyminen"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "Uusi salasanamallipohja"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "Uusi varasto"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "Laitteistoavaimen uusi PIN-koodi"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "Uusi merkintä"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "Suojausavaimen uusi PIN-koodi"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr "Git-tietovarastoa ei vielä ole. Alusta se lisäämällä etätietovarasto."
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Ei Git-pohjaisia varastoja"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Git-pohjaisia varastoja ei ole käytettävissä."
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "Ei vielä haaraa."
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "Ei muuttuneita polkuja"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "Committeja ei ole ladattu"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "Datakansiota ei löytynyt"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "Näyttöä ei ole käytettävissä."
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "Suoritettavien tiedostojen kansiota ei löytynyt"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "Kansioita ei ole lisätty"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "Ei vielä merkintöjä"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr ""
+"Ladatuista pass-tiedostoista ei löytynyt nykyisten tarkistusten perusteella "
+"heikkoja salasanoja."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "Ei osumia"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "Ei vastaavia Git-etätietovarastoja"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "Ei vastaavia haaroja"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "Ei vastaavia ohjeita"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "Ei vastaavia kenttiä"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "Ei vastaavia asetuksia"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "Ei vastaavia tuloksia"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "Ei vastaavia varaston avaimia"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "Ei vastaavia työkaluja"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "Ei vastaavia arvoja"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "Ei salasanavarastoa"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "Ei salasanavarastoja"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "Vastaanottajia ei ole asetettu"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "Tälle salasanamerkinnälle ei löytynyt vastaanottajia."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "Ei vielä vastaanottajia"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "Etätietovarastoja ei ole määritetty."
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "Ei selvitettävissä olevia tavallisia vastaanottaja-avaimia"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "Ei haettavia kenttiä"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "Ei allekirjoitusta"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "Ei arvoja"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "Heikkoja salasanoja ei löytynyt"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "Ei käytettävissä"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "Mitään ei ole valittu"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "Numerot"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "OTP-koodi"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "OTP-salaisuus"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr ""
+"Yhteen tai useampaan paikalliseen asennushakemistoon ei voi kirjoittaa."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid ""
+"Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr ""
+"Ota kokeelliset FIDO2-ominaisuudet käyttöön vain integroidun taustaosan "
+"kanssa."
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr ""
+"Vain paikallisen tiedostojärjestelmän tavalliset tiedostot hyväksytään."
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Avaa Git-työkalut"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "Lisää varastokansio avaamalla asetukset."
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "Avaa URL-osoite"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Avaa Weblate"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr "Avaa Git-pohjainen varasto tarkastellaksesi haaroja ja committeja."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "Avaa uusi merkintä"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "Avaa ensin varasto."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "Avaa ensin merkintä."
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "Avaa ohjeet"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "Avaa vain yksi pääsyavainpyyntö kerrallaan."
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "Avaa oppaat ja viitemateriaali."
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "Avaa tiedostonhallinnassa"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "Avaa uudessa ikkunassa"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "Avaa lokit"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid ""
+"Open one or more password stores and search by name, store, field, regular "
+"expression, or structured find query"
+msgstr ""
+"Avaa yksi tai useampi salasanavarasto ja hae nimen, varaston, kentän, "
+"säännöllisen lausekkeen tai rakenteisen hakulauseen perusteella"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "Avaa asetukset"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "Avaa raakateksti"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "Avaa varaston 1 Git-etätietovarastot"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "Avaa varaston 1 avaimet"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "Avaa varaston 2 Git-etätietovarastot"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "Avaa varaston 2 avaimet"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "Avaa varaston 3 Git-etätietovarastot"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "Avaa varaston 3 avaimet"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "Avaa varaston 4 Git-etätietovarastot"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "Avaa varaston 4 avaimet"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "Avaa varaston 5 Git-etätietovarastot"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "Avaa varaston 5 avaimet"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "Avaa varaston 6 Git-etätietovarastot"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "Avaa varaston 6 avaimet"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "Avaa työkalut"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "Avataan"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "Avataan merkintää"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "Tai käytä laitteistoavainta (kokeellinen)."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "Muita tapoja avaimen lisäämiseen"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "Pass-tiedosto"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "Pass-tiedostot"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "Pääsyavain"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "Pääsyavaimen FIDO2-laajennusten on oltava JSON-objekti."
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "Pääsyavaimen vientipyyntö avattiin"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "Salasana"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "Salasanan luonti"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "Salasanaluettelo"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "Salasanavarastot"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "Salasanatoiminnot"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "Salasanamerkintää '{label}' ei löytynyt."
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "Salasanamerkintää '{old_label}' ei löytynyt."
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "Salasanamerkinnän nimi on tyhjä."
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "Salasana on tyhjä"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "Salasana sisältää vain tyhjemerkkejä"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "Salasanaluettelo"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "Salasana-asetukset"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid ""
+"Password store Git state: {root} -> Git repository detected, but Git "
+"commands are disabled in this build."
+msgstr ""
+"Salasanavaraston Git-tila: {root} -> Git-tietovarasto havaittu, mutta Git-"
+"komennot eivät ole käytössä tässä versiossa."
+
+#: crates/keycord-git/src/repository.rs:75
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, network operations enabled."
+msgstr ""
+"Salasanavaraston Git-tila: {root} -> Git-tietovarasto havaittu, paikalliset "
+"commitit ja verkkotoiminnot käytössä."
+
+#: crates/keycord-git/src/repository.rs:80
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, remote sync disabled in this backend."
+msgstr ""
+"Salasanavaraston Git-tila: {root} -> Git-tietovarasto havaittu, paikalliset "
+"commitit käytössä, etäsynkronointi poistettu käytöstä tässä taustaosassa."
+
+#: crates/keycord-git/src/repository.rs:65
+msgid ""
+"Password store Git state: {root} -> no Git repository detected, local "
+"commits disabled, network operations disabled."
+msgstr ""
+"Salasanavaraston Git-tila: {root} -> Git-tietovarastoa ei havaittu, "
+"paikalliset commitit ja verkkotoiminnot poistettu käytöstä."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "Salasanavarastojen määritys: varastoja ei ole määritetty."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "Salasanavarastojen määritys: {} varastoa määritetty."
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "Salasanat tuotiin."
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "Polku tai nimi"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "Käyttöoikeuskomento epäonnistui"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "Valitse kenttä nykyisestä luettelosta."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "Valitse arvo nykyisestä luettelosta."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "Yksityisen avaimen sormenjäljen '{value}' pituus ei vastaa odotettua."
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid ""
+"Private key unlock worker disconnected while preparing a Git signature for "
+"{fingerprint}."
+msgstr ""
+"Yksityisen avaimen lukitusta avaavan taustaprosessin yhteys katkesi "
+"valmisteltaessa Git-allekirjoitusta avaimelle {fingerprint}."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "Yksityisiä avaimia ei voi varmentaa"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "Yksityiset avaimet synkronoitiin."
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr ""
+"Yksityisten avainten synkronointi isäntäjärjestelmän kanssa on käytettävissä "
+"vain Linuxissa."
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr "Lähetä salasanavaraston Git-haara {branch} etätietovarastoon {remote}"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "QR-koodi"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "RP-tunnus"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "Raakateksti"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid ""
+"Read an armored private key or experimental FIDO2-protected private key from "
+"the clipboard."
+msgstr ""
+"Lue ASCII-koodattu yksityinen avain tai kokeellinen FIDO2-suojattu "
+"yksityinen avain leikepöydältä."
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr "Lue salasanavaraston Git-commitin {oid} muuttuneet polut"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr ""
+"Lue isäntäjärjestelmän Git-allekirjoitusten metatiedot salasanavaraston "
+"commiteille"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "Lue pass-tuonnin lähteet"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "Lue pass-versio"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "Lue salasanamerkintä"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "Lue salasanamerkintä leikepöydälle kopiointia varten"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "Lue salasanavaraston Git HEAD"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr "Lue salasanavaraston Git-tarkastusloki viitteelle {full_ref}"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr "Lue salasanavaraston Git-etätietovaraston URL-osoite nimelle {name}"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr "Lue salasanavaraston Git-puun tiedosto {object_path}"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "Lue salasanavaraston Git-committien raakatiedot"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "Lue seuraavat {count} committia."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "Luetaan salasanarivejä nykyisestä luettelosta."
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "Luetaan tämän haaran viimeaikaista Git-historiaa."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr "Luetaan haettavia pass-kenttiä nykyisestä luettelosta."
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "Syy"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "Vastaanottaja '{recipient_id}' ei ole käytettävissä sovelluksessa."
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid ""
+"Recipient '{recipient_id}' matches multiple keys in the app. Use a "
+"fingerprint instead."
+msgstr ""
+"Vastaanottaja '{recipient_id}' vastaa useita sovelluksen avaimia. Käytä sen "
+"sijaan sormenjälkeä."
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "Vastaanottajan lähde"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "Vastaanottajatiedosto"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "Tarkastetun commitin vastaanottajat"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "Suositellaan uusille varastoille"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "Yhdistä FIDO2-suojausavain uudelleen ja yritä uudestaan."
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "Yhdistä laitteistoavain uudelleen ja yritä uudestaan."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr ""
+"Vähennettiin arkaluonteisten tietojen paljastumista GNOME-haussa, "
+"komentovirheissä ja lokeissa."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "Päivitä nykyinen luettelo"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "Julkaisun tiedostolla '{}' on virheellinen SHA-256-tiiviste."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr "Julkaisun tiedostolla '{}' on tukematon tiivistemuoto."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr "Julkaisun tiedostolta '{}' puuttuu GitHubin SHA-256-tiiviste."
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "Etätietovaraston URL-osoite"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "Etätietovarasto lisättiin."
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "Etäcommitit ovat valmiita yhdistettäviksi haaraan '{branch}'."
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "Etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "Etätietovaraston nimi"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "Etätietovarasto poistettiin."
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "Etätietovarasto päivitettiin."
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "Etäseurantahaara"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "Etätietovarastot"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "Poista tyhjät kentät"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "Poista sovellusvalikosta"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "Poista avain"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "Poista avaintiedosto"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "Poista kohteen {label} salasana"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "Poista salasanavaraston Git-etätietovarasto"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "Poista vastaanottaja"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "Poista etätietovarasto"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "Tyhjät kentät poistettiin."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr ""
+"FIDO2-pohjaisten salasanavarastojen toiminto poistettiin Flatpak-"
+"sovelluksesta."
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "Nimeä pass-tiedosto uudelleen"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "Nimeä salasanamerkintä uudelleen"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "Nimeä salasana {old_label} uudelleen nimellä {new_label}"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "Nimeä salasanavaraston Git-etätietovarasto uudelleen"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "Nimeä valittu pass-tiedosto uudelleen"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "Sama merkki toistuu"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "Tietovarasto"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "Tietovaraston URL-osoite"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr "Tietovarasto löytyi ja on valmis etätietovarastojen hallintaan."
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "Tietovarasto löytyi. Ota haara käyttöön ennen synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr ""
+"Tietovarasto löytyi. Luo ensimmäinen commit haaraan '{branch}' ennen "
+"synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr ""
+"Tietovarasto löytyi. Paikallisia ja etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local and remote commits are waiting to sync."
+msgstr ""
+"Tietovarasto löytyi. Paikalliset muutokset on commitoitava tai hylättävä "
+"ennen synkronointia, ja paikallisia sekä etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local commits are waiting to sync."
+msgstr ""
+"Tietovarasto löytyi. Paikalliset muutokset on commitoitava tai hylättävä "
+"ennen synkronointia, ja paikallisia committeja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and remote commits are waiting to sync."
+msgstr ""
+"Tietovarasto löytyi. Paikalliset muutokset on commitoitava tai hylättävä "
+"ennen synkronointia, ja etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync."
+msgstr ""
+"Tietovarasto löytyi. Paikalliset muutokset on commitoitava tai hylättävä "
+"ennen synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr "Tietovarasto löytyi. Paikallisia committeja odottaa synkronointia."
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr "Tietovarasto löytyi. Etäcommitteja odottaa synkronointia."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "Vaadi kaikki valitut yksityiset avaimet"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Selvitä Git-roolin {role} identiteetti"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "Resurssia ei löytynyt: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "Ota muutokset käyttöön käynnistämällä sovellus uudelleen."
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "Palauta salasanavarasto"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "Palautus pysähtyi odottamatta."
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "Palauta varasto"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "Palautetaan salasanavarastoa"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "Palautetaan varastoa"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid ""
+"Retry authorization with recipient files from the commit history when the "
+"current branch recipients cannot authorize the signer."
+msgstr ""
+"Yritä valtuutusta uudelleen commithistorian vastaanottajatiedostoilla, kun "
+"nykyisen haaran vastaanottajat eivät voi valtuuttaa allekirjoittajaa."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "Kumottu."
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "Tallenna"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "Tallenna nykyinen sivu tai synkronoi etusivulta"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr "Tallenna tai hylkää nykyiset muutokset ennen pääsyavaimen tuomista."
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "Tallenna salasanamerkintä"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "Tallenna salasanavaraston vastaanottajat"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "Tallennettu."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "Tallennetaan vastaanottajatiedostoa"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Tallennetaan ilman Git-allekirjoitusta."
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr ""
+"Etsi nykyisestä luettelosta salasanat, jotka eivät läpäise perustarkistuksia."
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "Käytä tätä arvoa toisella laitteella skannaamalla koodi."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "Tarkistetaan salasanoja"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Etsi Git-etätietovarastoja"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "Etsi ohjeista"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "Etsi kentistä"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "Etsi nimistä, varastoista tai kentistä"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "Etsi asetuksista"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "Hakutulokset"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "Etsi varaston avaimia"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "Etsi työkaluja"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "Etsi arvoja"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "Etsi heikkoja salasanoja"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "Suojausavaimen PIN-koodi"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "Valitse"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "Valitse suodatinvalikosta vähintään yksi varasto ja yksi haara."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr ""
+"Valitse yksityiset avaimet, joilla tämän varaston salasanojen lukituksen voi "
+"avata."
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "Peräkkäisiä merkkejä"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "Aseta ensin FIDO2-suojausavaimelle PIN-koodi."
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "Aseta suojausavaimen PIN-koodi"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "Aseta suojausavaimen PIN-koodi (kokeellinen FIDO2)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "Määritä uusi laitteistoavain (kokeellinen)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid ""
+"Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr ""
+"FIDO2-suojausavaimen PIN-koodin asettamista tuetaan tässä versiossa vain "
+"Linuxissa."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "Määritetään laitteistoavainta (kokeellinen)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "Lyhyt ja sisältää vain vähän erilaisia merkkejä"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "Näytä lokit"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "Näytä OTP-koodi QR-koodina"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "Näytä käytöstä poistetut valinnat niiden piilottamisen sijaan"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "Näytä piilotetut ja päällekkäiset merkinnät"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "Näytä salasana QR-koodina"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "Näytä pikanäppäimet"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "Näytä viimeisen kansionosan nimi käyttäjätunnuksena."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "Näytä pass-tiedoston nimi käyttäjätunnuksena."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "Näytä käyttäjätunnus QR-koodina"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "Näytä arvo QR-koodina"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "Allekirjoittaja ei kuulu haaran vastaanottajiin"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "Allekirjoitusavain ei ole käytettävissä Keycordissa"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "Lyhyt ja sisältää vain yhden merkkiluokan"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "Lajittele merkinnät vain pass-tiedostonimen mukaan."
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "Valmistele salasanavaraston Git-muutokset"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "Tila"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "Vaihe {current}/{total}: kosketa avainta, jos se vilkkuu."
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "Varasto"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "Varasto luotiin, mutta sitä ei lisätty."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "Varaston avaimet"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "Varasto palautettiin."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "Varaston alikansio"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "Varaston synkronointi pysähtyi odottamatta."
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "Varasto synkronoitiin."
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "Tallennettu FIDO2-PIN-koodi ei ole kelvollista UTF-8-tekstiä: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "Varastot"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr "Vaihda taustaosaksi Host palauttaaksesi varaston Git-tietovarastosta."
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "Vaihda taustaosaksi Host käyttääksesi pass-tuontia."
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid ""
+"Switch to the Integrated backend to use experimental FIDO2-protected private "
+"keys."
+msgstr ""
+"Vaihda Integroituun taustaosaan käyttääksesi kokeellisia FIDO2-suojattuja "
+"yksityisiä avaimia."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "Erikoismerkit"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid ""
+"Sync Git-backed stores, manage remotes, sign changes, and inspect history "
+"with commit verification details"
+msgstr ""
+"Synkronoi Git-pohjaisia varastoja, hallitse etätietovarastoja, allekirjoita "
+"muutoksia ja tarkastele historiaa committien varmennustietoineen"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "Synkronoi nyt"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "Synkronoi yksityiset avaimet isäntäjärjestelmän kanssa"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "Synkronoi varastot"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "Synkronoidaan varastoa"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "Synkronoidaan varastoja"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "Tekstimuokkain"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "Kyseinen FIDO2-suojausavain ei tue hmac-secret-laajennusta."
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr "FIDO2-suojausavaimen on tuettava PIN-suojausta."
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "Kyseistä FIDO2-suojattua avainta ei voitu viedä."
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "Kyseisen FIDO2-suojatun avaimen tiedot ovat virheellisiä."
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "Kyseinen FIDO2-suojattu avain on virheellinen."
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "Kyseinen OpenPGP-avaintiedosto ei sisällä yksityistä avainta."
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "Kyseiset tiedot eivät sisällä yksityistä avainta."
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "Kyseinen tiedosto ei sisällä yksityistä avainta."
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr ""
+"Kyseisellä laitteistoavaimella ei voi purkaa salasanavaraston merkintöjen "
+"salausta."
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr ""
+"Kyseisellä laitteistopohjaisella avaimella ei ole vietävissä olevaa "
+"yksityistä avainta."
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "Kyseiseltä merkinnältä puuttuu varasto."
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "Kyseistä merkintää ei enää ole."
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "Kyseisellä avaimella ei ole vietävissä olevaa julkista avainta."
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "Kyseinen salasanamerkintä on jo olemassa."
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr ""
+"Kyseisellä yksityisellä avaimella ei voi purkaa salasanavaraston merkintöjen "
+"salausta."
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr ""
+"Kyseisellä yksityisellä avaimella ei voi allekirjoittaa Git-committeja."
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "Kyseistä yksityistä avainta ei ole tallennettu sovellukseen."
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr "Kyseinen yksityinen avain on suojattava salasanalla ennen tuontia."
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "Kyseinen julkinen avain ei vastaa laitteiston salauksenpurkuavainta."
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "Kyseinen julkinen avain ei vastaa laitteiston allekirjoitusavainta."
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "Kyseinen etätietovaraston URL-osoite on jo olemassa."
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "Kyseinen etätietovaraston nimi on jo käytössä."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid ""
+"The CSV file will contain every password and field in plaintext. Anyone with "
+"access to the file can read them."
+msgstr ""
+"CSV-tiedosto sisältää kaikki salasanat ja kentät salaamattomana tekstinä. "
+"Jokainen tiedostoon käsiksi pääsevä voi lukea ne."
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "CXP-pyyntö ei sisällä tunnistettua HPKE-tilaa."
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "CXP-pyyntö ei tarjoa tuettua deflate-arkistomuotoa."
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "FIDO2-suojausavaimen PIN-koodi sisältää tukemattoman NUL-tavun."
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "FIDO2-suojausavaimen PIN-koodi on väärä."
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr "FIDO2-suojausavain ei palauttanut tunnistetiedon tunnistetta."
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr ""
+"Käytettävissä olevilla yksityisillä avaimilla ei voi purkaa tämän merkinnän "
+"salausta."
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr ""
+"Yhdistetty laitteistoavain ei vastaa tallennettua salauksenpurkuavainta."
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr ""
+"Yhdistetty laitteistoavain ei vastaa tallennettua allekirjoitusavainta."
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr ""
+"Nykyiset suodattimet eivät vastaa yhtäkään valittujen varastojen haaraa."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "Nykyisessä luettelossa ei ole haettavia pass-kenttiä."
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "Tiedosto ei ole CXP-pääsyavaimen vientipyyntö."
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "gettextin käännösjoukko sisältää upotetun NUL-tavun."
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "gettext-lokaalin polku sisältää sisäisen NUL-tavun."
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "Laitteistoavaimen PIN-koodi on lukittu."
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "Laitteistoavain ei hyväksynyt pyydettyä uutta PIN-koodia."
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "Laitteistoavain ei palauttanut salauksenpurkuavaimen sormenjälkeä."
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "Laitteistoavain ei palauttanut allekirjoitusavaimen sormenjälkeä."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "Asennusohjelma on valmis suoritettavaksi."
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "Pääsyavaimelta puuttuu {label}."
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "Pääsyavainpyyntö sisältää virheellisesti muodostettua JSONia: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "Pääsyavainpyyntö ylittää {limit} tavun enimmäiskoon."
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "Pääsyavainpyyntö on muodostettu virheellisesti: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr ""
+"Pääsyavainpyynnön lähde ei ole tavallinen paikallinen tiedosto: {path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "Pääsyavaimen {label} on tyhjä."
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr "Pääsyavaimen {label} on käytettävä täyttämätöntä base64url-muotoa."
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "Salasanaeditori ei ole käytettävissä."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "Salasanat eivät täsmää."
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "Yksityisen avaimen salasana on väärä."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr ""
+"Yksityisten avainten luetteloa kokoava taustaprosessi pysähtyi odottamatta."
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "Suojausavaimen PIN-koodit eivät täsmää."
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr ""
+"Valittu tiedosto ei ole tuettu paikallinen CXP-pääsyavainpyyntö. {error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "Valittu salasanavaraston polku ei ole kansio."
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "Valittu varaston polku ei ole kansio."
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr "Tallennettu JSON ei ole pääsyavaimen tunnistetieto."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "Tallennetulla julkisella avaimella ei ole allekirjoitusaliavainta."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr "Tallennetulla julkisella avaimella ei ole siirtosalauksen aliavainta."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr ""
+"Tallennetulta julkiselta avaimelta puuttuu laitteiston salauksenpurkuavain."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr ""
+"Tallennetulta julkiselta avaimelta puuttuu laitteiston allekirjoitusavain."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid ""
+"The update helper cleanup directory does not match the downloaded update "
+"location."
+msgstr ""
+"Päivitysapurin siivoushakemisto ei vastaa ladatun päivityksen sijaintia."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr "Päivitysapurin suoritettavalla tiedostolla ei ole ylähakemistoa."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "Päivitys on valmis asennettavaksi."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid ""
+"These lines are added after the password line when you create a new password "
+"entry. Leave it empty to start with a blank pass file."
+msgstr ""
+"Nämä rivit lisätään salasanarivin jälkeen uutta salasanamerkintää luotaessa. "
+"Jätä kohta tyhjäksi, jos haluat aloittaa tyhjällä pass-tiedostolla."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid ""
+"These settings are used when you generate or regenerate a password from the "
+"editor."
+msgstr ""
+"Näitä asetuksia käytetään salasanan luomiseen ja uudelleenluontiin "
+"salasanaeditorissa."
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "Tällä FIDO2-suojausavaimella ei voi avata merkintöjäsi."
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "Tässä haarassa ei ole tarkastettavia committeja."
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "Tämä versio ei sisällä pääsyavainten tukea."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "Tässä kentässä ei ole haettavia arvoja."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid ""
+"This hardware key already has OpenPGP keys. Import the matching public key "
+"file instead."
+msgstr ""
+"Tällä laitteistoavaimella on jo OpenPGP-avaimia. Tuo sen sijaan vastaava "
+"julkisen avaimen tiedosto."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid ""
+"This hardware key already has OpenPGP keys. Use Add hardware key "
+"(Experimental) or import the matching public key file instead."
+msgstr ""
+"Tällä laitteistoavaimella on jo OpenPGP-avaimia. Valitse Lisää "
+"laitteistoavain (kokeellinen) tai tuo vastaava julkisen avaimen tiedosto."
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "Tällä laitteistoavaimella ei voi avata merkintöjäsi."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid ""
+"This hardware key has no OpenPGP key yet. Use Set up new hardware key "
+"(Experimental) instead."
+msgstr ""
+"Tällä laitteistoavaimella ei vielä ole OpenPGP-avainta. Valitse sen sijaan "
+"Määritä uusi laitteistoavain (kokeellinen)."
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid ""
+"This item can't be opened with the private keys currently available in the "
+"app. File actions are still available, but copy and move-to-store are "
+"disabled until a compatible private key is available."
+msgstr ""
+"Merkintää ei voi avata sovelluksessa tällä hetkellä käytettävissä olevilla "
+"yksityisillä avaimilla. Tiedostotoiminnot ovat edelleen käytettävissä, mutta "
+"kopiointi ja varastoon siirtäminen ovat poissa käytöstä, kunnes yhteensopiva "
+"yksityinen avain on saatavilla."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "Tämä merkintä ei sisällä ASCII-koodattua yksityistä avainta."
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "Tällä avaimella ei voi avata merkintöjäsi."
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "Tämä yksityinen avain on suojattu salasanalla."
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "Tämä yksityinen avain vaatii FIDO2-suojausavaimen."
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "Tämä yksityinen avain vaatii toisen lukituksen avaustavan."
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "Tämä yksityinen avain vaatii laitteistoavaimen."
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "Tämä vastaanottaja ei ole käytettävissä sovelluksessa."
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid ""
+"This selected key is required while all selected private keys are required."
+msgstr ""
+"Tämä avain on pidettävä valittuna, kun kaikkien valittujen yksityisten "
+"avainten käyttö on pakollista."
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "Tämä arvo on liian pitkä QR-koodiin."
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "Liian lyhyt ({length} merkkiä)"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "Työkalut"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "Merkkejä yhteensä"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "Kosketa FIDO2-suojausavainta ja yritä uudelleen."
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "Kosketa avainta, jos se vilkkuu."
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "Käännä"
+
+#: src/translation_help.rs:51
+msgid ""
+"Translate Keycord into a new language or help improve an existing "
+"translation on Weblate."
+msgstr ""
+"Käännä Keycord uudelle kielelle tai auta parantamaan nykyistä käännöstä "
+"Weblatessa."
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Käännös: Nick."
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "git cat-file -komennon erätuloste katkesi."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "Kokeile toista kenttäsuodatinta."
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "Kokeile toista hakusanaa tai lataa lisää committeja."
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "Kokeile toista hakusanaa."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "Kokeile toista arvosuodatinta."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "Yritä uudelleen asetuksista."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "Kokeile toista hakulauseketta tai suodatinta."
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "Ota käyttöön"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "Otetaanko yksityisten avainten synkronointi käyttöön?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "Kumoa tai palauta muutokset"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "Kumottu."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "Odottamaton Cv25519-salatekstin rakenne"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "Odottamaton NistP256-salatekstin rakenne"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr ""
+"git cat-file -komento palautti odottamattoman objektityypin '{object_type}'."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "Odottamaton määrä vastaavia julkisia aliavaimia: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr "Käyttöoikeustunnuksen tiedot luettiin odottamatta ilman puskuria."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "Avaa pass-tiedoston lukitus"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr ""
+"Avaa toisen valitun yksityisen avaimen lukitus ennen tämän valinnan "
+"poistamista."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "Avaa avaimen lukitus"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "Avaa avaimen lukitus asetuksissa."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "Jatka avaamalla avaimesi lukitus."
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "Nimetön isäntäjärjestelmän yksityinen avain"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "Nimetön yksityinen avain"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "Nimetön älykortti"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "Irrota muut suojausavaimet ja yritä uudelleen."
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "Tukematon FIDO2-salasanamerkinnän muoto {}."
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "Tukematon FIDO2-salasanamerkinnän suojaus '{}'."
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "Tukematon FIDO2-yksityisavaimen muoto {}."
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "Tukematon FIDO2-yksityisavaimen suojaus '{}'."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "Linux-päivityksen arkkitehtuuria ei tueta: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "Tukematon salatekstin {:?} ja julkisen avaimen {:?} yhdistelmä"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "Tukematon laitteistoavaimen manifestimuoto {}."
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "Tukematon laitteistoavaimen suojaus '{}'."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "RSA:n tiivistealgoritmia ei tueta: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "Päivitysten tietovarasto-osoitetta ei tueta: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "Allekirjoitusalgoritmia ei tueta: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "Varmentamaton"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "Päivityksen '{}' SHA-256-tiiviste ei täsmää."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "Päivitys saatavilla"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "Päivityksen latauspolulla ei ole ylähakemistoa."
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "Päivitä kohteen {label} salasana"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "Päivitä salasanavaraston Git HEAD"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr "Päivitä salasanavaraston Git-etätietovaraston URL-osoite"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "Päivitä salasanavaraston vastaanottajat"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr ""
+"Päivityksen koko ei täsmää latauksen jälkeen (odotettiin {}, saatiin {})."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "Päivityksen '{}' koko ei täsmää."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr ""
+"Päivitetään kaikki tallennetut salasanat vastaamaan uusia käyttöasetuksia."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "Isot kirjaimet"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr ""
+"Käytä valitsinta --open-passkey-request täsmälleen yhden paikallisen "
+"tiedoston kanssa."
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "Käytä sen sijaan toimintoa Lisää OTP-salaisuus."
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "Käytä sen sijaan pääsyavainpyyntöä."
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "Käytä käyttäjätunnuksena yhtä tiedostonimeä."
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "Käytä yhtä tiedostonimeä."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr "Käytä commithistorian vastaanottajia tarkastuksessa"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "Käytä tiedostonimeä"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "Käytä kentille komentoa find ja hakumalleille komentoa reg."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "Käytä kansion nimeä"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "Käytä kansioita tiedostonimihaussa"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "Tuo olemassa olevaan varastoon käyttämällä pass-tuontia."
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "Käytä pass-tuontia oman pass-komentosi kanssa."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "Käytä varastoa, kansioita ja tiedostonimeä"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid ""
+"Use the adaptive GTK interface with keyboard, mouse, or touch across desktop "
+"and mobile devices"
+msgstr ""
+"Käytä mukautuvaa GTK-käyttöliittymää näppäimistöllä, hiirellä tai "
+"kosketuksella työpöytä- ja mobiililaitteissa"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "Käytä vastaavaa laitteistoavainta."
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "Käytä sen sijaan käyttäjätunnuskenttää."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr ""
+"Käytetään vain, kun pass-tiedostossa ei ole salattua käyttäjätunnuskenttää."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "Käyttäjätunnus"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "Käytetään sen sijaan Integroitua taustaosaa."
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "Apuohjelmat ja ylläpito"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid ""
+"Valid host keys may appear unavailable here while private-key sync is off."
+msgstr ""
+"Kelvolliset isäntäjärjestelmän avaimet voivat näyttää siltä, etteivät ne ole "
+"käytettävissä, kun yksityisten avainten synkronointi on poissa käytöstä."
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr ""
+"Kelvolliset isäntäjärjestelmän avaimet voivat näyttää siltä, etteivät ne ole "
+"käytettävissä."
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "Varmennus"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "Varmennustapa"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "Varmennettu"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "Erittäin vähän erilaisia merkkejä"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "Odota hetki."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "Heikot salasanat"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid ""
+"When enabled, History can use recipients from earlier commits while "
+"verifying older encrypted entries."
+msgstr ""
+"Kun toiminto on käytössä, Historia voi käyttää aiempien committien "
+"vastaanottajia vanhempien salattujen merkintöjen varmennuksessa."
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Windowsin ShellExecute epäonnistui: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "Käsitellään"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "Kirjoita salasanavaraston Git-commitobjekti"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "Kirjoita salasanavaraston Git-puu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "Voit nyt luoda uusia yksityisiä avaimia."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "Voit nyt hallita Git-etätietovarastoja"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "Voit nyt avata pass-tiedostoja uuteen ikkunaan"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr "Voit nyt käyttää kenttäarvoja muuttujina haussa"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "_Tietoja Keycordista"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "_Lisää merkintä"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "_Etsi merkintä"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "_Pikanäppäimet"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "_Asetukset"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "_Synkronoi etätietovaraston kanssa"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "_Työkalut"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "taustaosa: host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "taustaosa: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "haaran siivous"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "GitHub-asiakkaan muodostaminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "latausasiakkaan muodostaminen"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "vanhentuneiden varastosuodattimen arvojen siivous"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "tyhjien kenttien poistaminen ennen tallennusta"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "käytettävissä olevien yksityisten avainten sormenjälkien kerääminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "osittaisen päivitystiedoston luominen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "päivityksen lataushakemiston luominen"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "tunnistetiedon tunniste"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "GitHub-julkaisuvastauksen dekoodaus"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "salasanamerkinnän poistaminen"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "muistivedosten poistaminen käytöstä: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "laajennuspisteiden poistaminen käytöstä: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "prosessin vedostuksen estäminen: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "julkaisutiedoston lataaminen"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "tyhjä salasanatiedosto"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "ASLR-käytännön ottaminen käyttöön: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "DEP:n ottaminen käyttöön: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "tiukkojen kahvatarkistusten ottaminen käyttöön: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "päivitystiedoston viimeistely"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "osittaisen päivitystiedoston kirjoittaminen levylle"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "git-komento"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "gpg --delete-secret-keys epäonnistui"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "gpg --export epäonnistui"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "gpg --export-secret-keys epäonnistui"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "gpg --import epäonnistui"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "gpg --list-secret-keys epäonnistui"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "laitteistoavaimen manifesti"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke sisältää yli {MAX_LIST_ITEMS} parametrisarjaa"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "hpke-tila {:?} vaatii julkisen JWK:n"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke:n on sisällettävä vähintään yksi parametrisarja"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "hpke.key-kentän EC-koordinaattien on oltava yhtä pitkiä"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key sisältää yli {MAX_JWK_MEMBERS} jäsentä"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "hpke.key-jäsen"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key-kentän on sisällettävä merkkijonomuotoinen kty-jäsen"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key-kentän on sisällettävä merkkijonomuotoinen {member}-jäsen"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr "hpke.key saa sisältää vain julkista avainmateriaalia"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key ei saa olla tyhjä JWK"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key käyttää tukematonta avaintyyppiä {key_type:?}"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve} ei vastaa KEM-määritystä {kem}"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "hpke.key.x-kentän pituus ei vastaa KEM-määritystä {kem}"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "hpke.key.{member} ei saa olla tyhjä"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr "hpke.key.{member} on koodattava täyttämättömällä base64url-muodolla"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "käytettävissä olevan avainrenkaan lataaminen"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "näyttö puuttuu"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "salasanamerkinnän siirtäminen toiseen varastoon"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "uuden merkinnän mallipohja"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "pass epäonnistui"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "pass import --list epäonnistui"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "pass import epäonnistui"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "pass import ei ole käytettävissä."
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "pass init epäonnistui"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "pass insert epäonnistui"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "pass mv epäonnistui"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "pass rm epäonnistui"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "salasana"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "salasanan luonti"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "salasanaluettelon lajittelu"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "asetustiedosto"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "yksityinen avain"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "yksityisten avainten synkronointi"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "GitHub-julkaisuvastauksen lukeminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "päivitystietojen lukeminen"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "etä-git-komento"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "etätyöpuun git-komento"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "vanhentuneen osittaisen päivitystiedoston poistaminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "vanhentuneen päivitystiedoston poistaminen"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "varastosuodattimen valinnan tallentaminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "GitHub-julkaisupyynnön lähettäminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "julkaisutiedostopyynnön lähettäminen"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "varaston siivous"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "varaston polku"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "odottamattomat ECC-algoritmin määritteet: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "käsittelemätön käyrä: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "tuntematon Windows-virhe"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "tuntematon Windowsin suojausvirhe"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "tukematon avaintyyppi: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "käyttäjätunniste"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "käyttäjätunnuksen varavalinta"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "työpuun git-komento"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "päivitystietojen kirjoittaminen"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "{action} epäonnistui: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "{action} epäonnistui: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "{action} epäonnistui: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (ei vielä committeja)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr "{context} ylittää tuetun TOML-sisäkkäisyyden enimmäissyvyyden {}."
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr "{context} ylittää tuetun TOML-kokorajan ({} tavua)."
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "Committeja ladattu: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "{count} vastaava merkintä"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "{count} vastaavaa merkintää"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "{count} vastaanottajaa"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "{count} etätietovarastoa määritetty."
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "{count} yksilöllinen arvo"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "{count} yksilöllistä arvoa"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "{field} sisältää virheellisiä tyhje- tai ohjausmerkkejä"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "{field} sisältää yli {MAX_LIST_ITEMS} arvoa"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "{field} on pidempi kuin {max_bytes} tavua"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "{field} on oltava kelvollinen luottavan osapuolen tunnus"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "{field} on sisällettävä vähintään yksi arvo"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "{field} ei saa olla tyhjä"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} – Laitteistoavain"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} – Salasanasuojattu"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} – Suojausavaimella suojattu"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} – Suojaustunnus"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} – Suojaustunnus ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "{remaining} s jäljellä"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"virhe: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} / {} ({percentage:.0} %)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"

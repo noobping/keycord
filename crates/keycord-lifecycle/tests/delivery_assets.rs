@@ -123,7 +123,10 @@ fn meson_installs_localized_application_metadata_and_catalogs() {
     assert!(po_meson.contains("i18n.gettext('keycord'"));
     assert_eq!(
         linguas.split_whitespace().collect::<Vec<_>>(),
-        ["de", "en", "et", "es", "fr", "it", "ja", "nl", "pl", "pt", "pt_BR", "sv", "zh_CN",]
+        [
+            "bg", "da", "de", "el", "en", "es", "et", "fi", "fr", "it", "ja", "nl", "pl", "pt",
+            "pt_BR", "ro", "ru", "sv", "tr", "zh_CN",
+        ]
     );
 }
 

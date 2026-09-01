@@ -1,0 +1,5347 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-01 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Bulgarian\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "1 получател"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "Настроено е 1 отдалечено хранилище."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "Списък с папките, в които се намират данните ви за пароли."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "Налична е по-нова самостоятелна версия за Linux."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "Налична е по-нова версия за Windows."
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr "Частният ключ за този елемент е заключен. Отключете го от настройките."
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "Преустановяване на сливането в Git на хранилището за пароли"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "Относно"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "Действия"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "Добавяне на поле за OTP"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "Добавете отдалечено хранилище на Git към това хранилище."
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "Добавете папка."
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "Първо добавете парола към този ключ."
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "Добавете частен ключ от настройките."
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr ""
+"Първо добавете отдалечено хранилище, за да инициализирате хранилище на Git."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "Първо добавете папка за хранилището."
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "Добавете хранилище, за да използвате „pass import“."
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr "Добавете хранилище с Git, за да преглеждате историята му тук."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "Добавяне на разширено търсене"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "За начало добавете елемент."
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "Първо добавете друго хранилище."
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "Добавете поне един получател, за да създадете хранилището."
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr "Добавете поне един получател, за да продължите да запазвате промени."
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "Преди синхронизиране добавете поне едно отдалечено хранилище."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "Добавяне на документация"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid ""
+"Add existing stores, create new stores, import passwords on supported "
+"systems, or restore a store from Git with the Host backend"
+msgstr ""
+"Добавяйте съществуващи и създавайте нови хранилища, внасяйте пароли при "
+"поддържаните системи или възстановявайте хранилище от Git чрез механизма "
+"„Host“"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "Добавяне на експериментална поддръжка на FIDO2"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr ""
+"Добавяне на експериментална поддръжка на хардуерни ключове за частни ключове "
+"за OpenPGP"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "Добавяне на поле"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "Добавяне на хардуерен ключ (експериментално)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "Добавяне на елемент"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "Добавяне на липсващите полета"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "Добавяне на синхронизиране с GPG по избор"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "Добавяне или създаване на хранилище"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr "Добавете или премахнете тази версия от локалното меню с приложения."
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "Добавяне на парола за {label}"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "Добавяне на отдалечено хранилище на Git за хранилището за пароли"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "Добавяне на отдалечено хранилище"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "Добавяне на доставчик за търсене"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "Добавяне на възможност за копиране на журналите"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid ""
+"Add the passkey for {username} on {rp_id} to your default pass store? You "
+"can review it before saving."
+msgstr ""
+"Да се добави ли ключът за достъп за {username} в {rp_id} към стандартното ви "
+"хранилище на pass? Ще може да го прегледате преди запазване."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid ""
+"Add the public key already stored on the connected OpenPGP smartcard or "
+"YubiKey."
+msgstr ""
+"Добавете публичния ключ, който вече се намира на свързаната смарткарта за "
+"OpenPGP или YubiKey."
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "Добавяне към менюто с приложения"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "Добавяне на страница с инструменти"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr ""
+"Добавено е изнасяне във формат CSV за прехвърляне на данни към други "
+"инструменти."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr ""
+"Добавен е преглед на историята в Git с подробности за проверката на "
+"подаванията."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid ""
+"Added QR code views for passwords, usernames, one-time codes, other entry "
+"fields, and permission commands."
+msgstr ""
+"Добавени са изгледи с QR код за пароли, потребителски имена, еднократни "
+"кодове, други полета и команди за права̀."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid ""
+"Added entry filtering by password store and remembered history-inspection "
+"filters."
+msgstr ""
+"Добавено е филтриране на записите по хранилище за пароли и запомняне на "
+"филтрите при преглед на историята."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr ""
+"Добавени са упътвания и индикатори за напредъка за експерименталната "
+"поддръжка на FIDO2."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "Добавени са експериментални ключове за OpenPGP, защитени чрез FIDO2."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ""
+"Добавено е редактиране на получателите за отделните файлове .gpg-id в "
+"папките."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "Добавен е смесен режим на подреждане"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "Липсващите полета от шаблона са добавени."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "Добавяне на хардуерен ключ"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr ""
+"Разрешаване на достъп до USB ключове за сигурност (експериментален FIDO2)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "Разрешаване на достъпа на приложенията на това устройство"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "Разрешаване на достъп до смарткарта (експериментално)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "Вече съществува елемент с това име."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "Прилагане на шаблона"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "Прилагайте филтъра при създаването на нови файлове на pass."
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "Функциите за одит са изключени в тази версия."
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "Одитът спря неочаквано."
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "Автор"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "Създадено"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid ""
+"Automatically remove blank username, field, and OTP lines when saving a pass "
+"file."
+msgstr ""
+"При запазване на файл на pass празните редове за потребителско име, поле и "
+"OTP да се премахват автоматично."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "Налична версия:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "Назад"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "Назад към настройките"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "Назад към ключовете на хранилището"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "Механизъм"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "Обвържете файл с публичен ключ със свързания хардуерен ключ."
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "Клон"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "Клони"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "Преглеждайте и редактирайте хранилища за пароли"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "Преглед на стойностите на полето"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "Прегледайте уникалните стойности на полето в текущия списък."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "Файлове във формат CSV"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "Заявките за изнасяне във формат CXP с версия {0} не се поддържат."
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr ""
+"Режимът за отговор на CXP {0:?} не се поддържа за отворен файл със заявка."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "Този елемент не може да бъде отворен."
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "Тази промяна не може да бъде отменена."
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "Последната промяна не може да бъде отменена."
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "Отмяна"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr ""
+"Променете стандартната настройка, така че името на файла да се използва като "
+"потребителско име."
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "Променени пътища"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr "Иконата на приложението е сменена с ключодържател"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "Проверка за _обновявания"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "Преди да синхронизирате това хранилище, преминете към клон."
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "Преди синхронизиране преминете към клон."
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "Проверка на подготвените промени в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "За подробности проверете журналите."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "Проверяване за обновявания"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "Проверяване дали „pass import“ е налично."
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr ""
+"Изберете JSON обект, съдържащ точно един набор от идентификационни данни за "
+"ключ за достъп."
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr ""
+"Изберете JSON обект, съдържащ един набор от идентификационни данни за ключ "
+"за достъп."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "Изберете файл или папка, ако са необходими на инструмента за внасяне."
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "Изберете папка и я възстановете от хранилище на Git."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "Изберете папка. Ако е празна, тя ще стане хранилище."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "Изберете локален файл."
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "Изберете локална папка."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid ""
+"Choose a private key file or experimental FIDO2-protected private key file."
+msgstr ""
+"Изберете файл с частен ключ или експериментален файл с частен ключ, защитен "
+"чрез FIDO2."
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "Изберете хранилище."
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "Изберете инструмент за внасяне."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid ""
+"Choose how Keycord opens your data. Integrated is the default. Use Host to "
+"run your own command."
+msgstr ""
+"Изберете как Keycord да отваря данните ви. „Integrated“ е стандартният "
+"механизъм. Изберете „Host“, за да изпълнявате собствена команда."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "Изберете как да се подреждат файловете на pass на началната страница."
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "Избор на файл източник за внасяне"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "Избор на папка източник за внасяне"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "Избор на файл източник"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "Избор на папка източник"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "Избор на папка за хранилището"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "Избор на папка за възстановяване на хранилището"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr "Изберете кой файл .gpg-id от папка да управлявате."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "Изчистване на файла на pass"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "Изчистване на празните полета преди запазване"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "Изчистване на търсенето"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "Изчистване на пътя до източника"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "Буферът за обмен не съдържа ключ."
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "Буферът за обмен не е достъпен."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "Затваряне"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "Да се затвори ли Keycord, за да се инсталира обновяването?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "Нишката за подаване на входа към командата се срина."
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "Подаване"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "Зареждането на подаванията спря неочаквано."
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr ""
+"Подайте или отхвърлете локалните промени, преди да синхронизирате това "
+"хранилище."
+
+#: crates/keycord-git/src/sync.rs:12
+msgid ""
+"Commit or discard local changes before syncing this store. Local and remote "
+"commits are also waiting to sync."
+msgstr ""
+"Подайте или отхвърлете локалните промени, преди да синхронизирате това "
+"хранилище. Има и локални, и отдалечени подавания, които чакат синхронизиране."
+
+#: crates/keycord-git/src/sync.rs:18
+msgid ""
+"Commit or discard local changes before syncing this store. Local commits are "
+"also waiting to sync."
+msgstr ""
+"Подайте или отхвърлете локалните промени, преди да синхронизирате това "
+"хранилище. Има и локални подавания, които чакат синхронизиране."
+
+#: crates/keycord-git/src/sync.rs:24
+msgid ""
+"Commit or discard local changes before syncing this store. Remote commits "
+"are also waiting to sync."
+msgstr ""
+"Подайте или отхвърлете локалните промени, преди да синхронизирате това "
+"хранилище. Има и отдалечени подавания, които чакат синхронизиране."
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr "Подайте или отхвърлете локалните промени преди синхронизиране."
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid ""
+"Commit or discard local changes before syncing. Local and remote commits are "
+"also waiting to sync."
+msgstr ""
+"Подайте или отхвърлете локалните промени преди синхронизиране. Има и "
+"локални, и отдалечени подавания, които чакат синхронизиране."
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid ""
+"Commit or discard local changes before syncing. Local commits are also "
+"waiting to sync."
+msgstr ""
+"Подайте или отхвърлете локалните промени преди синхронизиране. Има и локални "
+"подавания, които чакат синхронизиране."
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid ""
+"Commit or discard local changes before syncing. Remote commits are also "
+"waiting to sync."
+msgstr ""
+"Подайте или отхвърлете локалните промени преди синхронизиране. Има и "
+"отдалечени подавания, които чакат синхронизиране."
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "Подадено"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "Подаващ"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "Потвърждаване на новия ПИН на ключа за сигурност"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "Потвърждаване на паролата"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "Потвърдете новия ПИН на ключа за сигурност."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "Първо свържете хардуерен ключ."
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "Преди да продължите, свържете само един ключ за сигурност с FIDO2."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "Преди да го добавите, свържете само един хардуерен ключ."
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "Свържете ключа за сигурност с FIDO2 и опитайте отново."
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "Първо свържете ключа за сигурност с FIDO2."
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "Свържете хардуерния ключ и опитайте отново."
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "Първо свържете хардуерния ключ."
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "Свържете съответния ключ за сигурност с FIDO2."
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "Преди внасянето свържете съответния хардуерен ключ."
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "Контекст"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "Копирано."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "Копиране на OTP"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "Копиране на текстовия частен ключ"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "Копиране на текстовия публичен ключ"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "Копиране на експерименталния частен ключ, защитен чрез FIDO2"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "Копиране на отпечатъка"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "Копиране на журналите"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "Копиране на паролата"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "Копиране на паролата в буфера за обмен"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "Копиране на командата за права̀"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr ""
+"Копирайте в буфера за обмен скорошния изход от приложението и командите."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "Копиране на паролата на избрания елемент"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "Копиране на потребителското име"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "Копиране на стойността"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "Папката с данни не може да бъде определена."
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "Домашната папка не може да бъде определена."
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "Папката не може да бъде добавена."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "Хардуерният ключ не може да бъде добавен."
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "Генерираният хардуерен ключ не може да бъде удостоверен"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "Проверката за обновявания е неуспешна."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "Ключът не може да бъде копиран."
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "Паролата не може да бъде копирана."
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr ""
+"Сертификатът за публичния ключ не може да бъде създаден на хардуерния ключ."
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "Хранилището не може да бъде създадено."
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "Данните, шифрирани чрез FIDO2, не могат да бъдат дешифрирани."
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "Елементът не може да бъде изтрит."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "Обновяването не може да бъде изтеглено."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "Паролите не могат да бъдат изнесени."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "Не е открит ключ със същия отпечатък"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "Хардуерният ключ за дешифриране не може да бъде генериран"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "Хардуерният ключ за подписване не може да бъде генериран"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "Ключът не може да бъде генериран."
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "Правата̀ не могат да бъдат дадени."
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "Ключът за достъп не може да бъде внесен"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "Паролите не могат да бъдат внесени."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "Ключът не може да бъде внесен."
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "Ключът за сигурност с FIDO2 не може да бъде инициализиран."
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Отдалечените хранилища на Git не могат да бъдат проверени."
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Състоянието на Git не може да бъде проверено"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "Ключовете на GPG на хоста не могат да бъдат проверени"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "Хардуерният ключ не може да бъде проверен."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "Обновяването не може да бъде инсталирано."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr ""
+"Синхронизирането на частните ключове не може да продължи. То беше изключено."
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "Подаванията не могат да бъдат заредени."
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "Данните не могат да бъдат заредени"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "Частните ключове не могат да бъдат заредени"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "Кодът не може да бъде зареден."
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "Елементът не може да бъде преместен."
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "Не може да бъде отворен нов прозорец."
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "Заявката за ключ за достъп не може да бъде отворена"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "Елементът не може да бъде отворен."
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "Диалоговият прозорец за избор на файл не може да бъде отворен."
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "Диалоговият прозорец за избор на папка не може да бъде отворен."
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "Папката не може да бъде отворена."
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "Страницата за внасяне не може да бъде отворена."
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "Връзката не може да бъде отворена."
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "Достъпът до инструмента не може да бъде подготвен."
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid ""
+"Couldn't present the Git signing unlock dialog. Continuing without a "
+"signature."
+msgstr ""
+"Диалоговият прозорец за отключване на подписването в Git не може да бъде "
+"показан. Работата продължава без подпис."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "Файлът не може да бъде прочетен."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "Папката не може да бъде прочетена."
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "Ключът не може да бъде прочетен."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "Буферът за обмен не може да бъде прочетен."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "Ключът не може да бъде премахнат."
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "Отдалеченото хранилище не може да бъде премахнато."
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "Елементът не може да бъде преименуван."
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr ""
+"Администраторската сесия на хардуерния ключ не може да бъде отворена отново"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "Хранилището не може да бъде възстановено."
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "Промените не могат да бъдат запазени."
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "Ключовете на хранилището не могат да бъдат запазени."
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "Отдалеченото хранилище не може да бъде запазено."
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "Настройката не може да бъде запазена."
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "Изборът на филтри не може да бъде запазен."
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "Генерираният хардуерен публичен ключ не може да бъде сериализиран"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "Името на притежателя не може да бъде зададено на хардуерния ключ"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "Потребителският ПИН не може да бъде зададен на хардуерния ключ"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "Паролата не може да бъде показана като QR код."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "Инсталаторът не може да бъде стартиран."
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "Частните ключове не могат да бъдат синхронизирани."
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "Хранилището не може да бъде синхронизирано."
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "Хранилищата не могат да бъдат синхронизирани."
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid ""
+"Couldn't unlock private key {fingerprint_for_failure} for Git signing. "
+"Continuing without a signature."
+msgstr ""
+"Частният ключ {fingerprint_for_failure} не може да бъде отключен за "
+"подписване в Git. Работата продължава без подпис."
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "Ключът за сигурност с FIDO2 не може да бъде отключен."
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "Хардуерният ключ не може да бъде отключен."
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "Ключът не може да бъде отключен."
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "Менюто с приложения не може да бъде обновено."
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "Кодът не може да бъде обновен."
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "Администраторският ПИН на хардуерния ключ не може да бъде проверен"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "Заявеният ПИН на хардуерния ключ не може да бъде проверен"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "Създайте нов ключ, защитен чрез FIDO2."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr ""
+"Създайте нов ключ за OpenPGP върху празна свързана смарткарта или YubiKey."
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "Създайте нов файл на pass."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "Създайте нов ключ, защитен с парола."
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr "Създайте частен ключ за хранилища за пароли, защитен с парола."
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "Създайте ключ за OpenPGP върху празна свързана смарткарта или YubiKey."
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "Криптографски неправилен подпис"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "Получатели от върха на текущия клон"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "Текуща версия:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "Стандартно"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "Изтриване"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "Изтриване на частния ключ на GPG от хоста"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "Изтриване на записа с парола"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "Изтриване на избрания файл на pass"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "Несвързан указател HEAD"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "Подробности"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid ""
+"Dismissed the Git signing unlock prompt for {context_for_close}. Continuing "
+"without a signature."
+msgstr ""
+"Запитването за отключване на подписването в Git за {context_for_close} е "
+"затворено. Работата продължава без подпис."
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "Документация"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "Изтеглено"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "Редактиране на запис с парола"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid ""
+"Edit entries with form fields or raw pass-file text, generate passwords, "
+"copy field values, and show passwords, usernames, one-time codes, or other "
+"fields as QR codes"
+msgstr ""
+"Редактирайте записи чрез полета във формуляр или необработен текст от файл "
+"на pass, генерирайте пароли, копирайте стойности на полета и показвайте "
+"пароли, потребителски имена, еднократни кодове или други полета като QR "
+"кодове"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "Редактиране на отдалечено хранилище"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "Е-поща"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "В полетата за е-поща трябва да има валиден адрес."
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "Празно"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "Включено за този резултат"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "Въведете команда."
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "Въведете име на поле."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "Въведете паролата за ключа."
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "Въведете име на хардуерния ключ."
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "Въведете име на частния ключ."
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "Въведете име."
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "Въведете потребителско име за ключа за достъп."
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "Въведете адрес за отдалеченото хранилище."
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "Въведете име на отдалеченото хранилище."
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "Въведете адрес на хранилището."
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "Въведете потребителско име."
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "Въведете валиден частен ключ за ключ за достъп във формат PKCS#8."
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "Въведете валиден адрес за е-поща."
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "Въведете валиден RP ID за ключа за достъп."
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "Въведете адрес с HTTP или HTTPS."
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "Въведете тайна за OTP."
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "Въведете адрес за е-поща за хардуерния ключ."
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "Въведете адрес за е-поща за частния ключ."
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "Въведете адрес за е-поща."
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "Въведете ПИН за ключа за сигурност с FIDO2."
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "Въведете ПИН на хардуерния ключ."
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "Въведете администраторския ПИН на хардуерния ключ."
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "Въведете паролата за ключа."
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "Въведете новия ПИН на хардуерния ключ."
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "Въведете новия ПИН на ключа за сигурност."
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "Въведете паролата за частния ключ."
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "Въведете ПИН на ключа за сигурност."
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "Разгъване на редактора на пароли с действия за изчистване"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid ""
+"Experimental FIDO2-protected private keys need USB device access before "
+"Keycord can use a connected security key to unlock protected private keys. "
+"Restart Keycord after granting access."
+msgstr ""
+"Експерименталните частни ключове, защитени чрез FIDO2, се нуждаят от достъп "
+"до USB устройства, за да може Keycord да използва свързан ключ за сигурност "
+"за отключването им. След даването на достъп рестартирайте Keycord."
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid ""
+"Experimental hardware-key workflows need PC/SC access to use connected "
+"OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected "
+"keys remain available without this."
+msgstr ""
+"Експерименталната работа с хардуерни ключове се нуждае от достъп до PC/SC за "
+"използване на свързани смарткарти за OpenPGP или YubiKey. След това "
+"рестартирайте Keycord. Ключовете, защитени с парола, остават достъпни и без "
+"този достъп."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid ""
+"Experimental multi-layer encryption. When on, every selected key must be "
+"unlocked and other pass apps will not be able to read these items."
+msgstr ""
+"Експериментално многослойно шифриране. Когато е включено, всеки избран ключ "
+"трябва да бъде отключен, а другите приложения за pass няма да могат да четат "
+"тези елементи."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "Експериментални настройки на хранилището"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "Изнасяне"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "Да се изнесат ли всички пароли?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "Изнесете всяка парола и поле във файл във формат CSV."
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "Изнасяне на частния ключ на GPG от хоста"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "Изнасяне на публичните ключове на GPG от хоста"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "Изнасяне на пароли"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "Изнесена е {count} парола."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "Изнесени са {count} пароли."
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "Манифест за частен ключ с FIDO2"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr ""
+"Поддръжката на частни ключове с FIDO2 е изключена в тази версия на Keycord."
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "Ключ за сигурност с FIDO2"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr "Поддръжката на FIDO2 е изключена в тази версия на Keycord."
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "Текстова обвивка с FIDO2"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr ""
+"Неуспешно заделяне на частна папка за подготвяне на обновяването на Linux."
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "Неуспешно заделяне на име за временен файл."
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "Неуспешно създаване на диалоговия прозорец за клавишни комбинации."
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "Неуспешно създаване на основния прозорец."
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr "Неуспешно настройване на опциите за избор на файл в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr ""
+"Неуспешно настройване на опциите за избор на файл за запазване в Windows: "
+"{err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr ""
+"Неуспешно създаване на папката „{}“ за подготвяне на обновяването на Linux: "
+"{error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr ""
+"Неуспешно създаване на кореновата папка „{}“ за подготвяне на обновяването "
+"на Linux: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Неуспешно създаване на прозореца за избор на файл в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr ""
+"Неуспешно създаване на прозореца за избор на файл за запазване в Windows: "
+"{err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "Неуспешно декодиране на текстовия подпис"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "Неуспешно декодиране на дешифрираните данни като UTF-8"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "От HKDF не може да бъде изведено достатъчно информация."
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr "Неуспешно кодиране на ключовия материал за ключа за достъп: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "Неуспешно изнасяне на JSON за ключа за достъп: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "Неуспешно генериране на ключовия материал за ключа за достъп: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "Неуспешно получаване на {id}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr ""
+"Неуспешно изчисляване на контролната сума на файла за обновяване „{}“: "
+"{error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "Неуспешно инициализиране на COM за прозореца за избор на файл: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr ""
+"Неуспешно инициализиране на COM за прозореца за избор на файл за запазване: "
+"{err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "Неуспешно инициализиране на libadwaita."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "Неуспешно инсталиране на изтегленото обновяване: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr ""
+"Неуспешно задаване на право за изпълнение на изтегленото обновяване: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "Неуспешно нормализиране на частния ключ за ключа за достъп: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "Неуспешно отваряне на стандартния вход за командата"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr "Неуспешна подготовка на управляваното хранилище за частни ключове."
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "Неуспешна подготовка на генерирането на ключ за ключа за достъп: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr "Неуспешна подготовка на ключовия материал за ключа за достъп: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr ""
+"Неуспешно прочитане на метаданните на кореновата папка „{}“ за подготвяне на "
+"обновяването на Linux: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Неуспешно прочитане на опциите за избор на файл в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr ""
+"Неуспешно прочитане на опциите за избор на файл за запазване в Windows: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "Неуспешно прочитане на стандартната грешка на командата: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "Неуспешно прочитане на стандартния изход на командата: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "Неуспешно прочитане на записа с парола „{}“ от „{}“: {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr ""
+"Неуспешно прочитане на файла със заявката за ключ за достъп {path:?}: "
+"{source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "Неуспешно прочитане на избрания път в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "Неуспешно прочитане на избрания път за запазване в Windows: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "Неуспешно прочитане на избрания файл с хардуерен публичен ключ"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "Неуспешно прочитане на избрания файл с частен ключ"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "Неуспешно прочитане на метаданните на файла за обновяване: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr ""
+"Неуспешно регистриране на ресурсите за инсталиране на обновяването за Linux: "
+"{error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "Неуспешно регистриране на ресурсите."
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr "Неуспешно определяне на пътя до текущия изпълним файл: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr "Неуспешно откриване на помощния изпълним файл за обновяването: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "Неуспешно изпълнение на командата: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "Неуспешно изпълнение на командата на git: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr "Неуспешно изпълнение на програмата „{program}“ на хоста: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "Неуспешно изпълнение на командата за механизма „Host“: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "Неуспешно изпълнение на {}: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr ""
+"Неуспешно обезопасяване на кореновата папка „{}“ за подготвяне на "
+"обновяването на Linux: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Неуспешно избиране на вида на файла за запазване в Windows: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "Неуспешно сериализиране на настройките: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "Неуспешно сериализиране на запазените данни за ключа за достъп: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr ""
+"Неуспешно задаване на етикета на бутона за избор на файл в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr ""
+"Неуспешно задаване на заглавието на прозореца за избор на файл в Windows: "
+"{err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr ""
+"Неуспешно задаване на разширението на файла за запазване в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Неуспешно задаване на името на файла за запазване в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr ""
+"Неуспешно задаване на етикета на бутона за избор на файл за запазване в "
+"Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr ""
+"Неуспешно задаване на заглавието на прозореца за избор на файл за запазване "
+"в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Неуспешно задаване на видовете файлове за запазване в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Неуспешно показване на прозореца за избор на файл в Windows: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr ""
+"Неуспешно показване на прозореца за избор на файл за запазване в Windows: "
+"{err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Неуспешно стартиране на Keycord: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr ""
+"Неуспешно стартиране на помощната програма за инсталиране на обновяването за "
+"Linux: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr ""
+"Неуспешно стартиране на msiexec за инсталиране на обновяването: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "Неуспешно стартиране на командата за права̀: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "Неуспешно изчакване на командата: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "Неуспешно подаване на входни данни към командата: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "Неуспешно записване на файла с настройки: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "Неуспешно записване на изнесените пароли в „{path}“: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "Неуспешно {context}: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr ""
+"Доставяне от отдалеченото хранилище на Git {remote} за хранилището за пароли"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid ""
+"Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr ""
+"Доставяне, сливане и изтласкване на текущия клон „{branch}“ във всички "
+"отдалечени хранилища."
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "Имената на полетата не могат да съдържат „:“."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "Стойности на полетата"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "Филтриране на резултатите"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "Търсене на елемент"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "Търсене на слаби пароли"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid ""
+"Find weak passwords, browse repeated field values, filter by store, and "
+"export password stores to CSV"
+msgstr ""
+"Откривайте слаби пароли, преглеждайте повтарящи се стойности на полета, "
+"филтрирайте по хранилище и изнасяйте хранилищата за пароли във формат CSV"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "Първо издание"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "Поправена е иконата за връщане"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "Поправено е синхронизирането с Git по избор"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr "Поправен е дефект при OTP, който неправилно отхвърляше валидни тайни."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "Поправени са правата̀ за смарткартите"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "Поправен е доставчикът за търсене на GNOME."
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "Общи"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "Генериране на ключ, защитен чрез FIDO2 (експериментално)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "Генерирайте или внесете частен ключ."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "Генериране на парола"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "Генериране на частен ключ"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "Генериране на ключ, защитен чрез FIDO2 (експериментално)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "Генериране на ключ"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Командата на Git не върна изход."
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "История и проверка в Git"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "Git не е достъпен в тази среда за изпълнение."
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Отдалечени хранилища на Git"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Работният процес за състоянието на Git прекъсна връзката"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "Назад"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "Към началната страница"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "Разрешаване"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "Разрешаване на достъп до USB ключ за сигурност (експериментален FIDO2)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid ""
+"Grant USB security key access for experimental FIDO2-protected private keys "
+"first."
+msgstr ""
+"Първо разрешете достъпа до USB ключ за сигурност за експерименталните частни "
+"ключове, защитени чрез FIDO2."
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "Разрешаване на достъп до хоста"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid ""
+"Grant host access first if you want Keycord to keep its private keys in step "
+"with your computer's GPG private keys."
+msgstr ""
+"Първо разрешете достъпа до хоста, ако искате Keycord да синхронизира "
+"частните си ключове с частните ключове на GPG на компютъра ви."
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "Първо разрешете достъпа до хоста."
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr "Разрешете достъпа до хоста за доставяне, сливане и изтласкване."
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "Даване на право"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "Разрешаване на достъп до смарткарта"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "Първо разрешете достъпа до смарткартата."
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "Ръководства и справочни материали"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid ""
+"Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr ""
+"Хардуерните ключове за OpenPGP не се поддържат от тази версия или платформа."
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "ПИН на хардуерния ключ"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "Хардуерният ключ е добавен."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "Администраторски ПИН на хардуерния ключ"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Помогнете с превода на Keycord"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "Постоянно скриване"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "Резервни получатели от историята"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "Получатели от историята"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "Начална страница"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Хост"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Git на хоста (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Git на хоста (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "Достъп до хоста"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr "Функциите с команди на хоста са достъпни само под Linux."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "Внасяне"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr ""
+"Преди да използвате хранилището за пароли, внесете частен ключ от "
+"настройките."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "Внесете съществуващ частен ключ или свържете хардуерен жетон."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "Внасяне на хардуерен публичен ключ (експериментално)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "Внасяне на частен ключ на GPG от хоста"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "Внасяне на ключ"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "Внасяне на ключ от буфера за обмен"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "Да се внесе ли ключът за достъп?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "Парола за внасянето (по избор)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "Внасяне на пароли"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "Внасяне на пароли чрез „pass import“"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "Внасяне на частен ключ"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "Внасяне на частен ключ от този елемент"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "Източник за внасяне"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "Инструмент за внасяне"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "Внасяне на ключа"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "Внасяне на паролите"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid ""
+"Improved header actions and hid filters when they cannot affect the current "
+"view."
+msgstr ""
+"Подобрени са действията в заглавната лента, а филтрите се скриват, когато не "
+"влияят на текущия изглед."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr ""
+"Подобрен е изборът на получатели при хранилища с много възможни ключове."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr ""
+"Подобрени са търсенето, филтрирането, навигацията с клавиатура и "
+"редактирането на записи."
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "Информация"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "Инициализиране на хранилището на Git за хранилището за пароли"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr ""
+"Преглеждайте историята на Git във всички хранилища и проверявайте подписите "
+"на подаванията."
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "Преглед на историята на промените"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "Преглед на историята на промените и проверка на подаванията"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "Проверка на частните ключове на GPG на хоста"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "Проверка на указателя HEAD в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "Проверка на клона в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr ""
+"Проверка на файловете в Git за хранилището за пароли преди първото подаване"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr ""
+"Проверка на отдалечения клон {remote}/{branch} в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr ""
+"Проверка на диапазона от ревизии {range} в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "Проверка на следените промени в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "Проверка на неследените файлове в Git за хранилището за пароли"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "Прегледайте скорошния изход от приложението и командите."
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Проверяване на хранилищата с Git и откриване на клони."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "Проверяване на частните ключове и свързания хардуер."
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr ""
+"Инсталирайте Git, за да използвате получателите от историята на подаванията "
+"за проверка при одит."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "Инсталиране на обновяването"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr ""
+"Инсталирането на обновяването ще затвори Keycord. Незапазените промени ще "
+"бъдат изгубени."
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Вграден"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "Неправилен отпечатък „{value}“ за обвързване с FIDO2."
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "Неправилен път до устройството с FIDO2: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "Данните, шифрирани чрез FIDO2, са неправилни."
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "Записът с парола, шифриран с всички ключове, е неправилен."
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "Пакетният изход от „git cat-file“ е неправилен."
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "Заглавната част от „git cat-file“ е неправилна."
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "Метаданните за подписа в Git на хоста са неправилни."
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "Неправилни разширения за ключа за достъп с FIDO2: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "Неправилен JSON за ключа за достъп: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "Неправилно поле {label} за ключа за достъп: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "Пътят до записа с парола е неправилен."
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "Неправилен отпечатък „{value}“ на частния ключ: {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "Пътят до файла с получатели е неправилен."
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "Неправилен запазен JSON за ключа за достъп: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid ""
+"Keep Keycord's private keys and your computer's GPG private keys in step "
+"when host access is available."
+msgstr ""
+"Когато има достъп до хоста, Keycord да синхронизира частните си ключове с "
+"частните ключове на GPG на компютъра ви."
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr ""
+"Преди да премахнете този ключ, оставете друг избран частен ключ достъпен."
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "Оставете достъпен поне един избран частен ключ."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr "Групиране на записите по хранилище и папка преди името на файла."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr ""
+"Папките остават в списъка, но резултатите от търсенето се подреждат по име "
+"на файла на pass."
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr ""
+"Не премахвайте избора от този ключ, докато се изискват всички избрани частни "
+"ключове."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "Файлът с ключа е премахнат."
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "Ключът е генериран."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "Ключът е внесен."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "Парола за ключа"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Частен ключ на Keycord, защитен чрез FIDO2"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Обновяване на Keycord"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr ""
+"Keycord не успя да завърши инсталирането на изтегленото обновяване за Linux."
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "Keycord не успя да подготви елемента за ключа за достъп. {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord вече е обновен до последната версия."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid ""
+"Keycord is an adaptive graphical client for password folders that use the "
+"standard pass layout. Existing stores remain normal pass stores on disk, so "
+"they keep working with pass and other compatible tools."
+msgstr ""
+"Keycord е адаптивен графичен клиент за папки с пароли, които използват "
+"стандартното оформление на pass. Съществуващите хранилища остават обикновени "
+"хранилища на pass върху диска и продължават да работят с pass и други "
+"съвместими инструменти."
+
+#: src/composition/host_access.rs:64
+msgid ""
+"Keycord is running in a protected space, so some optional features stay off "
+"until you allow this. If you allow it, Keycord can use tools from your "
+"computer such as GPG, the Host backend, and pass import. If you don't, "
+"Keycord still works with the integrated backend."
+msgstr ""
+"Keycord се изпълнява в защитена среда, затова някои незадължителни функции "
+"остават изключени, докато не разрешите достъпа. Ако го разрешите, Keycord ще "
+"може да използва инструменти от компютъра ви като GPG, механизма „Host“ и "
+"„pass import“. Без това разрешение Keycord продължава да работи с вградения "
+"механизъм."
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid ""
+"Keycord opened a credential export request that names {importer} as the "
+"importer and checked its structure. The local file does not authenticate "
+"that identity. Keycord does not yet generate CXP response archives, so no "
+"passkey data was released."
+msgstr ""
+"Keycord отвори заявка за изнасяне на идентификационни данни, в която "
+"{importer} е посочен като инструмент за внасяне, и провери структурата ѝ. "
+"Локалният файл не удостоверява тази самоличност. Keycord все още не създава "
+"архиви с отговори на CXP, затова не бяха разкрити данни за ключове за достъп."
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid ""
+"Keycord will first make its private-key list match the GPG private keys on "
+"your computer. After that, creating, importing, or deleting a private key in "
+"Keycord will update the host too. Keys that only exist in Keycord may be "
+"removed during the first sync."
+msgstr ""
+"Keycord първо ще изравни списъка си с частни ключове с частните ключове на "
+"GPG на компютъра ви. След това създаването, внасянето или изтриването на "
+"частен ключ в Keycord ще обновява и хоста. Ключове, които съществуват само в "
+"Keycord, може да бъдат премахнати при първото синхронизиране."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "Ключове за това хранилище"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "По-късно"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid ""
+"Leave this empty if the source does not use a password, for example a Chrome "
+"CSV."
+msgstr ""
+"Оставете полето празно, ако източникът не използва парола, например при файл "
+"CSV от Chrome."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "Дължина"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Липсва папката за почистване на обновяването за Linux."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "Списък"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr ""
+"Извеждане на указателите за одит на Git в хранилището за пароли под {prefix}"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "Извеждане на отдалечените хранилища на Git за хранилището за пароли"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr ""
+"Извеждане на файловете с получатели в дървото {object} на Git за хранилището "
+"за пароли"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "Зареждане на още подавания"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "Зареждане"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "Зареждане на подаванията"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "Зареждане на данните"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "Зареждане на стойностите на полетата"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "Зареждане на ключовете"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "Зареждане на елементите ви."
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr ""
+"Локални и отдалечени подавания чакат да бъдат синхронизирани в „{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "Локални и отдалечени подавания чакат да бъдат синхронизирани."
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "Локален клон"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr "Открити са локални промени. Първо ги подайте или отхвърлете."
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr ""
+"Открити са локални промени. Има и локални, и отдалечени подавания, които "
+"чакат синхронизиране."
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr ""
+"Открити са локални промени. Има и локални подавания, които чакат "
+"синхронизиране."
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr ""
+"Открити са локални промени. Има и отдалечени подавания, които чакат "
+"синхронизиране."
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "Локалните подавания в „{branch}“ са готови за изтласкване."
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "Локалните подавания чакат да бъдат синхронизирани."
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "Журнали"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "Търсене на по-нова самостоятелна версия за Linux в GitHub Releases."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "Търсене на по-нов инсталатор за Windows в GitHub Releases."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "Малки букви"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "Основно меню"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "Преди синхронизиране направете първоначално подаване."
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr ""
+"Преди да синхронизирате това хранилище, направете първоначално подаване в "
+"„{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "Преди синхронизиране направете първоначално подаване в „{branch}“."
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "Неправилни заглавни части на подаването в Git."
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "Неправилен обект за подаване в Git."
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "Неправилна заглавна част на подписа в Git."
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "Неправилен или неподдържан подпис"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "Управление на частните ключове"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid ""
+"Manage store recipients, folder-specific .gpg-id files, and password-"
+"protected private keys, including file and clipboard imports and optional "
+"host GPG synchronization"
+msgstr ""
+"Управлявайте получателите на хранилищата, отделните файлове .gpg-id в "
+"папките и частните ключове, защитени с парола, включително внасяне от файл "
+"или буфера за обмен и синхронизиране с GPG на хоста по избор"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "Управление на хранилищата"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr ""
+"Управляваното настройване на хардуерни ключове е изключено в тази версия на "
+"Keycord."
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid ""
+"Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr ""
+"Управляваните данни за частен ключ „{}“ не съответстват на заявения "
+"отпечатък „{}“."
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid ""
+"Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr ""
+"Данните от вид „{artifact_kind}“ за управлявания частен ключ „{}“ не "
+"съответстват на каноничния път „{}“."
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr ""
+"Управляваното добавяне и внасяне на смарткарти е изключено в тази версия на "
+"Keycord."
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr ""
+"За управлението на вложени файлове .gpg-id е необходим вграденият механизъм."
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "Съвпада с често използвана парола"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "Сливане на клона {target} от Git за хранилището за пароли"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "Съобщение"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "Минимален брой; 0 изключва изискването"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "Липсва сертификатът за OpenPGP за запазения хардуерен ключ."
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "Липсва сертификатът за OpenPGP за запазения частен ключ."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "Липсва собственик в адреса на хранилището: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "Липсват необработените данни за подаването {}."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "Липсва име на хранилището в адреса му: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "Преместване"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "Преместване на файла на pass"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "Преместване на избрания файл на pass"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "Преместване в хранилище"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "Преместено."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "Име"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "Навигация"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "Нов шаблон за парола"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "Ново хранилище"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "Нов ПИН на хардуерния ключ"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "Нов елемент"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "Нов ПИН на ключа за сигурност"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr ""
+"Все още няма хранилище на Git. Добавете отдалечено хранилище, за да го "
+"инициализирате."
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Няма хранилища с Git"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Няма достъпни хранилища с Git."
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "Все още няма клон."
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "Няма променени пътища"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "Няма заредени подавания"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "Не е открита папка с данни"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "Няма достъпен екран."
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "Не е открита папка с изпълнимия файл"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "Няма добавени папки"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "Все още няма елементи"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr ""
+"Нито един от заредените файлове на pass не отговаря на текущите проверки за "
+"слаби пароли."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "Няма съвпадения"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "Няма съвпадащи отдалечени хранилища на Git"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "Няма съвпадащи клони"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "Няма съвпадаща документация"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "Няма съвпадащи полета"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "Няма съвпадащи настройки"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "Няма съвпадащи резултати"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "Няма съвпадащи ключове на хранилището"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "Няма съвпадащи инструменти"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "Няма съвпадащи стойности"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "Няма хранилище за пароли"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "Няма хранилища за пароли"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "Не са зададени получатели"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "Не са открити получатели за този запис с парола."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "Все още няма получатели"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "Не са настроени отдалечени хранилища."
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "Няма откриваеми ключове за стандартни получатели"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "Няма полета, в които може да се търси"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "Няма подпис"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "Няма стойности"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "Не са открити слаби пароли"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "Не е налично"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "Нищо не е избрано"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "Цифри"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "Код за OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "Тайна за OTP"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr ""
+"В една или повече от локалните папки за инсталиране не може да се записва."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid ""
+"Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr ""
+"Включвайте експерименталните функции на FIDO2 само при използване на "
+"вградения механизъм."
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr "Приемат се само обикновени файлове от локалната файлова система."
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Отваряне на инструментите за Git"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "Отворете настройките, за да добавите папка за хранилище."
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "Отваряне на адрес"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Отваряне на Weblate"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr "За да преглеждате клони и подавания, отворете хранилище с Git."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "Отваряне на нов елемент"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "Първо отворете хранилище."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "Първо отворете елемент."
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "Отваряне на документацията"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "Отваряйте само по една заявка за ключ за достъп наведнъж."
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "Отворете ръководствата и справочните материали."
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "Отваряне във файловия мениджър"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "Отваряне в нов прозорец"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "Отваряне на журналите"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid ""
+"Open one or more password stores and search by name, store, field, regular "
+"expression, or structured find query"
+msgstr ""
+"Отворете едно или повече хранилища за пароли и търсете по име, хранилище, "
+"поле, регулярен израз или структурирана заявка за търсене"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "Отваряне на настройките"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "Отваряне като необработен текст"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "Отваряне на отдалечените хранилища на Git за хранилище 1"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "Отваряне на ключовете за хранилище 1"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "Отваряне на отдалечените хранилища на Git за хранилище 2"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "Отваряне на ключовете за хранилище 2"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "Отваряне на отдалечените хранилища на Git за хранилище 3"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "Отваряне на ключовете за хранилище 3"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "Отваряне на отдалечените хранилища на Git за хранилище 4"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "Отваряне на ключовете за хранилище 4"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "Отваряне на отдалечените хранилища на Git за хранилище 5"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "Отваряне на ключовете за хранилище 5"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "Отваряне на отдалечените хранилища на Git за хранилище 6"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "Отваряне на ключовете за хранилище 6"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "Отваряне на инструментите"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "Отваряне"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "Отваряне на елемента"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "Или използвайте хардуерен ключ (експериментално)."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "Други начини за добавяне на ключ"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "Файл на pass"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "Файлове на pass"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "Ключ за достъп"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "Разширенията на FIDO2 за ключа за достъп трябва да са обект на JSON."
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "Заявката за изнасяне на ключ за достъп е отворена"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "Парола"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "Генериране на пароли"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "Списък с пароли"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "Хранилища за пароли"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "Действия с пароли"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "Записът с парола „{label}“ не е открит."
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "Записът с парола „{old_label}“ не е открит."
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "Името на записа с парола е празно."
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "Паролата е празна"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "Паролата съдържа само празни знаци"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "Списък с пароли"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "Настройки на паролата"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid ""
+"Password store Git state: {root} -> Git repository detected, but Git "
+"commands are disabled in this build."
+msgstr ""
+"Състояние на Git за хранилището за пароли: {root} → открито е хранилище на "
+"Git, но командите на Git са изключени в тази версия."
+
+#: crates/keycord-git/src/repository.rs:75
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, network operations enabled."
+msgstr ""
+"Състояние на Git за хранилището за пароли: {root} → открито е хранилище на "
+"Git, локалните подавания и мрежовите операции са включени."
+
+#: crates/keycord-git/src/repository.rs:80
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, remote sync disabled in this backend."
+msgstr ""
+"Състояние на Git за хранилището за пароли: {root} → открито е хранилище на "
+"Git, локалните подавания са включени, но отдалеченото синхронизиране е "
+"изключено за този механизъм."
+
+#: crates/keycord-git/src/repository.rs:65
+msgid ""
+"Password store Git state: {root} -> no Git repository detected, local "
+"commits disabled, network operations disabled."
+msgstr ""
+"Състояние на Git за хранилището за пароли: {root} → не е открито хранилище "
+"на Git, локалните подавания и мрежовите операции са изключени."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "Настройки на хранилищата за пароли: няма настроени хранилища."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "Настройки на хранилищата за пароли: {} настроени хранилища."
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "Паролите са внесени."
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "Път или име"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "Командата за права̀ е неуспешна"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "Изберете поле от текущия списък."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "Изберете стойност от текущия списък."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "Настройки"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "Отпечатъкът „{value}“ на частния ключ няма очакваната дължина."
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid ""
+"Private key unlock worker disconnected while preparing a Git signature for "
+"{fingerprint}."
+msgstr ""
+"Работният процес за отключване на частния ключ прекъсна връзката, докато "
+"подготвяше подпис в Git за {fingerprint}."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "Частните ключове не могат да бъдат проверени"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "Частните ключове са синхронизирани."
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr "Синхронизирането на частни ключове с хоста е достъпно само под Linux."
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr ""
+"Изтласкване на клона {branch} в Git за хранилището за пароли към {remote}"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "QR код"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "RP ID"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "Необработен текст"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid ""
+"Read an armored private key or experimental FIDO2-protected private key from "
+"the clipboard."
+msgstr ""
+"Прочетете от буфера за обмен текстов частен ключ или експериментален частен "
+"ключ, защитен чрез FIDO2."
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr ""
+"Прочитане на променените пътища за подаването {oid} в Git за хранилището за "
+"пароли"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr ""
+"Прочитане на метаданните за подписите в Git на хоста при подавания в "
+"хранилището за пароли"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "Прочитане на източниците на „pass import“"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "Прочитане на версията на pass"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "Прочитане на запис с парола"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "Прочитане на запис с парола за копиране в буфера за обмен"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "Прочитане на указателя HEAD в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr ""
+"Прочитане на журнала за одит на Git в хранилището за пароли за {full_ref}"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr ""
+"Прочитане на адреса на отдалеченото хранилище {name} в Git за хранилището за "
+"пароли"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr ""
+"Прочитане на файла {object_path} от дървото на Git за хранилището за пароли"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "Прочитане на необработените подавания в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "Прочитане на следващите {count} подавания."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "Прочитане на редовете с пароли от текущия списък."
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "Прочитане на скорошната история в Git за този клон."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr ""
+"Прочитане на полетата на pass, в които може да се търси, от текущия списък."
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "Причина"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "Получателят „{recipient_id}“ не е наличен в приложението."
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid ""
+"Recipient '{recipient_id}' matches multiple keys in the app. Use a "
+"fingerprint instead."
+msgstr ""
+"Получателят „{recipient_id}“ съвпада с няколко ключа в приложението. Вместо "
+"него използвайте отпечатък."
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "Източник на получателите"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "Файл с получатели"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "Получатели от одитираното подаване"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "Препоръчва се за нови хранилища"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "Свържете отново ключа за сигурност с FIDO2 и опитайте пак."
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "Свържете отново хардуерния ключ и опитайте пак."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr ""
+"Намалено е разкриването на тайни при търсене в GNOME, неуспешни команди и "
+"журнали."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "Опресняване на текущия списък"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "Файлът „{}“ от изданието има неправилна контролна сума SHA-256."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr "Файлът „{}“ от изданието има неподдържан формат на контролната сума."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr "За файла „{}“ от изданието липсва контролна сума SHA-256 от GitHub."
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "Адрес на отдалеченото хранилище"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "Отдалеченото хранилище е добавено."
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "Отдалечените подавания са готови за сливане в „{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "Отдалечените подавания чакат да бъдат синхронизирани."
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "Име на отдалеченото хранилище"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "Отдалеченото хранилище е премахнато."
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "Отдалеченото хранилище е обновено."
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "Следящ клон за отдалечено хранилище"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "Отдалечени хранилища"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "Премахване на празните полета"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "Премахване от менюто с приложения"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "Премахване на ключа"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "Премахване на файла с ключа"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "Премахване на паролата за {label}"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "Премахване на отдалеченото хранилище на Git за хранилището за пароли"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "Премахване на получателя"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "Премахване на отдалеченото хранилище"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "Празните полета са премахнати."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr ""
+"Функцията за хранилища за пароли, защитени чрез FIDO2, е премахната от "
+"Flatpak версията."
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "Преименуване на файла на pass"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "Преименуване на записа с парола"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "Преименуване на паролата от {old_label} на {new_label}"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "Преименуване на отдалеченото хранилище на Git за хранилището за пароли"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "Преименуване на избрания файл на pass"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "Повторение на един и същ знак"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "Хранилище"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "Адрес на хранилището"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr ""
+"Хранилището е открито и е готово за управление на отдалечени хранилища."
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "Хранилището е открито. Преди синхронизиране преминете към клон."
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr ""
+"Хранилището е открито. Преди синхронизиране направете първото подаване в "
+"„{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr ""
+"Хранилището е открито. Локални и отдалечени подавания чакат да бъдат "
+"синхронизирани."
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local and remote commits are waiting to sync."
+msgstr ""
+"Хранилището е открито. Преди синхронизиране локалните промени трябва да "
+"бъдат подадени или отхвърлени, а локални и отдалечени подавания чакат да "
+"бъдат синхронизирани."
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local commits are waiting to sync."
+msgstr ""
+"Хранилището е открито. Преди синхронизиране локалните промени трябва да "
+"бъдат подадени или отхвърлени, а локални подавания чакат да бъдат "
+"синхронизирани."
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and remote commits are waiting to sync."
+msgstr ""
+"Хранилището е открито. Преди синхронизиране локалните промени трябва да "
+"бъдат подадени или отхвърлени, а отдалечени подавания чакат да бъдат "
+"синхронизирани."
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync."
+msgstr ""
+"Хранилището е открито. Преди синхронизиране локалните промени трябва да "
+"бъдат подадени или отхвърлени."
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr ""
+"Хранилището е открито. Локални подавания чакат да бъдат синхронизирани."
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr ""
+"Хранилището е открито. Отдалечени подавания чакат да бъдат синхронизирани."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "Изискване на всички избрани частни ключове"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Определяне на самоличността за {role} в Git"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "Ресурсът не е открит: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "За да се приложи, рестартирайте приложението."
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "Възстановяване на хранилище за пароли"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "Възстановяването спря неочаквано."
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "Възстановяване на хранилище"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "Възстановяване на хранилището за пароли"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "Възстановяване на хранилището"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid ""
+"Retry authorization with recipient files from the commit history when the "
+"current branch recipients cannot authorize the signer."
+msgstr ""
+"Когато получателите от текущия клон не могат да удостоверят подписващия, да "
+"се направи нов опит с файловете с получатели от историята на подаванията."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "Върнато."
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "Запазване"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "Запазване на текущата страница или синхронизиране от началната"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr ""
+"Преди да внесете ключ за достъп, запазете или отхвърлете текущите си промени."
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "Запазване на записа с парола"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "Запазване на получателите на хранилището за пароли"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "Запазено."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "Запазване на файла с получатели"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Запазване без подпис в Git."
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr ""
+"Проверете текущия списък за пароли, които не издържат основните проверки."
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "Сканирайте, за да използвате тази стойност на друго устройство."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "Проверяване на паролите"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Търсене в отдалечените хранилища на Git"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "Търсене в документацията"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "Търсене в полетата"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "Търсене по имена, хранилища или полета"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "Търсене в настройките"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "Резултати от търсенето"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "Търсене в ключовете на хранилището"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "Търсене в инструментите"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "Търсене в стойностите"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "Търсене на слаби пароли"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "ПИН на ключа за сигурност"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "Избор"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "Изберете поне едно хранилище и един клон от менюто с филтри."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr ""
+"Изберете частните ключове, които могат да отключват пароли в това хранилище."
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "Последователни знаци"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "Първо задайте ПИН на ключа за сигурност с FIDO2."
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "Задаване на ПИН на ключа за сигурност"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "Задаване на ПИН на ключа за сигурност (експериментален FIDO2)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "Настройване на нов хардуерен ключ (експериментално)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid ""
+"Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr ""
+"В тази версия задаването на ПИН на ключ за сигурност с FIDO2 се поддържа "
+"само под Linux."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "Настройване на хардуерния ключ (експериментално)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "Кратка с малко разнообразие от знаци"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "Показване на журналите"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "Показване на OTP като QR код"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "Показване на изключените настройки вместо скриването им"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "Показване на скритите и дублираните записи"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "Показване на паролата като QR код"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "Показване на клавишните комбинации"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "Показване на последната част от папката като потребителско име."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "Показване на името на файла на pass като потребителско име."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "Показване на потребителското име като QR код"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "Показване на стойността като QR код"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "Подписващият не е сред получателите на клона"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "Ключът за подписване не е достъпен в Keycord"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "Само един вид знаци и кратка"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "Подреждане на записите само по името на файла на pass."
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "Подготвяне на промените в Git за хранилището за пароли"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "Състояние"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "Стъпка {current}/{total}: докоснете ключа, ако мига."
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "Хранилище"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "Хранилището е създадено, но не беше добавено."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "Ключове на хранилището"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "Хранилището е възстановено."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "Подпапка на хранилището"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "Синхронизирането на хранилището спря неочаквано."
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "Хранилището е синхронизирано."
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "Запазеният ПИН за FIDO2 не е валиден UTF-8: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "Хранилища"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr ""
+"За да възстановите хранилище от хранилище на Git, превключете механизма на "
+"„Host“."
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "За да използвате „pass import“, превключете механизма на „Host“."
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid ""
+"Switch to the Integrated backend to use experimental FIDO2-protected private "
+"keys."
+msgstr ""
+"За да използвате експериментални частни ключове, защитени чрез FIDO2, "
+"превключете към вградения механизъм."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "Символи"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid ""
+"Sync Git-backed stores, manage remotes, sign changes, and inspect history "
+"with commit verification details"
+msgstr ""
+"Синхронизирайте хранилища с Git, управлявайте отдалечени хранилища, "
+"подписвайте промени и преглеждайте историята с подробности за проверката на "
+"подаванията"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "Синхронизиране сега"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "Синхронизиране на частните ключове с хоста"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "Синхронизиране на хранилищата"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "Синхронизиране на хранилището"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "Синхронизиране на хранилищата"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "Текстов редактор"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "Този ключ за сигурност с FIDO2 не поддържа разширението hmac-secret."
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr "Този ключ за сигурност с FIDO2 трябва да поддържа защита с ПИН."
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "Този ключ, защитен чрез FIDO2, не може да бъде изнесен."
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "Данните за този ключ, защитен чрез FIDO2, са неправилни."
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "Този ключ, защитен чрез FIDO2, е неправилен."
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "Този файл с ключ за OpenPGP не съдържа частен ключ."
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "Тези данни не съдържат частен ключ."
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "Този файл не съдържа частен ключ."
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr ""
+"Този хардуерен ключ не може да дешифрира записите в хранилището за пароли."
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr "Този хардуерен ключ няма частен ключ, който може да се изнесе."
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "Липсва хранилището на този елемент."
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "Този елемент вече не съществува."
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "Този ключ няма публичен ключ, който може да се изнесе."
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "Този запис с парола вече съществува."
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr ""
+"Този частен ключ не може да дешифрира записите в хранилището за пароли."
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr "Този частен ключ не може да подписва подавания в Git."
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "Този частен ключ не се съхранява в приложението."
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr "Преди да внесете този частен ключ, трябва да го защитите с парола."
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "Този публичен ключ не съответства на хардуерния ключ за дешифриране."
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "Този публичен ключ не съответства на хардуерния ключ за подписване."
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "Този адрес на отдалечено хранилище вече съществува."
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "Това име на отдалечено хранилище вече съществува."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid ""
+"The CSV file will contain every password and field in plaintext. Anyone with "
+"access to the file can read them."
+msgstr ""
+"Файлът CSV ще съдържа всяка парола и поле като обикновен текст. Всеки с "
+"достъп до файла ще може да ги прочете."
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "Заявката на CXP не съдържа разпознаваем режим на HPKE."
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "Заявката на CXP не предлага поддържания архивен формат deflate."
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "ПИН-ът на ключа за сигурност с FIDO2 съдържа неподдържан байт NUL."
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "ПИН-ът на ключа за сигурност с FIDO2 е неправилен."
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr "Ключът за сигурност с FIDO2 не върна идентификатор на ключа за достъп."
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr "Наличните частни ключове не могат да дешифрират този елемент."
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr ""
+"Свързаният хардуерен ключ не съответства на запазения ключ за дешифриране."
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr ""
+"Свързаният хардуерен ключ не съответства на запазения ключ за подписване."
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr "Текущите филтри не съвпадат с нито един клон в избраните хранилища."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "Текущият списък няма полета на pass, в които може да се търси."
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "Файлът не е заявка на CXP за изнасяне на ключ за достъп."
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "Областта на gettext съдържа вграден байт NUL."
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "Пътят на gettext до езика съдържа вграден байт NUL."
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "ПИН-ът на хардуерния ключ е блокиран."
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "Хардуерният ключ не прие заявения нов ПИН."
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "Хардуерният ключ не върна отпечатък за дешифриране."
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "Хардуерният ключ не върна отпечатък за подписване."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "Инсталаторът е готов за стартиране."
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "В ключа за достъп липсва {label}."
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "Заявката за ключ за достъп съдържа неправилен JSON: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "Заявката за ключ за достъп надвишава ограничението от {limit} байта."
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "Заявката за ключ за достъп е неправилна: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr ""
+"Източникът на заявката за ключ за достъп не е обикновен локален файл: "
+"{path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "Полето {label} на ключа за достъп е празно."
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr ""
+"Полето {label} на ключа за достъп трябва да използва base64url без допълване."
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "Редакторът на пароли не е достъпен."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "Паролите не съвпадат."
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "Паролата за частния ключ е неправилна."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr "Работният процес за списъка с частни ключове спря неочаквано."
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "ПИН-овете на ключа за сигурност не съвпадат."
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr ""
+"Избраният файл не е поддържана локална заявка на CXP за ключ за достъп. "
+"{error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "Избраният път за хранилище за пароли не е папка."
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "Избраният път за хранилище не е папка."
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr ""
+"Запазеният JSON не представлява идентификационни данни за ключ за достъп."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "Запазеният публичен ключ няма подключ за подписване."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr "Запазеният публичен ключ няма подключ за шифриране при пренос."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr "В запазения публичен ключ липсва хардуерният ключ за дешифриране."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr "В запазения публичен ключ липсва хардуерният ключ за подписване."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid ""
+"The update helper cleanup directory does not match the downloaded update "
+"location."
+msgstr ""
+"Папката за почистване на помощната програма за обновяване не съответства на "
+"местоположението на изтегленото обновяване."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr ""
+"Изпълнимият файл на помощната програма за обновяване няма родителска папка."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "Обновяването е готово за инсталиране."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid ""
+"These lines are added after the password line when you create a new password "
+"entry. Leave it empty to start with a blank pass file."
+msgstr ""
+"Тези редове се добавят след реда за паролата, когато създавате нов запис с "
+"парола. Оставете полето празно, за да започнете с празен файл на pass."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid ""
+"These settings are used when you generate or regenerate a password from the "
+"editor."
+msgstr ""
+"Тези настройки се използват, когато генерирате или генерирате наново парола "
+"от редактора."
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "Този ключ за сигурност с FIDO2 не може да отваря елементите ви."
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "В този клон няма подавания, които може да се одитират."
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "Тази версия не включва поддръжка на ключове за достъп."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "В това поле няма стойности, в които може да се търси."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid ""
+"This hardware key already has OpenPGP keys. Import the matching public key "
+"file instead."
+msgstr ""
+"Този хардуерен ключ вече има ключове за OpenPGP. Вместо това внесете "
+"съответния файл с публичен ключ."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid ""
+"This hardware key already has OpenPGP keys. Use Add hardware key "
+"(Experimental) or import the matching public key file instead."
+msgstr ""
+"Този хардуерен ключ вече има ключове за OpenPGP. Вместо това изберете "
+"„Добавяне на хардуерен ключ (експериментално)“ или внесете съответния файл с "
+"публичен ключ."
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "Този хардуерен ключ не може да отваря елементите ви."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid ""
+"This hardware key has no OpenPGP key yet. Use Set up new hardware key "
+"(Experimental) instead."
+msgstr ""
+"Този хардуерен ключ все още няма ключ за OpenPGP. Вместо това изберете "
+"„Настройване на нов хардуерен ключ (експериментално)“."
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid ""
+"This item can't be opened with the private keys currently available in the "
+"app. File actions are still available, but copy and move-to-store are "
+"disabled until a compatible private key is available."
+msgstr ""
+"Този елемент не може да бъде отворен с частните ключове, които в момента са "
+"налични в приложението. Действията с файла остават достъпни, но копирането и "
+"преместването в друго хранилище са изключени, докато не стане наличен "
+"съвместим частен ключ."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "Този елемент не съдържа текстов частен ключ."
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "Този ключ не може да отваря елементите ви."
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "Този частен ключ е защитен с парола."
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "За този частен ключ е необходим ключ за сигурност с FIDO2."
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "За този частен ключ е необходим друг начин за отключване."
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "За този частен ключ е необходим хардуерен ключ."
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "Този получател не е наличен в приложението."
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid ""
+"This selected key is required while all selected private keys are required."
+msgstr ""
+"Избраният ключ е задължителен, докато се изискват всички избрани частни "
+"ключове."
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "Стойността е твърде дълга за QR код."
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "Твърде кратка ({length} знака)"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "Инструменти"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "Общо знаци"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "Докоснете ключа за сигурност с FIDO2 и опитайте пак."
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "Докоснете ключа, ако мига."
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "Превод"
+
+#: src/translation_help.rs:51
+msgid ""
+"Translate Keycord into a new language or help improve an existing "
+"translation on Weblate."
+msgstr ""
+"Преведете Keycord на нов език или помогнете да се подобри съществуващ превод "
+"в Weblate."
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Превод: Nick."
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "Пакетният изход от „git cat-file“ е съкратен."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "Опитайте друг филтър за полета."
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "Опитайте друг текст за търсене или заредете още подавания."
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "Опитайте друг текст за търсене."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "Опитайте друг филтър за стойности."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "Опитайте отново от настройките."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "Опитайте друга заявка или филтър."
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "Включване"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "Да се включи ли синхронизирането на частни ключове?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "Отмяна или връщане на промени"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "Отменено."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "Неочаквана форма на шифротекста за Cv25519"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "Неочаквана форма на шифротекста за NistP256"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr "Неочакван вид „{object_type}“ на обекта от „git cat-file“."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "Неочакван брой съвпадащи публични подключове: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr "Неочаквано е прочетена информация за жетона без буфер."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "Отключване на файл на pass"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr "Преди да изчистите този ключ, отключете друг избран частен ключ."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "Отключване на ключа"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "Отключете ключа от настройките."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "За да продължите, отключете ключа си."
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "Неименуван частен ключ на хоста"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "Неименуван частен ключ"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "Неименувана смарткарта"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "Изключете другите ключове за сигурност и опитайте пак."
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "Неподдържан формат {} за запис с парола с FIDO2."
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "Неподдържана защита „{}“ за запис с парола с FIDO2."
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "Неподдържан формат {} за частен ключ с FIDO2."
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "Неподдържана защита „{}“ за частен ключ с FIDO2."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "Неподдържана архитектура за обновяване под Linux: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "Неподдържана комбинация от шифротекст {:?} и публичен ключ {:?}"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "Неподдържан формат {} на манифеста за хардуерен ключ."
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "Неподдържана защита „{}“ за хардуерен ключ."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "Неподдържан алгоритъм за хеширане при RSA: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "Неподдържан адрес на хранилището за обновявания: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "Неподдържан алгоритъм за подписване: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "Непроверено"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "Контролната сума SHA-256 за обновяването „{}“ не съвпада."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "Налично е обновяване"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "Пътят за изтегляне на обновяването няма родителска папка."
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "Обновяване на паролата за {label}"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "Обновяване на указателя HEAD в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr ""
+"Обновяване на адреса на отдалеченото хранилище на Git за хранилището за "
+"пароли"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "Обновяване на получателите на хранилището за пароли"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr ""
+"Размерът на обновяването след изтегляне не съвпада (очакван {}, получен {})."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "Размерът на обновяването „{}“ не съвпада."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr ""
+"Обновяване на всички запазени пароли според новите настройки за достъп."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "Главни букви"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr "Използвайте --open-passkey-request с точно един локален файл."
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "Вместо това изберете „Добавяне на тайна за OTP“."
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "Вместо това използвайте заявка за ключ за достъп."
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "Използвайте само едно име на файл за потребителското име."
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "Използвайте само едно име на файл."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr ""
+"Използване на получателите от историята на подаванията за проверка при одит"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "Използване на името на файла"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "Използвайте „find“ за полета и „reg“ за шаблони."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "Използване на името на папката"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "Използване на папките при търсене по име на файл"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "Използвайте „pass import“ за внасяне в съществуващо хранилище."
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "Използвайте „pass import“ със собствената си команда за pass."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "Използване на хранилището, папките и името на файла"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid ""
+"Use the adaptive GTK interface with keyboard, mouse, or touch across desktop "
+"and mobile devices"
+msgstr ""
+"Използвайте адаптивния интерфейс на GTK с клавиатура, мишка или докосване на "
+"настолни и мобилни устройства"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "Използвайте съответния хардуерен ключ."
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "Вместо това използвайте полето за потребителско име."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr ""
+"Използва се само когато във файла на pass няма шифрирано поле за "
+"потребителско име."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "Потребителско име"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "Вместо това се използва вграденият механизъм."
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "Помощни инструменти и поддръжка"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid ""
+"Valid host keys may appear unavailable here while private-key sync is off."
+msgstr ""
+"Валидните ключове на хоста може да изглеждат недостъпни тук, докато "
+"синхронизирането на частни ключове е изключено."
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr "Валидните ключове на хоста може да изглеждат недостъпни тук."
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "Проверка"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "Начин за проверка"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "Проверено"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "Твърде малко разнообразие от знаци"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "Изчакайте малко."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "Слаби пароли"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid ""
+"When enabled, History can use recipients from earlier commits while "
+"verifying older encrypted entries."
+msgstr ""
+"Когато е включено, при проверка на по-стари шифрирани записи историята може "
+"да използва получателите от предишни подавания."
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Windows ShellExecute е неуспешен: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "Работи се"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "Записване на обект за подаване в Git за хранилището за пароли"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "Записване на дървото на Git за хранилището за пароли"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "Вече може да генерирате нови частни ключове."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "Вече може да управлявате отдалечени хранилища на Git"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "Вече може да отваряте файлове на pass в нов прозорец"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr ""
+"Вече може да използвате стойностите на полетата като променливи при търсене"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "_Относно Keycord"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "_Добавяне на елемент"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "_Търсене на елемент"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "_Клавишни комбинации"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "_Настройки"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "_Синхронизиране с отдалеченото хранилище"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "_Инструменти"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "механизъм: host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "механизъм: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "изчистване на клони"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "създаване на клиента за GitHub"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "създаване на клиента за изтегляне"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "изчистване на остарелите стойности на филтъра за хранилища"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "изчистване на празните полета преди запазване"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "събиране на отпечатъците на наличните частни ключове"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "създаване на частичния файл за обновяване"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "създаване на папката за изтегляне на обновяването"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "идентификатор на ключа за достъп"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "декодиране на отговора за изданието от GitHub"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "изтриване на записа с парола"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "изключване на дъмповете на паметта: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "изключване на точките за разширяване: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "изключване на възможността за дъмп на процеса: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "изтегляне на файла от изданието"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "празен файл с парола"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "включване на политиката за ASLR: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "включване на DEP: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "включване на строгите проверки на дескриптори: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "завършване на файла за обновяване"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "записване на частичния файл за обновяване"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "команда на git"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "Командата „gpg --delete-secret-keys“ е неуспешна"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "Командата „gpg --export“ е неуспешна"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "Командата „gpg --export-secret-keys“ е неуспешна"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "Командата „gpg --import“ е неуспешна"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "Командата „gpg --list-secret-keys“ е неуспешна"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "манифест за хардуерен ключ"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke съдържа повече от {MAX_LIST_ITEMS} набора параметри"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "за режим {:?} на hpke е необходим публичен JWK"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke трябва да съдържа поне един набор параметри"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "координатите за EC в hpke.key трябва да са с еднаква дължина"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key съдържа повече от {MAX_JWK_MEMBERS} елемента"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "елемент на hpke.key"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key трябва да съдържа текстов елемент kty"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key трябва да съдържа текстов елемент {member}"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr "hpke.key трябва да съдържа само материал на публичен ключ"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key не трябва да е празен JWK"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key използва неподдържан вид ключ {key_type:?}"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve} не съответства на KEM {kem}"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "hpke.key.x е с неправилна дължина за KEM {kem}"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "hpke.key.{member} не трябва да е празно"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr "hpke.key.{member} трябва да използва base64url без допълване"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "зареждане на наличния ключодържател"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "липсва екран"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "преместване на запис с парола в друго хранилище"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "шаблон за нов елемент"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "Командата pass е неуспешна"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "Командата „pass import --list“ е неуспешна"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "Командата „pass import“ е неуспешна"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "Командата „pass import“ не е налична."
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "Командата „pass init“ е неуспешна"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "Командата „pass insert“ е неуспешна"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "Командата „pass mv“ е неуспешна"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "Командата „pass rm“ е неуспешна"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "парола"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "генериране на парола"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "подреждане на списъка с пароли"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "файл с настройки"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "частен ключ"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "синхронизиране на частни ключове"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "прочитане на отговора за изданието от GitHub"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "прочитане на байтовете на обновяването"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "отдалечена команда на git"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "отдалечена команда на git за работното дърво"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "премахване на остарелия частичен файл за обновяване"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "премахване на остарелия файл за обновяване"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "запазване на избраните филтри за хранилища"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "изпращане на заявката за изданието към GitHub"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "изпращане на заявката за файла от изданието"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "изчистване на хранилището"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "път до хранилището"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "неочаквани атрибути на алгоритъма ECC: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "необработена крива: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "неизвестна грешка на Windows"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "неизвестна грешка при защитата на Windows"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "неподдържан вид ключ: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "идентификатор на потребителя"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "резервно потребителско име"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "команда на git за работното дърво"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "записване на байтовете на обновяването"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "Неуспешно изпълнение на „{action}“: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "Неуспешно изпълнение на „{action}“: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "Неуспешно изпълнение на „{action}“: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (все още няма подавания)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr ""
+"{context} надвишава поддържаната дълбочина на влагане в TOML от {} нива."
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr ""
+"{context} надвишава поддържаното ограничение за размер на TOML от {} байта."
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "Заредени подавания: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "{count} съвпадащ елемент"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "{count} съвпадащи елемента"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "{count} получатели"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "Настроени отдалечени хранилища: {count}."
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "{count} уникална стойност"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "{count} уникални стойности"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "{field} съдържа неправилни празни или управляващи знаци"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "{field} съдържа повече от {MAX_LIST_ITEMS} стойности"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "{field} е по-дълго от {max_bytes} байта"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "{field} трябва да е валиден идентификатор на доверяваща се страна"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "{field} трябва да съдържа поне една стойност"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "{field} не трябва да е празно"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} — хардуерен ключ"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} — защитен с парола"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} — защитен с ключ за сигурност"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} — жетон за сигурност"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} — жетон за сигурност ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "Остават {remaining} сек"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"грешка: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} от {} ({percentage:.0}%)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"

@@ -1,0 +1,5360 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-01 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : (n == 0 || (n % 100 > 0 && n "
+"% 100 < 20)) ? 1 : 2);\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "1 destinatar"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "1 depozit la distanță configurat."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "O listă de dosare care conțin datele parolelor."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "Este disponibilă o versiune autonomă mai nouă pentru Linux."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "Este disponibilă o versiune mai nouă pentru Windows."
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr ""
+"Cheia privată a acestui element este blocată. Deblocheaz-o în Preferințe."
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "Abandonează îmbinarea Git a depozitului de parole"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "Despre"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "Acțiuni"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "Adaugă un câmp OTP"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "Adaugă un depozit Git la distanță pentru acest depozit."
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "Adaugă un dosar."
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "Adaugă mai întâi o parolă acelei chei."
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "Adaugă o cheie privată în Preferințe."
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr ""
+"Adaugă mai întâi un depozit la distanță pentru a inițializa un depozit Git."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "Adaugă mai întâi dosarul unui depozit."
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "Adaugă un depozit pentru a folosi pass import."
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr ""
+"Adaugă un depozit care conține un depozit Git pentru a-i consulta istoricul "
+"aici."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "Adaugă căutarea avansată"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "Adaugă un element pentru a începe."
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "Adaugă mai întâi un alt depozit."
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "Adaugă cel puțin un destinatar pentru a crea acest depozit."
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr ""
+"Adaugă cel puțin un destinatar pentru a putea salva în continuare "
+"modificările."
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "Adaugă cel puțin un depozit la distanță înainte de sincronizare."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "Adaugă documentație"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid ""
+"Add existing stores, create new stores, import passwords on supported "
+"systems, or restore a store from Git with the Host backend"
+msgstr ""
+"Adaugă depozite existente, creează depozite noi, importă parole pe sistemele "
+"compatibile sau restaurează un depozit din Git folosind backend-ul Host"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "Adaugă suport FIDO2 experimental"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr ""
+"Adaugă suport experimental pentru chei hardware OpenPGP folosite drept chei "
+"private"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "Adaugă un câmp"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "Adaugă o cheie hardware (experimental)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "Adaugă un element"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "Adaugă câmpurile lipsă"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "Adaugă sincronizarea GPG opțională"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "Adaugă sau creează un depozit"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr "Adaugă sau elimină această versiune din meniul local de aplicații."
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "Adaugă parola pentru {label}"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "Adaugă depozitul Git la distanță al depozitului de parole"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "Adaugă un depozit la distanță"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "Adaugă furnizorul de căutare"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "Adaugă opțiunea de copiere a jurnalelor"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid ""
+"Add the passkey for {username} on {rp_id} to your default pass store? You "
+"can review it before saving."
+msgstr ""
+"Adaugi cheia de acces pentru {username} de pe {rp_id} în depozitul pass "
+"implicit? O poți verifica înainte de salvare."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid ""
+"Add the public key already stored on the connected OpenPGP smartcard or "
+"YubiKey."
+msgstr ""
+"Adaugă cheia publică deja stocată pe smartcardul OpenPGP conectat sau pe "
+"dispozitivul YubiKey conectat."
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "Adaugă în meniul de aplicații"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "Adaugă pagina cu instrumente"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr ""
+"A fost adăugat exportul CSV pentru transferarea datelor către alte "
+"instrumente."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr ""
+"A fost adăugată consultarea istoricului Git, inclusiv detaliile de "
+"verificare a commiturilor."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid ""
+"Added QR code views for passwords, usernames, one-time codes, other entry "
+"fields, and permission commands."
+msgstr ""
+"Au fost adăugate coduri QR pentru parole, nume de utilizator, coduri de "
+"unică folosință, alte câmpuri ale elementelor și comenzi de acordare a "
+"permisiunilor."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid ""
+"Added entry filtering by password store and remembered history-inspection "
+"filters."
+msgstr ""
+"A fost adăugată filtrarea elementelor după depozitul de parole, iar filtrele "
+"de consultare a istoricului sunt reținute."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr ""
+"Au fost adăugate ghiduri și indicatoare de progres pentru suportul FIDO2 "
+"experimental."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "Au fost adăugate chei OpenPGP experimentale protejate prin FIDO2."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ""
+"A fost adăugată editarea destinatarilor pentru fișierele .gpg-id din anumite "
+"dosare."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "A fost adăugat modul de sortare hibrid"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "Au fost adăugate câmpurile lipsă din șablon."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "Se adaugă cheia hardware"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr "Permite accesul la cheia de securitate USB (FIDO2 experimental)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "Permite accesul la aplicațiile de pe acest dispozitiv"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "Permite accesul la smartcard (experimental)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "Există deja un element cu acest nume."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "Aplică șablonul"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "Aplică filtrul la crearea fișierelor pass noi."
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "Funcțiile de audit sunt dezactivate în această versiune."
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "Auditul s-a oprit în mod neașteptat."
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "Autor"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "Creat la"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid ""
+"Automatically remove blank username, field, and OTP lines when saving a pass "
+"file."
+msgstr ""
+"Elimină automat rândurile goale pentru numele de utilizator, câmpuri și OTP "
+"la salvarea unui fișier pass."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "Versiune disponibilă:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "Înapoi"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "Înapoi la Preferințe"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "Înapoi la cheile depozitului"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "Backend"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "Asociază un fișier cu cheie publică cheii hardware conectate."
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "Ramură"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "Ramuri"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "Răsfoiește și editează depozitele de parole"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "Răsfoiește valorile câmpurilor"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "Răsfoiește valorile unice ale câmpurilor din lista curentă."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "Fișiere CSV"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "Versiunea {0} a cererii de export CXP nu este acceptată."
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr ""
+"Modul de răspuns CXP {0:?} nu este acceptat pentru o cerere deschisă dintr-"
+"un fișier."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "Acest element nu poate fi deschis."
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "Modificarea nu poate fi anulată."
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "Ultima modificare nu poate fi anulată."
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "Anulează"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr ""
+"Schimbă opțiunea implicită pentru a folosi numele fișierului drept nume de "
+"utilizator."
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "Căi modificate"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr ""
+"Pictograma aplicației a fost schimbată pentru a reprezenta un șnur de chei"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "Caută _actualizări"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "Selectează o ramură înainte de a sincroniza acest depozit."
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "Selectează o ramură înainte de sincronizare."
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "Verifică modificările Git pregătite ale depozitului de parole"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "Consultă jurnalele pentru detalii."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "Se caută actualizări"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "Se verifică disponibilitatea comenzii pass import."
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr ""
+"Alege un obiect JSON care conține exact o credențială de tip cheie de acces."
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr "Alege un obiect JSON care conține o credențială de tip cheie de acces."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "Alege un fișier sau un dosar dacă importatorul necesită unul."
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "Alege un dosar și restaurează-l dintr-un depozit Git."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "Alege un dosar. Dacă este gol, acesta devine un depozit."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "Alege un fișier local."
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "Alege un dosar local."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid ""
+"Choose a private key file or experimental FIDO2-protected private key file."
+msgstr ""
+"Alege un fișier cu cheie privată sau unul cu cheie privată experimentală "
+"protejată prin FIDO2."
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "Alege un depozit."
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "Alege un importator."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid ""
+"Choose how Keycord opens your data. Integrated is the default. Use Host to "
+"run your own command."
+msgstr ""
+"Alege cum îți deschide Keycord datele. Integrated este opțiunea implicită. "
+"Folosește Host pentru a executa propria comandă."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "Alege ordinea fișierelor pass pe pagina principală."
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "Alege fișierul sursă pentru import"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "Alege dosarul sursă pentru import"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "Alege fișierul sursă"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "Alege dosarul sursă"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "Alege dosarul depozitului"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "Alege dosarul depozitului care va fi restaurat"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr ""
+"Alege fișierul .gpg-id al unui anumit dosar pe care dorești să-l "
+"administrezi."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "Curăță fișierul pass"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "Elimină câmpurile goale înainte de salvare"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "Golește căutarea"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "Șterge calea sursei"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "Clipboardul nu conține nicio cheie."
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "Clipboardul nu este disponibil."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "Închide"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "Închizi Keycord pentru a instala actualizarea?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "Firul care scria datele de intrare pentru comandă a eșuat."
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "Commit"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "Încărcarea commiturilor s-a oprit în mod neașteptat."
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de a sincroniza "
+"acest depozit."
+
+#: crates/keycord-git/src/sync.rs:12
+msgid ""
+"Commit or discard local changes before syncing this store. Local and remote "
+"commits are also waiting to sync."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de a sincroniza "
+"acest depozit. Există și commituri locale și la distanță care așteaptă "
+"sincronizarea."
+
+#: crates/keycord-git/src/sync.rs:18
+msgid ""
+"Commit or discard local changes before syncing this store. Local commits are "
+"also waiting to sync."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de a sincroniza "
+"acest depozit. Există și commituri locale care așteaptă sincronizarea."
+
+#: crates/keycord-git/src/sync.rs:24
+msgid ""
+"Commit or discard local changes before syncing this store. Remote commits "
+"are also waiting to sync."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de a sincroniza "
+"acest depozit. Există și commituri la distanță care așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de sincronizare."
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid ""
+"Commit or discard local changes before syncing. Local and remote commits are "
+"also waiting to sync."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de "
+"sincronizare. Există și commituri locale și la distanță care așteaptă "
+"sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid ""
+"Commit or discard local changes before syncing. Local commits are also "
+"waiting to sync."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de "
+"sincronizare. Există și commituri locale care așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid ""
+"Commit or discard local changes before syncing. Remote commits are also "
+"waiting to sync."
+msgstr ""
+"Creează un commit sau renunță la modificările locale înainte de "
+"sincronizare. Există și commituri la distanță care așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "Înregistrat la"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "Înregistrat de"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "Confirmă noul PIN al cheii de securitate"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "Confirmă parola"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "Confirmă noul PIN al cheii de securitate."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "Conectează mai întâi o cheie hardware."
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "Conectează o singură cheie de securitate FIDO2 înainte de a continua."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "Conectează o singură cheie hardware înainte de a o adăuga."
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "Conectează cheia de securitate FIDO2 și încearcă din nou."
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "Conectează mai întâi cheia de securitate FIDO2."
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "Conectează cheia hardware și încearcă din nou."
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "Conectează mai întâi cheia hardware."
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "Conectează cheia de securitate FIDO2 corespunzătoare."
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "Conectează cheia hardware corespunzătoare înainte de a o importa."
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "Context"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "Copiat."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "Copiază codul OTP"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "Copiază cheia privată cu armură ASCII"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "Copiază cheia publică cu armură ASCII"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "Copiază cheia privată experimentală protejată prin FIDO2"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "Copiază amprenta"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "Copiază jurnalele"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "Copiază parola"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "Copiază parola în clipboard"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "Copiază comanda de acordare a permisiunii"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr "Copiază în clipboard rezultatele recente ale aplicației și comenzilor."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "Copiază parola elementului selectat"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "Copiază numele de utilizator"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "Copiază valoarea"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "Dosarul pentru date nu a putut fi determinat."
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "Dosarul personal nu a putut fi determinat."
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "Dosarul nu a putut fi adăugat."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "Cheia hardware nu a putut fi adăugată."
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "Cheia hardware generată nu a putut fi certificată"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "Nu s-a putut verifica dacă există actualizări."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "Cheia nu a putut fi copiată."
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "Parola nu a putut fi copiată."
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr "Certificatul cheii publice nu a putut fi creat pe cheia hardware."
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "Depozitul nu a putut fi creat."
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "Datele criptate prin FIDO2 nu au putut fi decriptate."
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "Elementul nu a putut fi șters."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "Actualizarea nu a putut fi descărcată."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "Parolele nu au putut fi exportate."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "Nu s-a găsit cheia cu amprenta corespunzătoare"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "Cheia hardware pentru decriptare nu a putut fi generată"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "Cheia hardware pentru semnare nu a putut fi generată"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "Cheia nu a putut fi generată."
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "Permisiunea nu a putut fi acordată."
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "Cheia de acces nu a putut fi importată"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "Parolele nu au putut fi importate."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "Cheia nu a putut fi importată."
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "Cheia de securitate FIDO2 nu a putut fi inițializată."
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Depozitele Git la distanță nu au putut fi verificate."
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Starea Git nu a putut fi verificată"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "Cheile GPG de pe gazdă nu au putut fi verificate"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "Cheia hardware nu a putut fi verificată."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "Actualizarea nu a putut fi instalată."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr ""
+"Cheile private nu au putut fi menținute sincronizate. Sincronizarea a fost "
+"dezactivată."
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "Commiturile nu au putut fi încărcate."
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "Datele nu au putut fi încărcate"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "Cheile private nu au putut fi încărcate"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "Codul nu a putut fi încărcat."
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "Elementul nu a putut fi mutat."
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "Nu s-a putut deschide o fereastră nouă."
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "Cererea pentru cheia de acces nu a putut fi deschisă"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "Elementul nu a putut fi deschis."
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "Selectorul de fișiere nu a putut fi deschis."
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "Selectorul de dosare nu a putut fi deschis."
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "Dosarul nu a putut fi deschis."
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "Pagina de import nu a putut fi deschisă."
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "Legătura nu a putut fi deschisă."
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "Accesul la instrumente nu a putut fi pregătit."
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid ""
+"Couldn't present the Git signing unlock dialog. Continuing without a "
+"signature."
+msgstr ""
+"Dialogul de deblocare pentru semnarea Git nu a putut fi afișat. Se continuă "
+"fără semnătură."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "Fișierul nu a putut fi citit."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "Dosarul nu a putut fi citit."
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "Cheia nu a putut fi citită."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "Clipboardul nu a putut fi citit."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "Cheia nu a putut fi eliminată."
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "Depozitul la distanță nu a putut fi eliminat."
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "Elementul nu a putut fi redenumit."
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr "Sesiunea de administrare a cheii hardware nu a putut fi redeschisă"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "Depozitul nu a putut fi restaurat."
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "Modificările nu au putut fi salvate."
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "Cheile depozitului nu au putut fi salvate."
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "Depozitul la distanță nu a putut fi salvat."
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "Opțiunea nu a putut fi salvată."
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "Filtrul selectat nu a putut fi salvat."
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "Cheia hardware publică generată nu a putut fi serializată"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "Numele titularului cheii hardware nu a putut fi stabilit"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "PIN-ul de utilizator al cheii hardware nu a putut fi stabilit"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "Parola nu a putut fi afișată drept cod QR."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "Programul de instalare nu a putut fi pornit."
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "Cheile private nu au putut fi sincronizate."
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "Depozitul nu a putut fi sincronizat."
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "Depozitele nu au putut fi sincronizate."
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid ""
+"Couldn't unlock private key {fingerprint_for_failure} for Git signing. "
+"Continuing without a signature."
+msgstr ""
+"Cheia privată {fingerprint_for_failure} nu a putut fi deblocată pentru "
+"semnarea Git. Se continuă fără semnătură."
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "Cheia de securitate FIDO2 nu a putut fi deblocată."
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "Cheia hardware nu a putut fi deblocată."
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "Cheia nu a putut fi deblocată."
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "Meniul aplicației nu a putut fi actualizat."
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "Codul nu a putut fi actualizat."
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "PIN-ul de administrator al cheii hardware nu a putut fi verificat"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "PIN-ul solicitat al cheii hardware nu a putut fi verificat"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "Creează o cheie nouă protejată prin FIDO2."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr ""
+"Creează o cheie OpenPGP nouă pe un smartcard conectat și neconfigurat sau pe "
+"un dispozitiv YubiKey conectat și neconfigurat."
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "Creează un fișier pass nou."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "Creează o cheie nouă protejată prin parolă."
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr ""
+"Creează pentru depozitele de parole o cheie privată protejată prin parolă."
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr ""
+"Creează o cheie OpenPGP pe un smartcard conectat și neconfigurat sau pe un "
+"dispozitiv YubiKey conectat și neconfigurat."
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "Semnătură invalidă din punct de vedere criptografic"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "Destinatarii din vârful ramurii curente"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "Versiune curentă:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "Implicit"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "Șterge"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "Șterge cheia GPG privată de pe gazdă"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "Șterge intrarea de parolă"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "Șterge fișierul pass selectat"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "HEAD detașat"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "Detalii"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid ""
+"Dismissed the Git signing unlock prompt for {context_for_close}. Continuing "
+"without a signature."
+msgstr ""
+"Solicitarea de deblocare pentru semnarea Git a fost închisă pentru "
+"{context_for_close}. Se continuă fără semnătură."
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "Documentație"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "Descărcat"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "Editează o intrare de parolă"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid ""
+"Edit entries with form fields or raw pass-file text, generate passwords, "
+"copy field values, and show passwords, usernames, one-time codes, or other "
+"fields as QR codes"
+msgstr ""
+"Editează intrările folosind câmpuri de formular sau textul brut al "
+"fișierului pass, generează parole, copiază valorile câmpurilor și afișează "
+"sub formă de cod QR parole, nume de utilizator, coduri de unică folosință "
+"sau alte câmpuri"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "Editează depozitul la distanță"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "E-mail"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "Câmpurile de e-mail trebuie să conțină o adresă de e-mail validă."
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "Gol"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "Activată pentru acest rezultat"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "Introdu o comandă."
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "Introdu numele unui câmp."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "Introdu parola unei chei."
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "Introdu un nume pentru cheia hardware."
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "Introdu un nume pentru cheia privată."
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "Introdu un nume."
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "Introdu un nume de utilizator pentru cheia de acces."
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "Introdu URL-ul unui depozit la distanță."
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "Introdu numele unui depozit la distanță."
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "Introdu URL-ul unui depozit."
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "Introdu un nume de utilizator."
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "Introdu o cheie privată PKCS#8 validă pentru cheia de acces."
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "Introdu o adresă de e-mail validă."
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "Introdu un identificator RP valid pentru cheia de acces."
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "Introdu un URL HTTP sau HTTPS."
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "Introdu un secret OTP."
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "Introdu o adresă de e-mail pentru cheia hardware."
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "Introdu o adresă de e-mail pentru cheia privată."
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "Introdu o adresă de e-mail."
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "Introdu PIN-ul cheii de securitate FIDO2."
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "Introdu PIN-ul cheii hardware."
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "Introdu PIN-ul de administrator al cheii hardware."
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "Introdu parola cheii."
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "Introdu noul PIN al cheii hardware."
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "Introdu noul PIN al cheii de securitate."
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "Introdu parola cheii private."
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "Introdu PIN-ul cheii de securitate."
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "Extinde editorul de parole pentru a afișa acțiunile de curățare"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid ""
+"Experimental FIDO2-protected private keys need USB device access before "
+"Keycord can use a connected security key to unlock protected private keys. "
+"Restart Keycord after granting access."
+msgstr ""
+"Cheile private experimentale protejate prin FIDO2 necesită acces la "
+"dispozitive USB pentru ca Keycord să poată folosi o cheie de securitate "
+"conectată la deblocarea lor. Repornește Keycord după acordarea accesului."
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid ""
+"Experimental hardware-key workflows need PC/SC access to use connected "
+"OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected "
+"keys remain available without this."
+msgstr ""
+"Operațiile experimentale cu chei hardware necesită acces PC/SC pentru a "
+"folosi smartcarduri OpenPGP sau chei YubiKey conectate. Apoi, repornește "
+"Keycord. Cheile protejate prin parolă rămân disponibile și fără acest acces."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid ""
+"Experimental multi-layer encryption. When on, every selected key must be "
+"unlocked and other pass apps will not be able to read these items."
+msgstr ""
+"Criptare experimentală în mai multe straturi. Când este activată, fiecare "
+"cheie selectată trebuie deblocată, iar alte aplicații pass nu vor putea citi "
+"aceste elemente."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "Opțiuni experimentale pentru depozit"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "Exportă"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "Exporți toate parolele?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "Exportă fiecare parolă și fiecare câmp într-un fișier CSV."
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "Exportă cheia GPG privată de pe gazdă"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "Exportă cheile GPG publice de pe gazdă"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "Exportă parolele"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "Parole exportate: {count}."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "Parole exportate: {count}."
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "Manifestul cheii private FIDO2"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr ""
+"Suportul pentru chei private FIDO2 este dezactivat în această versiune a "
+"aplicației Keycord."
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "Cheie de securitate FIDO2"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr ""
+"Suportul FIDO2 este dezactivat în această versiune a aplicației Keycord."
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "Înveliș text FIDO2"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr ""
+"Nu s-a putut aloca un dosar privat pentru pregătirea actualizării Linux."
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "Nu s-a putut aloca un nume de fișier temporar."
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "Dialogul pentru scurtături nu a putut fi creat."
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "Fereastra principală nu a putut fi creată."
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr ""
+"Opțiunile selectorului de fișiere Windows nu au putut fi configurate: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr ""
+"Opțiunile selectorului de salvare Windows nu au putut fi configurate: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr ""
+"Dosarul de pregătire a actualizării Linux „{}” nu a putut fi creat: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr ""
+"Rădăcina de pregătire a actualizării Linux „{}” nu a putut fi creată: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Selectorul de fișiere Windows nu a putut fi creat: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr "Selectorul de salvare Windows nu a putut fi creat: {err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "Semnătura cu armură ASCII nu a putut fi decodată"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "Datele UTF-8 decriptate nu au putut fi decodate"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "Nu s-au putut deriva suficiente date de ieșire HKDF."
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr ""
+"Materialul criptografic al cheii de acces nu a putut fi codificat: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "Datele JSON ale cheii de acces nu au putut fi exportate: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "Materialul criptografic al cheii de acces nu a putut fi generat: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "{id} nu a putut fi obținut"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr ""
+"Nu s-a putut calcula suma de control a fișierului de actualizare „{}”: "
+"{error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "COM nu a putut fi inițializat pentru selectorul de fișiere: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr "COM nu a putut fi inițializat pentru selectorul de salvare: {err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "libadwaita nu a putut fi inițializată."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "Actualizarea descărcată nu a putut fi instalată: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr ""
+"Actualizarea descărcată nu a putut fi marcată drept executabilă: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "Cheia privată a cheii de acces nu a putut fi normalizată: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "Intrarea standard a comenzii nu a putut fi deschisă"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr ""
+"Spațiul administrat de stocare a cheilor private nu a putut fi pregătit."
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "Generarea cheii de acces nu a putut fi pregătită: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr ""
+"Materialul criptografic al cheii de acces nu a putut fi pregătit: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr ""
+"Metadatele rădăcinii de pregătire a actualizării Linux „{}” nu au putut fi "
+"citite: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Opțiunile selectorului de fișiere Windows nu au putut fi citite: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr "Opțiunile selectorului de salvare Windows nu au putut fi citite: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "Ieșirea stderr a comenzii nu a putut fi citită: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "Ieșirea stdout a comenzii nu a putut fi citită: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "Intrarea de parolă „{}” din „{}” nu a putut fi citită: {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr ""
+"Fișierul cererii pentru cheia de acces {path:?} nu a putut fi citit: {source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "Calea Windows selectată nu a putut fi citită: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "Calea de salvare Windows selectată nu a putut fi citită: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "Fișierul selectat cu cheia hardware publică nu a putut fi citit"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "Fișierul selectat cu cheia privată nu a putut fi citit"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "Metadatele fișierului de actualizare nu au putut fi citite: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr ""
+"Resursele pentru instalarea actualizării Linux nu au putut fi înregistrate: "
+"{error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "Resursele nu au putut fi înregistrate."
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr "Calea executabilului curent nu a putut fi determinată: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr ""
+"Executabilul auxiliar pentru actualizare nu a putut fi identificat: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "Comanda nu a putut fi executată: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "Comanda git nu a putut fi executată: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr "Programul „{program}” de pe gazdă nu a putut fi executat: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "Comanda backend-ului Host nu a putut fi executată: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "{} nu a putut fi executat: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr ""
+"Rădăcina de pregătire a actualizării Linux „{}” nu a putut fi securizată: "
+"{error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Tipul fișierului de salvare Windows nu a putut fi selectat: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "Configurația nu a putut fi serializată: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "Datele stocate ale cheii de acces nu au putut fi serializate: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr ""
+"Eticheta butonului selectorului de fișiere Windows nu a putut fi stabilită: "
+"{err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr "Titlul selectorului de fișiere Windows nu a putut fi stabilit: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr "Extensia fișierului de salvare Windows nu a putut fi stabilită: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Numele fișierului de salvare Windows nu a putut fi stabilit: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr ""
+"Eticheta butonului selectorului de salvare Windows nu a putut fi stabilită: "
+"{err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr "Titlul selectorului de salvare Windows nu a putut fi stabilit: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr ""
+"Tipurile de fișiere pentru salvare în Windows nu au putut fi stabilite: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Selectorul de fișiere Windows nu a putut fi afișat: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr "Selectorul de salvare Windows nu a putut fi afișat: {err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Keycord nu a putut fi pornit: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr ""
+"Programul auxiliar pentru instalarea actualizării Linux nu a putut fi "
+"pornit: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr "msiexec nu a putut fi pornit pentru instalarea actualizării: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "Comanda de acordare a permisiunii nu a putut fi pornită: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "Nu s-a putut aștepta încheierea comenzii: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "Datele de intrare ale comenzii nu au putut fi scrise: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "Fișierul de configurare nu a putut fi scris: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "Exportul parolelor nu a putut fi scris în „{path}”: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "{context} a eșuat: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr "Preia din depozitul Git la distanță {remote} al depozitului de parole"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid ""
+"Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr ""
+"Preia, îmbină și publică ramura „{branch}” curentă în toate depozitele la "
+"distanță."
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "Numele câmpurilor nu pot conține „:”."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "Valorile câmpurilor"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "Filtrează rezultatele"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "Găsește un element"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "Găsește parolele slabe"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid ""
+"Find weak passwords, browse repeated field values, filter by store, and "
+"export password stores to CSV"
+msgstr ""
+"Găsește parolele slabe, răsfoiește valorile repetate ale câmpurilor, "
+"filtrează după depozit și exportă depozitele de parole în format CSV"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "Prima versiune"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "A fost corectată pictograma Înapoi"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "A fost corectată sincronizarea Git opțională"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr "A fost corectată o eroare OTP care invalida secrete valide."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "Au fost corectate permisiunile pentru smartcarduri"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "A fost corectat furnizorul de căutare GNOME."
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "Generale"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "Generează o cheie protejată prin FIDO2 (experimental)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "Generează sau importă o cheie privată."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "Generează o parolă"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "Generează o cheie privată"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "Se generează cheia protejată prin FIDO2 (experimental)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "Se generează cheia"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Comanda Git nu a returnat niciun rezultat."
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "Istoric și verificare Git"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "Git nu este disponibil în acest mediu de execuție."
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Depozite Git la distanță"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Conexiunea cu procesul de verificare a stării Git s-a întrerupt"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "Înapoi"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "Mergi la pagina principală"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "Acordă"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "Acordă acces la cheia de securitate USB (FIDO2 experimental)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid ""
+"Grant USB security key access for experimental FIDO2-protected private keys "
+"first."
+msgstr ""
+"Acordă mai întâi acces la cheia de securitate USB pentru cheile private "
+"experimentale protejate prin FIDO2."
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "Acordă acces la gazdă"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid ""
+"Grant host access first if you want Keycord to keep its private keys in step "
+"with your computer's GPG private keys."
+msgstr ""
+"Acordă mai întâi acces la gazdă dacă dorești ca Keycord să-și sincronizeze "
+"cheile private cu cheile GPG private de pe calculator."
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "Acordă mai întâi acces la gazdă."
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr "Acordă acces la gazdă pentru preluare, îmbinare și publicare."
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "Acordă permisiunea"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "Acordă acces la smartcard"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "Acordă mai întâi acces la smartcard."
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "Ghiduri și referințe"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid ""
+"Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr ""
+"Cheile hardware OpenPGP nu sunt acceptate în această versiune sau pe această "
+"platformă."
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "PIN-ul cheii hardware"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "Cheia hardware a fost adăugată."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "PIN-ul de administrator al cheii hardware"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Ajută la traducerea Keycord"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "Ascunde definitiv"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "Alternativă din istoric"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "Destinatari din istoric"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "Acasă"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Host"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Host Git (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Host Git (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "Acces la gazdă"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr "Funcțiile bazate pe comenzi Host sunt disponibile numai pe Linux."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "Importă"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr ""
+"Importă o cheie privată în Preferințe înainte de a folosi depozitul de "
+"parole."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "Importă o cheie privată existentă sau conectează un token hardware."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "Importă cheia hardware publică (experimental)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "Importă cheia GPG privată de pe gazdă"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "Importă cheia"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "Importă cheia din clipboard"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "Imporți cheia de acces?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "Parolă pentru import (opțional)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "Importă parolele"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "Importă parolele cu pass import"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "Importă cheia privată"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "Importă cheia privată din acest element"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "Sursă pentru import"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "Importator"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "Se importă cheia"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "Se importă parolele"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid ""
+"Improved header actions and hid filters when they cannot affect the current "
+"view."
+msgstr ""
+"Au fost îmbunătățite acțiunile din antet, iar filtrele sunt ascunse când nu "
+"pot influența vizualizarea curentă."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr ""
+"A fost îmbunătățită selectarea destinatarilor pentru depozitele cu multe "
+"chei posibile."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr ""
+"Au fost îmbunătățite căutarea, filtrarea, navigarea de la tastatură și "
+"editarea intrărilor."
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "Informații"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "Inițializează depozitul Git al depozitului de parole"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr ""
+"Consultă istoricul Git al tuturor depozitelor și verifică semnăturile "
+"commiturilor."
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "Consultă istoricul modificărilor"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "Consultă istoricul modificărilor și verifică commiturile"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "Verifică cheile GPG private de pe gazdă"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "Verifică HEAD-ul Git al depozitului de parole"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "Verifică ramura Git a depozitului de parole"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr ""
+"Verifică fișierele Git ale depozitului de parole înainte de primul commit"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr ""
+"Verifică ramura {remote}/{branch} din depozitul Git la distanță al "
+"depozitului de parole"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr "Verifică intervalul de revizii Git {range} al depozitului de parole"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "Verifică modificările urmărite de Git în depozitul de parole"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "Verifică fișierele neurmărite de Git din depozitul de parole"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "Consultă rezultatele recente ale aplicației și comenzilor."
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Se verifică depozitele gestionate prin Git și se caută ramurile."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "Se verifică cheile private și dispozitivele hardware conectate."
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr ""
+"Instalează Git pentru a folosi destinatarii din istoricul commiturilor la "
+"verificarea auditului."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "Instalează actualizarea"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr ""
+"Instalarea actualizării va închide Keycord. Modificările nesalvate se vor "
+"pierde."
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Integrated"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "Amprentă de asociere FIDO2 nevalidă „{value}”."
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "Cale nevalidă către dispozitivul FIDO2: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "Date criptate FIDO2 nevalide."
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "Intrare de parolă nevalidă, criptată cu toate cheile."
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "Rezultat nevalid pentru lotul git cat-file."
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "Antet git cat-file nevalid."
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "Metadate nevalide pentru semnătura Git de pe gazdă."
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "Extensii FIDO2 nevalide pentru cheia de acces: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "Date JSON nevalide pentru cheia de acces: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "Câmpul „{label}” al cheii de acces nu este valid: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "Cale nevalidă către intrarea de parolă."
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "Amprentă nevalidă pentru cheia privată „{value}”: {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "Cale nevalidă către fișierul cu destinatari."
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "Date JSON stocate nevalide pentru cheia de acces: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid ""
+"Keep Keycord's private keys and your computer's GPG private keys in step "
+"when host access is available."
+msgstr ""
+"Menține sincronizate cheile private Keycord și cheile GPG private de pe "
+"calculator atunci când accesul la gazdă este disponibil."
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr ""
+"Păstrează disponibilă o altă cheie privată selectată înainte de a elimina "
+"această cheie."
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "Păstrează disponibilă cel puțin o cheie privată selectată."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr "Grupează intrările după depozit și dosar înainte de numele fișierului."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr ""
+"Păstrează dosarele în listă, dar sortează rezultatele căutării după numele "
+"fișierului pass."
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr ""
+"Păstrează această cheie selectată cât timp sunt necesare toate cheile "
+"private selectate."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "Fișierul cheii a fost eliminat."
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "Cheia a fost generată."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "Cheia a fost importată."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "Parola cheii"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Cheie privată Keycord protejată prin FIDO2"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Actualizare Keycord"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr "Keycord nu a putut finaliza instalarea actualizării Linux descărcate."
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "Keycord nu a putut pregăti elementul pentru cheia de acces. {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord este deja actualizat."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid ""
+"Keycord is an adaptive graphical client for password folders that use the "
+"standard pass layout. Existing stores remain normal pass stores on disk, so "
+"they keep working with pass and other compatible tools."
+msgstr ""
+"Keycord este un client grafic adaptiv pentru dosarele de parole care "
+"folosesc structura standard pass. Depozitele existente rămân depozite pass "
+"obișnuite pe disc, așadar funcționează în continuare cu pass și cu alte "
+"instrumente compatibile."
+
+#: src/composition/host_access.rs:64
+msgid ""
+"Keycord is running in a protected space, so some optional features stay off "
+"until you allow this. If you allow it, Keycord can use tools from your "
+"computer such as GPG, the Host backend, and pass import. If you don't, "
+"Keycord still works with the integrated backend."
+msgstr ""
+"Keycord rulează într-un spațiu protejat, așa că unele funcții opționale "
+"rămân dezactivate până când permiți acest acces. După acordarea lui, Keycord "
+"poate folosi instrumente de pe calculator, precum GPG, backend-ul Host și "
+"pass import. Fără acest acces, Keycord funcționează în continuare cu backend-"
+"ul Integrated."
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid ""
+"Keycord opened a credential export request that names {importer} as the "
+"importer and checked its structure. The local file does not authenticate "
+"that identity. Keycord does not yet generate CXP response archives, so no "
+"passkey data was released."
+msgstr ""
+"Keycord a deschis o cerere de export al credențialelor care indică "
+"{importer} drept importator și i-a verificat structura. Fișierul local nu "
+"autentifică această identitate. Keycord nu generează încă arhive de răspuns "
+"CXP, prin urmare nu au fost divulgate date pentru chei de acces."
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid ""
+"Keycord will first make its private-key list match the GPG private keys on "
+"your computer. After that, creating, importing, or deleting a private key in "
+"Keycord will update the host too. Keys that only exist in Keycord may be "
+"removed during the first sync."
+msgstr ""
+"Mai întâi, Keycord va face ca lista sa de chei private să corespundă cheilor "
+"GPG private de pe calculator. După aceea, crearea, importarea sau ștergerea "
+"unei chei private în Keycord va actualiza și gazda. Cheile care există numai "
+"în Keycord pot fi eliminate în timpul primei sincronizări."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "Cheile acestui depozit"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "Mai târziu"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid ""
+"Leave this empty if the source does not use a password, for example a Chrome "
+"CSV."
+msgstr ""
+"Lasă câmpul gol dacă sursa nu folosește o parolă, de exemplu în cazul unui "
+"fișier CSV din Chrome."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "Lungime"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Actualizării Linux îi lipsește dosarul de curățare."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "Listă"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr ""
+"Listează referințele de audit Git ale depozitului de parole de sub {prefix}"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "Listează depozitele Git la distanță ale depozitului de parole"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr ""
+"Listează fișierele cu destinatari din arborele Git {object} al depozitului "
+"de parole"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "Încarcă mai multe commituri"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "Se încarcă"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "Se încarcă commiturile"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "Se încarcă datele"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "Se încarcă valorile câmpurilor"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "Se încarcă cheile"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "Se încarcă elementele tale."
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr "Commituri locale și la distanță așteaptă sincronizarea pe „{branch}”."
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "Commituri locale și la distanță așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "Ramură locală"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr ""
+"S-au găsit modificări locale. Creează un commit sau renunță mai întâi la ele."
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr ""
+"S-au găsit modificări locale. Există și commituri locale și la distanță care "
+"așteaptă sincronizarea."
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr ""
+"S-au găsit modificări locale. Există și commituri locale care așteaptă "
+"sincronizarea."
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr ""
+"S-au găsit modificări locale. Există și commituri la distanță care așteaptă "
+"sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "Commiturile locale sunt gata de publicare pe „{branch}”."
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "Commiturile locale așteaptă sincronizarea."
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "Jurnale"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "Se caută în GitHub Releases o versiune autonomă Linux mai nouă."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "Se caută în GitHub Releases un program de instalare Windows mai nou."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "Litere mici"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "Meniu principal"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "Creează un commit inițial înainte de sincronizare."
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr ""
+"Creează un commit inițial pe „{branch}” înainte de a sincroniza acest "
+"depozit."
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "Creează un commit inițial pe „{branch}” înainte de sincronizare."
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "Antete de commit Git incorect formate."
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "Obiect de commit Git incorect format."
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "Antet de semnătură Git incorect format."
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "Semnătură incorect formată sau neacceptată"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "Administrează cheile private"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid ""
+"Manage store recipients, folder-specific .gpg-id files, and password-"
+"protected private keys, including file and clipboard imports and optional "
+"host GPG synchronization"
+msgstr ""
+"Administrează destinatarii depozitelor, fișierele .gpg-id din anumite dosare "
+"și cheile private protejate prin parolă, inclusiv importarea din fișiere și "
+"clipboard și sincronizarea GPG opțională cu gazda"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "Administrează depozitele"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr ""
+"Configurarea administrată a cheilor hardware este dezactivată în această "
+"versiune a aplicației Keycord."
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid ""
+"Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr ""
+"Datele administrate ale cheii private „{}” nu corespund amprentei solicitate "
+"„{}”."
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid ""
+"Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr ""
+"{artifact_kind} „{}” al cheii private administrate nu corespunde căii "
+"canonice „{}”."
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr ""
+"Adăugarea și importarea administrată a smartcardurilor sunt dezactivate în "
+"această versiune a aplicației Keycord."
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr ""
+"Administrarea fișierelor .gpg-id imbricate necesită backend-ul Integrated."
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "Se potrivește cu o parolă folosită frecvent"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "Îmbină ramura Git {target} a depozitului de parole"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "Mesaj"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "Număr minim; 0 dezactivează"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "Lipsește certificatul OpenPGP pentru cheia hardware stocată."
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "Lipsește certificatul OpenPGP pentru cheia privată stocată."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "Lipsește proprietarul din URL-ul depozitului: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "Lipsesc datele brute ale commitului pentru {}."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "Lipsește numele depozitului din URL: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "Mută"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "Mută fișierul pass"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "Mută fișierul pass selectat"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "Mută în depozit"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "Mutat."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "Nume"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "Navigare"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "Șablon nou pentru parolă"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "Depozit nou"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "Noul PIN al cheii hardware"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "Element nou"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "Noul PIN al cheii de securitate"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr ""
+"Nu există încă niciun depozit Git. Adaugă un depozit la distanță pentru a-l "
+"inițializa."
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Niciun depozit gestionat prin Git"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Nu este disponibil niciun depozit gestionat prin Git."
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "Nu există încă nicio ramură."
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "Nicio cale modificată"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "Niciun commit încărcat"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "Nu s-a găsit niciun dosar pentru date"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "Nu este disponibil niciun afișaj."
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "Nu s-a găsit dosarul executabilului"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "Niciun dosar adăugat"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "Nu există încă niciun element"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr ""
+"Verificările curente nu au găsit parole slabe în niciun fișier pass încărcat."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "Nicio potrivire"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "Niciun depozit Git la distanță corespunzător"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "Nicio ramură corespunzătoare"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "Niciun document corespunzător"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "Niciun câmp corespunzător"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "Nicio preferință corespunzătoare"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "Niciun rezultat corespunzător"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "Nicio cheie corespunzătoare pentru depozit"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "Niciun instrument corespunzător"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "Nicio valoare corespunzătoare"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "Niciun depozit de parole"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "Niciun depozit de parole"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "Niciun destinatar configurat"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "Nu s-a găsit niciun destinatar pentru această intrare de parolă."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "Nu există încă niciun destinatar"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "Nu este configurat niciun depozit la distanță."
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "Nicio cheie standard de destinatar nu poate fi identificată"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "Niciun câmp disponibil pentru căutare"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "Nicio semnătură"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "Nicio valoare"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "Nu s-a găsit nicio parolă slabă"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "Indisponibil"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "Nu este selectat nimic"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "Cifre"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "Cod OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "Secret OTP"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr "Unul sau mai multe dosare locale de instalare nu permit scrierea."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid ""
+"Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr ""
+"Activează funcțiile FIDO2 experimentale numai când se folosește backend-ul "
+"Integrated."
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr "Sunt acceptate numai fișiere obișnuite din sistemul de fișiere local."
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Deschide instrumentele Git"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "Deschide Preferințe pentru a adăuga dosarul unui depozit."
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "Deschide URL-ul"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Deschide Weblate"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr ""
+"Deschide un depozit gestionat prin Git pentru a-i consulta ramurile și "
+"commiturile."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "Deschide un element nou"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "Deschide mai întâi un depozit."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "Deschide mai întâi un element."
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "Deschide documentația"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "Deschide câte o singură cerere de cheie de acces."
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "Deschide ghidurile și referințele."
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "Deschide în administratorul de fișiere"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "Deschide într-o fereastră nouă"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "Deschide jurnalele"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid ""
+"Open one or more password stores and search by name, store, field, regular "
+"expression, or structured find query"
+msgstr ""
+"Deschide unul sau mai multe depozite de parole și caută după nume, depozit, "
+"câmp, expresie regulată sau interogare de căutare structurată"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "Deschide Preferințe"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "Deschide textul brut"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "Deschide depozitele Git la distanță ale depozitului 1"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "Deschide cheile depozitului 1"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "Deschide depozitele Git la distanță ale depozitului 2"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "Deschide cheile depozitului 2"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "Deschide depozitele Git la distanță ale depozitului 3"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "Deschide cheile depozitului 3"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "Deschide depozitele Git la distanță ale depozitului 4"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "Deschide cheile depozitului 4"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "Deschide depozitele Git la distanță ale depozitului 5"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "Deschide cheile depozitului 5"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "Deschide depozitele Git la distanță ale depozitului 6"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "Deschide cheile depozitului 6"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "Deschide instrumentele"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "Se deschide"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "Se deschide elementul"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "Sau folosește o cheie hardware (experimental)."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "Alte modalități de a adăuga o cheie"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "Fișier pass"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "Fișiere pass"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "Cheie de acces"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "Extensiile FIDO2 ale cheii de acces trebuie să fie un obiect JSON."
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "Cererea de export a cheii de acces a fost deschisă"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "Parolă"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "Generarea parolei"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "Lista parolelor"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "Depozite de parole"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "Acțiuni pentru parolă"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "Intrarea de parolă „{label}” nu a fost găsită."
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "Intrarea de parolă „{old_label}” nu a fost găsită."
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "Numele intrării de parolă este gol."
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "Parola este goală"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "Parola conține numai spații"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "Lista parolelor"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "Opțiuni pentru parolă"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid ""
+"Password store Git state: {root} -> Git repository detected, but Git "
+"commands are disabled in this build."
+msgstr ""
+"Starea Git a depozitului de parole: {root} -> depozit Git detectat, dar "
+"comenzile Git sunt dezactivate în această versiune."
+
+#: crates/keycord-git/src/repository.rs:75
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, network operations enabled."
+msgstr ""
+"Starea Git a depozitului de parole: {root} -> depozit Git detectat, "
+"commituri locale activate, operații de rețea activate."
+
+#: crates/keycord-git/src/repository.rs:80
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, remote sync disabled in this backend."
+msgstr ""
+"Starea Git a depozitului de parole: {root} -> depozit Git detectat, "
+"commituri locale activate, sincronizarea la distanță este dezactivată în "
+"acest backend."
+
+#: crates/keycord-git/src/repository.rs:65
+msgid ""
+"Password store Git state: {root} -> no Git repository detected, local "
+"commits disabled, network operations disabled."
+msgstr ""
+"Starea Git a depozitului de parole: {root} -> nu s-a detectat niciun depozit "
+"Git, commituri locale dezactivate, operații de rețea dezactivate."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "Configurația depozitelor de parole: nu este configurat niciun depozit."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "Configurația depozitelor de parole — depozite configurate: {}."
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "Parolele au fost importate."
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "Cale sau nume"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "Comanda de acordare a permisiunii a eșuat"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "Alege un câmp din lista curentă."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "Alege o valoare din lista curentă."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "Amprenta cheii private „{value}” nu are lungimea așteptată."
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid ""
+"Private key unlock worker disconnected while preparing a Git signature for "
+"{fingerprint}."
+msgstr ""
+"Conexiunea cu procesul de deblocare a cheii private s-a întrerupt în timpul "
+"pregătirii semnăturii Git pentru {fingerprint}."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "Cheile private nu pot fi verificate"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "Cheile private au fost sincronizate."
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr ""
+"Sincronizarea cheilor private cu gazda este disponibilă numai pe Linux."
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr "Publică ramura Git {branch} a depozitului de parole în {remote}"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "Cod QR"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "Identificator RP"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "Text brut"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid ""
+"Read an armored private key or experimental FIDO2-protected private key from "
+"the clipboard."
+msgstr ""
+"Citește din clipboard o cheie privată cu armură ASCII sau o cheie privată "
+"experimentală protejată prin FIDO2."
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr ""
+"Citește căile modificate din commitul Git {oid} al depozitului de parole"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr ""
+"Citește metadatele semnăturilor Git de pe gazdă pentru commiturile "
+"depozitului de parole"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "Citește sursele pass import"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "Citește versiunea pass"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "Citește intrarea de parolă"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "Citește intrarea de parolă pentru copiere în clipboard"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "Citește HEAD-ul Git al depozitului de parole"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr ""
+"Citește jurnalul de audit Git al depozitului de parole pentru {full_ref}"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr ""
+"Citește URL-ul depozitului Git la distanță al depozitului de parole pentru "
+"{name}"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr ""
+"Citește fișierul {object_path} din arborele Git al depozitului de parole"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "Citește commiturile Git brute ale depozitului de parole"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "Citește următoarele commituri ({count})."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "Se citesc rândurile cu parole din lista curentă."
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "Se citește istoricul Git recent al acestei ramuri."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr "Se citesc câmpurile pass disponibile pentru căutare din lista curentă."
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "Motiv"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "Destinatarul „{recipient_id}” nu este disponibil în aplicație."
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid ""
+"Recipient '{recipient_id}' matches multiple keys in the app. Use a "
+"fingerprint instead."
+msgstr ""
+"Destinatarul „{recipient_id}” corespunde mai multor chei din aplicație. "
+"Folosește în schimb o amprentă."
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "Sursa destinatarului"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "Fișier cu destinatari"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "Destinatarii din commitul auditat"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "Recomandat pentru depozite noi"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "Reconectează cheia de securitate FIDO2 și încearcă din nou."
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "Reconectează cheia hardware și încearcă din nou."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr ""
+"A fost redusă expunerea secretelor în căutarea GNOME, în mesajele de eroare "
+"ale comenzilor și în jurnale."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "Reîmprospătează lista curentă"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "Artefactul versiunii „{}” are o sumă de control SHA-256 nevalidă."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr ""
+"Artefactul versiunii „{}” folosește un format neacceptat pentru suma de "
+"control."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr ""
+"Artefactului versiunii „{}” îi lipsește suma de control SHA-256 de pe GitHub."
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "URL-ul depozitului la distanță"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "Depozitul la distanță a fost adăugat."
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "Commiturile de la distanță sunt gata de îmbinare în „{branch}”."
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "Commiturile de la distanță așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "Numele depozitului la distanță"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "Depozitul la distanță a fost eliminat."
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "Depozitul la distanță a fost actualizat."
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "Ramură de urmărire la distanță"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "Depozite la distanță"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "Elimină câmpurile goale"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "Elimină din meniul de aplicații"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "Elimină cheia"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "Elimină fișierul cheii"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "Elimină parola pentru {label}"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "Elimină depozitul Git la distanță al depozitului de parole"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "Elimină destinatarul"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "Elimină depozitul la distanță"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "Câmpurile goale au fost eliminate."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr ""
+"Funcția pentru depozite de parole bazate pe FIDO2 a fost eliminată din "
+"aplicația Flatpak."
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "Redenumește fișierul pass"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "Redenumește intrarea de parolă"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "Redenumește parola din {old_label} în {new_label}"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "Redenumește depozitul Git la distanță al depozitului de parole"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "Redenumește fișierul pass selectat"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "Același caracter repetat"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "Depozit"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "URL-ul depozitului"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr ""
+"Depozitul a fost găsit și este pregătit pentru administrarea depozitelor la "
+"distanță."
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "Depozitul a fost găsit. Selectează o ramură înainte de sincronizare."
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr ""
+"Depozitul a fost găsit. Creează primul commit pe „{branch}” înainte de "
+"sincronizare."
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr ""
+"Depozitul a fost găsit. Commituri locale și la distanță așteaptă "
+"sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local and remote commits are waiting to sync."
+msgstr ""
+"Depozitul a fost găsit. Modificările locale trebuie incluse într-un commit "
+"sau abandonate înainte de sincronizare; există și commituri locale și la "
+"distanță care așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local commits are waiting to sync."
+msgstr ""
+"Depozitul a fost găsit. Modificările locale trebuie incluse într-un commit "
+"sau abandonate înainte de sincronizare; există și commituri locale care "
+"așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and remote commits are waiting to sync."
+msgstr ""
+"Depozitul a fost găsit. Modificările locale trebuie incluse într-un commit "
+"sau abandonate înainte de sincronizare; există și commituri la distanță care "
+"așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync."
+msgstr ""
+"Depozitul a fost găsit. Modificările locale trebuie incluse într-un commit "
+"sau abandonate înainte de sincronizare."
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr "Depozitul a fost găsit. Commiturile locale așteaptă sincronizarea."
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr ""
+"Depozitul a fost găsit. Commiturile de la distanță așteaptă sincronizarea."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "Necesită toate cheile private selectate"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Identifică identitatea Git pentru {role}"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "Resursa nu a fost găsită: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "Repornește aplicația pentru a aplica modificările."
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "Restaurează depozitul de parole"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "Restaurarea s-a oprit în mod neașteptat."
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "Restaurează depozitul"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "Se restaurează depozitul de parole"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "Se restaurează depozitul"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid ""
+"Retry authorization with recipient files from the commit history when the "
+"current branch recipients cannot authorize the signer."
+msgstr ""
+"Încearcă din nou autorizarea folosind fișierele cu destinatari din istoricul "
+"commiturilor atunci când destinatarii ramurii curente nu pot autoriza "
+"semnatarul."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "S-a revenit la starea anterioară."
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "Salvează"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "Salvează pagina curentă sau sincronizează din pagina principală"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr ""
+"Salvează sau abandonează modificările curente înainte de a importa o cheie "
+"de acces."
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "Salvează intrarea de parolă"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "Salvează destinatarii depozitului de parole"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "Salvat."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "Se salvează fișierul cu destinatari"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Se salvează fără semnătură Git."
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr ""
+"Verifică lista curentă pentru parole care nu trec verificările de bază."
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "Scanează codul pentru a folosi această valoare pe alt dispozitiv."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "Se verifică parolele"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Caută în depozitele Git la distanță"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "Caută în documentație"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "Caută în câmpuri"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "Caută nume, depozite sau câmpuri"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "Caută în preferințe"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "Rezultatele căutării"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "Caută în cheile depozitelor"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "Caută în instrumente"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "Caută în valori"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "Caută parole slabe"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "PIN-ul cheii de securitate"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "Selectează"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "Selectează cel puțin un depozit și o ramură din meniul de filtrare."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr "Selectează cheile private care pot debloca parolele din acest depozit."
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "Caractere consecutive"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "Stabilește mai întâi un PIN pentru cheia de securitate FIDO2."
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "Stabilește PIN-ul cheii de securitate"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "Stabilește PIN-ul cheii de securitate (FIDO2 experimental)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "Configurează o cheie hardware nouă (experimental)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid ""
+"Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr ""
+"Stabilirea PIN-ului unei chei de securitate FIDO2 este acceptată numai pe "
+"Linux în această versiune."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "Se configurează cheia hardware (experimental)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "Scurtă, cu puține tipuri de caractere"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "Arată jurnalele"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "Arată codul OTP sub formă de cod QR"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "Arată opțiunile dezactivate în loc să le ascunzi"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "Arată intrările ascunse și duplicate"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "Arată parola sub formă de cod QR"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "Arată scurtăturile"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "Folosește ultimul segment al dosarului drept nume de utilizator."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "Folosește numele fișierului pass drept nume de utilizator."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "Arată numele de utilizator sub formă de cod QR"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "Arată valoarea sub formă de cod QR"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "Semnatarul nu se află printre destinatarii ramurii"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "Cheia de semnare nu este disponibilă în Keycord"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "O singură categorie de caractere și prea scurtă"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "Sortează intrările numai după numele fișierului pass."
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "Pregătește modificările Git ale depozitului de parole"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "Stare"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "Pasul {current}/{total}: atinge cheia dacă luminează intermitent."
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "Depozit"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "Depozitul a fost creat, dar nu a putut fi adăugat."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "Cheile depozitului"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "Depozitul a fost restaurat."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "Subdosarul depozitului"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "Sincronizarea depozitului s-a oprit în mod neașteptat."
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "Depozitul a fost sincronizat."
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "PIN-ul FIDO2 stocat nu este UTF-8 valid: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "Depozite"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr ""
+"Selectează backend-ul Host pentru a restaura un depozit dintr-un depozit Git."
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "Selectează backend-ul Host pentru a folosi pass import."
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid ""
+"Switch to the Integrated backend to use experimental FIDO2-protected private "
+"keys."
+msgstr ""
+"Selectează backend-ul Integrated pentru a folosi chei private experimentale "
+"protejate prin FIDO2."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "Simboluri"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid ""
+"Sync Git-backed stores, manage remotes, sign changes, and inspect history "
+"with commit verification details"
+msgstr ""
+"Sincronizează depozitele gestionate prin Git, administrează depozitele la "
+"distanță, semnează modificările și consultă istoricul împreună cu detaliile "
+"de verificare a commiturilor"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "Sincronizează acum"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "Sincronizează cheile private cu gazda"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "Sincronizează depozitele"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "Se sincronizează depozitul"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "Se sincronizează depozitele"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "Editor de text"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "Această cheie de securitate FIDO2 nu acceptă extensia hmac-secret."
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr ""
+"Această cheie de securitate FIDO2 trebuie să accepte protecția prin PIN."
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "Cheia protejată prin FIDO2 nu a putut fi exportată."
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "Datele cheii protejate prin FIDO2 sunt nevalide."
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "Cheia protejată prin FIDO2 este nevalidă."
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "Fișierul cheii OpenPGP nu conține o cheie privată."
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "Datele nu conțin o cheie privată."
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "Fișierul nu conține o cheie privată."
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr "Cheia hardware nu poate decripta intrările depozitului de parole."
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr ""
+"Cheia bazată pe hardware nu are o cheie privată care poate fi exportată."
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "Elementului îi lipsește depozitul."
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "Elementul nu mai există."
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "Cheia nu are o cheie publică care poate fi exportată."
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "Intrarea de parolă există deja."
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr "Cheia privată nu poate decripta intrările depozitului de parole."
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr "Cheia privată nu poate semna commituri Git."
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "Cheia privată nu este stocată în aplicație."
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr ""
+"Cheia privată trebuie protejată prin parolă înainte de a putea fi importată."
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "Cheia publică nu corespunde cheii hardware pentru decriptare."
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "Cheia publică nu corespunde cheii hardware pentru semnare."
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "URL-ul depozitului la distanță există deja."
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "Numele depozitului la distanță există deja."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid ""
+"The CSV file will contain every password and field in plaintext. Anyone with "
+"access to the file can read them."
+msgstr ""
+"Fișierul CSV va conține în clar fiecare parolă și fiecare câmp. Oricine are "
+"acces la fișier le va putea citi."
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "Cererea CXP nu conține un mod HPKE recunoscut."
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "Cererea CXP nu oferă formatul de arhivă deflate acceptat."
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "PIN-ul cheii de securitate FIDO2 conține un octet NUL neacceptat."
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "PIN-ul cheii de securitate FIDO2 este incorect."
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr ""
+"Cheia de securitate FIDO2 nu a returnat un identificator de credențială."
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr "Cheile private disponibile nu pot decripta acest element."
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr ""
+"Cheia hardware conectată nu corespunde cheii stocate pentru decriptare."
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr "Cheia hardware conectată nu corespunde cheii stocate pentru semnare."
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr ""
+"Filtrele curente nu corespund niciunei ramuri din depozitele selectate."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "Lista curentă nu are niciun câmp pass disponibil pentru căutare."
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "Fișierul nu este o cerere CXP de export al unei chei de acces."
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "Domeniul gettext conține un octet NUL încorporat."
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "Calea localizării gettext conține un octet NUL încorporat."
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "PIN-ul cheii hardware este blocat."
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "Cheia hardware nu a acceptat noul PIN solicitat."
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "Cheia hardware nu a returnat o amprentă pentru decriptare."
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "Cheia hardware nu a returnat o amprentă pentru semnare."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "Programul de instalare este gata de pornire."
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "Cheii de acces îi lipsește câmpul „{label}”."
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "Cererea pentru cheia de acces conține date JSON incorect formate: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "Cererea pentru cheia de acces depășește limita de {limit} de octeți."
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "Cererea pentru cheia de acces este incorect formată: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr ""
+"Sursa cererii pentru cheia de acces nu este un fișier local obișnuit: "
+"{path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "Câmpul „{label}” al cheii de acces este gol."
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr ""
+"Câmpul „{label}” al cheii de acces trebuie să folosească base64url fără "
+"caractere de umplere."
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "Editorul de parole nu este disponibil."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "Parolele nu coincid."
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "Parola cheii private este incorectă."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr ""
+"Procesul de inventariere a cheilor private s-a oprit în mod neașteptat."
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "PIN-urile cheii de securitate nu coincid."
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr ""
+"Fișierul selectat nu este o cerere locală CXP acceptată pentru o cheie de "
+"acces. {error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "Calea selectată pentru depozitul de parole nu este un dosar."
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "Calea selectată pentru depozit nu este un dosar."
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr "Datele JSON stocate nu reprezintă o credențială de tip cheie de acces."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "Cheia publică stocată nu are nicio subcheie pentru semnare."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr ""
+"Cheia publică stocată nu are nicio subcheie pentru criptarea transportului."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr "Cheii publice stocate îi lipsește cheia hardware pentru decriptare."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr "Cheii publice stocate îi lipsește cheia hardware pentru semnare."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid ""
+"The update helper cleanup directory does not match the downloaded update "
+"location."
+msgstr ""
+"Dosarul de curățare al programului auxiliar de actualizare nu corespunde "
+"locației actualizării descărcate."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr ""
+"Executabilul programului auxiliar de actualizare nu are un dosar părinte."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "Actualizarea este gata de instalare."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid ""
+"These lines are added after the password line when you create a new password "
+"entry. Leave it empty to start with a blank pass file."
+msgstr ""
+"Aceste rânduri sunt adăugate după rândul parolei atunci când creezi o "
+"intrare de parolă nouă. Lasă câmpul gol pentru a începe cu un fișier pass "
+"gol."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid ""
+"These settings are used when you generate or regenerate a password from the "
+"editor."
+msgstr ""
+"Aceste opțiuni sunt folosite când generezi sau regenerezi o parolă din "
+"editor."
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "Această cheie de securitate FIDO2 nu îți poate deschide elementele."
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "Această ramură nu conține niciun commit care poate fi auditat."
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "Această versiune nu include suport pentru chei de acces."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "Acest câmp nu are valori disponibile pentru căutare."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid ""
+"This hardware key already has OpenPGP keys. Import the matching public key "
+"file instead."
+msgstr ""
+"Această cheie hardware conține deja chei OpenPGP. Importă în schimb fișierul "
+"cu cheia publică corespunzătoare."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid ""
+"This hardware key already has OpenPGP keys. Use Add hardware key "
+"(Experimental) or import the matching public key file instead."
+msgstr ""
+"Această cheie hardware conține deja chei OpenPGP. Folosește „Adaugă o cheie "
+"hardware (experimental)” sau importă în schimb fișierul cu cheia publică "
+"corespunzătoare."
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "Această cheie hardware nu îți poate deschide elementele."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid ""
+"This hardware key has no OpenPGP key yet. Use Set up new hardware key "
+"(Experimental) instead."
+msgstr ""
+"Această cheie hardware nu conține încă nicio cheie OpenPGP. Folosește în "
+"schimb „Configurează o cheie hardware nouă (experimental)”."
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid ""
+"This item can't be opened with the private keys currently available in the "
+"app. File actions are still available, but copy and move-to-store are "
+"disabled until a compatible private key is available."
+msgstr ""
+"Acest element nu poate fi deschis folosind cheile private disponibile acum "
+"în aplicație. Acțiunile asupra fișierului rămân disponibile, însă copierea "
+"și mutarea în alt depozit sunt dezactivate până când devine disponibilă o "
+"cheie privată compatibilă."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "Acest element nu conține o cheie privată cu armură ASCII."
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "Această cheie nu îți poate deschide elementele."
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "Această cheie privată este protejată prin parolă."
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "Această cheie privată necesită o cheie de securitate FIDO2."
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "Această cheie privată necesită altă metodă de deblocare."
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "Această cheie privată necesită o cheie hardware."
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "Acest destinatar nu este disponibil în aplicație."
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid ""
+"This selected key is required while all selected private keys are required."
+msgstr ""
+"Această cheie selectată este obligatorie cât timp sunt necesare toate cheile "
+"private selectate."
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "Valoarea este prea lungă pentru un cod QR."
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "Prea scurtă (număr de caractere: {length})"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "Instrumente"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "Număr total de caractere"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "Atinge cheia de securitate FIDO2 și încearcă din nou."
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "Atinge cheia dacă luminează intermitent."
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "Tradu"
+
+#: src/translation_help.rs:51
+msgid ""
+"Translate Keycord into a new language or help improve an existing "
+"translation on Weblate."
+msgstr ""
+"Tradu Keycord într-o limbă nouă sau ajută la îmbunătățirea unei traduceri "
+"existente pe Weblate."
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Traducere realizată de Nick."
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "Rezultat trunchiat pentru lotul git cat-file."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "Încearcă alt filtru pentru câmpuri."
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "Încearcă alt termen de căutare sau încarcă mai multe commituri."
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "Încearcă alt termen de căutare."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "Încearcă alt filtru pentru valori."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "Încearcă din nou din Preferințe."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "Încearcă altă interogare sau alt filtru."
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "Activează"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "Activezi sincronizarea cheilor private?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "Anulează sau revino asupra modificărilor"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "Anulat."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "Structură neașteptată a textului cifrat Cv25519"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "Structură neașteptată a textului cifrat NistP256"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr "Tip neașteptat de obiect git cat-file „{object_type}”."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "Număr neașteptat de subchei publice corespunzătoare: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr ""
+"Informațiile despre token au fost citite în mod neașteptat fără un tampon."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "Deblochează un fișier pass"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr ""
+"Deblochează o altă cheie privată selectată înainte de a o deselecta pe "
+"aceasta."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "Deblochează cheia"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "Deblochează cheia în Preferințe."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "Deblochează cheia pentru a continua."
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "Cheie privată fără nume de pe gazdă"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "Cheie privată fără nume"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "Smartcard fără nume"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "Deconectează celelalte chei de securitate, apoi încearcă din nou."
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "Format neacceptat {} pentru intrarea de parolă FIDO2."
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "Protecție neacceptată „{}” pentru intrarea de parolă FIDO2."
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "Format neacceptat {} pentru cheia privată FIDO2."
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "Protecție neacceptată „{}” pentru cheia privată FIDO2."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "Arhitectură neacceptată pentru actualizarea Linux: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "Combinație neacceptată între textul cifrat {:?} și cheia publică {:?}"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "Format neacceptat {} pentru manifestul cheii hardware."
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "Protecție neacceptată „{}” pentru cheia hardware."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "Algoritm hash neacceptat pentru RSA: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "URL de depozit neacceptat pentru actualizări: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "Algoritm de semnare neacceptat: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "Neverificat"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "Suma SHA-256 a actualizării „{}” nu corespunde."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "Actualizare disponibilă"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "Calea de descărcare a actualizării nu are un dosar părinte."
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "Actualizează parola pentru {label}"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "Actualizează HEAD-ul Git al depozitului de parole"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr ""
+"Actualizează URL-ul depozitului Git la distanță al depozitului de parole"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "Actualizează destinatarii depozitului de parole"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr ""
+"Dimensiunea actualizării nu corespunde după descărcare (așteptată: {}; "
+"obținută: {})."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "Dimensiunea actualizării „{}” nu corespunde."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr ""
+"Se actualizează toate parolele salvate pentru a corespunde noilor opțiuni de "
+"acces."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "Litere mari"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr "Folosește --open-passkey-request cu exact un fișier local."
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "Folosește în schimb „Adaugă secret OTP”."
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "Folosește în schimb o cerere pentru cheie de acces."
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "Folosește un singur nume de fișier drept nume de utilizator."
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "Folosește un singur nume de fișier."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr ""
+"Folosește destinatarii din istoricul commiturilor pentru verificarea "
+"auditului"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "Folosește numele fișierului"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "Folosește find pentru câmpuri și reg pentru tipare."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "Folosește numele dosarului"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "Folosește dosarele împreună cu căutarea după numele fișierului"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "Folosește pass import pentru a importa într-un depozit existent."
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "Folosește pass import împreună cu comanda pass personalizată."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "Folosește depozitul, dosarele și numele fișierului"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid ""
+"Use the adaptive GTK interface with keyboard, mouse, or touch across desktop "
+"and mobile devices"
+msgstr ""
+"Folosește interfața GTK adaptivă cu tastatură, mouse sau ecran tactil pe "
+"dispozitive desktop și mobile"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "Folosește cheia hardware corespunzătoare."
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "Folosește în schimb câmpul pentru numele de utilizator."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr ""
+"Folosit numai când unui fișier pass îi lipsește câmpul criptat pentru numele "
+"de utilizator."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "Nume de utilizator"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "Se folosește în schimb Integrated."
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "Utilitare și întreținere"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid ""
+"Valid host keys may appear unavailable here while private-key sync is off."
+msgstr ""
+"Cheile valide de pe gazdă pot părea indisponibile aici cât timp "
+"sincronizarea cheilor private este dezactivată."
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr "Cheile valide de pe gazdă pot părea indisponibile aici."
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "Verificare"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "Metodă de verificare"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "Verificat"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "Varietate foarte redusă de caractere"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "Așteaptă puțin."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "Parole slabe"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid ""
+"When enabled, History can use recipients from earlier commits while "
+"verifying older encrypted entries."
+msgstr ""
+"Când opțiunea este activată, Istoricul poate folosi destinatari din "
+"commituri mai vechi la verificarea intrărilor criptate anterioare."
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Windows ShellExecute a eșuat: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "Se lucrează"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "Scrie obiectul de commit Git al depozitului de parole"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "Scrie arborele Git al depozitului de parole"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "Acum poți genera chei private noi."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "Acum poți administra depozitele Git la distanță"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "Acum poți deschide fișiere pass într-o fereastră nouă"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr "Acum poți folosi valorile câmpurilor drept variabile în căutare"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "_Despre Keycord"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "_Adaugă un element"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "_Găsește un element"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "Scurtături de _tastatură"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "_Preferințe"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "_Sincronizează cu depozitul la distanță"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "_Instrumente"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "backend: host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "backend: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "curățarea ramurii"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "crearea clientului GitHub"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "crearea clientului de descărcare"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "curățarea valorilor învechite ale filtrului de depozite"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "eliminarea câmpurilor goale înainte de salvare"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "colectarea amprentelor cheilor private disponibile"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "crearea fișierului parțial de actualizare"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "crearea dosarului pentru descărcarea actualizării"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "identificatorul credențialei"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "decodarea răspunsului GitHub despre versiune"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "ștergerea intrării de parolă"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "dezactivarea fișierelor core: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "dezactivarea punctelor de extensie: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "dezactivarea generării de dumpuri pentru proces: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "descărcarea artefactului versiunii"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "fișier de parole gol"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "activarea politicii ASLR: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "activarea DEP: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "activarea verificărilor stricte ale handle-urilor: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "finalizarea fișierului de actualizare"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "scrierea pe disc a fișierului parțial de actualizare"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "comandă git"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "gpg --delete-secret-keys a eșuat"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "gpg --export a eșuat"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "gpg --export-secret-keys a eșuat"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "gpg --import a eșuat"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "gpg --list-secret-keys a eșuat"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "manifestul cheii hardware"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke conține mai mult de {MAX_LIST_ITEMS} de seturi de parametri"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "modul hpke {:?} necesită un JWK public"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke trebuie să conțină cel puțin un set de parametri"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "coordonatele EC din hpke.key trebuie să aibă lungimi egale"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key conține mai mult de {MAX_JWK_MEMBERS} de membri"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "membru hpke.key"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key trebuie să conțină un membru kty de tip șir"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key trebuie să conțină un membru {member} de tip șir"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr ""
+"hpke.key trebuie să conțină numai material criptografic pentru cheia publică"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key nu poate fi un JWK gol"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key folosește tipul de cheie neacceptat {key_type:?}"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve} nu corespunde KEM {kem}"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "hpke.key.x are o lungime incorectă pentru KEM {kem}"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "hpke.key.{member} nu poate fi gol"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr ""
+"hpke.key.{member} trebuie să folosească base64url fără caractere de umplere"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "încărcarea inelului de chei disponibil"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "afișaj lipsă"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "mutarea intrării de parolă în alt depozit"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "șablonul elementelor noi"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "pass a eșuat"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "pass import --list a eșuat"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "pass import a eșuat"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "pass import nu este disponibil."
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "pass init a eșuat"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "pass insert a eșuat"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "pass mv a eșuat"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "pass rm a eșuat"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "parolă"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "generarea parolei"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "sortarea listei de parole"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "fișierul de preferințe"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "cheie privată"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "sincronizarea cheilor private"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "citirea răspunsului GitHub despre versiune"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "citirea octeților actualizării"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "comandă git pentru depozitul la distanță"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "comandă git pentru arborele de lucru la distanță"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "eliminarea fișierului parțial învechit al actualizării"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "eliminarea fișierului învechit al actualizării"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "salvarea filtrului de depozite selectat"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "trimiterea cererii GitHub despre versiune"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "trimiterea cererii pentru artefactul versiunii"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "curățarea depozitului"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "calea depozitului"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "atribute neașteptate ale algoritmului ECC: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "curbă netratată: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "eroare Windows necunoscută"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "eroare necunoscută la consolidarea securității Windows"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "tip de cheie neacceptat: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "identificatorul utilizatorului"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "varianta de rezervă a numelui de utilizator"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "comandă git pentru arborele de lucru"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "scrierea octeților actualizării"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "{action} a eșuat: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "{action} a eșuat: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "{action} a eșuat: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (încă nu există commituri)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr "{context} depășește adâncimea de imbricare TOML acceptată, de {}."
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr "{context} depășește limita TOML acceptată, de {} de octeți."
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "Commituri încărcate: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "Elemente corespunzătoare: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "Elemente corespunzătoare: {count}"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "Destinatari: {count}"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "Depozite la distanță configurate: {count}."
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "Valori unice: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "Valori unice: {count}"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "{field} conține spații sau caractere de control nevalide"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "{field} conține mai mult de {MAX_LIST_ITEMS} de valori"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "{field} depășește {max_bytes} de octeți"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "{field} trebuie să fie un identificator valid al părții de încredere"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "{field} trebuie să conțină cel puțin o valoare"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "{field} nu poate fi gol"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} - Cheie hardware"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} - Protejată prin parolă"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} - Protejată prin cheie de securitate"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} - Token de securitate"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} - Token de securitate ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "Mai sunt {remaining} s"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"eroare: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} din {} ({percentage:.0}%)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
