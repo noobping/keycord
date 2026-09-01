@@ -1,0 +1,4904 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-01 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Slovak\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "1 príjemca"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "Nastavený je 1 vzdialený repozitár."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "Zoznam priečinkov s vašimi heslami."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "K dispozícii je novšia samostatná zostava pre Linux."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "K dispozícii je novšia verzia pre Windows."
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr "Súkromný kľúč tejto položky je zamknutý. Odomknite ho v Predvoľbách."
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "Zrušiť zlučovanie úložiska hesiel v Gite"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "O aplikácii"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "Akcie"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "Pridať pole OTP"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "Pridajte do tohto úložiska vzdialený repozitár Git."
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "Pridajte priečinok."
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "Najprv k danému kľúču pridajte heslo."
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "Pridajte súkromný kľúč v Predvoľbách."
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr "Najprv pridajte vzdialený repozitár, aby sa mohol inicializovať repozitár Git."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "Najprv pridajte priečinok úložiska."
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "Ak chcete použiť príkaz pass import, pridajte úložisko."
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr "Ak tu chcete prehliadať históriu, pridajte úložisko s repozitárom Git."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "Pridať rozšírené vyhľadávanie"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "Začnite pridaním položky."
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "Najprv pridajte ďalšie úložisko."
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "Na vytvorenie úložiska pridajte aspoň jedného príjemcu."
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr "Ak chcete naďalej ukladať zmeny, pridajte aspoň jedného príjemcu."
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "Pred synchronizáciou pridajte aspoň jeden vzdialený repozitár."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "Pridať dokumentáciu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid "Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend"
+msgstr "Pridávajte existujúce úložiská, vytvárajte nové, importujte heslá v podporovaných systémoch alebo obnovujte úložiská z Gitu pomocou backendu Host"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "Pridať experimentálnu podporu FIDO2"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr "Pridať experimentálnu podporu hardvérových kľúčov OpenPGP pre súkromné kľúče"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "Pridať pole"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "Pridať hardvérový kľúč (experimentálne)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "Pridať položku"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "Pridať chýbajúce polia"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "Pridať voliteľnú synchronizáciu GPG"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "Pridať alebo vytvoriť úložisko"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr "Pridajte alebo odstráňte túto zostavu z miestnej ponuky aplikácií."
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "Pridať heslo pre {label}"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "Pridať vzdialený repozitár Git úložiska hesiel"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "Pridať vzdialený repozitár"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "Pridať poskytovateľa vyhľadávania"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "Pridať možnosť kopírovania záznamov"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
+msgstr "Pridať prístupový kľúč používateľa {username} pre {rp_id} do predvoleného úložiska pass? Pred uložením ho môžete skontrolovať."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid "Add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+msgstr "Pridať verejný kľúč, ktorý je už uložený na pripojenej čipovej karte OpenPGP alebo kľúči YubiKey."
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "Pridať do ponuky aplikácií"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "Pridať stránku s nástrojmi"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr "Pridaný export do CSV na prenášanie údajov do iných nástrojov."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr "Pridané prehliadanie histórie Gitu s podrobnosťami o overení commitov."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid "Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands."
+msgstr "Pridané zobrazenie QR kódov pre heslá, používateľské mená, jednorazové kódy, ostatné polia záznamov a príkazy na udelenie oprávnenia."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid "Added entry filtering by password store and remembered history-inspection filters."
+msgstr "Pridané filtrovanie záznamov podľa úložiska hesiel a zapamätanie filtrov pri prehliadaní histórie."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "Pridané experimentálne návody pre FIDO2 a indikátory priebehu."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "Pridané experimentálne kľúče OpenPGP chránené pomocou FIDO2."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr "Pridaná úprava príjemcov v súboroch .gpg-id pre jednotlivé priečinky."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "Pridaný hybridný spôsob zoradenia"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "Pridané chýbajúce polia šablón."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "Pridáva sa hardvérový kľúč"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr "Povoliť prístup k bezpečnostnému kľúču USB (experimentálne FIDO2)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "Povoliť prístup k aplikáciám v tomto zariadení"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "Povoliť prístup k čipovej karte (experimentálne)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "Položka s týmto názvom už existuje."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "Použiť šablónu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "Použiť filter pri vytváraní nových súborov pass."
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "Funkcie auditu sú v tejto zostave vypnuté."
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "Audit sa neočakávane zastavil."
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "Autor"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "Dátum autora"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid "Automatically remove blank username, field, and OTP lines when saving a pass file."
+msgstr "Pri ukladaní súboru pass automaticky odstrániť prázdne riadky používateľského mena, polí a OTP."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "Dostupná verzia:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "Späť"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "Späť na Predvoľby"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "Späť na kľúče úložiska"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "Backend"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "Prepojiť súbor verejného kľúča s pripojeným hardvérovým kľúčom."
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "Vetva"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "Vetvy"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "Prehliadajte a upravujte úložiská hesiel"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "Prehliadať hodnoty polí"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "Prehliadať jedinečné hodnoty polí z aktuálneho zoznamu."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "Súbory CSV"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "Požiadavka CXP na export vo verzii {0} nie je podporovaná."
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr "Režim odpovede CXP {0:?} nie je pri otvorenom súbore požiadavky podporovaný."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "Túto položku nemožno otvoriť."
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "Túto zmenu nemožno vrátiť späť."
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "Poslednú zmenu nemožno vrátiť späť."
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr "Zmeniť predvolené nastavenie tak, aby sa názov súboru používal ako používateľské meno."
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "Zmenené cesty"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr "Ikona aplikácie bola zmenená na šnúru s kľúčmi"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "Skontrolovať _aktualizácie"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "Pred synchronizáciou tohto úložiska prepnite na niektorú vetvu."
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "Pred synchronizáciou prepnite na niektorú vetvu."
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "Skontrolovať zmeny úložiska hesiel pripravené na commit v Gite"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "Podrobnosti nájdete v záznamoch."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "Kontrolujú sa aktualizácie"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "Kontroluje sa dostupnosť príkazu pass import."
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr "Vyberte objekt JSON obsahujúci práve jeden prihlasovací údaj prístupového kľúča."
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr "Vyberte objekt JSON obsahujúci jeden prihlasovací údaj prístupového kľúča."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "Ak importér potrebuje súbor alebo priečinok, vyberte ho."
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "Vyberte priečinok a obnovte ho z repozitára Git."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "Vyberte priečinok. Ak je prázdny, stane sa úložiskom."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "Vyberte miestny súbor."
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "Vyberte miestny priečinok."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid "Choose a private key file or experimental FIDO2-protected private key file."
+msgstr "Vyberte súbor súkromného kľúča alebo experimentálny súbor súkromného kľúča chránený pomocou FIDO2."
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "Vyberte úložisko."
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "Vyberte importér."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid "Choose how Keycord opens your data. Integrated is the default. Use Host to run your own command."
+msgstr "Vyberte spôsob, akým Keycord otvára vaše údaje. Predvolený je Integrated. Vlastný príkaz spustíte pomocou Host."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "Vyberte spôsob zoradenia súborov pass na domovskej stránke."
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "Vybrať zdrojový súbor na import"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "Vybrať zdrojový priečinok na import"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "Vybrať zdrojový súbor"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "Vybrať zdrojový priečinok"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "Vybrať priečinok úložiska"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "Vybrať priečinok úložiska na obnovenie"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr "Vyberte súbor .gpg-id konkrétneho priečinka, ktorý chcete spravovať."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "Vyčistiť súbor pass"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "Pred uložením vymazať prázdne polia"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "Vymazať vyhľadávanie"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "Vymazať zdrojovú cestu"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "Schránka neobsahuje kľúč."
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "Schránka nie je k dispozícii."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "Zavrieť"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "Zavrieť Keycord a nainštalovať aktualizáciu?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "Vlákno zapisujúce vstup príkazu neočakávane zlyhalo."
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "Commit"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "Načítavanie commitov sa neočakávane zastavilo."
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr "Pred synchronizáciou tohto úložiska vykonajte commit miestnych zmien alebo ich zahoďte."
+
+#: crates/keycord-git/src/sync.rs:12
+msgid "Commit or discard local changes before syncing this store. Local and remote commits are also waiting to sync."
+msgstr "Pred synchronizáciou tohto úložiska vykonajte commit miestnych zmien alebo ich zahoďte. Na synchronizáciu čakajú aj miestne a vzdialené commity."
+
+#: crates/keycord-git/src/sync.rs:18
+msgid "Commit or discard local changes before syncing this store. Local commits are also waiting to sync."
+msgstr "Pred synchronizáciou tohto úložiska vykonajte commit miestnych zmien alebo ich zahoďte. Na synchronizáciu čakajú aj miestne commity."
+
+#: crates/keycord-git/src/sync.rs:24
+msgid "Commit or discard local changes before syncing this store. Remote commits are also waiting to sync."
+msgstr "Pred synchronizáciou tohto úložiska vykonajte commit miestnych zmien alebo ich zahoďte. Na synchronizáciu čakajú aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr "Pred synchronizáciou vykonajte commit miestnych zmien alebo ich zahoďte."
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid "Commit or discard local changes before syncing. Local and remote commits are also waiting to sync."
+msgstr "Pred synchronizáciou vykonajte commit miestnych zmien alebo ich zahoďte. Na synchronizáciu čakajú aj miestne a vzdialené commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid "Commit or discard local changes before syncing. Local commits are also waiting to sync."
+msgstr "Pred synchronizáciou vykonajte commit miestnych zmien alebo ich zahoďte. Na synchronizáciu čakajú aj miestne commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid "Commit or discard local changes before syncing. Remote commits are also waiting to sync."
+msgstr "Pred synchronizáciou vykonajte commit miestnych zmien alebo ich zahoďte. Na synchronizáciu čakajú aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "Dátum commitu"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "Autor commitu"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "Potvrďte nový kód PIN bezpečnostného kľúča"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "Potvrďte heslo"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "Potvrďte nový kód PIN bezpečnostného kľúča."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "Najprv pripojte hardvérový kľúč."
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "Pred pokračovaním pripojte iba jeden bezpečnostný kľúč FIDO2."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "Pred pridaním pripojte iba jeden hardvérový kľúč."
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "Pripojte bezpečnostný kľúč FIDO2 a skúste to znova."
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "Najprv pripojte bezpečnostný kľúč FIDO2."
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "Pripojte hardvérový kľúč a skúste to znova."
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "Najprv pripojte hardvérový kľúč."
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "Pripojte zodpovedajúci bezpečnostný kľúč FIDO2."
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "Pred importovaním pripojte zodpovedajúci hardvérový kľúč."
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "Kontext"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "Skopírované."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "Kopírovať OTP"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "Kopírovať súkromný kľúč v textovom formáte"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "Kopírovať verejný kľúč v textovom formáte"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "Kopírovať experimentálny súkromný kľúč chránený pomocou FIDO2"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "Kopírovať odtlačok"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "Kopírovať záznamy"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "Kopírovať heslo"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "Kopírovať heslo do schránky"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "Kopírovať príkaz na udelenie oprávnenia"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr "Skopírovať nedávny výstup aplikácie a príkazov do schránky."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "Kopírovať heslo vybratej položky"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "Kopírovať používateľské meno"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "Kopírovať hodnotu"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "Nepodarilo sa určiť priečinok s údajmi."
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "Nepodarilo sa určiť domovský priečinok."
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "Tento priečinok sa nepodarilo pridať."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "Hardvérový kľúč sa nepodarilo pridať."
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "Vygenerovaný hardvérový kľúč sa nepodarilo certifikovať"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "Aktualizácie sa nepodarilo skontrolovať."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "Tento kľúč sa nepodarilo skopírovať."
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "Heslo sa nepodarilo skopírovať."
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr "Na hardvérovom kľúči sa nepodarilo vytvoriť certifikát verejného kľúča."
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "Úložisko sa nepodarilo vytvoriť."
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "Údaje zašifrované pomocou FIDO2 sa nepodarilo dešifrovať."
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "Položku sa nepodarilo odstrániť."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "Aktualizáciu sa nepodarilo stiahnuť."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "Heslá sa nepodarilo exportovať."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "Nepodarilo sa nájsť kľúč so zodpovedajúcim odtlačkom"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "Hardvérový dešifrovací kľúč sa nepodarilo vygenerovať"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "Hardvérový podpisovací kľúč sa nepodarilo vygenerovať"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "Kľúč sa nepodarilo vygenerovať."
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "Oprávnenie sa nepodarilo udeliť."
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "Prístupový kľúč sa nepodarilo importovať"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "Heslá sa nepodarilo importovať."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "Kľúč sa nepodarilo importovať."
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "Bezpečnostný kľúč FIDO2 sa nepodarilo inicializovať."
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Vzdialené repozitáre Git sa nepodarilo preskúmať."
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Stav Gitu sa nepodarilo preskúmať"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "Kľúče GPG hostiteľa sa nepodarilo preskúmať"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "Hardvérový kľúč sa nepodarilo preskúmať."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "Aktualizáciu sa nepodarilo nainštalovať."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr "Súkromné kľúče sa nepodarilo udržať synchronizované. Synchronizácia bola vypnutá."
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "Commity sa nepodarilo načítať."
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "Údaje sa nepodarilo načítať"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "Súkromné kľúče sa nepodarilo načítať"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "Kód sa nepodarilo načítať."
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "Položku sa nepodarilo presunúť."
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "Nové okno sa nepodarilo otvoriť."
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "Požiadavku na prístupový kľúč sa nepodarilo otvoriť"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "Túto položku sa nepodarilo otvoriť."
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "Dialóg na výber súboru sa nepodarilo otvoriť."
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "Dialóg na výber priečinka sa nepodarilo otvoriť."
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "Priečinok sa nepodarilo otvoriť."
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "Stránku importu sa nepodarilo otvoriť."
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "Odkaz sa nepodarilo otvoriť."
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "Prístup k nástroju sa nepodarilo pripraviť."
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid "Couldn't present the Git signing unlock dialog. Continuing without a signature."
+msgstr "Dialóg na odomknutie podpisovania v Gite sa nepodarilo zobraziť. Pokračuje sa bez podpisu."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "Tento súbor sa nepodarilo prečítať."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "Tento priečinok sa nepodarilo prečítať."
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "Tento kľúč sa nepodarilo načítať."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "Schránku sa nepodarilo prečítať."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "Tento kľúč sa nepodarilo odstrániť."
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "Tento vzdialený repozitár sa nepodarilo odstrániť."
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "Položku sa nepodarilo premenovať."
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr "Reláciu správcu hardvérového kľúča sa nepodarilo znova otvoriť"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "Úložisko sa nepodarilo obnoviť."
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "Zmeny sa nepodarilo uložiť."
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "Kľúče úložiska sa nepodarilo uložiť."
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "Tento vzdialený repozitár sa nepodarilo uložiť."
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "Toto nastavenie sa nepodarilo uložiť."
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "Výber filtra sa nepodarilo uložiť."
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "Vygenerovaný verejný kľúč hardvérového kľúča sa nepodarilo serializovať"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "Meno držiteľa hardvérového kľúča sa nepodarilo nastaviť"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "Používateľský kód PIN hardvérového kľúča sa nepodarilo nastaviť"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "Heslo sa nepodarilo zobraziť ako QR kód."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "Inštalátor sa nepodarilo spustiť."
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "Súkromné kľúče sa nepodarilo synchronizovať."
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "Úložisko sa nepodarilo synchronizovať."
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "Úložiská sa nepodarilo synchronizovať."
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
+msgstr "Súkromný kľúč {fingerprint_for_failure} sa nepodarilo odomknúť na podpisovanie v Gite. Pokračuje sa bez podpisu."
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "Bezpečnostný kľúč FIDO2 sa nepodarilo odomknúť."
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "Hardvérový kľúč sa nepodarilo odomknúť."
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "Kľúč sa nepodarilo odomknúť."
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "Ponuku aplikácií sa nepodarilo aktualizovať."
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "Kód sa nepodarilo aktualizovať."
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "Kód PIN správcu hardvérového kľúča sa nepodarilo overiť"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "Požadovaný kód PIN hardvérového kľúča sa nepodarilo overiť"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "Vytvorte nový kľúč chránený pomocou FIDO2."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "Vytvorte nový kľúč OpenPGP na pripojenej prázdnej čipovej karte alebo kľúči YubiKey."
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "Vytvorte nový súbor pass."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "Vytvorte nový kľúč chránený heslom."
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr "Vytvorte súkromný kľúč chránený heslom pre úložiská hesiel."
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "Vytvorte kľúč OpenPGP na pripojenej prázdnej čipovej karte alebo kľúči YubiKey."
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "Kryptograficky neplatný podpis"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "Príjemcovia na konci aktuálnej vetvy"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "Aktuálna verzia:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "Predvolené"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "Odstrániť súkromný kľúč GPG hostiteľa"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "Odstrániť záznam hesla"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "Odstrániť vybratý súbor pass"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "Oddelený HEAD"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid "Dismissed the Git signing unlock prompt for {context_for_close}. Continuing without a signature."
+msgstr "Výzvu na odomknutie podpisovania v Gite pre {context_for_close} ste zavreli. Pokračuje sa bez podpisu."
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "Dokumentácia"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "Stiahnuté"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "Upraviť záznam hesla"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid "Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes"
+msgstr "Upravujte záznamy pomocou polí formulára alebo priamo v texte súboru pass, generujte heslá, kopírujte hodnoty polí a zobrazujte heslá, používateľské mená, jednorazové kódy či iné polia ako QR kódy"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "Upraviť vzdialený repozitár"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "E-mail"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "E-mailové polia musia obsahovať platnú e-mailovú adresu."
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "Prázdne"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "Povolené pre tento výsledok"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "Zadajte príkaz."
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "Zadajte názov poľa."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "Zadajte heslo ku kľúču."
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "Zadajte názov hardvérového kľúča."
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "Zadajte názov súkromného kľúča."
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "Zadajte názov."
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "Zadajte používateľské meno prístupového kľúča."
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "Zadajte URL vzdialeného repozitára."
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "Zadajte názov vzdialeného repozitára."
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "Zadajte URL repozitára."
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "Zadajte používateľské meno."
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "Zadajte platný súkromný kľúč vo formáte PKCS#8 pre prístupový kľúč."
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "Zadajte platnú e-mailovú adresu."
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "Zadajte platné RP ID prístupového kľúča."
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "Zadajte URL s protokolom HTTP alebo HTTPS."
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "Zadajte tajný kľúč OTP."
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "Zadajte e-mailovú adresu hardvérového kľúča."
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "Zadajte e-mailovú adresu súkromného kľúča."
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "Zadajte e-mailovú adresu."
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "Zadajte kód PIN bezpečnostného kľúča FIDO2."
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "Zadajte kód PIN hardvérového kľúča."
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "Zadajte kód PIN správcu hardvérového kľúča."
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "Zadajte heslo ku kľúču."
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "Zadajte nový kód PIN hardvérového kľúča."
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "Zadajte nový kód PIN bezpečnostného kľúča."
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "Zadajte heslo súkromného kľúča."
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "Zadajte kód PIN bezpečnostného kľúča."
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "Rozšíriť editor hesiel o akcie na vyčistenie"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
+msgstr "Aby mohol Keycord používať pripojený bezpečnostný kľúč na odomykanie experimentálnych súkromných kľúčov chránených pomocou FIDO2, potrebuje prístup k zariadeniam USB. Po udelení prístupu Keycord reštartujte."
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
+msgstr "Experimentálne postupy s hardvérovými kľúčmi potrebujú prístup PC/SC na používanie pripojených čipových kariet OpenPGP alebo kľúčov YubiKey. Potom Keycord reštartujte. Kľúče chránené heslom zostanú dostupné aj bez tohto prístupu."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid "Experimental multi-layer encryption. When on, every selected key must be unlocked and other pass apps will not be able to read these items."
+msgstr "Experimentálne viacvrstvové šifrovanie. Keď je zapnuté, treba odomknúť každý vybratý kľúč a ostatné aplikácie pass nebudú môcť tieto položky prečítať."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "Experimentálne možnosti úložiska"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "Exportovať"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "Exportovať všetky heslá?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "Exportovať všetky heslá a polia do súboru CSV."
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "Exportovať súkromný kľúč GPG hostiteľa"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "Exportovať verejné kľúče GPG hostiteľa"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "Exportovať heslá"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "Exportované heslá: {count}."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "Exportované heslá: {count}."
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "Manifest súkromného kľúča FIDO2"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr "Podpora súkromných kľúčov FIDO2 je v tejto zostave aplikácie Keycord vypnutá."
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "Bezpečnostný kľúč FIDO2"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr "Podpora FIDO2 je v tejto zostave aplikácie Keycord vypnutá."
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "Textová obálka FIDO2"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr "Nepodarilo sa vyhradiť zabezpečený pracovný priečinok na aktualizáciu v Linuxe."
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "Nepodarilo sa vyhradiť názov dočasného súboru."
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "Nepodarilo sa zostaviť dialóg klávesových skratiek."
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "Nepodarilo sa zostaviť hlavné okno."
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr "Nepodarilo sa nastaviť možnosti dialógu na výber súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr "Nepodarilo sa nastaviť možnosti dialógu na uloženie súboru vo Windowse: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr "Nepodarilo sa vytvoriť pracovný priečinok aktualizácie pre Linux „{}“: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr "Nepodarilo sa vytvoriť koreň pracovného priestoru aktualizácie pre Linux „{}“: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Nepodarilo sa vytvoriť dialóg na výber súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr "Nepodarilo sa vytvoriť dialóg na uloženie súboru vo Windowse: {err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "Nepodarilo sa dekódovať podpis v textovom formáte"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "Nepodarilo sa dekódovať dešifrované údaje UTF-8"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "Nepodarilo sa odvodiť dostatočne dlhý výstup HKDF."
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr "Nepodarilo sa zakódovať kľúčový materiál prístupového kľúča: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "Nepodarilo sa exportovať prístupový kľúč vo formáte JSON: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "Nepodarilo sa vygenerovať kľúčový materiál prístupového kľúča: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "Nepodarilo sa získať {id}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr "Nepodarilo sa vypočítať kontrolný súčet súboru aktualizácie „{}“: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "Nepodarilo sa inicializovať COM pre dialóg na výber súboru: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr "Nepodarilo sa inicializovať COM pre dialóg na uloženie súboru: {err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "Nepodarilo sa inicializovať knižnicu libadwaita."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "Nepodarilo sa nainštalovať stiahnutú aktualizáciu: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr "Nepodarilo sa nastaviť stiahnutú aktualizáciu ako spustiteľnú: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "Nepodarilo sa normalizovať súkromný kľúč pre prístupový kľúč: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "Nepodarilo sa otvoriť štandardný vstup príkazu"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr "Nepodarilo sa pripraviť spravované úložisko súkromných kľúčov."
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "Nepodarilo sa pripraviť generovanie prístupového kľúča: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr "Nepodarilo sa pripraviť kľúčový materiál prístupového kľúča: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr "Nepodarilo sa prečítať metadáta koreňa pracovného priestoru aktualizácie pre Linux „{}“: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Nepodarilo sa načítať možnosti dialógu na výber súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr "Nepodarilo sa načítať možnosti dialógu na uloženie súboru vo Windowse: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "Nepodarilo sa prečítať štandardný chybový výstup príkazu: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "Nepodarilo sa prečítať štandardný výstup príkazu: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "Nepodarilo sa prečítať záznam hesla „{}“ z „{}“: {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr "Nepodarilo sa prečítať súbor požiadavky na prístupový kľúč {path:?}: {source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "Nepodarilo sa načítať vybratú cestu vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "Nepodarilo sa načítať vybratú cestu na uloženie vo Windowse: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "Nepodarilo sa prečítať vybratý súbor verejného kľúča hardvérového kľúča"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "Nepodarilo sa prečítať vybratý súbor súkromného kľúča"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "Nepodarilo sa prečítať metadáta súboru aktualizácie: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr "Nepodarilo sa zaregistrovať prostriedky na inštaláciu aktualizácie pre Linux: {error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "Nepodarilo sa zaregistrovať prostriedky."
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr "Nepodarilo sa zistiť cestu k aktuálnemu spustiteľnému súboru: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr "Nepodarilo sa nájsť spustiteľný súbor pomocníka aktualizácie: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "Príkaz sa nepodarilo spustiť: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "Príkaz git sa nepodarilo spustiť: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr "Program hostiteľa „{program}“ sa nepodarilo spustiť: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "Príkaz backendu Host sa nepodarilo spustiť: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "Nepodarilo sa spustiť {}: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr "Nepodarilo sa zabezpečiť koreň pracovného priestoru aktualizácie pre Linux „{}“: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Nepodarilo sa vybrať typ ukladaného súboru vo Windowse: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "Nepodarilo sa serializovať konfiguráciu: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "Nepodarilo sa serializovať uložené údaje prístupového kľúča: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr "Nepodarilo sa nastaviť text tlačidla dialógu na výber súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr "Nepodarilo sa nastaviť názov dialógu na výber súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr "Nepodarilo sa nastaviť príponu ukladaného súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Nepodarilo sa nastaviť názov ukladaného súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr "Nepodarilo sa nastaviť text tlačidla dialógu na uloženie súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr "Nepodarilo sa nastaviť názov dialógu na uloženie súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Nepodarilo sa nastaviť typy ukladaných súborov vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Nepodarilo sa zobraziť dialóg na výber súboru vo Windowse: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr "Nepodarilo sa zobraziť dialóg na uloženie súboru vo Windowse: {err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Nepodarilo sa spustiť Keycord: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr "Nepodarilo sa spustiť pomocníka inštalácie aktualizácie pre Linux: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr "Nepodarilo sa spustiť msiexec na inštaláciu aktualizácie: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "Nepodarilo sa spustiť príkaz na udelenie oprávnenia: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "Nepodarilo sa počkať na dokončenie príkazu: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "Nepodarilo sa zapísať vstup príkazu: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "Nepodarilo sa zapísať konfiguračný súbor: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "Nepodarilo sa zapísať export hesiel do „{path}“: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "Nepodarilo sa vykonať akciu „{context}“: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr "Načítať zmeny zo vzdialeného repozitára Git úložiska hesiel {remote}"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid "Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr "Načítať a zlúčiť zmeny zo všetkých vzdialených repozitárov a odoslať do nich aktuálnu vetvu „{branch}“."
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "Názvy polí nesmú obsahovať „:“."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "Hodnoty polí"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "Filtrovať výsledky"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "Nájsť položku"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "Nájsť slabé heslá"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid "Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV"
+msgstr "Vyhľadávajte slabé heslá, prehliadajte opakované hodnoty polí, filtrujte podľa úložiska a exportujte úložiská hesiel do CSV"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "Prvé vydanie"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "Opraviť ikonu návratu"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "Opraviť voliteľnú synchronizáciu s Gitom"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr "Opravená chyba OTP, pri ktorej sa platné tajné kľúče nesprávne označovali za neplatné."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "Opravené oprávnenia pre čipové karty"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "Opravený poskytovateľ vyhľadávania GNOME."
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "Všeobecné"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "Vygenerovať kľúč chránený pomocou FIDO2 (experimentálne)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "Vygenerujte alebo importujte súkromný kľúč."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "Vygenerovať heslo"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "Vygenerovať súkromný kľúč"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "Generuje sa kľúč chránený pomocou FIDO2 (experimentálne)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "Generuje sa kľúč"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Príkaz Git nevrátil žiadny výstup."
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "História Gitu a overovanie"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "Git nie je v tomto prostredí k dispozícii."
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Vzdialené repozitáre Git"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Komunikácia s procesom zisťovania stavu Gitu sa prerušila"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "Prejsť späť"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "Prejsť domov"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "Udeliť"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "Udeliť prístup k bezpečnostnému kľúču USB (experimentálne FIDO2)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
+msgstr "Najprv udeľte prístup k bezpečnostnému kľúču USB pre experimentálne súkromné kľúče chránené pomocou FIDO2."
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "Udeliť prístup k hostiteľovi"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
+msgstr "Ak má Keycord udržiavať svoje súkromné kľúče v súlade so súkromnými kľúčmi GPG v počítači, najprv udeľte prístup k hostiteľovi."
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "Najprv udeľte prístup k hostiteľovi."
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr "Udeľte prístup k hostiteľovi, aby bolo možné načítavať, zlučovať a odosielať zmeny."
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "Udeliť oprávnenie"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "Udeliť prístup k čipovej karte"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "Najprv udeľte prístup k čipovej karte."
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "Návody a referenčné informácie"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid "Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr "Hardvérové kľúče OpenPGP nie sú v tejto zostave alebo na tejto platforme podporované."
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "Kód PIN hardvérového kľúča"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "Hardvérový kľúč bol pridaný."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "Kód PIN správcu hardvérového kľúča"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Pomôžte s prekladom aplikácie Keycord"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "Skryť natrvalo"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "Použitie príjemcov z histórie"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "Príjemcovia z histórie"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "Domov"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Host"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Git na hostiteľovi (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Git na hostiteľovi (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "Prístup k hostiteľovi"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr "Funkcie príkazov hostiteľa sú dostupné iba v Linuxe."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "Importovať"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr "Pred použitím úložiska hesiel importujte súkromný kľúč v Predvoľbách."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "Importujte existujúci súkromný kľúč alebo pripojte hardvérový token."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "Importovať verejný kľúč hardvérového kľúča (experimentálne)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "Importovať súkromný kľúč GPG hostiteľa"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "Importovať kľúč"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "Importovať kľúč zo schránky"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "Importovať prístupový kľúč?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "Heslo na import (voliteľné)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "Importovať heslá"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "Importovať heslá pomocou príkazu pass import"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "Importovať súkromný kľúč"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "Importovať súkromný kľúč z tejto položky"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "Zdroj importu"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "Importér"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "Importuje sa kľúč"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "Importujú sa heslá"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid "Improved header actions and hid filters when they cannot affect the current view."
+msgstr "Vylepšené akcie v hlavičke a skryté filtre, keď nemôžu ovplyvniť aktuálne zobrazenie."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr "Vylepšený výber príjemcov v úložiskách s veľkým počtom dostupných kľúčov."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr "Vylepšené vyhľadávanie, filtrovanie, ovládanie klávesnicou a úprava záznamov."
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "Informácie"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "Inicializovať repozitár Git úložiska hesiel"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr "Prehliadajte históriu Gitu vo všetkých úložiskách a overujte podpisy commitov."
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "Prehliadať históriu zmien"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "Prehliadať históriu zmien a overovať commity"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "Preskúmať súkromné kľúče GPG hostiteľa"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "Preskúmať HEAD repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "Preskúmať vetvu repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr "Preskúmať súbory repozitára Git úložiska hesiel pred prvým commitom"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr "Preskúmať vzdialenú vetvu repozitára Git úložiska hesiel {remote}/{branch}"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr "Preskúmať rozsah revízií repozitára Git úložiska hesiel {range}"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "Preskúmať sledované zmeny repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "Preskúmať nesledované súbory repozitára Git úložiska hesiel"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "Preskúmať nedávny výstup aplikácie a príkazov."
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Prehľadávajú sa úložiská spravované Gitom a zisťujú sa vetvy."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "Kontrolujú sa súkromné kľúče a pripojený hardvér."
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr "Ak chcete na overovanie auditu používať príjemcov z histórie commitov, nainštalujte Git."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "Nainštalovať aktualizáciu"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr "Pri inštalácii aktualizácie sa Keycord zavrie. Neuložené zmeny sa stratia."
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Integrovaný"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "Neplatný odtlačok väzby FIDO2 „{value}“."
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "Neplatná cesta k zariadeniu FIDO2: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "Neplatné údaje zašifrované pomocou FIDO2."
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "Neplatný záznam hesla zašifrovaný všetkými kľúčmi."
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "Neplatný dávkový výstup príkazu git cat-file."
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "Neplatná hlavička príkazu git cat-file."
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "Neplatné metadáta podpisu Gitu na hostiteľovi."
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "Neplatné rozšírenia FIDO2 prístupového kľúča: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "Neplatný prístupový kľúč vo formáte JSON: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "Neplatný prístupový kľúč {label}: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "Neplatná cesta k záznamu hesla."
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "Neplatný odtlačok súkromného kľúča „{value}“: {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "Neplatná cesta k súboru príjemcov."
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "Neplatné uložené údaje prístupového kľúča vo formáte JSON: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
+msgstr "Keď je dostupný prístup k hostiteľovi, udržiavať súkromné kľúče aplikácie Keycord v súlade so súkromnými kľúčmi GPG v počítači."
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr "Pred odstránením tohto kľúča ponechajte dostupný iný vybratý súkromný kľúč."
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "Ponechajte dostupný aspoň jeden vybratý súkromný kľúč."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr "Zoskupiť záznamy podľa úložiska a priečinka a až potom podľa názvu súboru."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr "Ponechať priečinky v zozname, ale výsledky vyhľadávania zoradiť podľa názvu súboru pass."
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr "Kým sa vyžadujú všetky vybraté súkromné kľúče, ponechajte tento kľúč vybratý."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "Súbor kľúča bol odstránený."
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "Kľúč bol vygenerovaný."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "Kľúč bol importovaný."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "Heslo ku kľúču"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Súkromný kľúč aplikácie Keycord chránený pomocou FIDO2"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Aktualizácia aplikácie Keycord"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr "Keycord nemohol dokončiť inštaláciu stiahnutej aktualizácie pre Linux."
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "Aplikácii Keycord sa nepodarilo pripraviť položku prístupového kľúča. {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord je už aktuálny."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid "Keycord is an adaptive graphical client for password folders that use the standard pass layout. Existing stores remain normal pass stores on disk, so they keep working with pass and other compatible tools."
+msgstr "Keycord je adaptívny grafický klient pre priečinky s heslami, ktoré používajú štandardnú štruktúru nástroja pass. Existujúce úložiská zostávajú na disku bežnými úložiskami nástroja pass, takže naďalej fungujú s nástrojom pass aj ďalšími kompatibilnými nástrojmi."
+
+#: src/composition/host_access.rs:64
+msgid "Keycord is running in a protected space, so some optional features stay off until you allow this. If you allow it, Keycord can use tools from your computer such as GPG, the Host backend, and pass import. If you don't, Keycord still works with the integrated backend."
+msgstr "Keycord beží v chránenom prostredí, preto sú niektoré voliteľné funkcie vypnuté, kým nepovolíte tento prístup. Po povolení môže Keycord používať nástroje z počítača, napríklad GPG, backend Host a príkaz pass import. Aj bez povolenia bude Keycord fungovať s integrovaným backendom."
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid "Keycord opened a credential export request that names {importer} as the importer and checked its structure. The local file does not authenticate that identity. Keycord does not yet generate CXP response archives, so no passkey data was released."
+msgstr "Keycord otvoril požiadavku na export prihlasovacích údajov, ktorá ako importéra uvádza {importer}, a skontroloval jej štruktúru. Miestny súbor však nepotvrdzuje totožnosť uvedeného importéra. Keycord zatiaľ nevytvára archívy odpovedí CXP, takže neboli sprístupnené žiadne údaje prístupových kľúčov."
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
+msgstr "Keycord najprv zosúladí svoj zoznam súkromných kľúčov so súkromnými kľúčmi GPG v počítači. Potom sa vytvorenie, importovanie alebo odstránenie súkromného kľúča v aplikácii Keycord prejaví aj na hostiteľovi. Kľúče, ktoré existujú iba v aplikácii Keycord, sa môžu pri prvej synchronizácii odstrániť."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "Kľúče pre toto úložisko"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "Neskôr"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid "Leave this empty if the source does not use a password, for example a Chrome CSV."
+msgstr "Ak zdroj nepoužíva heslo, napríklad súbor CSV z Chromu, ponechajte toto pole prázdne."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "Dĺžka"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Aktualizácii pre Linux chýba priečinok na vyčistenie."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "Zoznam"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr "Vypísať referencie auditu repozitára Git úložiska hesiel pod {prefix}"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "Vypísať vzdialené repozitáre Git úložiska hesiel"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr "Vypísať súbory príjemcov v strome repozitára Git úložiska hesiel {object}"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "Načítať ďalšie commity"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "Načítava sa"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "Načítavajú sa commity"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "Načítavajú sa údaje"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "Načítavajú sa hodnoty polí"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "Načítavajú sa kľúče"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "Načítavajú sa vaše položky."
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr "Na synchronizáciu vo vetve „{branch}“ čakajú miestne aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "Na synchronizáciu čakajú miestne aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "Miestna vetva"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr "Našli sa miestne zmeny. Najprv ich uložte do commitu alebo zahoďte."
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr "Našli sa miestne zmeny. Na synchronizáciu čakajú aj miestne a vzdialené commity."
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr "Našli sa miestne zmeny. Na synchronizáciu čakajú aj miestne commity."
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr "Našli sa miestne zmeny. Na synchronizáciu čakajú aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "Miestne commity vo vetve „{branch}“ sú pripravené na odoslanie."
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "Miestne commity čakajú na synchronizáciu."
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "Záznamy"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "Hľadá sa novšia samostatná zostava pre Linux na GitHub Releases."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "Hľadá sa novší inštalátor pre Windows na GitHub Releases."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "Malé písmená"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "Hlavná ponuka"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "Pred synchronizáciou vytvorte počiatočný commit."
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr "Pred synchronizáciou tohto úložiska vytvorte počiatočný commit vo vetve „{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "Pred synchronizáciou vytvorte počiatočný commit vo vetve „{branch}“."
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "Neplatné hlavičky commitu Git."
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "Neplatný objekt commitu Git."
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "Neplatná hlavička podpisu v Gite."
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "Neplatný alebo nepodporovaný podpis"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "Spravovať súkromné kľúče"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid "Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization"
+msgstr "Spravujte príjemcov úložísk, súbory .gpg-id pre jednotlivé priečinky a súkromné kľúče chránené heslom vrátane importu zo súborov a schránky a voliteľnej synchronizácie s GPG hostiteľa"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "Spravovať úložiská"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr "Spravované nastavenie hardvérových kľúčov je v tejto zostave aplikácie Keycord vypnuté."
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid "Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr "Spravované údaje súkromného kľúča „{}“ nezodpovedajú požadovanému odtlačku „{}“."
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid "Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr "Spravovaný artefakt súkromného kľúča typu {artifact_kind} „{}“ nezodpovedá kanonickej ceste „{}“."
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr "Spravované pridávanie a import čipových kariet sú v tejto zostave aplikácie Keycord vypnuté."
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr "Správa vnorených súborov .gpg-id vyžaduje backend Integrated."
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "Zhoduje sa s bežným heslom"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "Zlúčiť vetvu repozitára Git úložiska hesiel {target}"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "Správa"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "Minimálny počet; 0 funkciu vypne"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "Chýba certifikát OpenPGP uloženého hardvérového kľúča."
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "Chýba certifikát OpenPGP uloženého súkromného kľúča."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "V URL repozitára chýba vlastník: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "Chýbajú nespracované údaje commitu {}."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "V URL repozitára chýba názov repozitára: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "Presunúť"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "Presunúť súbor pass"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "Presunúť vybratý súbor pass"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "Presunúť do úložiska"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "Presunuté."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "Názov"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "Navigácia"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "Nová šablóna hesla"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "Nové úložisko"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "Nový kód PIN hardvérového kľúča"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "Nová položka"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "Nový kód PIN bezpečnostného kľúča"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr "Zatiaľ tu nie je repozitár Git. Inicializujete ho pridaním vzdialeného repozitára."
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Žiadne úložiská spravované Gitom"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Nie sú dostupné žiadne úložiská spravované Gitom."
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "Zatiaľ tu nie je žiadna vetva."
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "Žiadne zmenené cesty"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "Nie sú načítané žiadne commity"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "Nenašiel sa priečinok s údajmi"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "Nie je dostupné grafické prostredie."
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "Nenašiel sa priečinok obsahujúci spustiteľný súbor"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "Nie sú pridané žiadne priečinky"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "Zatiaľ tu nie sú žiadne položky"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr "Pri aktuálnych kontrolách sa v načítaných súboroch pass nenašli žiadne slabé heslá."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "Žiadne zhody"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "Žiadne zodpovedajúce vzdialené repozitáre Git"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "Žiadne zodpovedajúce vetvy"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "Žiadne zodpovedajúce dokumenty"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "Žiadne zodpovedajúce polia"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "Žiadne zodpovedajúce predvoľby"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "Žiadne zodpovedajúce výsledky"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "Žiadne zodpovedajúce kľúče úložiska"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "Žiadne zodpovedajúce nástroje"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "Žiadne zodpovedajúce hodnoty"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "Žiadne úložisko hesiel"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "Žiadne úložiská hesiel"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "Nie sú nastavení žiadni príjemcovia"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "Pre tento záznam hesla sa nenašli žiadni príjemcovia."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "Zatiaľ tu nie sú žiadni príjemcovia"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "Nie sú nastavené žiadne vzdialené repozitáre."
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "Nenašli sa žiadne použiteľné štandardné kľúče príjemcov"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "Žiadne polia, v ktorých možno vyhľadávať"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "Bez podpisu"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "Žiadne hodnoty"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "Nenašli sa žiadne slabé heslá"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "Nedostupné"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "Nie je nič vybraté"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "Číslice"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "Kód OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "Tajný kľúč OTP"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr "Do jedného alebo viacerých miestnych inštalačných priečinkov nemožno zapisovať."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid "Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr "Experimentálne funkcie FIDO2 povoľte iba vtedy, keď používate integrovaný backend."
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr "Prijímajú sa iba bežné súbory v miestnom súborovom systéme."
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Otvoriť nástroje Gitu"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "Priečinok úložiska pridáte otvorením Predvolieb."
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "Otvoriť URL"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Otvoriť Weblate"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr "Ak chcete preskúmať vetvy a commity, otvorte úložisko spravované Gitom."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "Otvoriť novú položku"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "Najprv otvorte úložisko."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "Najprv otvorte položku."
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "Otvoriť dokumentáciu"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "Naraz otvorte práve jednu požiadavku na prístupový kľúč."
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "Otvoriť návody a referenčné informácie."
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "Otvoriť v správcovi súborov"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "Otvoriť v novom okne"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "Otvoriť záznamy"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid "Open one or more password stores and search by name, store, field, regular expression, or structured find query"
+msgstr "Otvorte jedno alebo viac úložísk hesiel a vyhľadávajte podľa názvu, úložiska, poľa, regulárneho výrazu alebo štruktúrovaného vyhľadávacieho dopytu"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "Otvoriť predvoľby"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "Otvoriť nespracovaný text"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "Otvoriť vzdialené repozitáre Git úložiska č. 1"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "Otvoriť kľúče úložiska č. 1"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "Otvoriť vzdialené repozitáre Git úložiska č. 2"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "Otvoriť kľúče úložiska č. 2"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "Otvoriť vzdialené repozitáre Git úložiska č. 3"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "Otvoriť kľúče úložiska č. 3"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "Otvoriť vzdialené repozitáre Git úložiska č. 4"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "Otvoriť kľúče úložiska č. 4"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "Otvoriť vzdialené repozitáre Git úložiska č. 5"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "Otvoriť kľúče úložiska č. 5"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "Otvoriť vzdialené repozitáre Git úložiska č. 6"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "Otvoriť kľúče úložiska č. 6"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "Otvoriť nástroje"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "Otvára sa"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "Otvára sa položka"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "Alebo použite hardvérový kľúč (experimentálne)."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "Ďalšie možnosti pridania kľúča"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "Súbor pass"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "Súbory pass"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "Prístupový kľúč"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "Rozšírenia FIDO2 prístupového kľúča musia byť objektom JSON."
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "Požiadavka na export prístupových kľúčov bola otvorená"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "Heslo"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "Generovanie hesla"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "Zoznam hesiel"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "Úložiská hesiel"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "Akcie s heslom"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "Záznam hesla „{label}“ sa nenašiel."
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "Záznam hesla „{old_label}“ sa nenašiel."
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "Názov záznamu hesla je prázdny."
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "Heslo je prázdne"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "Heslo obsahuje iba biele znaky"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "Zoznam hesiel"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "Možnosti hesla"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
+msgstr "Stav repozitára Git úložiska hesiel: {root} -> zistený repozitár Git, ale príkazy Gitu sú v tejto zostave vypnuté."
+
+#: crates/keycord-git/src/repository.rs:75
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, network operations enabled."
+msgstr "Stav repozitára Git úložiska hesiel: {root} -> zistený repozitár Git, miestne commity sú povolené, sieťové operácie sú povolené."
+
+#: crates/keycord-git/src/repository.rs:80
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, remote sync disabled in this backend."
+msgstr "Stav repozitára Git úložiska hesiel: {root} -> zistený repozitár Git, miestne commity sú povolené, vzdialená synchronizácia je v tomto backende vypnutá."
+
+#: crates/keycord-git/src/repository.rs:65
+msgid "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
+msgstr "Stav repozitára Git úložiska hesiel: {root} -> nezistený žiadny repozitár Git, miestne commity sú vypnuté, sieťové operácie sú vypnuté."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "Nastavenie úložísk hesiel: nie sú nastavené žiadne úložiská."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "Nastavenie úložísk hesiel: počet nastavených úložísk: {}."
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "Heslá boli importované."
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "Cesta alebo názov"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "Príkaz na udelenie oprávnenia zlyhal"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "Vyberte pole z aktuálneho zoznamu."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "Vyberte hodnotu z aktuálneho zoznamu."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "Predvoľby"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "Odtlačok súkromného kľúča „{value}“ nemá očakávanú dĺžku."
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid "Private key unlock worker disconnected while preparing a Git signature for {fingerprint}."
+msgstr "Komunikácia s procesom odomykania súkromného kľúča sa prerušila pri príprave podpisu v Gite pre {fingerprint}."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "Súkromné kľúče nemožno overiť"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "Súkromné kľúče boli synchronizované."
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr "Synchronizácia súkromných kľúčov s hostiteľom je dostupná iba v Linuxe."
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr "Odoslať vetvu repozitára Git úložiska hesiel {branch} do {remote}"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "QR kód"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "RP ID"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "Nespracovaný text"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
+msgstr "Načítať zo schránky súkromný kľúč v textovom formáte alebo experimentálny súkromný kľúč chránený pomocou FIDO2."
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr "Načítať zmenené cesty pre commit repozitára Git úložiska hesiel {oid}"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr "Načítať metadáta podpisu Gitu na hostiteľovi pre commity úložiska hesiel"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "Načítať zdroje príkazu pass import"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "Načítať verziu nástroja pass"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "Načítať záznam hesla"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "Načítať záznam hesla na skopírovanie do schránky"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "Načítať HEAD repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr "Načítať záznam auditu repozitára Git úložiska hesiel pre {full_ref}"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr "Načítať URL vzdialeného repozitára Git úložiska hesiel pre {name}"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr "Načítať súbor stromu repozitára Git úložiska hesiel {object_path}"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "Načítať nespracované commity repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "Načítať ďalšie commity ({count})."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "Načítavajú sa riadky hesiel z aktuálneho zoznamu."
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "Načítava sa nedávna história Gitu pre túto vetvu."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr "Načítavajú sa prehľadávateľné polia pass z aktuálneho zoznamu."
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "Dôvod"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "Príjemca „{recipient_id}“ nie je v aplikácii dostupný."
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid "Recipient '{recipient_id}' matches multiple keys in the app. Use a fingerprint instead."
+msgstr "Príjemcovi „{recipient_id}“ zodpovedá v aplikácii viacero kľúčov. Namiesto neho použite odtlačok."
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "Zdroj príjemcov"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "Súbor príjemcov"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "Príjemcovia z auditovaného commitu"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "Odporúčané pre nové úložiská"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "Znova pripojte bezpečnostný kľúč FIDO2 a skúste to znova."
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "Znova pripojte hardvérový kľúč a skúste to znova."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr "Obmedzené zobrazovanie citlivých údajov vo vyhľadávaní GNOME, pri zlyhaniach príkazov a v záznamoch."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "Obnoviť aktuálny zoznam"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "Súbor vydania „{}“ má neplatný kontrolný súčet SHA-256."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr "Súbor vydania „{}“ má nepodporovaný formát kontrolného súčtu."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr "Súboru vydania „{}“ chýba kontrolný súčet SHA-256 zo služby GitHub."
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "URL vzdialeného repozitára"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "Vzdialený repozitár bol pridaný."
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "Vzdialené commity sú pripravené na zlúčenie do vetvy „{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "Vzdialené commity čakajú na synchronizáciu."
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "Názov vzdialeného repozitára"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "Vzdialený repozitár bol odstránený."
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "Vzdialený repozitár bol aktualizovaný."
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "Vetva sledujúca vzdialený repozitár"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "Vzdialené repozitáre"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "Odstrániť prázdne polia"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "Odstrániť z ponuky aplikácií"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "Odstrániť kľúč"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "Odstrániť súbor kľúča"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "Odstrániť heslo pre {label}"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "Odstrániť vzdialený repozitár Git úložiska hesiel"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "Odstrániť príjemcu"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "Odstrániť vzdialený repozitár"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "Prázdne polia boli odstránené."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr "Z aplikácie Flatpak bola odstránená funkcia úložísk hesiel chránených pomocou FIDO2."
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "Premenovať súbor pass"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "Premenovať záznam hesla"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "Premenovať heslo z {old_label} na {new_label}"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "Premenovať vzdialený repozitár Git úložiska hesiel"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "Premenovať vybratý súbor pass"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "Opakovanie jedného znaku"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "Repozitár"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "URL repozitára"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr "Repozitár sa našiel a je pripravený na správu vzdialených repozitárov."
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "Repozitár sa našiel. Pred synchronizáciou prepnite na niektorú vetvu."
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr "Repozitár sa našiel. Pred synchronizáciou vytvorte prvý commit vo vetve „{branch}“."
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr "Repozitár sa našiel. Miestne aj vzdialené commity čakajú na synchronizáciu."
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid "Repository found. Local changes must be committed or discarded before sync, and local and remote commits are waiting to sync."
+msgstr "Repozitár sa našiel. Miestne zmeny treba pred synchronizáciou uložiť do commitu alebo zahodiť a na synchronizáciu čakajú miestne aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid "Repository found. Local changes must be committed or discarded before sync, and local commits are waiting to sync."
+msgstr "Repozitár sa našiel. Miestne zmeny treba pred synchronizáciou uložiť do commitu alebo zahodiť a na synchronizáciu čakajú aj miestne commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid "Repository found. Local changes must be committed or discarded before sync, and remote commits are waiting to sync."
+msgstr "Repozitár sa našiel. Miestne zmeny treba pred synchronizáciou uložiť do commitu alebo zahodiť a na synchronizáciu čakajú aj vzdialené commity."
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid "Repository found. Local changes must be committed or discarded before sync."
+msgstr "Repozitár sa našiel. Miestne zmeny treba pred synchronizáciou uložiť do commitu alebo zahodiť."
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr "Repozitár sa našiel. Miestne commity čakajú na synchronizáciu."
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr "Repozitár sa našiel. Vzdialené commity čakajú na synchronizáciu."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "Vyžadovať všetky vybraté súkromné kľúče"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Zistiť identitu Git pre rolu {role}"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "Prostriedok sa nenašiel: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "Zmeny sa prejavia po reštartovaní aplikácie."
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "Obnoviť úložisko hesiel"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "Obnovovanie sa neočakávane zastavilo."
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "Obnoviť úložisko"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "Obnovuje sa úložisko hesiel"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "Obnovuje sa úložisko"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
+msgstr "Skúsiť autorizáciu znova so súbormi príjemcov z histórie commitov, ak príjemcovia aktuálnej vetvy nemôžu autorizovať podpisovateľa."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "Vrátené späť."
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "Uložiť"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "Uložiť aktuálnu stránku alebo synchronizovať z domovskej stránky"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr "Pred importovaním prístupového kľúča uložte alebo zahoďte aktuálne zmeny."
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "Uložiť záznam hesla"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "Uložiť príjemcov úložiska hesiel"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "Uložené."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "Ukladá sa súbor príjemcov"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Ukladá sa bez podpisu v Gite."
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr "Vyhľadať v aktuálnom zozname heslá, ktoré nespĺňajú základné požiadavky."
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "Naskenujte QR kód a použite túto hodnotu na inom zariadení."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "Kontrolujú sa heslá"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Hľadať vo vzdialených repozitároch Git"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "Hľadať v dokumentácii"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "Hľadať v poliach"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "Hľadať názvy, úložiská alebo polia"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "Hľadať v predvoľbách"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "Výsledky vyhľadávania"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "Hľadať v kľúčoch úložiska"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "Hľadať v nástrojoch"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "Hľadať hodnoty"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "Hľadať slabé heslá"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "Kód PIN bezpečnostného kľúča"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "Vybrať"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "V ponuke filtrov vyberte aspoň jedno úložisko a jednu vetvu."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr "Vyberte súkromné kľúče, ktoré môžu odomknúť heslá v tomto úložisku."
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "Znaky idúce za sebou"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "Najprv nastavte kód PIN bezpečnostného kľúča FIDO2."
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "Nastaviť kód PIN bezpečnostného kľúča"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "Nastaviť kód PIN bezpečnostného kľúča (experimentálne FIDO2)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "Nastaviť nový hardvérový kľúč (experimentálne)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr "Nastavenie kódu PIN bezpečnostného kľúča FIDO2 je v tejto zostave podporované iba v Linuxe."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "Nastavuje sa hardvérový kľúč (experimentálne)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "Krátke heslo s malou rozmanitosťou znakov"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "Zobraziť záznamy"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "Zobraziť OTP ako QR kód"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "Vypnuté možnosti zobraziť namiesto ich skrytia"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "Zobraziť skryté a duplicitné záznamy"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "Zobraziť heslo ako QR kód"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "Zobraziť klávesové skratky"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "Zobraziť poslednú časť cesty priečinka ako používateľské meno."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "Zobraziť názov súboru pass ako používateľské meno."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "Zobraziť používateľské meno ako QR kód"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "Zobraziť hodnotu ako QR kód"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "Podpisovateľ nie je medzi príjemcami vetvy"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "Podpisovací kľúč nie je v aplikácii Keycord dostupný"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "Krátke heslo s jediným druhom znakov"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "Zoradiť záznamy iba podľa názvu súboru pass."
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "Pripraviť zmeny úložiska hesiel na commit v Gite"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "Stav"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "Krok {current}/{total}: ak kľúč bliká, dotknite sa ho."
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "Úložisko"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "Úložisko bolo vytvorené, ale nebolo pridané."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "Kľúče úložiska"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "Úložisko bolo obnovené."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "Podpriečinok úložiska"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "Synchronizácia úložiska sa neočakávane zastavila."
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "Úložisko bolo synchronizované."
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "Uložený kód PIN FIDO2 nie je platným textom UTF-8: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "Úložiská"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr "Ak chcete obnoviť úložisko z repozitára Git, prepnite Backend na Host."
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "Ak chcete použiť príkaz pass import, prepnite Backend na Host."
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
+msgstr "Ak chcete používať experimentálne súkromné kľúče chránené pomocou FIDO2, prepnite na backend Integrated."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "Symboly"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
+msgstr "Synchronizujte úložiská spravované Gitom, spravujte vzdialené repozitáre, podpisujte zmeny a prehliadajte históriu s podrobnosťami o overení commitov"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "Synchronizovať teraz"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "Synchronizovať súkromné kľúče s hostiteľom"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "Synchronizovať úložiská"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "Synchronizuje sa úložisko"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "Synchronizujú sa úložiská"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "Textový editor"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "Tento bezpečnostný kľúč FIDO2 nepodporuje rozšírenie hmac-secret."
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr "Tento bezpečnostný kľúč FIDO2 musí podporovať ochranu kódom PIN."
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "Tento kľúč chránený pomocou FIDO2 sa nepodarilo exportovať."
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "Údaje tohto kľúča chráneného pomocou FIDO2 sú neplatné."
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "Tento kľúč chránený pomocou FIDO2 je neplatný."
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "Tento súbor kľúča OpenPGP neobsahuje súkromný kľúč."
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "Tieto údaje neobsahujú súkromný kľúč."
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "Tento súbor neobsahuje súkromný kľúč."
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr "Tento hardvérový kľúč nemôže dešifrovať záznamy úložiska hesiel."
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr "Tento kľúč uložený v hardvéri nemá exportovateľný súkromný kľúč."
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "Tejto položke chýba úložisko."
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "Táto položka už neexistuje."
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "Tento kľúč nemá exportovateľný verejný kľúč."
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "Tento záznam hesla už existuje."
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr "Tento súkromný kľúč nemôže dešifrovať záznamy úložiska hesiel."
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr "Tento súkromný kľúč nemôže podpisovať commity v Gite."
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "Tento súkromný kľúč nie je uložený v aplikácii."
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr "Pred importovaním musí byť tento súkromný kľúč chránený heslom."
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "Tento verejný kľúč nezodpovedá hardvérovému dešifrovaciemu kľúču."
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "Tento verejný kľúč nezodpovedá hardvérovému podpisovaciemu kľúču."
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "Takáto URL vzdialeného repozitára už existuje."
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "Takýto názov vzdialeného repozitára už existuje."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid "The CSV file will contain every password and field in plaintext. Anyone with access to the file can read them."
+msgstr "Súbor CSV bude obsahovať všetky heslá a polia v nezašifrovanom texte. Prečítať si ich môže každý, kto má k súboru prístup."
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "Požiadavka CXP neobsahuje rozpoznaný režim HPKE."
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "Požiadavka CXP neponúka podporovaný archívny formát deflate."
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "Kód PIN bezpečnostného kľúča FIDO2 obsahuje nepodporovaný bajt NUL."
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "Kód PIN bezpečnostného kľúča FIDO2 nie je správny."
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr "Bezpečnostný kľúč FIDO2 nevrátil identifikátor prihlasovacieho údaja."
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr "Dostupné súkromné kľúče nemôžu túto položku dešifrovať."
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr "Pripojený hardvérový kľúč nezodpovedá uloženému dešifrovaciemu kľúču."
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr "Pripojený hardvérový kľúč nezodpovedá uloženému podpisovaciemu kľúču."
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr "Aktuálnym filtrom nezodpovedajú žiadne vetvy vo vybratých úložiskách."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "Aktuálny zoznam nemá žiadne polia pass, v ktorých možno vyhľadávať."
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "Súbor nie je požiadavkou CXP na export prístupových kľúčov."
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "Doména gettext obsahuje vložený bajt NUL."
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "Cesta k lokalizácii gettext obsahuje vložený bajt NUL."
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "Kód PIN hardvérového kľúča je zablokovaný."
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "Hardvérový kľúč neprijal požadovaný nový kód PIN."
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "Hardvérový kľúč nevrátil odtlačok dešifrovacieho kľúča."
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "Hardvérový kľúč nevrátil odtlačok podpisovacieho kľúča."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "Inštalátor je pripravený na spustenie."
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "Prístupovému kľúču chýba {label}."
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "Požiadavka na prístupový kľúč obsahuje JSON s chybnou štruktúrou: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "Požiadavka na prístupový kľúč prekračuje limit {limit} bajtov."
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "Požiadavka na prístupový kľúč má chybnú štruktúru: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr "Zdroj požiadavky na prístupový kľúč nie je bežný miestny súbor: {path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "Pole {label} prístupového kľúča je prázdne."
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr "Pole {label} prístupového kľúča musí používať base64url bez doplnenia."
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "Editor hesiel nie je k dispozícii."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "Heslá sa nezhodujú."
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "Heslo súkromného kľúča nie je správne."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr "Proces vytvárania zoznamu súkromných kľúčov sa neočakávane zastavil."
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "Kódy PIN bezpečnostného kľúča sa nezhodujú."
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr "Vybratý súbor nie je podporovanou miestnou požiadavkou CXP na prístupový kľúč. {error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "Vybratá cesta úložiska hesiel nie je priečinok."
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "Vybratá cesta úložiska nie je priečinok."
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr "Uložený JSON nie je prihlasovacím údajom prístupového kľúča."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "Uložený verejný kľúč nemá podpisovací podkľúč."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr "Uložený verejný kľúč nemá podkľúč na šifrovanie prenosu."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr "Uloženému verejnému kľúču chýba hardvérový dešifrovací kľúč."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr "Uloženému verejnému kľúču chýba hardvérový podpisovací kľúč."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid "The update helper cleanup directory does not match the downloaded update location."
+msgstr "Priečinok na vyčistenie pomocníka aktualizácie nezodpovedá umiestneniu stiahnutej aktualizácie."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr "Spustiteľný súbor pomocníka aktualizácie nemá nadradený priečinok."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "Aktualizácia je pripravená na inštaláciu."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid "These lines are added after the password line when you create a new password entry. Leave it empty to start with a blank pass file."
+msgstr "Tieto riadky sa pri vytváraní nového záznamu hesla pridajú za riadok s heslom. Ak chcete začať s prázdnym súborom pass, nechajte pole prázdne."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid "These settings are used when you generate or regenerate a password from the editor."
+msgstr "Tieto nastavenia sa použijú pri generovaní alebo opätovnom generovaní hesla v editore."
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "Tento bezpečnostný kľúč FIDO2 nemôže otvoriť vaše položky."
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "V tejto vetve nie sú žiadne commity, ktoré možno auditovať."
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "Táto zostava neobsahuje podporu prístupových kľúčov."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "Toto pole nemá žiadne hodnoty, v ktorých možno vyhľadávať."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid "This hardware key already has OpenPGP keys. Import the matching public key file instead."
+msgstr "Tento hardvérový kľúč už obsahuje kľúče OpenPGP. Namiesto toho importujte zodpovedajúci súbor verejného kľúča."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid "This hardware key already has OpenPGP keys. Use Add hardware key (Experimental) or import the matching public key file instead."
+msgstr "Tento hardvérový kľúč už obsahuje kľúče OpenPGP. Použite možnosť Pridať hardvérový kľúč (experimentálne) alebo namiesto toho importujte zodpovedajúci súbor verejného kľúča."
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "Tento hardvérový kľúč nemôže otvoriť vaše položky."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid "This hardware key has no OpenPGP key yet. Use Set up new hardware key (Experimental) instead."
+msgstr "Tento hardvérový kľúč zatiaľ nemá žiadny kľúč OpenPGP. Namiesto toho použite možnosť Nastaviť nový hardvérový kľúč (experimentálne)."
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid "This item can't be opened with the private keys currently available in the app. File actions are still available, but copy and move-to-store are disabled until a compatible private key is available."
+msgstr "Túto položku nemožno otvoriť pomocou súkromných kľúčov, ktoré sú aktuálne dostupné v aplikácii. Akcie so súborom zostávajú dostupné, ale kopírovanie a presun do úložiska sú vypnuté, kým nebude dostupný kompatibilný súkromný kľúč."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "Táto položka neobsahuje súkromný kľúč v textovom formáte."
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "Tento kľúč nemôže otvoriť vaše položky."
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "Tento súkromný kľúč je chránený heslom."
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "Tento súkromný kľúč vyžaduje bezpečnostný kľúč FIDO2."
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "Tento súkromný kľúč vyžaduje iný spôsob odomknutia."
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "Tento súkromný kľúč vyžaduje hardvérový kľúč."
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "Tento príjemca nie je v aplikácii dostupný."
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid "This selected key is required while all selected private keys are required."
+msgstr "Tento kľúč musí zostať vybratý, kým sa vyžadujú všetky vybraté súkromné kľúče."
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "Táto hodnota je pre QR kód príliš dlhá."
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "Príliš krátke (počet znakov: {length})"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "Nástroje"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "Celkový počet znakov"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "Dotknite sa bezpečnostného kľúča FIDO2 a skúste to znova."
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "Ak kľúč bliká, dotknite sa ho."
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "Preložiť"
+
+#: src/translation_help.rs:51
+msgid "Translate Keycord into a new language or help improve an existing translation on Weblate."
+msgstr "Preložte Keycord do nového jazyka alebo pomôžte vylepšiť existujúci preklad na Weblate."
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Preložil Nick."
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "Neúplný dávkový výstup príkazu git cat-file."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "Skúste iný filter polí."
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "Skúste iný hľadaný výraz alebo načítajte ďalšie commity."
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "Skúste iný hľadaný výraz."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "Skúste iný filter hodnôt."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "Skúste to znova v Predvoľbách."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "Skúste iný dopyt alebo filter."
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "Zapnúť"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "Zapnúť synchronizáciu súkromných kľúčov?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "Vrátiť zmeny späť"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "Vrátené späť."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "Neočakávaný tvar šifrovaného textu Cv25519"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "Neočakávaný tvar šifrovaného textu NistP256"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr "Neočakávaný typ objektu príkazu git cat-file „{object_type}“."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "Neočakávaný počet zodpovedajúcich verejných podkľúčov: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr "Informácie o tokene boli neočakávane načítané bez vyrovnávacej pamäte."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "Odomknúť súbor pass"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr "Pred zrušením výberu tohto kľúča odomknite iný vybratý súkromný kľúč."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "Odomknúť kľúč"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "Odomknite kľúč v Predvoľbách."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "Pokračujte odomknutím kľúča."
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "Súkromný kľúč hostiteľa bez názvu"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "Súkromný kľúč bez názvu"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "Čipová karta bez názvu"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "Odpojte ostatné bezpečnostné kľúče a skúste to znova."
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "Nepodporovaný formát záznamu hesla FIDO2 {}."
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "Nepodporovaná ochrana záznamu hesla FIDO2 „{}“."
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "Nepodporovaný formát súkromného kľúča FIDO2 {}."
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "Nepodporovaná ochrana súkromného kľúča FIDO2 „{}“."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "Nepodporovaná architektúra aktualizácie pre Linux: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "Nepodporovaná kombinácia šifrovaného textu {:?} a verejného kľúča {:?}"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "Nepodporovaný formát manifestu hardvérového kľúča {}."
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "Nepodporovaná ochrana hardvérového kľúča „{}“."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "Nepodporovaný hašovací algoritmus pre RSA: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "Nepodporovaná URL repozitára aktualizácií: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "Nepodporovaný podpisovací algoritmus: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "Neoverené"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "Kontrolný súčet SHA-256 aktualizácie „{}“ sa nezhoduje."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "Dostupná aktualizácia"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "Cesta na stiahnutie aktualizácie nemá nadradený priečinok."
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "Aktualizovať heslo pre {label}"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "Aktualizovať HEAD repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr "Aktualizovať URL vzdialeného repozitára Git úložiska hesiel"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "Aktualizovať príjemcov úložiska hesiel"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr "Veľkosť aktualizácie sa po stiahnutí nezhoduje (očakávaná {}, získaná {})."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "Veľkosť aktualizácie „{}“ sa nezhoduje."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr "Všetky uložené heslá sa aktualizujú podľa nových nastavení prístupu."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "Veľké písmená"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr "Použite --open-passkey-request s práve jedným miestnym súborom."
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "Namiesto toho použite možnosť Pridať tajný kľúč OTP."
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "Namiesto toho použite požiadavku na prístupový kľúč."
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "Ako používateľské meno použite názov súboru bez cesty."
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "Použite názov súboru bez cesty."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr "Použiť príjemcov z histórie commitov na overovanie auditu"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "Použiť názov súboru"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "Pre polia použite find. Pre vzory použite reg."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "Použiť názov priečinka"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "Pri vyhľadávaní podľa názvu súboru použiť priečinky"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "Na importovanie do existujúceho úložiska použite príkaz pass import."
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "Použite pass import s vlastným príkazom pass."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "Použiť úložisko, priečinky a názov súboru"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices"
+msgstr "Používajte adaptívne rozhranie GTK pomocou klávesnice, myši alebo dotyku na počítačoch aj mobilných zariadeniach"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "Použite zodpovedajúci hardvérový kľúč."
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "Namiesto toho použite pole používateľského mena."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr "Použije sa iba vtedy, keď súbor pass nemá zašifrované pole používateľského mena."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "Používateľské meno"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "Namiesto toho sa používa Integrated."
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "Pomocné nástroje a údržba"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid "Valid host keys may appear unavailable here while private-key sync is off."
+msgstr "Kým je synchronizácia súkromných kľúčov vypnutá, platné kľúče hostiteľa sa tu môžu javiť ako nedostupné."
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr "Platné kľúče hostiteľa sa tu môžu javiť ako nedostupné."
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "Overenie"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "Spôsob overenia"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "Overené"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "Veľmi malá rozmanitosť znakov"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "Chvíľu počkajte."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "Slabé heslá"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid "When enabled, History can use recipients from earlier commits while verifying older encrypted entries."
+msgstr "Po zapnutí môže História pri overovaní starších zašifrovaných záznamov používať príjemcov zo starších commitov."
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Funkcia ShellExecute vo Windowse zlyhala: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "Prebieha spracovanie"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "Zapísať objekt commitu repozitára Git úložiska hesiel"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "Zapísať strom repozitára Git úložiska hesiel"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "Teraz môžete generovať nové súkromné kľúče."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "Teraz môžete spravovať vzdialené repozitáre Git"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "Teraz môžete otvárať súbory pass v novom okne"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr "Teraz môžete používať hodnoty polí ako premenné vo vyhľadávaní"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "_O aplikácii Keycord"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "_Pridať položku"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "_Nájsť položku"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "_Klávesové skratky"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "Pr_edvoľby"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "_Synchronizovať so vzdialeným repozitárom"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "Nás_troje"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "backend: host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "backend: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "vyčistenie vetvy"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "vytvorenie klienta služby GitHub"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "vytvorenie klienta na sťahovanie"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "vyčistenie zastaraných hodnôt filtra úložísk"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "vymazanie prázdnych polí pred uložením"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "zhromažďovanie odtlačkov dostupných súkromných kľúčov"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "vytvorenie čiastočného súboru aktualizácie"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "vytvorenie priečinka na stiahnutie aktualizácie"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "ID prihlasovacieho údaja"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "dekódovanie odpovede služby GitHub s údajmi o vydaní"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "odstránenie záznamu hesla"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "vypnutie výpisov pamäte: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "vypnutie bodov rozšírenia: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "vypnutie možnosti vytvárať výpis pamäte procesu: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "stiahnutie súboru vydania"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "prázdny súbor hesla"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "zapnutie pravidiel ASLR: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "zapnutie DEP: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "zapnutie prísnych kontrol popisovačov: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "dokončenie súboru aktualizácie"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "zápis čiastočného súboru aktualizácie na disk"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "príkaz git"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "príkaz gpg --delete-secret-keys zlyhal"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "príkaz gpg --export zlyhal"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "príkaz gpg --export-secret-keys zlyhal"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "príkaz gpg --import zlyhal"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "príkaz gpg --list-secret-keys zlyhal"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "manifest hardvérového kľúča"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke obsahuje viac než {MAX_LIST_ITEMS} množín parametrov"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "režim hpke {:?} vyžaduje verejný JWK"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke musí obsahovať aspoň jednu množinu parametrov"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "súradnice EC v hpke.key musia mať rovnakú dĺžku"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key obsahuje viac než {MAX_JWK_MEMBERS} členov"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "člen hpke.key"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key musí obsahovať reťazcový člen kty"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key musí obsahovať reťazcový člen {member}"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr "hpke.key smie obsahovať iba materiál verejného kľúča"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key nesmie byť prázdny objekt JWK"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key používa nepodporovaný typ kľúča {key_type:?}"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve} nezodpovedá mechanizmu KEM {kem}"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "hpke.key.x má nesprávnu dĺžku pre KEM {kem}"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "Hodnota hpke.key.{member} nesmie byť prázdna"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr "hpke.key.{member} musí používať base64url bez doplnenia"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "načítavanie dostupnej kľúčenky"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "chýba grafické prostredie"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "presun záznamu hesla do iného úložiska"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "šablóna novej položky"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "príkaz pass zlyhal"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "príkaz pass import --list zlyhal"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "príkaz pass import zlyhal"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "príkaz pass import nie je k dispozícii."
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "príkaz pass init zlyhal"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "príkaz pass insert zlyhal"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "príkaz pass mv zlyhal"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "príkaz pass rm zlyhal"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "heslo"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "generovanie hesla"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "zoradenie zoznamu hesiel"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "súbor predvolieb"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "súkromný kľúč"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "synchronizácia súkromných kľúčov"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "načítanie odpovede služby GitHub s údajmi o vydaní"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "načítanie bajtov aktualizácie"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "vzdialený príkaz git"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "vzdialený príkaz git v pracovnom strome"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "odstránenie zastaraného čiastočného súboru aktualizácie"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "odstránenie zastaraného súboru aktualizácie"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "uloženie výberu filtra úložísk"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "odoslanie požiadavky službe GitHub na údaje o vydaní"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "odoslanie požiadavky na súbor vydania"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "vyčistenie úložiska"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "cesta úložiska"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "neočakávané atribúty algoritmu ECC: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "neošetrená krivka: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "neznáma chyba systému Windows"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "neznáma chyba zabezpečenia systému Windows"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "nepodporovaný typ kľúča: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "identifikátor používateľa"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "náhradný spôsob určenia používateľského mena"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "príkaz git v pracovnom strome"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "zápis bajtov aktualizácie"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "Príkaz {action} zlyhal: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "Príkaz {action} zlyhal: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "Príkaz {action} zlyhal: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (zatiaľ bez commitov)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr "{context} prekračuje podporovanú hĺbku vnorenia TOML {}."
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr "{context} prekračuje podporovaný limit veľkosti TOML {} bajtov."
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "Načítané commity: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "{count} zodpovedajúca položka"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "Počet zodpovedajúcich položiek: {count}"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "Počet príjemcov: {count}"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "Počet nastavených vzdialených repozitárov: {count}."
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "{count} jedinečná hodnota"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "Počet jedinečných hodnôt: {count}"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "Pole {field} obsahuje neplatné biele alebo riadiace znaky"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "Pole {field} obsahuje viac než {MAX_LIST_ITEMS} hodnôt"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "Pole {field} je dlhšie než {max_bytes} bajtov"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "Pole {field} musí obsahovať platné ID spoliehajúcej sa strany"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "Pole {field} musí obsahovať aspoň jednu hodnotu"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "Pole {field} nesmie byť prázdne"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} – hardvérový kľúč"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} – chránený heslom"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} – chránený bezpečnostným kľúčom"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} – bezpečnostný token"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} – bezpečnostný token ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "Zostáva {remaining} s"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"chyba: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} z {} ({percentage:.0} %)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
