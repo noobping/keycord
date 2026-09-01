@@ -1,14 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: keycord 0.9.13\n"
-"PO-Revision-Date: 2026-09-01 00:00+0200\n"
-"Last-Translator: Nick\n"
 "Language-Team: Estonian\n"
-"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-08-26 06:51+0000\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: crates/keycord-stores/src/recipients.rs:193
 msgid "1 recipient"
@@ -44,7 +45,7 @@ msgstr "Rakendusest"
 
 #: crates/keycord-git/data/window-store-page.fragment.ui:44
 msgid "Actions"
-msgstr "Toimingud"
+msgstr "Tegevused"
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
 #: crates/keycord-entries/data/window-pages.fragment.ui:414
@@ -61,7 +62,7 @@ msgstr "Lisa kaust."
 
 #: crates/keycord-keys/src/error.rs:222
 msgid "Add a password to that key first."
-msgstr "Lisa esmalt sellele võtmele parool."
+msgstr "Esmalt lisa sellele võtmele salasõna."
 
 #: crates/keycord-entries/src/error.rs:39
 #: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
@@ -75,7 +76,7 @@ msgstr "Giti repositooriumi lähtestamiseks lisa esmalt kaughoidla."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:406
 msgid "Add a store folder first."
-msgstr "Lisa esmalt hoidla kaust."
+msgstr "Esmalt lisa salasõnahoidla kaust."
 
 #: crates/keycord-stores/src/management.rs:108
 msgid "Add a store to use pass import."
@@ -137,7 +138,7 @@ msgstr "Lisa väli"
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
 msgid "Add hardware key (Experimental)"
-msgstr "Lisa riistvaravõti (katsetuslik)"
+msgstr "Lisa raudvaraline võti (katseline)"
 
 #: crates/keycord-entries/data/window-header-list.fragment.ui:4
 #: crates/keycord-entries/src/ui/list/row.rs:247
@@ -252,11 +253,11 @@ msgstr "Lisati mallist puudunud väljad."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:118
 msgid "Adding hardware key"
-msgstr "Riistvaravõtme lisamine"
+msgstr "Lisan raudvaralist võtit"
 
 #: crates/keycord-fido/src/ui.rs:35
 msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Luba USB-turvavõtme kasutamine (katsetuslik FIDO2)"
+msgstr "Luba ligipääs USB turvavõtmega (katseline FIDO2)"
 
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
@@ -264,16 +265,16 @@ msgstr "Luba ligipääs selle seadme rakendustele"
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:27
 msgid "Allow smartcard access (Experimental)"
-msgstr "Luba kiipkaardi kasutamine (katsetuslik)"
+msgstr "Luba ligipääs kiipkaardiga (katseline)"
 
 #: crates/keycord-entries/src/error.rs:77
 #: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
 msgid "An item with that name already exists."
-msgstr "Selle nimega kirje on juba olemas."
+msgstr "Sellise nimega objekt on juba olemas."
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
 msgid "Apply template"
-msgstr "Rakenda mall"
+msgstr "Kasuta malli"
 
 #: crates/keycord-lifecycle/data/metainfo.xml:81
 msgid "Apply the filter when creating new pass files."
