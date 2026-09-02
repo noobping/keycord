@@ -1,0 +1,5141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-02 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Sinhala\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: si\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "ලබන්නෙක්"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "දුරස්ථ ගබඩාවක් වින්‍යාස කර ඇත."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "ඔබගේ මුරපද දත්ත අඩංගු ෆෝල්ඩර ලැයිස්තුවක්."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "නව Linux ස්වාධීන ගොඩනැගීමක් තිබේ."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "නව Windows නිකුතුවක් තිබේ."
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr "මෙම අයිතමයට අදාළ පෞද්ගලික යතුරක් අගුළු දමා ඇත. එය අභිරුචි තුළින් අගුළු හරින්න."
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "මුරපද ගබඩාවේ Git merge කිරීම අවලංගු කරන්න"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "පිළිබඳ"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "ක්‍රියා"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "OTP ක්ෂේත්‍රයක් එක් කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "මෙම ගබඩාවට Git දුරස්ථ ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "ෆෝල්ඩරයක් එක් කරන්න."
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "පළමුව එම යතුරට මුරපදයක් එක් කරන්න."
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "අභිරුචි තුළ පෞද්ගලික යතුරක් එක් කරන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr "පළමුව Git නිධියක් ආරම්භ කිරීමට දුරස්ථ ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "පළමුව ගබඩා ෆෝල්ඩරයක් එක් කරන්න."
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "pass import භාවිත කිරීමට ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr "මෙහි ඉතිහාසය පරීක්ෂා කිරීමට Git නිධියක් සහිත ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "උසස් සෙවුම එක් කරන්න"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "ආරම්භ කිරීමට අයිතමයක් එක් කරන්න."
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "පළමුව වෙනත් ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "මෙම ගබඩාව සෑදීමට අවම වශයෙන් එක් ලබන්නෙකු එක් කරන්න."
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr "වෙනස්කම් දිගටම සුරැකීමට අවම වශයෙන් එක් ලබන්නෙකු එක් කරන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "සමමුහුර්ත කිරීමට පෙර අවම වශයෙන් එක් දුරස්ථ ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "ප්‍රලේඛනය එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid ""
+"Add existing stores, create new stores, import passwords on supported "
+"systems, or restore a store from Git with the Host backend"
+msgstr ""
+"පවතින ගබඩා එක් කරන්න, නව ගබඩා සාදන්න, සහාය දක්වන පද්ධතිවලින් මුරපද ආයාත කරන්න, නැතහොත් "
+"Host පසුබිම සමඟ Git වෙතින් ගබඩාවක් ප්‍රතිසාධනය කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "පරීක්ෂණාත්මක FIDO2 සහාය එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr "පෞද්ගලික යතුරු සඳහා පරීක්ෂණාත්මක OpenPGP දෘඪාංග යතුරු සහාය එක් කරන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "ක්ෂේත්‍රයක් එක් කරන්න"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "දෘඪාංග යතුරක් එක් කරන්න (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "අයිතමයක් එක් කරන්න"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "අස්ථානගත ක්ෂේත්‍ර එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "විකල්ප GPG සමමුහුර්තකරණය එක් කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "ගබඩාවක් එක් කරන්න හෝ සාදන්න"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr "මෙම ගොඩනැගීම දේශීය යෙදුම් මෙනුවට එක් කරන්න හෝ එයින් ඉවත් කරන්න."
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "{label} සඳහා මුරපදය එක් කරන්න"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "මුරපද ගබඩාවට Git දුරස්ථ ගබඩාවක් එක් කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "දුරස්ථ ගබඩාවක් එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "සෙවුම් සැපයුම්කරුවෙකු එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "ලොග් පිටපත් කිරීමේ විකල්පය එක් කරන්න"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid ""
+"Add the passkey for {username} on {rp_id} to your default pass store? You "
+"can review it before saving."
+msgstr ""
+"{rp_id} හි {username} සඳහා මුරයතුර ඔබගේ පෙරනිමි pass ගබඩාවට එක් කරන්නද? සුරැකීමට පෙර "
+"එය සමාලෝචනය කළ හැක."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid ""
+"Add the public key already stored on the connected OpenPGP smartcard or "
+"YubiKey."
+msgstr ""
+"සම්බන්ධිත OpenPGP ස්මාර්ට් කාඩ්පතේ හෝ YubiKey හි දැනටමත් ගබඩා කර ඇති පොදු යතුර එක් කරන්න."
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "යෙදුම් මෙනුවට එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "මෙවලම් පිටුව එක් කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr "දත්ත වෙනත් මෙවලම් වෙත ගෙන යාමට CSV අපනයනය එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr "commit සත්‍යාපන විස්තර සහිත Git ඉතිහාස පරීක්ෂාව එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid ""
+"Added QR code views for passwords, usernames, one-time codes, other entry "
+"fields, and permission commands."
+msgstr ""
+"මුරපද, පරිශීලක නාම, එක්වර කේත, ඇතුළත් කිරීම්වල අනෙකුත් ක්ෂේත්‍ර සහ අවසර විධාන සඳහා QR කේත "
+"දසුන් එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid ""
+"Added entry filtering by password store and remembered history-inspection "
+"filters."
+msgstr "මුරපද ගබඩාව අනුව ඇතුළත් කිරීම් පෙරීම සහ මතක තබාගත් ඉතිහාස පරීක්ෂණ පෙරහන් එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "පරීක්ෂණාත්මක FIDO2 මාර්ගෝපදේශ සහ ප්‍රගති දර්ශක එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත OpenPGP යතුරු එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ".gpg-id ගොනු සඳහා ෆෝල්ඩරයට විශේෂිත ලබන්නන් සංස්කරණය කිරීම එක් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "මිශ්‍ර අනුපිළිවෙළ ප්‍රකාරය එක් කරන ලදි"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "අස්ථානගත අච්චු ක්ෂේත්‍ර එක් කරන ලදි."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "දෘඪාංග යතුර එක් කරමින්"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr "USB ආරක්ෂක යතුරු ප්‍රවේශයට ඉඩ දෙන්න (පරීක්ෂණාත්මක FIDO2)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "මෙම උපාංගයේ යෙදුම් වෙත ප්‍රවේශයට ඉඩ දෙන්න"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "ස්මාර්ට් කාඩ්පත් ප්‍රවේශයට ඉඩ දෙන්න (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "එම නම සහිත අයිතමයක් දැනටමත් තිබේ."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "අච්චුව යොදන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "නව pass ගොනු සාදන විට පෙරහන යොදන්න."
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "මෙම ගොඩනැගීමේ විගණන විශේෂාංග අක්‍රීය කර ඇත."
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "විගණනය අනපේක්ෂිත ලෙස නතර විය."
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "කර්තෘ"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "නිර්මාණය කළේ"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid ""
+"Automatically remove blank username, field, and OTP lines when saving a pass "
+"file."
+msgstr "pass ගොනුවක් සුරකින විට හිස් පරිශීලක නාම, ක්ෂේත්‍ර සහ OTP පේළි ස්වයංක්‍රීයව ඉවත් කරන්න."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "තිබෙන අනුවාදය:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "ආපසු"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "අභිරුචි වෙත ආපසු"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "ගබඩා යතුරු වෙත ආපසු"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "පසුබිම"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "පොදු යතුරු ගොනුවක් සම්බන්ධිත දෘඪාංග යතුරට බැඳ තබන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "ශාඛාව"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "ශාඛා"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "මුරපද ගබඩා පිරික්සා සංස්කරණය කරන්න"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "ක්ෂේත්‍ර අගයන් පිරික්සන්න"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "වත්මන් ලැයිස්තුවේ අනන්‍ය ක්ෂේත්‍ර අගයන් පිරික්සන්න."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "CSV ගොනු"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "CXP අපනයන ඉල්ලීමේ {0} අනුවාදයට සහාය නොදක්වයි."
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr "විවෘත කළ ඉල්ලීම් ගොනුවක් සඳහා CXP ප්‍රතිචාර ප්‍රකාරය {0:?} වෙත සහාය නොදක්වයි."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "මෙම අයිතමය විවෘත කළ නොහැක."
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "එම වෙනස අහෝසි කළ නොහැක."
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "අවසාන වෙනස අහෝසි කළ නොහැක."
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "අවලංගු කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr "ගොනු නාමය පරිශීලක නාමය ලෙස භාවිත කිරීමට පෙරනිමිය වෙනස් කරන්න."
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "වෙනස් කළ මාර්ග"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr "යෙදුම් නිරූපකය යතුරු ලණුවකට වෙනස් කරන ලදි"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "_යාවත්කාලීන සඳහා පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "මෙම ගබඩාව සමමුහුර්ත කිරීමට පෙර ශාඛාවක් checkout කරන්න."
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "සමමුහුර්ත කිරීමට පෙර ශාඛාවක් checkout කරන්න."
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "stage කළ මුරපද ගබඩාවේ Git වෙනස්කම් පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "වැඩි විස්තර සඳහා ලොග් පරීක්ෂා කරන්න."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "යාවත්කාලීන සඳහා පරීක්ෂා කරමින්"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "pass import තිබේදැයි පරීක්ෂා කරමින්."
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr "හරියටම එක් මුරයතුරු අක්තපත්‍රයක් අඩංගු JSON වස්තුවක් තෝරන්න."
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr "එක් මුරයතුරු අක්තපත්‍රයක් අඩංගු JSON වස්තුවක් තෝරන්න."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "ආයාතකයට අවශ්‍ය නම් ගොනුවක් හෝ ෆෝල්ඩරයක් තෝරන්න."
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "ෆෝල්ඩරයක් තෝරා එය Git නිධියකින් ප්‍රතිසාධනය කරන්න."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "ෆෝල්ඩරයක් තෝරන්න. එය හිස් නම් ගබඩාවක් බවට පත් වේ."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "දේශීය ගොනුවක් තෝරන්න."
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "දේශීය ෆෝල්ඩරයක් තෝරන්න."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid ""
+"Choose a private key file or experimental FIDO2-protected private key file."
+msgstr "පෞද්ගලික යතුරු ගොනුවක් හෝ පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරු ගොනුවක් තෝරන්න."
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "ගබඩාවක් තෝරන්න."
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "ආයාතකයක් තෝරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid ""
+"Choose how Keycord opens your data. Integrated is the default. Use Host to "
+"run your own command."
+msgstr ""
+"Keycord ඔබගේ දත්ත විවෘත කරන ආකාරය තෝරන්න. පෙරනිමිය Integrated වේ. ඔබගේම විධානයක් "
+"ධාවනය කිරීමට Host භාවිත කරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "මුල් පිටුවේ pass ගොනු අනුපිළිවෙළට තබන ආකාරය තෝරන්න."
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "ආයාත මූලාශ්‍ර ගොනුව තෝරන්න"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "ආයාත මූලාශ්‍ර ෆෝල්ඩරය තෝරන්න"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "මූලාශ්‍ර ගොනුව තෝරන්න"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "මූලාශ්‍ර ෆෝල්ඩරය තෝරන්න"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "ගබඩා ෆෝල්ඩරය තෝරන්න"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "ප්‍රතිසාධනය කළ යුතු ගබඩා ෆෝල්ඩරය තෝරන්න"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr "කළමනාකරණය කළ යුතු ෆෝල්ඩරයට විශේෂිත .gpg-id ගොනුව තෝරන්න."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "pass ගොනුව පිරිසිදු කරන්න"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "සුරැකීමට පෙර හිස් ක්ෂේත්‍ර ඉවත් කරන්න"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "සෙවුම මකන්න"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "මූලාශ්‍ර මාර්ගය මකන්න"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "පසුරු පුවරුවේ යතුරක් නොමැත."
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "පසුරු පුවරුව භාවිතයට නොමැත."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "වසන්න"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "යාවත්කාලීනය ස්ථාපනය කිරීමට Keycord වසන්නද?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "විධාන ආදාන ලියනය panic විය."
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "Commit කරන්න"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "commit පූරණය අනපේක්ෂිත ලෙස නතර විය."
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr "මෙම ගබඩාව සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න."
+
+#: crates/keycord-git/src/sync.rs:12
+msgid ""
+"Commit or discard local changes before syncing this store. Local and remote "
+"commits are also waiting to sync."
+msgstr ""
+"මෙම ගබඩාව සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න. දේශීය සහ දුරස්ථ "
+"commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/sync.rs:18
+msgid ""
+"Commit or discard local changes before syncing this store. Local commits are "
+"also waiting to sync."
+msgstr ""
+"මෙම ගබඩාව සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න. දේශීය commit ද "
+"සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/sync.rs:24
+msgid ""
+"Commit or discard local changes before syncing this store. Remote commits "
+"are also waiting to sync."
+msgstr ""
+"මෙම ගබඩාව සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න. දුරස්ථ commit ද "
+"සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr "සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid ""
+"Commit or discard local changes before syncing. Local and remote commits are "
+"also waiting to sync."
+msgstr ""
+"සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න. දේශීය සහ දුරස්ථ commit ද "
+"සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid ""
+"Commit or discard local changes before syncing. Local commits are also "
+"waiting to sync."
+msgstr ""
+"සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න. දේශීය commit ද සමමුහුර්ත වීමට "
+"රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid ""
+"Commit or discard local changes before syncing. Remote commits are also "
+"waiting to sync."
+msgstr ""
+"සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කරන්න හෝ ඉවතලන්න. දුරස්ථ commit ද සමමුහුර්ත වීමට "
+"රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "Commit කළේ"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "Commit කළ අය"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "ආරක්ෂක යතුරේ නව PIN එක තහවුරු කරන්න"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "මුරපදය තහවුරු කරන්න"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "ආරක්ෂක යතුරේ නව PIN එක තහවුරු කරන්න."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "පළමුව දෘඪාංග යතුරක් සම්බන්ධ කරන්න."
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "ඉදිරියට යාමට පෙර එක් FIDO2 ආරක්ෂක යතුරක් පමණක් සම්බන්ධ කරන්න."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "එක් කිරීමට පෙර එක් දෘඪාංග යතුරක් පමණක් සම්බන්ධ කරන්න."
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "FIDO2 ආරක්ෂක යතුර සම්බන්ධ කර නැවත උත්සාහ කරන්න."
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "පළමුව FIDO2 ආරක්ෂක යතුර සම්බන්ධ කරන්න."
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "දෘඪාංග යතුර සම්බන්ධ කර නැවත උත්සාහ කරන්න."
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "පළමුව දෘඪාංග යතුර සම්බන්ධ කරන්න."
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "ගැළපෙන FIDO2 ආරක්ෂක යතුර සම්බන්ධ කරන්න."
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "ආයාත කිරීමට පෙර ගැළපෙන දෘඪාංග යතුර සම්බන්ධ කරන්න."
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "සන්දර්භය"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "පිටපත් කරන ලදි."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "OTP පිටපත් කරන්න"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "armor කළ පෞද්ගලික යතුර පිටපත් කරන්න"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "armor කළ පොදු යතුර පිටපත් කරන්න"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුර පිටපත් කරන්න"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "ඇඟිලි සලකුණ පිටපත් කරන්න"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "ලොග් පිටපත් කරන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "මුරපදය පිටපත් කරන්න"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "මුරපදය පසුරු පුවරුවට පිටපත් කරන්න"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "අවසර විධානය පිටපත් කරන්න"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr "මෑත යෙදුම් සහ විධාන ප්‍රතිදානය පසුරු පුවරුවට පිටපත් කරන්න."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "තෝරාගත් අයිතමයේ මුරපදය පිටපත් කරන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "පරිශීලක නාමය පිටපත් කරන්න"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "අගය පිටපත් කරන්න"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "දත්ත ෆෝල්ඩරය හඳුනාගත නොහැකි විය."
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "මුල් ෆෝල්ඩරය හඳුනාගත නොහැකි විය."
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "එම ෆෝල්ඩරය එක් කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "දෘඪාංග යතුර එක් කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "ජනනය කළ දෘඪාංග යතුර සහතික කළ නොහැකි විය"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "යාවත්කාලීන සඳහා පරීක්ෂා කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "එම යතුර පිටපත් කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "මුරපදය පිටපත් කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr "දෘඪාංග යතුර මත පොදු යතුරු සහතිකය සෑදිය නොහැකි විය."
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "ගබඩාව සෑදිය නොහැකි විය."
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "FIDO2 මඟින් සංකේතනය කළ දත්ත විකේතනය කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "අයිතමය මකා දැමිය නොහැකි විය."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "යාවත්කාලීනය බාගත කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "මුරපද අපනයනය කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "ගැළපෙන ඇඟිලි සලකුණක් සහිත යතුර සොයාගත නොහැකි විය"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "දෘඪාංග විකේතන යතුර ජනනය කළ නොහැකි විය"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "දෘඪාංග අත්සන් යතුර ජනනය කළ නොහැකි විය"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "යතුර ජනනය කළ නොහැකි විය."
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "අවසරය ලබා දිය නොහැකි විය."
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "මුරයතුර ආයාත කළ නොහැකි විය"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "මුරපද ආයාත කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "යතුර ආයාත කළ නොහැකි විය."
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "FIDO2 ආරක්ෂක යතුර ආරම්භ කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Git දුරස්ථ ගබඩා පරීක්ෂා කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Git තත්ත්වය පරීක්ෂා කළ නොහැකි විය"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "ධාරකයේ GPG යතුරු පරීක්ෂා කළ නොහැකි විය"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "දෘඪාංග යතුර පරීක්ෂා කළ නොහැකි විය."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "යාවත්කාලීනය ස්ථාපනය කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr "පෞද්ගලික යතුරු සමමුහුර්තව තබාගත නොහැකි විය. සමමුහුර්තකරණය අක්‍රීය කරන ලදි."
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "commit පූරණය කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "දත්ත පූරණය කළ නොහැකි විය"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "පෞද්ගලික යතුරු පූරණය කළ නොහැකි විය"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "කේතය පූරණය කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "අයිතමය ගෙන යා නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "නව කවුළුවක් විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "මුරයතුරු ඉල්ලීම විවෘත කළ නොහැකි විය"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "එම අයිතමය විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "ගොනු තේරීම විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "ෆෝල්ඩර තේරීම විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "ෆෝල්ඩරය විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "ආයාත පිටුව විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "සබැඳිය විවෘත කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "මෙවලම් ප්‍රවේශය සූදානම් කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid ""
+"Couldn't present the Git signing unlock dialog. Continuing without a "
+"signature."
+msgstr "Git අත්සන් යතුර අගුළු හැරීමේ සංවාදය පෙන්විය නොහැකි විය. අත්සනක් නොමැතිව ඉදිරියට යයි."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "එම ගොනුව කියවිය නොහැකි විය."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "එම ෆෝල්ඩරය කියවිය නොහැකි විය."
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "එම යතුර කියවිය නොහැකි විය."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "පසුරු පුවරුව කියවිය නොහැකි විය."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "එම යතුර ඉවත් කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "එම දුරස්ථ ගබඩාව ඉවත් කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "අයිතමයේ නම වෙනස් කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr "දෘඪාංග යතුරේ පරිපාලක සැසිය නැවත විවෘත කළ නොහැකි විය"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "ගබඩාව ප්‍රතිසාධනය කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "වෙනස්කම් සුරැකිය නොහැකි විය."
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "ගබඩා යතුරු සුරැකිය නොහැකි විය."
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "එම දුරස්ථ ගබඩාව සුරැකිය නොහැකි විය."
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "එම සැකසුම සුරැකිය නොහැකි විය."
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "පෙරහන් තේරීම සුරැකිය නොහැකි විය."
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "ජනනය කළ දෘඪාංග පොදු යතුර serialize කළ නොහැකි විය"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "දෘඪාංග යතුරේ කාඩ්පත් හිමියාගේ නම සැකසිය නොහැකි විය"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "දෘඪාංග යතුරේ පරිශීලක PIN එක සැකසිය නොහැකි විය"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "මුරපදය QR කේතයක් ලෙස පෙන්විය නොහැකි විය."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "ස්ථාපකය ආරම්භ කළ නොහැකි විය."
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "පෞද්ගලික යතුරු සමමුහුර්ත කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "ගබඩාව සමමුහුර්ත කළ නොහැකි විය."
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "ගබඩා සමමුහුර්ත කළ නොහැකි විය."
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid ""
+"Couldn't unlock private key {fingerprint_for_failure} for Git signing. "
+"Continuing without a signature."
+msgstr ""
+"Git අත්සන් කිරීම සඳහා {fingerprint_for_failure} පෞද්ගලික යතුර අගුළු හැරිය නොහැකි විය. "
+"අත්සනක් නොමැතිව ඉදිරියට යයි."
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "FIDO2 ආරක්ෂක යතුර අගුළු හැරිය නොහැකි විය."
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "දෘඪාංග යතුර අගුළු හැරිය නොහැකි විය."
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "යතුර අගුළු හැරිය නොහැකි විය."
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "යෙදුම් මෙනුව යාවත්කාලීන කළ නොහැකි විය."
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "කේතය යාවත්කාලීන කළ නොහැකි විය."
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "දෘඪාංග යතුරේ පරිපාලක PIN එක සත්‍යාපනය කළ නොහැකි විය"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "ඉල්ලූ දෘඪාංග යතුරේ PIN එක සත්‍යාපනය කළ නොහැකි විය"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "නව FIDO2-ආරක්ෂිත යතුරක් සාදන්න."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "සම්බන්ධිත හිස් ස්මාර්ට් කාඩ්පතක් හෝ YubiKey එකක් මත නව OpenPGP යතුරක් සාදන්න."
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "නව pass ගොනුවක් සාදන්න."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "මුරපදයෙන් ආරක්ෂිත නව යතුරක් සාදන්න."
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr "මුරපද ගබඩා සඳහා මුරපදයෙන් ආරක්ෂිත පෞද්ගලික යතුරක් සාදන්න."
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "සම්බන්ධිත හිස් ස්මාර්ට් කාඩ්පතක් හෝ YubiKey එකක් මත OpenPGP යතුරක් සාදන්න."
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "ගුප්තලේඛනිකව වලංගු නොවන අත්සනක්"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "වත්මන් ශාඛා අග්‍රයේ ලබන්නන්"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "වත්මන් අනුවාදය:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "පෙරනිමි"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "මකන්න"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "ධාරකයේ GPG පෞද්ගලික යතුර මකන්න"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "මුරපද ඇතුළත් කිරීම මකන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "තෝරාගත් pass ගොනුව මකන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "Detached HEAD"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "විස්තර"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid ""
+"Dismissed the Git signing unlock prompt for {context_for_close}. Continuing "
+"without a signature."
+msgstr ""
+"{context_for_close} සඳහා Git අත්සන් යතුර අගුළු හැරීමේ විමසුම වැසී ඇත. අත්සනක් නොමැතිව "
+"ඉදිරියට යයි."
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "ප්‍රලේඛනය"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "බාගත කළේ"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "මුරපද ඇතුළත් කිරීමක් සංස්කරණය කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid ""
+"Edit entries with form fields or raw pass-file text, generate passwords, "
+"copy field values, and show passwords, usernames, one-time codes, or other "
+"fields as QR codes"
+msgstr ""
+"පෝරම ක්ෂේත්‍ර හෝ අමු pass ගොනු පෙළ සමඟ ඇතුළත් කිරීම් සංස්කරණය කරන්න, මුරපද ජනනය කරන්න, "
+"ක්ෂේත්‍ර අගයන් පිටපත් කරන්න, එමෙන්ම මුරපද, පරිශීලක නාම, එක්වර කේත හෝ වෙනත් ක්ෂේත්‍ර QR කේත "
+"ලෙස පෙන්වන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "දුරස්ථ ගබඩාව සංස්කරණය කරන්න"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "ඊමේල්"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "ඊමේල් ක්ෂේත්‍රවල වලංගු ඊමේල් ලිපිනයක් තිබිය යුතුය."
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "හිස්"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "මෙම ප්‍රතිඵලය සඳහා සක්‍රීයයි"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "විධානයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "ක්ෂේත්‍ර නාමයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "යතුරු මුරපදයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "දෘඪාංග යතුරට නමක් ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "පෞද්ගලික යතුරට නමක් ඇතුළත් කරන්න."
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "නමක් ඇතුළත් කරන්න."
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "මුරයතුර සඳහා පරිශීලක නාමයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "දුරස්ථ ගබඩාවේ URL එක ඇතුළත් කරන්න."
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "දුරස්ථ ගබඩාවේ නම ඇතුළත් කරන්න."
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "නිධියේ URL එක ඇතුළත් කරන්න."
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "පරිශීලක නාමයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "PKCS#8 ආකෘතියේ වලංගු මුරයතුරු පෞද්ගලික යතුරක් ඇතුළත් කරන්න."
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "වලංගු ඊමේල් ලිපිනයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "වලංගු මුරයතුරු RP ID එකක් ඇතුළත් කරන්න."
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "HTTP හෝ HTTPS URL එකක් ඇතුළත් කරන්න."
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "OTP රහසක් ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "දෘඪාංග යතුර සඳහා ඊමේල් ලිපිනයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "පෞද්ගලික යතුර සඳහා ඊමේල් ලිපිනයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "ඊමේල් ලිපිනයක් ඇතුළත් කරන්න."
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "FIDO2 ආරක්ෂක යතුරේ PIN එක ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "දෘඪාංග යතුරේ PIN එක ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "දෘඪාංග යතුරේ පරිපාලක PIN එක ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "යතුරේ මුරපදය ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "දෘඪාංග යතුරේ නව PIN එක ඇතුළත් කරන්න."
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "ආරක්ෂක යතුරේ නව PIN එක ඇතුළත් කරන්න."
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "පෞද්ගලික යතුරේ මුරපදය ඇතුළත් කරන්න."
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "ආරක්ෂක යතුරේ PIN එක ඇතුළත් කරන්න."
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "පිරිසිදු කිරීමේ ක්‍රියා සමඟ මුරපද සංස්කාරකය පුළුල් කරන්න"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid ""
+"Experimental FIDO2-protected private keys need USB device access before "
+"Keycord can use a connected security key to unlock protected private keys. "
+"Restart Keycord after granting access."
+msgstr ""
+"ආරක්ෂිත පෞද්ගලික යතුරු අගුළු හැරීමට සම්බන්ධිත ආරක්ෂක යතුරක් භාවිත කිරීමට පෙර, පරීක්ෂණාත්මක FIDO2-"
+"ආරක්ෂිත පෞද්ගලික යතුරු සඳහා USB උපාංග ප්‍රවේශය අවශ්‍ය වේ. ප්‍රවේශය ලබා දීමෙන් පසු Keycord "
+"නැවත ආරම්භ කරන්න."
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid ""
+"Experimental hardware-key workflows need PC/SC access to use connected "
+"OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected "
+"keys remain available without this."
+msgstr ""
+"සම්බන්ධිත OpenPGP ස්මාර්ට් කාඩ්පත් හෝ YubiKey භාවිත කිරීමට පරීක්ෂණාත්මක දෘඪාංග යතුරු "
+"වැඩප්‍රවාහ සඳහා PC/SC ප්‍රවේශය අවශ්‍ය වේ. ප්‍රවේශය ලබා දීමෙන් පසු Keycord නැවත ආරම්භ "
+"කරන්න. මෙය නොමැතිවත් මුරපදයෙන් ආරක්ෂිත යතුරු භාවිත කළ හැක."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid ""
+"Experimental multi-layer encryption. When on, every selected key must be "
+"unlocked and other pass apps will not be able to read these items."
+msgstr ""
+"පරීක්ෂණාත්මක බහු-ස්තර සංකේතනය. මෙය සක්‍රීය විට තෝරාගත් සෑම යතුරක්ම අගුළු හැරිය යුතු අතර අනෙකුත් "
+"pass යෙදුම්වලට මෙම අයිතම කියවිය නොහැක."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "පරීක්ෂණාත්මක ගබඩා විකල්ප"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "අපනයනය කරන්න"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "සියලුම මුරපද අපනයනය කරන්නද?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "සෑම මුරපදයක් සහ ක්ෂේත්‍රයක්ම CSV ගොනුවකට අපනයනය කරන්න."
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "ධාරකයේ GPG පෞද්ගලික යතුර අපනයනය කරන්න"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "ධාරකයේ GPG පොදු යතුරු අපනයනය කරන්න"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "මුරපද අපනයනය කරන්න"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "මුරපද {count}ක් අපනයනය කරන ලදි."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "මුරපද {count}ක් අපනයනය කරන ලදි."
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "FIDO2 පෞද්ගලික යතුරු manifest ගොනුව"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr "මෙම Keycord ගොඩනැගීමේ FIDO2 පෞද්ගලික යතුරු සහාය අක්‍රීය කර ඇත."
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "FIDO2 ආරක්ෂක යතුර"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr "මෙම Keycord ගොඩනැගීමේ FIDO2 සහාය අක්‍රීය කර ඇත."
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "FIDO2 පෙළ ආවරණය"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr "පෞද්ගලික Linux යාවත්කාලීන staging නාමාවලියක් වෙන් කිරීම අසාර්ථක විය."
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "තාවකාලික ගොනු නාමයක් වෙන් කිරීම අසාර්ථක විය."
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "කෙටිමං සංවාදය ගොඩනැගීම අසාර්ථක විය."
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "ප්‍රධාන කවුළුව ගොඩනැගීම අසාර්ථක විය."
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr "Windows ගොනු තේරීමේ විකල්ප වින්‍යාස කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr "Windows ගොනු සුරැකුම් තේරීමේ විකල්ප වින්‍යාස කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr "Linux යාවත්කාලීන staging නාමාවලිය '{}' සෑදීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr "Linux යාවත්කාලීන staging මූලය '{}' සෑදීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Windows ගොනු තේරීම සෑදීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr "Windows ගොනු සුරැකුම් තේරීම සෑදීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "armor කළ අත්සන විකේතනය කිරීම අසාර්ථක විය"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "විකේතනය කළ UTF-8 දත්ත decode කිරීම අසාර්ථක විය"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "ප්‍රමාණවත් HKDF ප්‍රතිදානයක් ව්‍යුත්පන්න කිරීම අසාර්ථක විය."
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr "මුරයතුරේ යතුරු දත්ත encode කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "මුරයතුරු JSON අපනයනය අසාර්ථක විය: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "මුරයතුරේ යතුරු දත්ත ජනනය කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "{id} ලබාගැනීම අසාර්ථක විය"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr "යාවත්කාලීන ගොනුව '{}' hash කිරීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "ගොනු තේරීම සඳහා COM ආරම්භ කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr "ගොනු සුරැකුම් තේරීම සඳහා COM ආරම්භ කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "libadwaita ආරම්භ කිරීම අසාර්ථක විය."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "බාගත කළ යාවත්කාලීනය ස්ථාපනය කිරීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr "බාගත කළ යාවත්කාලීනය ක්‍රියාත්මක කළ හැකි බවට පත් කිරීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "මුරයතුරේ පෞද්ගලික යතුර සාමාන්‍යකරණය කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "විධානය සඳහා stdin විවෘත කිරීම අසාර්ථක විය"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr "කළමනාකරණය කළ පෞද්ගලික යතුරු ගබඩාව සූදානම් කිරීම අසාර්ථක විය."
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "මුරයතුරේ යතුරු ජනනය සූදානම් කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr "මුරයතුරේ යතුරු දත්ත සූදානම් කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr "Linux යාවත්කාලීන staging මූලයේ '{}' පාරදත්ත කියවීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Windows ගොනු තේරීමේ විකල්ප කියවීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr "Windows ගොනු සුරැකුම් තේරීමේ විකල්ප කියවීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "විධානයේ stderr කියවීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "විධානයේ stdout කියවීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "මුරපද ඇතුළත් කිරීම '{}' කියවීම අසාර්ථක විය ('{}' වෙතින්): {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr "මුරයතුරු ඉල්ලීම් ගොනුව {path:?} කියවීම අසාර්ථක විය: {source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "තෝරාගත් Windows මාර්ගය කියවීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "තෝරාගත් Windows සුරැකුම් මාර්ගය කියවීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "තෝරාගත් දෘඪාංග පොදු යතුරු ගොනුව කියවීම අසාර්ථක විය"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "තෝරාගත් පෞද්ගලික යතුරු ගොනුව කියවීම අසාර්ථක විය"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "යාවත්කාලීන ගොනුවේ පාරදත්ත කියවීම අසාර්ථක විය: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr "Linux යාවත්කාලීනය ස්ථාපනය සඳහා සම්පත් ලියාපදිංචි කිරීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "සම්පත් ලියාපදිංචි කිරීම අසාර්ථක විය."
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr "වත්මන් ක්‍රියාත්මක ගොනුවේ මාර්ගය සොයාගැනීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr "යාවත්කාලීන සහායක ක්‍රියාත්මක ගොනුව සොයාගැනීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "විධානය ධාවනය කිරීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "git විධානය ධාවනය කිරීම අසාර්ථක විය: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr "ධාරක වැඩසටහන '{program}' ධාවනය කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "Host පසුබිම් විධානය ධාවනය කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "{} ධාවනය කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr "Linux යාවත්කාලීන staging මූලය '{}' ආරක්ෂිත කිරීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Windows සුරැකුම් ගොනු වර්ගය තේරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "වින්‍යාසය serialize කිරීම අසාර්ථක විය: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "ගබඩා කළ මුරයතුරු දත්ත serialize කිරීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr "Windows ගොනු තේරීමේ බොත්තම් ලේබලය සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr "Windows ගොනු තේරීමේ මාතෘකාව සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr "Windows සුරැකුම් ගොනුවේ දිගුව සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Windows සුරැකුම් ගොනුවේ නම සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr "Windows ගොනු සුරැකුම් තේරීමේ බොත්තම් ලේබලය සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr "Windows ගොනු සුරැකුම් තේරීමේ මාතෘකාව සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Windows සුරැකුම් ගොනු වර්ග සැකසීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Windows ගොනු තේරීම පෙන්වීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr "Windows ගොනු සුරැකුම් තේරීම පෙන්වීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Keycord ක්‍රියාවලිය ඇරඹීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr "Linux යාවත්කාලීන ස්ථාපන සහායකය ඇරඹීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr "යාවත්කාලීනය ස්ථාපනය සඳහා msiexec ඇරඹීම අසාර්ථක විය: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "අවසර විධානය ඇරඹීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "විධානය සඳහා රැඳී සිටීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "විධාන ආදානය ලිවීම අසාර්ථක විය: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "වින්‍යාස ගොනුව ලිවීම අසාර්ථක විය: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "මුරපද අපනයනය '{path}' වෙත ලිවීම අසාර්ථක විය: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "{context} අසාර්ථක විය: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr "මුරපද ගබඩාවේ Git දුරස්ථ ගබඩාව {remote} වෙතින් fetch කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid ""
+"Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr "වත්මන් '{branch}' ශාඛාව සියලු දුරස්ථ ගබඩා සමඟ fetch, merge සහ push කරන්න."
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "ක්ෂේත්‍ර නාමවල ':' අඩංගු විය නොහැක."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "ක්ෂේත්‍ර අගයන්"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "ප්‍රතිඵල පෙරන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "අයිතමයක් සොයන්න"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "දුර්වල මුරපද සොයන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid ""
+"Find weak passwords, browse repeated field values, filter by store, and "
+"export password stores to CSV"
+msgstr ""
+"දුර්වල මුරපද සොයන්න, නැවත නැවත ඇති ක්ෂේත්‍ර අගයන් පිරික්සන්න, ගබඩාව අනුව පෙරන්න, සහ මුරපද "
+"ගබඩා CSV වෙත අපනයනය කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "පළමු නිකුතුව"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "ආපසු නිරූපකය නිවැරදි කිරීම"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "විකල්ප Git සමමුහුර්තකරණය නිවැරදි කිරීම"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr "වලංගු රහස් වැරදි ලෙස අවලංගු කළ OTP දෝෂය නිවැරදි කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "ස්මාර්ට් කාඩ්පත් අවසර නිවැරදි කරන ලදි"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "GNOME සෙවුම් සැපයුම්කරු නිවැරදි කරන ලදි."
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "සාමාන්‍ය"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "FIDO2-ආරක්ෂිත යතුරක් ජනනය කරන්න (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "පෞද්ගලික යතුරක් ජනනය කරන්න හෝ ආයාත කරන්න."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "මුරපදයක් ජනනය කරන්න"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "පෞද්ගලික යතුරක් ජනනය කරන්න"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "FIDO2-ආරක්ෂිත යතුර ජනනය කරමින් (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "යතුර ජනනය කරමින්"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Git විධානයෙන් ප්‍රතිදානයක් නොලැබුණි."
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "Git ඉතිහාසය සහ සත්‍යාපනය"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "මෙම ධාවන පරිසරයේ Git නොමැත."
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Git දුරස්ථ ගබඩා"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Git තත්ත්ව කාර්ය ක්‍රියාවලිය විසන්ධි විය"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "ආපසු යන්න"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "මුල් පිටුවට යන්න"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "ලබා දෙන්න"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "USB ආරක්ෂක යතුරු ප්‍රවේශය ලබා දෙන්න (පරීක්ෂණාත්මක FIDO2)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid ""
+"Grant USB security key access for experimental FIDO2-protected private keys "
+"first."
+msgstr ""
+"පළමුව පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරු සඳහා USB ආරක්ෂක යතුරු ප්‍රවේශය ලබා දෙන්න."
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "ධාරක ප්‍රවේශය ලබා දෙන්න"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid ""
+"Grant host access first if you want Keycord to keep its private keys in step "
+"with your computer's GPG private keys."
+msgstr ""
+"Keycord හි පෞද්ගලික යතුරු ඔබගේ පරිගණකයේ GPG පෞද්ගලික යතුරු සමඟ සමමුහුර්තව තබාගැනීමට අවශ්‍ය "
+"නම් පළමුව ධාරක ප්‍රවේශය ලබා දෙන්න."
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "පළමුව ධාරක ප්‍රවේශය ලබා දෙන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr "fetch, merge සහ push කිරීමට ධාරක ප්‍රවේශය ලබා දෙන්න."
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "අවසරය ලබා දෙන්න"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "ස්මාර්ට් කාඩ්පත් ප්‍රවේශය ලබා දෙන්න"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "පළමුව ස්මාර්ට් කාඩ්පත් ප්‍රවේශය ලබා දෙන්න."
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "මාර්ගෝපදේශ සහ යොමු තොරතුරු"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid ""
+"Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr "මෙම ගොඩනැගීමේ හෝ මෙම වේදිකාවේ දෘඪාංග OpenPGP යතුරු සඳහා සහාය නොදක්වයි."
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "දෘඪාංග යතුරේ PIN එක"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "දෘඪාංග යතුර එක් කරන ලදි."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "දෘඪාංග යතුරේ පරිපාලක PIN එක"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Keycord පරිවර්තනයට උදවු කරන්න"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "ස්ථිරව සඟවන්න"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "ඉතිහාසයෙන් ගත් විකල්පය"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "ඉතිහාසයේ ලබන්නන්"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "මුල් පිටුව"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Host"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Host Git (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Host Git (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "ධාරක ප්‍රවේශය"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr "Host විධාන විශේෂාංග තිබෙන්නේ Linux හි පමණි."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "ආයාත කරන්න"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr "මුරපද ගබඩාව භාවිත කිරීමට පෙර අභිරුචි තුළ පෞද්ගලික යතුරක් ආයාත කරන්න."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "පවතින පෞද්ගලික යතුරක් ආයාත කරන්න හෝ දෘඪාංග ටෝකනයක් සම්බන්ධ කරන්න."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "දෘඪාංග පොදු යතුර ආයාත කරන්න (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "ධාරකයේ GPG පෞද්ගලික යතුර ආයාත කරන්න"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "යතුර ආයාත කරන්න"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "පසුරු පුවරුවෙන් යතුරක් ආයාත කරන්න"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "මුරයතුර ආයාත කරන්නද?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "ආයාත මුරපදය (විකල්ප)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "මුරපද ආයාත කරන්න"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "pass import මඟින් මුරපද ආයාත කරන්න"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "පෞද්ගලික යතුර ආයාත කරන්න"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "මෙම අයිතමයෙන් පෞද්ගලික යතුර ආයාත කරන්න"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "ආයාත මූලාශ්‍රය"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "ආයාතකය"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "යතුර ආයාත කරමින්"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "මුරපද ආයාත කරමින්"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid ""
+"Improved header actions and hid filters when they cannot affect the current "
+"view."
+msgstr "ශීර්ෂ ක්‍රියා වැඩිදියුණු කළ අතර වත්මන් දසුනට බලපෑමක් නොකරන විට පෙරහන් සඟවන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr "ගබඩාවක භාවිත කළ හැකි යතුරු බොහොමයක් ඇති විට ලබන්නන් තේරීම වැඩිදියුණු කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr "සෙවීම, පෙරීම, යතුරුපුවරු සංචාලනය සහ ඇතුළත් කිරීම් සංස්කරණය වැඩිදියුණු කරන ලදි."
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "තොරතුරු"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "මුරපද ගබඩාවේ Git නිධිය ආරම්භ කරන්න"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr "ගබඩා හරහා Git ඉතිහාසය පරීක්ෂා කර commit අත්සන් සත්‍යාපනය කරන්න."
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "වෙනස්කම් ඉතිහාසය පරීක්ෂා කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "වෙනස්කම් ඉතිහාසය පරීක්ෂා කර commit සත්‍යාපනය කරන්න"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "ධාරකයේ GPG පෞද්ගලික යතුරු පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "මුරපද ගබඩාවේ Git HEAD පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "මුරපද ගබඩාවේ Git ශාඛාව පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr "පළමු commit එකට පෙර මුරපද ගබඩාවේ Git ගොනු පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr "මුරපද ගබඩාවේ Git දුරස්ථ ශාඛාව {remote}/{branch} පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr "මුරපද ගබඩාවේ Git සංශෝධන පරාසය {range} පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "මුරපද ගබඩාවේ Git නිරීක්ෂිත වෙනස්කම් පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "මුරපද ගබඩාවේ Git නිරීක්ෂණය නොවන ගොනු පරීක්ෂා කරන්න"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "මෑත යෙදුම් සහ විධාන ප්‍රතිදානය පරීක්ෂා කරන්න."
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Git මත පදනම් වූ ගබඩා පරීක්ෂා කරමින් සහ ශාඛා සොයාගනිමින්."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "පෞද්ගලික යතුරු සහ සම්බන්ධිත දෘඪාංග පරීක්ෂා කරමින්."
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr "විගණන සත්‍යාපනය සඳහා commit ඉතිහාසයේ ලබන්නන් භාවිත කිරීමට Git ස්ථාපනය කරන්න."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "යාවත්කාලීනය ස්ථාපනය කරන්න"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr "යාවත්කාලීනය ස්ථාපනය කරන විට Keycord වැසෙනු ඇත. නොසුරැකි වෙනස්කම් නැති වනු ඇත."
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Integrated"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "FIDO2 බැඳුම් ඇඟිලි සලකුණ '{value}' වලංගු නොවේ."
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "වලංගු නොවන FIDO2 උපාංග මාර්ගයකි: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "FIDO2 සංකේතිත දත්ත වලංගු නොවේ."
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "සියලු යතුරු මඟින් සංකේතනය කළ මුරපද ඇතුළත් කිරීම වලංගු නොවේ."
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "git cat-file කාණ්ඩ ප්‍රතිදානය වලංගු නොවේ."
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "git cat-file ශීර්ෂය වලංගු නොවේ."
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "ධාරක Git අත්සන් පාරදත්ත වලංගු නොවේ."
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "මුරයතුරු FIDO2 දිගු වලංගු නොවේ: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "මුරයතුරු JSON වලංගු නොවේ: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "මුරයතුරේ {label} වලංගු නොවේ: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "මුරපද ඇතුළත් කිරීමේ මාර්ගය වලංගු නොවේ."
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "පෞද්ගලික යතුරු ඇඟිලි සලකුණ '{value}' වලංගු නොවේ: {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "ලබන්නන්ගේ ගොනු මාර්ගය වලංගු නොවේ."
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "ගබඩා කළ මුරයතුරු JSON වලංගු නොවේ: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid ""
+"Keep Keycord's private keys and your computer's GPG private keys in step "
+"when host access is available."
+msgstr ""
+"ධාරක ප්‍රවේශය ඇති විට Keycord හි පෞද්ගලික යතුරු සහ ඔබගේ පරිගණකයේ GPG පෞද්ගලික යතුරු "
+"සමමුහුර්තව තබන්න."
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr "මෙම යතුර ඉවත් කිරීමට පෙර තවත් තෝරාගත් පෞද්ගලික යතුරක් භාවිතයට තබන්න."
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "අවම වශයෙන් එක් තෝරාගත් පෞද්ගලික යතුරක් භාවිතයට තබන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr "ගොනු නාමයට පෙර ගබඩාව සහ ෆෝල්ඩරය අනුව ඇතුළත් කිරීම් කාණ්ඩගතව තබන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr "ෆෝල්ඩර ලැයිස්තුවේ තබා, සෙවුම් ප්‍රතිඵල pass ගොනු නාමය අනුව අනුපිළිවෙළට තබන්න."
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr "තෝරාගත් පෞද්ගලික යතුරු සියල්ල අනිවාර්ය විට මෙම යතුර තෝරා තබන්න."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "යතුරු ගොනුව ඉවත් කරන ලදි."
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "යතුර ජනනය කරන ලදි."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "යතුර ආයාත කරන ලදි."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "යතුරු මුරපදය"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Keycord FIDO2-ආරක්ෂිත පෞද්ගලික යතුර"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Keycord යාවත්කාලීනය"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr "බාගත කළ Linux යාවත්කාලීනය ස්ථාපනය කර අවසන් කිරීමට Keycord හට නොහැකි විය."
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "මුරයතුරු අයිතමය සූදානම් කිරීමට Keycord හට නොහැකි විය. {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord දැනටමත් යාවත්කාලීනයි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid ""
+"Keycord is an adaptive graphical client for password folders that use the "
+"standard pass layout. Existing stores remain normal pass stores on disk, so "
+"they keep working with pass and other compatible tools."
+msgstr ""
+"Keycord යනු සම්මත pass සැලැස්ම භාවිත කරන මුරපද ෆෝල්ඩර සඳහා වන, තිර ප්‍රමාණයට හැඩගැසෙන "
+"චිත්‍රක යෙදුමකි. පවතින ගබඩා තැටියේ සාමාන්‍ය pass ගබඩා ලෙසම පවතින නිසා, ඒවා pass සහ "
+"අනෙකුත් ගැළපෙන මෙවලම් සමඟ දිගටම ක්‍රියා කරයි."
+
+#: src/composition/host_access.rs:64
+msgid ""
+"Keycord is running in a protected space, so some optional features stay off "
+"until you allow this. If you allow it, Keycord can use tools from your "
+"computer such as GPG, the Host backend, and pass import. If you don't, "
+"Keycord still works with the integrated backend."
+msgstr ""
+"Keycord ආරක්ෂිත පරිසරයක ධාවනය වන නිසා, ඔබ අවසර දෙන තෙක් ඇතැම් විකල්ප විශේෂාංග අක්‍රීයව "
+"පවතී. අවසර දුන් විට Keycord හට ඔබගේ පරිගණකයේ GPG, Host පසුබිම සහ pass import වැනි "
+"මෙවලම් භාවිත කළ හැක. අවසර නොදුන්නත් Integrated පසුබිම සමඟ Keycord දිගටම ක්‍රියා කරයි."
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid ""
+"Keycord opened a credential export request that names {importer} as the "
+"importer and checked its structure. The local file does not authenticate "
+"that identity. Keycord does not yet generate CXP response archives, so no "
+"passkey data was released."
+msgstr ""
+"Keycord විසින් {importer} ආයාතකය ලෙස නම් කරන අක්තපත්‍ර අපනයන ඉල්ලීමක් විවෘත කර එහි ව්‍යුහය "
+"පරීක්ෂා කරන ලදි. දේශීය ගොනුවෙන් එම අනන්‍යතාව සත්‍යාපනය නොවේ. Keycord තවම CXP ප්‍රතිචාර "
+"සංරක්ෂිත ජනනය නොකරන නිසා මුරයතුරු දත්ත කිසිවක් නිකුත් කර නැත."
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid ""
+"Keycord will first make its private-key list match the GPG private keys on "
+"your computer. After that, creating, importing, or deleting a private key in "
+"Keycord will update the host too. Keys that only exist in Keycord may be "
+"removed during the first sync."
+msgstr ""
+"පළමුව Keycord එහි පෞද්ගලික යතුරු ලැයිස්තුව ඔබගේ පරිගණකයේ GPG පෞද්ගලික යතුරුවලට ගළපයි. ඉන්පසු "
+"Keycord තුළ පෞද්ගලික යතුරක් සෑදීම, ආයාත කිරීම හෝ මකා දැමීම ධාරකයද යාවත්කාලීන කරයි. "
+"Keycord තුළ පමණක් ඇති යතුරු පළමු සමමුහුර්තකරණයේදී ඉවත් විය හැක."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "මෙම ගබඩාවේ යතුරු"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "පසුව"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid ""
+"Leave this empty if the source does not use a password, for example a Chrome "
+"CSV."
+msgstr ""
+"මූලාශ්‍රය මුරපදයක් භාවිත නොකරන්නේ නම් මෙය හිස්ව තබන්න, උදාහරණයක් ලෙස Chrome CSV ගොනුවක්."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "දිග"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Linux යාවත්කාලීනයේ පිරිසිදු කිරීමේ නාමාවලිය නොමැත."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "ලැයිස්තුව"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr "{prefix} යටතේ මුරපද ගබඩාවේ Git විගණන refs ලැයිස්තුගත කරන්න"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "මුරපද ගබඩාවේ Git දුරස්ථ ගබඩා ලැයිස්තුගත කරන්න"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr "මුරපද ගබඩාවේ Git tree {object} සඳහා ලබන්නන්ගේ ගොනු ලැයිස්තුගත කරන්න"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "තවත් commit පූරණය කරන්න"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "පූරණය කරමින්"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "commit පූරණය කරමින්"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "දත්ත පූරණය කරමින්"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "ක්ෂේත්‍ර අගයන් පූරණය කරමින්"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "යතුරු පූරණය කරමින්"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "ඔබගේ අයිතම පූරණය කරමින්."
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr "දේශීය සහ දුරස්ථ commit '{branch}' ශාඛාවේ සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "දේශීය සහ දුරස්ථ commit සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "දේශීය ශාඛාව"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr "දේශීය වෙනස්කම් හමු විය. පළමුව ඒවා commit කරන්න හෝ ඉවතලන්න."
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr "දේශීය වෙනස්කම් හමු විය. දේශීය සහ දුරස්ථ commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr "දේශීය වෙනස්කම් හමු විය. දේශීය commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr "දේශීය වෙනස්කම් හමු විය. දුරස්ථ commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "දේශීය commit '{branch}' ශාඛාවෙන් push කිරීමට සූදානම්."
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "දේශීය commit සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "ලොග්"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "GitHub Releases හි නව Linux ස්වාධීන ගොඩනැගීමක් සොයමින්."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "GitHub Releases හි නව Windows ස්ථාපකයක් සොයමින්."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "කුඩා අකුරු"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "ප්‍රධාන මෙනුව"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "සමමුහුර්ත කිරීමට පෙර ආරම්භක commit එකක් සාදන්න."
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr "මෙම ගබඩාව සමමුහුර්ත කිරීමට පෙර '{branch}' ශාඛාවේ ආරම්භක commit එකක් සාදන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "සමමුහුර්ත කිරීමට පෙර '{branch}' ශාඛාවේ ආරම්භක commit එකක් සාදන්න."
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "නිසි ආකෘතියේ නොවන Git commit ශීර්ෂ වේ."
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "නිසි ආකෘතියේ නොවන Git commit වස්තුවකි."
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "නිසි ආකෘතියේ නොවන Git අත්සන් ශීර්ෂයකි."
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "නිසි ආකෘතියේ නොවන හෝ සහාය නොදක්වන අත්සනක්"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "පෞද්ගලික යතුරු කළමනාකරණය කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid ""
+"Manage store recipients, folder-specific .gpg-id files, and password-"
+"protected private keys, including file and clipboard imports and optional "
+"host GPG synchronization"
+msgstr ""
+"ගබඩාවේ ලබන්නන්, ෆෝල්ඩරයට විශේෂිත .gpg-id ගොනු සහ මුරපදයෙන් ආරක්ෂිත පෞද්ගලික යතුරු "
+"කළමනාකරණය කරන්න; ගොනුවෙන් හා පසුරු පුවරුවෙන් ආයාත කිරීම සහ විකල්ප ධාරක GPG සමමුහුර්තකරණයද "
+"මෙයට ඇතුළත් වේ"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "ගබඩා කළමනාකරණය කරන්න"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr "මෙම Keycord ගොඩනැගීමේ කළමනාකරණය කළ දෘඪාංග යතුරු පිහිටුවීම අක්‍රීය කර ඇත."
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid ""
+"Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr "කළමනාකරණය කළ පෞද්ගලික යතුරු දත්ත '{}' ඉල්ලූ ඇඟිලි සලකුණ '{}' සමඟ නොගැළපේ."
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid ""
+"Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr ""
+"කළමනාකරණය කළ පෞද්ගලික යතුරු {artifact_kind} '{}' සම්මත මාර්ගය '{}' සමඟ නොගැළපේ."
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr ""
+"මෙම Keycord ගොඩනැගීමේ කළමනාකරණය කළ ස්මාර්ට් කාඩ්පත් එක් කිරීම/ආයාත කිරීම අක්‍රීය කර ඇත."
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr "කැදලිගත .gpg-id ගොනු කළමනාකරණයට Integrated පසුබිම අවශ්‍ය වේ."
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "බහුලව භාවිත වන මුරපදයකට ගැළපේ"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "මුරපද ගබඩාවේ Git ශාඛාව {target} merge කරන්න"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "පණිවිඩය"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "අවම ගණන; 0 මඟින් අක්‍රීය වේ"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "ගබඩා කළ දෘඪාංග යතුර සඳහා OpenPGP සහතිකය නොමැත."
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "ගබඩා කළ පෞද්ගලික යතුර සඳහා OpenPGP සහතිකය නොමැත."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "නිධි URL එකේ හිමිකරු නොමැත: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "{} සඳහා අමු commit දත්ත නොමැත."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "නිධි URL එකේ නිධියේ නම නොමැත: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "ගෙන යන්න"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "pass ගොනුව ගෙන යන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "තෝරාගත් pass ගොනුව ගෙන යන්න"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "ගබඩාවකට ගෙන යන්න"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "ගෙන යන ලදි."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "නම"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "සංචාලනය"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "නව මුරපද අච්චුව"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "නව ගබඩාව"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "දෘඪාංග යතුරේ නව PIN එක"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "නව අයිතමය"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "ආරක්ෂක යතුරේ නව PIN එක"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr "තවම Git නිධියක් නොමැත. එකක් ආරම්භ කිරීමට දුරස්ථ ගබඩාවක් එක් කරන්න."
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Git මත පදනම් වූ ගබඩා නොමැත"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Git මත පදනම් වූ ගබඩා භාවිතයට නොමැත."
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "තවම ශාඛාවක් නොමැත."
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "වෙනස් කළ මාර්ග නොමැත"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "commit කිසිවක් පූරණය කර නැත"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "දත්ත නාමාවලියක් හමු නොවීය"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "භාවිතයට තිරයක් නොමැත."
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "ක්‍රියාත්මක ගොනු නාමාවලියක් හමු නොවීය"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "ෆෝල්ඩර එක් කර නැත"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "තවම අයිතම නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr "පූරණය කළ කිසිදු pass ගොනුවක් වත්මන් දුර්වල මුරපද පරීක්ෂාවලට නොගැළපුණි."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "ගැළපීම් නොමැත"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "ගැළපෙන Git දුරස්ථ ගබඩා නොමැත"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "ගැළපෙන ශාඛා නොමැත"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "ගැළපෙන ලේඛන නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "ගැළපෙන ක්ෂේත්‍ර නොමැත"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "ගැළපෙන අභිරුචි නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "ගැළපෙන ප්‍රතිඵල නොමැත"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "ගැළපෙන ගබඩා යතුරු නොමැත"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "ගැළපෙන මෙවලම් නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "ගැළපෙන අගයන් නොමැත"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "මුරපද ගබඩාවක් නොමැත"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "මුරපද ගබඩා නොමැත"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "ලබන්නන් සකසා නැත"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "මෙම මුරපද ඇතුළත් කිරීම සඳහා ලබන්නන් හමු නොවීය."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "තවම ලබන්නන් නොමැත"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "දුරස්ථ ගබඩා වින්‍යාස කර නැත."
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "හඳුනාගත හැකි සම්මත ලබන්නන්ගේ යතුරු නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "සෙවිය හැකි ක්ෂේත්‍ර නොමැත"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "අත්සනක් නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "අගයන් නොමැත"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "දුර්වල මුරපද හමු නොවීය"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "භාවිතයට නොමැත"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "කිසිවක් තෝරා නැත"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "අංක"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "OTP කේතය"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "OTP රහස"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr "දේශීය ස්ථාපන නාමාවලියකට හෝ කිහිපයකට ලිවිය නොහැක."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid ""
+"Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr "Integrated පසුබිම භාවිත කරන්නේ නම් පමණක් පරීක්ෂණාත්මක FIDO2 විශේෂාංග සක්‍රීය කරන්න."
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr "දේශීය ගොනු පද්ධතියේ සාමාන්‍ය ගොනු පමණක් පිළිගනී."
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Git මෙවලම් විවෘත කරන්න"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "ගබඩා ෆෝල්ඩරයක් එක් කිරීමට අභිරුචි විවෘත කරන්න."
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "URL එක විවෘත කරන්න"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Weblate විවෘත කරන්න"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr "ශාඛා සහ commit පරීක්ෂා කිරීමට Git මත පදනම් වූ ගබඩාවක් විවෘත කරන්න."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "නව අයිතමයක් විවෘත කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "පළමුව ගබඩාවක් විවෘත කරන්න."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "පළමුව අයිතමයක් විවෘත කරන්න."
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "ලේඛන විවෘත කරන්න"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "වරකට හරියටම එක් මුරයතුරු ඉල්ලීමක් පමණක් විවෘත කරන්න."
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "මාර්ගෝපදේශ සහ යොමු තොරතුරු විවෘත කරන්න."
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "ගොනු කළමනාකරු තුළ විවෘත කරන්න"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "නව කවුළුවක විවෘත කරන්න"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "ලොග් විවෘත කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid ""
+"Open one or more password stores and search by name, store, field, regular "
+"expression, or structured find query"
+msgstr ""
+"මුරපද ගබඩා එකක් හෝ කිහිපයක් විවෘත කර නම, ගබඩාව, ක්ෂේත්‍රය, regular expression හෝ "
+"ව්‍යුහගත සෙවුම් විමසුම අනුව සොයන්න"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "අභිරුචි විවෘත කරන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "අමු පෙළ විවෘත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "ගබඩාව 1 හි Git දුරස්ථ ගබඩා විවෘත කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "ගබඩාව 1 හි යතුරු විවෘත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "ගබඩාව 2 හි Git දුරස්ථ ගබඩා විවෘත කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "ගබඩාව 2 හි යතුරු විවෘත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "ගබඩාව 3 හි Git දුරස්ථ ගබඩා විවෘත කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "ගබඩාව 3 හි යතුරු විවෘත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "ගබඩාව 4 හි Git දුරස්ථ ගබඩා විවෘත කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "ගබඩාව 4 හි යතුරු විවෘත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "ගබඩාව 5 හි Git දුරස්ථ ගබඩා විවෘත කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "ගබඩාව 5 හි යතුරු විවෘත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "ගබඩාව 6 හි Git දුරස්ථ ගබඩා විවෘත කරන්න"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "ගබඩාව 6 හි යතුරු විවෘත කරන්න"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "මෙවලම් විවෘත කරන්න"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "විවෘත කරමින්"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "අයිතමය විවෘත කරමින්"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "නැතහොත් දෘඪාංග යතුරක් භාවිත කරන්න (පරීක්ෂණාත්මක)."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "යතුරක් එක් කළ හැකි වෙනත් ක්‍රම"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "pass ගොනුව"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "pass ගොනු"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "මුරයතුර"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "මුරයතුරු FIDO2 දිගු JSON වස්තුවක් විය යුතුය."
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "මුරයතුරු අපනයන ඉල්ලීම විවෘත කරන ලදි"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "මුරපදය"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "මුරපද ජනනය"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "මුරපද ලැයිස්තුව"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "මුරපද ගබඩා"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "මුරපද ක්‍රියා"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "මුරපද ඇතුළත් කිරීම '{label}' හමු නොවීය."
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "මුරපද ඇතුළත් කිරීම '{old_label}' හමු නොවීය."
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "මුරපද ඇතුළත් කිරීමේ නම හිස්ය."
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "මුරපදය හිස්ය"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "මුරපදයේ ඇත්තේ හිස් ඉඩ පමණි"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "මුරපද ලැයිස්තුව"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "මුරපද විකල්ප"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid ""
+"Password store Git state: {root} -> Git repository detected, but Git "
+"commands are disabled in this build."
+msgstr ""
+"මුරපද ගබඩාවේ Git තත්ත්වය: {root} -> Git නිධියක් හමු විය, නමුත් මෙම ගොඩනැගීමේ Git විධාන "
+"අක්‍රීය කර ඇත."
+
+#: crates/keycord-git/src/repository.rs:75
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, network operations enabled."
+msgstr ""
+"මුරපද ගබඩාවේ Git තත්ත්වය: {root} -> Git නිධියක් හමු විය, දේශීය commit සක්‍රීයයි, ජාල "
+"මෙහෙයුම් සක්‍රීයයි."
+
+#: crates/keycord-git/src/repository.rs:80
+msgid ""
+"Password store Git state: {root} -> Git repository detected, local commits "
+"enabled, remote sync disabled in this backend."
+msgstr ""
+"මුරපද ගබඩාවේ Git තත්ත්වය: {root} -> Git නිධියක් හමු විය, දේශීය commit සක්‍රීයයි, මෙම "
+"පසුබිමේ දුරස්ථ සමමුහුර්තකරණය අක්‍රීයයි."
+
+#: crates/keycord-git/src/repository.rs:65
+msgid ""
+"Password store Git state: {root} -> no Git repository detected, local "
+"commits disabled, network operations disabled."
+msgstr ""
+"මුරපද ගබඩාවේ Git තත්ත්වය: {root} -> Git නිධියක් හමු නොවීය, දේශීය commit අක්‍රීයයි, ජාල "
+"මෙහෙයුම් අක්‍රීයයි."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "මුරපද ගබඩා වින්‍යාසය: කිසිදු ගබඩාවක් වින්‍යාස කර නැත."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "මුරපද ගබඩා වින්‍යාසය: වින්‍යාස කළ ගබඩා {}ක්."
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "මුරපද ආයාත කරන ලදි."
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "මාර්ගය හෝ නම"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "අවසර විධානය අසාර්ථක විය"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "වත්මන් ලැයිස්තුවෙන් ක්ෂේත්‍රයක් තෝරන්න."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "වත්මන් ලැයිස්තුවෙන් අගයක් තෝරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "අභිරුචි"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "පෞද්ගලික යතුරු ඇඟිලි සලකුණ '{value}' අපේක්ෂිත දිගින් නොවේ."
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid ""
+"Private key unlock worker disconnected while preparing a Git signature for "
+"{fingerprint}."
+msgstr ""
+"{fingerprint} සඳහා Git අත්සනක් සූදානම් කරන අතරතුර පෞද්ගලික යතුරු අගුළුහැරීමේ කාර්ය "
+"ක්‍රියාවලිය විසන්ධි විය."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "පෞද්ගලික යතුරු සත්‍යාපනය කළ නොහැක"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "පෞද්ගලික යතුරු සමමුහුර්ත කරන ලදි."
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr "ධාරකය සමඟ පෞද්ගලික යතුරු සමමුහුර්තකරණය තිබෙන්නේ Linux හි පමණි."
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr "මුරපද ගබඩාවේ Git ශාඛාව {branch}, {remote} වෙත push කරන්න"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "QR කේතය"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "RP ID"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "අමු පෙළ"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid ""
+"Read an armored private key or experimental FIDO2-protected private key from "
+"the clipboard."
+msgstr ""
+"පසුරු පුවරුවෙන් armor කළ පෞද්ගලික යතුරක් හෝ පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරක් කියවන්න."
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr "මුරපද ගබඩාවේ Git commit {oid} සඳහා වෙනස් කළ මාර්ග කියවන්න"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr "මුරපද ගබඩාවේ commit සඳහා ධාරක Git අත්සන් පාරදත්ත කියවන්න"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "pass import මූලාශ්‍ර කියවන්න"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "pass අනුවාදය කියවන්න"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "මුරපද ඇතුළත් කිරීම කියවන්න"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "පසුරු පුවරුවට පිටපත් කිරීමට මුරපද ඇතුළත් කිරීම කියවන්න"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "මුරපද ගබඩාවේ Git HEAD කියවන්න"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr "{full_ref} සඳහා මුරපද ගබඩාවේ Git විගණන ලොගය කියවන්න"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr "{name} සඳහා මුරපද ගබඩාවේ Git දුරස්ථ URL එක කියවන්න"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr "මුරපද ගබඩාවේ Git tree ගොනුව {object_path} කියවන්න"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "මුරපද ගබඩාවේ අමු Git commit කියවන්න"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "ඊළඟ commit {count} කියවන්න."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "වත්මන් ලැයිස්තුවෙන් මුරපද පේළි කියවමින්."
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "මෙම ශාඛාවේ මෑත Git ඉතිහාසය කියවමින්."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr "වත්මන් ලැයිස්තුවෙන් සෙවිය හැකි pass ක්ෂේත්‍ර කියවමින්."
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "හේතුව"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "ලබන්නා '{recipient_id}' යෙදුමේ නොමැත."
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid ""
+"Recipient '{recipient_id}' matches multiple keys in the app. Use a "
+"fingerprint instead."
+msgstr ""
+"ලබන්නා '{recipient_id}' යෙදුමේ යතුරු කිහිපයකට ගැළපේ. ඒ වෙනුවට ඇඟිලි සලකුණක් භාවිත කරන්න."
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "ලබන්නාගේ මූලාශ්‍රය"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "ලබන්නන්ගේ ගොනුව"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "විගණනය කළ commit එකේ ලබන්නන්"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "නව ගබඩා සඳහා නිර්දේශිතයි"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "FIDO2 ආරක්ෂක යතුර නැවත සම්බන්ධ කර උත්සාහ කරන්න."
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "දෘඪාංග යතුර නැවත සම්බන්ධ කර උත්සාහ කරන්න."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr "GNOME සෙවුම, විධාන අසාර්ථකවීම් සහ ලොග් තුළ රහස් නිරාවරණය වීම අඩු කරන ලදි."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "වත්මන් ලැයිස්තුව නැවුම් කරන්න"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "නිකුතු සම්පත '{}' හි වලංගු නොවන SHA-256 digest එකක් ඇත."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr "නිකුතු සම්පත '{}' හි සහාය නොදක්වන digest ආකෘතියක් ඇත."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr "නිකුතු සම්පත '{}' සඳහා GitHub SHA-256 digest එකක් නොමැත."
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "දුරස්ථ ගබඩාවේ URL එක"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "දුරස්ථ ගබඩාව එක් කරන ලදි."
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "දුරස්ථ commit '{branch}' ශාඛාවට merge කිරීමට සූදානම්."
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "දුරස්ථ commit සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "දුරස්ථ ගබඩාවේ නම"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "දුරස්ථ ගබඩාව ඉවත් කරන ලදි."
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "දුරස්ථ ගබඩාව යාවත්කාලීන කරන ලදි."
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "දුරස්ථ-නිරීක්ෂණ ශාඛාව"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "දුරස්ථ ගබඩා"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "හිස් ක්ෂේත්‍ර ඉවත් කරන්න"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "යෙදුම් මෙනුවෙන් ඉවත් කරන්න"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "යතුර ඉවත් කරන්න"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "යතුරු ගොනුව ඉවත් කරන්න"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "{label} සඳහා මුරපදය ඉවත් කරන්න"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "මුරපද ගබඩාවේ Git දුරස්ථ ගබඩාව ඉවත් කරන්න"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "ලබන්නා ඉවත් කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "දුරස්ථ ගබඩාව ඉවත් කරන්න"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "හිස් ක්ෂේත්‍ර ඉවත් කරන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr "Flatpak යෙදුමෙන් FIDO2 මත පදනම් වූ මුරපද ගබඩා විශේෂාංගය ඉවත් කරන ලදි."
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "pass ගොනුවේ නම වෙනස් කරන්න"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "මුරපද ඇතුළත් කිරීමේ නම වෙනස් කරන්න"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "මුරපදයේ නම {old_label} සිට {new_label} ලෙස වෙනස් කරන්න"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "මුරපද ගබඩාවේ Git දුරස්ථ ගබඩාවේ නම වෙනස් කරන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "තෝරාගත් pass ගොනුවේ නම වෙනස් කරන්න"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "එකම අක්ෂරය නැවත නැවත යෙදී ඇත"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "නිධිය"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "නිධියේ URL එක"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr "නිධිය හමු විය; දුරස්ථ ගබඩා කළමනාකරණයට සූදානම්."
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "නිධිය හමු විය. සමමුහුර්ත කිරීමට පෙර ශාඛාවක් checkout කරන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr "නිධිය හමු විය. සමමුහුර්ත කිරීමට පෙර '{branch}' ශාඛාවේ පළමු commit එක සාදන්න."
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr "නිධිය හමු විය. දේශීය සහ දුරස්ථ commit සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local and remote commits are waiting to sync."
+msgstr ""
+"නිධිය හමු විය. සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කිරීම හෝ ඉවතලීම අවශ්‍ය වන අතර, දේශීය "
+"සහ දුරස්ථ commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and local commits are waiting to sync."
+msgstr ""
+"නිධිය හමු විය. සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කිරීම හෝ ඉවතලීම අවශ්‍ය වන අතර, දේශීය "
+"commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync, "
+"and remote commits are waiting to sync."
+msgstr ""
+"නිධිය හමු විය. සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කිරීම හෝ ඉවතලීම අවශ්‍ය වන අතර, දුරස්ථ "
+"commit ද සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid ""
+"Repository found. Local changes must be committed or discarded before sync."
+msgstr "නිධිය හමු විය. සමමුහුර්ත කිරීමට පෙර දේශීය වෙනස්කම් commit කිරීම හෝ ඉවතලීම අවශ්‍ය වේ."
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr "නිධිය හමු විය. දේශීය commit සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr "නිධිය හමු විය. දුරස්ථ commit සමමුහුර්ත වීමට රැඳී ඇත."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "තෝරාගත් පෞද්ගලික යතුරු සියල්ල අනිවාර්ය කරන්න"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Git {role} අනන්‍යතාව හඳුනාගන්න"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "සම්පත හමු නොවීය: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "යෙදීමට යෙදුම නැවත ආරම්භ කරන්න."
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "මුරපද ගබඩාව ප්‍රතිසාධනය කරන්න"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "ප්‍රතිසාධනය අනපේක්ෂිත ලෙස නතර විය."
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "ගබඩාව ප්‍රතිසාධනය කරන්න"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "මුරපද ගබඩාව ප්‍රතිසාධනය කරමින්"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "ගබඩාව ප්‍රතිසාධනය කරමින්"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid ""
+"Retry authorization with recipient files from the commit history when the "
+"current branch recipients cannot authorize the signer."
+msgstr ""
+"වත්මන් ශාඛාවේ ලබන්නන් මඟින් අත්සන්කරුට අවසර දිය නොහැකි විට, commit ඉතිහාසයේ ලබන්නන්ගේ ගොනු "
+"භාවිත කර නැවත අවසර ලබාගැනීමට උත්සාහ කරන්න."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "පෙර තත්ත්වයට ගෙන එන ලදි."
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "සුරකින්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "වත්මන් පිටුව සුරකින්න හෝ මුල් පිටුවෙන් සමමුහුර්ත කරන්න"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr "මුරයතුරක් ආයාත කිරීමට පෙර වත්මන් වෙනස්කම් සුරකින්න හෝ ඉවතලන්න."
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "මුරපද ඇතුළත් කිරීම සුරකින්න"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "මුරපද ගබඩාවේ ලබන්නන් සුරකින්න"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "සුරකින ලදි."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "ලබන්නන්ගේ ගොනුව සුරකිමින්"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Git අත්සනක් නොමැතිව සුරකිමින්."
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr "මූලික පරීක්ෂාවලින් අසමත් වන මුරපද සඳහා වත්මන් ලැයිස්තුව ස්කෑන් කරන්න."
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "මෙම අගය වෙනත් උපාංගයක භාවිත කිරීමට ස්කෑන් කරන්න."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "මුරපද ස්කෑන් කරමින්"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Git දුරස්ථ ගබඩා සොයන්න"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "ලේඛන සොයන්න"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "ක්ෂේත්‍ර සොයන්න"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "නාම, ගබඩා හෝ ක්ෂේත්‍ර සොයන්න"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "අභිරුචි සොයන්න"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "සෙවුම් ප්‍රතිඵල"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "ගබඩා යතුරු සොයන්න"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "මෙවලම් සොයන්න"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "අගයන් සොයන්න"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "දුර්වල මුරපද සොයන්න"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "ආරක්ෂක යතුරේ PIN එක"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "තෝරන්න"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "පෙරහන් මෙනුවෙන් අවම වශයෙන් එක් ගබඩාවක් සහ එක් ශාඛාවක් තෝරන්න."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr "මෙම ගබඩාවේ මුරපද අගුළු හැරිය හැකි පෞද්ගලික යතුරු තෝරන්න."
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "අනුපිළිවෙළට යෙදුණු අක්ෂර"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "පළමුව FIDO2 ආරක්ෂක යතුරට PIN එකක් සකසන්න."
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "ආරක්ෂක යතුරේ PIN එක සකසන්න"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "ආරක්ෂක යතුරේ PIN එක සකසන්න (පරීක්ෂණාත්මක FIDO2)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "නව දෘඪාංග යතුරක් පිහිටුවන්න (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid ""
+"Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr "මෙම ගොඩනැගීමේ FIDO2 ආරක්ෂක යතුරේ PIN එකක් සැකසීමට සහාය දක්වන්නේ Linux හි පමණි."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "දෘඪාංග යතුර පිහිටුවමින් (පරීක්ෂණාත්මක)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "කෙටි වන අතර අක්ෂර විවිධත්වය සීමිතයි"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "ලොග් පෙන්වන්න"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "OTP එක QR කේතයක් ලෙස පෙන්වන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "අක්‍රීය කළ විකල්ප සැඟවීම වෙනුවට පෙන්වන්න"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "සැඟවුණු සහ අනුපිටපත් ඇතුළත් කිරීම් පෙන්වන්න"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "මුරපදය QR කේතයක් ලෙස පෙන්වන්න"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "කෙටිමං පෙන්වන්න"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "අවසාන ෆෝල්ඩර කොටස පරිශීලක නාමය ලෙස පෙන්වන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "pass ගොනු නාමය පරිශීලක නාමය ලෙස පෙන්වන්න."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "පරිශීලක නාමය QR කේතයක් ලෙස පෙන්වන්න"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "අගය QR කේතයක් ලෙස පෙන්වන්න"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "අත්සන්කරු ශාඛාවේ ලබන්නන් කට්ටලයේ නොමැත"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "අත්සන් යතුර Keycord තුළ නොමැත"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "එක් අක්ෂර වර්ගයක් පමණක් භාවිත කර ඇති අතර කෙටියි"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "ඇතුළත් කිරීම් pass ගොනු නාමය අනුව පමණක් අනුපිළිවෙළට තබන්න."
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "මුරපද ගබඩාවේ Git වෙනස්කම් stage කරන්න"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "තත්ත්වය"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "පියවර {current}/{total}: යතුර දැල්වෙන්නේ නම් එය ස්පර්ශ කරන්න."
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "ගබඩාව"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "ගබඩාව සෑදුණු නමුත් එය එක් කිරීමට නොහැකි විය."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "ගබඩා යතුරු"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "ගබඩාව ප්‍රතිසාධනය කරන ලදි."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "ගබඩාවේ උපෆෝල්ඩරය"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "ගබඩා සමමුහුර්තකරණය අනපේක්ෂිත ලෙස නතර විය."
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "ගබඩාව සමමුහුර්ත කරන ලදි."
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "ගබඩා කළ FIDO2 PIN එක වලංගු UTF-8 නොවේ: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "ගබඩා"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr "Git නිධියකින් ගබඩාවක් ප්‍රතිසාධනය කිරීමට පසුබිම Host වෙත මාරු කරන්න."
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "pass import භාවිත කිරීමට පසුබිම Host වෙත මාරු කරන්න."
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid ""
+"Switch to the Integrated backend to use experimental FIDO2-protected private "
+"keys."
+msgstr "පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරු භාවිත කිරීමට Integrated පසුබිමට මාරු වන්න."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "සංකේත"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid ""
+"Sync Git-backed stores, manage remotes, sign changes, and inspect history "
+"with commit verification details"
+msgstr ""
+"Git මත පදනම් වූ ගබඩා සමමුහුර්ත කරන්න, දුරස්ථ ගබඩා කළමනාකරණය කරන්න, වෙනස්කම් අත්සන් කරන්න, "
+"සහ commit සත්‍යාපන විස්තර සමඟ ඉතිහාසය පරීක්ෂා කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "දැන් සමමුහුර්ත කරන්න"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "පෞද්ගලික යතුරු ධාරකය සමඟ සමමුහුර්ත කරන්න"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "ගබඩා සමමුහුර්ත කරන්න"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "ගබඩාව සමමුහුර්ත කරමින්"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "ගබඩා සමමුහුර්ත කරමින්"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "පෙළ සංස්කාරකය"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "එම FIDO2 ආරක්ෂක යතුර hmac-secret දිගුවට සහාය නොදක්වයි."
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr "එම FIDO2 ආරක්ෂක යතුර PIN ආරක්ෂාවට සහාය දැක්විය යුතුය."
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "එම FIDO2-ආරක්ෂිත යතුර අපනයනය කළ නොහැකි විය."
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "එම FIDO2-ආරක්ෂිත යතුරු දත්ත වලංගු නොවේ."
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "එම FIDO2-ආරක්ෂිත යතුර වලංගු නොවේ."
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "එම OpenPGP යතුරු ගොනුවේ පෞද්ගලික යතුරක් අඩංගු නොවේ."
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "එම දත්තවල පෞද්ගලික යතුරක් අඩංගු නොවේ."
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "එම ගොනුවේ පෞද්ගලික යතුරක් අඩංගු නොවේ."
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr "එම දෘඪාංග යතුරට මුරපද ගබඩාවේ ඇතුළත් කිරීම් විකේතනය කළ නොහැක."
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr "එම දෘඪාංග-පදනම් යතුරට අපනයනය කළ හැකි පෞද්ගලික යතුරක් නොමැත."
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "එම අයිතමයට අදාළ ගබඩාව නොමැත."
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "එම අයිතමය තවදුරටත් නොපවතී."
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "එම යතුරට අපනයනය කළ හැකි පොදු යතුරක් නොමැත."
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "එම මුරපද ඇතුළත් කිරීම දැනටමත් තිබේ."
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr "එම පෞද්ගලික යතුරට මුරපද ගබඩාවේ ඇතුළත් කිරීම් විකේතනය කළ නොහැක."
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr "එම පෞද්ගලික යතුරට Git commit අත්සන් කළ නොහැක."
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "එම පෞද්ගලික යතුර යෙදුමේ ගබඩා කර නැත."
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr "එම පෞද්ගලික යතුර ආයාත කිරීමට පෙර එය මුරපදයකින් ආරක්ෂා කළ යුතුය."
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "එම පොදු යතුර දෘඪාංග විකේතන යතුර සමඟ නොගැළපේ."
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "එම පොදු යතුර දෘඪාංග අත්සන් යතුර සමඟ නොගැළපේ."
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "එම දුරස්ථ URL එක දැනටමත් තිබේ."
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "එම දුරස්ථ ගබඩා නාමය දැනටමත් තිබේ."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid ""
+"The CSV file will contain every password and field in plaintext. Anyone with "
+"access to the file can read them."
+msgstr ""
+"CSV ගොනුවේ සෑම මුරපදයක් සහ ක්ෂේත්‍රයක්ම සාමාන්‍ය පෙළින් අඩංගු වේ. ගොනුවට ප්‍රවේශය ඇති ඕනෑම "
+"අයෙකුට ඒවා කියවිය හැක."
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "CXP ඉල්ලීමේ හඳුනාගත හැකි HPKE ප්‍රකාරයක් අඩංගු නොවේ."
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "CXP ඉල්ලීම සහාය දක්වන deflate සංරක්ෂිත ආකෘතිය ඉදිරිපත් නොකරයි."
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "FIDO2 ආරක්ෂක යතුරේ PIN එකෙහි සහාය නොදක්වන NUL බයිටයක් අඩංගු වේ."
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "FIDO2 ආරක්ෂක යතුරේ PIN එක වැරදියි."
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr "FIDO2 ආරක්ෂක යතුර අක්තපත්‍ර හැඳුනුමක් ආපසු ලබා දුන්නේ නැත."
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr "තිබෙන පෞද්ගලික යතුරුවලට මෙම අයිතමය විකේතනය කළ නොහැක."
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr "සම්බන්ධිත දෘඪාංග යතුර ගබඩා කළ විකේතන යතුර සමඟ නොගැළපේ."
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr "සම්බන්ධිත දෘඪාංග යතුර ගබඩා කළ අත්සන් යතුර සමඟ නොගැළපේ."
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr "වත්මන් පෙරහන් තෝරාගත් ගබඩාවල කිසිදු ශාඛාවකට නොගැළපේ."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "වත්මන් ලැයිස්තුවේ සෙවිය හැකි pass ක්ෂේත්‍ර නොමැත."
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "මෙම ගොනුව CXP මුරයතුරු අපනයන ඉල්ලීමක් නොවේ."
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "gettext වසමේ කාවැදී ඇති NUL බයිටයක් අඩංගු වේ."
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "gettext පෙදෙසි මාර්ගයේ කාවැදී ඇති NUL බයිටයක් අඩංගු වේ."
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "දෘඪාංග යතුරේ PIN එක අවහිර වී ඇත."
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "දෘඪාංග යතුර ඉල්ලූ නව PIN එක පිළිගත්තේ නැත."
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "දෘඪාංග යතුර විකේතන ඇඟිලි සලකුණක් ආපසු ලබා දුන්නේ නැත."
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "දෘඪාංග යතුර අත්සන් ඇඟිලි සලකුණක් ආපසු ලබා දුන්නේ නැත."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "ස්ථාපකය ධාවනය කිරීමට සූදානම්."
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "මුරයතුරේ {label} නොමැත."
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "මුරයතුරු ඉල්ලීමේ නිසි ආකෘතියේ නොවන JSON අඩංගු වේ: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "මුරයතුරු ඉල්ලීම බයිට් {limit} සීමාවට වඩා විශාලයි."
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "මුරයතුරු ඉල්ලීම නිසි ආකෘතියේ නොවේ: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr "මුරයතුරු ඉල්ලීමේ මූලාශ්‍රය සාමාන්‍ය දේශීය ගොනුවක් නොවේ: {path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "මුරයතුරේ {label} හිස්ය."
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr "මුරයතුරේ {label} padding රහිත base64url භාවිත කළ යුතුය."
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "මුරපද සංස්කාරකය භාවිතයට නොමැත."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "මුරපද නොගැළපේ."
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "පෞද්ගලික යතුරේ මුරපදය වැරදියි."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr "පෞද්ගලික යතුරු ලේඛනගත කිරීමේ කාර්ය ක්‍රියාවලිය අනපේක්ෂිත ලෙස නතර විය."
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "ආරක්ෂක යතුරේ PIN දෙක නොගැළපේ."
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr "තෝරාගත් ගොනුව සහාය දක්වන දේශීය CXP මුරයතුරු ඉල්ලීමක් නොවේ. {error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "තෝරාගත් මුරපද ගබඩා මාර්ගය ෆෝල්ඩරයක් නොවේ."
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "තෝරාගත් ගබඩා මාර්ගය ෆෝල්ඩරයක් නොවේ."
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr "ගබඩා කළ JSON මුරයතුරු අක්තපත්‍රයක් නොවේ."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "ගබඩා කළ පොදු යතුරට අත්සන් උපයතුරක් නොමැත."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr "ගබඩා කළ පොදු යතුරට ප්‍රවාහන-සංකේතන උපයතුරක් නොමැත."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr "ගබඩා කළ පොදු යතුරේ දෘඪාංග විකේතන යතුර නොමැත."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr "ගබඩා කළ පොදු යතුරේ දෘඪාංග අත්සන් යතුර නොමැත."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid ""
+"The update helper cleanup directory does not match the downloaded update "
+"location."
+msgstr ""
+"යාවත්කාලීන සහායකයේ පිරිසිදු කිරීමේ නාමාවලිය බාගත කළ යාවත්කාලීනයේ පිහිටීම සමඟ නොගැළපේ."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr "යාවත්කාලීන සහායක ක්‍රියාත්මක ගොනුවට මව් නාමාවලියක් නොමැත."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "යාවත්කාලීනය ස්ථාපනය කිරීමට සූදානම්."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid ""
+"These lines are added after the password line when you create a new password "
+"entry. Leave it empty to start with a blank pass file."
+msgstr ""
+"ඔබ නව මුරපද ඇතුළත් කිරීමක් සාදන විට මෙම පේළි මුරපද පේළියට පසුව එක් වේ. හිස් pass ගොනුවකින් "
+"ආරම්භ කිරීමට මෙය හිස්ව තබන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid ""
+"These settings are used when you generate or regenerate a password from the "
+"editor."
+msgstr "සංස්කාරකයෙන් මුරපදයක් ජනනය කරන හෝ නැවත ජනනය කරන විට මෙම සැකසුම් භාවිත වේ."
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "මෙම FIDO2 ආරක්ෂක යතුරට ඔබගේ අයිතම විවෘත කළ නොහැක."
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "මෙම ශාඛාවේ විගණනය කළ හැකි commit නොමැත."
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "මෙම ගොඩනැගීමට මුරයතුරු සහාය ඇතුළත් නොවේ."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "මෙම ක්ෂේත්‍රයේ සෙවිය හැකි අගයන් නොමැත."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid ""
+"This hardware key already has OpenPGP keys. Import the matching public key "
+"file instead."
+msgstr ""
+"මෙම දෘඪාංග යතුරේ දැනටමත් OpenPGP යතුරු ඇත. ඒ වෙනුවට ගැළපෙන පොදු යතුරු ගොනුව ආයාත කරන්න."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid ""
+"This hardware key already has OpenPGP keys. Use Add hardware key "
+"(Experimental) or import the matching public key file instead."
+msgstr ""
+"මෙම දෘඪාංග යතුරේ දැනටමත් OpenPGP යතුරු ඇත. “දෘඪාංග යතුරක් එක් කරන්න (පරීක්ෂණාත්මක)” "
+"තෝරන්න, නැතහොත් ඒ වෙනුවට ගැළපෙන පොදු යතුරු ගොනුව ආයාත කරන්න."
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "මෙම දෘඪාංග යතුරට ඔබගේ අයිතම විවෘත කළ නොහැක."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid ""
+"This hardware key has no OpenPGP key yet. Use Set up new hardware key "
+"(Experimental) instead."
+msgstr ""
+"මෙම දෘඪාංග යතුරේ තවම OpenPGP යතුරක් නොමැත. ඒ වෙනුවට “නව දෘඪාංග යතුරක් පිහිටුවන්න "
+"(පරීක්ෂණාත්මක)” තෝරන්න."
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid ""
+"This item can't be opened with the private keys currently available in the "
+"app. File actions are still available, but copy and move-to-store are "
+"disabled until a compatible private key is available."
+msgstr ""
+"දැනට යෙදුමේ තිබෙන පෞද්ගලික යතුරු මඟින් මෙම අයිතමය විවෘත කළ නොහැක. ගොනු ක්‍රියා තවම භාවිත කළ "
+"හැකි නමුත්, ගැළපෙන පෞද්ගලික යතුරක් ලැබෙන තෙක් පිටපත් කිරීම සහ ගබඩාවකට ගෙන යාම අක්‍රීයයි."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "මෙම අයිතමයේ armor කළ පෞද්ගලික යතුරක් අඩංගු නොවේ."
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "මෙම යතුරට ඔබගේ අයිතම විවෘත කළ නොහැක."
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "මෙම පෞද්ගලික යතුර මුරපදයකින් ආරක්ෂා කර ඇත."
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "මෙම පෞද්ගලික යතුරට FIDO2 ආරක්ෂක යතුරක් අවශ්‍ය වේ."
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "මෙම පෞද්ගලික යතුරට වෙනත් අගුළුහැරීමේ ක්‍රමයක් අවශ්‍ය වේ."
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "මෙම පෞද්ගලික යතුරට දෘඪාංග යතුරක් අවශ්‍ය වේ."
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "මෙම ලබන්නා යෙදුමේ නොමැත."
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid ""
+"This selected key is required while all selected private keys are required."
+msgstr "තෝරාගත් පෞද්ගලික යතුරු සියල්ල අනිවාර්ය කර ඇති බැවින් මෙම යතුරද තෝරා තැබිය යුතුය."
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "මෙම අගය QR කේතයකට දිග වැඩියි."
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "ඉතා කෙටියි (අක්ෂර {length})"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "මෙවලම්"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "මුළු අක්ෂර ගණන"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "FIDO2 ආරක්ෂක යතුර ස්පර්ශ කර නැවත උත්සාහ කරන්න."
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "යතුර දැල්වෙන්නේ නම් එය ස්පර්ශ කරන්න."
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "පරිවර්තනය කරන්න"
+
+#: src/translation_help.rs:51
+msgid ""
+"Translate Keycord into a new language or help improve an existing "
+"translation on Weblate."
+msgstr ""
+"Keycord නව භාෂාවකට පරිවර්තනය කරන්න, නැතහොත් Weblate හි පවතින පරිවර්තනයක් වැඩිදියුණු කිරීමට "
+"උදවු කරන්න."
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Nick විසින් පරිවර්තනය කරන ලදි."
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "අසම්පූර්ණ git cat-file කාණ්ඩ ප්‍රතිදානයකි."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "වෙනත් ක්ෂේත්‍ර පෙරහනක් උත්සාහ කරන්න."
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "වෙනත් සෙවුම් පදයක් උත්සාහ කරන්න හෝ තවත් commit පූරණය කරන්න."
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "වෙනත් සෙවුම් පදයක් උත්සාහ කරන්න."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "වෙනත් අග පෙරහනක් උත්සාහ කරන්න."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "අභිරුචි වෙතින් නැවත උත්සාහ කරන්න."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "වෙනත් විමසුමක් හෝ පෙරහනක් උත්සාහ කරන්න."
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "සක්‍රීය කරන්න"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "පෞද්ගලික යතුරු සමමුහුර්තකරණය සක්‍රීය කරන්නද?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "වෙනස්කම් අහෝසි කරන්න හෝ පෙර තත්ත්වයට ගන්න"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "අහෝසි කරන ලදි."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "අනපේක්ෂිත Cv25519 කේතාංක පෙළ ආකෘතියකි"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "අනපේක්ෂිත NistP256 කේතාංක පෙළ ආකෘතියකි"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr "අනපේක්ෂිත git cat-file වස්තු වර්ගයකි: '{object_type}'."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "ගැළපෙන පොදු උපයතුරු ගණන අනපේක්ෂිතයි: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr "buffer එකක් නොමැතිව ටෝකන තොරතුරු අනපේක්ෂිත ලෙස කියවන ලදි."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "pass ගොනුවක් අගුළු හරින්න"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr "මෙය ඉවත් කිරීමට පෙර තවත් තෝරාගත් පෞද්ගලික යතුරක් අගුළු හරින්න."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "යතුර අගුළු හරින්න"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "අභිරුචි තුළින් යතුර අගුළු හරින්න."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "ඉදිරියට යාමට ඔබගේ යතුර අගුළු හරින්න."
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "නමක් නොමැති ධාරක පෞද්ගලික යතුර"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "නමක් නොමැති පෞද්ගලික යතුර"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "නමක් නොමැති ස්මාර්ට් කාඩ්පත"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "අනෙක් ආරක්ෂක යතුරු විසන්ධි කර නැවත උත්සාහ කරන්න."
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "මෙම FIDO2 මුරපද ඇතුළත් කිරීමේ ආකෘතියට සහාය නොදක්වයි: {}."
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "මෙම FIDO2 මුරපද ඇතුළත් කිරීමේ ආරක්ෂණයට සහාය නොදක්වයි: '{}'."
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "සහාය නොදක්වන FIDO2 පෞද්ගලික යතුරු ආකෘතියකි: {}."
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "සහාය නොදක්වන FIDO2 පෞද්ගලික යතුරු ආරක්ෂණයකි: '{}'."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "සහාය නොදක්වන Linux යාවත්කාලීන නිර්මිතියකි: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "කේතාංක පෙළ {:?} සහ පොදු යතුර {:?} හි සහාය නොදක්වන සංයෝජනයකි"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "සහාය නොදක්වන දෘඪාංග යතුරු manifest ආකෘතියකි: {}."
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "සහාය නොදක්වන දෘඪාංග යතුරු ආරක්ෂණයකි: '{}'."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "RSA සඳහා සහාය නොදක්වන hash ඇල්ගොරිතමයකි: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "යාවත්කාලීන සඳහා සහාය නොදක්වන නිධි URL එකකි: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "සහාය නොදක්වන අත්සන් ඇල්ගොරිතමයකි: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "සත්‍යාපනය කර නැත"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "'{}' සඳහා යාවත්කාලීන SHA-256 අගය නොගැළපේ."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "යාවත්කාලීනයක් තිබේ"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "යාවත්කාලීන බාගැනීම් මාර්ගයට මව් නාමාවලියක් නොමැත."
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "{label} සඳහා මුරපදය යාවත්කාලීන කරන්න"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "මුරපද ගබඩාවේ Git HEAD යාවත්කාලීන කරන්න"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr "මුරපද ගබඩාවේ Git දුරස්ථ URL එක යාවත්කාලීන කරන්න"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "මුරපද ගබඩාවේ ලබන්නන් යාවත්කාලීන කරන්න"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr "බාගැනීමෙන් පසු යාවත්කාලීන ප්‍රමාණය නොගැළපේ (අපේක්ෂිත {}, ලැබුණු {})."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "'{}' සඳහා යාවත්කාලීන ප්‍රමාණය නොගැළපේ."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr "නව ප්‍රවේශ සැකසුම්වලට ගැළපෙන ලෙස සුරැකි සියලු මුරපද යාවත්කාලීන කරමින්."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "ලොකු අකුරු"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr "හරියටම එක් දේශීය ගොනුවක් සමඟ --open-passkey-request භාවිත කරන්න."
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "ඒ වෙනුවට “OTP රහසක් එක් කරන්න” තෝරන්න."
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "ඒ වෙනුවට මුරයතුරු ඉල්ලීමක් භාවිත කරන්න."
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "පරිශීලක නාමය සඳහා තනි ගොනු නාමයක් භාවිත කරන්න."
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "තනි ගොනු නාමයක් භාවිත කරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr "විගණන සත්‍යාපනය සඳහා commit ඉතිහාසයේ ලබන්නන් භාවිත කරන්න"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "ගොනු නාමය භාවිත කරන්න"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "ක්ෂේත්‍ර සඳහා find භාවිත කරන්න. රටා සඳහා reg භාවිත කරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "ෆෝල්ඩර නාමය භාවිත කරන්න"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "ගොනු නාම සෙවුම සමඟ ෆෝල්ඩර භාවිත කරන්න"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "පවතින ගබඩාවකට ආයාත කිරීමට pass import භාවිත කරන්න."
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "ඔබගේ අභිරුචි pass විධානය සමඟ pass import භාවිත කරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "ගබඩාව, ෆෝල්ඩර සහ ගොනු නාමය භාවිත කරන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid ""
+"Use the adaptive GTK interface with keyboard, mouse, or touch across desktop "
+"and mobile devices"
+msgstr ""
+"ඩෙස්ක්ටොප් සහ ජංගම උපාංගවල යතුරුපුවරුව, මූසිකය හෝ ස්පර්ශය සමඟ හැඩගැසෙන GTK අතුරුමුහුණත භාවිත "
+"කරන්න"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "ගැළපෙන දෘඪාංග යතුර භාවිත කරන්න."
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "ඒ වෙනුවට පරිශීලක නාම ක්ෂේත්‍රය භාවිත කරන්න."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr "pass ගොනුවක සංකේතිත පරිශීලක නාම ක්ෂේත්‍රයක් නොමැති විට පමණක් භාවිත වේ."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "පරිශීලක නාමය"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "ඒ වෙනුවට Integrated භාවිත වේ."
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "උපයෝගිතා සහ නඩත්තුව"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid ""
+"Valid host keys may appear unavailable here while private-key sync is off."
+msgstr "පෞද්ගලික යතුරු සමමුහුර්තකරණය අක්‍රීය විට වලංගු ධාරක යතුරු මෙහි නොමැති ලෙස දිස් විය හැක."
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr "වලංගු ධාරක යතුරු මෙහි නොමැති ලෙස දිස් විය හැක."
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "සත්‍යාපනය"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "සත්‍යාපන ක්‍රමය"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "සත්‍යාපිතයි"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "අක්ෂර විවිධත්වය ඉතා අඩුයි"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "මොහොතක් රැඳී සිටින්න."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "දුර්වල මුරපද"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid ""
+"When enabled, History can use recipients from earlier commits while "
+"verifying older encrypted entries."
+msgstr ""
+"සක්‍රීය කළ විට පැරණි සංකේතිත ඇතුළත් කිරීම් සත්‍යාපනය කිරීමේදී ඉතිහාසයට පෙර commit වල ලබන්නන් "
+"භාවිත කළ හැක."
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Windows ShellExecute අසාර්ථක විය: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "ක්‍රියා කරමින්"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "මුරපද ගබඩාවේ Git commit වස්තුව ලියන්න"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "මුරපද ගබඩාවේ Git tree එක ලියන්න"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "දැන් ඔබට නව පෞද්ගලික යතුරු ජනනය කළ හැක."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "දැන් ඔබට Git දුරස්ථ ගබඩා කළමනාකරණය කළ හැක"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "දැන් ඔබට pass ගොනු නව කවුළුවක විවෘත කළ හැක"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr "දැන් ඔබට සෙවුමේ විචල්‍ය ලෙස ක්ෂේත්‍ර අගයන් භාවිත කළ හැක"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "Keycord _පිළිබඳ"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "_අයිතමයක් එක් කරන්න"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "_අයිතමයක් සොයන්න"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "_යතුරුපුවරු කෙටිමං"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "_අභිරුචි"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "_දුරස්ථ ගබඩාව සමඟ සමමුහුර්ත කරන්න"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "_මෙවලම්"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "පසුබිම: host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "පසුබිම: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "ශාඛා පිරිසිදු කිරීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "GitHub සේවාලාභියා ගොඩනැගීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "බාගැනීම් සේවාලාභියා ගොඩනැගීම"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "යල් පැන ගිය ගබඩා පෙරහන් අගයන් පිරිසිදු කිරීම"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "සුරැකීමට පෙර හිස් ක්ෂේත්‍ර ඉවත් කිරීම"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "තිබෙන පෞද්ගලික යතුරු ඇඟිලි සලකුණු රැස් කරමින්"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "අර්ධ යාවත්කාලීන ගොනුව සෑදීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "යාවත්කාලීන බාගැනීම් නාමාවලිය සෑදීම"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "අක්තපත්‍ර ID"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "GitHub නිකුතු ප්‍රතිචාරය decode කිරීම"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "මුරපද ඇතුළත් කිරීම මකා දැමීම"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "core dump අක්‍රීය කිරීම: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "දිගු ලක්ෂ්‍ය අක්‍රීය කිරීම: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "ක්‍රියාවලියේ dump හැකියාව අක්‍රීය කිරීම: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "නිකුතු සම්පත බාගැනීම"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "හිස් මුරපද ගොනුව"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "ASLR ප්‍රතිපත්තිය සක්‍රීය කිරීම: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "DEP සක්‍රීය කිරීම: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "දැඩි handle පරීක්ෂා සක්‍රීය කිරීම: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "යාවත්කාලීන ගොනුව අවසන් කිරීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "අර්ධ යාවත්කාලීන ගොනුව flush කිරීම"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "git විධානය"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "gpg --delete-secret-keys අසාර්ථක විය"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "gpg --export අසාර්ථක විය"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "gpg --export-secret-keys අසාර්ථක විය"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "gpg --import අසාර්ථක විය"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "gpg --list-secret-keys අසාර්ථක විය"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "දෘඪාංග යතුරු manifest ගොනුව"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke හි පරාමිති කට්ටල {MAX_LIST_ITEMS}කට වඩා අඩංගු වේ"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "hpke ප්‍රකාරය {:?} සඳහා පොදු JWK එකක් අවශ්‍ය වේ"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke හි අවම වශයෙන් එක් පරාමිති කට්ටලයක් තිබිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "hpke.key EC ඛණ්ඩාංක සමාන දිගින් විය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key හි සාමාජිකයන් {MAX_JWK_MEMBERS}කට වඩා අඩංගු වේ"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "hpke.key සාමාජිකය"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key හි string වර්ගයේ kty සාමාජිකයෙකු තිබිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key හි string වර්ගයේ {member} සාමාජිකයෙකු තිබිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr "hpke.key හි පොදු යතුරු දත්ත පමණක් තිබිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key හිස් JWK එකක් නොවිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key සහාය නොදක්වන {key_type:?} යතුරු වර්ගය භාවිත කරයි"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve}, KEM {kem} සමඟ නොගැළපේ"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "KEM {kem} සඳහා hpke.key.x හි දිග වැරදියි"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "hpke.key.{member} හිස් නොවිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr "hpke.key.{member} padding රහිත base64url භාවිත කළ යුතුය"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "තිබෙන යතුරු වළල්ල පූරණය කරමින්"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "තිරය නොමැත"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "මුරපද ඇතුළත් කිරීම වෙනත් ගබඩාවකට ගෙන යාම"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "නව අයිතම අච්චුව"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "pass අසාර්ථක විය"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "pass import --list අසාර්ථක විය"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "pass import අසාර්ථක විය"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "pass import භාවිතයට නොමැත."
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "pass init අසාර්ථක විය"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "pass insert අසාර්ථක විය"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "pass mv අසාර්ථක විය"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "pass rm අසාර්ථක විය"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "මුරපදය"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "මුරපද ජනනය"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "මුරපද ලැයිස්තු අනුපිළිවෙළ"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "අභිරුචි ගොනුව"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "පෞද්ගලික යතුර"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "පෞද්ගලික යතුරු සමමුහුර්තකරණය"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "GitHub නිකුතු ප්‍රතිචාරය කියවීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "යාවත්කාලීන බයිට් කියවීම"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "දුරස්ථ git විධානය"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "දුරස්ථ work-tree git විධානය"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "යල් පැන ගිය අර්ධ යාවත්කාලීන ගොනුව ඉවත් කිරීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "යල් පැන ගිය යාවත්කාලීන ගොනුව ඉවත් කිරීම"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "ගබඩා පෙරහන් තේරීම සුරැකීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "GitHub නිකුතු ඉල්ලීම යැවීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "නිකුතු සම්පත් ඉල්ලීම යැවීම"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "ගබඩාව පිරිසිදු කිරීම"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "ගබඩා මාර්ගය"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "අනපේක්ෂිත ECC ඇල්ගොරිතම උපලක්ෂණ: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "හසුරුවා නොමැති වක්‍රය: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "නොදන්නා Windows දෝෂයකි"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "නොදන්නා Windows ආරක්ෂණ දෝෂයකි"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "සහාය නොදක්වන යතුරු වර්ගයකි: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "පරිශීලක හැඳුනුම"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "පරිශීලක නාම විකල්පය"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "work-tree git විධානය"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "යාවත්කාලීන බයිට් ලිවීම"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "{action} අසාර්ථක විය: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "{action} අසාර්ථක විය: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "{action} අසාර්ථක විය: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (තවම commit නොමැත)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr "{context}, සහාය දක්වන TOML කැදලි ගැඹුර {} ඉක්මවයි."
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr "{context}, සහාය දක්වන TOML බයිට් {} ප්‍රමාණ සීමාව ඉක්මවයි."
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "commit {count}ක් පූරණය කර ඇත"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "ගැළපෙන අයිතම {count}ක්"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "ගැළපෙන අයිතම {count}ක්"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "ලබන්නන් ගණන: {count}"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "දුරස්ථ ගබඩා {count}ක් වින්‍යාස කර ඇත."
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "අනන්‍ය අගය {count}ක්"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "අනන්‍ය අගය {count}ක්"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "{field} හි වලංගු නොවන හිස් ඉඩ හෝ පාලන අක්ෂර අඩංගු වේ"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "{field} හි අගයන් {MAX_LIST_ITEMS}කට වඩා අඩංගු වේ"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "{field} බයිට් {max_bytes}කට වඩා දිගයි"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "{field} වලංගු relying-party ID එකක් විය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "{field} හි අවම වශයෙන් එක් අගයක් තිබිය යුතුය"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "{field} හිස් නොවිය යුතුය"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} - දෘඪාංග යතුර"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} - මුරපදයෙන් ආරක්ෂිතයි"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} - ආරක්ෂක යතුරෙන් ආරක්ෂිතයි"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} - ආරක්ෂක ටෝකනය"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} - ආරක්ෂක ටෝකනය ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "තවත් තත්පර {remaining}"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"දෝෂය: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} / {} ({percentage:.0}%)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"

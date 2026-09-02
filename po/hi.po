@@ -1,0 +1,4904 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-01 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Hindi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "1 प्राप्तकर्ता"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "1 रिमोट कॉन्फ़िगर किया गया।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "आपके पासवर्ड डेटा वाले फ़ोल्डरों की सूची।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "Linux का नया स्टैंडअलोन बिल्ड उपलब्ध है।"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "Windows की नई रिलीज़ उपलब्ध है।"
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr "इस आइटम की निजी कुंजी लॉक है। इसे प्राथमिकताओं में अनलॉक करें।"
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "पासवर्ड स्टोर का Git मर्ज रद्द करें"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "परिचय"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "कार्रवाइयाँ"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "OTP फ़ील्ड जोड़ें"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "इस स्टोर के लिए Git रिमोट जोड़ें।"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "फ़ोल्डर जोड़ें।"
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "पहले उस कुंजी में पासवर्ड जोड़ें।"
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "प्राथमिकताओं में निजी कुंजी जोड़ें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr "Git रिपॉज़िटरी शुरू करने के लिए पहले रिमोट जोड़ें।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "पहले स्टोर फ़ोल्डर जोड़ें।"
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "pass import इस्तेमाल करने के लिए स्टोर जोड़ें।"
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr "यहाँ इतिहास देखने के लिए Git रिपॉज़िटरी वाला स्टोर जोड़ें।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "उन्नत खोज जोड़ें"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "शुरू करने के लिए आइटम जोड़ें।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "पहले कोई दूसरा स्टोर जोड़ें।"
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "यह स्टोर बनाने के लिए कम-से-कम एक प्राप्तकर्ता जोड़ें।"
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr "बदलाव सहेजते रहने के लिए कम-से-कम एक प्राप्तकर्ता जोड़ें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "सिंक करने से पहले कम-से-कम एक रिमोट जोड़ें।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "दस्तावेज़ जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid "Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend"
+msgstr "मौजूदा स्टोर जोड़ें, नए स्टोर बनाएँ, समर्थित सिस्टम से पासवर्ड आयात करें या Host बैकएंड की मदद से Git से कोई स्टोर बहाल करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "प्रायोगिक FIDO2 समर्थन जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr "निजी कुंजियों के लिए प्रायोगिक OpenPGP हार्डवेयर कुंजी समर्थन जोड़ें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "फ़ील्ड जोड़ें"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "हार्डवेयर कुंजी जोड़ें (प्रायोगिक)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "आइटम जोड़ें"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "छूटे हुए फ़ील्ड जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "वैकल्पिक GPG सिंक जोड़ें"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "स्टोर जोड़ें या बनाएँ"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr "स्थानीय ऐप मेन्यू में यह बिल्ड जोड़ें या हटाएँ।"
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "{label} के लिए पासवर्ड जोड़ें"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "पासवर्ड स्टोर का Git रिमोट जोड़ें"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "रिमोट जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "खोज प्रदाता जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "लॉग कॉपी करने का विकल्प जोड़ें"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
+msgstr "क्या {rp_id} पर {username} की पासकी अपने डिफ़ॉल्ट pass स्टोर में जोड़नी है? सहेजने से पहले इसे देख सकते हैं।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid "Add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+msgstr "कनेक्ट किए गए OpenPGP स्मार्टकार्ड या YubiKey पर पहले से मौजूद सार्वजनिक कुंजी जोड़ें।"
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "ऐप मेन्यू में जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "टूल पेज जोड़ें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr "दूसरे टूल में डेटा ले जाने के लिए CSV निर्यात जोड़ा गया।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr "कमिट सत्यापन के ब्यौरे के साथ Git इतिहास देखने की सुविधा जोड़ी गई।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid "Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands."
+msgstr "पासवर्ड, उपयोगकर्ता नाम, वन-टाइम कोड, दूसरे एंट्री फ़ील्ड और अनुमति कमांड के लिए QR कोड व्यू जोड़े गए।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid "Added entry filtering by password store and remembered history-inspection filters."
+msgstr "पासवर्ड स्टोर के हिसाब से एंट्री फ़िल्टर करने और इतिहास के फ़िल्टर याद रखने की सुविधा जोड़ी गई।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "प्रायोगिक FIDO2 गाइड और प्रगति संकेतक जोड़े गए।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "प्रायोगिक FIDO2-सुरक्षित OpenPGP कुंजियाँ जोड़ी गईं।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ".gpg-id फ़ाइलों में हर फ़ोल्डर के प्राप्तकर्ताओं को अलग से संपादित करने की सुविधा जोड़ी गई।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "मिश्रित क्रम मोड जोड़ा गया"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "टेम्पलेट के छूटे हुए फ़ील्ड जोड़े गए।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "हार्डवेयर कुंजी जोड़ी जा रही है"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr "USB सुरक्षा कुंजी तक पहुँच की अनुमति दें (प्रायोगिक FIDO2)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "इस डिवाइस के ऐप्स तक पहुँच की अनुमति दें"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "स्मार्टकार्ड तक पहुँच की अनुमति दें (प्रायोगिक)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "इस नाम का आइटम पहले से मौजूद है।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "टेम्पलेट लागू करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "नई pass फ़ाइलें बनाते समय फ़िल्टर लागू करें।"
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "इस बिल्ड में ऑडिट सुविधाएँ बंद हैं।"
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "ऑडिट अचानक रुक गया।"
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "लेखक"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "लेखन समय"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid "Automatically remove blank username, field, and OTP lines when saving a pass file."
+msgstr "pass फ़ाइल सहेजते समय उपयोगकर्ता नाम, फ़ील्ड और OTP की खाली पंक्तियाँ अपने-आप हटाएँ।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "उपलब्ध वर्ज़न:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "पीछे"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "प्राथमिकताओं पर वापस जाएँ"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "स्टोर की कुंजियों पर वापस जाएँ"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "बैकएंड"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "सार्वजनिक कुंजी फ़ाइल को कनेक्ट की गई हार्डवेयर कुंजी से जोड़ें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "ब्रांच"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "ब्रांचें"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "पासवर्ड स्टोर देखें और संपादित करें"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "फ़ील्ड मान देखें"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "मौजूदा सूची में अलग-अलग फ़ील्ड मान देखें।"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "CSV फ़ाइलें"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "{0} वर्ज़न वाला CXP निर्यात अनुरोध समर्थित नहीं है।"
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr "खोली गई अनुरोध फ़ाइल में CXP प्रतिक्रिया मोड {0:?} समर्थित नहीं है।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "यह आइटम नहीं खोला जा सकता।"
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "उस बदलाव को वापस नहीं किया जा सकता।"
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "पिछला बदलाव वापस नहीं किया जा सकता।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr "डिफ़ॉल्ट बदलकर फ़ाइल नाम को उपयोगकर्ता नाम बनाएँ।"
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "बदले गए पाथ"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr "ऐप आइकन को कीकॉर्ड में बदला गया"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "_अपडेट जाँचें"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "इस स्टोर को सिंक करने से पहले ब्रांच चेक आउट करें।"
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "सिंक करने से पहले ब्रांच चेक आउट करें।"
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "पासवर्ड स्टोर के स्टेज किए गए Git बदलाव जाँचें"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "विवरण के लिए लॉग देखें।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "अपडेट जाँचे जा रहे हैं"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "pass import की उपलब्धता जाँची जा रही है।"
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr "केवल एक पासकी क्रेडेंशियल वाला JSON ऑब्जेक्ट चुनें।"
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr "एक पासकी क्रेडेंशियल वाला JSON ऑब्जेक्ट चुनें।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "इंपोर्टर को ज़रूरत हो तो फ़ाइल या फ़ोल्डर चुनें।"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "फ़ोल्डर चुनकर उसे Git रिपॉज़िटरी से बहाल करें।"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "फ़ोल्डर चुनें। खाली होने पर यह स्टोर बन जाएगा।"
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "स्थानीय फ़ाइल चुनें।"
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "स्थानीय फ़ोल्डर चुनें।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid "Choose a private key file or experimental FIDO2-protected private key file."
+msgstr "निजी कुंजी फ़ाइल या प्रायोगिक FIDO2-सुरक्षित निजी कुंजी फ़ाइल चुनें।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "स्टोर चुनें।"
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "इंपोर्टर चुनें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid "Choose how Keycord opens your data. Integrated is the default. Use Host to run your own command."
+msgstr "चुनें कि Keycord आपका डेटा कैसे खोले। Integrated डिफ़ॉल्ट है। अपना कमांड चलाने के लिए Host चुनें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "होम पेज पर pass फ़ाइलों का क्रम चुनें।"
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "आयात स्रोत फ़ाइल चुनें"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "आयात स्रोत फ़ोल्डर चुनें"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "स्रोत फ़ाइल चुनें"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "स्रोत फ़ोल्डर चुनें"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "स्टोर फ़ोल्डर चुनें"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "बहाल करने के लिए स्टोर फ़ोल्डर चुनें"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr "प्रबंधित करने के लिए फ़ोल्डर की .gpg-id फ़ाइल चुनें।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "pass फ़ाइल साफ़ करें"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "सहेजने से पहले खाली फ़ील्ड हटाएँ"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "खोज साफ़ करें"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "स्रोत पाथ साफ़ करें"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "क्लिपबोर्ड में कोई कुंजी नहीं है।"
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "क्लिपबोर्ड उपलब्ध नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "बंद करें"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "क्या अपडेट इंस्टॉल करने के लिए Keycord बंद करना है?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "कमांड इनपुट राइटर क्रैश हो गया।"
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "कमिट"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "कमिट लोड होना अचानक रुक गया।"
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr "इस स्टोर को सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें।"
+
+#: crates/keycord-git/src/sync.rs:12
+msgid "Commit or discard local changes before syncing this store. Local and remote commits are also waiting to sync."
+msgstr "इस स्टोर को सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें। स्थानीय और रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/sync.rs:18
+msgid "Commit or discard local changes before syncing this store. Local commits are also waiting to sync."
+msgstr "इस स्टोर को सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें। स्थानीय कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/sync.rs:24
+msgid "Commit or discard local changes before syncing this store. Remote commits are also waiting to sync."
+msgstr "इस स्टोर को सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें। रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr "सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid "Commit or discard local changes before syncing. Local and remote commits are also waiting to sync."
+msgstr "सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें। स्थानीय और रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid "Commit or discard local changes before syncing. Local commits are also waiting to sync."
+msgstr "सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें। स्थानीय कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid "Commit or discard local changes before syncing. Remote commits are also waiting to sync."
+msgstr "सिंक करने से पहले स्थानीय बदलाव कमिट करें या छोड़ दें। रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "कमिट का समय"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "कमिटर"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "सुरक्षा कुंजी के नए PIN की पुष्टि करें"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "पासवर्ड की पुष्टि करें"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "सुरक्षा कुंजी का नया PIN फिर से डालें।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "पहले हार्डवेयर कुंजी कनेक्ट करें।"
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "आगे बढ़ने से पहले केवल एक FIDO2 सुरक्षा कुंजी कनेक्ट करें।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "जोड़ने से पहले केवल एक हार्डवेयर कुंजी कनेक्ट करें।"
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "FIDO2 सुरक्षा कुंजी कनेक्ट करके फिर कोशिश करें।"
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "पहले FIDO2 सुरक्षा कुंजी कनेक्ट करें।"
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "हार्डवेयर कुंजी कनेक्ट करके फिर कोशिश करें।"
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "पहले हार्डवेयर कुंजी कनेक्ट करें।"
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "सही FIDO2 सुरक्षा कुंजी कनेक्ट करें।"
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "आयात करने से पहले सही हार्डवेयर कुंजी कनेक्ट करें।"
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "संदर्भ"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "कॉपी किया गया।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "OTP कॉपी करें"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "आर्मर्ड निजी कुंजी कॉपी करें"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "आर्मर्ड सार्वजनिक कुंजी कॉपी करें"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "प्रायोगिक FIDO2-सुरक्षित निजी कुंजी कॉपी करें"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "फ़िंगरप्रिंट कॉपी करें"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "लॉग कॉपी करें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "पासवर्ड कॉपी करें"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "पासवर्ड क्लिपबोर्ड पर कॉपी करें"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "अनुमति कमांड कॉपी करें"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr "ऐप और कमांड का हाल का आउटपुट क्लिपबोर्ड पर कॉपी करें।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "चुने गए आइटम का पासवर्ड कॉपी करें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "उपयोगकर्ता नाम कॉपी करें"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "मान कॉपी करें"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "डेटा फ़ोल्डर का पता नहीं लगाया जा सका।"
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "होम फ़ोल्डर का पता नहीं लगाया जा सका।"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "वह फ़ोल्डर नहीं जोड़ा जा सका।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "हार्डवेयर कुंजी नहीं जोड़ी जा सकी।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "बनाई गई हार्डवेयर कुंजी प्रमाणित नहीं की जा सकी"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "अपडेट की जाँच नहीं की जा सकी।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "वह कुंजी कॉपी नहीं की जा सकी।"
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "पासवर्ड कॉपी नहीं किया जा सका।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr "हार्डवेयर कुंजी पर सार्वजनिक कुंजी का प्रमाणपत्र नहीं बनाया जा सका।"
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "स्टोर नहीं बनाया जा सका।"
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "FIDO2 से एन्क्रिप्ट किया गया डेटा डिक्रिप्ट नहीं किया जा सका।"
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "आइटम नहीं हटाया जा सका।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "अपडेट डाउनलोड नहीं किया जा सका।"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "पासवर्ड निर्यात नहीं किए जा सके।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "सही फ़िंगरप्रिंट वाली कुंजी नहीं मिली"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "हार्डवेयर डिक्रिप्शन कुंजी नहीं बनाई जा सकी"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "हार्डवेयर हस्ताक्षर कुंजी नहीं बनाई जा सकी"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "कुंजी नहीं बनाई जा सकी।"
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "अनुमति नहीं दी जा सकी।"
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "पासकी आयात नहीं की जा सकी"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "पासवर्ड आयात नहीं किए जा सके।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "कुंजी आयात नहीं की जा सकी।"
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "FIDO2 सुरक्षा कुंजी आरंभ नहीं की जा सकी।"
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Git रिमोट की जानकारी नहीं ली जा सकी।"
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Git की स्थिति नहीं जाँची जा सकी"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "Host की GPG कुंजियाँ नहीं जाँची जा सकीं"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "हार्डवेयर कुंजी नहीं जाँची जा सकी।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "अपडेट इंस्टॉल नहीं किया जा सका।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr "निजी कुंजियों का सिंक जारी नहीं रखा जा सका। सिंक बंद कर दिया गया।"
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "कमिट लोड नहीं किए जा सके।"
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "डेटा लोड नहीं किया जा सका"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "निजी कुंजियाँ लोड नहीं की जा सकीं"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "कोड लोड नहीं किया जा सका।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "आइटम दूसरी जगह नहीं ले जाया जा सका।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "नई विंडो नहीं खोली जा सकी।"
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "पासकी अनुरोध नहीं खोला जा सका"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "वह आइटम नहीं खोला जा सका।"
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "फ़ाइल चयनकर्ता नहीं खोला जा सका।"
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "फ़ोल्डर चयनकर्ता नहीं खोला जा सका।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "फ़ोल्डर नहीं खोला जा सका।"
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "आयात पेज नहीं खोला जा सका।"
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "लिंक नहीं खोला जा सका।"
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "टूल तक पहुँच तैयार नहीं की जा सकी।"
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid "Couldn't present the Git signing unlock dialog. Continuing without a signature."
+msgstr "Git हस्ताक्षर अनलॉक संवाद नहीं दिखाया जा सका। हस्ताक्षर के बिना आगे बढ़ा जा रहा है।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "वह फ़ाइल नहीं पढ़ी जा सकी।"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "वह फ़ोल्डर नहीं पढ़ा जा सका।"
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "वह कुंजी नहीं पढ़ी जा सकी।"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "क्लिपबोर्ड नहीं पढ़ा जा सका।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "वह कुंजी नहीं हटाई जा सकी।"
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "वह रिमोट नहीं हटाया जा सका।"
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "आइटम का नाम नहीं बदला जा सका।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr "हार्डवेयर कुंजी का एडमिन सेशन दोबारा नहीं खोला जा सका"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "स्टोर बहाल नहीं किया जा सका।"
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "बदलाव सहेजे नहीं जा सके।"
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "स्टोर की कुंजियाँ सहेजी नहीं जा सकीं।"
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "वह रिमोट सहेजा नहीं जा सका।"
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "वह सेटिंग सहेजी नहीं जा सकी।"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "चुना गया फ़िल्टर सहेजा नहीं जा सका।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "बनाई गई हार्डवेयर सार्वजनिक कुंजी को सीरियलाइज़ नहीं किया जा सका"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "हार्डवेयर कुंजी पर कार्डधारक का नाम सेट नहीं किया जा सका"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "हार्डवेयर कुंजी का उपयोगकर्ता PIN सेट नहीं किया जा सका"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "पासवर्ड को QR कोड के रूप में नहीं दिखाया जा सका।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "इंस्टॉलर शुरू नहीं किया जा सका।"
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "निजी कुंजियाँ सिंक नहीं की जा सकीं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "स्टोर सिंक नहीं किया जा सका।"
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "स्टोर सिंक नहीं किए जा सके।"
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
+msgstr "Git हस्ताक्षर के लिए निजी कुंजी {fingerprint_for_failure} अनलॉक नहीं की जा सकी। हस्ताक्षर के बिना आगे बढ़ा जा रहा है।"
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "FIDO2 सुरक्षा कुंजी अनलॉक नहीं की जा सकी।"
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "हार्डवेयर कुंजी अनलॉक नहीं की जा सकी।"
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "कुंजी अनलॉक नहीं की जा सकी।"
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "ऐप मेन्यू अपडेट नहीं किया जा सका।"
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "कोड अपडेट नहीं किया जा सका।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "हार्डवेयर कुंजी का एडमिन PIN सत्यापित नहीं किया जा सका"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "हार्डवेयर कुंजी के लिए दिए गए PIN को सत्यापित नहीं किया जा सका"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "नई FIDO2-सुरक्षित कुंजी बनाएँ।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "खाली कनेक्टेड स्मार्टकार्ड या YubiKey पर नई OpenPGP कुंजी बनाएँ।"
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "नई pass फ़ाइल बनाएँ।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "नई पासवर्ड-सुरक्षित कुंजी बनाएँ।"
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr "पासवर्ड स्टोर के लिए पासवर्ड-सुरक्षित निजी कुंजी बनाएँ।"
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "खाली कनेक्टेड स्मार्टकार्ड या YubiKey पर OpenPGP कुंजी बनाएँ।"
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "क्रिप्टोग्राफ़िक रूप से अमान्य हस्ताक्षर"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "मौजूदा ब्रांच के नवीनतम कमिट के प्राप्तकर्ता"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "मौजूदा वर्ज़न:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "हटाएँ"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "Host की GPG निजी कुंजी हटाएँ"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "पासवर्ड एंट्री हटाएँ"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "चुनी गई pass फ़ाइल हटाएँ"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "डिटैच्ड HEAD"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "विवरण"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid "Dismissed the Git signing unlock prompt for {context_for_close}. Continuing without a signature."
+msgstr "{context_for_close} के लिए Git हस्ताक्षर अनलॉक प्रॉम्प्ट बंद कर दिया गया। हस्ताक्षर के बिना आगे बढ़ा जा रहा है।"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "दस्तावेज़"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "डाउनलोड किया गया"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "पासवर्ड एंट्री संपादित करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid "Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes"
+msgstr "फ़ॉर्म फ़ील्ड या pass फ़ाइल के रॉ टेक्स्ट से एंट्री संपादित करें, पासवर्ड बनाएँ, फ़ील्ड मान कॉपी करें और पासवर्ड, उपयोगकर्ता नाम, वन-टाइम कोड या दूसरे फ़ील्ड QR कोड के रूप में दिखाएँ"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "रिमोट संपादित करें"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "ईमेल"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "ईमेल फ़ील्ड में मान्य ईमेल पता होना चाहिए।"
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "खाली"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "इस नतीजे के लिए चालू"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "कमांड डालें।"
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "फ़ील्ड का नाम डालें।"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "कुंजी का पासवर्ड डालें।"
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "हार्डवेयर कुंजी का नाम डालें।"
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "निजी कुंजी का नाम डालें।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "नाम डालें।"
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "पासकी का उपयोगकर्ता नाम डालें।"
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "रिमोट URL डालें।"
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "रिमोट का नाम डालें।"
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "रिपॉज़िटरी URL डालें।"
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "उपयोगकर्ता नाम डालें।"
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "मान्य PKCS#8 पासकी निजी कुंजी डालें।"
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "मान्य ईमेल पता डालें।"
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "मान्य पासकी RP ID डालें।"
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "HTTP या HTTPS URL डालें।"
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "OTP सीक्रेट डालें।"
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "हार्डवेयर कुंजी के लिए ईमेल पता डालें।"
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "निजी कुंजी के लिए ईमेल पता डालें।"
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "ईमेल पता डालें।"
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "FIDO2 सुरक्षा कुंजी का PIN डालें।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "हार्डवेयर कुंजी का PIN डालें।"
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "हार्डवेयर कुंजी का एडमिन PIN डालें।"
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "कुंजी का पासवर्ड डालें।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "हार्डवेयर कुंजी का नया PIN डालें।"
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "सुरक्षा कुंजी का नया PIN डालें।"
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "निजी कुंजी का पासवर्ड डालें।"
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "सुरक्षा कुंजी का PIN डालें।"
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "पासवर्ड एडिटर में साफ़-सफ़ाई की कार्रवाइयाँ जोड़ें"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
+msgstr "प्रायोगिक FIDO2-सुरक्षित निजी कुंजियों के लिए USB डिवाइस तक पहुँच ज़रूरी है। तभी Keycord कनेक्ट की गई सुरक्षा कुंजी से सुरक्षित निजी कुंजियाँ अनलॉक कर सकता है। पहुँच देने के बाद Keycord को फिर से शुरू करें।"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
+msgstr "प्रायोगिक हार्डवेयर-कुंजी प्रक्रियाओं में कनेक्ट किए गए OpenPGP स्मार्टकार्ड या YubiKey का इस्तेमाल करने के लिए PC/SC तक पहुँच चाहिए। इसके बाद Keycord को फिर से शुरू करें। इसके बिना भी पासवर्ड-सुरक्षित कुंजियाँ उपलब्ध रहेंगी।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid "Experimental multi-layer encryption. When on, every selected key must be unlocked and other pass apps will not be able to read these items."
+msgstr "प्रायोगिक बहु-स्तरीय एन्क्रिप्शन। चालू होने पर चुनी गई हर कुंजी अनलॉक करनी होगी और दूसरे pass ऐप ये आइटम नहीं पढ़ पाएँगे।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "प्रायोगिक स्टोर विकल्प"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "निर्यात करें"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "सभी पासवर्ड निर्यात करें?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "हर पासवर्ड और फ़ील्ड को CSV फ़ाइल में निर्यात करें।"
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "Host की GPG निजी कुंजी निर्यात करें"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "Host की GPG सार्वजनिक कुंजियाँ निर्यात करें"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "पासवर्ड निर्यात करें"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "{count} पासवर्ड निर्यात किया गया।"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "{count} पासवर्ड निर्यात किए गए।"
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "FIDO2 निजी कुंजी मेनिफ़ेस्ट"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr "Keycord के इस बिल्ड में FIDO2 निजी कुंजी समर्थन बंद है।"
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "FIDO2 सुरक्षा कुंजी"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr "Keycord के इस बिल्ड में FIDO2 समर्थन बंद है।"
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "FIDO2 टेक्स्ट एनवेलप"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr "Linux अपडेट स्टेजिंग के लिए निजी डायरेक्टरी आवंटित नहीं की जा सकी।"
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "अस्थायी फ़ाइल नाम आवंटित नहीं किया जा सका।"
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "शॉर्टकट संवाद नहीं बनाया जा सका।"
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "मुख्य विंडो नहीं बनाई जा सकी।"
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr "Windows फ़ाइल चयनकर्ता के विकल्प कॉन्फ़िगर नहीं किए जा सके: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr "Windows सेव-फ़ाइल चयनकर्ता के विकल्प कॉन्फ़िगर नहीं किए जा सके: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr "Linux अपडेट स्टेजिंग डायरेक्टरी '{}' नहीं बनाई जा सकी: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr "Linux अपडेट स्टेजिंग रूट '{}' नहीं बनाया जा सका: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Windows फ़ाइल चयनकर्ता नहीं बनाया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr "Windows सेव-फ़ाइल चयनकर्ता नहीं बनाया जा सका: {err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "आर्मर्ड हस्ताक्षर डिकोड नहीं किया जा सका"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "डिक्रिप्ट किया गया UTF-8 डेटा डिकोड नहीं किया जा सका"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "पर्याप्त HKDF आउटपुट नहीं निकाला जा सका।"
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr "पासकी की कुंजी सामग्री एनकोड नहीं की जा सकी: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "पासकी JSON निर्यात नहीं किया जा सका: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "पासकी की कुंजी सामग्री नहीं बनाई जा सकी: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "{id} नहीं मिल सका"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr "अपडेट फ़ाइल '{}' का हैश नहीं बनाया जा सका: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "फ़ाइल चयनकर्ता के लिए COM आरंभ नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr "सेव-फ़ाइल चयनकर्ता के लिए COM आरंभ नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "libadwaita आरंभ नहीं की जा सकी।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "डाउनलोड किया गया अपडेट इंस्टॉल नहीं किया जा सका: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr "डाउनलोड किए गए अपडेट को चलाने योग्य नहीं बनाया जा सका: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "पासकी की निजी कुंजी सामान्य रूप में नहीं लाई जा सकी: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "कमांड के लिए stdin नहीं खोला जा सका"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr "प्रबंधित निजी-कुंजी स्टोरेज तैयार नहीं किया जा सका।"
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "पासकी कुंजी बनाने की तैयारी नहीं की जा सकी: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr "पासकी की कुंजी सामग्री तैयार नहीं की जा सकी: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr "Linux अपडेट स्टेजिंग रूट का मेटाडेटा '{}' नहीं पढ़ा जा सका: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Windows फ़ाइल चयनकर्ता के विकल्प नहीं पढ़े जा सके: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr "Windows सेव-फ़ाइल चयनकर्ता के विकल्प नहीं पढ़े जा सके: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "कमांड का stderr नहीं पढ़ा जा सका: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "कमांड का stdout नहीं पढ़ा जा सका: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "पासवर्ड एंट्री '{}' को '{}' से पढ़ने में त्रुटि हुई: {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr "पासकी अनुरोध फ़ाइल {path:?} नहीं पढ़ी जा सकी: {source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "चुना गया Windows पाथ नहीं पढ़ा जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "चुना गया Windows सेव पाथ नहीं पढ़ा जा सका: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "चुनी गई हार्डवेयर सार्वजनिक कुंजी फ़ाइल नहीं पढ़ी जा सकी"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "चुनी गई निजी कुंजी फ़ाइल नहीं पढ़ी जा सकी"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "अपडेट फ़ाइल का मेटाडेटा नहीं पढ़ा जा सका: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr "Linux अपडेट इंस्टॉल करने के संसाधन रजिस्टर नहीं किए जा सके: {error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "संसाधन रजिस्टर नहीं किए जा सके।"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr "मौजूदा एक्ज़ीक्यूटेबल का पाथ नहीं मिल सका: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr "अपडेट सहायक एक्ज़ीक्यूटेबल नहीं मिल सका: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "कमांड नहीं चलाया जा सका: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "git कमांड नहीं चलाया जा सका: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr "Host प्रोग्राम '{program}' नहीं चलाया जा सका: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "Host बैकएंड का कमांड नहीं चलाया जा सका: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "{} नहीं चलाया जा सका: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr "Linux अपडेट स्टेजिंग रूट '{}' सुरक्षित नहीं किया जा सका: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Windows सेव-फ़ाइल का प्रकार नहीं चुना जा सका: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "कॉन्फ़िग सीरियलाइज़ नहीं किया जा सका: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "सहेजा गया पासकी डेटा सीरियलाइज़ नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr "Windows फ़ाइल चयनकर्ता के बटन का लेबल सेट नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr "Windows फ़ाइल चयनकर्ता का शीर्षक सेट नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr "Windows सेव-फ़ाइल का एक्सटेंशन सेट नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Windows सेव-फ़ाइल का नाम सेट नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr "Windows सेव-फ़ाइल चयनकर्ता के बटन का लेबल सेट नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr "Windows सेव-फ़ाइल चयनकर्ता का शीर्षक सेट नहीं किया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Windows सेव-फ़ाइल के प्रकार सेट नहीं किए जा सके: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Windows फ़ाइल चयनकर्ता नहीं दिखाया जा सका: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr "Windows सेव-फ़ाइल चयनकर्ता नहीं दिखाया जा सका: {err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Keycord शुरू नहीं किया जा सका: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr "Linux अपडेट इंस्टॉल सहायक शुरू नहीं किया जा सका: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr "अपडेट इंस्टॉल करने के लिए msiexec शुरू नहीं किया जा सका: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "अनुमति कमांड शुरू नहीं किया जा सका: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "कमांड पूरा होने का इंतज़ार नहीं किया जा सका: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "कमांड इनपुट नहीं लिखा जा सका: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "कॉन्फ़िग फ़ाइल नहीं लिखी जा सकी: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "पासवर्ड निर्यात '{path}' में नहीं लिखा जा सका: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "{context} पूरा नहीं हो सका: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr "पासवर्ड स्टोर का Git रिमोट {remote} फ़ेच करें"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid "Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr "सभी रिमोट पर मौजूदा '{branch}' ब्रांच को फ़ेच, मर्ज और पुश करें।"
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "फ़ील्ड के नाम में ':' नहीं हो सकता।"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "फ़ील्ड मान"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "नतीजे फ़िल्टर करें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "आइटम खोजें"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "कमज़ोर पासवर्ड खोजें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid "Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV"
+msgstr "कमज़ोर पासवर्ड खोजें, बार-बार आने वाले फ़ील्ड मान देखें, स्टोर के हिसाब से फ़िल्टर करें और पासवर्ड स्टोर CSV में निर्यात करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "पहली रिलीज़"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "पीछे जाने वाला आइकन ठीक करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "वैकल्पिक Git सिंक ठीक करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr "वह OTP गड़बड़ी ठीक की गई जिसमें सही सीक्रेट को अमान्य माना जा रहा था।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "स्मार्टकार्ड की अनुमतियाँ ठीक की गईं"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "GNOME खोज प्रदाता ठीक किया गया।"
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "सामान्य"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "FIDO2-सुरक्षित कुंजी बनाएँ (प्रायोगिक)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "निजी कुंजी बनाएँ या आयात करें।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "पासवर्ड बनाएँ"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "निजी कुंजी बनाएँ"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "FIDO2-सुरक्षित कुंजी बनाई जा रही है (प्रायोगिक)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "कुंजी बनाई जा रही है"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Git कमांड से कोई आउटपुट नहीं मिला।"
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "Git इतिहास और सत्यापन"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "इस रनटाइम में Git उपलब्ध नहीं है।"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Git रिमोट"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Git स्टेटस वर्कर का कनेक्शन टूट गया"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "पीछे जाएँ"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "होम पर जाएँ"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "अनुमति दें"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "USB सुरक्षा कुंजी तक पहुँच की अनुमति दें (प्रायोगिक FIDO2)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
+msgstr "प्रायोगिक FIDO2-सुरक्षित निजी कुंजियों के लिए पहले USB सुरक्षा कुंजी तक पहुँच की अनुमति दें।"
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "Host तक पहुँच की अनुमति दें"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
+msgstr "अगर Keycord की निजी कुंजियों को कंप्यूटर की GPG निजी कुंजियों के साथ सिंक रखना है, तो पहले Host तक पहुँच की अनुमति दें।"
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "पहले Host तक पहुँच की अनुमति दें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr "फ़ेच, मर्ज और पुश करने के लिए Host तक पहुँच की अनुमति दें।"
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "अनुमति दें"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "स्मार्टकार्ड तक पहुँच की अनुमति दें"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "पहले स्मार्टकार्ड तक पहुँच की अनुमति दें।"
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "गाइड और संदर्भ"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid "Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr "इस बिल्ड या प्लेटफ़ॉर्म पर हार्डवेयर OpenPGP कुंजियाँ समर्थित नहीं हैं।"
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "हार्डवेयर कुंजी का PIN"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "हार्डवेयर कुंजी जोड़ दी गई।"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "हार्डवेयर कुंजी का एडमिन PIN"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Keycord के अनुवाद में मदद करें"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "हमेशा के लिए छिपाएँ"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "इतिहास से फ़ॉलबैक"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "इतिहास से मिले प्राप्तकर्ता"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "होम"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Host"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Host Git (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Host Git (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "Host तक पहुँच"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr "Host कमांड की सुविधाएँ केवल Linux पर उपलब्ध हैं।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "आयात करें"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr "पासवर्ड स्टोर इस्तेमाल करने से पहले प्राथमिकताओं में निजी कुंजी आयात करें।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "मौजूदा निजी कुंजी आयात करें या हार्डवेयर टोकन कनेक्ट करें।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "हार्डवेयर सार्वजनिक कुंजी आयात करें (प्रायोगिक)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "Host की GPG निजी कुंजी आयात करें"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "कुंजी आयात करें"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "क्लिपबोर्ड से कुंजी आयात करें"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "पासकी आयात करें?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "पासवर्ड आयात करें (वैकल्पिक)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "पासवर्ड आयात करें"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "pass import से पासवर्ड आयात करें"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "निजी कुंजी आयात करें"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "इस आइटम से निजी कुंजी आयात करें"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "आयात स्रोत"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "इंपोर्टर"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "कुंजी आयात की जा रही है"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "पासवर्ड आयात किए जा रहे हैं"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid "Improved header actions and hid filters when they cannot affect the current view."
+msgstr "हेडर की कार्रवाइयाँ बेहतर की गईं और मौजूदा व्यू पर असर न डाल सकने वाले फ़िल्टर छिपाए गए।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr "कई संभावित कुंजियों वाले स्टोर में प्राप्तकर्ता चुनना बेहतर किया गया।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr "खोज, फ़िल्टर, कीबोर्ड नेविगेशन और एंट्री संपादन बेहतर किए गए।"
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "जानकारी"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "पासवर्ड स्टोर की Git रिपॉज़िटरी आरंभ करें"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr "सभी स्टोर का Git इतिहास देखें और कमिट हस्ताक्षर सत्यापित करें।"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "बदलावों का इतिहास देखें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "बदलावों का इतिहास देखें और कमिट सत्यापित करें"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "Host की GPG निजी कुंजियाँ जाँचें"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "पासवर्ड स्टोर का Git HEAD जाँचें"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "पासवर्ड स्टोर की Git ब्रांच जाँचें"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr "पहले कमिट से पहले पासवर्ड स्टोर की Git फ़ाइलें जाँचें"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr "पासवर्ड स्टोर की Git रिमोट ब्रांच {remote}/{branch} जाँचें"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr "पासवर्ड स्टोर की Git रिविज़न रेंज {range} जाँचें"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "पासवर्ड स्टोर के Git ट्रैक किए गए बदलाव जाँचें"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "पासवर्ड स्टोर की Git अनट्रैक्ड फ़ाइलें जाँचें"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "ऐप और कमांड का हाल का आउटपुट देखें।"
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Git वाले स्टोर जाँचे जा रहे हैं और ब्रांचें खोजी जा रही हैं।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "निजी कुंजियाँ और कनेक्टेड हार्डवेयर जाँचे जा रहे हैं।"
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr "ऑडिट सत्यापन में कमिट इतिहास के प्राप्तकर्ता इस्तेमाल करने के लिए Git इंस्टॉल करें।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "अपडेट इंस्टॉल करें"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr "अपडेट इंस्टॉल करने पर Keycord बंद हो जाएगा। सहेजे नहीं गए बदलाव खो जाएँगे।"
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Integrated"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "FIDO2 बाइंडिंग फ़िंगरप्रिंट '{value}' अमान्य है।"
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "FIDO2 डिवाइस पाथ अमान्य है: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "FIDO2 से एन्क्रिप्ट किया गया डेटा अमान्य है।"
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "सभी कुंजियों से एन्क्रिप्ट की गई पासवर्ड एंट्री अमान्य है।"
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "git cat-file का बैच आउटपुट अमान्य है।"
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "git cat-file का हेडर अमान्य है।"
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "Host Git हस्ताक्षर का मेटाडेटा अमान्य है।"
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "पासकी के FIDO2 एक्सटेंशन अमान्य हैं: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "पासकी JSON अमान्य है: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "पासकी {label} अमान्य है: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "पासवर्ड एंट्री का पाथ अमान्य है।"
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "निजी कुंजी का फ़िंगरप्रिंट '{value}' अमान्य है: {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "प्राप्तकर्ता फ़ाइल का पाथ अमान्य है।"
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "सहेजा गया पासकी JSON अमान्य है: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
+msgstr "Host तक पहुँच उपलब्ध होने पर Keycord की निजी कुंजियों और कंप्यूटर की GPG निजी कुंजियों को सिंक रखें।"
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr "यह कुंजी हटाने से पहले कोई दूसरी चुनी हुई निजी कुंजी उपलब्ध रखें।"
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "कम-से-कम एक चुनी हुई निजी कुंजी उपलब्ध रखें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr "एंट्री को पहले स्टोर और फ़ोल्डर, फिर फ़ाइल नाम के हिसाब से समूहित रखें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr "फ़ोल्डरों को सूची में रखें, लेकिन खोज नतीजों को pass फ़ाइल के नाम से क्रम में लगाएँ।"
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr "जब चुनी गई सभी निजी कुंजियाँ ज़रूरी हों, तब इस कुंजी को चुना रहने दें।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "कुंजी फ़ाइल हटा दी गई।"
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "कुंजी बना दी गई।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "कुंजी आयात कर ली गई।"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "कुंजी का पासवर्ड"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Keycord की FIDO2-सुरक्षित निजी कुंजी"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Keycord अपडेट"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr "Keycord डाउनलोड किया गया Linux अपडेट पूरी तरह इंस्टॉल नहीं कर सका।"
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "Keycord पासकी आइटम तैयार नहीं कर सका। {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord पहले से नवीनतम है।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid "Keycord is an adaptive graphical client for password folders that use the standard pass layout. Existing stores remain normal pass stores on disk, so they keep working with pass and other compatible tools."
+msgstr "Keycord मानक pass लेआउट वाले पासवर्ड फ़ोल्डरों के लिए स्क्रीन के हिसाब से ढलने वाला ग्राफ़िकल क्लाइंट है। मौजूदा स्टोर डिस्क पर सामान्य pass स्टोर ही रहते हैं, इसलिए वे pass और दूसरे संगत टूल के साथ काम करते रहते हैं।"
+
+#: src/composition/host_access.rs:64
+msgid "Keycord is running in a protected space, so some optional features stay off until you allow this. If you allow it, Keycord can use tools from your computer such as GPG, the Host backend, and pass import. If you don't, Keycord still works with the integrated backend."
+msgstr "Keycord सुरक्षित परिवेश में चल रहा है, इसलिए अनुमति देने तक कुछ वैकल्पिक सुविधाएँ बंद रहेंगी। अनुमति मिलने पर Keycord आपके कंप्यूटर के GPG, Host बैकएंड और pass import जैसे टूल इस्तेमाल कर सकता है। अनुमति न देने पर भी Keycord Integrated बैकएंड के साथ काम करेगा।"
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid "Keycord opened a credential export request that names {importer} as the importer and checked its structure. The local file does not authenticate that identity. Keycord does not yet generate CXP response archives, so no passkey data was released."
+msgstr "Keycord ने वह क्रेडेंशियल निर्यात अनुरोध खोला जिसमें {importer} को इंपोर्टर बताया गया है और उसकी संरचना जाँची। स्थानीय फ़ाइल से इस पहचान की पुष्टि नहीं होती। Keycord अभी CXP प्रतिक्रिया आर्काइव नहीं बनाता, इसलिए कोई पासकी डेटा जारी नहीं किया गया।"
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
+msgstr "Keycord पहले अपनी निजी-कुंजी सूची को आपके कंप्यूटर की GPG निजी कुंजियों से मिलाएगा। इसके बाद Keycord में निजी कुंजी बनाने, आयात करने या हटाने पर Host भी अपडेट होगा। केवल Keycord में मौजूद कुंजियाँ पहले सिंक में हट सकती हैं।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "इस स्टोर की कुंजियाँ"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "बाद में"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid "Leave this empty if the source does not use a password, for example a Chrome CSV."
+msgstr "अगर स्रोत में पासवर्ड इस्तेमाल नहीं होता, जैसे Chrome CSV में, तो इसे खाली छोड़ें।"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "लंबाई"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Linux अपडेट की क्लीनअप डायरेक्टरी मौजूद नहीं है।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "सूची"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr "{prefix} के अंतर्गत पासवर्ड स्टोर के Git ऑडिट रेफ़ की सूची बनाएँ"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "पासवर्ड स्टोर के Git रिमोट की सूची बनाएँ"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr "पासवर्ड स्टोर के Git ट्री {object} में प्राप्तकर्ता फ़ाइलों की सूची बनाएँ"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "और कमिट लोड करें"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "लोड हो रहा है"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "कमिट लोड हो रहे हैं"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "डेटा लोड हो रहा है"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "फ़ील्ड मान लोड हो रहे हैं"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "कुंजियाँ लोड हो रही हैं"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "आपके आइटम लोड हो रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr "'{branch}' पर स्थानीय और रिमोट कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "स्थानीय और रिमोट कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "स्थानीय ब्रांच"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr "स्थानीय बदलाव मिले। पहले उन्हें कमिट करें या छोड़ दें।"
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr "स्थानीय बदलाव मिले। स्थानीय और रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr "स्थानीय बदलाव मिले। स्थानीय कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr "स्थानीय बदलाव मिले। रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "'{branch}' पर स्थानीय कमिट पुश करने के लिए तैयार हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "स्थानीय कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "लॉग"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "GitHub Releases पर नया Linux स्टैंडअलोन बिल्ड खोजा जा रहा है।"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "GitHub Releases पर नया Windows इंस्टॉलर खोजा जा रहा है।"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "छोटे अक्षर"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "मुख्य मेन्यू"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "सिंक करने से पहले शुरुआती कमिट बनाएँ।"
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr "इस स्टोर को सिंक करने से पहले '{branch}' पर शुरुआती कमिट बनाएँ।"
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "सिंक करने से पहले '{branch}' पर शुरुआती कमिट बनाएँ।"
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "Git कमिट हेडर का प्रारूप गलत है।"
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "Git कमिट ऑब्जेक्ट का प्रारूप गलत है।"
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "Git हस्ताक्षर हेडर का प्रारूप गलत है।"
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "हस्ताक्षर का प्रारूप गलत है या वह समर्थित नहीं है"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "निजी कुंजियाँ प्रबंधित करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid "Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization"
+msgstr "स्टोर के प्राप्तकर्ता, हर फ़ोल्डर की .gpg-id फ़ाइलें और पासवर्ड-सुरक्षित निजी कुंजियाँ प्रबंधित करें—इनमें फ़ाइल व क्लिपबोर्ड से आयात और वैकल्पिक Host GPG सिंक भी शामिल हैं"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "स्टोर प्रबंधित करें"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr "Keycord के इस बिल्ड में प्रबंधित हार्डवेयर-कुंजी सेटअप बंद है।"
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid "Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr "प्रबंधित निजी-कुंजी डेटा '{}' माँगे गए फ़िंगरप्रिंट '{}' से मेल नहीं खाता।"
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid "Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr "प्रबंधित निजी-कुंजी {artifact_kind} '{}' मानक पाथ '{}' से मेल नहीं खाता।"
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr "Keycord के इस बिल्ड में प्रबंधित स्मार्टकार्ड जोड़ना या आयात करना बंद है।"
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr "एक के अंदर एक .gpg-id फ़ाइलें प्रबंधित करने के लिए Integrated बैकएंड चाहिए।"
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "आम पासवर्ड से मेल खाता है"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "पासवर्ड स्टोर की Git ब्रांच {target} मर्ज करें"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "संदेश"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "न्यूनतम संख्या, 0 पर बंद"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "सहेजी गई हार्डवेयर कुंजी का OpenPGP प्रमाणपत्र मौजूद नहीं है।"
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "सहेजी गई निजी कुंजी का OpenPGP प्रमाणपत्र मौजूद नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "रिपॉज़िटरी URL में मालिक का नाम नहीं है: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "{} का रॉ कमिट डेटा मौजूद नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "रिपॉज़िटरी URL में रिपॉज़िटरी का नाम नहीं है: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "ले जाएँ"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "pass फ़ाइल ले जाएँ"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "चुनी गई pass फ़ाइल ले जाएँ"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "स्टोर में ले जाएँ"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "ले जाया गया।"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "नाम"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "नेविगेशन"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "नया पासवर्ड टेम्पलेट"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "नया स्टोर"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "हार्डवेयर कुंजी का नया PIN"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "नया आइटम"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "सुरक्षा कुंजी का नया PIN"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr "अभी कोई Git रिपॉज़िटरी नहीं है। इसे शुरू करने के लिए रिमोट जोड़ें।"
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Git वाला कोई स्टोर नहीं"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Git वाला कोई स्टोर उपलब्ध नहीं है।"
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "अभी कोई ब्रांच नहीं है।"
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "कोई बदला हुआ पाथ नहीं"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "कोई कमिट लोड नहीं हुआ"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "कोई डेटा डायरेक्टरी नहीं मिली"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "कोई डिस्प्ले उपलब्ध नहीं है।"
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "कोई एक्ज़ीक्यूटेबल डायरेक्टरी नहीं मिली"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "कोई फ़ोल्डर नहीं जोड़ा गया"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "अभी कोई आइटम नहीं है"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr "लोड की गई कोई pass फ़ाइल मौजूदा कमज़ोर-पासवर्ड जाँच से मेल नहीं खाती।"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "कोई मिलान नहीं"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "मेल खाने वाला कोई Git रिमोट नहीं"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "मेल खाने वाली कोई ब्रांच नहीं"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "मेल खाने वाला कोई दस्तावेज़ नहीं"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "मेल खाने वाला कोई फ़ील्ड नहीं"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "मेल खाने वाली कोई प्राथमिकता नहीं"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "मेल खाने वाला कोई नतीजा नहीं"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "मेल खाने वाली कोई स्टोर कुंजी नहीं"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "मेल खाने वाला कोई टूल नहीं"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "मेल खाने वाला कोई मान नहीं"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "कोई पासवर्ड स्टोर नहीं"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "कोई पासवर्ड स्टोर नहीं"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "कोई प्राप्तकर्ता सेट नहीं है"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "इस पासवर्ड एंट्री के लिए कोई प्राप्तकर्ता नहीं मिला।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "अभी कोई प्राप्तकर्ता नहीं है"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "कोई रिमोट कॉन्फ़िगर नहीं है।"
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "कोई मानक प्राप्तकर्ता कुंजी नहीं मिल सकी"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "खोजने योग्य कोई फ़ील्ड नहीं"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "कोई हस्ताक्षर नहीं"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "कोई मान नहीं"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "कोई कमज़ोर पासवर्ड नहीं मिला"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "उपलब्ध नहीं"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "कुछ भी चुना नहीं गया"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "अंक"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "OTP कोड"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "OTP सीक्रेट"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr "एक या अधिक स्थानीय इंस्टॉल डायरेक्टरी लिखने योग्य नहीं हैं।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid "Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr "प्रायोगिक FIDO2 सुविधाएँ केवल Integrated बैकएंड इस्तेमाल करते समय चालू करें।"
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr "स्थानीय फ़ाइल सिस्टम की केवल सामान्य फ़ाइलें स्वीकार की जाती हैं।"
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Git टूल खोलें"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "स्टोर फ़ोल्डर जोड़ने के लिए प्राथमिकताएँ खोलें।"
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "URL खोलें"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Weblate खोलें"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr "ब्रांच और कमिट देखने के लिए Git वाला स्टोर खोलें।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "नया आइटम खोलें"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "पहले स्टोर खोलें।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "पहले आइटम खोलें।"
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "दस्तावेज़ खोलें"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "एक बार में केवल एक पासकी अनुरोध खोलें।"
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "गाइड और संदर्भ खोलें।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "फ़ाइल प्रबंधक में खोलें"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "नई विंडो में खोलें"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "लॉग खोलें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid "Open one or more password stores and search by name, store, field, regular expression, or structured find query"
+msgstr "एक या अधिक पासवर्ड स्टोर खोलें और नाम, स्टोर, फ़ील्ड, रेगुलर एक्सप्रेशन या संरचित खोज क्वेरी से खोजें"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "प्राथमिकताएँ खोलें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "रॉ टेक्स्ट खोलें"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "स्टोर 1 के Git रिमोट खोलें"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "स्टोर 1 की कुंजियाँ खोलें"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "स्टोर 2 के Git रिमोट खोलें"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "स्टोर 2 की कुंजियाँ खोलें"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "स्टोर 3 के Git रिमोट खोलें"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "स्टोर 3 की कुंजियाँ खोलें"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "स्टोर 4 के Git रिमोट खोलें"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "स्टोर 4 की कुंजियाँ खोलें"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "स्टोर 5 के Git रिमोट खोलें"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "स्टोर 5 की कुंजियाँ खोलें"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "स्टोर 6 के Git रिमोट खोलें"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "स्टोर 6 की कुंजियाँ खोलें"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "टूल खोलें"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "खोला जा रहा है"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "आइटम खोला जा रहा है"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "या हार्डवेयर कुंजी इस्तेमाल करें (प्रायोगिक)।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "कुंजी जोड़ने के दूसरे तरीके"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "pass फ़ाइल"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "pass फ़ाइलें"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "पासकी"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "पासकी के FIDO2 एक्सटेंशन JSON ऑब्जेक्ट होने चाहिए।"
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "पासकी निर्यात अनुरोध खोला गया"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "पासवर्ड"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "पासवर्ड बनाना"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "पासवर्ड सूची"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "पासवर्ड स्टोर"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "पासवर्ड कार्रवाइयाँ"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "पासवर्ड एंट्री '{label}' नहीं मिली।"
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "पासवर्ड एंट्री '{old_label}' नहीं मिली।"
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "पासवर्ड एंट्री का नाम खाली है।"
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "पासवर्ड खाली है"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "पासवर्ड में सिर्फ़ खाली जगहें हैं"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "पासवर्ड सूची"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "पासवर्ड विकल्प"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
+msgstr "पासवर्ड स्टोर की Git स्थिति: {root} -> Git रिपॉज़िटरी मिली, लेकिन इस बिल्ड में Git कमांड बंद हैं।"
+
+#: crates/keycord-git/src/repository.rs:75
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, network operations enabled."
+msgstr "पासवर्ड स्टोर की Git स्थिति: {root} -> Git रिपॉज़िटरी मिली, स्थानीय कमिट और नेटवर्क कार्रवाइयाँ चालू हैं।"
+
+#: crates/keycord-git/src/repository.rs:80
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, remote sync disabled in this backend."
+msgstr "पासवर्ड स्टोर की Git स्थिति: {root} -> Git रिपॉज़िटरी मिली, स्थानीय कमिट चालू हैं और इस बैकएंड में रिमोट सिंक बंद है।"
+
+#: crates/keycord-git/src/repository.rs:65
+msgid "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
+msgstr "पासवर्ड स्टोर की Git स्थिति: {root} -> कोई Git रिपॉज़िटरी नहीं मिली, स्थानीय कमिट और नेटवर्क कार्रवाइयाँ बंद हैं।"
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "पासवर्ड स्टोर कॉन्फ़िगरेशन: कोई स्टोर कॉन्फ़िगर नहीं है।"
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "पासवर्ड स्टोर कॉन्फ़िगरेशन: कॉन्फ़िगर किए गए स्टोर — {}।"
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "पासवर्ड आयात हो गए।"
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "पाथ या नाम"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "अनुमति कमांड विफल रहा"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "मौजूदा सूची से फ़ील्ड चुनें।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "मौजूदा सूची से मान चुनें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "प्राथमिकताएँ"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "निजी कुंजी के फ़िंगरप्रिंट '{value}' की लंबाई अपेक्षित नहीं है।"
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid "Private key unlock worker disconnected while preparing a Git signature for {fingerprint}."
+msgstr "Git हस्ताक्षर तैयार करते समय {fingerprint} के लिए निजी कुंजी अनलॉक वर्कर का कनेक्शन टूट गया।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "निजी कुंजियाँ सत्यापित नहीं की जा सकतीं"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "निजी कुंजियाँ सिंक हो गईं।"
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr "Host के साथ निजी-कुंजी सिंक केवल Linux पर उपलब्ध है।"
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr "पासवर्ड स्टोर की Git ब्रांच {branch} को {remote} पर पुश करें"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "QR कोड"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "RP ID"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "रॉ टेक्स्ट"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
+msgstr "क्लिपबोर्ड से आर्मर्ड निजी कुंजी या प्रायोगिक FIDO2-सुरक्षित निजी कुंजी पढ़ें।"
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr "पासवर्ड स्टोर के Git कमिट {oid} में बदले गए पाथ पढ़ें"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr "पासवर्ड स्टोर के कमिट का Host Git हस्ताक्षर मेटाडेटा पढ़ें"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "pass import के स्रोत पढ़ें"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "pass का वर्ज़न पढ़ें"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "पासवर्ड एंट्री पढ़ें"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "क्लिपबोर्ड पर कॉपी करने के लिए पासवर्ड एंट्री पढ़ें"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "पासवर्ड स्टोर का Git HEAD पढ़ें"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr "{full_ref} के लिए पासवर्ड स्टोर का Git ऑडिट लॉग पढ़ें"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr "{name} के लिए पासवर्ड स्टोर का Git रिमोट URL पढ़ें"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr "पासवर्ड स्टोर की Git ट्री फ़ाइल {object_path} पढ़ें"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "पासवर्ड स्टोर के रॉ Git कमिट पढ़ें"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "अगले {count} कमिट पढ़ें।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "मौजूदा सूची से पासवर्ड की पंक्तियाँ पढ़ी जा रही हैं।"
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "इस ब्रांच का हाल का Git इतिहास पढ़ा जा रहा है।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr "मौजूदा सूची से खोजने योग्य pass फ़ील्ड पढ़े जा रहे हैं।"
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "कारण"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "प्राप्तकर्ता '{recipient_id}' ऐप में उपलब्ध नहीं है।"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid "Recipient '{recipient_id}' matches multiple keys in the app. Use a fingerprint instead."
+msgstr "प्राप्तकर्ता '{recipient_id}' ऐप की कई कुंजियों से मेल खाता है। इसके बजाय फ़िंगरप्रिंट इस्तेमाल करें।"
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "प्राप्तकर्ता स्रोत"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "प्राप्तकर्ता फ़ाइल"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "ऑडिट किए गए कमिट के प्राप्तकर्ता"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "नए स्टोर के लिए सुझाया गया"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "FIDO2 सुरक्षा कुंजी दोबारा कनेक्ट करके फिर कोशिश करें।"
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "हार्डवेयर कुंजी दोबारा कनेक्ट करके फिर कोशिश करें।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr "GNOME खोज, कमांड विफलताओं और लॉग में गोपनीय डेटा उजागर होने की संभावना कम की गई।"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "मौजूदा सूची रीफ़्रेश करें"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "रिलीज़ एसेट '{}' का SHA-256 डाइजेस्ट अमान्य है।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr "रिलीज़ एसेट '{}' का डाइजेस्ट प्रारूप समर्थित नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr "रिलीज़ एसेट '{}' में GitHub SHA-256 डाइजेस्ट मौजूद नहीं है।"
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "रिमोट URL"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "रिमोट जोड़ दिया गया।"
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "रिमोट कमिट '{branch}' में मर्ज होने के लिए तैयार हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "रिमोट कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "रिमोट का नाम"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "रिमोट हटा दिया गया।"
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "रिमोट अपडेट कर दिया गया।"
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "रिमोट-ट्रैकिंग ब्रांच"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "रिमोट"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "खाली फ़ील्ड हटाएँ"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "ऐप मेन्यू से हटाएँ"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "कुंजी हटाएँ"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "कुंजी फ़ाइल हटाएँ"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "{label} का पासवर्ड हटाएँ"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "पासवर्ड स्टोर का Git रिमोट हटाएँ"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "प्राप्तकर्ता हटाएँ"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "रिमोट हटाएँ"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "खाली फ़ील्ड हटा दिए गए।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr "Flatpak ऐप से FIDO2-आधारित पासवर्ड स्टोर सुविधा हटा दी गई।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "pass फ़ाइल का नाम बदलें"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "पासवर्ड एंट्री का नाम बदलें"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "पासवर्ड का नाम {old_label} से {new_label} करें"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "पासवर्ड स्टोर के Git रिमोट का नाम बदलें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "चुनी गई pass फ़ाइल का नाम बदलें"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "एक ही वर्ण बार-बार दोहराया गया है"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "रिपॉज़िटरी"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "रिपॉज़िटरी URL"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr "रिपॉज़िटरी मिल गई और रिमोट प्रबंधन के लिए तैयार है।"
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "रिपॉज़िटरी मिल गई। सिंक करने से पहले ब्रांच चेक आउट करें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr "रिपॉज़िटरी मिल गई। सिंक करने से पहले '{branch}' पर पहला कमिट बनाएँ।"
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr "रिपॉज़िटरी मिल गई। स्थानीय और रिमोट कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid "Repository found. Local changes must be committed or discarded before sync, and local and remote commits are waiting to sync."
+msgstr "रिपॉज़िटरी मिल गई। सिंक से पहले स्थानीय बदलाव कमिट करने या छोड़ने होंगे; स्थानीय और रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid "Repository found. Local changes must be committed or discarded before sync, and local commits are waiting to sync."
+msgstr "रिपॉज़िटरी मिल गई। सिंक से पहले स्थानीय बदलाव कमिट करने या छोड़ने होंगे; स्थानीय कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid "Repository found. Local changes must be committed or discarded before sync, and remote commits are waiting to sync."
+msgstr "रिपॉज़िटरी मिल गई। सिंक से पहले स्थानीय बदलाव कमिट करने या छोड़ने होंगे; रिमोट कमिट भी सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid "Repository found. Local changes must be committed or discarded before sync."
+msgstr "रिपॉज़िटरी मिल गई। सिंक से पहले स्थानीय बदलाव कमिट करें या छोड़ दें।"
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr "रिपॉज़िटरी मिल गई। स्थानीय कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr "रिपॉज़िटरी मिल गई। रिमोट कमिट सिंक होने का इंतज़ार कर रहे हैं।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "सभी चुनी हुई निजी कुंजियाँ ज़रूरी"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Git {role} की पहचान तय करें"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "संसाधन नहीं मिला: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "लागू करने के लिए ऐप फिर से शुरू करें।"
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "पासवर्ड स्टोर बहाल करें"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "बहाली अचानक रुक गई।"
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "स्टोर बहाल करें"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "पासवर्ड स्टोर बहाल किया जा रहा है"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "स्टोर बहाल किया जा रहा है"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
+msgstr "मौजूदा ब्रांच के प्राप्तकर्ता हस्ताक्षरकर्ता को अधिकृत न कर पाएँ, तो कमिट इतिहास की प्राप्तकर्ता फ़ाइलों से फिर कोशिश करें।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "बदलाव वापस कर दिया गया।"
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "सहेजें"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "मौजूदा पेज सहेजें या होम से सिंक करें"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr "पासकी आयात करने से पहले मौजूदा बदलाव सहेजें या छोड़ दें।"
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "पासवर्ड एंट्री सहेजें"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "पासवर्ड स्टोर के प्राप्तकर्ता सहेजें"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "सहेजा गया।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "प्राप्तकर्ता फ़ाइल सहेजी जा रही है"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Git हस्ताक्षर के बिना सहेजा जा रहा है।"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr "मौजूदा सूची में बुनियादी जाँच में विफल पासवर्ड खोजें।"
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "दूसरे डिवाइस पर यह मान इस्तेमाल करने के लिए स्कैन करें।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "पासवर्ड स्कैन किए जा रहे हैं"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Git रिमोट खोजें"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "दस्तावेज़ खोजें"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "फ़ील्ड खोजें"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "नाम, स्टोर या फ़ील्ड खोजें"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "प्राथमिकताएँ खोजें"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "खोज नतीजे"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "स्टोर की कुंजियाँ खोजें"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "टूल खोजें"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "मान खोजें"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "कमज़ोर पासवर्ड खोजें"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "सुरक्षा कुंजी का PIN"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "चुनें"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "फ़िल्टर मेन्यू में कम-से-कम एक स्टोर और एक ब्रांच चुनें।"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr "इस स्टोर के पासवर्ड अनलॉक कर सकने वाली निजी कुंजियाँ चुनें।"
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "क्रमिक वर्ण"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "पहले FIDO2 सुरक्षा कुंजी पर PIN सेट करें।"
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "सुरक्षा कुंजी का PIN सेट करें"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "सुरक्षा कुंजी का PIN सेट करें (प्रायोगिक FIDO2)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "नई हार्डवेयर कुंजी सेट अप करें (प्रायोगिक)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr "इस बिल्ड में FIDO2 सुरक्षा कुंजी का PIN सेट करना केवल Linux पर समर्थित है।"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "हार्डवेयर कुंजी सेट अप की जा रही है (प्रायोगिक)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "कम वर्ण-विविधता वाला छोटा पासवर्ड"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "लॉग दिखाएँ"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "OTP को QR कोड के रूप में दिखाएँ"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "बंद विकल्पों को छिपाने के बजाय दिखाएँ"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "छिपी हुई और डुप्लिकेट एंट्री दिखाएँ"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "पासवर्ड को QR कोड के रूप में दिखाएँ"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "शॉर्टकट दिखाएँ"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "फ़ोल्डर के आखिरी हिस्से को उपयोगकर्ता नाम के रूप में दिखाएँ।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "pass फ़ाइल का नाम उपयोगकर्ता नाम के रूप में दिखाएँ।"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "उपयोगकर्ता नाम को QR कोड के रूप में दिखाएँ"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "मान को QR कोड के रूप में दिखाएँ"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "हस्ताक्षरकर्ता ब्रांच के प्राप्तकर्ताओं में नहीं है"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "हस्ताक्षर कुंजी Keycord में उपलब्ध नहीं है"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "एक ही तरह के वर्ण और कम लंबाई"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "एंट्री को केवल pass फ़ाइल के नाम से क्रम में लगाएँ।"
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "पासवर्ड स्टोर के Git बदलाव स्टेज करें"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "स्थिति"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "चरण {current}/{total}: कुंजी की बत्ती झपके तो उसे छुएँ।"
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "स्टोर"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "स्टोर बन गया, लेकिन जोड़ा नहीं जा सका।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "स्टोर की कुंजियाँ"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "स्टोर बहाल हो गया।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "स्टोर का सबफ़ोल्डर"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "स्टोर सिंक अचानक रुक गया।"
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "स्टोर सिंक हो गया।"
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "सहेजा गया FIDO2 PIN मान्य UTF-8 नहीं है: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "स्टोर"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr "Git रिपॉज़िटरी से स्टोर बहाल करने के लिए बैकएंड को Host पर बदलें।"
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "pass import इस्तेमाल करने के लिए बैकएंड को Host पर बदलें।"
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
+msgstr "प्रायोगिक FIDO2-सुरक्षित निजी कुंजियाँ इस्तेमाल करने के लिए Integrated बैकएंड चुनें।"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "चिह्न"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
+msgstr "Git वाले स्टोर सिंक करें, रिमोट प्रबंधित करें, बदलावों पर हस्ताक्षर करें और कमिट सत्यापन के ब्यौरे के साथ इतिहास देखें"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "अभी सिंक करें"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "निजी कुंजियाँ Host के साथ सिंक करें"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "स्टोर सिंक करें"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "स्टोर सिंक हो रहा है"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "स्टोर सिंक हो रहे हैं"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "टेक्स्ट एडिटर"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "वह FIDO2 सुरक्षा कुंजी hmac-secret एक्सटेंशन का समर्थन नहीं करती।"
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr "उस FIDO2 सुरक्षा कुंजी में PIN सुरक्षा का समर्थन होना चाहिए।"
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "वह FIDO2-सुरक्षित कुंजी निर्यात नहीं की जा सकी।"
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "उस FIDO2-सुरक्षित कुंजी का डेटा अमान्य है।"
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "वह FIDO2-सुरक्षित कुंजी अमान्य है।"
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "उस OpenPGP कुंजी फ़ाइल में निजी कुंजी नहीं है।"
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "उस डेटा में निजी कुंजी नहीं है।"
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "उस फ़ाइल में निजी कुंजी नहीं है।"
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr "वह हार्डवेयर कुंजी पासवर्ड स्टोर की एंट्री डिक्रिप्ट नहीं कर सकती।"
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr "उस हार्डवेयर-आधारित कुंजी में निर्यात की जा सकने वाली निजी कुंजी नहीं है।"
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "उस आइटम का स्टोर मौजूद नहीं है।"
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "वह आइटम अब मौजूद नहीं है।"
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "उस कुंजी में निर्यात की जा सकने वाली सार्वजनिक कुंजी नहीं है।"
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "वह पासवर्ड एंट्री पहले से मौजूद है।"
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr "वह निजी कुंजी पासवर्ड स्टोर की एंट्री डिक्रिप्ट नहीं कर सकती।"
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr "वह निजी कुंजी Git कमिट पर हस्ताक्षर नहीं कर सकती।"
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "वह निजी कुंजी ऐप में सहेजी नहीं गई है।"
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr "आयात करने से पहले उस निजी कुंजी को पासवर्ड से सुरक्षित करना होगा।"
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "वह सार्वजनिक कुंजी हार्डवेयर डिक्रिप्शन कुंजी से मेल नहीं खाती।"
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "वह सार्वजनिक कुंजी हार्डवेयर हस्ताक्षर कुंजी से मेल नहीं खाती।"
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "वह रिमोट URL पहले से मौजूद है।"
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "वह रिमोट नाम पहले से मौजूद है।"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid "The CSV file will contain every password and field in plaintext. Anyone with access to the file can read them."
+msgstr "CSV फ़ाइल में सभी पासवर्ड और फ़ील्ड सादे टेक्स्ट में होंगे। इस फ़ाइल तक पहुँच रखने वाला कोई भी व्यक्ति इन्हें पढ़ सकता है।"
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "CXP अनुरोध में कोई समर्थित HPKE मोड नहीं है।"
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "CXP अनुरोध में समर्थित deflate आर्काइव प्रारूप का विकल्प नहीं है।"
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "FIDO2 सुरक्षा कुंजी के PIN में असमर्थित NUL बाइट है।"
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "FIDO2 सुरक्षा कुंजी का PIN गलत है।"
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr "FIDO2 सुरक्षा कुंजी ने क्रेडेंशियल पहचानकर्ता नहीं दिया।"
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr "उपलब्ध निजी कुंजियाँ इस आइटम को डिक्रिप्ट नहीं कर सकतीं।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr "कनेक्ट की गई हार्डवेयर कुंजी सहेजी गई डिक्रिप्शन कुंजी से मेल नहीं खाती।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr "कनेक्ट की गई हार्डवेयर कुंजी सहेजी गई हस्ताक्षर कुंजी से मेल नहीं खाती।"
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr "मौजूदा फ़िल्टर चुने गए स्टोर की किसी ब्रांच से मेल नहीं खाते।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "मौजूदा सूची में खोजने योग्य कोई pass फ़ील्ड नहीं है।"
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "यह फ़ाइल CXP पासकी निर्यात अनुरोध नहीं है।"
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "gettext डोमेन के बीच में NUL बाइट है।"
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "gettext लोकेल पाथ के बीच में NUL बाइट है।"
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "हार्डवेयर कुंजी का PIN ब्लॉक है।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "हार्डवेयर कुंजी ने माँगा गया नया PIN स्वीकार नहीं किया।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "हार्डवेयर कुंजी ने डिक्रिप्शन फ़िंगरप्रिंट नहीं दिया।"
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "हार्डवेयर कुंजी ने हस्ताक्षर फ़िंगरप्रिंट नहीं दिया।"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "इंस्टॉलर चलने के लिए तैयार है।"
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "पासकी में {label} मौजूद नहीं है।"
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "पासकी अनुरोध में गलत प्रारूप वाला JSON है: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "पासकी अनुरोध {limit}-बाइट की सीमा से बड़ा है।"
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "पासकी अनुरोध का प्रारूप गलत है: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr "पासकी अनुरोध का स्रोत सामान्य स्थानीय फ़ाइल नहीं है: {path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "पासकी का {label} खाली है।"
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr "पासकी के {label} में बिना पैडिंग वाला base64url इस्तेमाल होना चाहिए।"
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "पासवर्ड एडिटर उपलब्ध नहीं है।"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "पासवर्ड मेल नहीं खाते।"
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "निजी कुंजी का पासवर्ड गलत है।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr "निजी-कुंजी इन्वेंटरी वर्कर अचानक रुक गया।"
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "सुरक्षा कुंजी के PIN मेल नहीं खाते।"
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr "चुनी गई फ़ाइल समर्थित स्थानीय CXP पासकी अनुरोध नहीं है। {error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "चुना गया पासवर्ड स्टोर पाथ कोई फ़ोल्डर नहीं है।"
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "चुना गया स्टोर पाथ कोई फ़ोल्डर नहीं है।"
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr "सहेजा गया JSON पासकी क्रेडेंशियल नहीं है।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "सहेजी गई सार्वजनिक कुंजी में हस्ताक्षर सबकी नहीं है।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr "सहेजी गई सार्वजनिक कुंजी में ट्रांसपोर्ट-एन्क्रिप्शन सबकी नहीं है।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr "सहेजी गई सार्वजनिक कुंजी में हार्डवेयर डिक्रिप्शन कुंजी मौजूद नहीं है।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr "सहेजी गई सार्वजनिक कुंजी में हार्डवेयर हस्ताक्षर कुंजी मौजूद नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid "The update helper cleanup directory does not match the downloaded update location."
+msgstr "अपडेट सहायक की क्लीनअप डायरेक्टरी डाउनलोड किए गए अपडेट के स्थान से मेल नहीं खाती।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr "अपडेट सहायक एक्ज़ीक्यूटेबल की कोई पैरेंट डायरेक्टरी नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "अपडेट इंस्टॉल होने के लिए तैयार है।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid "These lines are added after the password line when you create a new password entry. Leave it empty to start with a blank pass file."
+msgstr "नई पासवर्ड एंट्री बनाते समय ये पंक्तियाँ पासवर्ड की पंक्ति के बाद जोड़ी जाती हैं। खाली pass फ़ाइल से शुरू करने के लिए इसे खाली छोड़ें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid "These settings are used when you generate or regenerate a password from the editor."
+msgstr "एडिटर से पासवर्ड बनाने या दोबारा बनाने पर ये सेटिंग्स इस्तेमाल होती हैं।"
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "यह FIDO2 सुरक्षा कुंजी आपके आइटम नहीं खोल सकती।"
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "इस ब्रांच में ऑडिट के लिए कोई कमिट उपलब्ध नहीं है।"
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "इस बिल्ड में पासकी समर्थन शामिल नहीं है।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "इस फ़ील्ड में खोजने योग्य कोई मान नहीं है।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid "This hardware key already has OpenPGP keys. Import the matching public key file instead."
+msgstr "इस हार्डवेयर कुंजी में OpenPGP कुंजियाँ पहले से हैं। इसके बजाय मेल खाने वाली सार्वजनिक कुंजी फ़ाइल आयात करें।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid "This hardware key already has OpenPGP keys. Use Add hardware key (Experimental) or import the matching public key file instead."
+msgstr "इस हार्डवेयर कुंजी में OpenPGP कुंजियाँ पहले से हैं। इसके बजाय “हार्डवेयर कुंजी जोड़ें (प्रायोगिक)” इस्तेमाल करें या मेल खाने वाली सार्वजनिक कुंजी फ़ाइल आयात करें।"
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "यह हार्डवेयर कुंजी आपके आइटम नहीं खोल सकती।"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid "This hardware key has no OpenPGP key yet. Use Set up new hardware key (Experimental) instead."
+msgstr "इस हार्डवेयर कुंजी में अभी OpenPGP कुंजी नहीं है। इसके बजाय “नई हार्डवेयर कुंजी सेट अप करें (प्रायोगिक)” इस्तेमाल करें।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid "This item can't be opened with the private keys currently available in the app. File actions are still available, but copy and move-to-store are disabled until a compatible private key is available."
+msgstr "यह आइटम ऐप में अभी उपलब्ध निजी कुंजियों से नहीं खोला जा सकता। फ़ाइल की कार्रवाइयाँ उपलब्ध रहेंगी, लेकिन संगत निजी कुंजी मिलने तक कॉपी और दूसरे स्टोर में ले जाने के विकल्प बंद रहेंगे।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "इस आइटम में आर्मर्ड निजी कुंजी नहीं है।"
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "यह कुंजी आपके आइटम नहीं खोल सकती।"
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "यह निजी कुंजी पासवर्ड से सुरक्षित है।"
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "इस निजी कुंजी के लिए FIDO2 सुरक्षा कुंजी चाहिए।"
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "इस निजी कुंजी को अनलॉक करने के लिए कोई दूसरा तरीका चाहिए।"
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "इस निजी कुंजी के लिए हार्डवेयर कुंजी चाहिए।"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "यह प्राप्तकर्ता ऐप में उपलब्ध नहीं है।"
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid "This selected key is required while all selected private keys are required."
+msgstr "सभी चुनी हुई निजी कुंजियाँ ज़रूरी होने पर इस कुंजी को चुना रखना भी ज़रूरी है।"
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "यह मान QR कोड के लिए बहुत लंबा है।"
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "बहुत छोटा ({length} वर्ण)"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "टूल"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "कुल वर्ण"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "FIDO2 सुरक्षा कुंजी को छूकर फिर कोशिश करें।"
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "कुंजी की बत्ती झपके तो उसे छुएँ।"
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "अनुवाद करें"
+
+#: src/translation_help.rs:51
+msgid "Translate Keycord into a new language or help improve an existing translation on Weblate."
+msgstr "Weblate पर Keycord का किसी नई भाषा में अनुवाद करें या मौजूदा अनुवाद बेहतर बनाने में मदद करें।"
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Nick ने अनुवाद किया।"
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "git cat-file का बैच आउटपुट अधूरा है।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "कोई दूसरा फ़ील्ड फ़िल्टर आज़माएँ।"
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "कोई दूसरा खोज शब्द आज़माएँ या और कमिट लोड करें।"
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "कोई दूसरा खोज शब्द आज़माएँ।"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "कोई दूसरा मान फ़िल्टर आज़माएँ।"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "प्राथमिकताओं से फिर कोशिश करें।"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "कोई दूसरी क्वेरी या कोई दूसरा फ़िल्टर आज़माएँ।"
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "चालू करें"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "निजी-कुंजी सिंक चालू करें?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "बदलाव वापस करें"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "वापस कर दिया गया।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "Cv25519 सिफ़रटेक्स्ट का आकार अपेक्षित नहीं है"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "NistP256 सिफ़रटेक्स्ट का आकार अपेक्षित नहीं है"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr "git cat-file ऑब्जेक्ट का प्रकार '{object_type}' अपेक्षित नहीं है।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "मेल खाने वाली सार्वजनिक सबकी की संख्या अपेक्षित नहीं है: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr "बफ़र के बिना टोकन की जानकारी मिली, जबकि ऐसा नहीं होना चाहिए था।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "pass फ़ाइल अनलॉक करें"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr "इसका चयन हटाने से पहले कोई दूसरी चुनी हुई निजी कुंजी अनलॉक करें।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "कुंजी अनलॉक करें"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "प्राथमिकताओं में कुंजी अनलॉक करें।"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "आगे बढ़ने के लिए अपनी कुंजी अनलॉक करें।"
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "बिना नाम की Host निजी कुंजी"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "बिना नाम की निजी कुंजी"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "बिना नाम का स्मार्टकार्ड"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "दूसरी सुरक्षा कुंजियाँ निकालकर फिर कोशिश करें।"
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "FIDO2 पासवर्ड-एंट्री प्रारूप {} समर्थित नहीं है।"
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "FIDO2 पासवर्ड-एंट्री सुरक्षा '{}' समर्थित नहीं है।"
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "FIDO2 निजी कुंजी प्रारूप {} समर्थित नहीं है।"
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "FIDO2 निजी कुंजी सुरक्षा '{}' समर्थित नहीं है।"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "Linux अपडेट आर्किटेक्चर समर्थित नहीं है: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "सिफ़रटेक्स्ट {:?} और सार्वजनिक कुंजी {:?} का संयोजन समर्थित नहीं है"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "हार्डवेयर कुंजी का मेनिफ़ेस्ट प्रारूप {} समर्थित नहीं है।"
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "हार्डवेयर कुंजी की सुरक्षा '{}' समर्थित नहीं है।"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "RSA के लिए हैश एल्गोरिदम समर्थित नहीं है: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "अपडेट के लिए रिपॉज़िटरी URL समर्थित नहीं है: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "हस्ताक्षर एल्गोरिदम समर्थित नहीं है: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "सत्यापित नहीं"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "अपडेट '{}' का SHA-256 मेल नहीं खाता।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "अपडेट उपलब्ध है"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "अपडेट डाउनलोड पाथ की कोई पैरेंट डायरेक्टरी नहीं है।"
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "{label} का पासवर्ड अपडेट करें"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "पासवर्ड स्टोर का Git HEAD अपडेट करें"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr "पासवर्ड स्टोर का Git रिमोट URL अपडेट करें"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "पासवर्ड स्टोर के प्राप्तकर्ता अपडेट करें"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr "डाउनलोड के बाद अपडेट का आकार मेल नहीं खाता (अपेक्षित {}, मिला {})।"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "'{}' के अपडेट का आकार मेल नहीं खाता।"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr "सहेजे गए सभी पासवर्ड नई पहुँच सेटिंग्स के अनुसार अपडेट किए जा रहे हैं।"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "बड़े अक्षर"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr "--open-passkey-request के साथ ठीक एक स्थानीय फ़ाइल इस्तेमाल करें।"
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "इसके बजाय “OTP सीक्रेट जोड़ें” इस्तेमाल करें।"
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "इसके बजाय पासकी अनुरोध इस्तेमाल करें।"
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "उपयोगकर्ता नाम के लिए केवल एक फ़ाइल नाम इस्तेमाल करें।"
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "केवल एक फ़ाइल नाम इस्तेमाल करें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr "ऑडिट सत्यापन के लिए कमिट इतिहास के प्राप्तकर्ता इस्तेमाल करें"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "फ़ाइल नाम इस्तेमाल करें"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "फ़ील्ड के लिए find और पैटर्न के लिए reg इस्तेमाल करें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "फ़ोल्डर का नाम इस्तेमाल करें"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "फ़ाइल नाम की खोज के साथ फ़ोल्डर इस्तेमाल करें"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "मौजूदा स्टोर में आयात करने के लिए pass import इस्तेमाल करें।"
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "अपने कस्टम pass कमांड के साथ pass import इस्तेमाल करें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "स्टोर, फ़ोल्डर और फ़ाइल नाम इस्तेमाल करें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices"
+msgstr "डेस्कटॉप और मोबाइल डिवाइस पर कीबोर्ड, माउस या टच के साथ स्क्रीन के हिसाब से ढलने वाला GTK इंटरफ़ेस इस्तेमाल करें"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "सही हार्डवेयर कुंजी इस्तेमाल करें।"
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "इसके बजाय उपयोगकर्ता नाम फ़ील्ड इस्तेमाल करें।"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr "इसका इस्तेमाल तभी होता है जब pass फ़ाइल में एन्क्रिप्ट किया गया उपयोगकर्ता नाम फ़ील्ड न हो।"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "उपयोगकर्ता नाम"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "इसके बजाय Integrated इस्तेमाल किया जा रहा है।"
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "उपयोगिताएँ और रखरखाव"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid "Valid host keys may appear unavailable here while private-key sync is off."
+msgstr "निजी-कुंजी सिंक बंद होने पर मान्य Host कुंजियाँ यहाँ अनुपलब्ध दिख सकती हैं।"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr "मान्य Host कुंजियाँ यहाँ अनुपलब्ध दिख सकती हैं।"
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "सत्यापन"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "सत्यापन का तरीका"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "सत्यापित"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "वर्णों में बहुत कम विविधता"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "क्षण भर रुकें।"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "कमज़ोर पासवर्ड"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid "When enabled, History can use recipients from earlier commits while verifying older encrypted entries."
+msgstr "चालू होने पर इतिहास पुरानी एन्क्रिप्ट की गई एंट्री सत्यापित करते समय पहले के कमिट के प्राप्तकर्ता इस्तेमाल कर सकता है।"
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Windows ShellExecute विफल रहा: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "काम चल रहा है"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "पासवर्ड स्टोर का Git कमिट ऑब्जेक्ट लिखें"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "पासवर्ड स्टोर का Git ट्री लिखें"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "अब नई निजी कुंजियाँ बनाई जा सकती हैं।"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "अब Git रिमोट प्रबंधित किए जा सकते हैं"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "अब pass फ़ाइलें नई विंडो में खोली जा सकती हैं"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr "अब खोज में फ़ील्ड मानों को वेरिएबल की तरह इस्तेमाल किया जा सकता है"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "_Keycord का परिचय"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "_आइटम जोड़ें"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "_आइटम खोजें"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "_कीबोर्ड शॉर्टकट"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "_प्राथमिकताएँ"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "_रिमोट से सिंक करें"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "_टूल"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "बैकएंड: Host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "बैकएंड: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "ब्रांच साफ़ करना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "GitHub क्लाइंट बनाना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "डाउनलोड क्लाइंट बनाना"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "स्टोर फ़िल्टर के पुराने मान साफ़ करना"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "सहेजने से पहले खाली फ़ील्ड हटाना"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "उपलब्ध निजी-कुंजी फ़िंगरप्रिंट इकट्ठा करना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "आंशिक अपडेट फ़ाइल बनाना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "अपडेट डाउनलोड डायरेक्टरी बनाना"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "क्रेडेंशियल ID"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "GitHub रिलीज़ प्रतिक्रिया डिकोड करना"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "पासवर्ड एंट्री हटाना"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "कोर डंप बंद करना: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "एक्सटेंशन पॉइंट बंद करना: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "प्रोसेस डंपेबिलिटी बंद करना: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "रिलीज़ एसेट डाउनलोड करना"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "खाली पासवर्ड फ़ाइल"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "ASLR नीति चालू करना: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "DEP चालू करना: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "सख़्त हैंडल जाँच चालू करना: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "अपडेट फ़ाइल को अंतिम रूप देना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "आंशिक अपडेट फ़ाइल फ़्लश करना"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "git कमांड"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "gpg --delete-secret-keys विफल रहा"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "gpg --export विफल रहा"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "gpg --export-secret-keys विफल रहा"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "gpg --import विफल रहा"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "gpg --list-secret-keys विफल रहा"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "हार्डवेयर कुंजी मेनिफ़ेस्ट"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke में {MAX_LIST_ITEMS} से अधिक पैरामीटर सेट हैं"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "hpke मोड {:?} के लिए सार्वजनिक JWK चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke में कम-से-कम एक पैरामीटर सेट होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "hpke.key के EC निर्देशांकों की लंबाई बराबर होनी चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key में {MAX_JWK_MEMBERS} से अधिक सदस्य हैं"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "hpke.key सदस्य"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key में स्ट्रिंग kty सदस्य होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key में स्ट्रिंग {member} सदस्य होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr "hpke.key में केवल सार्वजनिक कुंजी सामग्री होनी चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key खाली JWK नहीं होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key में असमर्थित कुंजी प्रकार {key_type:?} इस्तेमाल हुआ है"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve}, KEM {kem} से मेल नहीं खाता"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "KEM {kem} के लिए hpke.key.x की लंबाई गलत है"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "hpke.key.{member} खाली नहीं होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr "hpke.key.{member} में बिना पैडिंग वाला base64url इस्तेमाल होना चाहिए"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "उपलब्ध कीरिंग लोड हो रही है"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "डिस्प्ले मौजूद नहीं है"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "पासवर्ड एंट्री दूसरे स्टोर में ले जाना"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "नए आइटम का टेम्पलेट"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "pass विफल रहा"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "pass import --list विफल रहा"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "pass import विफल रहा"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "pass import उपलब्ध नहीं है।"
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "pass init विफल रहा"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "pass insert विफल रहा"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "pass mv विफल रहा"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "pass rm विफल रहा"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "पासवर्ड"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "पासवर्ड बनाना"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "पासवर्ड सूची का क्रम"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "प्राथमिकता फ़ाइल"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "निजी कुंजी"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "निजी-कुंजी सिंक"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "GitHub रिलीज़ प्रतिक्रिया पढ़ना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "अपडेट बाइट पढ़ना"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "रिमोट git कमांड"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "रिमोट work-tree git कमांड"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "पुरानी आंशिक अपडेट फ़ाइल हटाना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "पुरानी अपडेट फ़ाइल हटाना"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "स्टोर फ़िल्टर का चयन सहेजना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "GitHub रिलीज़ अनुरोध भेजना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "रिलीज़ एसेट अनुरोध भेजना"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "स्टोर साफ़ करना"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "स्टोर पाथ"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "ECC एल्गोरिदम की विशेषताएँ अपेक्षित नहीं हैं: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "हैंडल न किया गया कर्व: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "अज्ञात Windows त्रुटि"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "अज्ञात Windows हार्डनिंग त्रुटि"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "असमर्थित कुंजी प्रकार: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "उपयोगकर्ता हैंडल"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "उपयोगकर्ता नाम फ़ॉलबैक"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "work-tree git कमांड"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "अपडेट बाइट लिखना"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "{action} विफल रहा: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "{action} विफल रहा: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "{action} विफल रहा: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (अभी कोई कमिट नहीं)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr "{context}, TOML की समर्थित नेस्टिंग गहराई {} से अधिक है।"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr "{context}, TOML की समर्थित आकार सीमा {} बाइट से अधिक है।"
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "लोड किए गए कमिट: {count}"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "{count} मेल खाने वाला आइटम"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "{count} मेल खाने वाले आइटम"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "{count} प्राप्तकर्ता"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "कॉन्फ़िगर किए गए रिमोट: {count}।"
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "{count} अलग मान"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "{count} अलग मान"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "{field} में अमान्य खाली जगह या नियंत्रण वर्ण हैं"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "{field} में {MAX_LIST_ITEMS} से अधिक मान हैं"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "{field} की लंबाई {max_bytes} बाइट से अधिक है"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "{field} मान्य relying-party ID होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "{field} में कम-से-कम एक मान होना चाहिए"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "{field} खाली नहीं होना चाहिए"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} - हार्डवेयर कुंजी"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} - पासवर्ड से सुरक्षित"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} - सुरक्षा कुंजी से सुरक्षित"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} - सुरक्षा टोकन"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} - सुरक्षा टोकन ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "{remaining} सेकंड शेष"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"त्रुटि: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} में से {} ({percentage:.0}%)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
