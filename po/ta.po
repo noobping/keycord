@@ -1,0 +1,4904 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keycord 0.9.13\n"
+"PO-Revision-Date: 2026-09-02 00:00+0200\n"
+"Last-Translator: Nick\n"
+"Language-Team: Tamil\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: crates/keycord-stores/src/recipients.rs:193
+msgid "1 recipient"
+msgstr "1 பெறுநர்"
+
+#: crates/keycord-git/src/ui/store_page.rs:305
+msgid "1 remote configured."
+msgstr "1 remote அமைக்கப்பட்டுள்ளது."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:25
+msgid "A list of folders that contain your password data."
+msgstr "உங்கள் கடவுச்சொல் தரவு உள்ள கோப்புறைகளின் பட்டியல்."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:36
+msgid "A newer Linux standalone build is available."
+msgstr "புதிய Linux தனித்தியங்கும் build கிடைக்கிறது."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:17
+msgid "A newer Windows release is available."
+msgstr "புதிய Windows வெளியீடு கிடைக்கிறது."
+
+#: crates/keycord-keys/src/lib.rs:36
+msgid "A private key for this item is locked. Unlock it in Preferences."
+msgstr "இந்த உருப்படியின் தனிப்பட்ட விசை பூட்டப்பட்டுள்ளது. விருப்பங்களில் அதன் பூட்டைத் திறக்கவும்."
+
+#: crates/keycord-git/src/sync.rs:54
+msgid "Abort password store Git merge"
+msgstr "கடவுச்சொல் சேமிப்பக Git merge-ஐக் கைவிடு"
+
+#: crates/keycord-shell/data/shortcuts.ui:55
+msgid "About"
+msgstr "பற்றி"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:44
+msgid "Actions"
+msgstr "செயல்கள்"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:54
+#: crates/keycord-entries/data/window-pages.fragment.ui:414
+msgid "Add OTP field"
+msgstr "OTP புலத்தைச் சேர்"
+
+#: crates/keycord-git/src/ui/store_page.rs:614
+msgid "Add a Git remote for this store."
+msgstr "இந்தச் சேமிப்பகத்திற்கு Git remote ஒன்றைச் சேர்க்கவும்."
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "Add a folder."
+msgstr "ஒரு கோப்புறையைச் சேர்க்கவும்."
+
+#: crates/keycord-keys/src/error.rs:222
+msgid "Add a password to that key first."
+msgstr "முதலில் அந்த விசைக்குக் கடவுச்சொல் ஒன்றைச் சேர்க்கவும்."
+
+#: crates/keycord-entries/src/error.rs:39
+#: crates/keycord-entries/src/error.rs:78 crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-stores/src/error.rs:36
+msgid "Add a private key in Preferences."
+msgstr "விருப்பங்களில் தனிப்பட்ட விசை ஒன்றைச் சேர்க்கவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:323
+msgid "Add a remote to initialize a Git repository first."
+msgstr "Git களஞ்சியத்தைத் தொடக்கநிலைப்படுத்த முதலில் remote ஒன்றைச் சேர்க்கவும்."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:406
+msgid "Add a store folder first."
+msgstr "முதலில் சேமிப்பகக் கோப்புறை ஒன்றைச் சேர்க்கவும்."
+
+#: crates/keycord-stores/src/management.rs:108
+msgid "Add a store to use pass import."
+msgstr "pass import கருவியைப் பயன்படுத்த ஒரு சேமிப்பகத்தைச் சேர்க்கவும்."
+
+#: crates/keycord-git/src/ui/audit.rs:50
+msgid "Add a store with a Git repository to inspect history here."
+msgstr "இங்கே வரலாற்றைப் பார்க்க Git களஞ்சியம் உள்ள சேமிப்பகத்தைச் சேர்க்கவும்."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:186
+msgid "Add advanced search"
+msgstr "மேம்பட்ட தேடலைச் சேர்"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:176
+#: crates/keycord-entries/src/ui/list/placeholder.rs:37
+msgid "Add an item to get started."
+msgstr "தொடங்குவதற்கு ஓர் உருப்படியைச் சேர்க்கவும்."
+
+#: crates/keycord-entries/src/ui/list/row.rs:493
+msgid "Add another store first."
+msgstr "முதலில் மற்றொரு சேமிப்பகத்தைச் சேர்க்கவும்."
+
+#: crates/keycord-stores/src/recipient_page.rs:23
+msgid "Add at least one recipient to create this store."
+msgstr "இந்தச் சேமிப்பகத்தை உருவாக்கக் குறைந்தது ஒரு பெறுநரையாவது சேர்க்கவும்."
+
+#: crates/keycord-stores/src/recipient_page.rs:24
+msgid "Add at least one recipient to keep saving changes."
+msgstr "மாற்றங்களைத் தொடர்ந்து சேமிக்கக் குறைந்தது ஒரு பெறுநரையாவது சேர்க்கவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:326
+msgid "Add at least one remote before syncing."
+msgstr "ஒத்திசைப்பதற்கு முன் குறைந்தது ஒரு remote-ஐயாவது சேர்க்கவும்."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:157
+msgid "Add documentation"
+msgstr "ஆவணங்களைச் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:35
+msgid "Add existing stores, create new stores, import passwords on supported systems, or restore a store from Git with the Host backend"
+msgstr "ஏற்கெனவே உள்ள சேமிப்பகங்களைச் சேர்க்கலாம், புதியவற்றை உருவாக்கலாம், ஆதரிக்கப்படும் கணினிகளில் கடவுச்சொற்களை இறக்குமதி செய்யலாம் அல்லது Host பின்தளத்தின் மூலம் Git-இலிருந்து சேமிப்பகத்தை மீட்டெடுக்கலாம்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:144
+msgid "Add experimental FIDO2 support"
+msgstr "சோதனைநிலை FIDO2 ஆதரவைச் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:166
+msgid "Add experimental OpenPGP hardware key support for private keys"
+msgstr "தனிப்பட்ட விசைகளுக்கான சோதனைநிலை OpenPGP வன்பொருள் விசை ஆதரவைச் சேர்"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:48
+#: crates/keycord-entries/data/window-pages.fragment.ui:376
+msgid "Add field"
+msgstr "புலத்தைச் சேர்"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:48
+msgid "Add hardware key (Experimental)"
+msgstr "வன்பொருள் விசையைச் சேர் (சோதனைநிலை)"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:4
+#: crates/keycord-entries/src/ui/list/row.rs:247
+msgid "Add item"
+msgstr "உருப்படியைச் சேர்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:398
+msgid "Add missing fields"
+msgstr "விடுபட்ட புலங்களைச் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:187
+msgid "Add optional GPG synchronization"
+msgstr "விருப்பமான GPG ஒத்திசைவைச் சேர்"
+
+#: crates/keycord-stores/data/shortcuts-navigation-item.fragment.ui:3
+#: crates/keycord-stores/data/window-header-action.fragment.ui:4
+#: crates/keycord-stores/src/ui/management/mod.rs:219
+msgid "Add or create store"
+msgstr "சேமிப்பகத்தைச் சேர் அல்லது உருவாக்கு"
+
+#: crates/keycord-lifecycle/src/setup.rs:91
+msgid "Add or remove this build from the local app menu."
+msgstr "உள்ளூர் செயலிப் பட்டியில் இந்த build-ஐச் சேர்க்கவும் அல்லது அகற்றவும்."
+
+#: crates/keycord-entries/src/integrated.rs:545
+msgid "Add password for {label}"
+msgstr "{label} என்பதற்குக் கடவுச்சொல்லைச் சேர்"
+
+#: crates/keycord-git/src/remotes.rs:56
+msgid "Add password store Git remote"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote-ஐச் சேர்"
+
+#: crates/keycord-git/src/ui/store_page.rs:613
+#: crates/keycord-git/src/ui/store_page.rs:623
+msgid "Add remote"
+msgstr "remote-ஐச் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:158
+msgid "Add search provider"
+msgstr "தேடல் வழங்குநரைச் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:175
+msgid "Add the option to copy the logs"
+msgstr "பதிவுகளை நகலெடுக்கும் விருப்பத்தைச் சேர்"
+
+#: crates/keycord-passkey/src/ui.rs:154
+msgid "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving."
+msgstr "{rp_id} தளத்தில் {username} என்பவருக்கான கடவுச்சாவியை உங்கள் இயல்புநிலை pass சேமிப்பகத்தில் சேர்க்கவா? சேமிப்பதற்கு முன் அதைச் சரிபார்க்கலாம்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:49
+msgid "Add the public key already stored on the connected OpenPGP smartcard or YubiKey."
+msgstr "இணைக்கப்பட்ட OpenPGP smartcard அல்லது YubiKey-இல் ஏற்கெனவே உள்ள பொது விசையைச் சேர்க்கவும்."
+
+#: crates/keycord-lifecycle/src/setup.rs:72
+msgid "Add to app menu"
+msgstr "செயலிப் பட்டியில் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:185
+msgid "Add tools page"
+msgstr "கருவிகள் பக்கத்தைச் சேர்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:89
+msgid "Added CSV export for moving data to other tools."
+msgstr "தரவைப் பிற கருவிகளுக்கு நகர்த்துவதற்கான CSV ஏற்றுமதி சேர்க்கப்பட்டது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:113
+msgid "Added Git history inspection with commit verification details."
+msgstr "commit சரிபார்ப்பு விவரங்களுடன் Git வரலாற்றைப் பார்வையிடும் வசதி சேர்க்கப்பட்டது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:87
+msgid "Added QR code views for passwords, usernames, one-time codes, other entry fields, and permission commands."
+msgstr "கடவுச்சொற்கள், பயனர்பெயர்கள், ஒருமுறைக் குறியீடுகள், பிற பதிவுப் புலங்கள் மற்றும் அனுமதிக் கட்டளைகளுக்கான QR குறியீட்டுக் காட்சிகள் சேர்க்கப்பட்டன."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:88
+msgid "Added entry filtering by password store and remembered history-inspection filters."
+msgstr "கடவுச்சொல் சேமிப்பகத்தின்படி பதிவுகளை வடிகட்டும் வசதியும் நினைவில் வைக்கப்படும் வரலாற்றுப் பார்வை வடிப்பான்களும் சேர்க்கப்பட்டன."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:130
+msgid "Added experimental FIDO2 guides and progress indicators."
+msgstr "சோதனைநிலை FIDO2 வழிகாட்டிகளும் முன்னேற்றக் குறிகாட்டிகளும் சேர்க்கப்பட்டன."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:122
+msgid "Added experimental FIDO2-protected OpenPGP keys."
+msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள OpenPGP விசைகள் சேர்க்கப்பட்டன."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:110
+msgid "Added folder-specific recipient editing for .gpg-id files."
+msgstr ".gpg-id கோப்புகளில் ஒவ்வொரு கோப்புறைக்கும் தனித்தனியே பெறுநர்களைத் திருத்தும் வசதி சேர்க்கப்பட்டது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:97
+msgid "Added hybrid sorting mode"
+msgstr "கலப்பு வரிசைப்படுத்தல் முறை சேர்க்கப்பட்டது"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:500
+msgid "Added missing template fields."
+msgstr "விடுபட்ட வார்ப்புருப் புலங்கள் சேர்க்கப்பட்டன."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:118
+msgid "Adding hardware key"
+msgstr "வன்பொருள் விசை சேர்க்கப்படுகிறது"
+
+#: crates/keycord-fido/src/ui.rs:35
+msgid "Allow USB security key access (Experimental FIDO2)"
+msgstr "USB பாதுகாப்பு விசை அணுகலை அனுமதி (சோதனைநிலை FIDO2)"
+
+#: src/composition/host_access.rs:63
+msgid "Allow access to apps on this device"
+msgstr "இந்தச் சாதனத்தில் உள்ள செயலிகளுக்கு அணுகலை அனுமதி"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:27
+msgid "Allow smartcard access (Experimental)"
+msgstr "smartcard அணுகலை அனுமதி (சோதனைநிலை)"
+
+#: crates/keycord-entries/src/error.rs:77
+#: crates/keycord-entries/src/error.rs:90 crates/keycord-entries/src/undo.rs:54
+msgid "An item with that name already exists."
+msgstr "அந்தப் பெயரில் ஓர் உருப்படி ஏற்கெனவே உள்ளது."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
+msgid "Apply template"
+msgstr "வார்ப்புருவைப் பயன்படுத்து"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Apply the filter when creating new pass files."
+msgstr "புதிய pass கோப்புகளை உருவாக்கும்போது வடிப்பானைப் பயன்படுத்தவும்."
+
+#: crates/keycord-git/src/audit_disabled.rs:10
+#: crates/keycord-git/src/audit_disabled.rs:20
+msgid "Audit features are disabled in this build."
+msgstr "இந்த build-இல் தணிக்கை அம்சங்கள் முடக்கப்பட்டுள்ளன."
+
+#: crates/keycord-git/src/ui/audit.rs:402
+msgid "Audit stopped unexpectedly."
+msgstr "தணிக்கை எதிர்பாராமல் நின்றுவிட்டது."
+
+#: crates/keycord-git/src/ui/audit.rs:1241
+msgid "Author"
+msgstr "எழுதியவர்"
+
+#: crates/keycord-git/src/ui/audit.rs:1242
+msgid "Authored"
+msgstr "எழுதிய நேரம்"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:207
+msgid "Automatically remove blank username, field, and OTP lines when saving a pass file."
+msgstr "pass கோப்பைச் சேமிக்கும்போது காலியான பயனர்பெயர், புலம் மற்றும் OTP வரிகளைத் தானாக அகற்றவும்."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:919
+msgid "Available version:"
+msgstr "கிடைக்கும் பதிப்பு:"
+
+#: crates/keycord-shell/data/window.ui:15
+msgid "Back"
+msgstr "பின்"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:154
+msgid "Back to Preferences"
+msgstr "விருப்பங்களுக்குத் திரும்பு"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:26
+msgid "Back to Store keys"
+msgstr "சேமிப்பக விசைகளுக்குத் திரும்பு"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:54
+#: crates/keycord-preferences/data/window-page.fragment.ui:59
+msgid "Backend"
+msgstr "பின்தளம்"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:62
+msgid "Bind a public key file to the connected hardware key."
+msgstr "பொது விசைக் கோப்பை இணைக்கப்பட்ட வன்பொருள் விசையுடன் பிணைக்கவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:726
+msgid "Branch"
+msgstr "branch"
+
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:37
+msgid "Branches"
+msgstr "branch-கள்"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:839
+#: crates/keycord-lifecycle/data/keycord.desktop.in:5
+#: crates/keycord-lifecycle/data/metainfo.xml:6
+#: crates/keycord-lifecycle/src/desktop.rs:2
+#: crates/keycord-shell/data/window.ui:31 src/composition/navigation.rs:11
+msgid "Browse and edit password stores"
+msgstr "கடவுச்சொல் சேமிப்பகங்களைப் பார்த்துத் திருத்து"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:3
+#: crates/keycord-entries/src/ui/tools/mod.rs:39
+msgid "Browse field values"
+msgstr "புல மதிப்புகளைப் பார்வையிடு"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:4
+#: crates/keycord-entries/src/ui/tools/mod.rs:42
+msgid "Browse unique field values from the current list."
+msgstr "தற்போதைய பட்டியலில் உள்ள தனித்துவமான புல மதிப்புகளைப் பார்க்கவும்."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:53
+msgid "CSV files"
+msgstr "CSV கோப்புகள்"
+
+#: crates/keycord-passkey/src/request.rs:94
+msgid "CXP export request version {0} is not supported."
+msgstr "CXP ஏற்றுமதிக் கோரிக்கை பதிப்பு {0} ஆதரிக்கப்படவில்லை."
+
+#: crates/keycord-passkey/src/request.rs:96
+msgid "CXP response mode {0:?} is not supported for an opened request file."
+msgstr "திறந்த கோரிக்கைக் கோப்புக்கு CXP பதில் முறை {0:?} ஆதரிக்கப்படவில்லை."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:62
+msgid "Can't open this item."
+msgstr "இந்த உருப்படியைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/undo.rs:6
+msgid "Can't undo that change."
+msgstr "அந்த மாற்றத்தைச் செயல்தவிர்க்க முடியாது."
+
+#: crates/keycord-entries/src/ui/undo.rs:146
+#: crates/keycord-entries/src/undo.rs:52 crates/keycord-entries/src/undo.rs:79
+msgid "Can't undo the last change."
+msgstr "கடைசி மாற்றத்தைச் செயல்தவிர்க்க முடியாது."
+
+#: crates/keycord-entries/src/ui/list/row.rs:146
+#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/tools/export.rs:32
+#: crates/keycord-lifecycle/src/updater/common.rs:696
+#: crates/keycord-passkey/src/ui.rs:163
+#: crates/keycord-preferences/src/ui/settings.rs:290
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:137
+msgid "Change the default to use the filename as the username."
+msgstr "கோப்புப் பெயரைப் பயனர்பெயராகப் பயன்படுத்துமாறு இயல்புநிலையை மாற்றவும்."
+
+#: crates/keycord-git/src/ui/audit.rs:1303
+msgid "Changed paths"
+msgstr "மாற்றப்பட்ட பாதைகள்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:177
+msgid "Changed the app icon to a keycord"
+msgstr "செயலி சின்னம் சாவிக்கயிறு வடிவமாக மாற்றப்பட்டது"
+
+#: crates/keycord-lifecycle/data/window-menu-item.fragment.ui:2
+msgid "Check for _Updates"
+msgstr "புதுப்பிப்புகளைப் பார்க்கவும் (_U)"
+
+#: crates/keycord-git/src/sync.rs:137
+msgid "Check out a branch before syncing this store."
+msgstr "இந்தச் சேமிப்பகத்தை ஒத்திசைக்கும் முன் ஒரு branch-ஐ checkout செய்யவும்."
+
+#: crates/keycord-git/src/operations.rs:32
+#: crates/keycord-git/src/ui/store_page.rs:370
+msgid "Check out a branch before syncing."
+msgstr "ஒத்திசைக்கும் முன் ஒரு branch-ஐ checkout செய்யவும்."
+
+#: crates/keycord-git/src/integrated.rs:68
+msgid "Check staged password store Git changes"
+msgstr "stage செய்யப்பட்ட கடவுச்சொல் சேமிப்பக Git மாற்றங்களைச் சரிபார்"
+
+#: crates/keycord-git/src/ui/store_page.rs:737
+msgid "Check the logs for details."
+msgstr "விவரங்களுக்குப் பதிவுகளைப் பார்க்கவும்."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:40
+msgid "Checking for updates"
+msgstr "புதுப்பிப்புகள் பார்க்கப்படுகின்றன"
+
+#: crates/keycord-stores/src/management.rs:112
+msgid "Checking pass import availability."
+msgstr "pass import கிடைக்கிறதா எனப் பார்க்கப்படுகிறது."
+
+#: crates/keycord-passkey/src/credential.rs:238
+msgid "Choose a JSON object containing exactly one passkey credential."
+msgstr "ஒரே ஒரு கடவுச்சாவி நற்சான்று உள்ள JSON பொருளைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-passkey/src/credential.rs:237
+msgid "Choose a JSON object containing one passkey credential."
+msgstr "ஒரு கடவுச்சாவி நற்சான்று உள்ள JSON பொருளைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:33
+#: crates/keycord-stores/src/management.rs:122
+msgid "Choose a file or folder if the importer needs one."
+msgstr "இறக்குமதிக் கருவிக்குத் தேவைப்பட்டால் கோப்பு அல்லது கோப்புறையைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-stores/src/ui/management/clone.rs:163
+msgid "Choose a folder and restore it from a Git repository."
+msgstr "ஒரு கோப்புறையைத் தேர்ந்தெடுத்து அதை Git களஞ்சியத்திலிருந்து மீட்டெடுக்கவும்."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:220
+msgid "Choose a folder. If it is empty, it becomes a store."
+msgstr "ஒரு கோப்புறையைத் தேர்ந்தெடுக்கவும். அது காலியாக இருந்தால் சேமிப்பகமாக மாறும்."
+
+#: crates/keycord-shell/src/file_picker.rs:30
+msgid "Choose a local file."
+msgstr "உள்ளூர் கோப்பைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-shell/src/file_picker.rs:31
+msgid "Choose a local folder."
+msgstr "உள்ளூர் கோப்புறையைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
+msgid "Choose a private key file or experimental FIDO2-protected private key file."
+msgstr "தனிப்பட்ட விசைக் கோப்பு அல்லது சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைக் கோப்பைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-stores/src/ui/management/import.rs:349
+msgid "Choose a store."
+msgstr "சேமிப்பகத்தைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-stores/src/ui/management/import.rs:360
+msgid "Choose an importer."
+msgstr "இறக்குமதிக் கருவியைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:55
+msgid "Choose how Keycord opens your data. Integrated is the default. Use Host to run your own command."
+msgstr "Keycord உங்கள் தரவை எவ்வாறு திறக்க வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும். Integrated இயல்புநிலை. உங்கள் சொந்தக் கட்டளையை இயக்க Host-ஐப் பயன்படுத்தவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:135
+msgid "Choose how pass files are ordered on the home page."
+msgstr "முகப்புப் பக்கத்தில் pass கோப்புகள் எவ்வாறு வரிசைப்படுத்தப்பட வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-stores/src/ui/management/import.rs:299
+msgid "Choose import source file"
+msgstr "இறக்குமதி மூலக் கோப்பைத் தேர்ந்தெடு"
+
+#: crates/keycord-stores/src/ui/management/import.rs:317
+msgid "Choose import source folder"
+msgstr "இறக்குமதி மூலக் கோப்புறையைத் தேர்ந்தெடு"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:38
+msgid "Choose source file"
+msgstr "மூலக் கோப்பைத் தேர்ந்தெடு"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:48
+msgid "Choose source folder"
+msgstr "மூலக் கோப்புறையைத் தேர்ந்தெடு"
+
+#: crates/keycord-stores/src/ui/management/mod.rs:251
+msgid "Choose store folder"
+msgstr "சேமிப்பகக் கோப்புறையைத் தேர்ந்தெடு"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:110
+msgid "Choose store folder to restore"
+msgstr "மீட்டெடுக்க வேண்டிய சேமிப்பகக் கோப்புறையைத் தேர்ந்தெடு"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:175
+msgid "Choose which folder-specific .gpg-id file to manage."
+msgstr "எந்தக் கோப்புறைக்குரிய .gpg-id கோப்பை நிர்வகிக்க வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:66
+msgid "Clean pass file"
+msgstr "pass கோப்பைச் சீராக்கு"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:206
+msgid "Clear empty fields before save"
+msgstr "சேமிப்பதற்கு முன் காலிப் புலங்களை அகற்று"
+
+#: crates/keycord-entries/src/ui/list/row.rs:257
+msgid "Clear search"
+msgstr "தேடலை அழி"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:58
+msgid "Clear source path"
+msgstr "மூலப் பாதையை அழி"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:297
+msgid "Clipboard does not contain a key."
+msgstr "இடைநிலைப் பலகையில் விசை எதுவும் இல்லை."
+
+#: crates/keycord-shell/src/clipboard.rs:16 src/composition/stores_ui.rs:94
+msgid "Clipboard unavailable."
+msgstr "இடைநிலைப் பலகை கிடைக்கவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:275
+#: crates/keycord-passkey/src/ui.rs:141 crates/keycord-passkey/src/ui.rs:192
+msgid "Close"
+msgstr "மூடு"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:46
+msgid "Close Keycord to install the update?"
+msgstr "புதுப்பிப்பை நிறுவ Keycord-ஐ மூடவா?"
+
+#: crates/keycord-runtime/src/command.rs:313
+msgid "Command input writer panicked."
+msgstr "கட்டளை உள்ளீட்டு எழுத்துச் செயல்முறை எதிர்பாராமல் செயலிழந்தது."
+
+#: crates/keycord-git/src/ui/audit.rs:1240
+msgid "Commit"
+msgstr "commit"
+
+#: crates/keycord-git/src/ui/audit.rs:918
+msgid "Commit loading stopped unexpectedly."
+msgstr "commit-களை ஏற்றுவது எதிர்பாராமல் நின்றுவிட்டது."
+
+#: crates/keycord-git/src/sync.rs:29
+msgid "Commit or discard local changes before syncing this store."
+msgstr "இந்தச் சேமிப்பகத்தை ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும்."
+
+#: crates/keycord-git/src/sync.rs:12
+msgid "Commit or discard local changes before syncing this store. Local and remote commits are also waiting to sync."
+msgstr "இந்தச் சேமிப்பகத்தை ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும். உள்ளூர் மற்றும் remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/sync.rs:18
+msgid "Commit or discard local changes before syncing this store. Local commits are also waiting to sync."
+msgstr "இந்தச் சேமிப்பகத்தை ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும். உள்ளூர் commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/sync.rs:24
+msgid "Commit or discard local changes before syncing this store. Remote commits are also waiting to sync."
+msgstr "இந்தச் சேமிப்பகத்தை ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும். remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:344
+msgid "Commit or discard local changes before syncing."
+msgstr "ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:330
+msgid "Commit or discard local changes before syncing. Local and remote commits are also waiting to sync."
+msgstr "ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும். உள்ளூர் மற்றும் remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:335
+msgid "Commit or discard local changes before syncing. Local commits are also waiting to sync."
+msgstr "ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும். உள்ளூர் commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:340
+msgid "Commit or discard local changes before syncing. Remote commits are also waiting to sync."
+msgstr "ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்யவும் அல்லது கைவிடவும். remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/audit.rs:1244
+msgid "Committed"
+msgstr "commit செய்த நேரம்"
+
+#: crates/keycord-git/src/ui/audit.rs:1243
+msgid "Committer"
+msgstr "commit செய்தவர்"
+
+#: crates/keycord-fido/src/ui.rs:414
+msgid "Confirm new security key PIN"
+msgstr "புதிய பாதுகாப்பு விசை PIN-ஐ உறுதிப்படுத்தவும்"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
+msgid "Confirm password"
+msgstr "கடவுச்சொல்லை உறுதிப்படுத்தவும்"
+
+#: crates/keycord-fido/src/ui.rs:304
+msgid "Confirm the new security key PIN."
+msgstr "புதிய பாதுகாப்பு விசை PIN-ஐ உறுதிப்படுத்தவும்."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:143
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:69
+msgid "Connect a hardware key first."
+msgstr "முதலில் வன்பொருள் விசையை இணைக்கவும்."
+
+#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
+msgid "Connect only one FIDO2 security key before continuing."
+msgstr "தொடர்வதற்கு முன் ஒரே ஒரு FIDO2 பாதுகாப்பு விசையை மட்டும் இணைக்கவும்."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:75
+msgid "Connect only one hardware key before adding it."
+msgstr "வன்பொருள் விசையைச் சேர்ப்பதற்கு முன் ஒரே ஒரு விசையை மட்டும் இணைக்கவும்."
+
+#: crates/keycord-keys/src/error.rs:201
+msgid "Connect the FIDO2 security key and try again."
+msgstr "FIDO2 பாதுகாப்பு விசையை இணைத்துவிட்டு மீண்டும் முயலவும்."
+
+#: crates/keycord-keys/src/error.rs:240
+msgid "Connect the FIDO2 security key first."
+msgstr "முதலில் FIDO2 பாதுகாப்பு விசையை இணைக்கவும்."
+
+#: crates/keycord-keys/src/error.rs:188
+msgid "Connect the hardware key and try again."
+msgstr "வன்பொருள் விசையை இணைத்துவிட்டு மீண்டும் முயலவும்."
+
+#: crates/keycord-keys/src/error.rs:225
+msgid "Connect the hardware key first."
+msgstr "முதலில் வன்பொருள் விசையை இணைக்கவும்."
+
+#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
+#: crates/keycord-keys/src/error.rs:16
+msgid "Connect the matching FIDO2 security key."
+msgstr "பொருந்தும் FIDO2 பாதுகாப்பு விசையை இணைக்கவும்."
+
+#: crates/keycord-keys/src/store/storage.rs:835
+msgid "Connect the matching hardware key before importing it."
+msgstr "பொருந்தும் வன்பொருள் விசையை இறக்குமதி செய்வதற்கு முன் இணைக்கவும்."
+
+#: crates/keycord-fido/src/capabilities.rs:36
+msgid "Context"
+msgstr "சூழல்"
+
+#: crates/keycord-entries/src/clipboard.rs:137
+#: crates/keycord-entries/src/ui/page/mod.rs:782
+#: crates/keycord-entries/src/ui/page/mod.rs:792
+#: crates/keycord-entries/src/ui/page/mod.rs:802
+#: crates/keycord-shell/src/optional_permission.rs:147
+#: src/window/tool_hub/menu.rs:66
+msgid "Copied."
+msgstr "நகலெடுக்கப்பட்டது."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:36
+#: crates/keycord-entries/data/window-pages.fragment.ui:348
+msgid "Copy OTP"
+msgstr "OTP-ஐ நகலெடு"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:20
+msgid "Copy armored private key"
+msgstr "கவசமிட்ட தனிப்பட்ட விசையை நகலெடு"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:21
+msgid "Copy armored public key"
+msgstr "கவசமிட்ட பொது விசையை நகலெடு"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:24
+msgid "Copy experimental FIDO2-protected private key"
+msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசையை நகலெடு"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
+msgid "Copy fingerprint"
+msgstr "கைரேகையை நகலெடு"
+
+#: crates/keycord-shell/data/window.ui:113
+#: crates/keycord-shell/data/window.ui:119
+msgid "Copy logs"
+msgstr "பதிவுகளை நகலெடு"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
+#: crates/keycord-entries/data/window-pages.fragment.ui:129
+#: crates/keycord-entries/src/ui/list/row.rs:130
+msgid "Copy password"
+msgstr "கடவுச்சொல்லை நகலெடு"
+
+#: src/composition/entries_ui.rs:113
+msgid "Copy password to clipboard"
+msgstr "கடவுச்சொல்லை இடைநிலைப் பலகைக்கு நகலெடு"
+
+#: crates/keycord-shell/src/optional_permission.rs:138
+msgid "Copy permission command"
+msgstr "அனுமதிக் கட்டளையை நகலெடு"
+
+#: crates/keycord-shell/data/window.ui:114
+msgid "Copy recent app and command output to the clipboard."
+msgstr "அண்மைய செயலி மற்றும் கட்டளை வெளியீட்டை இடைநிலைப் பலகைக்கு நகலெடுக்கவும்."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:95
+msgid "Copy selected item's password"
+msgstr "தேர்ந்தெடுத்த உருப்படியின் கடவுச்சொல்லை நகலெடு"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:30
+#: crates/keycord-entries/data/window-pages.fragment.ui:312
+msgid "Copy username"
+msgstr "பயனர்பெயரை நகலெடு"
+
+#: crates/keycord-shell/src/clipboard.rs:83
+msgid "Copy value"
+msgstr "மதிப்பை நகலெடு"
+
+#: crates/keycord-keys/src/store/paths.rs:15
+#: crates/keycord-keys/src/store/paths.rs:22
+#: crates/keycord-keys/src/store/paths.rs:9
+msgid "Could not determine the data folder."
+msgstr "தரவுக் கோப்புறையைக் கண்டறிய முடியவில்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:421
+msgid "Could not determine the home folder."
+msgstr "முகப்புக் கோப்புறையைக் கண்டறிய முடியவில்லை."
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:89
+#: crates/keycord-stores/src/ui/management/clone.rs:221
+#: crates/keycord-stores/src/ui/management/mod.rs:274
+msgid "Couldn't add that folder."
+msgstr "அந்தக் கோப்புறையைச் சேர்க்க முடியவில்லை."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:131
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:175
+msgid "Couldn't add the hardware key."
+msgstr "வன்பொருள் விசையைச் சேர்க்க முடியவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:355
+msgid "Couldn't certify the generated hardware key"
+msgstr "உருவாக்கப்பட்ட வன்பொருள் விசைக்குச் சான்றளிக்க முடியவில்லை"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:44
+msgid "Couldn't check for updates."
+msgstr "புதுப்பிப்புகளைப் பார்க்க முடியவில்லை."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:661
+msgid "Couldn't copy that key."
+msgstr "அந்த விசையை நகலெடுக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/clipboard.rs:148
+#: crates/keycord-entries/src/clipboard.rs:153
+msgid "Couldn't copy the password."
+msgstr "கடவுச்சொல்லை நகலெடுக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:167
+msgid "Couldn't create the public key certificate on the hardware key."
+msgstr "வன்பொருள் விசையில் பொது விசைச் சான்றிதழை உருவாக்க முடியவில்லை."
+
+#: crates/keycord-stores/src/recipient_page.rs:30
+msgid "Couldn't create the store."
+msgstr "சேமிப்பகத்தை உருவாக்க முடியவில்லை."
+
+#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
+msgid "Couldn't decrypt the FIDO2-encrypted data."
+msgstr "FIDO2 மூலம் மறையாக்கப்பட்ட தரவை மறைவிலக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/error.rs:106
+#: crates/keycord-entries/src/ui/list/row.rs:607
+msgid "Couldn't delete the item."
+msgstr "உருப்படியை நீக்க முடியவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:45
+msgid "Couldn't download the update."
+msgstr "புதுப்பிப்பைப் பதிவிறக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:110
+#: crates/keycord-entries/src/ui/tools/export.rs:90
+msgid "Couldn't export passwords."
+msgstr "கடவுச்சொற்களை ஏற்றுமதி செய்ய முடியவில்லை."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:182
+msgid "Couldn't find key with matching fingerprint"
+msgstr "பொருந்தும் கைரேகை கொண்ட விசையைக் கண்டுபிடிக்க முடியவில்லை"
+
+#: crates/keycord-keys/src/hardware/linux.rs:303
+msgid "Couldn't generate the hardware decryption key"
+msgstr "வன்பொருள் மறைவிலக்க விசையை உருவாக்க முடியவில்லை"
+
+#: crates/keycord-keys/src/hardware/linux.rs:298
+msgid "Couldn't generate the hardware signing key"
+msgstr "வன்பொருள் கையொப்ப விசையை உருவாக்க முடியவில்லை"
+
+#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
+#: crates/keycord-keys/src/ui/key_management/private.rs:116
+#: crates/keycord-keys/src/ui/key_management/private.rs:82
+msgid "Couldn't generate the key."
+msgstr "விசையை உருவாக்க முடியவில்லை."
+
+#: crates/keycord-shell/src/optional_permission.rs:14
+msgid "Couldn't grant permission."
+msgstr "அனுமதி வழங்க முடியவில்லை."
+
+#: crates/keycord-passkey/src/ui.rs:189
+msgid "Couldn't import passkey"
+msgstr "கடவுச்சாவியை இறக்குமதி செய்ய முடியவில்லை"
+
+#: crates/keycord-stores/src/ui/management/import.rs:399
+#: crates/keycord-stores/src/ui/management/import.rs:425
+msgid "Couldn't import passwords."
+msgstr "கடவுச்சொற்களை இறக்குமதி செய்ய முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:598
+#: crates/keycord-entries/src/ui/page/mod.rs:616
+#: crates/keycord-entries/src/ui/page/mod.rs:626
+#: crates/keycord-keys/src/error.rs:263 crates/keycord-keys/src/error.rs:265
+#: crates/keycord-keys/src/ui/key_management/private.rs:240
+msgid "Couldn't import the key."
+msgstr "விசையை இறக்குமதி செய்ய முடியவில்லை."
+
+#: crates/keycord-fido/src/native.rs:236
+msgid "Couldn't initialize the FIDO2 security key."
+msgstr "FIDO2 பாதுகாப்பு விசையைத் தொடக்கநிலைப்படுத்த முடியவில்லை."
+
+#: crates/keycord-git/src/ui/store_page.rs:391
+#: crates/keycord-git/src/ui/store_page.rs:667
+msgid "Couldn't inspect Git remotes."
+msgstr "Git remote-களை ஆய்வு செய்ய முடியவில்லை."
+
+#: crates/keycord-git/src/ui/store_page.rs:736
+msgid "Couldn't inspect Git state"
+msgstr "Git நிலையை ஆய்வு செய்ய முடியவில்லை"
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:6
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:202
+msgid "Couldn't inspect host GPG keys"
+msgstr "host GPG விசைகளை ஆய்வு செய்ய முடியவில்லை"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:84
+msgid "Couldn't inspect the hardware key."
+msgstr "வன்பொருள் விசையை ஆய்வு செய்ய முடியவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:274
+msgid "Couldn't install the update."
+msgstr "புதுப்பிப்பை நிறுவ முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:548
+#: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
+msgid "Couldn't keep private keys synced. Sync was turned off."
+msgstr "தனிப்பட்ட விசைகளை ஒத்திசைந்த நிலையில் வைத்திருக்க முடியவில்லை. ஒத்திசைவு முடக்கப்பட்டது."
+
+#: crates/keycord-git/src/ui/audit.rs:901
+msgid "Couldn't load commits."
+msgstr "commit-களை ஏற்ற முடியவில்லை."
+
+#: crates/keycord-git/src/ui/audit.rs:51
+msgid "Couldn't load data"
+msgstr "தரவை ஏற்ற முடியவில்லை"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:811
+msgid "Couldn't load private keys"
+msgstr "தனிப்பட்ட விசைகளை ஏற்ற முடியவில்லை"
+
+#: crates/keycord-entries/src/otp/mod.rs:259
+msgid "Couldn't load the code."
+msgstr "குறியீட்டை ஏற்ற முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/list/row.rs:575
+msgid "Couldn't move the item."
+msgstr "உருப்படியை நகர்த்த முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/list/row.rs:781
+#: crates/keycord-entries/src/ui/list/row.rs:790
+#: crates/keycord-entries/src/ui/list/row.rs:799
+msgid "Couldn't open a new window."
+msgstr "புதிய சாளரத்தைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-passkey/src/ui.rs:131
+msgid "Couldn't open passkey request"
+msgstr "கடவுச்சாவிக் கோரிக்கையைத் திறக்க முடியவில்லை"
+
+#: crates/keycord-entries/src/ui/actions.rs:85
+msgid "Couldn't open that item."
+msgstr "அந்த உருப்படியைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-shell/src/file_picker.rs:22
+#: crates/keycord-shell/src/file_picker.rs:254
+#: crates/keycord-shell/src/file_picker.rs:274
+msgid "Couldn't open the file chooser."
+msgstr "கோப்புத் தேர்வியைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-shell/src/file_picker.rs:23
+msgid "Couldn't open the folder chooser."
+msgstr "கோப்புறைத் தேர்வியைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/list/row.rs:769
+msgid "Couldn't open the folder."
+msgstr "கோப்புறையைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-stores/src/ui/management/import.rs:271
+msgid "Couldn't open the import page."
+msgstr "இறக்குமதிப் பக்கத்தைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/file/url.rs:48
+msgid "Couldn't open the link."
+msgstr "இணைப்பைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/tools/unlock.rs:65
+msgid "Couldn't prepare tool access."
+msgstr "கருவி அணுகலைத் தயார் செய்ய முடியவில்லை."
+
+#: crates/keycord-git/src/ui/signing.rs:243
+msgid "Couldn't present the Git signing unlock dialog. Continuing without a signature."
+msgstr "Git கையொப்ப விசையின் பூட்டைத் திறக்கும் உரையாடலைக் காட்ட முடியவில்லை. கையொப்பமின்றித் தொடர்கிறது."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:192
+#: crates/keycord-keys/src/ui/key_management/private.rs:280
+msgid "Couldn't read that file."
+msgstr "அந்தக் கோப்பைப் படிக்க முடியவில்லை."
+
+#: crates/keycord-stores/src/ui/management/mod.rs:261
+msgid "Couldn't read that folder."
+msgstr "அந்தக் கோப்புறையைப் படிக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/error.rs:272
+msgid "Couldn't read that key."
+msgstr "அந்த விசையைப் படிக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:302
+msgid "Couldn't read the clipboard."
+msgstr "இடைநிலைப் பலகையைப் படிக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:674
+msgid "Couldn't remove that key."
+msgstr "அந்த விசையை அகற்ற முடியவில்லை."
+
+#: crates/keycord-git/src/ui/store_page.rs:543
+msgid "Couldn't remove that remote."
+msgstr "அந்த remote-ஐ அகற்ற முடியவில்லை."
+
+#: crates/keycord-entries/src/error.rs:95
+msgid "Couldn't rename the item."
+msgstr "உருப்படியின் பெயரை மாற்ற முடியவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:293
+msgid "Couldn't reopen the hardware key admin session"
+msgstr "வன்பொருள் விசை நிர்வாக அமர்வை மீண்டும் திறக்க முடியவில்லை"
+
+#: crates/keycord-git/src/operations.rs:59
+#: crates/keycord-git/src/operations.rs:62
+msgid "Couldn't restore the store."
+msgstr "சேமிப்பகத்தை மீட்டெடுக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/error.rs:82
+#: crates/keycord-entries/src/error.rs:84
+msgid "Couldn't save changes."
+msgstr "மாற்றங்களைச் சேமிக்க முடியவில்லை."
+
+#: crates/keycord-stores/src/recipient_page.rs:31
+msgid "Couldn't save store keys."
+msgstr "சேமிப்பக விசைகளைச் சேமிக்க முடியவில்லை."
+
+#: crates/keycord-git/src/ui/remote.rs:220
+msgid "Couldn't save that remote."
+msgstr "அந்த remote-ஐச் சேமிக்க முடியவில்லை."
+
+#: crates/keycord-preferences/src/ui/settings.rs:468
+msgid "Couldn't save that setting."
+msgstr "அந்த அமைப்பைச் சேமிக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:111
+#: crates/keycord-git/src/ui/audit.rs:629
+msgid "Couldn't save the filter selection."
+msgstr "வடிப்பான் தேர்வைச் சேமிக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:362
+msgid "Couldn't serialize the generated hardware public key"
+msgstr "உருவாக்கப்பட்ட வன்பொருள் பொது விசையைத் தொடராக்க முடியவில்லை"
+
+#: crates/keycord-keys/src/hardware/linux.rs:279
+msgid "Couldn't set the hardware key cardholder name"
+msgstr "வன்பொருள் விசையின் அட்டைதாரர் பெயரை அமைக்க முடியவில்லை"
+
+#: crates/keycord-keys/src/hardware/linux.rs:283
+msgid "Couldn't set the hardware key user PIN"
+msgstr "வன்பொருள் விசையின் பயனர் PIN-ஐ அமைக்க முடியவில்லை"
+
+#: crates/keycord-entries/src/clipboard.rs:243
+#: crates/keycord-entries/src/clipboard.rs:250
+msgid "Couldn't show the password as a QR code."
+msgstr "கடவுச்சொல்லை QR குறியீடாகக் காட்ட முடியவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:44
+#: crates/keycord-lifecycle/src/updater/windows.rs:25
+msgid "Couldn't start the installer."
+msgstr "நிறுவியைத் தொடங்க முடியவில்லை."
+
+#: crates/keycord-preferences/src/ui/settings.rs:380
+msgid "Couldn't sync private keys."
+msgstr "தனிப்பட்ட விசைகளை ஒத்திசைக்க முடியவில்லை."
+
+#: crates/keycord-git/src/ui/store_page.rs:706
+msgid "Couldn't sync store."
+msgstr "சேமிப்பகத்தை ஒத்திசைக்க முடியவில்லை."
+
+#: crates/keycord-git/src/operations.rs:35
+msgid "Couldn't sync stores."
+msgstr "சேமிப்பகங்களை ஒத்திசைக்க முடியவில்லை."
+
+#: crates/keycord-git/src/ui/signing.rs:206
+msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
+msgstr "Git கையொப்பத்திற்கான {fingerprint_for_failure} தனிப்பட்ட விசையின் பூட்டைத் திறக்க முடியவில்லை. கையொப்பமின்றித் தொடர்கிறது."
+
+#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
+msgid "Couldn't unlock the FIDO2 security key."
+msgstr "FIDO2 பாதுகாப்பு விசையின் பூட்டைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
+#: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
+msgid "Couldn't unlock the hardware key."
+msgstr "வன்பொருள் விசையின் பூட்டைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/error.rs:215 crates/keycord-keys/src/error.rs:255
+#: crates/keycord-keys/src/ui/unlock.rs:33
+msgid "Couldn't unlock the key."
+msgstr "விசையின் பூட்டைத் திறக்க முடியவில்லை."
+
+#: crates/keycord-lifecycle/src/setup.rs:104
+msgid "Couldn't update the app menu."
+msgstr "செயலிப் பட்டியைப் புதுப்பிக்க முடியவில்லை."
+
+#: crates/keycord-entries/src/otp/mod.rs:145
+msgid "Couldn't update the code."
+msgstr "குறியீட்டைப் புதுப்பிக்க முடியவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:274
+msgid "Couldn't verify the hardware key admin PIN"
+msgstr "வன்பொருள் விசையின் நிர்வாக PIN-ஐச் சரிபார்க்க முடியவில்லை"
+
+#: crates/keycord-keys/src/hardware/linux.rs:358
+msgid "Couldn't verify the requested hardware key PIN"
+msgstr "கோரப்பட்ட வன்பொருள் விசை PIN-ஐச் சரிபார்க்க முடியவில்லை"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
+msgid "Create a new FIDO2-protected key."
+msgstr "புதிய FIDO2 பாதுகாப்புள்ள விசையை உருவாக்கவும்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
+msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "இணைக்கப்பட்ட காலியான smartcard அல்லது YubiKey-இல் புதிய OpenPGP விசையை உருவாக்கவும்."
+
+#: crates/keycord-entries/src/ui/new_item.rs:75
+msgid "Create a new pass file."
+msgstr "புதிய pass கோப்பை உருவாக்கவும்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:15
+msgid "Create a new password-protected key."
+msgstr "புதிய கடவுச்சொல் பாதுகாப்புள்ள விசையை உருவாக்கவும்."
+
+#: crates/keycord-keys/src/ui/widgets.rs:125
+msgid "Create a password-protected private key for password stores."
+msgstr "கடவுச்சொல் சேமிப்பகங்களுக்குக் கடவுச்சொல் பாதுகாப்புள்ள தனிப்பட்ட விசையை உருவாக்கவும்."
+
+#: crates/keycord-keys/src/ui/widgets.rs:133
+msgid "Create an OpenPGP key on a blank connected smartcard or YubiKey."
+msgstr "இணைக்கப்பட்ட காலியான smartcard அல்லது YubiKey-இல் OpenPGP விசையை உருவாக்கவும்."
+
+#: crates/keycord-git/src/audit_types.rs:95
+msgid "Cryptographically invalid signature"
+msgstr "மறையியலின்படி செல்லாத கையொப்பம்"
+
+#: crates/keycord-git/src/ui/audit.rs:1104
+msgid "Current branch-tip recipients"
+msgstr "தற்போதைய branch முனை பெறுநர்கள்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:917
+msgid "Current version:"
+msgstr "தற்போதைய பதிப்பு:"
+
+#: crates/keycord-stores/src/recipient_page.rs:175
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: crates/keycord-entries/src/ui/list/row.rs:68
+msgid "Delete"
+msgstr "நீக்கு"
+
+#: crates/keycord-keys/src/host_gpg.rs:161
+msgid "Delete host GPG private key"
+msgstr "host GPG தனிப்பட்ட விசையை நீக்கு"
+
+#: crates/keycord-entries/src/host.rs:371
+msgid "Delete password entry"
+msgstr "கடவுச்சொல் பதிவை நீக்கு"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:113
+msgid "Delete selected pass file"
+msgstr "தேர்ந்தெடுத்த pass கோப்பை நீக்கு"
+
+#: crates/keycord-git/src/ui/store_page.rs:288
+msgid "Detached HEAD"
+msgstr "detached HEAD"
+
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Details"
+msgstr "விவரங்கள்"
+
+#: crates/keycord-git/src/ui/signing.rs:278
+msgid "Dismissed the Git signing unlock prompt for {context_for_close}. Continuing without a signature."
+msgstr "{context_for_close} என்பதற்கான Git கையொப்ப விசைப் பூட்டுத் திறப்புச் சாளரம் மூடப்பட்டது. கையொப்பமின்றித் தொடர்கிறது."
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:3
+#: crates/keycord-docs/data/window-pages.fragment.ui:44
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:3
+#: crates/keycord-docs/src/lib.rs:14
+msgid "Documentation"
+msgstr "ஆவணங்கள்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1169
+msgid "Downloaded"
+msgstr "பதிவிறக்கப்பட்டது"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:62
+msgid "Edit a password entry"
+msgstr "கடவுச்சொல் பதிவைத் திருத்து"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:34
+msgid "Edit entries with form fields or raw pass-file text, generate passwords, copy field values, and show passwords, usernames, one-time codes, or other fields as QR codes"
+msgstr "படிவப் புலங்களிலோ மூல pass கோப்பு உரையிலோ பதிவுகளைத் திருத்தலாம், கடவுச்சொற்களை உருவாக்கலாம், புல மதிப்புகளை நகலெடுக்கலாம், கடவுச்சொற்கள், பயனர்பெயர்கள், ஒருமுறைக் குறியீடுகள் அல்லது பிற புலங்களை QR குறியீடுகளாகக் காட்டலாம்"
+
+#: crates/keycord-git/src/ui/store_page.rs:482
+#: crates/keycord-git/src/ui/store_page.rs:502
+msgid "Edit remote"
+msgstr "remote-ஐத் திருத்து"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:25
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:93
+msgid "Email"
+msgstr "மின்னஞ்சல்"
+
+#: crates/keycord-entries/src/validation.rs:15
+msgid "Email fields must use a valid email address."
+msgstr "மின்னஞ்சல் புலங்களில் செல்லுபடியான மின்னஞ்சல் முகவரியைப் பயன்படுத்த வேண்டும்."
+
+#: crates/keycord-git/src/ui/audit.rs:1150
+msgid "Empty"
+msgstr "காலி"
+
+#: crates/keycord-git/src/ui/audit.rs:1280
+msgid "Enabled for this result"
+msgstr "இந்த முடிவுக்கு இயக்கப்பட்டுள்ளது"
+
+#: crates/keycord-preferences/src/ui/settings.rs:177
+msgid "Enter a command."
+msgstr "கட்டளையை உள்ளிடவும்."
+
+#: crates/keycord-entries/src/file/types.rs:37
+msgid "Enter a field name."
+msgstr "புலப் பெயரை உள்ளிடவும்."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:55
+msgid "Enter a key password."
+msgstr "விசைக் கடவுச்சொல்லை உள்ளிடவும்."
+
+#: crates/keycord-keys/src/store/storage.rs:930
+msgid "Enter a name for the hardware key."
+msgstr "வன்பொருள் விசைக்கான பெயரை உள்ளிடவும்."
+
+#: crates/keycord-keys/src/store/storage.rs:1024
+msgid "Enter a name for the private key."
+msgstr "தனிப்பட்ட விசைக்கான பெயரை உள்ளிடவும்."
+
+#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/page/mod.rs:401
+#: crates/keycord-keys/src/ui/key_management/form.rs:17
+msgid "Enter a name."
+msgstr "பெயரை உள்ளிடவும்."
+
+#: crates/keycord-passkey/src/credential.rs:335
+msgid "Enter a passkey username."
+msgstr "கடவுச்சாவிப் பயனர்பெயரை உள்ளிடவும்."
+
+#: crates/keycord-git/src/ui/remote.rs:67
+msgid "Enter a remote URL."
+msgstr "remote URL-ஐ உள்ளிடவும்."
+
+#: crates/keycord-git/src/ui/remote.rs:61
+msgid "Enter a remote name."
+msgstr "remote பெயரை உள்ளிடவும்."
+
+#: crates/keycord-stores/src/management.rs:89
+msgid "Enter a repository URL."
+msgstr "களஞ்சிய URL-ஐ உள்ளிடவும்."
+
+#: crates/keycord-entries/src/model.rs:117
+msgid "Enter a username."
+msgstr "பயனர்பெயரை உள்ளிடவும்."
+
+#: crates/keycord-passkey/src/credential.rs:448
+msgid "Enter a valid PKCS#8 passkey private key."
+msgstr "செல்லுபடியான PKCS#8 கடவுச்சாவித் தனிப்பட்ட விசையை உள்ளிடவும்."
+
+#: crates/keycord-runtime/src/validation.rs:27
+msgid "Enter a valid email address."
+msgstr "செல்லுபடியான மின்னஞ்சல் முகவரியை உள்ளிடவும்."
+
+#: crates/keycord-passkey/src/credential.rs:374
+#: crates/keycord-passkey/src/credential.rs:393
+msgid "Enter a valid passkey RP ID."
+msgstr "செல்லுபடியான கடவுச்சாவி RP ID-ஐ உள்ளிடவும்."
+
+#: crates/keycord-entries/src/file/url.rs:37
+msgid "Enter an HTTP or HTTPS URL."
+msgstr "HTTP அல்லது HTTPS URL-ஐ உள்ளிடவும்."
+
+#: crates/keycord-entries/src/otp/mod.rs:113
+#: crates/keycord-entries/src/otp/mod.rs:156
+msgid "Enter an OTP secret."
+msgstr "OTP இரகசியத்தை உள்ளிடவும்."
+
+#: crates/keycord-keys/src/store/storage.rs:936
+msgid "Enter an email address for the hardware key."
+msgstr "வன்பொருள் விசைக்கான மின்னஞ்சல் முகவரியை உள்ளிடவும்."
+
+#: crates/keycord-keys/src/store/storage.rs:1030
+msgid "Enter an email address for the private key."
+msgstr "தனிப்பட்ட விசைக்கான மின்னஞ்சல் முகவரியை உள்ளிடவும்."
+
+#: crates/keycord-runtime/src/validation.rs:24
+msgid "Enter an email address."
+msgstr "மின்னஞ்சல் முகவரியை உள்ளிடவும்."
+
+#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
+#: crates/keycord-keys/src/error.rs:6
+#: crates/keycord-keys/src/store/unlock.rs:258
+msgid "Enter the FIDO2 security key PIN."
+msgstr "FIDO2 பாதுகாப்பு விசையின் PIN-ஐ உள்ளிடவும்."
+
+#: crates/keycord-keys/src/hardware/linux.rs:478
+#: crates/keycord-keys/src/store/storage.rs:953
+#: crates/keycord-keys/src/store/unlock.rs:237
+#: crates/keycord-keys/src/ui/dialog.rs:59
+msgid "Enter the hardware key PIN."
+msgstr "வன்பொருள் விசையின் PIN-ஐ உள்ளிடவும்."
+
+#: crates/keycord-keys/src/store/storage.rs:943
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:40
+msgid "Enter the hardware key admin PIN."
+msgstr "வன்பொருள் விசையின் நிர்வாக PIN-ஐ உள்ளிடவும்."
+
+#: crates/keycord-keys/src/ui/dialog.rs:36
+#: crates/keycord-keys/src/ui/dialog.rs:58
+msgid "Enter the key password."
+msgstr "விசைக் கடவுச்சொல்லை உள்ளிடவும்."
+
+#: crates/keycord-keys/src/hardware/linux.rs:476
+#: crates/keycord-keys/src/store/storage.rs:951
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:43
+msgid "Enter the new hardware key PIN."
+msgstr "புதிய வன்பொருள் விசை PIN-ஐ உள்ளிடவும்."
+
+#: crates/keycord-fido/src/ui.rs:301
+msgid "Enter the new security key PIN."
+msgstr "புதிய பாதுகாப்பு விசை PIN-ஐ உள்ளிடவும்."
+
+#: crates/keycord-keys/src/cert.rs:251
+#: crates/keycord-keys/src/store/storage.rs:1037
+msgid "Enter the private key password."
+msgstr "தனிப்பட்ட விசைக் கடவுச்சொல்லை உள்ளிடவும்."
+
+#: crates/keycord-fido/src/ui.rs:296
+msgid "Enter the security key PIN."
+msgstr "பாதுகாப்பு விசையின் PIN-ஐ உள்ளிடவும்."
+
+#: crates/keycord-shell/src/window_widgets.rs:132
+msgid "Escape"
+msgstr "Escape"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:167
+msgid "Expand the password editor with cleanup actions"
+msgstr "தூய்மைப்படுத்தும் செயல்களுடன் கடவுச்சொல் திருத்தியை விரிவாக்கு"
+
+#: crates/keycord-fido/src/ui.rs:37
+msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
+msgstr "பாதுகாக்கப்பட்ட தனிப்பட்ட விசைகளின் பூட்டை இணைக்கப்பட்ட பாதுகாப்பு விசையால் Keycord திறப்பதற்கு முன், சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைகளுக்கு USB சாதன அணுகல் தேவை. அணுகலை வழங்கிய பிறகு Keycord-ஐ மீண்டும் தொடங்கவும்."
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:30
+msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
+msgstr "இணைக்கப்பட்ட OpenPGP smartcard-கள் அல்லது YubiKey-களைப் பயன்படுத்த சோதனைநிலை வன்பொருள் விசைப் பணிப்பாய்வுகளுக்கு PC/SC அணுகல் தேவை. அதை வழங்கிய பிறகு Keycord-ஐ மீண்டும் தொடங்கவும். இது இல்லாமலும் கடவுச்சொல் பாதுகாப்புள்ள விசைகளைப் பயன்படுத்தலாம்."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:207
+msgid "Experimental multi-layer encryption. When on, every selected key must be unlocked and other pass apps will not be able to read these items."
+msgstr "சோதனைநிலை பல அடுக்கு மறையாக்கம். இதை இயக்கினால், தேர்ந்தெடுத்த ஒவ்வொரு விசையின் பூட்டையும் திறக்க வேண்டும்; பிற pass செயலிகளால் இந்த உருப்படிகளைப் படிக்க முடியாது."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:202
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:152
+msgid "Experimental store options"
+msgstr "சோதனைநிலை சேமிப்பக விருப்பங்கள்"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:33
+#: crates/keycord-entries/src/ui/tools/export.rs:51
+msgid "Export"
+msgstr "ஏற்றுமதி"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:29
+msgid "Export all passwords?"
+msgstr "எல்லாக் கடவுச்சொற்களையும் ஏற்றுமதி செய்யவா?"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:46
+#: crates/keycord-entries/src/ui/tools/mod.rs:65
+msgid "Export every password and field to a CSV file."
+msgstr "ஒவ்வொரு கடவுச்சொல்லையும் புலத்தையும் CSV கோப்புக்கு ஏற்றுமதி செய்யவும்."
+
+#: crates/keycord-keys/src/host_gpg.rs:139
+msgid "Export host GPG private key"
+msgstr "host GPG தனிப்பட்ட விசையை ஏற்றுமதி செய்"
+
+#: crates/keycord-keys/src/host_gpg.rs:122
+msgid "Export host GPG public keys"
+msgstr "host GPG பொது விசைகளை ஏற்றுமதி செய்"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:45
+#: crates/keycord-entries/src/ui/tools/export.rs:50
+msgid "Export passwords"
+msgstr "கடவுச்சொற்களை ஏற்றுமதி செய்"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:100
+msgid "Exported {count} password."
+msgstr "{count} கடவுச்சொல் ஏற்றுமதி செய்யப்பட்டது."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:102
+msgid "Exported {count} passwords."
+msgstr "{count} கடவுச்சொற்கள் ஏற்றுமதி செய்யப்பட்டன."
+
+#: crates/keycord-fido/src/manifest.rs:38
+msgid "FIDO2 private key manifest"
+msgstr "FIDO2 தனிப்பட்ட விசை manifest"
+
+#: crates/keycord-keys/src/store/mod.rs:11
+msgid "FIDO2 private-key support is disabled in this build of Keycord."
+msgstr "Keycord-இன் இந்த build-இல் FIDO2 தனிப்பட்ட விசை ஆதரவு முடக்கப்பட்டுள்ளது."
+
+#: crates/keycord-fido/src/service.rs:339
+msgid "FIDO2 security key"
+msgstr "FIDO2 பாதுகாப்பு விசை"
+
+#: crates/keycord-keys/src/fido2/disabled.rs:3
+msgid "FIDO2 support is disabled in this build of Keycord."
+msgstr "Keycord-இன் இந்த build-இல் FIDO2 ஆதரவு முடக்கப்பட்டுள்ளது."
+
+#: crates/keycord-fido/src/envelope.rs:104
+msgid "FIDO2 text envelope"
+msgstr "FIDO2 உரை உறை"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:227
+msgid "Failed to allocate a private Linux update staging directory."
+msgstr "தனிப்பட்ட Linux புதுப்பிப்பு staging கோப்பகத்தை ஒதுக்க முடியவில்லை."
+
+#: crates/keycord-runtime/src/secure_fs.rs:109
+msgid "Failed to allocate a temporary file name."
+msgstr "தற்காலிகக் கோப்புப் பெயரை ஒதுக்க முடியவில்லை."
+
+#: crates/keycord-shell/src/application.rs:292
+msgid "Failed to build shortcuts dialog."
+msgstr "குறுக்குவழிகள் உரையாடலை உருவாக்க முடியவில்லை."
+
+#: crates/keycord-shell/src/application.rs:222
+msgid "Failed to build the main window."
+msgstr "முதன்மைச் சாளரத்தை உருவாக்க முடியவில்லை."
+
+#: crates/keycord-shell/src/file_picker.rs:127
+msgid "Failed to configure Windows file picker options: {err}"
+msgstr "Windows கோப்புத் தேர்வி விருப்பங்களை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:311
+msgid "Failed to configure Windows save-file picker options: {err}"
+msgstr "Windows கோப்பு சேமிப்புத் தேர்வி விருப்பங்களை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:220
+msgid "Failed to create Linux update staging directory '{}': {error}"
+msgstr "Linux புதுப்பிப்பு staging கோப்பகம் '{}'-ஐ உருவாக்க முடியவில்லை: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:237
+msgid "Failed to create Linux update staging root '{}': {error}"
+msgstr "Linux புதுப்பிப்பு staging மூலக் கோப்பகம் '{}'-ஐ உருவாக்க முடியவில்லை: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:107
+msgid "Failed to create the Windows file picker: {err}"
+msgstr "Windows கோப்புத் தேர்வியை உருவாக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:301
+msgid "Failed to create the Windows save-file picker: {err}"
+msgstr "Windows கோப்பு சேமிப்புத் தேர்வியை உருவாக்க முடியவில்லை: {err}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:602
+msgid "Failed to decode armored signature"
+msgstr "கவசமிட்ட கையொப்பத்தைக் குறிவிலக்க முடியவில்லை"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:304
+msgid "Failed to decode decrypted UTF-8 data"
+msgstr "மறைவிலக்கப்பட்ட UTF-8 தரவைக் குறிவிலக்க முடியவில்லை"
+
+#: crates/keycord-fido/src/crypto.rs:56
+msgid "Failed to derive enough HKDF output."
+msgstr "போதுமான HKDF வெளியீட்டைப் பெறுவிக்க முடியவில்லை."
+
+#: crates/keycord-passkey/src/credential.rs:441
+msgid "Failed to encode passkey key material: {err}"
+msgstr "கடவுச்சாவி விசைத் தரவைக் குறியேற்ற முடியவில்லை: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:171
+msgid "Failed to export passkey JSON: {err}"
+msgstr "கடவுச்சாவி JSON-ஐ ஏற்றுமதி செய்ய முடியவில்லை: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:436
+msgid "Failed to generate passkey key material: {err}"
+msgstr "கடவுச்சாவி விசைத் தரவை உருவாக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/ui.rs:29
+msgid "Failed to get {id}"
+msgstr "{id} என்பதைப் பெற முடியவில்லை"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1109
+msgid "Failed to hash update file '{}': {error}"
+msgstr "புதுப்பிப்புக் கோப்பு '{}'-க்கான hash-ஐக் கணக்கிட முடியவில்லை: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:101
+msgid "Failed to initialize COM for the file picker: {err}"
+msgstr "கோப்புத் தேர்விக்கான COM-ஐத் தொடக்கநிலைப்படுத்த முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:295
+msgid "Failed to initialize COM for the save-file picker: {err}"
+msgstr "கோப்பு சேமிப்புத் தேர்விக்கான COM-ஐத் தொடக்கநிலைப்படுத்த முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/application.rs:143
+msgid "Failed to initialize libadwaita."
+msgstr "libadwaita-வைத் தொடக்கநிலைப்படுத்த முடியவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:149
+msgid "Failed to install the downloaded update: {error}"
+msgstr "பதிவிறக்கப்பட்ட புதுப்பிப்பை நிறுவ முடியவில்லை: {error}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:89
+msgid "Failed to make the downloaded update executable: {error}"
+msgstr "பதிவிறக்கப்பட்ட புதுப்பிப்பை இயக்கக்கூடியதாக மாற்ற முடியவில்லை: {error}"
+
+#: crates/keycord-passkey/src/credential.rs:413
+msgid "Failed to normalize passkey private key: {err}"
+msgstr "கடவுச்சாவித் தனிப்பட்ட விசையை இயல்பாக்க முடியவில்லை: {err}"
+
+#: crates/keycord-runtime/src/command.rs:386
+msgid "Failed to open stdin for command"
+msgstr "கட்டளைக்கான stdin-ஐத் திறக்க முடியவில்லை"
+
+#: src/main.rs:97
+msgid "Failed to prepare managed private-key storage."
+msgstr "நிர்வகிக்கப்படும் தனிப்பட்ட விசைச் சேமிப்பைத் தயார் செய்ய முடியவில்லை."
+
+#: crates/keycord-passkey/src/credential.rs:434
+msgid "Failed to prepare passkey key generation: {err}"
+msgstr "கடவுச்சாவி விசை உருவாக்கத்தைத் தயார் செய்ய முடியவில்லை: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:438
+msgid "Failed to prepare passkey key material: {err}"
+msgstr "கடவுச்சாவி விசைத் தரவைத் தயார் செய்ய முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:244
+msgid "Failed to read Linux update staging root metadata '{}': {error}"
+msgstr "Linux புதுப்பிப்பு staging மூலக் கோப்பகம் '{}'-இன் மீத்தரவைப் படிக்க முடியவில்லை: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:111
+msgid "Failed to read Windows file picker options: {err}"
+msgstr "Windows கோப்புத் தேர்வி விருப்பங்களைப் படிக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:304
+msgid "Failed to read Windows save-file picker options: {err}"
+msgstr "Windows கோப்பு சேமிப்புத் தேர்வி விருப்பங்களைப் படிக்க முடியவில்லை: {err}"
+
+#: crates/keycord-runtime/src/command.rs:403
+msgid "Failed to read command stderr: {error}"
+msgstr "கட்டளையின் stderr-ஐப் படிக்க முடியவில்லை: {error}"
+
+#: crates/keycord-runtime/src/command.rs:401
+msgid "Failed to read command stdout: {error}"
+msgstr "கட்டளையின் stdout-ஐப் படிக்க முடியவில்லை: {error}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:135
+msgid "Failed to read password entry '{}' from '{}': {err}"
+msgstr "'{}' கடவுச்சொல் பதிவை '{}'-இலிருந்து படிக்க முடியவில்லை: {err}"
+
+#: crates/keycord-passkey/src/request.rs:82
+msgid "Failed to read the passkey request file {path:?}: {source}"
+msgstr "கடவுச்சாவிக் கோரிக்கைக் கோப்பு {path:?}-ஐப் படிக்க முடியவில்லை: {source}"
+
+#: crates/keycord-shell/src/file_picker.rs:147
+msgid "Failed to read the selected Windows path: {err}"
+msgstr "தேர்ந்தெடுத்த Windows பாதையைப் படிக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:345
+msgid "Failed to read the selected Windows save path: {err}"
+msgstr "தேர்ந்தெடுத்த Windows சேமிப்புப் பாதையைப் படிக்க முடியவில்லை: {err}"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:191
+msgid "Failed to read the selected hardware public key file"
+msgstr "தேர்ந்தெடுத்த வன்பொருள் பொது விசைக் கோப்பைப் படிக்க முடியவில்லை"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:279
+msgid "Failed to read the selected private key file"
+msgstr "தேர்ந்தெடுத்த தனிப்பட்ட விசைக் கோப்பைப் படிக்க முடியவில்லை"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:85
+msgid "Failed to read update file metadata: {error}"
+msgstr "புதுப்பிப்புக் கோப்பின் மீத்தரவைப் படிக்க முடியவில்லை: {error}"
+
+#: src/setup.rs:28
+msgid "Failed to register resources for Linux update install: {error}"
+msgstr "Linux புதுப்பிப்பு நிறுவலுக்கான வளங்களைப் பதிவு செய்ய முடியவில்லை: {error}"
+
+#: crates/keycord-shell/src/application.rs:138
+msgid "Failed to register resources."
+msgstr "வளங்களைப் பதிவு செய்ய முடியவில்லை."
+
+#: crates/keycord-lifecycle/src/search_provider.rs:351
+msgid "Failed to resolve current executable path: {err}"
+msgstr "தற்போதைய இயங்குநிலைக் கோப்பின் பாதையைக் கண்டறிய முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:137
+msgid "Failed to resolve the update helper executable: {error}"
+msgstr "புதுப்பிப்பு உதவி இயங்குநிலைக் கோப்பைக் கண்டறிய முடியவில்லை: {error}"
+
+#: crates/keycord-runtime/src/command.rs:352
+msgid "Failed to run command: {error}"
+msgstr "கட்டளையை இயக்க முடியவில்லை: {error}"
+
+#: crates/keycord-git/src/command.rs:109
+#: crates/keycord-git/src/repository.rs:53
+msgid "Failed to run git command: {err}"
+msgstr "git கட்டளையை இயக்க முடியவில்லை: {err}"
+
+#: src/composition/backend/command.rs:60 src/composition/backend/command.rs:74
+msgid "Failed to run host program '{program}': {err}"
+msgstr "host நிரல் '{program}'-ஐ இயக்க முடியவில்லை: {err}"
+
+#: crates/keycord-entries/src/import.rs:56
+#: crates/keycord-entries/src/import.rs:73
+#: src/composition/backend/command.rs:29
+msgid "Failed to run the host backend command: {err}"
+msgstr "host பின்தளக் கட்டளையை இயக்க முடியவில்லை: {err}"
+
+#: crates/keycord-git/src/command.rs:75
+msgid "Failed to run {}: {err}"
+msgstr "{}-ஐ இயக்க முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:252
+msgid "Failed to secure Linux update staging root '{}': {error}"
+msgstr "Linux புதுப்பிப்பு staging மூலக் கோப்பகம் '{}'-ஐப் பாதுகாக்க முடியவில்லை: {error}"
+
+#: crates/keycord-shell/src/file_picker.rs:325
+msgid "Failed to select the Windows save-file type: {err}"
+msgstr "Windows சேமிப்புக் கோப்பு வகையைத் தேர்ந்தெடுக்க முடியவில்லை: {err}"
+
+#: crates/keycord-preferences/src/storage.rs:55
+msgid "Failed to serialize config: {e}"
+msgstr "கட்டமைப்பைத் தொடராக்க முடியவில்லை: {e}"
+
+#: crates/keycord-passkey/src/credential.rs:123
+msgid "Failed to serialize stored passkey data: {err}"
+msgstr "சேமித்த கடவுச்சாவித் தரவைத் தொடராக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:133
+msgid "Failed to set the Windows file picker button label: {err}"
+msgstr "Windows கோப்புத் தேர்வி பொத்தான் சிட்டையை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:130
+msgid "Failed to set the Windows file picker title: {err}"
+msgstr "Windows கோப்புத் தேர்வியின் தலைப்பை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:331
+msgid "Failed to set the Windows save-file extension: {err}"
+msgstr "Windows சேமிப்புக் கோப்பின் நீட்சியை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:328
+msgid "Failed to set the Windows save-file name: {err}"
+msgstr "Windows சேமிப்புக் கோப்பின் பெயரை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:317
+msgid "Failed to set the Windows save-file picker button label: {err}"
+msgstr "Windows கோப்பு சேமிப்புத் தேர்வி பொத்தான் சிட்டையை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:314
+msgid "Failed to set the Windows save-file picker title: {err}"
+msgstr "Windows கோப்பு சேமிப்புத் தேர்வியின் தலைப்பை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:322
+msgid "Failed to set the Windows save-file types: {err}"
+msgstr "Windows சேமிப்புக் கோப்பு வகைகளை அமைக்க முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:138
+msgid "Failed to show the Windows file picker: {err}"
+msgstr "Windows கோப்புத் தேர்வியைக் காட்ட முடியவில்லை: {err}"
+
+#: crates/keycord-shell/src/file_picker.rs:336
+msgid "Failed to show the Windows save-file picker: {err}"
+msgstr "Windows கோப்பு சேமிப்புத் தேர்வியைக் காட்ட முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/search_provider.rs:356
+msgid "Failed to spawn Keycord: {err}"
+msgstr "Keycord-ஐத் தொடங்க முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:100
+msgid "Failed to start Linux update install helper: {error}"
+msgstr "Linux புதுப்பிப்பு நிறுவல் உதவியைத் தொடங்க முடியவில்லை: {error}"
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:52
+msgid "Failed to start msiexec for update install: {error}"
+msgstr "புதுப்பிப்பு நிறுவலுக்கான msiexec-ஐத் தொடங்க முடியவில்லை: {error}"
+
+#: src/composition/host_access.rs:186
+msgid "Failed to start the permission command: {error}"
+msgstr "அனுமதிக் கட்டளையைத் தொடங்க முடியவில்லை: {error}"
+
+#: crates/keycord-runtime/src/command.rs:396
+msgid "Failed to wait for command: {error}"
+msgstr "கட்டளைக்காகக் காத்திருக்க முடியவில்லை: {error}"
+
+#: crates/keycord-runtime/src/command.rs:306
+msgid "Failed to write command input: {error}"
+msgstr "கட்டளை உள்ளீட்டை எழுத முடியவில்லை: {error}"
+
+#: crates/keycord-preferences/src/storage.rs:58
+msgid "Failed to write config file: {e}"
+msgstr "கட்டமைப்புக் கோப்பை எழுத முடியவில்லை: {e}"
+
+#: crates/keycord-entries/src/ui/tools/export.rs:142
+msgid "Failed to write password export to '{path}': {err}"
+msgstr "கடவுச்சொல் ஏற்றுமதியை '{path}'-க்கு எழுத முடியவில்லை: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1220
+#: crates/keycord-lifecycle/src/updater/common.rs:1224
+#: crates/keycord-lifecycle/src/updater/common.rs:1228
+#: crates/keycord-lifecycle/src/updater/common.rs:1232
+msgid "Failed to {context}: {error}"
+msgstr "{context} என்பதைச் செய்ய முடியவில்லை: {error}"
+
+#: crates/keycord-git/src/sync.rs:38
+msgid "Fetch password store Git remote {remote}"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote {remote}-ஐ fetch செய்"
+
+#: crates/keycord-git/src/ui/store_page.rs:363
+msgid "Fetch, merge, and push the current '{branch}' branch across all remotes."
+msgstr "தற்போதைய '{branch}' branch-ஐ எல்லா remote-களிலும் fetch, merge மற்றும் push செய்யவும்."
+
+#: crates/keycord-entries/src/file/types.rs:40
+msgid "Field names can't contain ':'."
+msgstr "புலப் பெயர்களில் ':' இருக்கக் கூடாது."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:3
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:43
+msgid "Field values"
+msgstr "புல மதிப்புகள்"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:28
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:6
+msgid "Filter results"
+msgstr "முடிவுகளை வடிகட்டு"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:89
+#: crates/keycord-entries/data/window-header-list.fragment.ui:15
+msgid "Find item"
+msgstr "உருப்படியைக் கண்டுபிடி"
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:24
+#: crates/keycord-entries/src/ui/tools/mod.rs:54
+msgid "Find weak passwords"
+msgstr "பலவீனமான கடவுச்சொற்களைக் கண்டுபிடி"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:37
+msgid "Find weak passwords, browse repeated field values, filter by store, and export password stores to CSV"
+msgstr "பலவீனமான கடவுச்சொற்களைக் கண்டுபிடிக்கலாம், மீண்டும் வரும் புல மதிப்புகளைப் பார்க்கலாம், சேமிப்பகத்தின்படி வடிகட்டலாம், கடவுச்சொல் சேமிப்பகங்களை CSV-க்கு ஏற்றுமதி செய்யலாம்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:199
+msgid "First release"
+msgstr "முதல் வெளியீடு"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:151
+msgid "Fix back icon"
+msgstr "பின் சின்னத்தைச் சரிசெய்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:176
+msgid "Fix optional Git synchronization"
+msgstr "விருப்பமான Git ஒத்திசைவைச் சரிசெய்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:129
+msgid "Fixed OTP bug where valid secrets were incorrectly invalidated."
+msgstr "செல்லுபடியான இரகசியங்கள் தவறாகச் செல்லாதவையாகக் கருதப்பட்ட OTP பிழை சரிசெய்யப்பட்டது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:98
+msgid "Fixed permissions for smartcards"
+msgstr "smartcard-களுக்கான அனுமதிகள் சரிசெய்யப்பட்டன"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:104
+msgid "Fixed the GNOME search provider."
+msgstr "GNOME தேடல் வழங்குநர் சரிசெய்யப்பட்டது."
+
+#: crates/keycord-shell/data/shortcuts.ui:45
+msgid "General"
+msgstr "பொது"
+
+#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
+#: crates/keycord-fido/src/ui.rs:238
+msgid "Generate FIDO2-protected key (Experimental)"
+msgstr "FIDO2 பாதுகாப்புள்ள விசையை உருவாக்கு (சோதனைநிலை)"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
+msgid "Generate or import a private key."
+msgstr "தனிப்பட்ட விசையை உருவாக்கவும் அல்லது இறக்குமதி செய்யவும்."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:72
+#: crates/keycord-entries/data/window-pages.fragment.ui:110
+msgid "Generate password"
+msgstr "கடவுச்சொல்லை உருவாக்கு"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:3
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:14
+#: crates/keycord-keys/src/ui/widgets.rs:124
+msgid "Generate private key"
+msgstr "தனிப்பட்ட விசையை உருவாக்கு"
+
+#: crates/keycord-fido/src/ui.rs:172
+msgid "Generating FIDO2-protected key (Experimental)"
+msgstr "FIDO2 பாதுகாப்புள்ள விசை உருவாக்கப்படுகிறது (சோதனைநிலை)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
+msgid "Generating key"
+msgstr "விசை உருவாக்கப்படுகிறது"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:223
+msgid "Git"
+msgstr "Git"
+
+#: crates/keycord-git/src/integrated.rs:88
+msgid "Git command did not return output."
+msgstr "Git கட்டளை வெளியீடு எதையும் தரவில்லை."
+
+#: crates/keycord-git/src/ui/audit.rs:38
+msgid "Git history and verification"
+msgstr "Git வரலாறும் சரிபார்ப்பும்"
+
+#: crates/keycord-git/src/ui/audit.rs:45
+msgid "Git isn't available in this runtime."
+msgstr "இந்த இயக்கச் சூழலில் Git கிடைக்கவில்லை."
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:3
+#: crates/keycord-git/src/ui/store_page.rs:749
+#: crates/keycord-git/src/ui/store_page.rs:750
+#: crates/keycord-git/src/ui/store_page.rs:755
+#: crates/keycord-git/src/ui/store_page.rs:756
+#: crates/keycord-git/src/ui/store_page.rs:807
+msgid "Git remotes"
+msgstr "Git remote-கள்"
+
+#: crates/keycord-git/src/ui/store_page.rs:845
+msgid "Git status worker disconnected"
+msgstr "Git நிலை பணிச் செயல்முறையின் இணைப்பு துண்டிக்கப்பட்டது"
+
+#: crates/keycord-shell/data/shortcuts.ui:10
+msgid "Go back"
+msgstr "பின்னே செல்"
+
+#: crates/keycord-shell/data/shortcuts.ui:16
+msgid "Go home"
+msgstr "முகப்புக்குச் செல்"
+
+#: crates/keycord-shell/src/optional_permission.rs:88
+msgid "Grant"
+msgstr "அனுமதி"
+
+#: crates/keycord-fido/src/ui.rs:29
+msgid "Grant USB security key access (Experimental FIDO2)"
+msgstr "USB பாதுகாப்பு விசை அணுகலை வழங்கு (சோதனைநிலை FIDO2)"
+
+#: crates/keycord-fido/src/ui.rs:34
+msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
+msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைகளுக்கு முதலில் USB பாதுகாப்பு விசை அணுகலை வழங்கவும்."
+
+#: src/composition/host_access.rs:48
+msgid "Grant host access"
+msgstr "host அணுகலை வழங்கு"
+
+#: crates/keycord-preferences/src/ui/settings.rs:223
+msgid "Grant host access first if you want Keycord to keep its private keys in step with your computer's GPG private keys."
+msgstr "Keycord-இன் தனிப்பட்ட விசைகளை உங்கள் கணினியின் GPG தனிப்பட்ட விசைகளுடன் ஒத்திசைக்க விரும்பினால், முதலில் host அணுகலை வழங்கவும்."
+
+#: crates/keycord-preferences/src/ui/settings.rs:339
+msgid "Grant host access first."
+msgstr "முதலில் host அணுகலை வழங்கவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:320
+msgid "Grant host access to fetch, merge, and push."
+msgstr "fetch, merge மற்றும் push செய்வதற்கு host அணுகலை வழங்கவும்."
+
+#: crates/keycord-shell/src/optional_permission.rs:90
+msgid "Grant permission"
+msgstr "அனுமதி வழங்கு"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:24
+msgid "Grant smartcard access"
+msgstr "smartcard அணுகலை வழங்கு"
+
+#: crates/keycord-keys/src/ui/smartcard_access.rs:7
+msgid "Grant smartcard access first."
+msgstr "முதலில் smartcard அணுகலை வழங்கவும்."
+
+#: crates/keycord-docs/src/lib.rs:15
+msgid "Guides and reference"
+msgstr "வழிகாட்டிகளும் மேற்கோளும்"
+
+#: crates/keycord-keys/src/hardware/unsupported.rs:8
+msgid "Hardware OpenPGP keys are not supported in this build or on this platform."
+msgstr "இந்த build அல்லது இயங்குதளத்தில் வன்பொருள் OpenPGP விசைகள் ஆதரிக்கப்படவில்லை."
+
+#: crates/keycord-keys/src/ui/dialog.rs:44
+msgid "Hardware key PIN"
+msgstr "வன்பொருள் விசை PIN"
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:99
+msgid "Hardware key added."
+msgstr "வன்பொருள் விசை சேர்க்கப்பட்டது."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:99
+msgid "Hardware key admin PIN"
+msgstr "வன்பொருள் விசை நிர்வாக PIN"
+
+#: src/translation_help.rs:49
+msgid "Help translate Keycord"
+msgstr "Keycord-ஐ மொழிபெயர்க்க உதவுங்கள்"
+
+#: crates/keycord-shell/src/ui.rs:899
+msgid "Hide permanently"
+msgstr "நிரந்தரமாக மறை"
+
+#: crates/keycord-git/src/ui/audit.rs:1279
+msgid "Historical fallback"
+msgstr "வரலாற்று மாற்றுவழி"
+
+#: crates/keycord-preferences/src/ui/settings.rs:456
+msgid "History recipients"
+msgstr "வரலாற்றுப் பெறுநர்கள்"
+
+#: crates/keycord-shell/src/window_widgets.rs:133
+msgid "Home"
+msgstr "முகப்பு"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:64
+#: crates/keycord-preferences/src/preferences.rs:48
+msgid "Host"
+msgstr "Host"
+
+#: crates/keycord-git/src/ui/audit.rs:1115
+msgid "Host Git (GPG)"
+msgstr "Host Git (GPG)"
+
+#: crates/keycord-git/src/ui/audit.rs:1116
+msgid "Host Git (SSH)"
+msgstr "Host Git (SSH)"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:55
+msgid "Host access"
+msgstr "Host அணுகல்"
+
+#: crates/keycord-git/src/ui/actions/disabled.rs:8
+#: crates/keycord-runtime/src/capabilities.rs:12
+msgid "Host command features are only available on Linux."
+msgstr "Host கட்டளை அம்சங்கள் Linux-இல் மட்டுமே கிடைக்கும்."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:189
+#: crates/keycord-keys/src/ui/key_management/private.rs:277
+#: crates/keycord-passkey/src/ui.rs:164
+#: crates/keycord-stores/data/window-pages.fragment.ui:91
+msgid "Import"
+msgstr "இறக்குமதி"
+
+#: crates/keycord-keys/src/lib.rs:34
+msgid "Import a private key in Preferences before using the password store."
+msgstr "கடவுச்சொல் சேமிப்பகத்தைப் பயன்படுத்தும் முன் விருப்பங்களில் தனிப்பட்ட விசையை இறக்குமதி செய்யவும்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:30
+msgid "Import an existing private key or connect a hardware token."
+msgstr "ஏற்கெனவே உள்ள தனிப்பட்ட விசையை இறக்குமதி செய்யவும் அல்லது வன்பொருள் டோக்கனை இணைக்கவும்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:61
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:311
+msgid "Import hardware public key (Experimental)"
+msgstr "வன்பொருள் பொது விசையை இறக்குமதி செய் (சோதனைநிலை)"
+
+#: crates/keycord-keys/src/host_gpg.rs:151
+msgid "Import host GPG private key"
+msgstr "host GPG தனிப்பட்ட விசையை இறக்குமதி செய்"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Import key"
+msgstr "விசையை இறக்குமதி செய்"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Import key from clipboard"
+msgstr "இடைநிலைப் பலகையிலிருந்து விசையை இறக்குமதி செய்"
+
+#: crates/keycord-passkey/src/ui.rs:159
+msgid "Import passkey?"
+msgstr "கடவுச்சாவியை இறக்குமதி செய்யவா?"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:68
+msgid "Import password (optional)"
+msgstr "இறக்குமதிக் கடவுச்சொல் (விருப்பமானது)"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:3
+#: crates/keycord-stores/src/ui/management/import.rs:32
+#: crates/keycord-stores/src/ui/management/import.rs:54
+#: crates/keycord-stores/src/ui/widgets.rs:203
+msgid "Import passwords"
+msgstr "கடவுச்சொற்களை இறக்குமதி செய்"
+
+#: crates/keycord-entries/src/import.rs:143
+msgid "Import passwords with pass import"
+msgstr "pass import மூலம் கடவுச்சொற்களை இறக்குமதி செய்"
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:276
+msgid "Import private key"
+msgstr "தனிப்பட்ட விசையை இறக்குமதி செய்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:422
+msgid "Import private key from this item"
+msgstr "இந்த உருப்படியிலிருந்து தனிப்பட்ட விசையை இறக்குமதி செய்"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:32
+msgid "Import source"
+msgstr "இறக்குமதி மூலம்"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:27
+msgid "Importer"
+msgstr "இறக்குமதிக் கருவி"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:603
+#: crates/keycord-keys/src/ui/key_management/private.rs:220
+msgid "Importing key"
+msgstr "விசை இறக்குமதி செய்யப்படுகிறது"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:107
+msgid "Importing passwords"
+msgstr "கடவுச்சொற்கள் இறக்குமதி செய்யப்படுகின்றன"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:90
+msgid "Improved header actions and hid filters when they cannot affect the current view."
+msgstr "தலைப்புச் செயல்கள் மேம்படுத்தப்பட்டன; தற்போதைய காட்சியைப் பாதிக்க முடியாத வடிப்பான்கள் மறைக்கப்பட்டன."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:111
+msgid "Improved recipient selection when a store has many possible keys."
+msgstr "ஒரு சேமிப்பகத்தில் பல சாத்தியமான விசைகள் இருக்கும்போது பெறுநரைத் தேர்ந்தெடுக்கும் முறை மேம்படுத்தப்பட்டது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:114
+msgid "Improved search, filtering, keyboard navigation, and entry editing."
+msgstr "தேடல், வடிகட்டல், விசைப்பலகை வழிசெலுத்தல் மற்றும் பதிவுத் திருத்தம் மேம்படுத்தப்பட்டன."
+
+#: crates/keycord-shell/data/window.ui:91
+msgid "Information"
+msgstr "தகவல்"
+
+#: crates/keycord-git/src/repository.rs:50
+msgid "Initialize password store Git repository"
+msgstr "கடவுச்சொல் சேமிப்பக Git களஞ்சியத்தைத் தொடக்கநிலைப்படுத்து"
+
+#: crates/keycord-git/data/window-tool-row.fragment.ui:4
+#: crates/keycord-git/src/ui/audit.rs:44
+msgid "Inspect Git history across stores and verify commit signatures."
+msgstr "சேமிப்பகங்களின் Git வரலாற்றை ஆய்வு செய்து commit கையொப்பங்களைச் சரிபார்க்கவும்."
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:19
+#: crates/keycord-git/data/window-audit-page.fragment.ui:3
+#: crates/keycord-git/data/window-tool-row.fragment.ui:3
+#: crates/keycord-git/src/ui/audit.rs:37
+msgid "Inspect change history"
+msgstr "மாற்ற வரலாற்றை ஆய்வு செய்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:74
+msgid "Inspect change history and verify commits"
+msgstr "மாற்ற வரலாற்றை ஆய்வு செய்து commit-களைச் சரிபார்"
+
+#: crates/keycord-keys/src/host_gpg.rs:108
+msgid "Inspect host GPG private keys"
+msgstr "host GPG தனிப்பட்ட விசைகளை ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:27
+msgid "Inspect password store Git HEAD"
+msgstr "கடவுச்சொல் சேமிப்பக Git HEAD-ஐ ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:50
+msgid "Inspect password store Git branch"
+msgstr "கடவுச்சொல் சேமிப்பக Git branch-ஐ ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:105
+msgid "Inspect password store Git files before the first commit"
+msgstr "முதல் commit-க்கு முந்தைய கடவுச்சொல் சேமிப்பக Git கோப்புகளை ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:271
+msgid "Inspect password store Git remote branch {remote}/{branch}"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote branch {remote}/{branch}-ஐ ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:250
+msgid "Inspect password store Git revision range {range}"
+msgstr "கடவுச்சொல் சேமிப்பக Git revision வரம்பு {range}-ஐ ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:120
+msgid "Inspect password store Git tracked changes"
+msgstr "Git கண்காணிக்கும் கடவுச்சொல் சேமிப்பக மாற்றங்களை ஆய்வு செய்"
+
+#: crates/keycord-git/src/status.rs:133
+msgid "Inspect password store Git untracked files"
+msgstr "Git கண்காணிக்காத கடவுச்சொல் சேமிப்பகக் கோப்புகளை ஆய்வு செய்"
+
+#: crates/keycord-shell/data/window.ui:102
+msgid "Inspect recent app and command output."
+msgstr "அண்மைய செயலி மற்றும் கட்டளை வெளியீட்டை ஆய்வு செய்யவும்."
+
+#: crates/keycord-git/src/ui/audit.rs:48
+msgid "Inspecting Git-backed stores and discovering branches."
+msgstr "Git களஞ்சியமுள்ள சேமிப்பகங்கள் ஆய்வு செய்யப்பட்டு branch-கள் கண்டறியப்படுகின்றன."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:247
+msgid "Inspecting private keys and connected hardware."
+msgstr "தனிப்பட்ட விசைகளும் இணைக்கப்பட்ட வன்பொருளும் ஆய்வு செய்யப்படுகின்றன."
+
+#: crates/keycord-preferences/src/ui/settings.rs:405
+msgid "Install Git to use commit-history recipients for audit verification."
+msgstr "தணிக்கைச் சரிபார்ப்பில் commit வரலாற்றுப் பெறுநர்களைப் பயன்படுத்த Git-ஐ நிறுவவும்."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:41
+msgid "Install Update"
+msgstr "புதுப்பிப்பை நிறுவு"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:48
+msgid "Installing the update will close Keycord. Unsaved changes will be lost."
+msgstr "புதுப்பிப்பை நிறுவும்போது Keycord மூடப்படும். சேமிக்காத மாற்றங்கள் இழக்கப்படும்."
+
+#: crates/keycord-preferences/src/preferences.rs:47
+msgid "Integrated"
+msgstr "Integrated"
+
+#: crates/keycord-fido/src/cache.rs:191
+msgid "Invalid FIDO2 binding fingerprint '{value}'."
+msgstr "செல்லாத FIDO2 பிணைப்புக் கைரேகை '{value}'."
+
+#: crates/keycord-fido/src/native.rs:223
+msgid "Invalid FIDO2 device path: {error}"
+msgstr "செல்லாத FIDO2 சாதனப் பாதை: {error}"
+
+#: crates/keycord-fido/src/crypto.rs:99
+msgid "Invalid FIDO2 encrypted data."
+msgstr "செல்லாத FIDO2 மறையாக்கத் தரவு."
+
+#: crates/keycord-entries/src/integrated.rs:814
+#: crates/keycord-entries/src/integrated.rs:816
+#: crates/keycord-entries/src/integrated.rs:831
+#: crates/keycord-entries/src/integrated.rs:837
+msgid "Invalid all-keys encrypted password entry."
+msgstr "எல்லா விசைகளாலும் மறையாக்கப்பட்ட கடவுச்சொல் பதிவு செல்லாது."
+
+#: crates/keycord-git/src/audit.rs:383
+msgid "Invalid git cat-file batch output."
+msgstr "செல்லாத git cat-file batch வெளியீடு."
+
+#: crates/keycord-git/src/audit.rs:395 crates/keycord-git/src/audit.rs:399
+#: crates/keycord-git/src/audit.rs:407
+msgid "Invalid git cat-file header."
+msgstr "செல்லாத git cat-file தலைப்பு."
+
+#: crates/keycord-git/src/audit.rs:488
+msgid "Invalid host Git signature metadata."
+msgstr "host Git கையொப்ப மீத்தரவு செல்லாது."
+
+#: crates/keycord-passkey/src/credential.rs:180
+#: crates/keycord-passkey/src/credential.rs:292
+#: crates/keycord-passkey/src/credential.rs:361
+#: crates/keycord-passkey/src/credential.rs:367
+msgid "Invalid passkey FIDO2 extensions: {err}"
+msgstr "கடவுச்சாவியின் FIDO2 நீட்சிகள் செல்லாது: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:163
+msgid "Invalid passkey JSON: {err}"
+msgstr "செல்லாத கடவுச்சாவி JSON: {err}"
+
+#: crates/keycord-passkey/src/credential.rs:425
+msgid "Invalid passkey {label}: {err}"
+msgstr "கடவுச்சாவியின் {label} புலம் செல்லாது: {err}"
+
+#: crates/keycord-git/src/integrated.rs:580
+#: crates/keycord-stores/src/path_validation.rs:22
+#: crates/keycord-stores/src/paths.rs:25 crates/keycord-stores/src/paths.rs:79
+msgid "Invalid password entry path."
+msgstr "செல்லாத கடவுச்சொல் பதிவுப் பாதை."
+
+#: crates/keycord-keys/src/cert.rs:153 crates/keycord-keys/src/cert.rs:168
+msgid "Invalid private key fingerprint '{value}': {err}"
+msgstr "செல்லாத தனிப்பட்ட விசைக் கைரேகை '{value}': {err}"
+
+#: crates/keycord-stores/src/path_validation.rs:9
+msgid "Invalid recipients file path."
+msgstr "பெறுநர் கோப்பின் பாதை செல்லாது."
+
+#: crates/keycord-passkey/src/credential.rs:154
+msgid "Invalid stored passkey JSON: {err}"
+msgstr "சேமிக்கப்பட்ட கடவுச்சாவி JSON செல்லாது: {err}"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:71
+#: crates/keycord-preferences/src/ui/settings.rs:219
+msgid "Keep Keycord's private keys and your computer's GPG private keys in step when host access is available."
+msgstr "host அணுகல் கிடைக்கும்போது Keycord-இன் தனிப்பட்ட விசைகளையும் உங்கள் கணினியின் GPG தனிப்பட்ட விசைகளையும் ஒத்திசைந்த நிலையில் வைத்திருக்கவும்."
+
+#: crates/keycord-stores/src/recipient_page.rs:143
+msgid "Keep another selected private key available before removing this key."
+msgstr "இந்த விசையை அகற்றும் முன் தேர்ந்தெடுத்த மற்றொரு தனிப்பட்ட விசை கிடைக்குமாறு வைத்திருக்கவும்."
+
+#: crates/keycord-stores/src/recipient_page.rs:161
+msgid "Keep at least one selected private key available."
+msgstr "தேர்ந்தெடுத்த தனிப்பட்ட விசைகளில் குறைந்தது ஒன்று கிடைக்குமாறு வைத்திருக்கவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:164
+msgid "Keep entries grouped by store and folder before the file name."
+msgstr "கோப்புப் பெயருக்கு முன் சேமிப்பகம் மற்றும் கோப்புறையின்படி பதிவுகளைக் குழுவாக்கவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:151
+msgid "Keep folders in the list, but sort search results by pass file name."
+msgstr "பட்டியலில் கோப்புறைகளை வைத்திருந்து, தேடல் முடிவுகளை pass கோப்புப் பெயரின்படி வரிசைப்படுத்தவும்."
+
+#: crates/keycord-stores/src/recipient_page.rs:159
+msgid "Keep this key selected while all selected private keys are required."
+msgstr "தேர்ந்தெடுத்த எல்லாத் தனிப்பட்ட விசைகளும் தேவைப்படும்வரை இந்த விசையைத் தேர்ந்தெடுத்தே வைத்திருக்கவும்."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:680
+msgid "Key file removed."
+msgstr "விசைக் கோப்பு அகற்றப்பட்டது."
+
+#: crates/keycord-fido/src/ui.rs:151
+#: crates/keycord-keys/src/ui/key_management/private.rs:91
+msgid "Key generated."
+msgstr "விசை உருவாக்கப்பட்டது."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:576
+#: crates/keycord-keys/src/ui/key_management/private.rs:201
+msgid "Key imported."
+msgstr "விசை இறக்குமதி செய்யப்பட்டது."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:31
+#: crates/keycord-keys/src/ui/dialog.rs:43
+#: crates/keycord-keys/src/ui/dialog.rs:95
+msgid "Key password"
+msgstr "விசைக் கடவுச்சொல்"
+
+#: crates/keycord-git/src/integrated.rs:285
+#: crates/keycord-lifecycle/data/keycord.desktop.in:4
+#: crates/keycord-lifecycle/data/metainfo.xml:5
+#: crates/keycord-shell/data/window.ui:30 crates/keycord-shell/data/window.ui:4
+#: crates/keycord-shell/src/navigation.rs:9
+msgid "Keycord"
+msgstr "Keycord"
+
+#: crates/keycord-fido/src/service.rs:105
+msgid "Keycord FIDO2-protected private key"
+msgstr "Keycord FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசை"
+
+#: crates/keycord-git/src/ui/audit.rs:1114
+msgid "Keycord OpenPGP"
+msgstr "Keycord OpenPGP"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:37
+msgid "Keycord Update"
+msgstr "Keycord புதுப்பிப்பு"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:271
+msgid "Keycord couldn't finish installing the downloaded Linux update."
+msgstr "பதிவிறக்கப்பட்ட Linux புதுப்பிப்பை Keycord-ஆல் நிறுவி முடிக்க முடியவில்லை."
+
+#: crates/keycord-passkey/src/ui.rs:186
+msgid "Keycord couldn't prepare the passkey item. {error}"
+msgstr "கடவுச்சாவி உருப்படியை Keycord-ஆல் தயார் செய்ய முடியவில்லை. {error}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:43
+msgid "Keycord is already up to date."
+msgstr "Keycord ஏற்கெனவே புதுப்பித்த நிலையில் உள்ளது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:31
+msgid "Keycord is an adaptive graphical client for password folders that use the standard pass layout. Existing stores remain normal pass stores on disk, so they keep working with pass and other compatible tools."
+msgstr "Keycord என்பது நிலையான pass கட்டமைப்பைப் பயன்படுத்தும் கடவுச்சொல் கோப்புறைகளுக்கான தகவமைவான வரைகலை கிளையன்ட். ஏற்கெனவே உள்ள சேமிப்பகங்கள் வட்டில் வழக்கமான pass சேமிப்பகங்களாகவே இருப்பதால், pass மற்றும் பிற இணக்கமான கருவிகளுடன் தொடர்ந்து வேலை செய்யும்."
+
+#: src/composition/host_access.rs:64
+msgid "Keycord is running in a protected space, so some optional features stay off until you allow this. If you allow it, Keycord can use tools from your computer such as GPG, the Host backend, and pass import. If you don't, Keycord still works with the integrated backend."
+msgstr "Keycord பாதுகாக்கப்பட்ட சூழலில் இயங்குவதால், நீங்கள் அனுமதிக்கும் வரை சில விருப்ப அம்சங்கள் முடக்கப்பட்டிருக்கும். அனுமதித்தால், உங்கள் கணினியிலுள்ள GPG, Host பின்தளம் மற்றும் pass import போன்ற கருவிகளை Keycord பயன்படுத்தலாம். அனுமதிக்காவிட்டாலும் Integrated பின்தளத்துடன் Keycord தொடர்ந்து வேலை செய்யும்."
+
+#: crates/keycord-passkey/src/ui.rs:125
+msgid "Keycord opened a credential export request that names {importer} as the importer and checked its structure. The local file does not authenticate that identity. Keycord does not yet generate CXP response archives, so no passkey data was released."
+msgstr "{importer} என்பதை இறக்குமதிக் கருவியாகக் குறிப்பிடும் நற்சான்று ஏற்றுமதிக் கோரிக்கையை Keycord திறந்து அதன் கட்டமைப்பைச் சரிபார்த்தது. உள்ளூர் கோப்பு அந்த அடையாளத்தை உறுதிப்படுத்தவில்லை. Keycord இன்னும் CXP பதில் காப்பகங்களை உருவாக்குவதில்லை; எனவே கடவுச்சாவித் தரவு எதுவும் வெளியிடப்படவில்லை."
+
+#: crates/keycord-preferences/src/ui/settings.rs:288
+msgid "Keycord will first make its private-key list match the GPG private keys on your computer. After that, creating, importing, or deleting a private key in Keycord will update the host too. Keys that only exist in Keycord may be removed during the first sync."
+msgstr "Keycord முதலில் அதன் தனிப்பட்ட விசைப் பட்டியலை உங்கள் கணினியிலுள்ள GPG தனிப்பட்ட விசைகளுடன் பொருந்தச் செய்யும். அதன் பிறகு Keycord-இல் தனிப்பட்ட விசையை உருவாக்குவதும் இறக்குமதி செய்வதும் நீக்குவதும் host-ஐயும் புதுப்பிக்கும். Keycord-இல் மட்டும் உள்ள விசைகள் முதல் ஒத்திசைவின்போது அகற்றப்படலாம்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:3
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:24
+#: crates/keycord-stores/data/window-pages.fragment.ui:169
+msgid "Keys for this store"
+msgstr "இந்தச் சேமிப்பகத்தின் விசைகள்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:42
+msgid "Later"
+msgstr "பிறகு"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:69
+msgid "Leave this empty if the source does not use a password, for example a Chrome CSV."
+msgstr "மூலம் கடவுச்சொல்லைப் பயன்படுத்தவில்லை என்றால் இதைக் காலியாக விடவும்; எடுத்துக்காட்டாக, Chrome CSV."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:181
+#: crates/keycord-preferences/data/window-page.fragment.ui:225
+msgid "Length"
+msgstr "நீளம்"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:92
+msgid "Linux update is missing its cleanup directory."
+msgstr "Linux புதுப்பிப்பில் அதன் தூய்மைப்படுத்தல் கோப்பகம் இல்லை."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:86
+msgid "List"
+msgstr "பட்டியல்"
+
+#: crates/keycord-git/src/audit.rs:265
+msgid "List password store Git audit refs under {prefix}"
+msgstr "{prefix}-இன் கீழுள்ள கடவுச்சொல் சேமிப்பக Git தணிக்கை refs-ஐப் பட்டியலிடு"
+
+#: crates/keycord-git/src/remotes.rs:16
+msgid "List password store Git remotes"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote-களைப் பட்டியலிடு"
+
+#: crates/keycord-git/src/audit.rs:964
+msgid "List recipient files for password store Git tree {object}"
+msgstr "கடவுச்சொல் சேமிப்பக Git tree {object}-இன் பெறுநர் கோப்புகளைப் பட்டியலிடு"
+
+#: crates/keycord-git/src/ui/audit.rs:65
+msgid "Load more commits"
+msgstr "மேலும் commit-களை ஏற்று"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:9
+#: crates/keycord-git/src/ui/store_page.rs:808
+msgid "Loading"
+msgstr "ஏற்றப்படுகிறது"
+
+#: crates/keycord-git/src/ui/audit.rs:60
+msgid "Loading commits"
+msgstr "commit-கள் ஏற்றப்படுகின்றன"
+
+#: crates/keycord-git/src/ui/audit.rs:47
+msgid "Loading data"
+msgstr "தரவு ஏற்றப்படுகிறது"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:43
+msgid "Loading field values"
+msgstr "புல மதிப்புகள் ஏற்றப்படுகின்றன"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:246
+msgid "Loading keys"
+msgstr "விசைகள் ஏற்றப்படுகின்றன"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:10
+msgid "Loading your items."
+msgstr "உங்கள் உருப்படிகள் ஏற்றப்படுகின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:352
+msgid "Local and remote commits are waiting to sync on '{branch}'."
+msgstr "'{branch}'-இல் உள்ளூர் மற்றும் remote commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:294
+msgid "Local and remote commits are waiting to sync."
+msgstr "உள்ளூர் மற்றும் remote commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/audit.rs:1057
+msgid "Local branch"
+msgstr "உள்ளூர் branch"
+
+#: crates/keycord-git/src/operations.rs:26
+msgid "Local changes found. Commit or discard them first."
+msgstr "உள்ளூர் மாற்றங்கள் உள்ளன. முதலில் அவற்றை commit செய்யவும் அல்லது கைவிடவும்."
+
+#: crates/keycord-git/src/operations.rs:17
+msgid "Local changes found. Local and remote commits are also waiting to sync."
+msgstr "உள்ளூர் மாற்றங்கள் உள்ளன. உள்ளூர் மற்றும் remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/operations.rs:20
+msgid "Local changes found. Local commits are also waiting to sync."
+msgstr "உள்ளூர் மாற்றங்கள் உள்ளன. உள்ளூர் commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/operations.rs:23
+msgid "Local changes found. Remote commits are also waiting to sync."
+msgstr "உள்ளூர் மாற்றங்கள் உள்ளன. remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:357
+msgid "Local commits are ready to push on '{branch}'."
+msgstr "'{branch}'-இல் உள்ளூர் commit-கள் push செய்யத் தயாராக உள்ளன."
+
+#: crates/keycord-git/src/ui/store_page.rs:297
+msgid "Local commits are waiting to sync."
+msgstr "உள்ளூர் commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-shell/data/window.ui:166
+#: crates/keycord-shell/src/window_widgets.rs:128
+msgid "Logs"
+msgstr "பதிவுகள்"
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:32
+msgid "Looking for a newer Linux standalone build on GitHub Releases."
+msgstr "GitHub Releases-இல் புதிய Linux தனித்தியங்கும் build தேடப்படுகிறது."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:13
+msgid "Looking for a newer Windows installer on GitHub Releases."
+msgstr "GitHub Releases-இல் புதிய Windows நிறுவி தேடப்படுகிறது."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:203
+#: crates/keycord-preferences/data/window-page.fragment.ui:249
+msgid "Lowercase letters"
+msgstr "சிற்றெழுத்துகள்"
+
+#: crates/keycord-shell/data/window.ui:38
+msgid "Main Menu"
+msgstr "முதன்மைப் பட்டி"
+
+#: crates/keycord-git/src/operations.rs:29
+msgid "Make an initial commit before syncing."
+msgstr "ஒத்திசைக்கும் முன் முதல் commit-ஐ உருவாக்கவும்."
+
+#: crates/keycord-git/src/sync.rs:133
+msgid "Make an initial commit on '{branch}' before syncing this store."
+msgstr "இந்தச் சேமிப்பகத்தை ஒத்திசைக்கும் முன் '{branch}'-இல் முதல் commit-ஐ உருவாக்கவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:367
+msgid "Make an initial commit on '{branch}' before syncing."
+msgstr "ஒத்திசைக்கும் முன் '{branch}'-இல் முதல் commit-ஐ உருவாக்கவும்."
+
+#: crates/keycord-git/src/audit.rs:578
+msgid "Malformed Git commit headers."
+msgstr "தவறான வடிவிலுள்ள Git commit தலைப்புகள்."
+
+#: crates/keycord-git/src/audit.rs:562
+msgid "Malformed Git commit object."
+msgstr "தவறான வடிவிலுள்ள Git commit பொருள்."
+
+#: crates/keycord-git/src/audit.rs:594
+msgid "Malformed Git signature header."
+msgstr "தவறான வடிவிலுள்ள Git கையொப்பத் தலைப்பு."
+
+#: crates/keycord-git/src/audit_types.rs:94
+msgid "Malformed or unsupported signature"
+msgstr "தவறான வடிவிலுள்ள அல்லது ஆதரிக்கப்படாத கையொப்பம்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:70
+msgid "Manage private keys"
+msgstr "தனிப்பட்ட விசைகளை நிர்வகி"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:36
+msgid "Manage store recipients, folder-specific .gpg-id files, and password-protected private keys, including file and clipboard imports and optional host GPG synchronization"
+msgstr "சேமிப்பகப் பெறுநர்கள், ஒவ்வொரு கோப்புறைக்குமான .gpg-id கோப்புகள் மற்றும் கடவுச்சொல் பாதுகாப்புள்ள தனிப்பட்ட விசைகளை நிர்வகிக்கலாம்; கோப்பு மற்றும் இடைநிலைப் பலகை இறக்குமதிகளும் விருப்பமான host GPG ஒத்திசைவும் இதில் அடங்கும்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:66
+msgid "Manage stores"
+msgstr "சேமிப்பகங்களை நிர்வகி"
+
+#: crates/keycord-keys/src/store/storage.rs:48
+msgid "Managed hardware-key setup is disabled in this build of Keycord."
+msgstr "Keycord-இன் இந்த build-இல் நிர்வகிக்கப்படும் வன்பொருள் விசை அமைப்பு முடக்கப்பட்டுள்ளது."
+
+#: crates/keycord-keys/src/store/storage.rs:115
+msgid "Managed private-key data '{}' does not match requested fingerprint '{}'."
+msgstr "நிர்வகிக்கப்படும் தனிப்பட்ட விசைத் தரவு '{}' கோரப்பட்ட கைரேகை '{}'-உடன் பொருந்தவில்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:228
+msgid "Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
+msgstr "நிர்வகிக்கப்படும் தனிப்பட்ட விசை {artifact_kind} '{}' நிலையான பாதை '{}'-உடன் பொருந்தவில்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:45
+msgid "Managed smartcard add/import is disabled in this build of Keycord."
+msgstr "Keycord-இன் இந்த build-இல் நிர்வகிக்கப்படும் smartcard சேர்ப்பு/இறக்குமதி முடக்கப்பட்டுள்ளது."
+
+#: crates/keycord-stores/src/host.rs:11
+msgid "Managing nested .gpg-id files requires the Integrated backend."
+msgstr "ஒன்றிற்குள் ஒன்று அமைந்த .gpg-id கோப்புகளை நிர்வகிக்க Integrated பின்தளம் தேவை."
+
+#: crates/keycord-entries/src/strength.rs:33
+msgid "Matches a common password"
+msgstr "பொதுவாகப் பயன்படுத்தப்படும் கடவுச்சொல்லுடன் பொருந்துகிறது"
+
+#: crates/keycord-git/src/sync.rs:85
+msgid "Merge password store Git branch {target}"
+msgstr "கடவுச்சொல் சேமிப்பக Git branch {target}-ஐ merge செய்"
+
+#: crates/keycord-git/src/ui/audit.rs:1287
+msgid "Message"
+msgstr "செய்தி"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:204
+#: crates/keycord-entries/data/window-pages.fragment.ui:226
+#: crates/keycord-entries/data/window-pages.fragment.ui:248
+#: crates/keycord-entries/data/window-pages.fragment.ui:270
+#: crates/keycord-preferences/data/window-page.fragment.ui:250
+#: crates/keycord-preferences/data/window-page.fragment.ui:274
+#: crates/keycord-preferences/data/window-page.fragment.ui:298
+#: crates/keycord-preferences/data/window-page.fragment.ui:322
+msgid "Minimum count, 0 disables"
+msgstr "குறைந்தபட்ச எண்ணிக்கை; 0 முடக்கும்"
+
+#: crates/keycord-keys/src/store/storage.rs:462
+msgid "Missing OpenPGP certificate for stored hardware key."
+msgstr "சேமிக்கப்பட்ட வன்பொருள் விசைக்கான OpenPGP சான்றிதழைக் காணவில்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:442
+msgid "Missing OpenPGP certificate for stored private key."
+msgstr "சேமிக்கப்பட்ட தனிப்பட்ட விசைக்கான OpenPGP சான்றிதழைக் காணவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:73
+msgid "Missing owner in repository URL: {repository}"
+msgstr "களஞ்சிய URL-இல் உரிமையாளர் இல்லை: {repository}"
+
+#: crates/keycord-git/src/audit.rs:191
+msgid "Missing raw commit data for {}."
+msgstr "{} என்பதற்கான மூல commit தரவு இல்லை."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:78
+msgid "Missing repository name in repository URL: {repository}"
+msgstr "களஞ்சிய URL-இல் களஞ்சியப் பெயர் இல்லை: {repository}"
+
+#: crates/keycord-entries/src/ui/list/row.rs:153
+msgid "Move"
+msgstr "நகர்த்து"
+
+#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:63
+msgid "Move pass file"
+msgstr "pass கோப்பை நகர்த்து"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:107
+msgid "Move selected pass file"
+msgstr "தேர்ந்தெடுத்த pass கோப்பை நகர்த்து"
+
+#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:65
+msgid "Move to store"
+msgstr "சேமிப்பகத்திற்கு நகர்த்து"
+
+#: crates/keycord-entries/src/ui/list/row.rs:567
+msgid "Moved."
+msgstr "நகர்த்தப்பட்டது."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:19
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:87
+msgid "Name"
+msgstr "பெயர்"
+
+#: crates/keycord-shell/data/shortcuts.ui:7
+msgid "Navigation"
+msgstr "வழிசெலுத்தல்"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:180
+msgid "New Password Template"
+msgstr "புதிய கடவுச்சொல் வார்ப்புரு"
+
+#: crates/keycord-stores/src/recipient_page.rs:16
+msgid "New Store"
+msgstr "புதிய சேமிப்பகம்"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:105
+msgid "New hardware key PIN"
+msgstr "புதிய வன்பொருள் விசை PIN"
+
+#: crates/keycord-entries/src/ui/new_item.rs:74
+#: crates/keycord-entries/src/ui/page/mod.rs:414
+msgid "New item"
+msgstr "புதிய உருப்படி"
+
+#: crates/keycord-fido/src/ui.rs:410
+msgid "New security key PIN"
+msgstr "புதிய பாதுகாப்பு விசை PIN"
+
+#: crates/keycord-git/src/ui/store_page.rs:236
+msgid "No Git repository yet. Add a remote to initialize one."
+msgstr "இன்னும் Git களஞ்சியம் இல்லை. அதைத் தொடக்கநிலைப்படுத்த remote ஒன்றைச் சேர்க்கவும்."
+
+#: crates/keycord-git/src/ui/audit.rs:49
+msgid "No Git-backed stores"
+msgstr "Git களஞ்சியமுள்ள சேமிப்பகங்கள் இல்லை"
+
+#: crates/keycord-git/src/ui/audit.rs:46
+msgid "No Git-backed stores available."
+msgstr "Git களஞ்சியமுள்ள சேமிப்பகங்கள் எதுவும் கிடைக்கவில்லை."
+
+#: crates/keycord-git/src/ui/store_page.rs:280
+msgid "No branch yet."
+msgstr "இன்னும் branch இல்லை."
+
+#: crates/keycord-git/src/ui/audit.rs:1293
+msgid "No changed paths"
+msgstr "மாற்றப்பட்ட பாதைகள் இல்லை"
+
+#: crates/keycord-git/src/ui/audit.rs:62
+msgid "No commits loaded"
+msgstr "commit எதுவும் ஏற்றப்படவில்லை"
+
+#: crates/keycord-lifecycle/src/setup.rs:174
+#: crates/keycord-lifecycle/src/setup.rs:232
+msgid "No data directory found"
+msgstr "தரவுக் கோப்பகம் எதுவும் கிடைக்கவில்லை"
+
+#: crates/keycord-shell/src/application.rs:151
+msgid "No display available."
+msgstr "காட்சிச் சேவை கிடைக்கவில்லை."
+
+#: crates/keycord-lifecycle/src/setup.rs:170
+#: crates/keycord-lifecycle/src/setup.rs:228
+msgid "No executable directory found"
+msgstr "இயங்குநிலைக் கோப்பகம் எதுவும் கிடைக்கவில்லை"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:180
+#: crates/keycord-entries/src/ui/list/placeholder.rs:43
+msgid "No folders added"
+msgstr "கோப்புறைகள் எதுவும் சேர்க்கப்படவில்லை"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:175
+#: crates/keycord-entries/src/ui/list/placeholder.rs:36
+msgid "No items yet"
+msgstr "இன்னும் உருப்படிகள் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:62
+msgid "No loaded pass files matched the current weak-password checks."
+msgstr "ஏற்றப்பட்ட pass கோப்புகளில் எதுவும் தற்போதைய பலவீனக் கடவுச்சொல் சோதனைகளுடன் பொருந்தவில்லை."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:165
+#: crates/keycord-entries/src/ui/list/placeholder.rs:51
+msgid "No matches"
+msgstr "பொருத்தங்கள் இல்லை"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:63
+msgid "No matching Git remotes"
+msgstr "பொருந்தும் Git remote-கள் இல்லை"
+
+#: crates/keycord-git/src/ui/audit.rs:55
+msgid "No matching branches"
+msgstr "பொருந்தும் branch-கள் இல்லை"
+
+#: crates/keycord-docs/src/enabled.rs:20
+msgid "No matching docs"
+msgstr "பொருந்தும் ஆவணங்கள் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:48
+msgid "No matching fields"
+msgstr "பொருந்தும் புலங்கள் இல்லை"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:350
+msgid "No matching preferences"
+msgstr "பொருந்தும் விருப்பங்கள் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:63
+#: crates/keycord-git/src/ui/audit.rs:58
+msgid "No matching results"
+msgstr "பொருந்தும் முடிவுகள் இல்லை"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:231
+msgid "No matching store keys"
+msgstr "பொருந்தும் சேமிப்பக விசைகள் இல்லை"
+
+#: crates/keycord-shell/data/window.ui:136
+msgid "No matching tools"
+msgstr "பொருந்தும் கருவிகள் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:52
+msgid "No matching values"
+msgstr "பொருந்தும் மதிப்புகள் இல்லை"
+
+#: crates/keycord-git/src/ui/store_page.rs:558
+msgid "No password store"
+msgstr "கடவுச்சொல் சேமிப்பகம் இல்லை"
+
+#: crates/keycord-stores/src/management.rs:85
+msgid "No password stores"
+msgstr "கடவுச்சொல் சேமிப்பகங்கள் இல்லை"
+
+#: crates/keycord-stores/src/recipients.rs:192
+msgid "No recipients set"
+msgstr "பெறுநர்கள் அமைக்கப்படவில்லை"
+
+#: crates/keycord-entries/src/integrated.rs:293
+#: crates/keycord-entries/src/integrated.rs:320
+#: crates/keycord-entries/src/integrated.rs:850
+#: crates/keycord-stores/src/integrated_recipients.rs:269
+#: crates/keycord-stores/src/paths.rs:74
+msgid "No recipients were found for this password entry."
+msgstr "இந்தக் கடவுச்சொல் பதிவுக்கான பெறுநர்கள் எவரும் கிடைக்கவில்லை."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:837
+msgid "No recipients yet"
+msgstr "இன்னும் பெறுநர்கள் இல்லை"
+
+#: crates/keycord-git/src/ui/store_page.rs:304
+msgid "No remotes configured."
+msgstr "remote எதுவும் அமைக்கப்படவில்லை."
+
+#: crates/keycord-git/src/audit_types.rs:103
+msgid "No resolvable standard recipient keys"
+msgstr "கண்டறியக்கூடிய நிலையான பெறுநர் விசைகள் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:45
+msgid "No searchable fields"
+msgstr "தேடக்கூடிய புலங்கள் இல்லை"
+
+#: crates/keycord-git/src/audit_types.rs:93
+msgid "No signature"
+msgstr "கையொப்பம் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:50
+msgid "No values"
+msgstr "மதிப்புகள் இல்லை"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:60
+msgid "No weak passwords found"
+msgstr "பலவீனமான கடவுச்சொற்கள் எதுவும் கிடைக்கவில்லை"
+
+#: crates/keycord-git/src/ui/audit.rs:1117
+msgid "Not available"
+msgstr "கிடைக்கவில்லை"
+
+#: crates/keycord-git/src/ui/audit.rs:52
+msgid "Nothing selected"
+msgstr "எதுவும் தேர்ந்தெடுக்கப்படவில்லை"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:247
+#: crates/keycord-preferences/data/window-page.fragment.ui:297
+msgid "Numbers"
+msgstr "எண்கள்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:333
+msgid "OTP"
+msgstr "OTP"
+
+#: crates/keycord-entries/src/otp/mod.rs:244
+msgid "OTP code"
+msgstr "OTP குறியீடு"
+
+#: crates/keycord-entries/src/otp/mod.rs:220
+msgid "OTP secret"
+msgstr "OTP இரகசியம்"
+
+#: crates/keycord-lifecycle/src/setup.rs:191
+msgid "One or more local install directories are not writable."
+msgstr "ஒன்று அல்லது அதற்கு மேற்பட்ட உள்ளூர் நிறுவல் கோப்பகங்களில் எழுத முடியாது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:138
+msgid "Only enable experimental FIDO2 features if the integrated backend is used."
+msgstr "Integrated பின்தளத்தைப் பயன்படுத்தினால் மட்டுமே சோதனைநிலை FIDO2 அம்சங்களை இயக்கவும்."
+
+#: crates/keycord-passkey/src/ui.rs:32
+msgid "Only regular files on the local filesystem are accepted."
+msgstr "உள்ளூர் கோப்பு முறைமையிலுள்ள வழக்கமான கோப்புகள் மட்டுமே ஏற்கப்படும்."
+
+#: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
+msgid "Open Git tools"
+msgstr "Git கருவிகளைத் திற"
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:181
+#: crates/keycord-entries/src/ui/list/placeholder.rs:44
+msgid "Open Preferences to add a store folder."
+msgstr "சேமிப்பகக் கோப்புறையைச் சேர்க்க விருப்பங்களைத் திறக்கவும்."
+
+#: crates/keycord-entries/src/file/url.rs:33
+msgid "Open URL"
+msgstr "URL-ஐத் திற"
+
+#: src/translation_help.rs:53
+msgid "Open Weblate"
+msgstr "Weblate-ஐத் திற"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:20
+msgid "Open a Git-backed store to inspect branches and commits."
+msgstr "branch-களையும் commit-களையும் ஆய்வு செய்ய Git களஞ்சியமுள்ள சேமிப்பகத்தைத் திறக்கவும்."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:6
+msgid "Open a new item"
+msgstr "புதிய உருப்படியைத் திற"
+
+#: crates/keycord-git/src/ui/store_page.rs:559
+msgid "Open a store first."
+msgstr "முதலில் ஒரு சேமிப்பகத்தைத் திறக்கவும்."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:171
+msgid "Open an item first."
+msgstr "முதலில் ஓர் உருப்படியைத் திறக்கவும்."
+
+#: crates/keycord-docs/data/shortcuts-tool-item.fragment.ui:3
+msgid "Open docs"
+msgstr "ஆவணங்களைத் திற"
+
+#: crates/keycord-passkey/src/ui.rs:23
+msgid "Open exactly one passkey request at a time."
+msgstr "ஒரு நேரத்தில் ஒரே ஒரு கடவுச்சாவிக் கோரிக்கையை மட்டும் திறக்கவும்."
+
+#: crates/keycord-docs/data/window-tool-row.fragment.ui:4
+msgid "Open guides and reference."
+msgstr "வழிகாட்டிகளையும் மேற்கோளையும் திறக்கவும்."
+
+#: crates/keycord-entries/src/ui/list/row.rs:67
+msgid "Open in File Manager"
+msgstr "கோப்பு மேலாளரில் திற"
+
+#: crates/keycord-entries/src/ui/list/row.rs:53
+msgid "Open in New Window"
+msgstr "புதிய சாளரத்தில் திற"
+
+#: crates/keycord-shell/data/shortcuts.ui:37
+#: crates/keycord-shell/data/window.ui:101
+msgid "Open logs"
+msgstr "பதிவுகளைத் திற"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:33
+msgid "Open one or more password stores and search by name, store, field, regular expression, or structured find query"
+msgstr "ஒன்று அல்லது பல கடவுச்சொல் சேமிப்பகங்களைத் திறந்து, பெயர், சேமிப்பகம், புலம், regular expression அல்லது கட்டமைக்கப்பட்ட find வினவலின்படி தேடலாம்"
+
+#: crates/keycord-preferences/data/shortcuts-general-item.fragment.ui:3
+msgid "Open preferences"
+msgstr "விருப்பங்களைத் திற"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:18
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:15
+msgid "Open raw text"
+msgstr "மூல உரையைத் திற"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:3
+msgid "Open store 1 Git remotes"
+msgstr "சேமிப்பகம் 1-இன் Git remote-களைத் திற"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:6
+msgid "Open store 1 keys"
+msgstr "சேமிப்பகம் 1-இன் விசைகளைத் திற"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:9
+msgid "Open store 2 Git remotes"
+msgstr "சேமிப்பகம் 2-இன் Git remote-களைத் திற"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:12
+msgid "Open store 2 keys"
+msgstr "சேமிப்பகம் 2-இன் விசைகளைத் திற"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:15
+msgid "Open store 3 Git remotes"
+msgstr "சேமிப்பகம் 3-இன் Git remote-களைத் திற"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:18
+msgid "Open store 3 keys"
+msgstr "சேமிப்பகம் 3-இன் விசைகளைத் திற"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:21
+msgid "Open store 4 Git remotes"
+msgstr "சேமிப்பகம் 4-இன் Git remote-களைத் திற"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:24
+msgid "Open store 4 keys"
+msgstr "சேமிப்பகம் 4-இன் விசைகளைத் திற"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:27
+msgid "Open store 5 Git remotes"
+msgstr "சேமிப்பகம் 5-இன் Git remote-களைத் திற"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:30
+msgid "Open store 5 keys"
+msgstr "சேமிப்பகம் 5-இன் விசைகளைத் திற"
+
+#: crates/keycord-git/data/shortcuts-store-items.fragment.ui:33
+msgid "Open store 6 Git remotes"
+msgstr "சேமிப்பகம் 6-இன் Git remote-களைத் திற"
+
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:36
+msgid "Open store 6 keys"
+msgstr "சேமிப்பகம் 6-இன் விசைகளைத் திற"
+
+#: crates/keycord-shell/data/shortcuts.ui:30
+msgid "Open tools"
+msgstr "கருவிகளைத் திற"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:88
+msgid "Opening"
+msgstr "திறக்கப்படுகிறது"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:335
+msgid "Opening item"
+msgstr "உருப்படி திறக்கப்படுகிறது"
+
+#: crates/keycord-keys/src/ui/dialog.rs:39
+msgid "Or use a hardware key (Experimental)."
+msgstr "அல்லது வன்பொருள் விசையைப் பயன்படுத்தவும் (சோதனைநிலை)."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:29
+msgid "Other ways to add a key"
+msgstr "விசையைச் சேர்க்க மற்ற வழிகள்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:75
+msgid "Pass file"
+msgstr "pass கோப்பு"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:3
+msgid "Pass files"
+msgstr "pass கோப்புகள்"
+
+#: crates/keycord-entries/src/file/row_ui.rs:46
+msgid "Passkey"
+msgstr "கடவுச்சாவி"
+
+#: crates/keycord-passkey/src/credential.rs:363
+msgid "Passkey FIDO2 extensions must be a JSON object."
+msgstr "கடவுச்சாவியின் FIDO2 நீட்சிகள் JSON பொருளாக இருக்க வேண்டும்."
+
+#: crates/keycord-passkey/src/ui.rs:123
+msgid "Passkey export request opened"
+msgstr "கடவுச்சாவி ஏற்றுமதிக் கோரிக்கை திறக்கப்பட்டது"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:96
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:221
+msgid "Password Generation"
+msgstr "கடவுச்சொல் உருவாக்கம்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:3
+#: crates/keycord-preferences/data/window-page.fragment.ui:134
+msgid "Password List"
+msgstr "கடவுச்சொல் பட்டியல்"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:24
+msgid "Password Stores"
+msgstr "கடவுச்சொல் சேமிப்பகங்கள்"
+
+#: crates/keycord-entries/src/ui/list/row.rs:139
+msgid "Password actions"
+msgstr "கடவுச்சொல் செயல்கள்"
+
+#: crates/keycord-entries/src/integrated.rs:680
+msgid "Password entry '{label}' was not found."
+msgstr "'{label}' கடவுச்சொல் பதிவு கிடைக்கவில்லை."
+
+#: crates/keycord-entries/src/integrated.rs:619
+msgid "Password entry '{old_label}' was not found."
+msgstr "'{old_label}' கடவுச்சொல் பதிவு கிடைக்கவில்லை."
+
+#: crates/keycord-stores/src/path_validation.rs:27
+msgid "Password entry name is empty."
+msgstr "கடவுச்சொல் பதிவின் பெயர் காலியாக உள்ளது."
+
+#: crates/keycord-entries/src/strength.rs:25
+msgid "Password is empty"
+msgstr "கடவுச்சொல் காலியாக உள்ளது"
+
+#: crates/keycord-entries/src/strength.rs:28
+msgid "Password is only whitespace"
+msgstr "கடவுச்சொல்லில் வெற்றிடங்கள் மட்டுமே உள்ளன"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:54
+msgid "Password list"
+msgstr "கடவுச்சொல் பட்டியல்"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:60
+#: crates/keycord-entries/data/window-pages.fragment.ui:120
+msgid "Password options"
+msgstr "கடவுச்சொல் விருப்பங்கள்"
+
+#: crates/keycord-git/src/repository.rs:70
+msgid "Password store Git state: {root} -> Git repository detected, but Git commands are disabled in this build."
+msgstr "கடவுச்சொல் சேமிப்பக Git நிலை: {root} -> Git களஞ்சியம் கண்டறியப்பட்டது; ஆனால் இந்த build-இல் Git கட்டளைகள் முடக்கப்பட்டுள்ளன."
+
+#: crates/keycord-git/src/repository.rs:75
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, network operations enabled."
+msgstr "கடவுச்சொல் சேமிப்பக Git நிலை: {root} -> Git களஞ்சியம் கண்டறியப்பட்டது; உள்ளூர் commit-களும் பிணையச் செயல்களும் இயக்கப்பட்டுள்ளன."
+
+#: crates/keycord-git/src/repository.rs:80
+msgid "Password store Git state: {root} -> Git repository detected, local commits enabled, remote sync disabled in this backend."
+msgstr "கடவுச்சொல் சேமிப்பக Git நிலை: {root} -> Git களஞ்சியம் கண்டறியப்பட்டது; உள்ளூர் commit-கள் இயக்கப்பட்டுள்ளன; இந்தப் பின்தளத்தில் remote ஒத்திசைவு முடக்கப்பட்டுள்ளது."
+
+#: crates/keycord-git/src/repository.rs:65
+msgid "Password store Git state: {root} -> no Git repository detected, local commits disabled, network operations disabled."
+msgstr "கடவுச்சொல் சேமிப்பக Git நிலை: {root} -> Git களஞ்சியம் கண்டறியப்படவில்லை; உள்ளூர் commit-களும் பிணையச் செயல்களும் முடக்கப்பட்டுள்ளன."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1064
+msgid "Password store configuration: no stores are configured."
+msgstr "கடவுச்சொல் சேமிப்பகக் கட்டமைப்பு: சேமிப்பகங்கள் எதுவும் அமைக்கப்படவில்லை."
+
+#: crates/keycord-entries/src/ui/list/mod.rs:1068
+msgid "Password store configuration: {} configured store(s)."
+msgstr "கடவுச்சொல் சேமிப்பகக் கட்டமைப்பு: அமைக்கப்பட்ட சேமிப்பக எண்ணிக்கை {}."
+
+#: crates/keycord-stores/src/ui/management/import.rs:390
+msgid "Passwords imported."
+msgstr "கடவுச்சொற்கள் இறக்குமதி செய்யப்பட்டன."
+
+#: crates/keycord-entries/src/ui/new_item.rs:48
+msgid "Path or name"
+msgstr "பாதை அல்லது பெயர்"
+
+#: src/composition/host_access.rs:192
+msgid "Permission command failed"
+msgstr "அனுமதிக் கட்டளை தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:40
+msgid "Pick a field from the current list."
+msgstr "தற்போதைய பட்டியலிலிருந்து ஒரு புலத்தைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:41
+msgid "Pick a value from the current list."
+msgstr "தற்போதைய பட்டியலிலிருந்து ஒரு மதிப்பைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:3
+#: crates/keycord-preferences/src/ui/widgets.rs:394
+msgid "Preferences"
+msgstr "விருப்பங்கள்"
+
+#: crates/keycord-keys/src/cert.rs:157 crates/keycord-keys/src/cert.rs:162
+msgid "Private key fingerprint '{value}' does not have the expected length."
+msgstr "தனிப்பட்ட விசைக் கைரேகை '{value}' எதிர்பார்த்த நீளத்தில் இல்லை."
+
+#: crates/keycord-git/src/ui/signing.rs:217
+msgid "Private key unlock worker disconnected while preparing a Git signature for {fingerprint}."
+msgstr "{fingerprint} என்பதற்கான Git கையொப்பத்தைத் தயார் செய்யும்போது தனிப்பட்ட விசைப் பூட்டைத் திறக்கும் பணிச் செயல்முறையின் இணைப்பு துண்டிக்கப்பட்டது."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:203
+msgid "Private keys can't be verified"
+msgstr "தனிப்பட்ட விசைகளைச் சரிபார்க்க முடியாது"
+
+#: crates/keycord-preferences/src/ui/settings.rs:372
+msgid "Private keys synced."
+msgstr "தனிப்பட்ட விசைகள் ஒத்திசைக்கப்பட்டன."
+
+#: crates/keycord-keys/src/sync.rs:152 crates/keycord-keys/src/sync.rs:196
+#: crates/keycord-keys/src/sync.rs:51
+#: crates/keycord-preferences/src/ui/settings.rs:227
+#: crates/keycord-preferences/src/ui/settings.rs:231
+#: src/composition/keys_sync.rs:19 src/composition/keys_sync.rs:34
+msgid "Private-key sync with the host is only available on Linux."
+msgstr "host உடனான தனிப்பட்ட விசை ஒத்திசைவு Linux-இல் மட்டுமே கிடைக்கும்."
+
+#: crates/keycord-git/src/sync.rs:106
+msgid "Push password store Git branch {branch} to {remote}"
+msgstr "கடவுச்சொல் சேமிப்பக Git branch {branch}-ஐ {remote}-க்கு push செய்"
+
+#: crates/keycord-shell/src/qr_code.rs:83
+#: crates/keycord-shell/src/qr_code.rs:88
+msgid "QR code"
+msgstr "QR குறியீடு"
+
+#: crates/keycord-passkey/src/credential.rs:296
+msgid "RP ID"
+msgstr "RP ID"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:452
+#: crates/keycord-entries/src/ui/page/mod.rs:436
+#: crates/keycord-entries/src/ui/page/mod.rs:864
+msgid "Raw text"
+msgstr "மூல உரை"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
+msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
+msgstr "இடைநிலைப் பலகையிலிருந்து கவசமிட்ட தனிப்பட்ட விசை அல்லது சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசையைப் படிக்கவும்."
+
+#: crates/keycord-git/src/audit.rs:517
+msgid "Read changed paths for password store Git commit {oid}"
+msgstr "கடவுச்சொல் சேமிப்பக Git commit {oid}-இன் மாற்றப்பட்ட பாதைகளைப் படி"
+
+#: crates/keycord-git/src/audit.rs:456
+msgid "Read host Git signature metadata for password store commits"
+msgstr "கடவுச்சொல் சேமிப்பக commit-களுக்கான host Git கையொப்ப மீத்தரவைப் படி"
+
+#: crates/keycord-entries/src/import.rs:123
+msgid "Read pass import sources"
+msgstr "pass import மூலங்களைப் படி"
+
+#: src/composition/about.rs:38
+msgid "Read pass version"
+msgstr "pass பதிப்பைப் படி"
+
+#: crates/keycord-entries/src/host.rs:264
+msgid "Read password entry"
+msgstr "கடவுச்சொல் பதிவைப் படி"
+
+#: crates/keycord-entries/src/host.rs:286
+msgid "Read password entry for clipboard copy"
+msgstr "இடைநிலைப் பலகைக்கு நகலெடுக்கக் கடவுச்சொல் பதிவைப் படி"
+
+#: crates/keycord-git/src/integrated.rs:113
+msgid "Read password store Git HEAD"
+msgstr "கடவுச்சொல் சேமிப்பக Git HEAD-ஐப் படி"
+
+#: crates/keycord-git/src/audit.rs:314
+msgid "Read password store Git audit log for {full_ref}"
+msgstr "{full_ref}-க்கான கடவுச்சொல் சேமிப்பக Git தணிக்கைப் பதிவைப் படி"
+
+#: crates/keycord-git/src/remotes.rs:33
+msgid "Read password store Git remote URL for {name}"
+msgstr "{name} என்பதற்கான கடவுச்சொல் சேமிப்பக Git remote URL-ஐப் படி"
+
+#: crates/keycord-git/src/audit.rs:1003
+msgid "Read password store Git tree file {object_path}"
+msgstr "கடவுச்சொல் சேமிப்பக Git tree கோப்பு {object_path}-ஐப் படி"
+
+#: crates/keycord-git/src/audit.rs:363
+msgid "Read raw password store Git commits"
+msgstr "மூல கடவுச்சொல் சேமிப்பக Git commit-களைப் படி"
+
+#: crates/keycord-git/src/ui/audit.rs:66
+msgid "Read the next {count} commits."
+msgstr "அடுத்த {count} commit-களைப் படிக்கவும்."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:59
+msgid "Reading password lines from the current list."
+msgstr "தற்போதைய பட்டியலிலிருந்து கடவுச்சொல் வரிகள் படிக்கப்படுகின்றன."
+
+#: crates/keycord-git/src/ui/audit.rs:61
+msgid "Reading recent Git history for this branch."
+msgstr "இந்த branch-இன் அண்மைய Git வரலாறு படிக்கப்படுகிறது."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:44
+msgid "Reading searchable pass fields from the current list."
+msgstr "தற்போதைய பட்டியலிலிருந்து தேடக்கூடிய pass புலங்கள் படிக்கப்படுகின்றன."
+
+#: crates/keycord-git/src/ui/audit.rs:1263
+msgid "Reason"
+msgstr "காரணம்"
+
+#: crates/keycord-stores/src/integrated_recipients.rs:155
+msgid "Recipient '{recipient_id}' is not available in the app."
+msgstr "பெறுநர் '{recipient_id}' செயலியில் கிடைக்கவில்லை."
+
+#: crates/keycord-stores/src/integrated_recipients.rs:91
+msgid "Recipient '{recipient_id}' matches multiple keys in the app. Use a fingerprint instead."
+msgstr "பெறுநர் '{recipient_id}' செயலியில் பல விசைகளுடன் பொருந்துகிறது. அதற்குப் பதில் கைரேகையைப் பயன்படுத்தவும்."
+
+#: crates/keycord-git/src/ui/audit.rs:1271
+msgid "Recipient source"
+msgstr "பெறுநரின் மூலம்"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:174
+msgid "Recipients file"
+msgstr "பெறுநர் கோப்பு"
+
+#: crates/keycord-git/src/ui/audit.rs:1107
+msgid "Recipients from the audited commit"
+msgstr "தணிக்கை செய்யப்பட்ட commit-இன் பெறுநர்கள்"
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
+msgid "Recommended for new stores"
+msgstr "புதிய சேமிப்பகங்களுக்குப் பரிந்துரைக்கப்படுகிறது"
+
+#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
+#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
+#: crates/keycord-keys/src/error.rs:253
+msgid "Reconnect the FIDO2 security key and try again."
+msgstr "FIDO2 பாதுகாப்பு விசையை மீண்டும் இணைத்துவிட்டு முயலவும்."
+
+#: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
+msgid "Reconnect the hardware key and try again."
+msgstr "வன்பொருள் விசையை மீண்டும் இணைத்துவிட்டு முயலவும்."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:112
+msgid "Reduced secret exposure in GNOME search, command failures, and logs."
+msgstr "GNOME தேடல், கட்டளைத் தோல்விகள் மற்றும் பதிவுகளில் இரகசியங்கள் வெளிப்படுவது குறைக்கப்பட்டது."
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:126
+msgid "Refresh current list"
+msgstr "தற்போதைய பட்டியலைப் புதுப்பி"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1138
+msgid "Release asset '{}' has an invalid SHA-256 digest."
+msgstr "வெளியீட்டுக் கோப்பு '{}'-இன் SHA-256 சுருக்க மதிப்பு செல்லாது."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1131
+msgid "Release asset '{}' has an unsupported digest format."
+msgstr "வெளியீட்டுக் கோப்பு '{}'-இன் சுருக்க மதிப்பு வடிவம் ஆதரிக்கப்படவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1124
+msgid "Release asset '{}' is missing a GitHub SHA-256 digest."
+msgstr "வெளியீட்டுக் கோப்பு '{}'-இல் GitHub SHA-256 சுருக்க மதிப்பு இல்லை."
+
+#: crates/keycord-git/src/ui/remote.rs:110
+msgid "Remote URL"
+msgstr "remote URL"
+
+#: crates/keycord-git/src/ui/store_page.rs:635
+msgid "Remote added."
+msgstr "remote சேர்க்கப்பட்டது."
+
+#: crates/keycord-git/src/ui/store_page.rs:360
+msgid "Remote commits are ready to merge into '{branch}'."
+msgstr "remote commit-கள் '{branch}'-இல் merge செய்யத் தயாராக உள்ளன."
+
+#: crates/keycord-git/src/ui/store_page.rs:300
+msgid "Remote commits are waiting to sync."
+msgstr "remote commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/remote.rs:107
+msgid "Remote name"
+msgstr "remote பெயர்"
+
+#: crates/keycord-git/src/ui/store_page.rs:535
+msgid "Remote removed."
+msgstr "remote அகற்றப்பட்டது."
+
+#: crates/keycord-git/src/ui/store_page.rs:519
+msgid "Remote updated."
+msgstr "remote புதுப்பிக்கப்பட்டது."
+
+#: crates/keycord-git/src/ui/audit.rs:1055
+msgid "Remote-tracking branch"
+msgstr "remote-ஐக் கண்காணிக்கும் branch"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:39
+msgid "Remotes"
+msgstr "remote-கள்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:406
+msgid "Remove empty fields"
+msgstr "காலிப் புலங்களை அகற்று"
+
+#: crates/keycord-lifecycle/src/setup.rs:70
+msgid "Remove from app menu"
+msgstr "செயலிப் பட்டியிலிருந்து அகற்று"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:627
+msgid "Remove key"
+msgstr "விசையை அகற்று"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:510
+msgid "Remove key file"
+msgstr "விசைக் கோப்பை அகற்று"
+
+#: crates/keycord-entries/src/integrated.rs:697
+msgid "Remove password for {label}"
+msgstr "{label} என்பதற்கான கடவுச்சொல்லை அகற்று"
+
+#: crates/keycord-git/src/remotes.rs:111
+msgid "Remove password store Git remote"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote-ஐ அகற்று"
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:44
+msgid "Remove recipient"
+msgstr "பெறுநரை அகற்று"
+
+#: crates/keycord-git/src/ui/store_page.rs:485
+msgid "Remove remote"
+msgstr "remote-ஐ அகற்று"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:693
+msgid "Removed empty fields."
+msgstr "காலிப் புலங்கள் அகற்றப்பட்டன."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:121
+msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
+msgstr "Flatpak செயலியிலிருந்து FIDO2 சார்ந்த கடவுச்சொல் சேமிப்பக அம்சம் அகற்றப்பட்டது."
+
+#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:62
+msgid "Rename pass file"
+msgstr "pass கோப்பின் பெயரை மாற்று"
+
+#: crates/keycord-entries/src/host.rs:348
+msgid "Rename password entry"
+msgstr "கடவுச்சொல் பதிவின் பெயரை மாற்று"
+
+#: crates/keycord-entries/src/integrated.rs:659
+msgid "Rename password from {old_label} to {new_label}"
+msgstr "கடவுச்சொல்லின் பெயரை {old_label} என்பதிலிருந்து {new_label} என மாற்று"
+
+#: crates/keycord-git/src/remotes.rs:77
+msgid "Rename password store Git remote"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote-இன் பெயரை மாற்று"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:101
+msgid "Rename selected pass file"
+msgstr "தேர்ந்தெடுத்த pass கோப்பின் பெயரை மாற்று"
+
+#: crates/keycord-entries/src/strength.rs:36
+msgid "Repeated single character"
+msgstr "ஒரே எழுத்து மீண்டும் வருகிறது"
+
+#: crates/keycord-git/src/ui/store_page.rs:580
+#: crates/keycord-shell/src/application.rs:318
+msgid "Repository"
+msgstr "களஞ்சியம்"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:37
+msgid "Repository URL"
+msgstr "களஞ்சிய URL"
+
+#: crates/keycord-git/src/ui/store_page.rs:269
+msgid "Repository found and ready for remote management."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது; remote-களை நிர்வகிக்கத் தயாராக உள்ளது."
+
+#: crates/keycord-git/src/ui/store_page.rs:274
+msgid "Repository found. Check out a branch before syncing."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. ஒத்திசைக்கும் முன் ஒரு branch-ஐ checkout செய்யவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:271
+msgid "Repository found. Create the first commit on '{branch}' before syncing."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. ஒத்திசைக்கும் முன் '{branch}'-இல் முதல் commit-ஐ உருவாக்கவும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:261
+msgid "Repository found. Local and remote commits are waiting to sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. உள்ளூர் மற்றும் remote commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:240
+msgid "Repository found. Local changes must be committed or discarded before sync, and local and remote commits are waiting to sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்ய வேண்டும் அல்லது கைவிட வேண்டும்; உள்ளூர் மற்றும் remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:245
+msgid "Repository found. Local changes must be committed or discarded before sync, and local commits are waiting to sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்ய வேண்டும் அல்லது கைவிட வேண்டும்; உள்ளூர் commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:250
+msgid "Repository found. Local changes must be committed or discarded before sync, and remote commits are waiting to sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்ய வேண்டும் அல்லது கைவிட வேண்டும்; remote commit-களும் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:255
+msgid "Repository found. Local changes must be committed or discarded before sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. ஒத்திசைக்கும் முன் உள்ளூர் மாற்றங்களை commit செய்ய வேண்டும் அல்லது கைவிட வேண்டும்."
+
+#: crates/keycord-git/src/ui/store_page.rs:264
+msgid "Repository found. Local commits are waiting to sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. உள்ளூர் commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-git/src/ui/store_page.rs:267
+msgid "Repository found. Remote commits are waiting to sync."
+msgstr "களஞ்சியம் கண்டறியப்பட்டது. remote commit-கள் ஒத்திசைக்கக் காத்திருக்கின்றன."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:206
+msgid "Require all selected private keys"
+msgstr "தேர்ந்தெடுத்த தனிப்பட்ட விசைகள் அனைத்தும் தேவை"
+
+#: crates/keycord-git/src/integrated.rs:141
+msgid "Resolve Git {role} identity"
+msgstr "Git {role} அடையாளத்தைக் கண்டறி"
+
+#: crates/keycord-lifecycle/src/setup.rs:447
+msgid "Resource not found: {e}"
+msgstr "வளம் கிடைக்கவில்லை: {e}"
+
+#: crates/keycord-shell/src/optional_permission.rs:13
+msgid "Restart app to apply."
+msgstr "மாற்றத்தைப் பயன்படுத்தச் செயலியை மீண்டும் தொடங்கவும்."
+
+#: crates/keycord-git/src/operations.rs:55
+#: crates/keycord-stores/src/ui/management/clone.rs:143
+#: crates/keycord-stores/src/ui/management/clone.rs:162
+#: crates/keycord-stores/src/ui/management/clone.rs:63
+#: crates/keycord-stores/src/ui/management/clone.rs:68
+msgid "Restore password store"
+msgstr "கடவுச்சொல் சேமிப்பகத்தை மீட்டெடு"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:103
+#: crates/keycord-stores/src/ui/management/clone.rs:243
+msgid "Restore stopped unexpectedly."
+msgstr "மீட்டெடுப்பு எதிர்பாராமல் நின்றுவிட்டது."
+
+#: crates/keycord-git/data/window-header-action.fragment.ui:4
+msgid "Restore store"
+msgstr "சேமிப்பகத்தை மீட்டெடு"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:26
+msgid "Restoring password store"
+msgstr "கடவுச்சொல் சேமிப்பகம் மீட்டெடுக்கப்படுகிறது"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:68
+msgid "Restoring store"
+msgstr "சேமிப்பகம் மீட்டெடுக்கப்படுகிறது"
+
+#: crates/keycord-preferences/src/ui/settings.rs:403
+msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
+msgstr "தற்போதைய branch-இன் பெறுநர்களால் கையொப்பமிட்டவரை அங்கீகரிக்க முடியாதபோது, commit வரலாற்றிலுள்ள பெறுநர் கோப்புகளைக் கொண்டு அங்கீகாரத்தை மீண்டும் முயற்சிக்கவும்."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:726
+msgid "Reverted."
+msgstr "மீளமைக்கப்பட்டது."
+
+#: crates/keycord-entries/data/window-header-editor.fragment.ui:4
+#: crates/keycord-entries/data/window-pages.fragment.ui:429
+#: crates/keycord-entries/data/window-pages.fragment.ui:430
+#: crates/keycord-entries/src/ui/actions.rs:30
+msgid "Save"
+msgstr "சேமி"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:12
+msgid "Save current page or sync from home"
+msgstr "தற்போதைய பக்கத்தைச் சேமிக்கவும் அல்லது முகப்பிலிருந்து ஒத்திசைக்கவும்"
+
+#: src/window/build/mod.rs:228
+msgid "Save or discard your current changes before importing a passkey."
+msgstr "கடவுச்சாவியை இறக்குமதி செய்யும் முன் தற்போதைய மாற்றங்களைச் சேமிக்கவும் அல்லது கைவிடவும்."
+
+#: crates/keycord-entries/src/host.rs:320
+msgid "Save password entry"
+msgstr "கடவுச்சொல் பதிவைச் சேமி"
+
+#: src/composition/backend/host.rs:92
+msgid "Save password store recipients"
+msgstr "கடவுச்சொல் சேமிப்பகப் பெறுநர்களைச் சேமி"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:270
+msgid "Saved."
+msgstr "சேமிக்கப்பட்டது."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:185
+msgid "Saving recipients file"
+msgstr "பெறுநர் கோப்பு சேமிக்கப்படுகிறது"
+
+#: crates/keycord-git/src/ui/signing.rs:143
+msgid "Saving without a Git signature."
+msgstr "Git கையொப்பமின்றிச் சேமிக்கப்படுகிறது."
+
+#: crates/keycord-entries/data/window-tool-rows.fragment.ui:25
+#: crates/keycord-entries/src/ui/tools/mod.rs:55
+#: crates/keycord-entries/src/ui/tools/mod.rs:57
+msgid "Scan the current list for passwords that fail basic checks."
+msgstr "அடிப்படைச் சோதனைகளில் தோல்வியடையும் கடவுச்சொற்களுக்காகத் தற்போதைய பட்டியலைச் சோதிக்கவும்."
+
+#: crates/keycord-shell/src/qr_code.rs:89
+msgid "Scan to use this value on another device."
+msgstr "இந்த மதிப்பை வேறொரு சாதனத்தில் பயன்படுத்த ஸ்கேன் செய்யவும்."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:58
+msgid "Scanning passwords"
+msgstr "கடவுச்சொற்கள் சோதிக்கப்படுகின்றன"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:10
+msgid "Search Git remotes"
+msgstr "Git remote-களைத் தேடு"
+
+#: crates/keycord-docs/data/window-pages.fragment.ui:10
+msgid "Search docs"
+msgstr "ஆவணங்களைத் தேடு"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:9
+msgid "Search fields"
+msgstr "புலங்களைத் தேடு"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:11
+msgid "Search names, stores, or fields"
+msgstr "பெயர்கள், சேமிப்பகங்கள் அல்லது புலங்களைத் தேடு"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:10
+msgid "Search preferences"
+msgstr "விருப்பங்களைத் தேடு"
+
+#: crates/keycord-git/data/window-audit-page.fragment.ui:11
+msgid "Search results"
+msgstr "தேடல் முடிவுகள்"
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:138
+msgid "Search store keys"
+msgstr "சேமிப்பக விசைகளைத் தேடு"
+
+#: crates/keycord-shell/data/window.ui:63
+msgid "Search tools"
+msgstr "கருவிகளைத் தேடு"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:49
+msgid "Search values"
+msgstr "மதிப்புகளைத் தேடு"
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:89
+msgid "Search weak passwords"
+msgstr "பலவீனமான கடவுச்சொற்களைத் தேடு"
+
+#: crates/keycord-fido/src/ui.rs:337
+msgid "Security key PIN"
+msgstr "பாதுகாப்பு விசை PIN"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:111
+#: crates/keycord-stores/src/ui/management/import.rs:300
+#: crates/keycord-stores/src/ui/management/import.rs:318
+#: crates/keycord-stores/src/ui/management/mod.rs:252
+msgid "Select"
+msgstr "தேர்ந்தெடு"
+
+#: crates/keycord-git/src/ui/audit.rs:54
+msgid "Select at least one store and one branch in the filter menu."
+msgstr "வடிப்பான் பட்டியில் குறைந்தது ஒரு சேமிப்பகத்தையும் ஒரு branch-ஐயும் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:4
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:26
+#: crates/keycord-stores/data/window-pages.fragment.ui:170
+msgid "Select the private keys that can unlock passwords in this store."
+msgstr "இந்தச் சேமிப்பகத்திலுள்ள கடவுச்சொற்களின் பூட்டைத் திறக்கக்கூடிய தனிப்பட்ட விசைகளைத் தேர்ந்தெடுக்கவும்."
+
+#: crates/keycord-entries/src/strength.rs:46
+msgid "Sequential characters"
+msgstr "தொடர்வரிசை எழுத்துகள்"
+
+#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
+#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
+#: crates/keycord-keys/src/error.rs:8
+msgid "Set a PIN on the FIDO2 security key first."
+msgstr "முதலில் FIDO2 பாதுகாப்பு விசையில் PIN ஒன்றை அமைக்கவும்."
+
+#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
+msgid "Set security key PIN"
+msgstr "பாதுகாப்பு விசை PIN-ஐ அமை"
+
+#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
+msgid "Set security key PIN (Experimental FIDO2)"
+msgstr "பாதுகாப்பு விசை PIN-ஐ அமை (சோதனைநிலை FIDO2)"
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
+#: crates/keycord-keys/src/ui/widgets.rs:132
+msgid "Set up new hardware key (Experimental)"
+msgstr "புதிய வன்பொருள் விசையை அமை (சோதனைநிலை)"
+
+#: crates/keycord-fido/src/error.rs:29
+msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
+msgstr "இந்த build-இல் FIDO2 பாதுகாப்பு விசை PIN-ஐ அமைப்பது Linux-இல் மட்டுமே ஆதரிக்கப்படுகிறது."
+
+#: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
+msgid "Setting up hardware key (Experimental)"
+msgstr "வன்பொருள் விசை அமைக்கப்படுகிறது (சோதனைநிலை)"
+
+#: crates/keycord-entries/src/strength.rs:57
+msgid "Short with limited character variety"
+msgstr "குறுகியது; பலவகை எழுத்துகள் போதவில்லை"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:23
+msgid "Show Logs"
+msgstr "பதிவுகளைக் காட்டு"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:357
+msgid "Show OTP as QR code"
+msgstr "OTP-ஐ QR குறியீடாகக் காட்டு"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:184
+msgid "Show disabled options instead of hiding them"
+msgstr "முடக்கப்பட்ட விருப்பங்களை மறைக்காமல் காட்டு"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:119
+msgid "Show hidden and duplicate entries"
+msgstr "மறைக்கப்பட்ட மற்றும் நகல் பதிவுகளைக் காட்டு"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:138
+#: crates/keycord-entries/src/ui/list/row.rs:131
+msgid "Show password as QR code"
+msgstr "கடவுச்சொல்லை QR குறியீடாகக் காட்டு"
+
+#: crates/keycord-shell/data/shortcuts.ui:49
+msgid "Show shortcuts"
+msgstr "குறுக்குவழிகளைக் காட்டு"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:120
+msgid "Show the last folder segment as the username."
+msgstr "கடைசிக் கோப்புறைப் பகுதியைப் பயனர்பெயராகக் காட்டவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:106
+msgid "Show the pass file name as the username."
+msgstr "pass கோப்புப் பெயரைப் பயனர்பெயராகக் காட்டவும்."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:321
+msgid "Show username as QR code"
+msgstr "பயனர்பெயரை QR குறியீடாகக் காட்டு"
+
+#: crates/keycord-shell/src/clipboard.rs:84
+msgid "Show value as QR code"
+msgstr "மதிப்பை QR குறியீடாகக் காட்டு"
+
+#: crates/keycord-git/src/audit_types.rs:100
+msgid "Signer not in the branch recipient set"
+msgstr "கையொப்பமிட்டவர் branch பெறுநர் தொகுப்பில் இல்லை"
+
+#: crates/keycord-git/src/audit_types.rs:97
+msgid "Signing key not available in Keycord"
+msgstr "கையொப்ப விசை Keycord-இல் கிடைக்கவில்லை"
+
+#: crates/keycord-entries/src/strength.rs:63
+msgid "Single character class and short"
+msgstr "ஒரே எழுத்து வகை; நீளமும் குறைவு"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:139
+msgid "Sort entries by pass file name only."
+msgstr "பதிவுகளை pass கோப்புப் பெயரின்படி மட்டும் வரிசைப்படுத்தவும்."
+
+#: crates/keycord-git/src/integrated.rs:52
+msgid "Stage password store Git changes"
+msgstr "கடவுச்சொல் சேமிப்பக Git மாற்றங்களை stage செய்"
+
+#: crates/keycord-git/data/window-store-page.fragment.ui:49
+msgid "Status"
+msgstr "நிலை"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:99
+msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr "படி {current}/{total}: உங்கள் விசை ஒளிர்ந்தால் அதைத் தொடவும்."
+
+#: crates/keycord-entries/src/ui/new_item.rs:44
+#: crates/keycord-stores/data/window-pages.fragment.ui:18
+msgid "Store"
+msgstr "சேமிப்பகம்"
+
+#: crates/keycord-stores/src/ui/recipient_page/save.rs:194
+msgid "Store created, but it wasn't added."
+msgstr "சேமிப்பகம் உருவாக்கப்பட்டது; ஆனால் சேர்க்கப்படவில்லை."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:129
+#: crates/keycord-stores/src/recipient_page.rs:17
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:393
+#: crates/keycord-stores/src/ui/recipient_page/mod.rs:394
+msgid "Store keys"
+msgstr "சேமிப்பக விசைகள்"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:82
+#: crates/keycord-stores/src/ui/management/clone.rs:231
+msgid "Store restored."
+msgstr "சேமிப்பகம் மீட்டெடுக்கப்பட்டது."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:74
+msgid "Store subfolder"
+msgstr "சேமிப்பகத் துணைக்கோப்புறை"
+
+#: crates/keycord-git/src/ui/store_page.rs:711
+msgid "Store sync stopped unexpectedly."
+msgstr "சேமிப்பக ஒத்திசைவு எதிர்பாராமல் நின்றுவிட்டது."
+
+#: crates/keycord-git/src/ui/store_page.rs:698
+msgid "Store synced."
+msgstr "சேமிப்பகம் ஒத்திசைக்கப்பட்டது."
+
+#: crates/keycord-fido/src/service.rs:181
+#: crates/keycord-fido/src/service.rs:272
+msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
+msgstr "சேமிக்கப்பட்ட FIDO2 PIN செல்லுபடியான UTF-8 அல்ல: {error}"
+
+#: crates/keycord-entries/data/window-header-list.fragment.ui:47
+#: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
+#: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
+msgid "Stores"
+msgstr "சேமிப்பகங்கள்"
+
+#: crates/keycord-stores/src/ui/management/clone.rs:145
+msgid "Switch Backend to Host to restore a store from a Git repository."
+msgstr "Git களஞ்சியத்திலிருந்து சேமிப்பகத்தை மீட்டெடுக்கப் பின்தளத்தை Host-க்கு மாற்றவும்."
+
+#: crates/keycord-stores/src/management.rs:106
+msgid "Switch Backend to Host to use pass import."
+msgstr "pass import கருவியைப் பயன்படுத்தப் பின்தளத்தை Host-க்கு மாற்றவும்."
+
+#: crates/keycord-fido/src/ui.rs:32
+msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
+msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைகளைப் பயன்படுத்த Integrated பின்தளத்திற்கு மாறவும்."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:269
+#: crates/keycord-preferences/data/window-page.fragment.ui:321
+msgid "Symbols"
+msgstr "சிறப்புக் குறிகள்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:38
+msgid "Sync Git-backed stores, manage remotes, sign changes, and inspect history with commit verification details"
+msgstr "Git களஞ்சியமுள்ள சேமிப்பகங்களை ஒத்திசைக்கலாம், remote-களை நிர்வகிக்கலாம், மாற்றங்களில் கையொப்பமிடலாம், commit சரிபார்ப்பு விவரங்களுடன் வரலாற்றை ஆய்வு செய்யலாம்"
+
+#: crates/keycord-git/src/ui/store_page.rs:655
+msgid "Sync now"
+msgstr "இப்போது ஒத்திசை"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:70
+msgid "Sync private keys with the host"
+msgstr "தனிப்பட்ட விசைகளை host உடன் ஒத்திசை"
+
+#: crates/keycord-git/data/shortcuts-list-sync-item.fragment.ui:3
+msgid "Sync stores"
+msgstr "சேமிப்பகங்களை ஒத்திசை"
+
+#: crates/keycord-git/src/ui/store_page.rs:680
+msgid "Syncing store"
+msgstr "சேமிப்பகம் ஒத்திசைக்கப்படுகிறது"
+
+#: crates/keycord-git/src/ui/actions/enabled.rs:165
+msgid "Syncing stores"
+msgstr "சேமிப்பகங்கள் ஒத்திசைக்கப்படுகின்றன"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:63
+msgid "Text Editor"
+msgstr "உரைத் திருத்தி"
+
+#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
+#: crates/keycord-keys/src/error.rs:20
+msgid "That FIDO2 security key does not support the hmac-secret extension."
+msgstr "அந்த FIDO2 பாதுகாப்பு விசை hmac-secret நீட்சியை ஆதரிக்கவில்லை."
+
+#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
+#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
+#: crates/keycord-keys/src/error.rs:248
+msgid "That FIDO2 security key must support PIN protection."
+msgstr "அந்த FIDO2 பாதுகாப்பு விசை PIN பாதுகாப்பை ஆதரிக்க வேண்டும்."
+
+#: crates/keycord-keys/src/store/storage.rs:1089
+msgid "That FIDO2-protected key could not be exported."
+msgstr "அந்த FIDO2 பாதுகாப்புள்ள விசையை ஏற்றுமதி செய்ய முடியவில்லை."
+
+#: crates/keycord-fido/src/service.rs:155
+msgid "That FIDO2-protected key data is invalid."
+msgstr "அந்த FIDO2 பாதுகாப்புள்ள விசைத் தரவு செல்லாது."
+
+#: crates/keycord-keys/src/store/manifest.rs:104
+#: crates/keycord-keys/src/store/storage.rs:160
+#: crates/keycord-keys/src/store/unlock.rs:295
+msgid "That FIDO2-protected key is invalid."
+msgstr "அந்த FIDO2 பாதுகாப்புள்ள விசை செல்லாது."
+
+#: crates/keycord-keys/src/cert.rs:178
+msgid "That OpenPGP key file does not include a private key."
+msgstr "அந்த OpenPGP விசைக் கோப்பில் தனிப்பட்ட விசை இல்லை."
+
+#: crates/keycord-keys/src/error.rs:271
+msgid "That data does not contain a private key."
+msgstr "அந்தத் தரவில் தனிப்பட்ட விசை இல்லை."
+
+#: crates/keycord-keys/src/error.rs:221
+msgid "That file does not contain a private key."
+msgstr "அந்தக் கோப்பில் தனிப்பட்ட விசை இல்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:796
+#: crates/keycord-keys/src/store/unlock.rs:348
+msgid "That hardware key cannot decrypt password store entries."
+msgstr "அந்த வன்பொருள் விசையால் கடவுச்சொல் சேமிப்பகப் பதிவுகளை மறைவிலக்க முடியாது."
+
+#: crates/keycord-keys/src/store/storage.rs:1084
+msgid "That hardware-backed key does not have an exportable private key."
+msgstr "அந்த வன்பொருள் சார்ந்த விசையில் ஏற்றுமதி செய்யக்கூடிய தனிப்பட்ட விசை இல்லை."
+
+#: crates/keycord-entries/src/ui/actions.rs:89
+msgid "That item is missing its store."
+msgstr "அந்த உருப்படியின் சேமிப்பகத்தைக் காணவில்லை."
+
+#: crates/keycord-entries/src/error.rs:101
+#: crates/keycord-entries/src/error.rs:91
+msgid "That item no longer exists."
+msgstr "அந்த உருப்படி இனி இல்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:1061
+msgid "That key does not have an exportable public key."
+msgstr "அந்த விசையில் ஏற்றுமதி செய்யக்கூடிய பொது விசை இல்லை."
+
+#: crates/keycord-entries/src/integrated.rs:549
+#: crates/keycord-entries/src/integrated.rs:630
+msgid "That password entry already exists."
+msgstr "அந்தக் கடவுச்சொல் பதிவு ஏற்கெனவே உள்ளது."
+
+#: crates/keycord-keys/src/cert.rs:299
+#: crates/keycord-keys/src/store/storage.rs:579
+#: crates/keycord-keys/src/store/storage.rs:601
+#: crates/keycord-keys/src/store/unlock.rs:338
+msgid "That private key cannot decrypt password store entries."
+msgstr "அந்தத் தனிப்பட்ட விசையால் கடவுச்சொல் சேமிப்பகப் பதிவுகளை மறைவிலக்க முடியாது."
+
+#: crates/keycord-git/src/integrated.rs:323
+msgid "That private key cannot sign Git commits."
+msgstr "அந்தத் தனிப்பட்ட விசையால் Git commit-களில் கையொப்பமிட முடியாது."
+
+#: crates/keycord-keys/src/store/mod.rs:8
+msgid "That private key is not stored in the app."
+msgstr "அந்தத் தனிப்பட்ட விசை செயலியில் சேமிக்கப்படவில்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:772
+msgid "That private key must be password protected before you can import it."
+msgstr "அந்தத் தனிப்பட்ட விசையை இறக்குமதி செய்வதற்கு முன் கடவுச்சொல்லால் பாதுகாக்க வேண்டும்."
+
+#: crates/keycord-keys/src/store/storage.rs:809
+msgid "That public key does not match the hardware decryption key."
+msgstr "அந்தப் பொது விசை வன்பொருள் மறைவிலக்க விசையுடன் பொருந்தவில்லை."
+
+#: crates/keycord-keys/src/store/storage.rs:823
+msgid "That public key does not match the hardware signing key."
+msgstr "அந்தப் பொது விசை வன்பொருள் கையொப்ப விசையுடன் பொருந்தவில்லை."
+
+#: crates/keycord-git/src/ui/remote.rs:70
+msgid "That remote URL already exists."
+msgstr "அந்த remote URL ஏற்கெனவே உள்ளது."
+
+#: crates/keycord-git/src/ui/remote.rs:64
+msgid "That remote name already exists."
+msgstr "அந்த remote பெயர் ஏற்கெனவே உள்ளது."
+
+#: crates/keycord-entries/src/ui/tools/export.rs:30
+msgid "The CSV file will contain every password and field in plaintext. Anyone with access to the file can read them."
+msgstr "CSV கோப்பில் ஒவ்வொரு கடவுச்சொல்லும் புலமும் மறையாக்கப்படாத உரையில் இருக்கும். கோப்பை அணுகக்கூடிய எவராலும் அவற்றைப் படிக்க முடியும்."
+
+#: crates/keycord-passkey/src/request.rs:100
+msgid "The CXP request does not contain a recognized HPKE mode."
+msgstr "CXP கோரிக்கையில் அறியப்பட்ட HPKE முறை இல்லை."
+
+#: crates/keycord-passkey/src/request.rs:98
+msgid "The CXP request does not offer the supported deflate archive format."
+msgstr "CXP கோரிக்கை ஆதரிக்கப்படும் deflate காப்பக வடிவத்தை வழங்கவில்லை."
+
+#: crates/keycord-fido/src/native.rs:228
+msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
+msgstr "FIDO2 பாதுகாப்பு விசை PIN-இல் ஆதரிக்கப்படாத NUL byte உள்ளது."
+
+#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
+msgid "The FIDO2 security key PIN is incorrect."
+msgstr "FIDO2 பாதுகாப்பு விசை PIN தவறானது."
+
+#: crates/keycord-fido/src/native.rs:361
+msgid "The FIDO2 security key did not return a credential identifier."
+msgstr "FIDO2 பாதுகாப்பு விசை நற்சான்று அடையாளங்காட்டியைத் தரவில்லை."
+
+#: crates/keycord-keys/src/lib.rs:38
+msgid "The available private keys cannot decrypt this item."
+msgstr "கிடைக்கும் தனிப்பட்ட விசைகளால் இந்த உருப்படியை மறைவிலக்க முடியாது."
+
+#: crates/keycord-keys/src/hardware/linux.rs:247
+#: crates/keycord-keys/src/store/storage.rs:853
+msgid "The connected hardware key does not match the stored decryption key."
+msgstr "இணைக்கப்பட்ட வன்பொருள் விசை சேமிக்கப்பட்ட மறைவிலக்க விசையுடன் பொருந்தவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:237
+#: crates/keycord-keys/src/store/storage.rs:844
+msgid "The connected hardware key does not match the stored signing key."
+msgstr "இணைக்கப்பட்ட வன்பொருள் விசை சேமிக்கப்பட்ட கையொப்ப விசையுடன் பொருந்தவில்லை."
+
+#: crates/keycord-git/src/ui/audit.rs:57
+msgid "The current filters don't match any branches in the selected stores."
+msgstr "தற்போதைய வடிப்பான்கள் தேர்ந்தெடுத்த சேமிப்பகங்களிலுள்ள எந்த branch-உடனும் பொருந்தவில்லை."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:47
+msgid "The current list doesn't have any searchable pass fields."
+msgstr "தற்போதைய பட்டியலில் தேடக்கூடிய pass புலங்கள் இல்லை."
+
+#: crates/keycord-passkey/src/request.rs:78
+msgid "The file is not a CXP passkey export request."
+msgstr "இந்தக் கோப்பு CXP கடவுச்சாவி ஏற்றுமதிக் கோரிக்கை அல்ல."
+
+#: crates/keycord-runtime/src/i18n.rs:101
+msgid "The gettext domain contains an embedded NUL byte."
+msgstr "gettext domain-இல் உட்பொதிந்த NUL byte உள்ளது."
+
+#: crates/keycord-runtime/src/i18n.rs:104
+msgid "The gettext locale path contains an embedded NUL byte."
+msgstr "gettext locale பாதையில் உட்பொதிந்த NUL byte உள்ளது."
+
+#: crates/keycord-keys/src/error.rs:235
+msgid "The hardware key PIN is blocked."
+msgstr "வன்பொருள் விசை PIN தடுக்கப்பட்டுள்ளது."
+
+#: crates/keycord-keys/src/hardware/linux.rs:210
+msgid "The hardware key did not accept the requested new PIN."
+msgstr "வன்பொருள் விசை கோரப்பட்ட புதிய PIN-ஐ ஏற்கவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:328
+msgid "The hardware key did not return a decryption fingerprint."
+msgstr "வன்பொருள் விசை மறைவிலக்கக் கைரேகையைத் தரவில்லை."
+
+#: crates/keycord-keys/src/hardware/linux.rs:320
+msgid "The hardware key did not return a signing fingerprint."
+msgstr "வன்பொருள் விசை கையொப்பக் கைரேகையைத் தரவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/windows.rs:21
+msgid "The installer is ready to run."
+msgstr "நிறுவி இயக்கத் தயாராக உள்ளது."
+
+#: crates/keycord-passkey/src/credential.rs:316
+msgid "The passkey is missing a {label}."
+msgstr "கடவுச்சாவியில் {label} புலம் இல்லை."
+
+#: crates/keycord-passkey/src/request.rs:90
+msgid "The passkey request contains malformed JSON: {0}"
+msgstr "கடவுச்சாவிக் கோரிக்கையில் தவறான வடிவிலுள்ள JSON உள்ளது: {0}"
+
+#: crates/keycord-passkey/src/request.rs:88
+msgid "The passkey request is larger than the {limit}-byte limit."
+msgstr "கடவுச்சாவிக் கோரிக்கை {limit}-byte வரம்பைவிடப் பெரியது."
+
+#: crates/keycord-passkey/src/request.rs:92
+msgid "The passkey request is malformed: {0}"
+msgstr "கடவுச்சாவிக் கோரிக்கையின் வடிவம் தவறானது: {0}"
+
+#: crates/keycord-passkey/src/request.rs:80
+msgid "The passkey request source is not a regular local file: {path:?}"
+msgstr "கடவுச்சாவிக் கோரிக்கையின் மூலம் வழக்கமான உள்ளூர் கோப்பு அல்ல: {path:?}"
+
+#: crates/keycord-passkey/src/credential.rs:402
+msgid "The passkey {label} is empty."
+msgstr "கடவுச்சாவியின் {label} புலம் காலியாக உள்ளது."
+
+#: crates/keycord-passkey/src/credential.rs:421
+msgid "The passkey {label} must use unpadded base64url."
+msgstr "கடவுச்சாவியின் {label} புலம் padding இல்லாத base64url-ஐப் பயன்படுத்த வேண்டும்."
+
+#: src/window/build/mod.rs:226
+msgid "The password editor is not available."
+msgstr "கடவுச்சொல் திருத்தி கிடைக்கவில்லை."
+
+#: crates/keycord-keys/src/ui/key_management/private.rs:58
+msgid "The passwords do not match."
+msgstr "கடவுச்சொற்கள் பொருந்தவில்லை."
+
+#: crates/keycord-keys/src/cert.rs:267
+msgid "The private key password is incorrect."
+msgstr "தனிப்பட்ட விசைக் கடவுச்சொல் தவறானது."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:106
+msgid "The private-key inventory worker stopped unexpectedly."
+msgstr "தனிப்பட்ட விசைப் பட்டியல் பணிச் செயல்முறை எதிர்பாராமல் நின்றுவிட்டது."
+
+#: crates/keycord-fido/src/ui.rs:307
+msgid "The security key PINs do not match."
+msgstr "பாதுகாப்பு விசை PIN-கள் பொருந்தவில்லை."
+
+#: crates/keycord-passkey/src/ui.rs:133
+msgid "The selected file is not a supported local CXP passkey request. {error}"
+msgstr "தேர்ந்தெடுத்த கோப்பு ஆதரிக்கப்படும் உள்ளூர் CXP கடவுச்சாவிக் கோரிக்கை அல்ல. {error}"
+
+#: crates/keycord-stores/src/error.rs:8 crates/keycord-stores/src/paths.rs:86
+msgid "The selected password store path is not a folder."
+msgstr "தேர்ந்தெடுத்த கடவுச்சொல் சேமிப்பகப் பாதை கோப்புறை அல்ல."
+
+#: crates/keycord-stores/src/error.rs:35
+msgid "The selected store path is not a folder."
+msgstr "தேர்ந்தெடுத்த சேமிப்பகப் பாதை கோப்புறை அல்ல."
+
+#: crates/keycord-passkey/src/credential.rs:156
+msgid "The stored JSON is not a passkey credential."
+msgstr "சேமிக்கப்பட்ட JSON கடவுச்சாவி நற்சான்று அல்ல."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:368
+msgid "The stored public key has no signing subkey."
+msgstr "சேமிக்கப்பட்ட பொது விசையில் கையொப்பத் துணைவிசை இல்லை."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:349
+msgid "The stored public key has no transport-encryption subkey."
+msgstr "சேமிக்கப்பட்ட பொது விசையில் போக்குவரத்து மறையாக்கத் துணைவிசை இல்லை."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:336
+msgid "The stored public key is missing the hardware decryption key."
+msgstr "சேமிக்கப்பட்ட பொது விசையில் வன்பொருள் மறைவிலக்க விசை இல்லை."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:356
+msgid "The stored public key is missing the hardware signing key."
+msgstr "சேமிக்கப்பட்ட பொது விசையில் வன்பொருள் கையொப்ப விசை இல்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:143
+msgid "The update helper cleanup directory does not match the downloaded update location."
+msgstr "புதுப்பிப்பு உதவியின் தூய்மைப்படுத்தல் கோப்பகம் பதிவிறக்கப்பட்ட புதுப்பிப்பின் இருப்பிடத்துடன் பொருந்தவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:139
+msgid "The update helper executable has no parent directory."
+msgstr "புதுப்பிப்பு உதவி இயங்குநிலைக் கோப்புக்குப் பெற்றோர் கோப்பகம் இல்லை."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:40
+msgid "The update is ready to install."
+msgstr "புதுப்பிப்பு நிறுவப்படத் தயாராக உள்ளது."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:181
+msgid "These lines are added after the password line when you create a new password entry. Leave it empty to start with a blank pass file."
+msgstr "புதிய கடவுச்சொல் பதிவை உருவாக்கும்போது கடவுச்சொல் வரிக்குப் பிறகு இந்த வரிகள் சேர்க்கப்படும். காலியான pass கோப்புடன் தொடங்க இதைக் காலியாக விடவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:222
+msgid "These settings are used when you generate or regenerate a password from the editor."
+msgstr "திருத்தியிலிருந்து கடவுச்சொல்லை உருவாக்கும்போதோ மீண்டும் உருவாக்கும்போதோ இந்த அமைப்புகள் பயன்படுத்தப்படும்."
+
+#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
+msgid "This FIDO2 security key can't open your items."
+msgstr "இந்த FIDO2 பாதுகாப்பு விசையால் உங்கள் உருப்படிகளைத் திறக்க முடியாது."
+
+#: crates/keycord-git/src/ui/audit.rs:64
+msgid "This branch doesn't have any commits available to audit."
+msgstr "இந்த branch-இல் தணிக்கை செய்யக்கூடிய commit எதுவும் இல்லை."
+
+#: crates/keycord-passkey/src/credential.rs:456
+msgid "This build does not include passkey support."
+msgstr "இந்த build-இல் கடவுச்சாவி ஆதரவு இல்லை."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:51
+msgid "This field has no searchable values."
+msgstr "இந்தப் புலத்தில் தேடக்கூடிய மதிப்புகள் இல்லை."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:269
+msgid "This hardware key already has OpenPGP keys. Import the matching public key file instead."
+msgstr "இந்த வன்பொருள் விசையில் ஏற்கெனவே OpenPGP விசைகள் உள்ளன. அதற்குப் பதில் பொருந்தும் பொது விசைக் கோப்பை இறக்குமதி செய்யவும்."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:292
+msgid "This hardware key already has OpenPGP keys. Use Add hardware key (Experimental) or import the matching public key file instead."
+msgstr "இந்த வன்பொருள் விசையில் ஏற்கெனவே OpenPGP விசைகள் உள்ளன. அதற்குப் பதில் வன்பொருள் விசையைச் சேர் (சோதனைநிலை) என்பதைப் பயன்படுத்தவும் அல்லது பொருந்தும் பொது விசைக் கோப்பை இறக்குமதி செய்யவும்."
+
+#: crates/keycord-keys/src/error.rs:197 crates/keycord-keys/src/error.rs:236
+msgid "This hardware key can't open your items."
+msgstr "இந்த வன்பொருள் விசையால் உங்கள் உருப்படிகளைத் திறக்க முடியாது."
+
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:275
+msgid "This hardware key has no OpenPGP key yet. Use Set up new hardware key (Experimental) instead."
+msgstr "இந்த வன்பொருள் விசையில் இன்னும் OpenPGP விசை இல்லை. அதற்குப் பதில் புதிய வன்பொருள் விசையை அமை (சோதனைநிலை) என்பதைப் பயன்படுத்தவும்."
+
+#: crates/keycord-entries/src/ui/list/row.rs:50
+msgid "This item can't be opened with the private keys currently available in the app. File actions are still available, but copy and move-to-store are disabled until a compatible private key is available."
+msgstr "செயலியில் தற்போது கிடைக்கும் தனிப்பட்ட விசைகளால் இந்த உருப்படியைத் திறக்க முடியாது. கோப்புச் செயல்களை இன்னும் பயன்படுத்தலாம்; ஆனால் இணக்கமான தனிப்பட்ட விசை கிடைக்கும் வரை நகலெடுப்பதும் சேமிப்பகத்திற்கு நகர்த்துவதும் முடக்கப்பட்டுள்ளன."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:653
+msgid "This item does not contain an armored private key."
+msgstr "இந்த உருப்படியில் கவசமிட்ட தனிப்பட்ட விசை இல்லை."
+
+#: crates/keycord-entries/src/error.rs:40
+#: crates/keycord-entries/src/error.rs:80 crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-keys/src/error.rs:186 crates/keycord-keys/src/error.rs:223
+#: crates/keycord-stores/src/error.rs:38
+msgid "This key can't open your items."
+msgstr "இந்த விசையால் உங்கள் உருப்படிகளைத் திறக்க முடியாது."
+
+#: crates/keycord-keys/src/cert.rs:290
+#: crates/keycord-keys/src/store/unlock.rs:224
+msgid "This private key is password protected."
+msgstr "இந்தத் தனிப்பட்ட விசை கடவுச்சொல்லால் பாதுகாக்கப்பட்டுள்ளது."
+
+#: crates/keycord-keys/src/store/unlock.rs:267
+msgid "This private key requires a FIDO2 security key."
+msgstr "இந்தத் தனிப்பட்ட விசைக்கு FIDO2 பாதுகாப்பு விசை தேவை."
+
+#: crates/keycord-keys/src/store/unlock.rs:288
+msgid "This private key requires a different unlock method."
+msgstr "இந்தத் தனிப்பட்ட விசைக்கு வேறொரு பூட்டுத் திறப்பு முறை தேவை."
+
+#: crates/keycord-keys/src/store/unlock.rs:244
+msgid "This private key requires a hardware key."
+msgstr "இந்தத் தனிப்பட்ட விசைக்கு வன்பொருள் விசை தேவை."
+
+#: crates/keycord-stores/src/ui/recipient_page/list.rs:38
+msgid "This recipient is not available in the app."
+msgstr "இந்தப் பெறுநர் செயலியில் கிடைக்கவில்லை."
+
+#: crates/keycord-stores/src/recipient_page.rs:141
+msgid "This selected key is required while all selected private keys are required."
+msgstr "தேர்ந்தெடுத்த எல்லாத் தனிப்பட்ட விசைகளும் தேவைப்படும்வரை தேர்ந்தெடுத்த இந்த விசையும் தேவை."
+
+#: crates/keycord-shell/src/qr_code.rs:64
+msgid "This value is too long for a QR code."
+msgstr "QR குறியீட்டுக்கு இந்த மதிப்பு மிக நீளமாக உள்ளது."
+
+#: crates/keycord-entries/src/strength.rs:42
+msgid "Too short ({length} characters)"
+msgstr "மிகக் குறுகியது ({length} எழுத்துகள்)"
+
+#: crates/keycord-shell/data/shortcuts.ui:27
+#: crates/keycord-shell/data/window.ui:56
+#: crates/keycord-shell/data/window.ui:76
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:50
+msgid "Tools"
+msgstr "கருவிகள்"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:182
+#: crates/keycord-preferences/data/window-page.fragment.ui:226
+msgid "Total characters"
+msgstr "மொத்த எழுத்துகள்"
+
+#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
+#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
+#: crates/keycord-keys/src/error.rs:251
+msgid "Touch the FIDO2 security key and try again."
+msgstr "FIDO2 பாதுகாப்பு விசையைத் தொட்டுவிட்டு மீண்டும் முயலவும்."
+
+#: crates/keycord-fido/src/ui.rs:38
+msgid "Touch your key if it blinks."
+msgstr "உங்கள் விசை ஒளிர்ந்தால் அதைத் தொடவும்."
+
+#: crates/keycord-shell/src/application.rs:319
+msgid "Translate"
+msgstr "மொழிபெயர்ப்பு"
+
+#: src/translation_help.rs:51
+msgid "Translate Keycord into a new language or help improve an existing translation on Weblate."
+msgstr "Keycord-ஐப் புதிய மொழியில் மொழிபெயர்க்க அல்லது Weblate-இல் ஏற்கெனவே உள்ள மொழிபெயர்ப்பை மேம்படுத்த உதவுங்கள்."
+
+#: src/main.rs:85
+msgid "Translated by Nick."
+msgstr "Nick மொழிபெயர்த்தார்."
+
+#: crates/keycord-git/src/audit.rs:411
+msgid "Truncated git cat-file batch output."
+msgstr "துண்டிக்கப்பட்ட git cat-file batch வெளியீடு."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:49
+msgid "Try a different field filter."
+msgstr "வேறொரு புல வடிப்பானை முயலவும்."
+
+#: crates/keycord-git/src/ui/audit.rs:59
+msgid "Try a different search term or load more commits."
+msgstr "வேறொரு தேடல் சொல்லை முயலவும் அல்லது மேலும் commit-களை ஏற்றவும்."
+
+#: crates/keycord-docs/src/enabled.rs:21
+#: crates/keycord-entries/src/ui/tools/mod.rs:64
+#: crates/keycord-git/data/window-store-page.fragment.ui:64
+#: crates/keycord-preferences/data/window-page.fragment.ui:351
+#: crates/keycord-shell/data/window.ui:137
+#: crates/keycord-stores/data/window-pages.fragment.ui:232
+msgid "Try a different search term."
+msgstr "வேறொரு தேடல் சொல்லை முயலவும்."
+
+#: crates/keycord-entries/src/ui/tools/mod.rs:53
+msgid "Try a different value filter."
+msgstr "வேறொரு மதிப்பு வடிப்பானை முயலவும்."
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:812
+msgid "Try again from Preferences."
+msgstr "விருப்பங்களிலிருந்து மீண்டும் முயலவும்."
+
+#: crates/keycord-entries/src/ui/list/placeholder.rs:166
+#: crates/keycord-entries/src/ui/list/placeholder.rs:52
+msgid "Try another query or filter."
+msgstr "வேறொரு வினவல் அல்லது வடிப்பானை முயலவும்."
+
+#: crates/keycord-preferences/src/ui/settings.rs:291
+msgid "Turn On"
+msgstr "இயக்கு"
+
+#: crates/keycord-preferences/src/ui/settings.rs:287
+msgid "Turn on private-key sync?"
+msgstr "தனிப்பட்ட விசை ஒத்திசைவை இயக்கவா?"
+
+#: crates/keycord-entries/data/shortcuts-sections.fragment.ui:78
+msgid "Undo or revert changes"
+msgstr "மாற்றங்களைச் செயல்தவிர் அல்லது மீட்டமை"
+
+#: crates/keycord-entries/src/ui/undo.rs:131
+msgid "Undone."
+msgstr "செயல்தவிர்க்கப்பட்டது."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:421
+msgid "Unexpected Cv25519 ciphertext shape"
+msgstr "எதிர்பாராத Cv25519 ciphertext வடிவம்"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:435
+msgid "Unexpected NistP256 ciphertext shape"
+msgstr "எதிர்பாராத NistP256 ciphertext வடிவம்"
+
+#: crates/keycord-git/src/audit.rs:402
+msgid "Unexpected git cat-file object type '{object_type}'."
+msgstr "எதிர்பாராத git cat-file பொருள் வகை '{object_type}'."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:327
+msgid "Unexpected number of matching public subkeys: {count}"
+msgstr "பொருந்தும் பொது துணைவிசைகளின் எண்ணிக்கை எதிர்பாராதது: {count}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:256
+msgid "Unexpectedly read token information without a buffer."
+msgstr "buffer இல்லாமல் டோக்கன் தகவல் எதிர்பாராமல் படிக்கப்பட்டது."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:58
+msgid "Unlock a pass file"
+msgstr "pass கோப்பின் பூட்டைத் திற"
+
+#: crates/keycord-stores/src/recipient_page.rs:163
+msgid "Unlock another selected private key before clearing this one."
+msgstr "இந்த விசையைத் தேர்விலிருந்து நீக்கும் முன் தேர்ந்தெடுத்த மற்றொரு தனிப்பட்ட விசையின் பூட்டைத் திறக்கவும்."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-keys/src/ui/key_management/private.rs:250
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
+#: crates/keycord-keys/src/ui/unlock.rs:389
+#: crates/keycord-keys/src/ui/unlock.rs:56
+#: crates/keycord-keys/src/ui/unlock.rs:64 src/composition/entries_ui.rs:407
+msgid "Unlock key"
+msgstr "விசையின் பூட்டைத் திற"
+
+#: crates/keycord-entries/src/error.rs:79 crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-stores/src/error.rs:37
+msgid "Unlock the key in Preferences."
+msgstr "விருப்பங்களில் விசையின் பூட்டைத் திறக்கவும்."
+
+#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-keys/src/ui/unlock.rs:85
+msgid "Unlock your key to continue."
+msgstr "தொடர உங்கள் விசையின் பூட்டைத் திறக்கவும்."
+
+#: crates/keycord-keys/src/host_gpg.rs:31
+msgid "Unnamed host private key"
+msgstr "பெயரிடப்படாத host தனிப்பட்ட விசை"
+
+#: crates/keycord-keys/src/cert.rs:83
+msgid "Unnamed private key"
+msgstr "பெயரிடப்படாத தனிப்பட்ட விசை"
+
+#: crates/keycord-keys/src/cert.rs:93
+msgid "Unnamed smartcard"
+msgstr "பெயரிடப்படாத smartcard"
+
+#: crates/keycord-keys/src/error.rs:260
+msgid "Unplug the other security keys, then try again."
+msgstr "மற்ற பாதுகாப்பு விசைகளைத் துண்டித்துவிட்டு மீண்டும் முயலவும்."
+
+#: crates/keycord-fido/src/envelope.rs:73
+msgid "Unsupported FIDO2 password-entry format {}."
+msgstr "ஆதரிக்கப்படாத FIDO2 கடவுச்சொல் பதிவு வடிவம் {}."
+
+#: crates/keycord-fido/src/envelope.rs:79
+msgid "Unsupported FIDO2 password-entry protection '{}'."
+msgstr "ஆதரிக்கப்படாத FIDO2 கடவுச்சொல் பதிவுப் பாதுகாப்பு '{}'."
+
+#: crates/keycord-fido/src/manifest.rs:53
+msgid "Unsupported FIDO2 private key format {}."
+msgstr "ஆதரிக்கப்படாத FIDO2 தனிப்பட்ட விசை வடிவம் {}."
+
+#: crates/keycord-fido/src/manifest.rs:59
+msgid "Unsupported FIDO2 private key protection '{}'."
+msgstr "ஆதரிக்கப்படாத FIDO2 தனிப்பட்ட விசைப் பாதுகாப்பு '{}'."
+
+#: crates/keycord-lifecycle/src/updater/linux.rs:53
+msgid "Unsupported Linux update architecture: {}"
+msgstr "ஆதரிக்கப்படாத Linux புதுப்பிப்பு architecture: {}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:449
+msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
+msgstr "ciphertext {:?} மற்றும் பொது விசை {:?} ஆகியவற்றின் சேர்க்கை ஆதரிக்கப்படவில்லை"
+
+#: crates/keycord-keys/src/store/manifest.rs:141
+msgid "Unsupported hardware key manifest format {}."
+msgstr "ஆதரிக்கப்படாத வன்பொருள் விசை manifest வடிவம் {}."
+
+#: crates/keycord-keys/src/store/manifest.rs:147
+msgid "Unsupported hardware key protection '{}'."
+msgstr "ஆதரிக்கப்படாத வன்பொருள் விசைப் பாதுகாப்பு '{}'."
+
+#: crates/keycord-keys/src/hardware/crypto.rs:534
+msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
+msgstr "RSA-க்கான ஆதரிக்கப்படாத hash algorithm: {hash_algo:?}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:68
+msgid "Unsupported repository URL for updates: {repository}"
+msgstr "புதுப்பிப்புகளுக்கான ஆதரிக்கப்படாத களஞ்சிய URL: {repository}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:579
+msgid "Unsupported signing algorithm: {:?}"
+msgstr "ஆதரிக்கப்படாத கையொப்ப algorithm: {:?}"
+
+#: crates/keycord-git/src/ui/audit.rs:1086
+msgid "Unverified"
+msgstr "சரிபார்க்கப்படாதது"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1111
+msgid "Update SHA-256 mismatch for '{}'."
+msgstr "'{}' என்பதற்கான புதுப்பிப்பின் SHA-256 மதிப்பு பொருந்தவில்லை."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:913
+msgid "Update available"
+msgstr "புதுப்பிப்பு கிடைக்கிறது"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:950
+msgid "Update download path has no parent directory."
+msgstr "புதுப்பிப்புப் பதிவிறக்கப் பாதைக்குப் பெற்றோர் கோப்பகம் இல்லை."
+
+#: crates/keycord-entries/src/integrated.rs:543
+msgid "Update password for {label}"
+msgstr "{label} என்பதற்கான கடவுச்சொல்லைப் புதுப்பி"
+
+#: crates/keycord-git/src/integrated.rs:422
+msgid "Update password store Git HEAD"
+msgstr "கடவுச்சொல் சேமிப்பக Git HEAD-ஐப் புதுப்பி"
+
+#: crates/keycord-git/src/remotes.rs:94
+msgid "Update password store Git remote URL"
+msgstr "கடவுச்சொல் சேமிப்பக Git remote URL-ஐப் புதுப்பி"
+
+#: crates/keycord-stores/src/integrated.rs:129
+#: crates/keycord-stores/src/integrated.rs:237
+msgid "Update password store recipients"
+msgstr "கடவுச்சொல் சேமிப்பகப் பெறுநர்களைப் புதுப்பி"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1008
+msgid "Update size mismatch after download (expected {}, got {})."
+msgstr "பதிவிறக்கத்திற்குப் பிறகு புதுப்பிப்பின் அளவு பொருந்தவில்லை (எதிர்பார்த்தது {}, கிடைத்தது {})."
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1104
+msgid "Update size mismatch for '{}'."
+msgstr "'{}' என்பதற்கான புதுப்பிப்பு அளவு பொருந்தவில்லை."
+
+#: crates/keycord-stores/data/window-pages.fragment.ui:186
+msgid "Updating all saved passwords to match the new access settings."
+msgstr "புதிய அணுகல் அமைப்புகளுடன் பொருந்த எல்லாச் சேமித்த கடவுச்சொற்களும் புதுப்பிக்கப்படுகின்றன."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:225
+#: crates/keycord-preferences/data/window-page.fragment.ui:273
+msgid "Uppercase letters"
+msgstr "பேரெழுத்துகள்"
+
+#: crates/keycord-passkey/src/ui.rs:53
+msgid "Use --open-passkey-request with exactly one local file."
+msgstr "--open-passkey-request என்ற விருப்பத்தை ஒரே ஒரு உள்ளூர் கோப்புடன் பயன்படுத்தவும்."
+
+#: crates/keycord-entries/src/file/types.rs:46
+msgid "Use Add OTP secret instead."
+msgstr "அதற்குப் பதில் OTP இரகசியத்தைச் சேர் என்பதைப் பயன்படுத்தவும்."
+
+#: crates/keycord-entries/src/file/types.rs:49
+msgid "Use a passkey request instead."
+msgstr "அதற்குப் பதில் கடவுச்சாவிக் கோரிக்கையைப் பயன்படுத்தவும்."
+
+#: crates/keycord-entries/src/model.rs:118
+msgid "Use a single file name for the username."
+msgstr "பயனர்பெயருக்கு ஒரே ஒரு கோப்புப் பெயரைப் பயன்படுத்தவும்."
+
+#: crates/keycord-entries/src/ui/list/row.rs:661
+msgid "Use a single file name."
+msgstr "ஒரே ஒரு கோப்புப் பெயரைப் பயன்படுத்தவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:82
+msgid "Use commit-history recipients for audit verification"
+msgstr "தணிக்கைச் சரிபார்ப்புக்கு commit வரலாற்றுப் பெறுநர்களைப் பயன்படுத்து"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:105
+#: crates/keycord-preferences/data/window-page.fragment.ui:138
+msgid "Use file name"
+msgstr "கோப்புப் பெயரைப் பயன்படுத்து"
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:12
+msgid "Use find for fields. Use reg for patterns."
+msgstr "புலங்களுக்கு find என்ற முறையைப் பயன்படுத்தவும். பாங்குகளுக்கு reg என்ற முறையைப் பயன்படுத்தவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:119
+msgid "Use folder name"
+msgstr "கோப்புறைப் பெயரைப் பயன்படுத்து"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:150
+msgid "Use folders with file name search"
+msgstr "கோப்புப் பெயர்த் தேடலுடன் கோப்புறைகளைப் பயன்படுத்து"
+
+#: crates/keycord-stores/src/ui/management/import.rs:33
+#: crates/keycord-stores/src/ui/widgets.rs:204
+msgid "Use pass import to import into an existing store."
+msgstr "ஏற்கெனவே உள்ள சேமிப்பகத்தில் இறக்குமதி செய்ய pass import கருவியைப் பயன்படுத்தவும்."
+
+#: crates/keycord-stores/src/management.rs:110
+msgid "Use pass import with your custom pass command."
+msgstr "உங்கள் தனிப்பயன் pass கட்டளையுடன் pass import கருவியைப் பயன்படுத்தவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:163
+msgid "Use store, folders, and file name"
+msgstr "சேமிப்பகம், கோப்புறைகள் மற்றும் கோப்புப் பெயரைப் பயன்படுத்து"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:39
+msgid "Use the adaptive GTK interface with keyboard, mouse, or touch across desktop and mobile devices"
+msgstr "கணினி மற்றும் மொபைல் சாதனங்களில் விசைப்பலகை, சுட்டி அல்லது தொடுதல் மூலம் தகவமைவான GTK இடைமுகத்தைப் பயன்படுத்தலாம்"
+
+#: crates/keycord-keys/src/error.rs:190 crates/keycord-keys/src/error.rs:227
+msgid "Use the matching hardware key."
+msgstr "பொருந்தும் வன்பொருள் விசையைப் பயன்படுத்தவும்."
+
+#: crates/keycord-entries/src/file/types.rs:43
+msgid "Use the username field instead."
+msgstr "அதற்குப் பதில் பயனர்பெயர் புலத்தைப் பயன்படுத்தவும்."
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:102
+msgid "Used only when a pass file has no encrypted username field."
+msgstr "pass கோப்பில் மறையாக்கப்பட்ட பயனர்பெயர் புலம் இல்லாதபோது மட்டுமே பயன்படுத்தப்படும்."
+
+#: crates/keycord-entries/data/window-pages.fragment.ui:297
+#: crates/keycord-preferences/data/window-page.fragment.ui:101
+msgid "Username"
+msgstr "பயனர்பெயர்"
+
+#: crates/keycord-entries/src/ui/page/standard.rs:34
+msgid "Using Integrated instead."
+msgstr "அதற்குப் பதில் Integrated பயன்படுத்தப்படுகிறது."
+
+#: crates/keycord-stores/src/ui/management/import.rs:228
+#: src/window/tool_hub.rs:51
+msgid "Utilities and maintenance"
+msgstr "பயன்பாட்டுக் கருவிகளும் பராமரிப்பும்"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:211
+msgid "Valid host keys may appear unavailable here while private-key sync is off."
+msgstr "தனிப்பட்ட விசை ஒத்திசைவு முடக்கப்பட்டிருக்கும்போது செல்லுபடியான host விசைகள் இங்கே கிடைக்காதவைபோல் தோன்றலாம்."
+
+#: crates/keycord-keys/data/window-recipient-warning.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:209
+msgid "Valid host keys may appear unavailable here."
+msgstr "செல்லுபடியான host விசைகள் இங்கே கிடைக்காதவைபோல் தோன்றலாம்."
+
+#: crates/keycord-git/src/ui/audit.rs:1248
+msgid "Verification"
+msgstr "சரிபார்ப்பு"
+
+#: crates/keycord-git/src/ui/audit.rs:1255
+msgid "Verification method"
+msgstr "சரிபார்ப்பு முறை"
+
+#: crates/keycord-git/src/ui/audit.rs:1085
+msgid "Verified"
+msgstr "சரிபார்க்கப்பட்டது"
+
+#: crates/keycord-entries/src/strength.rs:60
+msgid "Very low character variety"
+msgstr "மிகக் குறைந்த எழுத்து வகைகள்"
+
+#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-git/data/window-busy-page.fragment.ui:7
+#: crates/keycord-keys/src/ui/key_management/hardware.rs:120
+#: crates/keycord-keys/src/ui/key_management/private.rs:222
+#: crates/keycord-keys/src/ui/unlock.rs:86
+#: crates/keycord-stores/src/ui/management/clone.rs:28
+msgid "Wait a moment."
+msgstr "சற்று காத்திருக்கவும்."
+
+#: crates/keycord-entries/data/window-tool-pages.fragment.ui:83
+msgid "Weak passwords"
+msgstr "பலவீனமான கடவுச்சொற்கள்"
+
+#: crates/keycord-preferences/data/window-page.fragment.ui:83
+msgid "When enabled, History can use recipients from earlier commits while verifying older encrypted entries."
+msgstr "இதை இயக்கினால், பழைய மறையாக்கப்பட்ட பதிவுகளைச் சரிபார்க்கும்போது வரலாறு முந்தைய commit-களிலுள்ள பெறுநர்களைப் பயன்படுத்தலாம்."
+
+#: crates/keycord-shell/src/uri.rs:23
+msgid "Windows ShellExecute failed: {err}"
+msgstr "Windows ShellExecute தோல்வியடைந்தது: {err}"
+
+#: crates/keycord-git/data/window-busy-page.fragment.ui:3
+#: crates/keycord-git/data/window-busy-page.fragment.ui:6
+#: crates/keycord-git/src/ui/actions/enabled.rs:50
+msgid "Working"
+msgstr "செயல்படுகிறது"
+
+#: crates/keycord-git/src/integrated.rs:401
+msgid "Write password store Git commit object"
+msgstr "கடவுச்சொல் சேமிப்பக Git commit பொருளை எழுது"
+
+#: crates/keycord-git/src/integrated.rs:97
+msgid "Write password store Git tree"
+msgstr "கடவுச்சொல் சேமிப்பக Git tree-ஐ எழுது"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:194
+msgid "You can now generate new private keys."
+msgstr "இப்போது புதிய தனிப்பட்ட விசைகளை உருவாக்கலாம்."
+
+#: crates/keycord-lifecycle/data/metainfo.xml:188
+msgid "You can now manage Git remotes"
+msgstr "இப்போது Git remote-களை நிர்வகிக்கலாம்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:159
+msgid "You can now open pass files in a new window"
+msgstr "இப்போது pass கோப்புகளைப் புதிய சாளரத்தில் திறக்கலாம்"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:168
+msgid "You can now use the field values as variables in search"
+msgstr "இப்போது புல மதிப்புகளைத் தேடலில் மாறிகளாகப் பயன்படுத்தலாம்"
+
+#: crates/keycord-shell/data/window.ui:214
+msgid "_About Keycord"
+msgstr "Keycord பற்றி (_A)"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:2
+msgid "_Add item"
+msgstr "உருப்படியைச் சேர் (_A)"
+
+#: crates/keycord-entries/data/window-menu-items.fragment.ui:6
+msgid "_Find item"
+msgstr "உருப்படியைக் கண்டுபிடி (_F)"
+
+#: crates/keycord-shell/data/window.ui:210
+msgid "_Keyboard Shortcuts"
+msgstr "விசைப்பலகை குறுக்குவழிகள் (_K)"
+
+#: crates/keycord-preferences/data/window-menu-item.fragment.ui:2
+msgid "_Preferences"
+msgstr "விருப்பங்கள் (_P)"
+
+#: crates/keycord-git/data/window-menu-item.fragment.ui:2
+msgid "_Synchronize with remote"
+msgstr "remote உடன் ஒத்திசை (_S)"
+
+#: crates/keycord-shell/data/window.ui:204
+msgid "_Tools"
+msgstr "கருவிகள் (_T)"
+
+#: src/composition/about.rs:21 src/composition/about.rs:22
+msgid "backend: host"
+msgstr "பின்தளம்: host"
+
+#: src/composition/about.rs:16
+msgid "backend: ripasso"
+msgstr "பின்தளம்: ripasso"
+
+#: crates/keycord-git/src/ui/audit.rs:618
+msgid "branch cleanup"
+msgstr "branch தூய்மைப்படுத்தல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1075
+msgid "build GitHub client"
+msgstr "GitHub கிளையன்டை உருவாக்குதல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1083
+msgid "build download client"
+msgstr "பதிவிறக்க கிளையன்டை உருவாக்குதல்"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:40
+msgid "clean stale store filter values"
+msgstr "பழைய சேமிப்பக வடிப்பான் மதிப்புகளை அகற்றுதல்"
+
+#: crates/keycord-preferences/src/ui/settings.rs:508
+msgid "clear empty fields before save"
+msgstr "சேமிப்பதற்கு முன் காலிப் புலங்களை அகற்றுதல்"
+
+#: crates/keycord-keys/src/store/storage.rs:527
+msgid "collecting available private-key fingerprints"
+msgstr "கிடைக்கும் தனிப்பட்ட விசைக் கைரேகைகள் சேகரிக்கப்படுகின்றன"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:973
+msgid "create partial update file"
+msgstr "பகுதி புதுப்பிப்புக் கோப்பை உருவாக்குதல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:953
+msgid "create update download directory"
+msgstr "புதுப்பிப்புப் பதிவிறக்கக் கோப்பகத்தை உருவாக்குதல்"
+
+#: crates/keycord-passkey/src/credential.rs:295
+#: crates/keycord-passkey/src/credential.rs:345
+msgid "credential ID"
+msgstr "நற்சான்று ID"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1035
+msgid "decode GitHub release response"
+msgstr "GitHub வெளியீட்டுப் பதிலைக் குறிவிலக்குதல்"
+
+#: crates/keycord-entries/src/ui/list/row.rs:602
+msgid "delete password entry"
+msgstr "கடவுச்சொல் பதிவை நீக்குதல்"
+
+#: crates/keycord-runtime/src/hardening.rs:28
+msgid "disable core dumps: {err}"
+msgstr "core dump-களை முடக்குதல்: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:100
+msgid "disable extension points: {err}"
+msgstr "நீட்சிப் புள்ளிகளை முடக்குதல்: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:32
+msgid "disable process dumpability: {err}"
+msgstr "செயல்முறை dump செய்யப்படுவதை முடக்குதல்: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:970
+msgid "download release asset"
+msgstr "வெளியீட்டுக் கோப்பைப் பதிவிறக்குதல்"
+
+#: crates/keycord-entries/src/integrated.rs:798
+msgid "empty password file"
+msgstr "காலியான கடவுச்சொல் கோப்பு"
+
+#: crates/keycord-runtime/src/hardening.rs:97
+msgid "enable ASLR policy: {err}"
+msgstr "ASLR கொள்கையை இயக்குதல்: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:93
+msgid "enable DEP: {err}"
+msgstr "DEP-ஐ இயக்குதல்: {err}"
+
+#: crates/keycord-runtime/src/hardening.rs:103
+msgid "enable strict handle checks: {err}"
+msgstr "கடுமையான handle சோதனைகளை இயக்குதல்: {err}"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1018
+msgid "finalize update file"
+msgstr "புதுப்பிப்புக் கோப்பை நிறைவு செய்தல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:997
+msgid "flush partial update file"
+msgstr "பகுதி புதுப்பிப்புக் கோப்பை flush செய்தல்"
+
+#: crates/keycord-git/src/command.rs:48
+msgid "git command"
+msgstr "git கட்டளை"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:219
+msgid "gpg"
+msgstr "gpg"
+
+#: crates/keycord-keys/src/host_gpg.rs:164
+msgid "gpg --delete-secret-keys failed"
+msgstr "gpg --delete-secret-keys தோல்வியடைந்தது"
+
+#: crates/keycord-keys/src/host_gpg.rs:125
+msgid "gpg --export failed"
+msgstr "gpg --export தோல்வியடைந்தது"
+
+#: crates/keycord-keys/src/host_gpg.rs:142
+msgid "gpg --export-secret-keys failed"
+msgstr "gpg --export-secret-keys தோல்வியடைந்தது"
+
+#: crates/keycord-keys/src/host_gpg.rs:154
+msgid "gpg --import failed"
+msgstr "gpg --import தோல்வியடைந்தது"
+
+#: crates/keycord-keys/src/host_gpg.rs:111
+msgid "gpg --list-secret-keys failed"
+msgstr "gpg --list-secret-keys தோல்வியடைந்தது"
+
+#: crates/keycord-keys/src/store/manifest.rs:179
+msgid "hardware key manifest"
+msgstr "வன்பொருள் விசை manifest"
+
+#: crates/keycord-passkey/src/request.rs:356
+msgid "hpke contains more than {MAX_LIST_ITEMS} parameter sets"
+msgstr "hpke-இல் {MAX_LIST_ITEMS}-க்கும் மேற்பட்ட அளவுருத் தொகுப்புகள் உள்ளன"
+
+#: crates/keycord-passkey/src/request.rs:376
+msgid "hpke mode {:?} requires a public JWK"
+msgstr "hpke முறை {:?}-க்குப் பொது JWK தேவை"
+
+#: crates/keycord-passkey/src/request.rs:351
+msgid "hpke must contain at least one parameter set"
+msgstr "hpke-இல் குறைந்தது ஓர் அளவுருத் தொகுப்பாவது இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:444
+msgid "hpke.key EC coordinates must have equal lengths"
+msgstr "hpke.key EC ஆயத்தொலைவுகள் சம நீளத்தில் இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:402
+msgid "hpke.key contains more than {MAX_JWK_MEMBERS} members"
+msgstr "hpke.key-இல் {MAX_JWK_MEMBERS}-க்கும் மேற்பட்ட உறுப்புகள் உள்ளன"
+
+#: crates/keycord-passkey/src/request.rs:407
+msgid "hpke.key member"
+msgstr "hpke.key உறுப்பு"
+
+#: crates/keycord-passkey/src/request.rs:410
+msgid "hpke.key must contain a string kty member"
+msgstr "hpke.key-இல் சரம் வகை kty உறுப்பு இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:461
+msgid "hpke.key must contain a string {member} member"
+msgstr "hpke.key-இல் சரம் வகை {member} உறுப்பு இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:415
+msgid "hpke.key must contain only public key material"
+msgstr "hpke.key-இல் பொது விசைத் தரவு மட்டுமே இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:397
+msgid "hpke.key must not be an empty JWK"
+msgstr "hpke.key காலியான JWK ஆக இருக்கக் கூடாது"
+
+#: crates/keycord-passkey/src/request.rs:449
+msgid "hpke.key uses unsupported key type {key_type:?}"
+msgstr "hpke.key ஆதரிக்கப்படாத விசை வகை {key_type:?}-ஐப் பயன்படுத்துகிறது"
+
+#: crates/keycord-passkey/src/request.rs:431
+msgid "hpke.key {key_type}/{curve} does not match KEM {kem}"
+msgstr "hpke.key {key_type}/{curve} KEM {kem}-உடன் பொருந்தவில்லை"
+
+#: crates/keycord-passkey/src/request.rs:436
+msgid "hpke.key.x has the wrong length for KEM {kem}"
+msgstr "hpke.key.x KEM {kem}-க்குத் தவறான நீளத்தில் உள்ளது"
+
+#: crates/keycord-passkey/src/request.rs:482
+msgid "hpke.key.{member} must not be empty"
+msgstr "hpke.key.{member} காலியாக இருக்கக் கூடாது"
+
+#: crates/keycord-passkey/src/request.rs:474
+#: crates/keycord-passkey/src/request.rs:478
+msgid "hpke.key.{member} must use unpadded base64url"
+msgstr "hpke.key.{member} padding இல்லாத base64url-ஐப் பயன்படுத்த வேண்டும்"
+
+#: crates/keycord-keys/src/store/storage.rs:494
+msgid "loading the available key ring"
+msgstr "கிடைக்கும் விசை வளையம் ஏற்றப்படுகிறது"
+
+#: crates/keycord-shell/src/application.rs:152
+msgid "missing display"
+msgstr "காட்சிச் சேவை இல்லை"
+
+#: crates/keycord-entries/src/ui/list/row.rs:570
+msgid "move password entry to another store"
+msgstr "கடவுச்சொல் பதிவை மற்றொரு சேமிப்பகத்திற்கு நகர்த்துதல்"
+
+#: crates/keycord-preferences/src/ui/settings.rs:525
+msgid "new item template"
+msgstr "புதிய உருப்படி வார்ப்புரு"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:220
+msgid "otp"
+msgstr "otp"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:218
+msgid "pass"
+msgstr "pass"
+
+#: crates/keycord-entries/src/host.rs:269
+#: crates/keycord-entries/src/host.rs:291
+msgid "pass failed"
+msgstr "pass தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/import.rs:127
+msgid "pass import --list failed"
+msgstr "pass import --list தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/import.rs:160
+msgid "pass import failed"
+msgstr "pass import தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/import.rs:132
+#: crates/keycord-stores/src/management.rs:114
+msgid "pass import is not available."
+msgstr "pass import கிடைக்கவில்லை."
+
+#: crates/keycord-stores/src/host.rs:87
+msgid "pass init failed"
+msgstr "pass init தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/host.rs:327
+msgid "pass insert failed"
+msgstr "pass insert தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/host.rs:354
+msgid "pass mv failed"
+msgstr "pass mv தோல்வியடைந்தது"
+
+#: crates/keycord-entries/src/host.rs:377
+msgid "pass rm failed"
+msgstr "pass rm தோல்வியடைந்தது"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:217
+msgid "password"
+msgstr "கடவுச்சொல்"
+
+#: crates/keycord-preferences/src/ui/settings.rs:712
+msgid "password generation"
+msgstr "கடவுச்சொல் உருவாக்கம்"
+
+#: crates/keycord-preferences/src/ui/settings.rs:652
+msgid "password list sort"
+msgstr "கடவுச்சொல் பட்டியல் வரிசை"
+
+#: crates/keycord-preferences/src/storage.rs:45
+msgid "preferences file"
+msgstr "விருப்பங்கள் கோப்பு"
+
+#: crates/keycord-passkey/src/credential.rs:300
+#: crates/keycord-passkey/src/credential.rs:409
+msgid "private key"
+msgstr "தனிப்பட்ட விசை"
+
+#: crates/keycord-preferences/src/ui/settings.rs:362
+#: crates/keycord-preferences/src/ui/settings.rs:388
+msgid "private-key sync"
+msgstr "தனிப்பட்ட விசை ஒத்திசைவு"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1033
+msgid "read GitHub release response"
+msgstr "GitHub வெளியீட்டுப் பதிலைப் படித்தல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:985
+msgid "read update bytes"
+msgstr "புதுப்பிப்பு byte-களைப் படித்தல்"
+
+#: crates/keycord-git/src/command.rs:49
+msgid "remote git command"
+msgstr "remote git கட்டளை"
+
+#: crates/keycord-git/src/command.rs:51
+msgid "remote work-tree git command"
+msgstr "remote work-tree git கட்டளை"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:962
+msgid "remove stale partial update file"
+msgstr "பழைய பகுதி புதுப்பிப்புக் கோப்பை அகற்றுதல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:956
+msgid "remove stale update file"
+msgstr "பழைய புதுப்பிப்புக் கோப்பை அகற்றுதல்"
+
+#: crates/keycord-entries/src/ui/list/store_filter.rs:88
+msgid "save store filter selection"
+msgstr "சேமிப்பக வடிப்பான் தேர்வைச் சேமித்தல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1031
+msgid "send GitHub release request"
+msgstr "GitHub வெளியீட்டுக் கோரிக்கையை அனுப்புதல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:968
+msgid "send release asset request"
+msgstr "வெளியீட்டுக் கோப்புக் கோரிக்கையை அனுப்புதல்"
+
+#: crates/keycord-git/src/ui/audit.rs:601
+msgid "store cleanup"
+msgstr "சேமிப்பகத் தூய்மைப்படுத்தல்"
+
+#: crates/keycord-entries/src/search.rs:8
+msgid "store path"
+msgstr "சேமிப்பகப் பாதை"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:221
+msgid "totp"
+msgstr "totp"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:217
+msgid "unexpected ECC algorithm attributes: {algorithm:?}"
+msgstr "எதிர்பாராத ECC algorithm பண்புகள்: {algorithm:?}"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:229
+msgid "unhandled curve: {other:?}"
+msgstr "கையாளப்படாத curve: {other:?}"
+
+#: crates/keycord-runtime/src/secure_fs.rs:355
+msgid "unknown Windows error"
+msgstr "அறியப்படாத Windows பிழை"
+
+#: crates/keycord-runtime/src/hardening.rs:157
+msgid "unknown Windows hardening error"
+msgstr "அறியப்படாத Windows பாதுகாப்பு வலுப்படுத்தல் பிழை"
+
+#: crates/keycord-keys/src/hardware/crypto.rs:289
+msgid "unsupported key type: {other:?}"
+msgstr "ஆதரிக்கப்படாத விசை வகை: {other:?}"
+
+#: crates/keycord-passkey/src/credential.rs:299
+#: crates/keycord-passkey/src/credential.rs:349
+msgid "user handle"
+msgstr "பயனர் ஹேண்டில்"
+
+#: crates/keycord-preferences/src/ui/settings.rs:581
+msgid "username fallback"
+msgstr "பயனர்பெயர் மாற்றுவழி"
+
+#: crates/keycord-git/src/command.rs:50
+msgid "work-tree git command"
+msgstr "work-tree git கட்டளை"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:991
+msgid "write update bytes"
+msgstr "புதுப்பிப்பு byte-களை எழுதுதல்"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1187
+msgid "{:.1} KiB"
+msgstr "{:.1} KiB"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1185
+msgid "{:.1} MiB"
+msgstr "{:.1} MiB"
+
+#: crates/keycord-git/src/command.rs:23
+msgid "{action} failed: {stderr}"
+msgstr "{action} தோல்வியடைந்தது: {stderr}"
+
+#: crates/keycord-git/src/command.rs:25
+msgid "{action} failed: {stdout}"
+msgstr "{action} தோல்வியடைந்தது: {stdout}"
+
+#: crates/keycord-git/src/command.rs:27
+msgid "{action} failed: {}"
+msgstr "{action} தோல்வியடைந்தது: {}"
+
+#: crates/keycord-git/src/ui/store_page.rs:286
+msgid "{branch} (no commits yet)"
+msgstr "{branch} (இன்னும் commit-கள் இல்லை)"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1189
+msgid "{bytes} B"
+msgstr "{bytes} B"
+
+#: crates/keycord-runtime/src/bounded_toml.rs:35
+msgid "{context} exceeds the supported TOML nesting depth of {}."
+msgstr "{context} ஆதரிக்கப்படும் TOML அடுக்கமைவு ஆழம் {}-ஐ மீறுகிறது."
+
+#: crates/keycord-runtime/src/bounded_toml.rs:27
+msgid "{context} exceeds the supported TOML size limit of {} bytes."
+msgstr "{context} ஆதரிக்கப்படும் TOML அளவு வரம்பான {} byte-களை மீறுகிறது."
+
+#: crates/keycord-git/src/ui/audit.rs:1067
+msgid "{count} commits loaded"
+msgstr "{count} commit-கள் ஏற்றப்பட்டன"
+
+#: crates/keycord-entries/src/tools/field_values.rs:109
+msgid "{count} matching item"
+msgstr "பொருந்தும் {count} உருப்படி"
+
+#: crates/keycord-entries/src/tools/field_values.rs:111
+msgid "{count} matching items"
+msgstr "பொருந்தும் {count} உருப்படிகள்"
+
+#: crates/keycord-stores/src/recipients.rs:194
+msgid "{count} recipients"
+msgstr "{count} பெறுநர்கள்"
+
+#: crates/keycord-git/src/ui/store_page.rs:306
+msgid "{count} remotes configured."
+msgstr "{count} remote-கள் அமைக்கப்பட்டுள்ளன."
+
+#: crates/keycord-entries/src/tools/field_values.rs:100
+msgid "{count} unique value"
+msgstr "{count} தனித்துவமான மதிப்பு"
+
+#: crates/keycord-entries/src/tools/field_values.rs:102
+msgid "{count} unique values"
+msgstr "{count} தனித்துவமான மதிப்புகள்"
+
+#: crates/keycord-entries/src/host.rs:53 crates/keycord-stores/src/host.rs:41
+msgid "{fallback_prefix}: {}"
+msgstr "{fallback_prefix}: {}"
+
+#: crates/keycord-keys/src/host_gpg.rs:200
+#: crates/keycord-runtime/src/command.rs:21
+msgid "{fallback}: {}"
+msgstr "{fallback}: {}"
+
+#: crates/keycord-passkey/src/request.rs:551
+msgid "{field} contains invalid whitespace or control characters"
+msgstr "{field}-இல் செல்லாத வெற்றிடம் அல்லது கட்டுப்பாட்டு எழுத்துகள் உள்ளன"
+
+#: crates/keycord-passkey/src/request.rs:529
+msgid "{field} contains more than {MAX_LIST_ITEMS} values"
+msgstr "{field}-இல் {MAX_LIST_ITEMS}-க்கும் மேற்பட்ட மதிப்புகள் உள்ளன"
+
+#: crates/keycord-passkey/src/request.rs:546
+msgid "{field} is longer than {max_bytes} bytes"
+msgstr "{field} {max_bytes} byte-களைவிட நீளமாக உள்ளது"
+
+#: crates/keycord-passkey/src/request.rs:491
+#: crates/keycord-passkey/src/request.rs:511
+msgid "{field} must be a valid relying-party ID"
+msgstr "{field} செல்லுபடியான relying-party ID ஆக இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:524
+msgid "{field} must contain at least one value"
+msgstr "{field}-இல் குறைந்தது ஒரு மதிப்பாவது இருக்க வேண்டும்"
+
+#: crates/keycord-passkey/src/request.rs:541
+msgid "{field} must not be empty"
+msgstr "{field} காலியாக இருக்கக் கூடாது"
+
+#: crates/keycord-shell/src/file_picker.rs:283
+msgid "{file_type_label} ({pattern})"
+msgstr "{file_type_label} ({pattern})"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:9
+msgid "{fingerprint} - Hardware key"
+msgstr "{fingerprint} - வன்பொருள் விசை"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:8
+msgid "{fingerprint} - Password protected"
+msgstr "{fingerprint} - கடவுச்சொல்லால் பாதுகாக்கப்பட்டது"
+
+#: crates/keycord-keys/src/ui/managed_key.rs:12
+msgid "{fingerprint} - Security key protected"
+msgstr "{fingerprint} - பாதுகாப்பு விசையால் பாதுகாக்கப்பட்டது"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
+msgid "{fingerprint} - Security token"
+msgstr "{fingerprint} - பாதுகாப்பு டோக்கன்"
+
+#: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
+msgid "{fingerprint} - Security token ({detail})"
+msgstr "{fingerprint} - பாதுகாப்பு டோக்கன் ({detail})"
+
+#: crates/keycord-fido/src/service.rs:335
+msgid "{manufacturer} {product}"
+msgstr "{manufacturer} {product}"
+
+#: crates/keycord-keys/src/store/storage.rs:1042
+#: crates/keycord-keys/src/store/storage.rs:958
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: crates/keycord-entries/src/import.rs:36
+#: crates/keycord-entries/src/import.rs:41
+msgid "{prefix}: {}"
+msgstr "{prefix}: {}"
+
+#: src/composition/about.rs:29
+msgid ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+msgstr ""
+"{project}: {comments}\n"
+"\n"
+"{backend_details}"
+
+#: crates/keycord-entries/src/otp/mod.rs:301
+msgid "{remaining}s remaining"
+msgstr "இன்னும் {remaining} வினாடிகள்"
+
+#: crates/keycord-git/src/ui/audit.rs:1068
+msgid "{scope} · {loaded}"
+msgstr "{scope} · {loaded}"
+
+#: crates/keycord-git/src/ui/audit.rs:1060
+#: crates/keycord-git/src/ui/audit.rs:1063
+msgid "{scope} · {}"
+msgstr "{scope} · {}"
+
+#: crates/keycord-keys/src/hardware/linux.rs:77
+msgid "{step}: {err}"
+msgstr "{step}: {err}"
+
+#: crates/keycord-shell/src/application.rs:328
+msgid ""
+"{summary}\n"
+"error: {error}"
+msgstr ""
+"{summary}\n"
+"பிழை: {error}"
+
+#: src/composition/about.rs:22
+msgid ""
+"{}\n"
+"{version}"
+msgstr ""
+"{}\n"
+"{version}"
+
+#: crates/keycord-keys/src/store/storage.rs:1001
+msgid "{} ({short_id})"
+msgstr "{} ({short_id})"
+
+#: crates/keycord-lifecycle/src/updater/common.rs:1174
+msgid "{} of {} ({percentage:.0}%)"
+msgstr "{} / {} ({percentage:.0}%)"
+
+#: src/composition/about.rs:15
+msgid ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
+msgstr ""
+"{} {RIPASSO_VERSION}\n"
+"{} {SEQUOIA_OPENPGP_VERSION}"
