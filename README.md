@@ -34,11 +34,6 @@ Start with the [Getting Started guide](crates/keycord-docs/docs/getting-started.
 
 You can translate Keycord using [weblate](https://hosted.weblate.org/projects/keycord) which makes it possible to translate from your browser. Simply register and start translating.
 
-Windows uses the system display language automatically and ships the same translation
-catalogs as Linux. Untranslated messages remain in English. Locale environment variables
-(`LANGUAGE`, `LC_ALL`, `LC_MESSAGES`, and `LANG`) can override the language. Keep the
-`share/locale` folder beside `keycord.exe` when moving a portable installation.
-
 ## Development
 
 The root package is the application composition layer; implementation is split into subject crates. See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and dependency rules.

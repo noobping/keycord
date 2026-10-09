@@ -702,7 +702,7 @@ mod tests {
                 assert!(!message.contains("supersecret"));
                 assert!(!message.contains("username: alice"));
             }
-            other => panic!("unexpected host read error: {other:?}"),
+            _ => panic!("unexpected host read error variant"),
         }
     }
 }

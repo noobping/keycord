@@ -12,27 +12,9 @@ Each algorithm has:
 - `.b64`: the Android serializer's unpadded Base64URL/CBOR record, with optional
   names, non-ASCII display text, unsigned bytes, counter, timezone, and reveal flag.
 - `.cxf.json`: the same credential in the standard import format with a PKCS#8 key.
-- `.spki.b64`: its public key, used to verify Android's signatures after Keycord
-  has imported or reencoded the credential.
 
-Rust tests use these committed fixtures without Java or the Android checkout.
-The independent interoperability harness compiles the two original Kotlin files
-without copying or modifying them, then checks that Android can decode every
-Keycord output and sign a challenge with it. All temporary build output lives
-outside the Android checkout. The standalone byte wipe helper replaces only an
-Android-dependent utility import; serialization and signing use the original code.
-
-With Java 21+ and Cargo installed, run from the Keycord root:
-
-```sh
-python3 crates/keycord-passkey/tests/android-interop/run.py
-```
-
-Use `--android /path/to/Android-Password-Store` for another reference checkout.
-The harness downloads pinned JVM test tools into a temporary cache. It uses
-Kotlin 2.2.0, kotlinx.serialization 1.9.0 and Bouncy Castle 1.81 to compile the
-unmodified source; these are test-only dependencies, not Android build changes.
-`--generate` deliberately regenerates the Keycord fixtures before verification.
+Rust tests use these committed fixtures to check decoding, metadata preservation,
+roundtrips, and CXF import. No Java, Kotlin, or Android checkout is required.
 
 The `passless-*.cbor` files contain synthetic keys serialized by the **unchanged**
 Passless storage module at `4e420e081c115122ac16bb13824984dc78ba6513`, with the

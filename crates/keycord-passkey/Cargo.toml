@@ -47,9 +47,5 @@ zeroize = { version = "1.9.1", features = ["alloc"], optional = true }
 libc = { version = "0.2", optional = true }
 
 [[example]]
-name = "android_interop"
-required-features = ["passkey"]
-
-[[example]]
 name = "passless_interop"
 required-features = ["passless"]
