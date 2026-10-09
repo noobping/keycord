@@ -54,14 +54,17 @@ const OPEN_IN_NEW_WINDOW_LABEL: &str = "Open in New Window";
 const PASSWORD_LIST_INDENT_WIDTH: i32 = 18;
 const PASSWORD_LIST_MAX_INDENT_DEPTH: usize = 8;
 
-fn password_row_menu_entries(readable: bool) -> Vec<(&'static str, &'static str)> {
+fn password_row_menu_entries(
+    readable: bool,
+    store_count: usize,
+) -> Vec<(&'static str, &'static str)> {
     let mut entries = Vec::new();
     if readable {
         entries.push((OPEN_IN_NEW_WINDOW_LABEL, "entry.open-new-window"));
     }
     entries.push(("Rename pass file", "entry.rename-file"));
     entries.push(("Move pass file", "entry.move"));
-    if readable {
+    if readable && store_count > 1 {
         entries.push(("Move to store", "entry.move-store"));
     }
     entries.push(("Open in File Manager", "entry.open-in-file-manager"));
@@ -320,7 +323,7 @@ fn configure_password_row_menu(
     overlay: &ToastOverlay,
 ) {
     let menu = Menu::new();
-    for (label, action) in password_row_menu_entries(readable) {
+    for (label, action) in password_row_menu_entries(readable, state.store_labels.len()) {
         menu.append(Some(&gettext(label)), Some(action));
     }
     menu_button.set_menu_model(Some(&menu));
@@ -976,14 +979,14 @@ mod tests {
 
     #[test]
     fn readable_rows_offer_open_in_new_window() {
-        assert!(password_row_menu_entries(true)
+        assert!(password_row_menu_entries(true, 1)
             .iter()
             .any(|(label, _)| *label == OPEN_IN_NEW_WINDOW_LABEL));
     }
 
     #[test]
     fn unreadable_rows_hide_open_in_new_window() {
-        assert!(!password_row_menu_entries(false)
+        assert!(!password_row_menu_entries(false, 2)
             .iter()
             .any(|(label, _)| *label == OPEN_IN_NEW_WINDOW_LABEL));
     }
