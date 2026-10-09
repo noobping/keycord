@@ -92,7 +92,7 @@ msgstr "Add advanced search"
 msgid "Add an item to get started."
 msgstr "Add an item to get started."
 
-#: crates/keycord-entries/src/ui/list/row.rs:493
+#: crates/keycord-entries/src/ui/list/row.rs:511
 msgid "Add another store first."
 msgstr "Add another store first."
 
@@ -134,7 +134,7 @@ msgid "Add hardware key (Experimental)"
 msgstr "Add hardware key (Experimental)"
 
 #: crates/keycord-entries/data/window-header-list.fragment.ui:4
-#: crates/keycord-entries/src/ui/list/row.rs:247
+#: crates/keycord-entries/src/ui/list/row.rs:259
 msgid "Add item"
 msgstr "Add item"
 
@@ -370,8 +370,8 @@ msgstr "Can't undo that change."
 msgid "Can't undo the last change."
 msgstr "Can't undo the last change."
 
-#: crates/keycord-entries/src/ui/list/row.rs:146
-#: crates/keycord-entries/src/ui/list/row.rs:154
+#: crates/keycord-entries/src/ui/list/row.rs:156
+#: crates/keycord-entries/src/ui/list/row.rs:164
 #: crates/keycord-entries/src/ui/tools/export.rs:32
 #: crates/keycord-lifecycle/src/updater/common.rs:696
 #: crates/keycord-passkey/src/ui.rs:163
@@ -449,7 +449,7 @@ msgstr "Choose a local folder."
 msgid "Choose a private key file."
 msgstr "Choose a private key file."
 
-#: crates/keycord-entries/src/ui/list/row.rs:538
+#: crates/keycord-entries/src/ui/list/row.rs:556
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
 msgstr "Choose a store."
@@ -502,7 +502,7 @@ msgstr "Clean pass file"
 msgid "Clear empty fields before save"
 msgstr "Clear empty fields before save"
 
-#: crates/keycord-entries/src/ui/list/row.rs:257
+#: crates/keycord-entries/src/ui/list/row.rs:269
 msgid "Clear search"
 msgstr "Clear search"
 
@@ -640,7 +640,7 @@ msgstr "Copy logs"
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:24
 #: crates/keycord-entries/data/window-pages.fragment.ui:129
-#: crates/keycord-entries/src/ui/list/row.rs:130
+#: crates/keycord-entries/src/ui/list/row.rs:142
 msgid "Copy password"
 msgstr "Copy password"
 
@@ -715,7 +715,7 @@ msgid "Couldn't create the store."
 msgstr "Couldn't create the store."
 
 #: crates/keycord-entries/src/error.rs:116
-#: crates/keycord-entries/src/ui/list/row.rs:607
+#: crates/keycord-entries/src/ui/list/row.rs:625
 msgid "Couldn't delete the item."
 msgstr "Couldn't delete the item."
 
@@ -817,13 +817,13 @@ msgstr "Couldn't load private keys"
 msgid "Couldn't load the code."
 msgstr "Couldn't load the code."
 
-#: crates/keycord-entries/src/ui/list/row.rs:575
+#: crates/keycord-entries/src/ui/list/row.rs:593
 msgid "Couldn't move the item."
 msgstr "Couldn't move the item."
 
-#: crates/keycord-entries/src/ui/list/row.rs:781
-#: crates/keycord-entries/src/ui/list/row.rs:790
-#: crates/keycord-entries/src/ui/list/row.rs:799
+#: crates/keycord-entries/src/ui/list/row.rs:802
+#: crates/keycord-entries/src/ui/list/row.rs:811
+#: crates/keycord-entries/src/ui/list/row.rs:820
 msgid "Couldn't open a new window."
 msgstr "Couldn't open a new window."
 
@@ -845,7 +845,7 @@ msgstr "Couldn't open the file chooser."
 msgid "Couldn't open the folder chooser."
 msgstr "Couldn't open the folder chooser."
 
-#: crates/keycord-entries/src/ui/list/row.rs:769
+#: crates/keycord-entries/src/ui/list/row.rs:790
 msgid "Couldn't open the folder."
 msgstr "Couldn't open the folder."
 
@@ -1116,7 +1116,7 @@ msgstr "Enter a name for the hardware key."
 msgid "Enter a name for the private key."
 msgstr "Enter a name for the private key."
 
-#: crates/keycord-entries/src/ui/list/row.rs:658
+#: crates/keycord-entries/src/ui/list/row.rs:676
 #: crates/keycord-entries/src/ui/page/mod.rs:410
 #: crates/keycord-keys/src/ui/key_management/form.rs:17
 msgid "Enter a name."
@@ -2267,11 +2267,11 @@ msgstr "Missing raw commit data for {}."
 msgid "Missing repository name in repository URL: {repository}"
 msgstr "Missing repository name in repository URL: {repository}"
 
-#: crates/keycord-entries/src/ui/list/row.rs:153
+#: crates/keycord-entries/src/ui/list/row.rs:163
 msgid "Move"
 msgstr "Move"
 
-#: crates/keycord-entries/src/ui/list/row.rs:411
+#: crates/keycord-entries/src/ui/list/row.rs:429
 #: crates/keycord-entries/src/ui/list/row.rs:63
 msgid "Move pass file"
 msgstr "Move pass file"
@@ -2280,12 +2280,12 @@ msgstr "Move pass file"
 msgid "Move selected pass file"
 msgstr "Move selected pass file"
 
-#: crates/keycord-entries/src/ui/list/row.rs:149
+#: crates/keycord-entries/src/ui/list/row.rs:159
 #: crates/keycord-entries/src/ui/list/row.rs:65
 msgid "Move to store"
 msgstr "Move to store"
 
-#: crates/keycord-entries/src/ui/list/row.rs:567
+#: crates/keycord-entries/src/ui/list/row.rs:585
 msgid "Moved."
 msgstr "Moved."
 
@@ -2666,7 +2666,7 @@ msgstr "Password List"
 msgid "Password Stores"
 msgstr "Password Stores"
 
-#: crates/keycord-entries/src/ui/list/row.rs:139
+#: crates/keycord-entries/src/ui/list/row.rs:149
 msgid "Password actions"
 msgstr "Password actions"
 
@@ -2983,7 +2983,7 @@ msgstr "Removed empty fields."
 msgid "Removed the FIDO2 backed password stores feature from the flatpak app."
 msgstr "Removed the FIDO2 backed password stores feature from the flatpak app."
 
-#: crates/keycord-entries/src/ui/list/row.rs:410
+#: crates/keycord-entries/src/ui/list/row.rs:428
 #: crates/keycord-entries/src/ui/list/row.rs:62
 msgid "Rename pass file"
 msgstr "Rename pass file"
@@ -3247,7 +3247,7 @@ msgid "Show hidden and duplicate entries"
 msgstr "Show hidden and duplicate entries"
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:138
-#: crates/keycord-entries/src/ui/list/row.rs:131
+#: crates/keycord-entries/src/ui/list/row.rs:143
 msgid "Show password as QR code"
 msgstr "Show password as QR code"
 
@@ -3949,7 +3949,7 @@ msgstr "Use Add OTP secret instead."
 msgid "Use a single file name for the username."
 msgstr "Use a single file name for the username."
 
-#: crates/keycord-entries/src/ui/list/row.rs:661
+#: crates/keycord-entries/src/ui/list/row.rs:679
 msgid "Use a single file name."
 msgstr "Use a single file name."
 
@@ -4167,7 +4167,7 @@ msgstr "create update download directory"
 msgid "decode GitHub release response"
 msgstr "decode GitHub release response"
 
-#: crates/keycord-entries/src/ui/list/row.rs:602
+#: crates/keycord-entries/src/ui/list/row.rs:620
 msgid "delete password entry"
 msgstr "delete password entry"
 
@@ -4312,7 +4312,7 @@ msgstr "loading the available key ring"
 msgid "missing display"
 msgstr "missing display"
 
-#: crates/keycord-entries/src/ui/list/row.rs:570
+#: crates/keycord-entries/src/ui/list/row.rs:588
 msgid "move password entry to another store"
 msgstr "move password entry to another store"
 

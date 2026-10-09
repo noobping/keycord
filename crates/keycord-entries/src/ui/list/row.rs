@@ -83,6 +83,8 @@ struct PasswordRowState {
     row: ListBoxRow,
     stack: Stack,
     action_row: ActionRow,
+    copy_button: Button,
+    qr_button: Button,
     store_labels: Rc<HashMap<String, String>>,
     text_edit_row: EntryRow,
     store_edit_row: ActionRow,
@@ -90,6 +92,16 @@ struct PasswordRowState {
     store_roots: Rc<RefCell<Vec<String>>>,
     text_edit_mode: Rc<RefCell<TextEditMode>>,
     ports: EntryListUiPorts,
+}
+
+impl PasswordRowState {
+    fn password_actions_available(&self) -> bool {
+        #[cfg(feature = "passkey")]
+        if keycord_passkey::is_passkey_entry_label(&self.item.borrow().label()) {
+            return false;
+        }
+        self.readable
+    }
 }
 
 #[derive(Clone)]
@@ -129,8 +141,6 @@ pub(super) fn append_password_row(
     let unreadable_icon = build_unreadable_password_icon(!readable);
     let copy_button = flat_icon_button_with_tooltip("edit-copy-symbolic", "Copy password");
     let (button_group, qr_button) = copy_qr_button_group(&copy_button, "Show password as QR code");
-    copy_button.set_visible(readable);
-    qr_button.set_visible(readable);
     let menu_button = MenuButton::builder()
         .icon_name("view-more-symbolic")
         .has_frame(false)
@@ -168,6 +178,8 @@ pub(super) fn append_password_row(
         row: row.clone(),
         stack,
         action_row,
+        copy_button: copy_button.clone(),
+        qr_button: qr_button.clone(),
         store_labels,
         text_edit_row,
         store_edit_row,
@@ -381,6 +393,9 @@ fn connect_copy_action(state: &PasswordRowState, button: &Button, overlay: &Toas
     let state = state.clone();
     let copied_button = button.clone();
     button.connect_clicked(move |_| {
+        if !state.password_actions_available() {
+            return;
+        }
         copy_password_entry_to_clipboard(
             state.item.borrow().clone(),
             overlay.clone(),
@@ -395,6 +410,9 @@ fn connect_qr_action(state: &PasswordRowState, button: &Button, overlay: &ToastO
     let state = state.clone();
     let button = button.clone();
     button.clone().connect_clicked(move |_| {
+        if !state.password_actions_available() {
+            return;
+        }
         show_password_entry_qr(
             state.item.borrow().clone(),
             overlay.clone(),
@@ -622,7 +640,7 @@ pub(super) fn activate_selected_password_row_action(
     }
 
     match action {
-        SelectedPasswordRowAction::Copy if state.readable => {
+        SelectedPasswordRowAction::Copy if state.password_actions_available() => {
             copy_password_entry_to_clipboard(
                 state.item.borrow().clone(),
                 overlay.clone(),
@@ -701,6 +719,9 @@ fn focused_password_row(list: &ListBox) -> Option<ListBoxRow> {
 }
 
 fn sync_password_row_display(state: &PasswordRowState) {
+    let password_actions_available = state.password_actions_available();
+    state.copy_button.set_visible(password_actions_available);
+    state.qr_button.set_visible(password_actions_available);
     let item = state.item.borrow();
     let store_label = shortened_store_label_for_path(&item.store_path, &state.store_labels);
     state.action_row.set_title(&item.basename);
