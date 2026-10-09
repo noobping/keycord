@@ -1888,7 +1888,7 @@ dependencies = [
 
 [[package]]
 name = "keycord"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "dirs-next",
  "keycord-docs",
@@ -1909,11 +1909,11 @@ dependencies = [
 
 [[package]]
 name = "keycord-architecture"
-version = "0.9.13"
+version = "0.9.14"
 
 [[package]]
 name = "keycord-docs"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "keycord-runtime",
  "keycord-shell",
@@ -1923,7 +1923,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-entries"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "keycord-keys",
  "keycord-passkey",
@@ -1944,7 +1944,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-git"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "keycord-keys",
  "keycord-preferences",
@@ -1957,7 +1957,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-keys"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "anyhow",
  "card-backend-pcsc",
@@ -1979,7 +1979,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-lifecycle"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "dirs-next",
  "gio",
@@ -1999,7 +1999,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-passkey"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "base64 0.23.1",
  "ciborium",
@@ -2014,7 +2014,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-preferences"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "dirs-next",
  "gio",
@@ -2030,7 +2030,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-runtime"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "libc",
  "regex",
@@ -2043,7 +2043,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-shell"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "dirs-next",
  "keycord-runtime",
@@ -2056,7 +2056,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-stores"
-version = "0.9.13"
+version = "0.9.14"
 dependencies = [
  "keycord-keys",
  "keycord-preferences",
@@ -2072,7 +2072,7 @@ dependencies = [
 
 [[package]]
 name = "keycord-ui-fragments"
-version = "0.9.13"
+version = "0.9.14"
 
 [[package]]
 name = "lalrpop"

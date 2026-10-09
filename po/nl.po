@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: keycord 0.9.13\n"
-"PO-Revision-Date: 2026-08-21 15:53+0200\n"
+"Project-Id-Version: keycord 0.9.14\n"
+"PO-Revision-Date: 2026-10-09 23:05+0200\n"
 "Last-Translator: Nick\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -5125,3 +5125,115 @@ msgstr "geen sleutel voor gebruiker gevonden"
 
 msgid "no pkesks managed to decrypt the ciphertext"
 msgstr "geen PKESK kon de versleutelde gegevens ontsleutelen"
+
+#: crates/keycord-passkey/src/credential.rs:90
+msgid "Android Password Store requires a 32-byte credential ID."
+msgstr "Android Password Store vereist een credential-ID van 32 bytes."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Choose a private key file."
+msgstr "Kies een privésleutelbestand."
+
+#: crates/keycord-passkey/src/cxf.rs:76
+msgid "Couldn't determine the passkey creation time."
+msgstr "De aanmaaktijd van de passkey kon niet worden bepaald."
+
+#: crates/keycord-passkey/src/credential.rs:133
+#: crates/keycord-passkey/src/passless.rs:223
+msgid "Couldn't encode the passkey record."
+msgstr "Het passkeyrecord kon niet worden gecodeerd."
+
+#: crates/keycord-passkey/src/credential.rs:152
+msgid "Invalid Android Password Store CBOR record."
+msgstr "Ongeldig CBOR-record voor Android Password Store."
+
+#: crates/keycord-passkey/src/credential.rs:148
+msgid "Invalid passkey Base64URL encoding."
+msgstr "Ongeldige Base64URL-codering voor de passkey."
+
+#: crates/keycord-passkey/src/cxf.rs:19
+msgid "Invalid passkey JSON."
+msgstr "Ongeldige JSON voor de passkey."
+
+#: crates/keycord-passkey/src/credential.rs:211
+#: crates/keycord-passkey/src/passless.rs:172
+msgid ""
+"Keep the passkey's credential ID as its filename and its RP ID as the parent "
+"folder."
+msgstr ""
+"Behoud de credential-ID van de passkey als bestandsnaam en de website-ID als "
+"bovenliggende map."
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Read an armored private key from the clipboard."
+msgstr "Lees een privésleutel in tekstformaat van het klembord."
+
+#: crates/keycord-passkey/src/credential.rs:107
+#: crates/keycord-passkey/src/passless.rs:139
+msgid "The passkey contains an invalid P-256 private scalar."
+msgstr "De passkey bevat een ongeldige privésleutelwaarde voor P-256."
+
+#: crates/keycord-passkey/src/credential.rs:115
+msgid "The passkey contains invalid RSA-2048 key material."
+msgstr "De passkey bevat ongeldig RSA-2048-sleutelmateriaal."
+
+#: crates/keycord-passkey/src/credential.rs:97
+#: crates/keycord-passkey/src/passless.rs:115
+msgid "The passkey contains invalid account or creation metadata."
+msgstr "De passkey bevat ongeldige accountgegevens of aanmaakgegevens."
+
+#: crates/keycord-passkey/src/common.rs:6
+msgid "The passkey contains invalid private key material."
+msgstr "De passkey bevat ongeldig privésleutelmateriaal."
+
+#: crates/keycord-passkey/src/cxf.rs:16
+msgid "The passkey import is too large."
+msgstr "De passkey-import is te groot."
+
+#: crates/keycord-passkey/src/cxf.rs:96
+msgid "The passkey is missing {}."
+msgstr "De passkey mist {}."
+
+#: crates/keycord-passkey/src/credential.rs:118
+#: crates/keycord-passkey/src/passless.rs:129
+msgid "The passkey private key has an invalid length."
+msgstr "De privésleutel van de passkey heeft een ongeldige lengte."
+
+#: crates/keycord-passkey/src/credential.rs:136
+#: crates/keycord-passkey/src/credential.rs:143
+#: crates/keycord-passkey/src/passless.rs:178
+msgid "The passkey record is too large."
+msgstr "Het passkeyrecord is te groot."
+
+#: crates/keycord-passkey/src/credential.rs:94
+#: crates/keycord-passkey/src/cxf.rs:84
+msgid "The passkey user handle must contain 1 to 64 bytes."
+msgstr "De gebruikers-ID van de passkey moet 1 tot 64 bytes bevatten."
+
+#: crates/keycord-passkey/src/cxf.rs:102
+msgid "The passkey {key} must use unpadded Base64URL."
+msgstr "De passkeywaarde {key} moet Base64URL zonder opvulling gebruiken."
+
+#: crates/keycord-entries/src/file/parse.rs:57
+#: crates/keycord-entries/src/file/parse.rs:78
+msgid "This entry contains a passkey, not a password."
+msgstr "Dit item bevat een passkey, geen wachtwoord."
+
+#: crates/keycord-passkey/src/credential.rs:121
+msgid "This passkey algorithm is not supported by Android Password Store."
+msgstr ""
+"Dit passkey-algoritme wordt niet ondersteund door Android Password Store."
+
+#: crates/keycord-passkey/src/credential.rs:154
+#: crates/keycord-passkey/src/passless.rs:184
+msgid "Unexpected data after the passkey record."
+msgstr "Onverwachte gegevens na het passkeyrecord."
+
+#: crates/keycord-entries/src/file/row_ui.rs:49
+#: crates/keycord-entries/src/ui/page/bytes.rs:56
+msgid "Unsupported or damaged passkey"
+msgstr "Niet-ondersteunde of beschadigde passkey"
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Added Android Password Store and Passless passkey support with CXF import."
+msgstr "Ondersteuning toegevoegd voor passkeys van Android Password Store en Passless, inclusief CXF-import."

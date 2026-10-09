@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: keycord 0.9.13\n"
+"Project-Id-Version: keycord 0.9.14\n"
 "PO-Revision-Date: 2026-09-02 00:00+0200\n"
 "Last-Translator: Nick\n"
 "Language-Team: Esperanto\n"
@@ -4619,3 +4619,189 @@ msgid ""
 "{} {RIPASSO_VERSION}\n"
 "{} {SEQUOIA_OPENPGP_VERSION}"
 msgstr "{} {RIPASSO_VERSION}\n{} {SEQUOIA_OPENPGP_VERSION}"
+
+#: crates/keycord-passkey/src/ui.rs:174
+msgid "Android Password Store"
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:90
+msgid "Android Password Store requires a 32-byte credential ID."
+msgstr ""
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:87
+msgid "Choose a private key file."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:76
+msgid "Couldn't determine the passkey creation time."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:133
+#: crates/keycord-passkey/src/passless.rs:223
+msgid "Couldn't encode the passkey record."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:152
+msgid "Invalid Android Password Store CBOR record."
+msgstr ""
+
+#: crates/keycord-passkey/src/passless.rs:182
+msgid "Invalid Passless CBOR record."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:148
+msgid "Invalid passkey Base64URL encoding."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:19
+msgid "Invalid passkey JSON."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:211
+#: crates/keycord-passkey/src/passless.rs:172
+msgid ""
+"Keep the passkey's credential ID as its filename and its RP ID as the parent "
+"folder."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:38
+msgid "Only the P-256 EC curve is supported."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:81
+msgid "Passkey imports require a 32-byte credential ID."
+msgstr ""
+
+#: crates/keycord-entries/src/ui/page/bytes.rs:59
+#: crates/keycord-passkey/src/ui.rs:175
+msgid "Passless"
+msgstr ""
+
+#: crates/keycord-entries/src/ui/page/mod.rs:178
+msgid "Passless contents are read-only."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:51
+msgid "RSA imports require RSA-2048 with exponent 65537."
+msgstr ""
+
+#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:74
+msgid "Read an armored private key from the clipboard."
+msgstr ""
+
+#: crates/keycord-keys/src/entry_crypto.rs:55
+msgid "Recipient with key id {} not found"
+msgstr ""
+
+#: crates/keycord-passkey/src/ui.rs:172
+msgid "Storage format"
+msgstr ""
+
+#: crates/keycord-passkey/src/passless.rs:153
+msgid "The Passless record contains invalid metadata."
+msgstr ""
+
+#: crates/keycord-entries/src/file/parse.rs:83
+#: crates/keycord-entries/src/ui/page/bytes.rs:31
+#: crates/keycord-entries/src/ui/page/mod.rs:441
+#: crates/keycord-keys/src/hardware/linux.rs:511
+msgid "The entry is not UTF-8 text."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:107
+#: crates/keycord-passkey/src/passless.rs:139
+msgid "The passkey contains an invalid P-256 private scalar."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:115
+msgid "The passkey contains invalid RSA-2048 key material."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:97
+#: crates/keycord-passkey/src/passless.rs:115
+msgid "The passkey contains invalid account or creation metadata."
+msgstr ""
+
+#: crates/keycord-passkey/src/common.rs:6
+msgid "The passkey contains invalid private key material."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:16
+msgid "The passkey import is too large."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:96
+msgid "The passkey is missing {}."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:118
+#: crates/keycord-passkey/src/passless.rs:129
+msgid "The passkey private key has an invalid length."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:136
+#: crates/keycord-passkey/src/credential.rs:143
+#: crates/keycord-passkey/src/passless.rs:178
+msgid "The passkey record is too large."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:94
+#: crates/keycord-passkey/src/cxf.rs:84
+msgid "The passkey user handle must contain 1 to 64 bytes."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:102
+msgid "The passkey {key} must use unpadded Base64URL."
+msgstr ""
+
+#: crates/keycord-passkey/src/passless.rs:123
+msgid "This Passless key provider is not supported."
+msgstr ""
+
+#: crates/keycord-entries/src/host.rs:36 crates/keycord-entries/src/undo.rs:137
+msgid "This backend cannot write binary entries."
+msgstr ""
+
+#: crates/keycord-entries/src/file/parse.rs:57
+#: crates/keycord-entries/src/file/parse.rs:78
+msgid "This entry contains a passkey, not a password."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:30
+msgid "This import does not support FIDO2 extensions."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:121
+msgid "This passkey algorithm is not supported by Android Password Store."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:58
+#: crates/keycord-passkey/src/passless.rs:126
+msgid "This passkey algorithm is not supported by Passless."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:59
+msgid "This passkey algorithm is not supported."
+msgstr ""
+
+#: crates/keycord-passkey/src/credential.rs:154
+#: crates/keycord-passkey/src/passless.rs:184
+msgid "Unexpected data after the passkey record."
+msgstr ""
+
+#: crates/keycord-entries/src/file/row_ui.rs:49
+#: crates/keycord-entries/src/ui/page/bytes.rs:56
+msgid "Unsupported or damaged passkey"
+msgstr ""
+
+#: crates/keycord-keys/src/entry_crypto.rs:28
+msgid "no key for user found"
+msgstr ""
+
+#: crates/keycord-keys/src/entry_crypto.rs:133
+msgid "no pkesks managed to decrypt the ciphertext"
+msgstr ""
+
+#: crates/keycord-lifecycle/data/metainfo.xml:81
+msgid "Added Android Password Store and Passless passkey support with CXF import."
+msgstr ""
