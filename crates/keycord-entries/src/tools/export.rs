@@ -1,5 +1,5 @@
 use super::EntryRequest;
-use crate::file::{is_passkey_storage_line, parse_structured_pass_lines, StructuredPassLine};
+use crate::file::{parse_structured_pass_lines, pass_file_has_passkey, StructuredPassLine};
 use zeroize::{Zeroize, Zeroizing};
 
 pub const EXPORT_FILE_NAME: &str = "keycord-passwords.csv";
@@ -35,11 +35,11 @@ impl CsvExportRow {
         let mut fields = Vec::new();
         let mut notes = Vec::new();
 
-        for ((line, value), raw_line) in structured_lines.into_iter().zip(contents.lines().skip(1))
+        for ((line, value), raw_line) in structured_lines
+            .into_iter()
+            .filter(|(line, _)| !line.is_primary())
+            .zip(contents.lines().skip(1))
         {
-            if is_passkey_storage_line(raw_line) {
-                continue;
-            }
             match line {
                 StructuredPassLine::Username(_) => {
                     if let Some(value) = value {
@@ -51,6 +51,7 @@ impl CsvExportRow {
                         otp_urls.push(value);
                     }
                 }
+                #[cfg(feature = "passkey")]
                 StructuredPassLine::Passkey(_) => {}
                 StructuredPassLine::Field(_) => fields.push(raw_line.to_string()),
                 StructuredPassLine::Preserved(_) => notes.push(raw_line.to_string()),
@@ -129,27 +130,13 @@ pub fn unique_store_roots(requests: &[EntryRequest]) -> Vec<String> {
 }
 
 fn redacted_export_contents(contents: &str) -> String {
-    if !contents.lines().any(is_passkey_storage_line) {
+    if !pass_file_has_passkey(contents) {
         return contents.to_string();
     }
-
-    let mut redacted = String::with_capacity(contents.len());
-    for segment in contents.split_inclusive('\n') {
-        let (line_with_cr, newline) = segment
-            .strip_suffix('\n')
-            .map_or((segment, ""), |line| (line, "\n"));
-        let (line, carriage_return) = line_with_cr
-            .strip_suffix('\r')
-            .map_or((line_with_cr, ""), |line| (line, "\r"));
-        if is_passkey_storage_line(line) {
-            redacted.push_str("passkey: [redacted]");
-            redacted.push_str(carriage_return);
-            redacted.push_str(newline);
-        } else {
-            redacted.push_str(segment);
-        }
-    }
-    redacted
+    let suffix = contents
+        .find(['\r', '\n'])
+        .map_or("", |index| &contents[index..]);
+    format!("[passkey redacted]{suffix}")
 }
 
 fn append_csv_record<'a>(output: &mut String, fields: impl IntoIterator<Item = &'a str>) {
@@ -215,12 +202,27 @@ mod tests {
     }
 
     #[test]
-    fn passkey_material_is_redacted() {
-        let contents =
-            "\npasskey: {\"type\":\"passkey\",\"key\":\"private-material\"}\nurl: example.com";
-        let redacted = redacted_export_contents(contents);
-        assert_eq!(redacted, "\npasskey: [redacted]\nurl: example.com");
-        assert!(!redacted.contains("private-material"));
+    fn android_passkey_exports_follow_the_feature_boundary() {
+        let encoded = include_str!("../../../keycord-passkey/tests/fixtures/es256.b64").trim();
+        let contents = format!("{encoded}\r\nurl: example.com\r\n");
+        let redacted = redacted_export_contents(&contents);
+        let row = CsvExportRow::from_contents(
+            "main".into(),
+            &EntryRequest {
+                root: "/stores/main".into(),
+                label: "example.com/test".into(),
+            },
+            &contents,
+        );
+        if cfg!(feature = "passkey") {
+            assert_eq!(redacted, "[passkey redacted]\r\nurl: example.com\r\n");
+            assert!(row.password.is_empty());
+            assert!(row.fields().iter().all(|field| !field.contains(encoded)));
+            assert_eq!(row.fields, "url: example.com");
+        } else {
+            assert_eq!(redacted, contents);
+            assert_eq!(row.password, encoded);
+        }
     }
 
     #[test]

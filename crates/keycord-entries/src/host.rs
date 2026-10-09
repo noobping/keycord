@@ -290,11 +290,7 @@ impl<'a> HostEntryBackend<'a> {
             .map_err(PasswordEntryError::other)?;
         let output = ensure_host_command_success(HostStoreAction::ReadLine, output, "pass failed")
             .map_err(password_entry_error_from_host_failure)?;
-        Ok(String::from_utf8_lossy(&output.stdout)
-            .lines()
-            .next()
-            .unwrap_or_default()
-            .to_string())
+        crate::file::password_line(&String::from_utf8_lossy(&output.stdout))
     }
 
     pub const fn password_entry_is_readable(&self, _store_root: &str, _label: &str) -> bool {
@@ -309,6 +305,9 @@ impl<'a> HostEntryBackend<'a> {
         overwrite: bool,
     ) -> Result<(), PasswordEntryWriteError> {
         validate_entry_label_for_write(label)?;
+        #[cfg(feature = "passkey")]
+        crate::file::validate_passkey_path(contents, label)
+            .map_err(PasswordEntryWriteError::other)?;
 
         let mut configure = |cmd: &mut Command| {
             configure_pass_insert_command(cmd, label, overwrite);
@@ -337,6 +336,13 @@ impl<'a> HostEntryBackend<'a> {
     ) -> Result<(), PasswordEntryWriteError> {
         validate_entry_label_for_write(old_label)?;
         validate_entry_label_for_write(new_label)?;
+        #[cfg(feature = "passkey")]
+        if keycord_passkey::is_passkey_entry_label(old_label) {
+            let contents =
+                zeroize::Zeroizing::new(self.read_password_entry(store_root, old_label)?);
+            crate::file::validate_passkey_path(&contents, new_label)
+                .map_err(PasswordEntryWriteError::other)?;
+        }
 
         let mut configure = |cmd: &mut Command| {
             configure_pass_move_command(cmd, old_label, new_label);
@@ -443,6 +449,101 @@ mod tests {
         cmd.get_args()
             .map(|arg| arg.to_string_lossy().into_owned())
             .collect()
+    }
+
+    struct FixtureCommandPort {
+        mutations: std::sync::atomic::AtomicUsize,
+    }
+
+    impl HostEntryCommandPort for FixtureCommandPort {
+        fn run_store_command_output(
+            &self,
+            _root: &str,
+            _action: &str,
+            _options: CommandLogOptions,
+            configure: &mut dyn FnMut(&mut Command),
+        ) -> Result<Output, String> {
+            let mut command = Command::new("pass");
+            configure(&mut command);
+            let args = command_args(&command);
+            let stdout = if args.first().is_some_and(|arg| arg == "show") {
+                include_bytes!("../../keycord-passkey/tests/fixtures/es256.b64").to_vec()
+            } else {
+                self.mutations
+                    .fetch_add(1, std::sync::atomic::Ordering::SeqCst);
+                Vec::new()
+            };
+            Ok(Output {
+                status: ExitStatus::from_raw(0),
+                stdout,
+                stderr: Vec::new(),
+            })
+        }
+
+        fn run_store_command_with_input(
+            &self,
+            _root: &str,
+            _action: &str,
+            _input: &str,
+            _options: CommandLogOptions,
+            _configure: &mut dyn FnMut(&mut Command),
+        ) -> Result<Output, String> {
+            self.mutations
+                .fetch_add(1, std::sync::atomic::Ordering::SeqCst);
+            Ok(Output {
+                status: ExitStatus::from_raw(0),
+                stdout: Vec::new(),
+                stderr: Vec::new(),
+            })
+        }
+    }
+
+    #[test]
+    fn host_password_reads_respect_the_passkey_feature() {
+        let commands = FixtureCommandPort {
+            mutations: std::sync::atomic::AtomicUsize::new(0),
+        };
+        let backend = HostEntryBackend::new(&commands);
+        let result = backend.read_password_line("/unused", "example.com/test");
+        if cfg!(feature = "passkey") {
+            assert!(result.is_err());
+        } else {
+            assert_eq!(
+                result.unwrap(),
+                include_str!("../../keycord-passkey/tests/fixtures/es256.b64").trim()
+            );
+        }
+    }
+
+    #[cfg(feature = "passkey")]
+    #[test]
+    fn invalid_passkey_paths_never_reach_host_mutation_commands() {
+        let commands = FixtureCommandPort {
+            mutations: std::sync::atomic::AtomicUsize::new(0),
+        };
+        let backend = HostEntryBackend::new(&commands);
+        let encoded = include_str!("../../keycord-passkey/tests/fixtures/es256.b64").trim();
+        let credential = keycord_passkey::decode_passkey_storage_value(encoded).unwrap();
+        let label = keycord_passkey::build_passkey_storage_entry(&credential)
+            .unwrap()
+            .label;
+        assert!(backend
+            .save_password_entry("/unused", "example.com/wrong-id", encoded, true)
+            .is_err());
+        assert!(backend
+            .rename_password_entry("/unused", &label, "example.com/wrong-id")
+            .is_err());
+        assert_eq!(
+            commands.mutations.load(std::sync::atomic::Ordering::SeqCst),
+            0
+        );
+        backend
+            .rename_password_entry("/unused", &label, &format!("moved/{label}"))
+            .unwrap();
+        assert_eq!(
+            commands.mutations.load(std::sync::atomic::Ordering::SeqCst),
+            1
+        );
     }
 
     #[test]

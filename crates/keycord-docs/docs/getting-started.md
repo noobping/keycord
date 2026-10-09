@@ -34,7 +34,7 @@ fields. Treat the raw or otherwise decrypted entry as secret.
 ### Editors
 
 - Standard editor: password, username, OTP, and dynamic fields
-- Raw editor: the full pass file as text; it is unavailable for entries containing passkey material
+- Raw editor: the full pass file as text; in builds with passkey support, it is unavailable for recognized passkey entries
 
 ## Backends
 
@@ -174,3 +174,29 @@ keycord 'reg:(?i)^work/.+github$'
 - [Search Guide](search.md)
 - [Workflows](workflows.md)
 - [Permissions and Backends](permissions-and-backends.md)
+
+## Sharing passkeys with Android Password Store
+
+Builds with the optional `passkey` feature use the existing storage format of
+[Android Password Store (agrahn)](https://github.com/agrahn/Android-Password-Store).
+The same Git-backed store and OpenPGP recipients can be used in both apps.
+
+A passkey entry stores unpadded Base64URL-encoded CBOR on its first line before OpenPGP encryption.
+Its immediate parent folder is the relying-party ID (for example, `example.com`),
+and its filename is the full 32-byte credential ID in hexadecimal followed by `.gpg`.
+New imports use `passkeys/<rp-id>/<credential-id>.gpg`. Keep the RP folder and
+credential filename intact when moving entries. Keycord recognizes ES256, Ed25519,
+and RSA-2048 RS256 credentials. Editing additional fields, OTP data, or notes
+preserves the original passkey payload, including Android metadata.
+
+Open a supported CXF JSON file to import an existing credential. Imports must have
+a 32-byte credential ID and a supported private key; RSA imports require exponent
+65537. FIDO2 extensions that Android cannot store are rejected. Importing a
+credential does not register it with a website. CXP export requests can still be
+inspected, but Keycord does not generate response archives.
+
+With passkey support enabled, passkey key material is excluded from password
+copying, password QR codes, CSV exports, and password analysis. Without the
+`passkey` feature, entries receive ordinary password-file handling: Keycord does
+not recognize passkeys. The former `passkey:` JSON storage format is no longer
+supported, and no automatic conversion is provided.

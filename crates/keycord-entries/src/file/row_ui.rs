@@ -1,7 +1,10 @@
 use super::types::{is_url_field_key, DynamicFieldRow, DynamicFieldTemplate, StructuredPassLine};
 use super::url::add_open_url_suffix;
 use adw::gtk::{Box as GtkBox, Widget};
-use adw::{prelude::*, ActionRow, EntryRow, PasswordEntryRow, ToastOverlay};
+#[cfg(feature = "passkey")]
+use adw::ActionRow;
+use adw::{prelude::*, EntryRow, PasswordEntryRow, ToastOverlay};
+#[cfg(feature = "passkey")]
 use keycord_runtime::i18n::gettext;
 use keycord_shell::clipboard::add_copy_suffix;
 use keycord_shell::ui::clear_box_children;
@@ -39,9 +42,12 @@ pub fn rebuild_dynamic_fields_from_lines(
             StructuredPassLine::Otp(template) => {
                 templates.push(StructuredPassLine::Otp(template));
             }
+            #[cfg(feature = "passkey")]
             StructuredPassLine::Passkey(template) => {
-                let credential = &template.credential;
-                let subtitle = format!("{} — {}", credential.username, credential.rp_id);
+                let subtitle = match &template.credential {
+                    Ok(credential) => format!("{} — {}", credential.user.name, credential.rp.id),
+                    Err(_) => gettext("Unsupported or damaged passkey"),
+                };
                 let row = ActionRow::builder()
                     .title(gettext("Passkey"))
                     .subtitle(subtitle)

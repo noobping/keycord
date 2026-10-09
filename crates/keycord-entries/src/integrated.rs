@@ -502,7 +502,7 @@ impl<'a> IntegratedEntryBackend<'a> {
         label: &str,
     ) -> Result<String, PasswordEntryError> {
         let secret = self.read_password_entry(store_root, label)?;
-        Ok(secret.lines().next().unwrap_or_default().to_string())
+        crate::file::password_line(&secret)
     }
 
     pub fn password_entry_is_readable(self, store_root: &str, label: &str) -> bool {
@@ -529,6 +529,9 @@ impl<'a> IntegratedEntryBackend<'a> {
         overwrite: bool,
         report_progress: &mut dyn FnMut(PasswordEntryWriteProgress),
     ) -> Result<(), PasswordEntryWriteError> {
+        #[cfg(feature = "passkey")]
+        crate::file::validate_passkey_path(contents, label)
+            .map_err(PasswordEntryWriteError::other)?;
         let existing_entry_path = self
             .ports
             .stores
@@ -608,6 +611,13 @@ impl<'a> IntegratedEntryBackend<'a> {
         old_label: &str,
         new_label: &str,
     ) -> Result<(), PasswordEntryWriteError> {
+        #[cfg(feature = "passkey")]
+        if keycord_passkey::is_passkey_entry_label(old_label) {
+            let contents =
+                zeroize::Zeroizing::new(self.read_password_entry(store_root, old_label)?);
+            crate::file::validate_passkey_path(&contents, new_label)
+                .map_err(PasswordEntryWriteError::other)?;
+        }
         let commit_fingerprint = self.commit_identity_fingerprint_for_label(store_root, old_label);
         let old_path = self
             .ports

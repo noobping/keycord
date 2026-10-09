@@ -31,10 +31,10 @@ pub fn structured_pass_contents_from_values(
     values: &[String],
 ) -> String {
     let mut output = String::new();
-    output.push_str(password);
+    output.push_str(&primary_contents(password, templates.iter()));
 
     let mut dynamic_values = values.iter();
-    for template in templates {
+    for template in templates.iter().filter(|line| !line.is_primary()) {
         output.push('\n');
         match template {
             StructuredPassLine::Field(template) => {
@@ -56,7 +56,8 @@ pub fn structured_pass_contents_from_values(
                     output.push_str(&template.line(otp_url));
                 }
             }
-            StructuredPassLine::Passkey(template) => output.push_str(&template.line()),
+            #[cfg(feature = "passkey")]
+            StructuredPassLine::Passkey(_) => unreachable!("primary line is handled separately"),
             StructuredPassLine::Preserved(line) => output.push_str(line),
         }
     }
@@ -64,12 +65,33 @@ pub fn structured_pass_contents_from_values(
     output
 }
 
+fn primary_contents<'a>(
+    password: &str,
+    templates: impl Iterator<Item = &'a StructuredPassLine>,
+) -> String {
+    #[cfg(feature = "passkey")]
+    for template in templates {
+        if let StructuredPassLine::Passkey(passkey) = template {
+            return passkey.line().to_string();
+        }
+    }
+    #[cfg(not(feature = "passkey"))]
+    let _ = templates;
+    password.to_string()
+}
+
 pub fn clean_pass_file_contents(contents: &str) -> String {
     let (password, structured_lines) = parse_structured_pass_lines(contents);
     let mut output = String::new();
-    output.push_str(&password);
+    output.push_str(&primary_contents(
+        &password,
+        structured_lines.iter().map(|(line, _)| line),
+    ));
 
-    for (line, value) in structured_lines {
+    for (line, value) in structured_lines
+        .into_iter()
+        .filter(|(line, _)| !line.is_primary())
+    {
         let Some(line) = cleaned_line(line, value) else {
             continue;
         };
@@ -95,10 +117,9 @@ pub fn apply_pass_file_template_contents(contents: &str, template: &str) -> Stri
     let original_len = current_lines.len();
 
     for (line, value) in template_lines {
-        if matches!(
-            line,
-            StructuredPassLine::Passkey(_) | StructuredPassLine::Preserved(_)
-        ) || has_matching_template_line(&current_lines, &line)
+        if matches!(line, StructuredPassLine::Preserved(_))
+            || line.is_primary()
+            || has_matching_template_line(&current_lines, &line)
         {
             continue;
         }
@@ -149,7 +170,8 @@ fn cleaned_line(line: StructuredPassLine, value: Option<String>) -> Option<Strin
         StructuredPassLine::Otp(template) => value
             .filter(|url| should_keep_otp_url(url))
             .map(|url| template.line(&url)),
-        StructuredPassLine::Passkey(template) => Some(template.line()),
+        #[cfg(feature = "passkey")]
+        StructuredPassLine::Passkey(template) => Some(template.line().to_string()),
         StructuredPassLine::Preserved(line) => Some(line),
     }
 }
@@ -159,9 +181,12 @@ fn structured_pass_contents_from_lines(
     lines: &[(StructuredPassLine, Option<String>)],
 ) -> String {
     let mut output = String::new();
-    output.push_str(password);
+    output.push_str(&primary_contents(
+        password,
+        lines.iter().map(|(line, _)| line),
+    ));
 
-    for (line, value) in lines {
+    for (line, value) in lines.iter().filter(|(line, _)| !line.is_primary()) {
         output.push('\n');
         output.push_str(&line_contents(line, value.as_deref()));
     }
@@ -188,7 +213,8 @@ fn line_contents(line: &StructuredPassLine, value: Option<&str>) -> String {
             )
         }
         StructuredPassLine::Otp(template) => template.line(value.unwrap_or_default()),
-        StructuredPassLine::Passkey(template) => template.line(),
+        #[cfg(feature = "passkey")]
+        StructuredPassLine::Passkey(template) => template.line().to_string(),
         StructuredPassLine::Preserved(line) => line.clone(),
     }
 }
@@ -212,6 +238,7 @@ fn has_matching_template_line(
 enum TemplateLineIdentity {
     Username,
     Otp,
+    #[cfg(feature = "passkey")]
     Passkey,
     Field(String),
 }
@@ -220,6 +247,7 @@ fn template_line_identity(line: &StructuredPassLine) -> Option<TemplateLineIdent
     match line {
         StructuredPassLine::Username(_) => Some(TemplateLineIdentity::Username),
         StructuredPassLine::Otp(_) => Some(TemplateLineIdentity::Otp),
+        #[cfg(feature = "passkey")]
         StructuredPassLine::Passkey(_) => Some(TemplateLineIdentity::Passkey),
         StructuredPassLine::Field(template) => {
             canonical_search_field_key(&template.title).map(TemplateLineIdentity::Field)

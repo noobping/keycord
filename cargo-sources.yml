@@ -480,6 +480,36 @@
   dest-filename: .cargo-checksum.json
 - type: archive
   archive-type: tar-gzip
+  url: https://static.crates.io/crates/ciborium/ciborium-0.2.2.crate
+  sha256: 42e69ffd6f0917f5c029256a24d0161db17cea3997d185db0d35926308770f0e
+  dest: cargo/vendor/ciborium-0.2.2
+- type: inline
+  contents: '{"package": "42e69ffd6f0917f5c029256a24d0161db17cea3997d185db0d35926308770f0e",
+    "files": {}}'
+  dest: cargo/vendor/ciborium-0.2.2
+  dest-filename: .cargo-checksum.json
+- type: archive
+  archive-type: tar-gzip
+  url: https://static.crates.io/crates/ciborium-io/ciborium-io-0.2.2.crate
+  sha256: 05afea1e0a06c9be33d539b876f1ce3692f4afea2cb41f740e7743225ed1c757
+  dest: cargo/vendor/ciborium-io-0.2.2
+- type: inline
+  contents: '{"package": "05afea1e0a06c9be33d539b876f1ce3692f4afea2cb41f740e7743225ed1c757",
+    "files": {}}'
+  dest: cargo/vendor/ciborium-io-0.2.2
+  dest-filename: .cargo-checksum.json
+- type: archive
+  archive-type: tar-gzip
+  url: https://static.crates.io/crates/ciborium-ll/ciborium-ll-0.2.2.crate
+  sha256: 57663b653d948a338bfb3eeba9bb2fd5fcfaecb9e199e87e1eda4d9e8b240fd9
+  dest: cargo/vendor/ciborium-ll-0.2.2
+- type: inline
+  contents: '{"package": "57663b653d948a338bfb3eeba9bb2fd5fcfaecb9e199e87e1eda4d9e8b240fd9",
+    "files": {}}'
+  dest: cargo/vendor/ciborium-ll-0.2.2
+  dest-filename: .cargo-checksum.json
+- type: archive
+  archive-type: tar-gzip
   url: https://static.crates.io/crates/clang-sys/clang-sys-1.9.1.crate
   sha256: 157a8ba7b480713b56f4c09fd13fc3e0a22a5dfab8097ba61cbc5feef950788a
   dest: cargo/vendor/clang-sys-1.9.1

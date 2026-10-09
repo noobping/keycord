@@ -1,6 +1,6 @@
 //! Bounded local CXF/CXP file handling.
 
-use crate::credential::{import_cxf_passkey_json, PasskeyCredential};
+use crate::{import_cxf_passkey_json, PasskeyCredential};
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
 use serde::Deserialize;
 use serde_json::{Map, Value};
@@ -798,23 +798,17 @@ mod tests {
 
     #[test]
     fn reads_standard_cxf_passkey_files_for_import() {
-        use crate::credential::{export_cxf_passkey_json, generate_passkey_credential};
-
-        let credential =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
         let path = unique_temp_path();
-        fs::write(
-            &path,
-            export_cxf_passkey_json(&credential).expect("export CXF passkey"),
-        )
-        .unwrap();
+        let input = include_str!("../tests/fixtures/es256.cxf.json");
+        let credential = crate::import_cxf_passkey_json(input).expect("import fixture");
+        fs::write(&path, input).expect("write CXF fixture");
 
         let opened = read_opened_passkey_file(&path).expect("open CXF passkey");
         let OpenedPasskeyFile::Credential(imported) = opened else {
             panic!("expected a CXF credential");
         };
-        assert_eq!(imported.credential_id, credential.credential_id);
-        assert_eq!(imported.rp_id, "example.com");
+        assert_eq!(imported.id, credential.id);
+        assert_eq!(imported.rp.id, "example.com");
 
         fs::remove_file(path).unwrap();
     }

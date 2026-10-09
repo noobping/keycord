@@ -107,7 +107,10 @@ pub(super) fn indexed_fields_for_contents(contents: &str) -> Vec<SearchablePassF
             normalized_value: "true".to_string(),
         });
     }
-    if let Some(reason) = weak_password_reason(contents.lines().next().unwrap_or_default()) {
+    if let Some(reason) = crate::file::password_line(contents)
+        .ok()
+        .and_then(|password| weak_password_reason(&password))
+    {
         fields.push(SearchablePassField {
             key: WEAK_PASSWORD_SEARCH_KEY.to_string(),
             value: reason.clone(),

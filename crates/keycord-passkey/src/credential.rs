@@ -1,801 +1,254 @@
-//! Passkey credential normalization and CXF storage encoding.
+//! Android Password Store's first-line Base64URL/CBOR credential format.
 
-use std::fmt;
+use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
+use openssl::{bn::BigNum, ec::EcGroup, nid::Nid};
+use serde::{Deserialize, Serialize};
+use std::{fmt, io::Cursor, path::Path};
+use zeroize::{Zeroize, Zeroizing};
 
-pub const PASSKEY_FIELD_KEY: &str = "passkey";
+pub(crate) const MAX_STORAGE_BYTES: usize = 256 * 1024;
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-#[cfg_attr(not(feature = "passkey"), allow(dead_code))]
-pub enum PasskeyRegistrationState {
-    Imported,
-    GeneratedUnregistered,
-    Registered,
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+pub struct RelyingParty {
+    pub id: String,
+    #[serde(default)]
+    pub name: Option<String>,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+pub struct UserInfo {
+    pub id: Vec<u8>,
+    pub name: String,
+    #[serde(default)]
+    pub display_name: Option<String>,
+    #[serde(default)]
+    pub reveal_name: bool,
+}
+
+/// Byte vectors intentionally serialize as CBOR integer arrays, not byte strings.
+#[derive(Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct PasskeyCredential {
+    pub id: Vec<u8>,
+    pub rp: RelyingParty,
+    pub user: UserInfo,
+    #[serde(default)]
+    pub sign_count: u32,
+    pub alg: i32,
+    pub private_key: Vec<u8>,
+    pub created: i64,
+    #[serde(default = "utc")]
+    pub zone: String,
+}
+
+fn utc() -> String {
+    "UTC".into()
+}
+
+impl Drop for PasskeyCredential {
+    fn drop(&mut self) {
+        self.private_key.zeroize();
+    }
+}
+
+impl fmt::Debug for PasskeyCredential {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("PasskeyCredential")
+            .field("id", &self.id)
+            .field("rp", &self.rp)
+            .field("user", &self.user)
+            .field("alg", &self.alg)
+            .field("sign_count", &self.sign_count)
+            .field("created", &self.created)
+            .field("zone", &self.zone)
+            .field("private_key", &"[redacted]")
+            .finish()
+    }
 }
 
 #[derive(Clone, PartialEq, Eq)]
-pub struct PasskeyCredential {
-    pub credential_id: String,
-    pub rp_id: String,
-    pub username: String,
-    pub user_display_name: String,
-    pub user_handle: String,
-    pub key: String,
-    pub fido2_extensions: Option<String>,
-    pub registration_state: PasskeyRegistrationState,
-}
-
-/// Passkey-owned representation ready to be inserted into an Entries editor.
-#[derive(Clone, Debug, PartialEq, Eq)]
 pub struct PasskeyStorageEntry {
     pub label: String,
     pub contents: String,
 }
 
-impl fmt::Debug for PasskeyCredential {
-    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
-        formatter
-            .debug_struct("PasskeyCredential")
-            .field("credential_id", &self.credential_id)
-            .field("rp_id", &self.rp_id)
-            .field("username", &self.username)
-            .field("user_display_name", &self.user_display_name)
-            .field("user_handle", &self.user_handle)
-            .field("key", &"[redacted]")
-            .field(
-                "fido2_extensions",
-                &self.fido2_extensions.as_ref().map(|_| "[present]"),
-            )
-            .field("registration_state", &self.registration_state)
+impl fmt::Debug for PasskeyStorageEntry {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("PasskeyStorageEntry")
+            .field("label", &self.label)
+            .field("contents", &"[redacted]")
             .finish()
     }
 }
 
 impl PasskeyCredential {
-    pub fn with_registration_state(&self, registration_state: PasskeyRegistrationState) -> Self {
-        let mut updated = self.clone();
-        updated.registration_state = registration_state;
-        updated
+    pub fn credential_id_hex(&self) -> String {
+        self.id.iter().map(|byte| format!("{byte:02x}")).collect()
+    }
+
+    pub(crate) fn validate(&self) -> Result<(), String> {
+        if self.id.len() != 32 {
+            return Err("Android Password Store requires a 32-byte credential ID.".into());
+        }
+        validate_rp_id(&self.rp.id)?;
+        if self.user.id.is_empty() || self.user.id.len() > 64 {
+            return Err("The passkey user handle must contain 1 to 64 bytes.".into());
+        }
+        if self.user.name.is_empty() || self.created < 0 || self.zone.is_empty() {
+            return Err("The passkey contains invalid account or creation metadata.".into());
+        }
+        match self.alg {
+            -7 if self.private_key.len() == 32 => {
+                let scalar = BigNum::from_slice(&self.private_key).map_err(key_error)?;
+                let group = EcGroup::from_curve_name(Nid::X9_62_PRIME256V1).map_err(key_error)?;
+                let mut order = BigNum::new().map_err(key_error)?;
+                let mut context = openssl::bn::BigNumContext::new().map_err(key_error)?;
+                group.order(&mut order, &mut context).map_err(key_error)?;
+                if scalar.num_bits() == 0 || scalar >= order {
+                    return Err("The passkey contains an invalid P-256 private scalar.".into());
+                }
+            }
+            -8 if self.private_key.len() == 32 => {}
+            -257 if self.private_key.len() == 512 => {
+                let n = BigNum::from_slice(&self.private_key[..256]).map_err(key_error)?;
+                let d = BigNum::from_slice(&self.private_key[256..]).map_err(key_error)?;
+                if n.num_bits() != 2048 || !n.is_odd() || d.num_bits() == 0 || d >= n {
+                    return Err("The passkey contains invalid RSA-2048 key material.".into());
+                }
+            }
+            -7 | -8 | -257 => return Err("The passkey private key has an invalid length.".into()),
+            _ => {
+                return Err(
+                    "This passkey algorithm is not supported by Android Password Store.".into(),
+                )
+            }
+        }
+        Ok(())
     }
 }
 
-#[cfg(all(test, not(feature = "passkey")))]
-pub const fn passkey_support_available() -> bool {
-    cfg!(feature = "passkey")
+pub(crate) fn key_error(_: openssl::error::ErrorStack) -> String {
+    "The passkey contains invalid private key material.".into()
 }
 
-#[cfg(feature = "passkey")]
-mod implementation {
-    use super::{
-        PasskeyCredential, PasskeyRegistrationState, PasskeyStorageEntry, PASSKEY_FIELD_KEY,
-    };
-    use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
-    use openssl::ec::{EcGroup, EcKey};
-    use openssl::nid::Nid;
-    use openssl::pkey::{PKey, Private};
-    use rand::random;
-    use serde::Serialize;
-    use serde_json::Value;
-    use zeroize::Zeroizing;
-
-    const CXF_PASSKEY_TYPE: &str = "passkey";
-
-    struct PasskeyMetadata<'a> {
-        fido2_extensions: Option<&'a str>,
-        registration_state: PasskeyRegistrationState,
-    }
-
-    #[derive(Serialize)]
-    #[serde(rename_all = "camelCase")]
-    struct CxfPasskey<'a> {
-        #[serde(rename = "type")]
-        credential_type: &'static str,
-        credential_id: &'a str,
-        rp_id: &'a str,
-        username: &'a str,
-        user_display_name: &'a str,
-        user_handle: &'a str,
-        key: &'a str,
-        #[serde(skip_serializing_if = "Option::is_none")]
-        fido2_extensions: Option<Value>,
-    }
-
-    pub fn encode_passkey_storage_value(passkey: &PasskeyCredential) -> Result<String, String> {
-        let passkey = normalized_passkey(passkey)?;
-        encode_normalized_passkey_storage_value(&passkey)
-    }
-
-    /// Builds the canonical entry label and pass-file contents for a credential.
-    pub fn build_passkey_storage_entry(
-        passkey: &PasskeyCredential,
-    ) -> Result<PasskeyStorageEntry, String> {
-        let passkey = normalized_passkey(passkey)?;
-        let storage_value = encode_normalized_passkey_storage_value(&passkey)?;
-        Ok(PasskeyStorageEntry {
-            label: passkey_entry_label(&passkey),
-            contents: format!("\n{PASSKEY_FIELD_KEY}: {storage_value}"),
-        })
-    }
-
-    fn encode_normalized_passkey_storage_value(
-        passkey: &PasskeyCredential,
-    ) -> Result<String, String> {
-        serde_json::to_string(&cxf_passkey(passkey)?)
-            .map_err(|err| format!("Failed to serialize stored passkey data: {err}"))
-    }
-
-    fn passkey_entry_label(passkey: &PasskeyCredential) -> String {
-        let username = safe_entry_label_component(&passkey.username);
-        let credential_id = passkey.credential_id.chars().take(12).collect::<String>();
-        format!("passkeys/{}/{}-{}", passkey.rp_id, username, credential_id)
-    }
-
-    fn safe_entry_label_component(value: &str) -> String {
-        let mut output = String::new();
-        let mut previous_separator = false;
-        for character in value.chars().take(64) {
-            if character.is_ascii_alphanumeric() || matches!(character, '.' | '_' | '-') {
-                output.push(character);
-                previous_separator = false;
-            } else if !previous_separator {
-                output.push('-');
-                previous_separator = true;
-            }
-        }
-        let output = output.trim_matches(['.', '_', '-']);
-        if output.is_empty() || matches!(output, "." | "..") {
-            "user".to_string()
-        } else {
-            output.to_string()
-        }
-    }
-
-    pub fn decode_passkey_storage_value(value: &str) -> Result<PasskeyCredential, String> {
-        let value: Value = serde_json::from_str(value.trim())
-            .map_err(|err| format!("Invalid stored passkey JSON: {err}"))?;
-        if !is_cxf_passkey(&value) {
-            return Err("The stored JSON is not a passkey credential.".to_string());
-        }
-        passkey_from_cxf_value(&value, PasskeyRegistrationState::Imported)
-    }
-
-    pub fn import_cxf_passkey_json(input: &str) -> Result<PasskeyCredential, String> {
-        let value: Value =
-            serde_json::from_str(input).map_err(|err| format!("Invalid passkey JSON: {err}"))?;
-        let passkey = cxf_passkey_value(&value)?;
-        passkey_from_cxf_value(passkey, PasskeyRegistrationState::Imported)
-    }
-
-    pub fn export_cxf_passkey_json(passkey: &PasskeyCredential) -> Result<String, String> {
-        let passkey = normalized_passkey(passkey)?;
-        serde_json::to_string_pretty(&cxf_passkey(&passkey)?)
-            .map_err(|err| format!("Failed to export passkey JSON: {err}"))
-    }
-
-    fn cxf_passkey(passkey: &PasskeyCredential) -> Result<CxfPasskey<'_>, String> {
-        let fido2_extensions = passkey
-            .fido2_extensions
-            .as_deref()
-            .map(serde_json::from_str)
-            .transpose()
-            .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))?;
-        Ok(CxfPasskey {
-            credential_type: CXF_PASSKEY_TYPE,
-            credential_id: &passkey.credential_id,
-            rp_id: &passkey.rp_id,
-            username: &passkey.username,
-            user_display_name: &passkey.user_display_name,
-            user_handle: &passkey.user_handle,
-            key: &passkey.key,
-            fido2_extensions,
-        })
-    }
-
-    pub fn generate_passkey_credential(
-        rp_id: &str,
-        username: &str,
-        user_display_name: &str,
-    ) -> Result<PasskeyCredential, String> {
-        let key = generate_p256_private_key()?;
-        normalize_passkey(
-            &encode_base64url(&random::<[u8; 32]>()),
-            rp_id,
-            username,
-            user_display_name,
-            &encode_base64url(&random::<[u8; 32]>()),
-            &key,
-            PasskeyMetadata {
-                fido2_extensions: None,
-                registration_state: PasskeyRegistrationState::GeneratedUnregistered,
-            },
-        )
-    }
-
-    fn normalized_passkey(passkey: &PasskeyCredential) -> Result<PasskeyCredential, String> {
-        normalize_passkey(
-            &passkey.credential_id,
-            &passkey.rp_id,
-            &passkey.username,
-            &passkey.user_display_name,
-            &passkey.user_handle,
-            &passkey.key,
-            PasskeyMetadata {
-                fido2_extensions: passkey.fido2_extensions.as_deref(),
-                registration_state: passkey.registration_state,
-            },
-        )
-    }
-
-    fn cxf_passkey_value(value: &Value) -> Result<&Value, String> {
-        if is_cxf_passkey(value) {
-            return Ok(value);
-        }
-
-        let mut passkeys = Vec::new();
-        collect_cxf_passkeys(value, &mut passkeys);
-        match passkeys.as_slice() {
-            [passkey] => Ok(*passkey),
-            [] => Err("Choose a JSON object containing one passkey credential.".to_string()),
-            _ => Err("Choose a JSON object containing exactly one passkey credential.".to_string()),
-        }
-    }
-
-    fn collect_cxf_passkeys<'a>(value: &'a Value, passkeys: &mut Vec<&'a Value>) {
-        let Some(object) = value.as_object() else {
-            return;
-        };
-
-        for key in ["passkey", "credential"] {
-            if let Some(candidate) = object.get(key) {
-                if is_cxf_passkey(candidate) {
-                    passkeys.push(candidate);
-                }
-            }
-        }
-
-        if let Some(credentials) = object.get("credentials").and_then(Value::as_array) {
-            passkeys.extend(
-                credentials
-                    .iter()
-                    .filter(|credential| is_cxf_passkey(credential)),
-            );
-        }
-
-        for key in ["items", "accounts"] {
-            if let Some(children) = object.get(key).and_then(Value::as_array) {
-                for child in children {
-                    collect_cxf_passkeys(child, passkeys);
-                }
-            }
-        }
-    }
-
-    fn is_cxf_passkey(value: &Value) -> bool {
-        value
-            .get("type")
-            .and_then(Value::as_str)
-            .is_some_and(|credential_type| credential_type == CXF_PASSKEY_TYPE)
-    }
-
-    fn passkey_from_cxf_value(
-        value: &Value,
-        registration_state: PasskeyRegistrationState,
-    ) -> Result<PasskeyCredential, String> {
-        let username = required_string(value, &["username", "userName"], "username")?;
-        let display_name = optional_string(value, &["userDisplayName", "displayName"])
-            .map(str::trim)
-            .filter(|name| !name.is_empty())
-            .unwrap_or(username);
-        let fido2_extensions = value
-            .get("fido2Extensions")
-            .map(serde_json::to_string)
-            .transpose()
-            .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))?;
-
-        normalize_passkey(
-            required_string(value, &["credentialId"], "credential ID")?,
-            required_string(value, &["rpId"], "RP ID")?,
-            username,
-            display_name,
-            required_string(value, &["userHandle"], "user handle")?,
-            required_string(value, &["key"], "private key")?,
-            PasskeyMetadata {
-                fido2_extensions: fido2_extensions.as_deref(),
-                registration_state,
-            },
-        )
-    }
-
-    fn required_string<'a>(
-        value: &'a Value,
-        keys: &[&str],
-        label: &str,
-    ) -> Result<&'a str, String> {
-        optional_string(value, keys)
-            .map(str::trim)
-            .filter(|text| !text.is_empty())
-            .ok_or_else(|| format!("The passkey is missing a {label}."))
-    }
-
-    fn optional_string<'a>(value: &'a Value, keys: &[&str]) -> Option<&'a str> {
-        keys.iter().find_map(|key| value.get(*key)?.as_str())
-    }
-
-    fn normalize_passkey(
-        credential_id: &str,
-        rp_id: &str,
-        username: &str,
-        user_display_name: &str,
-        user_handle: &str,
-        key: &str,
-        metadata: PasskeyMetadata<'_>,
-    ) -> Result<PasskeyCredential, String> {
-        let rp_id = normalize_rp_id(rp_id)?;
-        let username = username.trim();
-        if username.is_empty() {
-            return Err("Enter a passkey username.".to_string());
-        }
-        let user_display_name = user_display_name.trim();
-        let user_display_name = if user_display_name.is_empty() {
-            username
-        } else {
-            user_display_name
-        };
-
-        Ok(PasskeyCredential {
-            credential_id: normalize_base64url(credential_id, "credential ID")?,
-            rp_id,
-            username: username.to_string(),
-            user_display_name: user_display_name.to_string(),
-            user_handle: normalize_base64url(user_handle, "user handle")?,
-            key: normalize_private_key(key)?,
-            fido2_extensions: normalize_fido2_extensions(metadata.fido2_extensions)?,
-            registration_state: metadata.registration_state,
-        })
-    }
-
-    fn normalize_fido2_extensions(value: Option<&str>) -> Result<Option<String>, String> {
-        let Some(value) = value else {
-            return Ok(None);
-        };
-        let extensions: Value = serde_json::from_str(value)
-            .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))?;
-        if !extensions.is_object() {
-            return Err("Passkey FIDO2 extensions must be a JSON object.".to_string());
-        }
-        serde_json::to_string(&extensions)
-            .map(Some)
-            .map_err(|err| format!("Invalid passkey FIDO2 extensions: {err}"))
-    }
-
-    fn normalize_rp_id(rp_id: &str) -> Result<String, String> {
-        let rp_id = rp_id.trim().to_ascii_lowercase();
-        let rp_id = rp_id.strip_suffix('.').unwrap_or(&rp_id);
-        if rp_id.is_empty() || rp_id.len() > 253 || !rp_id.is_ascii() {
-            return Err("Enter a valid passkey RP ID.".to_string());
-        }
-
-        let valid = rp_id.split('.').all(|label| {
+pub(crate) fn validate_rp_id(value: &str) -> Result<(), String> {
+    if value.is_empty()
+        || value.len() > 253
+        || !value.is_ascii()
+        || !value.split('.').all(|label| {
             !label.is_empty()
                 && label.len() <= 63
                 && label
                     .bytes()
-                    .all(|byte| byte.is_ascii_alphanumeric() || byte == b'-')
-                && label
-                    .as_bytes()
-                    .first()
-                    .is_some_and(u8::is_ascii_alphanumeric)
-                && label
-                    .as_bytes()
-                    .last()
-                    .is_some_and(u8::is_ascii_alphanumeric)
-        });
-        if !valid {
-            return Err("Enter a valid passkey RP ID.".to_string());
-        }
-
-        Ok(rp_id.to_string())
+                    .all(|b| b.is_ascii_alphanumeric() || b == b'-')
+                && label.as_bytes()[0].is_ascii_alphanumeric()
+                && label.as_bytes()[label.len() - 1].is_ascii_alphanumeric()
+        })
+    {
+        return Err("Enter a valid passkey RP ID.".into());
     }
+    Ok(())
+}
 
-    fn normalize_base64url(value: &str, label: &str) -> Result<String, String> {
-        let decoded = decode_base64url(value, label)?;
-        if decoded.is_empty() {
-            return Err(format!("The passkey {label} is empty."));
-        }
-
-        Ok(encode_base64url(&decoded))
+pub fn encode_passkey_storage_value(credential: &PasskeyCredential) -> Result<String, String> {
+    credential.validate()?;
+    let mut bytes = Zeroizing::new(Vec::new());
+    ciborium::into_writer(credential, &mut *bytes)
+        .map_err(|_| "Couldn't encode the passkey record.".to_string())?;
+    let encoded = URL_SAFE_NO_PAD.encode(&bytes);
+    if encoded.len() > MAX_STORAGE_BYTES {
+        return Err("The passkey record is too large.".into());
     }
+    Ok(encoded)
+}
 
-    fn normalize_private_key(value: &str) -> Result<String, String> {
-        let decoded = Zeroizing::new(decode_base64url(value, "private key")?);
-        let pkey = validate_private_key(&decoded)?;
-        let pkcs8 = Zeroizing::new(
-            pkey.private_key_to_pkcs8()
-                .map_err(|err| format!("Failed to normalize passkey private key: {err}"))?,
-        );
-        Ok(encode_base64url(&pkcs8))
+pub fn decode_passkey_storage_value(value: &str) -> Result<PasskeyCredential, String> {
+    if value.len() > MAX_STORAGE_BYTES {
+        return Err("The passkey record is too large.".into());
     }
-
-    fn decode_base64url(value: &str, label: &str) -> Result<Vec<u8>, String> {
-        let value = value.trim();
-        if value.is_empty() || value.contains(['+', '/', '=']) {
-            return Err(format!("The passkey {label} must use unpadded base64url."));
-        }
+    let bytes = Zeroizing::new(
         URL_SAFE_NO_PAD
             .decode(value)
-            .map_err(|err| format!("Invalid passkey {label}: {err}"))
+            .map_err(|_| "Invalid passkey Base64URL encoding.".to_string())?,
+    );
+    let mut reader = Cursor::new(bytes.as_slice());
+    let credential: PasskeyCredential = ciborium::from_reader(&mut reader)
+        .map_err(|_| "Invalid Android Password Store CBOR record.".to_string())?;
+    if reader.position() != bytes.len() as u64 {
+        return Err("Unexpected data after the passkey record.".into());
     }
-
-    fn encode_base64url(bytes: &[u8]) -> String {
-        URL_SAFE_NO_PAD.encode(bytes)
-    }
-
-    fn generate_p256_private_key() -> Result<String, String> {
-        let group = EcGroup::from_curve_name(Nid::X9_62_PRIME256V1)
-            .map_err(|err| format!("Failed to prepare passkey key generation: {err}"))?;
-        let ec_key = EcKey::generate(&group)
-            .map_err(|err| format!("Failed to generate passkey key material: {err}"))?;
-        let pkey = PKey::from_ec_key(ec_key)
-            .map_err(|err| format!("Failed to prepare passkey key material: {err}"))?;
-        let der = Zeroizing::new(
-            pkey.private_key_to_pkcs8()
-                .map_err(|err| format!("Failed to encode passkey key material: {err}"))?,
-        );
-        Ok(encode_base64url(&der))
-    }
-
-    fn validate_private_key(der: &[u8]) -> Result<PKey<Private>, String> {
-        PKey::private_key_from_pkcs8(der)
-            .map_err(|_| "Enter a valid PKCS#8 passkey private key.".to_string())
-    }
+    credential.validate()?;
+    Ok(credential)
 }
 
-#[cfg(not(feature = "passkey"))]
-mod implementation {
-    use super::PasskeyCredential;
-
-    const UNSUPPORTED: &str = "This build does not include passkey support.";
-
-    #[cfg(test)]
-    pub fn encode_passkey_storage_value(_passkey: &PasskeyCredential) -> Result<String, String> {
-        Err(UNSUPPORTED.to_string())
+/// Recognizable damaged/unsupported credentials must not fall back to password copy/export.
+/// Only a bounded prefix is decoded before semantic validation.
+pub fn inspect_passkey_storage_value(value: &str) -> Option<Result<PasskeyCredential, String>> {
+    let prefix_len = value
+        .bytes()
+        .take(MAX_STORAGE_BYTES)
+        .take_while(|byte| byte.is_ascii_alphanumeric() || matches!(byte, b'-' | b'_'))
+        .count()
+        / 4
+        * 4;
+    let prefix = value.get(..prefix_len)?;
+    let bytes = Zeroizing::new(URL_SAFE_NO_PAD.decode(prefix).ok()?);
+    if bytes.first().is_none_or(|byte| byte >> 5 != 5)
+        || !bytes.windows(12).any(|part| part == b"\x6bprivate_key")
+    {
+        return None;
     }
-
-    pub fn decode_passkey_storage_value(_value: &str) -> Result<PasskeyCredential, String> {
-        Err(UNSUPPORTED.to_string())
-    }
-
-    #[cfg(test)]
-    pub fn import_cxf_passkey_json(_input: &str) -> Result<PasskeyCredential, String> {
-        Err(UNSUPPORTED.to_string())
-    }
-
-    #[cfg(test)]
-    pub fn export_cxf_passkey_json(_passkey: &PasskeyCredential) -> Result<String, String> {
-        Err(UNSUPPORTED.to_string())
-    }
-
-    #[cfg(test)]
-    pub fn generate_passkey_credential(
-        _rp_id: &str,
-        _username: &str,
-        _user_display_name: &str,
-    ) -> Result<PasskeyCredential, String> {
-        Err(UNSUPPORTED.to_string())
-    }
+    Some(decode_passkey_storage_value(value))
 }
 
-pub use implementation::decode_passkey_storage_value;
-#[cfg(feature = "passkey")]
-pub use implementation::{
-    build_passkey_storage_entry, export_cxf_passkey_json, generate_passkey_credential,
-};
-#[cfg(all(test, not(feature = "passkey")))]
-pub use implementation::{
-    encode_passkey_storage_value, export_cxf_passkey_json, generate_passkey_credential,
-    import_cxf_passkey_json,
-};
-#[cfg(feature = "passkey")]
-pub use implementation::{encode_passkey_storage_value, import_cxf_passkey_json};
+pub fn build_passkey_storage_entry(
+    credential: &PasskeyCredential,
+) -> Result<PasskeyStorageEntry, String> {
+    Ok(PasskeyStorageEntry {
+        label: format!(
+            "passkeys/{}/{}",
+            credential.rp.id,
+            credential.credential_id_hex()
+        ),
+        contents: encode_passkey_storage_value(credential)?,
+    })
+}
 
-#[cfg(all(test, feature = "passkey"))]
-mod tests {
-    use super::{
-        build_passkey_storage_entry, decode_passkey_storage_value, encode_passkey_storage_value,
-        export_cxf_passkey_json, generate_passkey_credential, import_cxf_passkey_json,
-        PasskeyCredential, PasskeyRegistrationState,
-    };
-    use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
-    use openssl::ec::{EcGroup, EcKey};
-    use openssl::nid::Nid;
-    use openssl::pkey::PKey;
-    use serde_json::{json, Value};
+/// Android's discoverable filenames. Other entry renames need no extra decryption.
+pub fn is_passkey_entry_label(label: &str) -> bool {
+    let path = Path::new(label.strip_suffix(".gpg").unwrap_or(label));
+    path.file_name()
+        .and_then(|name| name.to_str())
+        .is_some_and(|name| name.len() == 64 && name.bytes().all(|byte| byte.is_ascii_hexdigit()))
+        && path
+            .parent()
+            .and_then(Path::file_name)
+            .and_then(|name| name.to_str())
+            .is_some_and(|parent| validate_rp_id(parent).is_ok())
+}
 
-    fn exported_value(passkey: &PasskeyCredential) -> Value {
-        serde_json::from_str(
-            &export_cxf_passkey_json(passkey).expect("export generated passkey as CXF JSON"),
+pub fn validate_passkey_entry_label(
+    credential: &PasskeyCredential,
+    label: &str,
+) -> Result<(), String> {
+    let path = Path::new(label.strip_suffix(".gpg").unwrap_or(label));
+    let valid = path
+        .file_name()
+        .and_then(|name| name.to_str())
+        .is_some_and(|name| name.eq_ignore_ascii_case(&credential.credential_id_hex()))
+        && path
+            .parent()
+            .and_then(Path::file_name)
+            .and_then(|name| name.to_str())
+            == Some(credential.rp.id.as_str());
+    if valid {
+        Ok(())
+    } else {
+        Err(
+            "Keep the passkey's credential ID as its filename and its RP ID as the parent folder."
+                .into(),
         )
-        .expect("parse exported CXF JSON")
-    }
-
-    #[test]
-    fn stored_passkeys_use_direct_compact_cxf_json() {
-        let generated =
-            generate_passkey_credential("Example.COM", "alice", "").expect("generate passkey");
-
-        let mut encodings = Vec::new();
-        for state in [
-            PasskeyRegistrationState::GeneratedUnregistered,
-            PasskeyRegistrationState::Registered,
-            PasskeyRegistrationState::Imported,
-        ] {
-            let passkey = generated.with_registration_state(state);
-            let encoded = encode_passkey_storage_value(&passkey).expect("encode passkey");
-            assert!(encoded.starts_with("{\"type\":\"passkey\","));
-            assert!(encoded.ends_with('}'));
-            assert!(!encoded.contains("keycord-passkey"));
-            assert!(!encoded.contains("version"));
-            assert!(!encoded.contains("registrationState"));
-
-            let decoded = decode_passkey_storage_value(&encoded).expect("decode passkey");
-            assert_eq!(
-                decoded,
-                passkey.with_registration_state(PasskeyRegistrationState::Imported)
-            );
-            encodings.push(encoded);
-        }
-        assert!(encodings.windows(2).all(|pair| pair[0] == pair[1]));
-    }
-
-    #[test]
-    fn storage_entries_own_safe_canonical_labels_and_contents() {
-        let mut generated =
-            generate_passkey_credential("Example.COM.", "alice", "Alice").expect("passkey");
-        generated.username = "../../Alice / Admin".to_string();
-
-        let entry = build_passkey_storage_entry(&generated).expect("storage entry");
-
-        assert!(entry.label.starts_with("passkeys/example.com/Alice-Admin-"));
-        assert!(!entry.label.contains(".."));
-        assert!(entry
-            .contents
-            .starts_with("\npasskey: {\"type\":\"passkey\","));
-
-        generated.username = "...".to_string();
-        let entry = build_passkey_storage_entry(&generated).expect("fallback storage entry");
-        assert!(entry.label.starts_with("passkeys/example.com/user-"));
-    }
-
-    #[test]
-    fn generated_passkeys_use_normalized_rp_ids_and_pkcs8_p256_keys() {
-        let passkey =
-            generate_passkey_credential("Example.COM.", "alice", "").expect("generate passkey");
-
-        assert_eq!(passkey.rp_id, "example.com");
-        assert_eq!(passkey.user_display_name, "alice");
-        assert_eq!(
-            passkey.registration_state,
-            PasskeyRegistrationState::GeneratedUnregistered
-        );
-        assert!(!passkey.credential_id.is_empty());
-        assert!(!passkey.user_handle.is_empty());
-
-        let key_bytes = URL_SAFE_NO_PAD.decode(&passkey.key).expect("decode key");
-        let key = PKey::private_key_from_pkcs8(&key_bytes).expect("parse PKCS#8 key");
-        let ec_key = key.ec_key().expect("extract EC key");
-        assert_eq!(ec_key.group().curve_name(), Some(Nid::X9_62_PRIME256V1));
-    }
-
-    #[test]
-    fn cxf_export_is_a_standalone_standard_passkey_object() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let value = exported_value(&generated);
-
-        assert_eq!(value.get("type").and_then(Value::as_str), Some("passkey"));
-        assert_eq!(
-            value.get("credentialId").and_then(Value::as_str),
-            Some(generated.credential_id.as_str())
-        );
-        assert!(value.get("registrationState").is_none());
-
-        let key = value.get("key").and_then(Value::as_str).expect("CXF key");
-        let key = URL_SAFE_NO_PAD.decode(key).expect("decode CXF key");
-        PKey::private_key_from_pkcs8(&key).expect("CXF key must be PKCS#8");
-    }
-
-    #[test]
-    fn cxf_standalone_passkeys_import_as_zero_counter_compatible_credentials() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let exported = export_cxf_passkey_json(&generated).expect("export passkey");
-        let imported = import_cxf_passkey_json(&exported).expect("import passkey");
-
-        assert_eq!(
-            imported.registration_state,
-            PasskeyRegistrationState::Imported
-        );
-        assert_eq!(imported.credential_id, generated.credential_id);
-        assert_eq!(imported.rp_id, generated.rp_id);
-        assert_eq!(imported.key, generated.key);
-    }
-
-    #[test]
-    fn cxf_item_and_account_containers_accept_exactly_one_passkey() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let passkey = exported_value(&generated);
-        let item = json!({
-            "credentials": [
-                {"type": "basic-auth", "username": "alice", "password": "secret"},
-                passkey.clone()
-            ]
-        });
-        let account = json!({"accounts": [{"items": [item.clone()]}]});
-
-        for container in [item, account] {
-            let imported = import_cxf_passkey_json(&container.to_string())
-                .expect("import one passkey from container");
-            assert_eq!(imported.credential_id, generated.credential_id);
-        }
-
-        let ambiguous = json!({"credentials": [passkey.clone(), passkey]});
-        assert!(import_cxf_passkey_json(&ambiguous.to_string()).is_err());
-    }
-
-    #[test]
-    fn cxf_import_requires_the_passkey_type_discriminator() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let mut value = exported_value(&generated);
-        value
-            .as_object_mut()
-            .expect("passkey object")
-            .remove("type");
-
-        assert!(import_cxf_passkey_json(&value.to_string()).is_err());
-        value["type"] = Value::String("basic-auth".to_string());
-        assert!(import_cxf_passkey_json(&value.to_string()).is_err());
-    }
-
-    #[test]
-    fn invalid_rp_ids_and_non_url_safe_binary_fields_are_rejected() {
-        for rp_id in [
-            "",
-            ".example.com",
-            "-example.com",
-            "example..com",
-            "exa_mple.com",
-        ] {
-            assert!(generate_passkey_credential(rp_id, "alice", "Alice").is_err());
-        }
-
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let mut value = exported_value(&generated);
-        value["credentialId"] = Value::String("YWJjZA==".to_string());
-        assert!(import_cxf_passkey_json(&value.to_string()).is_err());
-        value["credentialId"] = Value::String(generated.credential_id);
-        value["userHandle"] = Value::String("not/urlsafe".to_string());
-        assert!(import_cxf_passkey_json(&value.to_string()).is_err());
-    }
-
-    #[test]
-    fn cxf_import_rejects_key_specific_der_and_accepts_generic_pkcs8() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let mut value = exported_value(&generated);
-
-        let p256_group = EcGroup::from_curve_name(Nid::X9_62_PRIME256V1).expect("P-256 group");
-        let key_specific = EcKey::generate(&p256_group)
-            .expect("generate P-256 key")
-            .private_key_to_der()
-            .expect("serialize SEC1 key");
-        value["key"] = Value::String(URL_SAFE_NO_PAD.encode(key_specific));
-        assert!(import_cxf_passkey_json(&value.to_string()).is_err());
-
-        let p384_group = EcGroup::from_curve_name(Nid::SECP384R1).expect("P-384 group");
-        let p384 = PKey::from_ec_key(EcKey::generate(&p384_group).expect("generate P-384 key"))
-            .expect("wrap P-384 key")
-            .private_key_to_pkcs8()
-            .expect("serialize P-384 PKCS#8 key");
-        value["key"] = Value::String(URL_SAFE_NO_PAD.encode(p384));
-        let imported = import_cxf_passkey_json(&value.to_string()).expect("import P-384 PKCS#8");
-        let imported_key = URL_SAFE_NO_PAD
-            .decode(imported.key)
-            .expect("decode imported key");
-        let imported_key = PKey::private_key_from_pkcs8(&imported_key).expect("parse imported key");
-        let imported_ec_key = imported_key.ec_key().expect("extract imported EC key");
-        assert_eq!(imported_ec_key.group().curve_name(), Some(Nid::SECP384R1));
-    }
-
-    #[test]
-    fn cxf_fido2_extensions_survive_import_and_pass_file_round_trips() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let mut value = exported_value(&generated);
-        let extensions = json!({
-            "credBlob": "AQID",
-            "payments": true,
-            "futureExtension": {"opaque": "value"}
-        });
-        value["fido2Extensions"] = extensions.clone();
-
-        let imported = import_cxf_passkey_json(&value.to_string()).expect("import extensions");
-        let encoded = encode_passkey_storage_value(&imported).expect("encode stored passkey");
-        let decoded = decode_passkey_storage_value(&encoded).expect("decode stored passkey");
-        assert_eq!(decoded, imported);
-
-        let exported = exported_value(&decoded);
-        assert_eq!(exported["fido2Extensions"], extensions);
-    }
-
-    #[test]
-    fn cxf_fido2_extensions_must_be_an_object() {
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let mut value = exported_value(&generated);
-
-        for invalid in [Value::Null, json!([]), json!("extension")] {
-            value["fido2Extensions"] = invalid;
-            assert!(import_cxf_passkey_json(&value.to_string()).is_err());
-        }
-    }
-
-    #[test]
-    fn passkey_debug_output_does_not_expose_private_key_material() {
-        let mut generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        generated.fido2_extensions =
-            Some(json!({"hmacCredentials": {"secret": "extension-secret"}}).to_string());
-        let debug = format!("{generated:?}");
-
-        assert!(!debug.contains(&generated.key));
-        assert!(!debug.contains("extension-secret"));
-        assert!(debug.contains("[redacted]"));
-    }
-
-    #[test]
-    fn malformed_storage_values_and_invalid_public_values_are_rejected() {
-        assert!(decode_passkey_storage_value("not-valid-json").is_err());
-        assert!(decode_passkey_storage_value("other-prefix:abc").is_err());
-
-        let generated =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let invalid = PasskeyCredential {
-            rp_id: "invalid/rp".to_string(),
-            ..generated
-        };
-        assert!(encode_passkey_storage_value(&invalid).is_err());
-        assert!(export_cxf_passkey_json(&invalid).is_err());
     }
 }
 
-#[cfg(all(test, not(feature = "passkey")))]
-mod disabled_tests {
-    use super::{
-        decode_passkey_storage_value, encode_passkey_storage_value, export_cxf_passkey_json,
-        generate_passkey_credential, import_cxf_passkey_json, passkey_support_available,
-        PasskeyCredential, PasskeyRegistrationState,
-    };
-
-    #[test]
-    fn passkey_operations_are_explicitly_unavailable_without_the_feature() {
-        let passkey = PasskeyCredential {
-            credential_id: "credential-id".to_string(),
-            rp_id: "example.com".to_string(),
-            username: "alice".to_string(),
-            user_display_name: "Alice".to_string(),
-            user_handle: "user-handle".to_string(),
-            key: "private-key".to_string(),
-            fido2_extensions: None,
-            registration_state: PasskeyRegistrationState::Imported,
-        };
-
-        assert!(!passkey_support_available());
-        assert!(generate_passkey_credential("example.com", "alice", "Alice").is_err());
-        assert!(encode_passkey_storage_value(&passkey).is_err());
-        assert!(decode_passkey_storage_value(r#"{"type":"passkey"}"#).is_err());
-        assert!(import_cxf_passkey_json(r#"{"type":"passkey"}"#).is_err());
-        assert!(export_cxf_passkey_json(&passkey).is_err());
-    }
-}
+#[cfg(test)]
+mod tests;

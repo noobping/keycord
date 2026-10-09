@@ -59,6 +59,20 @@ pub enum PasswordEntryWriteError {
     Other(String),
 }
 
+impl From<PasswordEntryError> for PasswordEntryWriteError {
+    fn from(error: PasswordEntryError) -> Self {
+        match error {
+            PasswordEntryError::EntryNotFound(message) => Self::EntryNotFound(message),
+            PasswordEntryError::MissingPrivateKey(message) => Self::MissingPrivateKey(message),
+            PasswordEntryError::LockedPrivateKey(message) => Self::LockedPrivateKey(message),
+            PasswordEntryError::IncompatiblePrivateKey(message) => {
+                Self::IncompatiblePrivateKey(message)
+            }
+            PasswordEntryError::Other(message) => Self::Other(message),
+        }
+    }
+}
+
 impl PasswordEntryWriteError {
     pub fn already_exists(message: impl Into<String>) -> Self {
         Self::EntryAlreadyExists(message.into())

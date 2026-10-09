@@ -86,6 +86,11 @@ jobs:
       - name: Verify passkey feature build
         run: cargo test --package keycord --locked --no-run --no-default-features --features passkey
 
+      - name: Test optional passkey storage
+        run: |
+          cargo test --package keycord-passkey --package keycord-entries --locked --no-default-features --features passkey
+          cargo test --package keycord-passkey --package keycord-entries --locked --no-default-features
+
       - name: Build
         run: cargo build --package keycord --locked --release --features setup
 

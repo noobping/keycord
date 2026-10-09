@@ -6,9 +6,13 @@ use adw::gtk::Widget;
 use adw::prelude::*;
 #[cfg(feature = "ui")]
 use adw::{EntryRow, PasswordEntryRow};
+#[cfg(feature = "passkey")]
 use std::fmt;
 
-use keycord_passkey::{PasskeyCredential, PASSKEY_FIELD_KEY};
+#[cfg(feature = "passkey")]
+use keycord_passkey::PasskeyCredential;
+#[cfg(feature = "passkey")]
+use zeroize::Zeroizing;
 
 const USERNAME_FIELD_KEYS: [&str; 3] = ["login", "username", "user"];
 const SENSITIVE_FIELD_HINTS: [&str; 8] = [
@@ -45,9 +49,6 @@ impl DynamicFieldTemplate {
         if title.eq_ignore_ascii_case("otpauth") {
             return Err("Use Add OTP secret instead.");
         }
-        if title.eq_ignore_ascii_case(PASSKEY_FIELD_KEY) {
-            return Err("Use a passkey request instead.");
-        }
 
         Ok(Self {
             raw_key: title.to_string(),
@@ -77,29 +78,25 @@ pub enum OtpFieldTemplate {
     },
 }
 
+#[cfg(feature = "passkey")]
 #[derive(Clone, PartialEq, Eq)]
-pub struct PasskeyFieldTemplate {
-    pub(super) raw_key: String,
-    pub(super) separator_spacing: String,
-    pub(super) storage_value: String,
-    pub(super) credential: PasskeyCredential,
+pub struct PasskeyLine {
+    pub(super) storage_value: Zeroizing<String>,
+    pub(super) credential: Result<PasskeyCredential, String>,
 }
 
-impl PasskeyFieldTemplate {
-    pub(super) fn line(&self) -> String {
-        format!(
-            "{}:{}{}",
-            self.raw_key, self.separator_spacing, self.storage_value
-        )
+#[cfg(feature = "passkey")]
+impl PasskeyLine {
+    pub(super) fn line(&self) -> &str {
+        &self.storage_value
     }
 }
 
-impl fmt::Debug for PasskeyFieldTemplate {
+#[cfg(feature = "passkey")]
+impl fmt::Debug for PasskeyLine {
     fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         formatter
-            .debug_struct("PasskeyFieldTemplate")
-            .field("raw_key", &self.raw_key)
-            .field("separator_spacing", &self.separator_spacing)
+            .debug_struct("PasskeyLine")
             .field("storage_value", &"[redacted]")
             .field("credential", &self.credential)
             .finish()
@@ -123,8 +120,19 @@ pub enum StructuredPassLine {
     Field(DynamicFieldTemplate),
     Username(UsernameFieldTemplate),
     Otp(OtpFieldTemplate),
-    Passkey(PasskeyFieldTemplate),
+    #[cfg(feature = "passkey")]
+    Passkey(PasskeyLine),
     Preserved(String),
+}
+
+impl StructuredPassLine {
+    pub(crate) fn is_primary(&self) -> bool {
+        #[cfg(feature = "passkey")]
+        if matches!(self, Self::Passkey(_)) {
+            return true;
+        }
+        false
+    }
 }
 
 #[derive(Clone)]
@@ -229,10 +237,6 @@ mod tests {
         assert_eq!(
             DynamicFieldTemplate::new("otpauth", None),
             Err("Use Add OTP secret instead.")
-        );
-        assert_eq!(
-            DynamicFieldTemplate::new("passkey", None),
-            Err("Use a passkey request instead.")
         );
         assert_eq!(
             DynamicFieldTemplate::new("api:key", None),

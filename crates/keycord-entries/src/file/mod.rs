@@ -19,8 +19,8 @@ pub use self::compose::{
 };
 pub use self::parse::structured_username_value;
 pub use self::parse::{
-    canonical_search_field_key, is_passkey_storage_line, pass_file_has_otp,
-    pass_file_has_passkey_storage_field, searchable_pass_fields, SearchablePassField,
+    canonical_search_field_key, pass_file_has_otp, pass_file_has_passkey, password_line,
+    searchable_pass_fields, SearchablePassField,
 };
 pub use self::parse::{parse_structured_pass_lines, structured_otp_line};
 #[cfg(feature = "ui")]
@@ -31,3 +31,6 @@ pub use self::types::UsernameFieldTemplate;
 pub use self::types::{DynamicFieldTemplate, OtpFieldTemplate, StructuredPassLine};
 #[cfg(feature = "ui")]
 pub use self::url::uri_to_open;
+
+#[cfg(feature = "passkey")]
+pub use self::parse::validate_passkey_path;

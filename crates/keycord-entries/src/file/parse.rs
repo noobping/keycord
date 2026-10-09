@@ -1,10 +1,13 @@
+#[cfg(feature = "passkey")]
+use super::types::PasskeyLine;
 use super::types::{
     is_otpauth_line, is_sensitive_field, is_username_field_key, DynamicFieldTemplate,
-    OtpFieldTemplate, PasskeyFieldTemplate, StructuredPassLine, UsernameFieldTemplate,
+    OtpFieldTemplate, StructuredPassLine, UsernameFieldTemplate,
 };
-#[cfg(all(test, feature = "passkey"))]
-use keycord_passkey::PasskeyCredential;
-use keycord_passkey::{decode_passkey_storage_value, PASSKEY_FIELD_KEY};
+#[cfg(feature = "passkey")]
+use keycord_passkey::inspect_passkey_storage_value;
+#[cfg(feature = "passkey")]
+use zeroize::Zeroizing;
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct SearchablePassField {
@@ -29,36 +32,42 @@ pub fn structured_otp_line(
     })
 }
 
-#[cfg(all(test, feature = "passkey"))]
-pub fn structured_passkey_line(
-    lines: &[(StructuredPassLine, Option<String>)],
-) -> Option<PasskeyCredential> {
-    lines.iter().find_map(|(line, _)| match line {
-        StructuredPassLine::Passkey(template) => Some(template.credential.clone()),
-        _ => None,
-    })
-}
-
 pub fn pass_file_has_otp(contents: &str) -> bool {
     let (_, structured_lines) = parse_structured_pass_lines(contents);
     structured_otp_line(&structured_lines).is_some()
 }
 
-#[cfg(all(test, feature = "passkey"))]
+/// Disabled-feature builds deliberately perform no passkey recognition.
 pub fn pass_file_has_passkey(contents: &str) -> bool {
-    let (_, structured_lines) = parse_structured_pass_lines(contents);
-    structured_passkey_line(&structured_lines).is_some()
+    #[cfg(feature = "passkey")]
+    {
+        inspect_passkey_storage_value(contents.lines().next().unwrap_or_default()).is_some()
+    }
+    #[cfg(not(feature = "passkey"))]
+    {
+        let _ = contents;
+        false
+    }
 }
 
-pub fn pass_file_has_passkey_storage_field(contents: &str) -> bool {
-    contents.lines().skip(1).any(is_passkey_storage_line)
+/// One shared gate for password-only operations in both backends.
+pub fn password_line(contents: &str) -> Result<String, crate::PasswordEntryError> {
+    if pass_file_has_passkey(contents) {
+        return Err(crate::PasswordEntryError::other(
+            "This entry contains a passkey, not a password.",
+        ));
+    }
+    Ok(contents.lines().next().unwrap_or_default().to_string())
 }
 
-pub fn is_passkey_storage_line(line: &str) -> bool {
-    let Some((key, _)) = line.split_once(':') else {
-        return false;
-    };
-    key.trim().eq_ignore_ascii_case(PASSKEY_FIELD_KEY)
+#[cfg(feature = "passkey")]
+pub fn validate_passkey_path(contents: &str, label: &str) -> Result<(), String> {
+    if let Some(credential) =
+        inspect_passkey_storage_value(contents.lines().next().unwrap_or_default())
+    {
+        keycord_passkey::validate_passkey_entry_label(&credential?, label)?;
+    }
+    Ok(())
 }
 
 pub fn canonical_search_field_key(key: &str) -> Option<String> {
@@ -71,9 +80,6 @@ pub fn canonical_search_field_key(key: &str) -> Option<String> {
         return Some("username".to_string());
     }
     if key.eq_ignore_ascii_case("otpauth") {
-        return None;
-    }
-    if cfg!(feature = "passkey") && key.eq_ignore_ascii_case(PASSKEY_FIELD_KEY) {
         return None;
     }
 
@@ -89,6 +95,7 @@ pub fn searchable_pass_fields(contents: &str) -> Vec<SearchablePassField> {
             let key = match line {
                 StructuredPassLine::Username(_) => Some("username".to_string()),
                 StructuredPassLine::Otp(_) => None,
+                #[cfg(feature = "passkey")]
                 StructuredPassLine::Passkey(_) => None,
                 StructuredPassLine::Field(template) => canonical_search_field_key(&template.title),
                 StructuredPassLine::Preserved(_) => None,
@@ -109,6 +116,20 @@ pub fn parse_structured_pass_lines(
 ) -> (String, Vec<(StructuredPassLine, Option<String>)>) {
     let mut lines = contents.lines();
     let password = lines.next().unwrap_or_default().to_string();
+    let mut primary = Vec::new();
+    #[cfg(feature = "passkey")]
+    let password = if let Some(credential) = inspect_passkey_storage_value(&password) {
+        primary.push((
+            StructuredPassLine::Passkey(PasskeyLine {
+                storage_value: Zeroizing::new(password),
+                credential,
+            }),
+            None,
+        ));
+        String::new()
+    } else {
+        password
+    };
     let structured = lines
         .map(|line| {
             if line.trim_start().starts_with("otpauth://") {
@@ -125,22 +146,6 @@ pub fn parse_structured_pass_lines(
             let title = raw_key.trim().to_string();
             if title.is_empty() {
                 return (StructuredPassLine::Preserved(line.to_string()), None);
-            }
-
-            if is_passkey_storage_line(line) {
-                let storage_value = trim_leading_spacing(raw_value);
-                return match decode_passkey_storage_value(&storage_value) {
-                    Ok(credential) => (
-                        StructuredPassLine::Passkey(PasskeyFieldTemplate {
-                            raw_key: raw_key.to_string(),
-                            separator_spacing: leading_spacing(raw_value),
-                            storage_value,
-                            credential,
-                        }),
-                        None,
-                    ),
-                    Err(_) => (StructuredPassLine::Preserved(line.to_string()), None),
-                };
             }
 
             if is_username_field_key(&title) {
@@ -173,9 +178,9 @@ pub fn parse_structured_pass_lines(
                 Some(trim_leading_spacing(raw_value)),
             )
         })
-        .collect();
-
-    (password, structured)
+        .collect::<Vec<_>>();
+    primary.extend(structured);
+    (password, primary)
 }
 
 fn leading_spacing(value: &str) -> String {
@@ -193,12 +198,7 @@ fn trim_leading_spacing(value: &str) -> String {
 
 #[cfg(test)]
 mod tests {
-    #[cfg(feature = "passkey")]
-    use super::pass_file_has_passkey;
-    use super::{
-        pass_file_has_otp, pass_file_has_passkey_storage_field, searchable_pass_fields,
-        SearchablePassField,
-    };
+    use super::{pass_file_has_otp, searchable_pass_fields, SearchablePassField};
 
     fn field(key: &str, value: &str) -> SearchablePassField {
         SearchablePassField {
@@ -262,40 +262,11 @@ mod tests {
         );
     }
 
-    #[cfg(feature = "passkey")]
     #[test]
-    fn passkey_fields_are_never_searchable() {
+    fn old_json_fields_are_ordinary_fields() {
         assert_eq!(
-            searchable_pass_fields("secret\npasskey: not-valid-json"),
-            Vec::<SearchablePassField>::new()
+            searchable_pass_fields("secret\npasskey: ordinary value"),
+            vec![field("passkey", "ordinary value")]
         );
-        assert!(!pass_file_has_passkey("secret\npasskey: not-valid-json"));
-        assert!(pass_file_has_passkey_storage_field(
-            "secret\npasskey: not-valid-json"
-        ));
-    }
-
-    #[cfg(not(feature = "passkey"))]
-    #[test]
-    fn disabled_feature_still_reserves_passkey_fields() {
-        assert!(searchable_pass_fields("secret\npasskey: private JSON").is_empty());
-        assert!(pass_file_has_passkey_storage_field(
-            "secret\npasskey: private JSON"
-        ));
-    }
-
-    #[cfg(feature = "passkey")]
-    #[test]
-    fn valid_stored_passkeys_are_detected_without_becoming_searchable() {
-        use keycord_passkey::{encode_passkey_storage_value, generate_passkey_credential};
-
-        let passkey =
-            generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-        let storage_value = encode_passkey_storage_value(&passkey).expect("encode passkey");
-        let contents = format!("\npasskey: {storage_value}");
-
-        assert!(pass_file_has_passkey(&contents));
-        assert!(pass_file_has_passkey_storage_field(&contents));
-        assert!(searchable_pass_fields(&contents).is_empty());
     }
 }

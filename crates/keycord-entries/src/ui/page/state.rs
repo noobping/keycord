@@ -183,8 +183,14 @@ pub(super) fn show_password_loading_state(state: &PasswordPageState, title: &str
 
 pub(super) fn show_password_editor_fields(state: &PasswordPageState) {
     state.status.set_visible(false);
-    state.entry.set_visible(true);
-    set_password_editor_action_visibility(state, true, true, true, true);
+    let passkey = state
+        .structured_templates
+        .borrow()
+        .iter()
+        .any(StructuredPassLine::is_primary);
+    state.entry.set_visible(!passkey);
+    state.generator_settings_button.set_visible(!passkey);
+    set_password_editor_action_visibility(state, true, true, true, !passkey);
     hide_password_generator_settings(state);
 }
 

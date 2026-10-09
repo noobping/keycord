@@ -22,10 +22,7 @@ fn structured_fields_strip_display_spacing_but_preserve_it_on_save() {
         .iter()
         .filter_map(|(line, value)| match line {
             StructuredPassLine::Field(_) => value.clone(),
-            StructuredPassLine::Username(_)
-            | StructuredPassLine::Otp(_)
-            | StructuredPassLine::Passkey(_)
-            | StructuredPassLine::Preserved(_) => None,
+            _ => None,
         })
         .collect::<Vec<_>>();
 
@@ -194,27 +191,66 @@ fn template_button_hides_when_template_is_empty_or_already_applied() {
     ));
 }
 
+fn android_fixture() -> &'static str {
+    include_str!("../../../keycord-passkey/tests/fixtures/es256.b64").trim()
+}
+
 #[cfg(feature = "passkey")]
 #[test]
-fn passkey_fields_round_trip_without_exposing_key_material_in_debug_output() {
-    use keycord_passkey::{encode_passkey_storage_value, generate_passkey_credential};
-
-    let credential =
-        generate_passkey_credential("example.com", "alice", "Alice").expect("generate passkey");
-    let storage_value = encode_passkey_storage_value(&credential).expect("encode passkey");
-    let contents = format!("\npasskey: {storage_value}");
+fn android_passkeys_preserve_payload_while_editing_extra_content() {
+    let encoded = android_fixture();
+    let contents =
+        format!("{encoded}\nurl: https://example.com\notpauth://totp/Example?secret=ABC\n\nnotes");
     let (password, parsed) = parse_structured_pass_lines(&contents);
+    assert!(password.is_empty());
+    assert!(super::pass_file_has_passkey(&contents));
+    assert!(super::password_line(&contents).is_err());
     let templates = parsed
         .iter()
         .map(|(line, _)| line.clone())
         .collect::<Vec<_>>();
-
+    let edited = structured_pass_contents_from_values(
+        &password,
+        "",
+        Some("otpauth://totp/Example?secret=ABC"),
+        &templates,
+        &["https://new.example.com".into()],
+    );
     assert_eq!(
-        structured_pass_contents_from_values(&password, "", None, &templates, &[]),
-        contents
+        edited,
+        contents.replace("url: https://example.com", "url: https://new.example.com")
     );
     assert_eq!(clean_pass_file_contents(&contents), contents);
-    let debug = format!("{templates:?}");
-    assert!(!debug.contains(&storage_value));
-    assert!(!debug.contains(&credential.key));
+    assert!(!format!("{templates:?}").contains(encoded));
+    let fields = super::searchable_pass_fields(&contents);
+    assert_eq!(fields.len(), 1);
+    assert_eq!(fields[0].key, "url");
+    let templated = apply_pass_file_template_contents(&contents, "email: alice@example.com");
+    assert_eq!(templated.lines().next(), Some(encoded));
+    assert!(templated.contains("email: alice@example.com"));
+}
+
+#[cfg(feature = "passkey")]
+#[test]
+fn android_passkey_path_rules_apply_only_to_passkeys() {
+    let encoded = android_fixture();
+    let id = (0u8..32).map(|b| format!("{b:02x}")).collect::<String>();
+    assert!(super::validate_passkey_path(encoded, &format!("example.com/{id}")).is_ok());
+    assert!(super::validate_passkey_path(encoded, &format!("moved/example.com/{id}")).is_ok());
+    assert!(super::validate_passkey_path(encoded, "example.com/alice").is_err());
+    assert!(super::validate_passkey_path(encoded, &format!("other.example/{id}")).is_err());
+    assert!(super::validate_passkey_path("normal password", "any/path").is_ok());
+}
+
+#[cfg(not(feature = "passkey"))]
+#[test]
+fn disabled_feature_treats_android_records_as_ordinary_passwords() {
+    let encoded = android_fixture();
+    let contents = format!("{encoded}\nurl: https://example.com");
+    let (password, parsed) = parse_structured_pass_lines(&contents);
+    assert_eq!(password, encoded);
+    assert_eq!(super::password_line(&contents).unwrap(), encoded);
+    assert!(!super::pass_file_has_passkey(&contents));
+    assert_eq!(parsed.len(), 1);
+    assert_eq!(clean_pass_file_contents(&contents), contents);
 }

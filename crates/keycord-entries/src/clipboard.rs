@@ -161,7 +161,9 @@ pub fn copy_password_entry_to_clipboard(
     button: Option<Button>,
     ports: &EntryClipboardPorts,
 ) {
-    if (ports.uses_integrated_backend)() {
+    // Host `pass -c` copies the first line without inspecting its type. Passkey builds
+    // must copy the exact value checked by the shared backend reader instead.
+    if cfg!(feature = "passkey") || (ports.uses_integrated_backend)() {
         copy_password_entry_to_clipboard_via_read(item, overlay, button, ports);
     } else {
         copy_password_entry_with_host(item, button.as_ref(), ports);

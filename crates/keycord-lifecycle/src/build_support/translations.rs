@@ -758,7 +758,7 @@ fn looks_like_non_translatable_rust_syntax(value: &str) -> bool {
         || value.starts_with("D:P(")
         || matches!(
             value,
-            "passkey: [redacted]" | "stdin: [redacted]" | "stdin: provided"
+            "[passkey redacted]{suffix}" | "stdin: [redacted]" | "stdin: provided"
         )
         || value.starts_with("signal {")
         || value.starts_with("stream logger panicked while reading ")
@@ -1750,10 +1750,9 @@ mod tests {
             "keycord.toml",
             "update-{:032x}",
             "{app_id}-passkey.xml",
-            "{PASSKEY_FIELD_KEY}: {storage_value}",
             "stdin: [redacted]",
             "stdin: provided",
-            "passkey: [redacted]",
+            "[passkey redacted]{suffix}",
             "find \"{}\" is \"{}\"",
             "{context}\n$ {command}\nstatus: {status}",
             "<a href=\"{}\">{}</a>",

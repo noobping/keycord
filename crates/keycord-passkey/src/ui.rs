@@ -153,8 +153,8 @@ fn present_passkey_import(
         .text(
             "Add the passkey for {username} on {rp_id} to your default pass store? You can review it before saving.",
         )
-        .replace("{username}", &credential.username)
-        .replace("{rp_id}", &credential.rp_id);
+        .replace("{username}", &credential.user.name)
+        .replace("{rp_id}", &credential.rp.id);
     let dialog = AlertDialog::builder()
         .heading(callbacks.text("Import passkey?"))
         .body(body)

@@ -2445,3 +2445,41 @@ fn store_recipients_unlock_helper_detects_a_locked_entry_key() {
         Some(imported.fingerprint)
     );
 }
+
+#[cfg(feature = "passkey")]
+#[test]
+fn integrated_android_passkeys_preserve_ciphertext_workflows_and_guard_password_actions() {
+    use keycord_passkey::{build_passkey_storage_entry, decode_passkey_storage_value};
+    let env = SystemBackendTestEnv::new();
+    let bytes = protected_cert_bytes("Passkey Test <passkey@example.com>");
+    let imported = import_ripasso_private_key_bytes(&bytes, Some("hunter2")).unwrap();
+    let store_root = env.store_root().to_string_lossy().to_string();
+    save_store_recipients(
+        &store_root,
+        &[imported.fingerprint],
+        StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
+    )
+    .unwrap();
+    let encoded =
+        include_str!("../../../../crates/keycord-passkey/tests/fixtures/es256.b64").trim();
+    let credential = decode_passkey_storage_value(encoded).unwrap();
+    let entry = build_passkey_storage_entry(&credential).unwrap();
+    let contents = format!("{encoded}\nurl: https://example.com\n\nnotes");
+    save_password_entry(&store_root, &entry.label, &contents, false).unwrap();
+    assert_eq!(
+        read_password_entry(&store_root, &entry.label).unwrap(),
+        contents
+    );
+    assert!(super::read_password_line(&store_root, &entry.label).is_err());
+    assert!(matches!(
+        save_password_entry(&store_root, &entry.label, &contents, false),
+        Err(PasswordEntryWriteError::EntryAlreadyExists(_))
+    ));
+    assert!(rename_password_entry(&store_root, &entry.label, "example.com/alice").is_err());
+    let moved = format!("moved/{}", entry.label);
+    rename_password_entry(&store_root, &entry.label, &moved).unwrap();
+    let edited = contents.replace("notes", "edited notes");
+    save_password_entry(&store_root, &moved, &edited, true).unwrap();
+    assert_eq!(read_password_entry(&store_root, &moved).unwrap(), edited);
+    assert!(save_password_entry(&store_root, "example.com/wrong-id", &contents, false).is_err());
+}

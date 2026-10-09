@@ -9,7 +9,7 @@ use super::list::{load_passwords_async, PasswordListActions};
 use crate::file::{
     apply_pass_file_template_contents, clean_pass_file_contents,
     new_pass_file_contents_from_template, pass_file_has_missing_template_fields,
-    pass_file_has_passkey_storage_field, structured_pass_contents, sync_username_row,
+    pass_file_has_passkey, structured_pass_contents, sync_username_row,
 };
 use crate::generation::generate_password;
 use crate::model::{OpenPassFile, UsernameFallbackError};
@@ -190,9 +190,18 @@ fn prepare_password_save_context(state: &PasswordPageState) -> Result<PasswordSa
         contents,
         (state.ports.preferences.clear_empty_fields_before_save)(),
     );
-    let target_label = pass_file
-        .updated_label_from_username(&state.username.text())
-        .map_err(|err| username_fallback_failure_message(err).to_string())?;
+    let target_label = if pass_file_has_passkey(&contents) {
+        None
+    } else {
+        pass_file
+            .updated_label_from_username(&state.username.text())
+            .map_err(|err| username_fallback_failure_message(err).to_string())?
+    };
+    #[cfg(feature = "passkey")]
+    crate::file::validate_passkey_path(
+        &contents,
+        target_label.as_deref().unwrap_or(&pass_file.label()),
+    )?;
     validate_password_save_contents(&contents)?;
 
     Ok(PasswordSaveContext {
@@ -424,7 +433,7 @@ pub fn begin_new_password_entry_with_contents(
 
 pub fn show_raw_pass_file_page(state: &PasswordPageState) {
     let contents = structured_editor_contents(state);
-    if pass_file_has_passkey_storage_field(&contents) {
+    if pass_file_has_passkey(&contents) {
         return;
     }
     state.text.buffer().set_text(&contents);
@@ -773,11 +782,9 @@ pub fn copy_current_password(state: &PasswordPageState) {
         return;
     }
 
-    let password = current_editor_contents(state)
-        .lines()
-        .next()
-        .unwrap_or_default()
-        .to_string();
+    let Ok(password) = crate::file::password_line(&current_editor_contents(state)) else {
+        return;
+    };
     if set_clipboard_text(&password, &state.overlay, None) {
         state.overlay.add_toast(Toast::new(&gettext("Copied.")));
     }

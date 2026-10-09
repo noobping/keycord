@@ -11,7 +11,7 @@ publish = false
 
 [features]
 default = []
-passkey = ["keycord-passkey/passkey"]
+passkey = ["dep:keycord-passkey", "keycord-passkey/passkey"]
 ui = [
     "dep:adw",
     "dep:keycord-shell",
@@ -22,7 +22,7 @@ ui = [
 
 [dependencies]
 adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
-keycord-passkey = { workspace = true, default-features = false }
+keycord-passkey = { workspace = true, default-features = false, optional = true }
 keycord-keys.workspace = true
 keycord-preferences.workspace = true
 keycord-runtime.workspace = true
