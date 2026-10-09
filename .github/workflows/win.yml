@@ -94,6 +94,9 @@ jobs:
       - name: Build
         run: cargo build --package keycord --features docs --locked --release --target x86_64-pc-windows-gnu
 
+      - name: Test translations
+        run: cargo test --package keycord --features docs --locked --release --target x86_64-pc-windows-gnu composition::localization::tests -- --ignored --nocapture
+
       - name: Bundle
         shell: pwsh
         run: |
@@ -123,6 +126,21 @@ jobs:
 
           $mingwRoot = 'C:\tools\msys64\mingw64'
           $shareDir = Join-Path $bundleDir 'share'
+
+          # Use the same catalogs as Linux for both Rust and GtkBuilder text.
+          $localeDir = Join-Path $shareDir 'locale'
+          foreach ($catalog in (Get-ChildItem (Join-Path $workspace 'po') -Filter '*.po')) {
+            $messagesDir = Join-Path $localeDir "$($catalog.BaseName)\LC_MESSAGES"
+            New-Item -ItemType Directory -Path $messagesDir -Force | Out-Null
+            & (Join-Path $mingwBin 'msgfmt.exe') --check-format -o (Join-Path $messagesDir 'keycord.mo') $catalog.FullName
+            if ($LASTEXITCODE -ne 0) { throw "Translation compilation failed: $($catalog.Name)" }
+          }
+
+          # GTK and libadwaita supply their own standard dialog/button strings.
+          $toolkitLocales = Join-Path $mingwRoot 'share\locale'
+          if (Test-Path $toolkitLocales) {
+            Copy-Item (Join-Path $toolkitLocales '*') $localeDir -Recurse -Force
+          }
 
           $iconSourceDir = Join-Path $workspace 'crates\keycord-lifecycle\data\branding\scalable\apps'
           $iconTargetDir = Join-Path $shareDir 'icons\hicolor\scalable\apps'

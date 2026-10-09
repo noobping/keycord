@@ -41,10 +41,10 @@ impl I18nConfig {
 
 /// Initializes process-wide translations from application-owned configuration.
 pub fn initialize(config: I18nConfig) -> Result<(), String> {
-    #[cfg(target_os = "linux")]
-    return linux::initialize(config);
+    #[cfg(any(target_os = "linux", target_os = "windows"))]
+    return native::initialize(config);
 
-    #[cfg(not(target_os = "linux"))]
+    #[cfg(not(any(target_os = "linux", target_os = "windows")))]
     {
         let _ = config;
         Ok(())
@@ -57,15 +57,15 @@ pub fn gettext(message: &str) -> String {
         return String::new();
     }
 
-    #[cfg(target_os = "linux")]
-    return linux::gettext(message);
+    #[cfg(any(target_os = "linux", target_os = "windows"))]
+    return native::gettext(message);
 
-    #[cfg(not(target_os = "linux"))]
+    #[cfg(not(any(target_os = "linux", target_os = "windows")))]
     message.to_string()
 }
 
-#[cfg(target_os = "linux")]
-mod linux {
+#[cfg(any(target_os = "linux", target_os = "windows"))]
+mod native {
     use super::I18nConfig;
     use libc::{c_char, LC_ALL};
     use std::ffi::{CStr, CString};
@@ -74,18 +74,27 @@ mod linux {
 
     static INITIALIZATION: OnceLock<Result<(), String>> = OnceLock::new();
 
+    #[cfg_attr(target_os = "windows", link(name = "intl"))]
     unsafe extern "C" {
+        #[cfg(target_os = "linux")]
         #[link_name = "bindtextdomain"]
         fn bindtextdomain_raw(domainname: *const c_char, dirname: *const c_char) -> *mut c_char;
-        #[link_name = "bind_textdomain_codeset"]
+        #[cfg(target_os = "windows")]
+        #[link_name = "libintl_wbindtextdomain"]
+        fn wbindtextdomain_raw(domainname: *const c_char, dirname: *const u16) -> *mut u16;
+        #[cfg_attr(target_os = "linux", link_name = "bind_textdomain_codeset")]
+        #[cfg_attr(target_os = "windows", link_name = "libintl_bind_textdomain_codeset")]
         fn bind_textdomain_codeset_raw(
             domainname: *const c_char,
             codeset: *const c_char,
         ) -> *mut c_char;
-        #[link_name = "textdomain"]
+        #[cfg_attr(target_os = "linux", link_name = "textdomain")]
+        #[cfg_attr(target_os = "windows", link_name = "libintl_textdomain")]
         fn textdomain_raw(domainname: *const c_char) -> *mut c_char;
-        #[link_name = "gettext"]
+        #[cfg_attr(target_os = "linux", link_name = "gettext")]
+        #[cfg_attr(target_os = "windows", link_name = "libintl_gettext")]
         fn gettext_raw(message: *const c_char) -> *mut c_char;
+        #[cfg_attr(target_os = "windows", link_name = "libintl_setlocale")]
         fn setlocale(category: libc::c_int, locale: *const c_char) -> *mut c_char;
     }
 
@@ -96,17 +105,34 @@ mod linux {
     }
 
     fn initialize_once(config: I18nConfig) -> Result<(), String> {
+        #[cfg(target_os = "windows")]
+        super::windows::configure_language()?;
+
         let empty_locale = CString::new("").map_err(|error| error.to_string())?;
         let domain = CString::new(config.domain.as_str())
             .map_err(|_| "The gettext domain contains an embedded NUL byte.".to_string())?;
         let locale_dir = preferred_locale_dir(&config);
+        #[cfg(target_os = "linux")]
         let locale_dir = CString::new(locale_dir.to_string_lossy().as_bytes())
             .map_err(|_| "The gettext locale path contains an embedded NUL byte.".to_string())?;
+        #[cfg(target_os = "windows")]
+        let locale_dir = {
+            use std::os::windows::ffi::OsStrExt;
+            let mut path = locale_dir.as_os_str().encode_wide().collect::<Vec<_>>();
+            if path.contains(&0) {
+                return Err("The gettext locale path contains an embedded NUL byte.".to_string());
+            }
+            path.push(0);
+            path
+        };
         let codeset = CString::new("UTF-8").map_err(|error| error.to_string())?;
 
         unsafe {
             setlocale(LC_ALL, empty_locale.as_ptr());
+            #[cfg(target_os = "linux")]
             bindtextdomain_raw(domain.as_ptr(), locale_dir.as_ptr());
+            #[cfg(target_os = "windows")]
+            wbindtextdomain_raw(domain.as_ptr(), locale_dir.as_ptr());
             bind_textdomain_codeset_raw(domain.as_ptr(), codeset.as_ptr());
             textdomain_raw(domain.as_ptr());
         }
@@ -158,6 +184,9 @@ mod linux {
         }
     }
 }
+
+#[cfg(target_os = "windows")]
+mod windows;
 
 #[cfg(test)]
 mod tests {
