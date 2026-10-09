@@ -236,10 +236,6 @@ msgstr "Ttwarnan urtan ixuṣṣen ɣer tneɣruft."
 msgid "Adding hardware key"
 msgstr "Timerna n tsarut n warrum"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Sireg anekcum ɣer tsarut n tɣellist USB (FIDO2 armitan)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Sireg anekcum ɣer yisnasen n yibenk-a"
@@ -440,10 +436,6 @@ msgstr "Fren afaylu adigan."
 msgid "Choose a local folder."
 msgstr "Fren akaram adigan."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "Fren afaylu n tsarut tusligt neɣ afaylu armitan n tsarut tusligt yettummestnen s FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -576,39 +568,18 @@ msgstr "Azemz n commit"
 msgid "Committer"
 msgstr "Ameskar n commit"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Sentem PIN amaynut n tsarut n tɣellist"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Sentem awal n uεeddi"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Sentem PIN amaynut n tsarut n tɣellist."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Qqen qbel tasarut n warrum."
 
-#: crates/keycord-fido/src/native.rs:279
-#: crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Qqen yiwet kan n tsarut n tɣellist FIDO2 uqbel ad tkemmleḍ."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Qqen yiwet kan n tsarut n warrum uqbel ad t-ternuḍ."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Qqen tasarut n tɣellist FIDO2 sakin ɛreḍ tikkelt-nniḍen."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Qqen qbel tasarut n tɣellist FIDO2."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -618,19 +589,9 @@ msgstr "Qqen tasarut n warrum sakin ɛreḍ tikkelt-nniḍen."
 msgid "Connect the hardware key first."
 msgstr "Qqen qbel tasarut n warrum."
 
-#: crates/keycord-fido/src/error.rs:31
-#: crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Qqen tasarut n tɣellist FIDO2 yemṣadan."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Qqen tasarut n warrum yemṣadan uqbel ad t-tketreḍ."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Asatal"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -653,10 +614,6 @@ msgstr "Nɣel tasarut tusligt s uselɣu ASCII"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Nɣel tasarut tazayezt s uselɣu ASCII"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Nɣel tasarut tusligt tarimtanut yettummestnen s FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -745,11 +702,6 @@ msgstr "Ulamek asnulfu n uselkin n tsarut tazayezt ɣef tsarut n warrum."
 msgid "Couldn't create the store."
 msgstr "Ulamek asnulfu n ukufi."
 
-#: crates/keycord-fido/src/crypto.rs:115
-#: crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Ulamek tukksa n uwgelhen i yisefka iwgelhen s FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -776,8 +728,6 @@ msgstr "Ulamek asirew n tsarut n warrum i tukksa n uwgelhen"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Ulamek asirew n tsarut n warrum i uzmul"
 
-#: crates/keycord-fido/src/ui.rs:202
-#: crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -804,10 +754,6 @@ msgstr "Ulamek aktar n wawalen n uεeddi."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Ulamek aktar n tsarut."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Ulamek awennez n tsarut n tɣellist FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -998,11 +944,6 @@ msgstr "Ulamek amtawi n yikufan."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "Ulamek tukksa n useḍru i tsarut tusligt {fingerprint_for_failure} i uzmul Git. Ad ikemmel war azmul."
 
-#: crates/keycord-keys/src/error.rs:206
-#: crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Ulamek tukksa n useḍru i tsarut n tɣellist FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194
 #: crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230
@@ -1031,10 +972,6 @@ msgstr "Ulamek asenqed n PIN anedbal n tsarut n warrum"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Ulamek asenqed n PIN i d-yettwasutren n tsarut n warrum"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Snulfu-d tasarut tamaynut yettummestnen s FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1221,13 +1158,6 @@ msgstr "Sekcem tansa n yimayl i tsarut tusligt."
 msgid "Enter an email address."
 msgstr "Sekcem tansa n yimayl."
 
-#: crates/keycord-fido/src/error.rs:23
-#: crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Sekcem PIN n tsarut n tɣellist FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1251,18 +1181,10 @@ msgstr "Sekcem awal n uεeddi n tsarut."
 msgid "Enter the new hardware key PIN."
 msgstr "Sekcem PIN amaynut n tsarut n warrum."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Sekcem PIN amaynut n tsarut n tɣellist."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Sekcem awal n uεeddi n tsarut tusligt."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Sekcem PIN n tsarut n tɣellist."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1271,10 +1193,6 @@ msgstr "Senser"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Semɣer amaẓrag n wawalen n uεeddi s tigawin n usizdeg"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "Tisura tusligin tirmitanin yettummestnen s FIDO2 srant anekcum ɣer yibenkan USB, uqbel ad yezmir Keycord ad iseqdec tasarut n tɣellist teqqnen i tukksa n useḍru i tsura tusligin yettummestnen. Ales asekker n Keycord seld umuddu n unekcum."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1324,26 +1242,6 @@ msgstr "Yettwasifeḍ {count} wawal n uεeddi."
 msgid "Exported {count} passwords."
 msgstr "Yettwasifeḍ {count} wawalen n uεeddi."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Manifest n tsarut tusligt FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Asefrek n tsura tusligin FIDO2 yensa deg lebni-a n Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Tasarut n tɣellist FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Asefrek FIDO2 yensa deg lebni-a n Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Agbar n uḍris FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Ulamek asideg n ukaram uslig n uheggi n uleqqem Linux."
@@ -1391,10 +1289,6 @@ msgstr "Ulamek akestengel n uzmul s uselɣu ASCII"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Ulamek akestengel n yisefka UTF-8 iwumi yettwakkes uwgelhen"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Ulamek tifin n tesuffeɣt HKDF i ilaqen."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1699,11 +1593,6 @@ msgstr "Nseɣti asaḍas n unadi GNOME."
 msgid "General"
 msgstr "Amatu"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Sirew tasarut yettummestnen s FIDO2 (Armitan)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Sirew neɣ kter tasarut tusligt."
@@ -1718,10 +1607,6 @@ msgstr "Sirew awal n uεeddi"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Sirew tasarut tusligt"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Asirew n tsarut yettummestnen s FIDO2 (Armitan)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1767,14 +1652,6 @@ msgstr "Uɣal ɣer ugejdan"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Sireg"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Sireg anekcum ɣer tsarut n tɣellist USB (FIDO2 armitan)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "Sireg anekcum ɣer tsarut n tɣellist USB uqbel, i tsura tusligin tirmitanin iwgelhen s FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2038,18 +1915,6 @@ msgstr "Asebded n uleqqem ad yemdel Keycord. Ad ṛuḥen yibeddilen ur nettwase
 msgid "Integrated"
 msgstr "Yeddan"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Adsil umḍin n tuqqna FIDO2 '{value}' d arameɣtu."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Abrid n yibenk FIDO2 d arameɣtu: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Isefka iwgelhen s FIDO2 d irameɣta."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2135,7 +2000,6 @@ msgstr "Eǧǧ tasarut-a tettwafernen skud ilaq ad ttwasqedcent meṛṛa tisura 
 msgid "Key file removed."
 msgstr "Afaylu n tsarut yettwakkes."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Tasarut tettusirew."
@@ -2159,10 +2023,6 @@ msgstr "Awal n uεeddi n tsarut"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Tasarut tusligt n Keycord yettummestnen s FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2476,10 +2336,6 @@ msgstr "PIN amaynut n tsarut n warrum"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Aferdis amaynut"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "PIN amaynut n tsarut n tɣellist"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2964,10 +2820,6 @@ msgstr "ID n RP"
 msgid "Raw text"
 msgstr "Aḍris arewway"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "Ɣer tasarut tusligt s uselɣu ASCII neɣ tasarut tusligt tarimtanut iwgelhen s FIDO2 seg tecfawt."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Ɣer iberdan ibeddlen i commit Git n ukufi n wawalen n uεeddi {oid}"
@@ -3055,14 +2907,6 @@ msgstr "Inermasen seg commit yettwasneqden"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Yelha i yikufan imaynuten"
-
-#: crates/keycord-fido/src/error.rs:35
-#: crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14
-#: crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Ales qqen tasarut FIDO2 n tɣellist, ɛreḍ tikkelt-nniḍen."
 
 #: crates/keycord-keys/src/error.rs:199
 #: crates/keycord-keys/src/error.rs:238
@@ -3377,10 +3221,6 @@ msgstr "Nadi deg wazalen"
 msgid "Search weak passwords"
 msgstr "Nadi ɣef wawalen n uεeddi iḍuɛfen"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN n tsarut n tɣellist"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3402,33 +3242,11 @@ msgstr "Fren tisura tusligin i izemren ad kksent aseḍru i wawalen n uεeddi de
 msgid "Sequential characters"
 msgstr "Isekkilen imyezwaren"
 
-#: crates/keycord-fido/src/error.rs:21
-#: crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203
-#: crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Uqbel, sbadu PIN ɣef tsarut FIDO2 n tɣellist."
-
-#: crates/keycord-fido/src/ui.rs:533
-#: crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Sbadu PIN n tsarut n tɣellist"
-
-#: crates/keycord-fido/src/ui.rs:214
-#: crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Sbadu PIN n tsarut n tɣellist (FIDO2 armitan)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Heggi tasarut tamaynut n warrum (Armitan)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "Asbadu n PIN n tsarut FIDO2 n tɣellist yettusefrak kan deg Linux, deg lebni-a."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3540,11 +3358,6 @@ msgstr "Amtawi n ukufi yeḥbes s wudem ur netturaǧu ara."
 msgid "Store synced."
 msgstr "Amtawi n ukufi yemmed."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "PIN FIDO2 yettwakelsen mačči d UTF-8 ameɣtu: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3558,10 +3371,6 @@ msgstr "Beddel Backend ɣer Usezdeɣ akken ad terreḍ-d akufi seg ukufi Git."
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Beddel Backend ɣer Usezdeɣ akken ad tesqedceḍ pass import."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "Beddel ɣer backend Yeddan akken ad tesqedceḍ tisura tusligin tirmitanin iwgelhen s FIDO2."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3595,34 +3404,6 @@ msgstr "Amtawi n yikufan"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Amaẓrag n yiḍrisen"
-
-#: crates/keycord-fido/src/error.rs:37
-#: crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Tasarut-a FIDO2 n tɣellist ur tsefrak ara asiɣzef hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27
-#: crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10
-#: crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Tasarut-a FIDO2 n tɣellist ilaq ad tsefrek ammesten s PIN."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Tasarut-nni iwgelhen s FIDO2 ulamek ad tettwasifeḍ."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Isefka n tsarut-nni iwgelhen s FIDO2 d irameɣta."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Tasarut-nni iwgelhen s FIDO2 d tarameɣtut."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3709,19 +3490,6 @@ msgstr "Asuter CXP ur yegbir ara askar HPKE yettwassnen."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Asuter CXP ur d-yefki ara amasal deflate n uɣbar yettusefraken."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "PIN n tsarut FIDO2 n tɣellist yegber octet NUL ur nettusefrak ara."
-
-#: crates/keycord-fido/src/error.rs:25
-#: crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "PIN n tsarut FIDO2 n tɣellist d arameɣtu."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Tasarut FIDO2 n tɣellist ur d-terri ara asulay n unekcum."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3821,10 +3589,6 @@ msgstr "Awal n uεeddi n tsarut tusligt d arameɣtu."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Ameggay n tebdart n tsura tusligin yeḥbes s wudem ur netturaǧu ara."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Sin PIN n tsarut n tɣellist ur mṣadan ara."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "Afaylu yettwafernen mačči d asuter adigan CXP n tsarut n uεeddi yettusefraken. {error}"
@@ -3878,11 +3642,6 @@ msgstr "Izirigen-a ad ttwarnun deffir n yizirig n wawal n uεeddi mi ara ternu�
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "Iɣewwaren-a ad ttwasqedcen mi ara d-tesirweḍ neɣ ara d-talseḍ asirew n wawal n uεeddi seg umaẓrag."
 
-#: crates/keycord-keys/src/error.rs:210
-#: crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Ulamek alday n yiferdisen-ik·im s tsarut-a FIDO2 n tɣellist."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Taseṭṭa-a ur tesɛi ula yiwen commit iwejden i usenqed."
@@ -3934,14 +3693,6 @@ msgstr "Ulamek alday n yiferdisen-ik·im s tsarut-a."
 msgid "This private key is password protected."
 msgstr "Tasarut-a tusligt tettummesten s wawal n uεeddi."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Tasarut-a tusligt tesra tasarut FIDO2 n tɣellist."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Tasarut-a tusligt tesra tarrayt-nniḍen n tukksa n useḍru."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Tasarut-a tusligt tesra tasarut n warrum."
@@ -3974,18 +3725,6 @@ msgstr "Ifecka"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Amḍan asemday n yisekkilen"
-
-#: crates/keycord-fido/src/error.rs:33
-#: crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12
-#: crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Nal tasarut FIDO2 n tɣellist, ɛreḍ tikkelt-nniḍen."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Nal tasarut-ik·im ma tettibbiq."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4078,7 +3817,6 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Kkes aseḍru i tsarut tusligt-nniḍen yettwafernen uqbel ad tsefḍeḍ tin-a."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527
 #: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
@@ -4111,26 +3849,6 @@ msgstr "Tasarut tusligt war isem"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Takarḍa tamegzut war isem"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Kkes tuqqna n tsura-nniḍen n tɣellist, sakin ɛreḍ tikkelt-nniḍen."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Amasal n unekcum n wawal n uεeddi FIDO2 ur yettusefrak ara {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Ammesten n unekcum n wawal n uεeddi FIDO2 ur yettusefrak ara '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Amasal n tsarut tusligt FIDO2 ur yettusefrak ara {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Ammesten n tsarut tusligt FIDO2 ur yettusefrak ara '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4866,10 +4584,6 @@ msgstr "{fingerprint} - Tasarut n warrum"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - Yettummesten s wawal n uεeddi"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - Yettummesten s tsarut n tɣellist"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Ajeṭun n tɣellist"
@@ -4877,10 +4591,6 @@ msgstr "{fingerprint} - Ajeṭun n tɣellist"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Ajeṭun n tɣellist ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4923,10 +4633,6 @@ msgstr "{summary}\ntuccḍa: {error}"
 msgid ""
 "{}\n{version}"
 msgstr "{}\n{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

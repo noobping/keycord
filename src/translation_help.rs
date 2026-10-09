@@ -67,9 +67,9 @@ fn desktop_notification_delivery_available() -> bool {
         // GLib requires the application desktop file to be installed before it can deliver a
         // GNotification. Do not consume the one-time preference for an uninstalled cargo build.
         let desktop_id = format!("{APP_ID}.desktop");
-        return AppInfo::all()
+        AppInfo::all()
             .iter()
-            .any(|app| app.id().as_deref() == Some(desktop_id.as_str()));
+            .any(|app| app.id().as_deref() == Some(desktop_id.as_str()))
     }
 
     #[cfg(not(target_os = "linux"))]

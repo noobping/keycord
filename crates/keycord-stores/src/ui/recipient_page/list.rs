@@ -221,7 +221,7 @@ fn recipient_key_list_context(state: &StoreRecipientsPageState) -> RecipientKeyL
     let uses_integrated_backend = state.ports.preferences.uses_integrated_backend();
     let uses_host_backend = state.ports.preferences.uses_host_command_backend();
     let selection_mode = current_selection_mode(state);
-    sync_store_recipients_mode_controls(state, selection_mode, uses_integrated_backend);
+    sync_store_recipients_mode_controls(state, selection_mode);
     let require_all = matches!(
         state.private_key_requirement.get(),
         StoreRecipientsPrivateKeyRequirement::AllManagedKeys

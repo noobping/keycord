@@ -3,8 +3,6 @@
 use adw::gtk::Builder;
 use keycord_docs::DocumentationWindowWidgets;
 use keycord_entries::ui::widgets::EntryWindowWidgets;
-#[cfg(feature = "fidokey")]
-use keycord_fido::ui::FidoWindowWidgets;
 use keycord_git::ui::GitWindowWidgets;
 use keycord_keys::ui::KeyWindowWidgets;
 use keycord_preferences::ui::PreferencesWindowWidgets;
@@ -22,8 +20,6 @@ pub(in crate::window) struct WindowWidgets {
     pub(in crate::window) docs: DocumentationWindowWidgets,
     pub(in crate::window) preferences: PreferencesWindowWidgets,
     pub(in crate::window) keys: KeyWindowWidgets,
-    #[cfg(feature = "fidokey")]
-    pub(in crate::window) fido: FidoWindowWidgets,
     pub(in crate::window) tool_hub: ToolHubWindowWidgets,
 }
 
@@ -37,8 +33,6 @@ impl WindowWidgets {
             docs: DocumentationWindowWidgets::load(builder)?,
             preferences: PreferencesWindowWidgets::load(builder)?,
             keys: KeyWindowWidgets::load(builder)?,
-            #[cfg(feature = "fidokey")]
-            fido: FidoWindowWidgets::load(builder)?,
             tool_hub: ToolHubWindowWidgets::load(builder)?,
         })
     }

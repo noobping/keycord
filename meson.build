@@ -18,9 +18,7 @@ setup = get_option('setup')
 docs = get_option('docs')
 logging = get_option('logging')
 audit = get_option('audit')
-fidokey = get_option('fidokey')
 passkey = get_option('passkey')
-fidopin = get_option('fidopin')
 smartcard = get_option('smartcard')
 hardwarekey = get_option('hardwarekey')
 project_binary = 'keycord'
@@ -32,9 +30,7 @@ foreach feature_name, enabled : {
   'docs': docs,
   'logging': logging,
   'audit': audit,
-  'fidokey': fidokey,
   'passkey': passkey,
-  'fidopin': fidopin,
   'smartcard': smartcard,
   'hardwarekey': hardwarekey,
 }

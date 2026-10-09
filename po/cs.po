@@ -262,10 +262,6 @@ msgstr "Přidána chybějící pole šablony."
 msgid "Adding hardware key"
 msgstr "Přidávání hardwarového klíče"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Povolit přístup k bezpečnostnímu klíči přes USB (experimentální FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Povolit přístup k aplikacím na tomto zařízení"
@@ -469,13 +465,6 @@ msgstr "Vyberte místní soubor."
 msgid "Choose a local folder."
 msgstr "Vyberte místní složku."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr ""
-"Vyberte soubor se soukromým klíčem nebo experimentální soubor soukromého "
-"klíče chráněný FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -636,38 +625,18 @@ msgstr "Vytvořen commit"
 msgid "Committer"
 msgstr "Autor commitu"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Potvrďte nový PIN bezpečnostního klíče"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Potvrďte heslo"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Potvrďte nový PIN bezpečnostního klíče."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Nejprve připojte hardwarový klíč."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Než budete pokračovat, připojte pouze jeden bezpečnostní klíč FIDO2."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Před přidáním připojte pouze jeden hardwarový klíč."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Připojte bezpečnostní klíč FIDO2 a zkuste to znovu."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Nejprve připojte bezpečnostní klíč FIDO2."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -677,18 +646,9 @@ msgstr "Připojte hardwarový klíč a zkuste to znovu."
 msgid "Connect the hardware key first."
 msgstr "Nejprve připojte hardwarový klíč."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Připojte odpovídající bezpečnostní klíč FIDO2."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Před importem připojte odpovídající hardwarový klíč."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Kontext"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -711,10 +671,6 @@ msgstr "Kopírovat soukromý klíč v kódování ASCII"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Kopírovat veřejný klíč v kódování ASCII"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Kopírovat experimentální soukromý klíč chráněný FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -804,10 +760,6 @@ msgstr ""
 msgid "Couldn't create the store."
 msgstr "Nelze vytvořit úložiště."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Nelze dešifrovat data šifrovaná FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -834,7 +786,6 @@ msgstr "Nelze vygenerovat hardwarový dešifrovací klíč"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Nelze vygenerovat hardwarový podpisový klíč"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -860,10 +811,6 @@ msgstr "Nelze importovat hesla."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Klíč se nepodařilo importovat."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Nepodařilo se inicializovat bezpečnostní klíč FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1064,10 +1011,6 @@ msgstr ""
 "Nepodařilo se odemknout soukromý klíč {fingerprint_for_failure} pro "
 "podepisování v Gitu. Pokračuje se bez podpisu."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Nelze odemknout bezpečnostní klíč FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1093,10 +1036,6 @@ msgstr "Nepodařilo se ověřit PIN správce hardwarového klíče"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Nelze ověřit požadovaný PIN hardwarového klíče"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Vytvořte nový klíč chráněný FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1294,12 +1233,6 @@ msgstr "Zadejte e-mailovou adresu pro soukromý klíč."
 msgid "Enter an email address."
 msgstr "Zadejte e-mailovou adresu."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Zadejte PIN bezpečnostního klíče FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1323,18 +1256,10 @@ msgstr "Zadejte heslo klíče."
 msgid "Enter the new hardware key PIN."
 msgstr "Zadejte nový PIN hardwarového klíče."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Zadejte nový PIN bezpečnostního klíče."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Zadejte heslo soukromého klíče."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Zadejte PIN bezpečnostního klíče."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1343,16 +1268,6 @@ msgstr "Esc"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Rozšířit editor hesel o možnosti čištění"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"Experimentální soukromé klíče chráněné FIDO2 vyžadují přístup k zařízení "
-"USB, aby Keycord mohl připojeným bezpečnostním klíčem odemykat chráněné "
-"soukromé klíče. Po udělení přístupu Keycord restartujte."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1413,26 +1328,6 @@ msgstr "Bylo exportováno {count} heslo."
 msgid "Exported {count} passwords."
 msgstr "Exportováno hesel: {count}."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Manifest soukromého klíče FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Podpora soukromého klíče FIDO2 je v tomto sestavení Keycordu zakázána."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Bezpečnostní klíč FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Podpora FIDO2 je v tomto sestavení Keycordu zakázána."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Textová obálka FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr ""
@@ -1487,10 +1382,6 @@ msgstr "Nepodařilo se dekódovat podpis v kódování ASCII"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Nepodařilo se dekódovat dešifrovaná data UTF-8"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Nepodařilo se odvodit dostatečný výstup HKDF."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1818,11 +1709,6 @@ msgstr "Opraven poskytovatel vyhledávání GNOME."
 msgid "General"
 msgstr "Obecné"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Vygenerovat klíč chráněný FIDO2 (experimentální)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Vygenerujte nebo importujte soukromý klíč."
@@ -1837,10 +1723,6 @@ msgstr "Vygenerovat heslo"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Vygenerovat soukromý klíč"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Generování klíče chráněného FIDO2 (experimentální)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1886,18 +1768,6 @@ msgstr "Přejít domů"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Udělit"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Udělit přístup k bezpečnostnímu klíči přes USB (experimentální FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"Nejprve udělte přístup k bezpečnostnímu klíči přes USB pro experimentální "
-"soukromé klíče chráněné FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2176,18 +2046,6 @@ msgstr "Instalace aktualizace ukončí Keycord. Neuložené změny budou ztracen
 msgid "Integrated"
 msgstr "Integrovaný"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Neplatný otisk vazby FIDO2 '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Neplatná cesta zařízení FIDO2: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Neplatná data šifrovaná FIDO2."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2281,7 +2139,6 @@ msgstr ""
 msgid "Key file removed."
 msgstr "Soubor klíče odstraněn."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Vygenerován klíč."
@@ -2304,10 +2161,6 @@ msgstr "Heslo klíče"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Soukromý klíč Keycordu chráněný FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2678,10 +2531,6 @@ msgstr "Nový PIN hardwarového klíče"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Nová položka"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Nový PIN bezpečnostního klíče"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3198,14 +3047,6 @@ msgstr "ID RP"
 msgid "Raw text"
 msgstr "Textový obsah"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"Načíst ze schránky soukromý klíč v kódování ASCII nebo experimentální "
-"soukromý klíč chráněný FIDO2."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Načíst změněné cesty commitu Gitu úložiště hesel {oid}"
@@ -3297,12 +3138,6 @@ msgstr "Příjemci z auditovaného commitu"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Doporučeno pro nová úložiště"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Znovu připojte bezpečnostní klíč FIDO2 a zkuste to znovu."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3646,10 +3481,6 @@ msgstr "Hledat v hodnotách"
 msgid "Search weak passwords"
 msgstr "Hledat slabá hesla"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN bezpečnostního klíče"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3671,32 +3502,11 @@ msgstr "Vyberte soukromé klíče, které mohou odemykat hesla v tomto úložiš
 msgid "Sequential characters"
 msgstr "Po sobě jdoucí znaky"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Nejprve nastavte PIN bezpečnostního klíče FIDO2."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Nastavit PIN bezpečnostního klíče"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Nastavit PIN bezpečnostního klíče (experimentální FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Nastavit nový hardwarový klíč (experimentální)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr ""
-"Nastavení PINu bezpečnostního klíče FIDO2 je v tomto sestavení podporováno "
-"pouze v Linuxu."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3808,11 +3618,6 @@ msgstr "Synchronizace úložiště se neočekávaně zastavila."
 msgid "Store synced."
 msgstr "Úložiště bylo synchronizováno."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Uložený PIN FIDO2 není platně kódován v UTF-8: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3826,14 +3631,6 @@ msgstr "Chcete-li obnovit úložiště z repozitáře Git, přepněte backend na
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Chcete-li použít příkaz pass import, přepněte backend na Host."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr ""
-"Chcete-li používat experimentální soukromé klíče chráněné FIDO2, přepněte na "
-"Integrovaný backend."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3872,31 +3669,6 @@ msgstr "Synchronizace úložišť"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Textový editor"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Tento bezpečnostní klíč FIDO2 nepodporuje rozšíření hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Tento bezpečnostní klíč FIDO2 musí podporovat ochranu pomocí PINu."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Tento klíč chráněný FIDO2 nelze exportovat."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Data tohoto klíče chráněného FIDO2 jsou neplatná."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Tento klíč chráněný FIDO2 je neplatný."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3988,18 +3760,6 @@ msgstr "Požadavek CXP neobsahuje rozpoznaný režim HPKE."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Požadavek CXP nenabízí podporovaný formát archivu deflate."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "PIN bezpečnostního klíče FIDO2 obsahuje nepodporovaný bajt NUL."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "PIN bezpečnostního klíče FIDO2 je nesprávný."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Bezpečnostní klíč FIDO2 nevrátil identifikátor pověření."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4099,10 +3859,6 @@ msgstr "Heslo soukromého klíče je nesprávné."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Proces zjišťování dostupných soukromých klíčů se neočekávaně zastavil."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Zadané PINy bezpečnostního klíče se neshodují."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr ""
@@ -4168,10 +3924,6 @@ msgid ""
 msgstr ""
 "Tato nastavení se použijí, když v editoru vygenerujete nebo znovu "
 "vygenerujete heslo."
-
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Tento bezpečnostní klíč FIDO2 nemůže odemknout vaše položky."
 
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
@@ -4241,14 +3993,6 @@ msgstr "Tento klíč nemůže odemknout vaše položky."
 msgid "This private key is password protected."
 msgstr "Tento soukromý klíč je chráněn heslem."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Tento soukromý klíč vyžaduje bezpečnostní klíč FIDO2."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Tento soukromý klíč vyžaduje jiný způsob odemknutí."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Tento soukromý klíč vyžaduje hardwarový klíč."
@@ -4284,16 +4028,6 @@ msgstr "Nástroje"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Celkový počet znaků"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Dotkněte se bezpečnostního klíče FIDO2 a zkuste to znovu."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Dotkněte se klíče, pokud bliká."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4390,7 +4124,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Před odebráním tohoto klíče odemkněte jiný vybraný soukromý klíč."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4420,26 +4154,6 @@ msgstr "Bezejmenný soukromý klíč"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Nepojmenovaná čipová karta"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Odpojte další bezpečnostní klíče a zkuste to znovu."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Nepodporovaný formát záznamu s heslem FIDO2 {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Nepodporovaná ochrana záznamu s heslem FIDO2 '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Nepodporovaný formát soukromého klíče FIDO2 {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Nepodporovaná ochrana soukromého klíče FIDO2 '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5186,10 +4900,6 @@ msgstr "{fingerprint} – Hardwarový klíč"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} – Chráněno heslem"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} – Chráněno bezpečnostním klíčem"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} – Bezpečnostní token"
@@ -5197,10 +4907,6 @@ msgstr "{fingerprint} – Bezpečnostní token"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} – Bezpečnostní token ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5254,10 +4960,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

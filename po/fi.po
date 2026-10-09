@@ -262,10 +262,6 @@ msgstr "Lisättiin puuttuvat mallipohjan kentät."
 msgid "Adding hardware key"
 msgstr "Lisätään laitteistoavainta"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Salli USB-suojausavaimen käyttö (kokeellinen FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Salli pääsy tämän laitteen sovelluksiin"
@@ -469,13 +465,6 @@ msgstr "Valitse paikallinen tiedosto."
 msgid "Choose a local folder."
 msgstr "Valitse paikallinen kansio."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr ""
-"Valitse yksityisen avaimen tiedosto tai kokeellinen FIDO2-suojatun "
-"yksityisen avaimen tiedosto."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -635,38 +624,18 @@ msgstr "Commitoitu"
 msgid "Committer"
 msgstr "Commitoija"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Vahvista suojausavaimen uusi PIN-koodi"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Vahvista salasana"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Vahvista suojausavaimen uusi PIN-koodi."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Yhdistä ensin laitteistoavain."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Yhdistä vain yksi FIDO2-suojausavain ennen jatkamista."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Yhdistä vain yksi laitteistoavain ennen sen lisäämistä."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Yhdistä FIDO2-suojausavain ja yritä uudelleen."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Yhdistä ensin FIDO2-suojausavain."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -676,18 +645,9 @@ msgstr "Yhdistä laitteistoavain ja yritä uudelleen."
 msgid "Connect the hardware key first."
 msgstr "Yhdistä ensin laitteistoavain."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Yhdistä oikea FIDO2-suojausavain."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Yhdistä oikea laitteistoavain ennen sen tuomista."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Konteksti"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -710,10 +670,6 @@ msgstr "Kopioi ASCII-koodattu yksityinen avain"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Kopioi ASCII-koodattu julkinen avain"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Kopioi kokeellinen FIDO2-suojattu yksityinen avain"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -802,10 +758,6 @@ msgstr "Julkisen avaimen varmennetta ei voitu luoda laitteistoavaimelle."
 msgid "Couldn't create the store."
 msgstr "Varastoa ei voitu luoda."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "FIDO2-salattujen tietojen salausta ei voitu purkaa."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -832,7 +784,6 @@ msgstr "Laitteiston salauksenpurkuavainta ei voitu luoda"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Laitteiston allekirjoitusavainta ei voitu luoda"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -858,10 +809,6 @@ msgstr "Salasanoja ei voitu tuoda."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Avainta ei voitu tuoda."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "FIDO2-suojausavainta ei voitu alustaa."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1062,10 +1009,6 @@ msgstr ""
 "Yksityisen avaimen {fingerprint_for_failure} lukitusta ei voitu avata Git-"
 "allekirjoitusta varten. Jatketaan ilman allekirjoitusta."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "FIDO2-suojausavaimen lukitusta ei voitu avata."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1091,10 +1034,6 @@ msgstr "Laitteistoavaimen ylläpitäjän PIN-koodia ei voitu tarkistaa"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Pyydettyä laitteistoavaimen PIN-koodia ei voitu tarkistaa"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Luo uusi FIDO2-suojattu avain."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1292,12 +1231,6 @@ msgstr "Anna yksityisen avaimen sähköpostiosoite."
 msgid "Enter an email address."
 msgstr "Anna sähköpostiosoite."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Anna FIDO2-suojausavaimen PIN-koodi."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1321,18 +1254,10 @@ msgstr "Anna avaimen salasana."
 msgid "Enter the new hardware key PIN."
 msgstr "Anna laitteistoavaimen uusi PIN-koodi."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Anna suojausavaimen uusi PIN-koodi."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Anna yksityisen avaimen salasana."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Anna suojausavaimen PIN-koodi."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1341,17 +1266,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Laajenna salasanaeditoria siivoustoiminnoilla"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"Kokeelliset FIDO2-suojatut yksityiset avaimet tarvitsevat USB-laitteen "
-"käyttöoikeuden, ennen kuin Keycord voi avata suojattujen yksityisten "
-"avainten lukituksen yhdistetyllä suojausavaimella. Käynnistä Keycord "
-"uudelleen myönnettyäsi käyttöoikeuden."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1413,26 +1327,6 @@ msgstr "Vietiin {count} salasana."
 msgid "Exported {count} passwords."
 msgstr "Vietiin {count} salasanaa."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2-yksityisavaimen manifesti"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "FIDO2-yksityisavainten tuki ei ole käytössä tässä Keycord-versiossa."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2-suojausavain"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "FIDO2-tuki ei ole käytössä tässä Keycord-versiossa."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2-tekstikuori"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr ""
@@ -1484,10 +1378,6 @@ msgstr "ASCII-koodatun allekirjoituksen purkaminen epäonnistui"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Salauksesta puretun UTF-8-datan dekoodaus epäonnistui"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Riittävän HKDF-tulosteen johtaminen epäonnistui."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1808,11 +1698,6 @@ msgstr "Korjattiin GNOME-hakupalvelu."
 msgid "General"
 msgstr "Yleiset"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Luo FIDO2-suojattu avain (kokeellinen)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Luo tai tuo yksityinen avain."
@@ -1827,10 +1712,6 @@ msgstr "Luo salasana"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Luo yksityinen avain"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Luodaan FIDO2-suojattua avainta (kokeellinen)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1876,18 +1757,6 @@ msgstr "Siirry etusivulle"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Myönnä"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Myönnä USB-suojausavaimen käyttöoikeus (kokeellinen FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"Myönnä ensin USB-suojausavaimen käyttöoikeus kokeellisia FIDO2-suojattuja "
-"yksityisiä avaimia varten."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2174,18 +2043,6 @@ msgstr ""
 msgid "Integrated"
 msgstr "Integroitu"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Virheellinen FIDO2-sidonnan sormenjälki '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Virheellinen FIDO2-laitteen polku: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Virheelliset FIDO2-salatut tiedot."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2279,7 +2136,6 @@ msgstr ""
 msgid "Key file removed."
 msgstr "Avaintiedosto poistettiin."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Avain luotiin."
@@ -2302,10 +2158,6 @@ msgstr "Avaimen salasana"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Keycordin FIDO2-suojattu yksityinen avain"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2680,10 +2532,6 @@ msgstr "Laitteistoavaimen uusi PIN-koodi"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Uusi merkintä"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Suojausavaimen uusi PIN-koodi"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3198,14 +3046,6 @@ msgstr "RP-tunnus"
 msgid "Raw text"
 msgstr "Raakateksti"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"Lue ASCII-koodattu yksityinen avain tai kokeellinen FIDO2-suojattu "
-"yksityinen avain leikepöydältä."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Lue salasanavaraston Git-commitin {oid} muuttuneet polut"
@@ -3299,12 +3139,6 @@ msgstr "Tarkastetun commitin vastaanottajat"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Suositellaan uusille varastoille"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Yhdistä FIDO2-suojausavain uudelleen ja yritä uudestaan."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3645,10 +3479,6 @@ msgstr "Etsi arvoja"
 msgid "Search weak passwords"
 msgstr "Etsi heikkoja salasanoja"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "Suojausavaimen PIN-koodi"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3672,32 +3502,11 @@ msgstr ""
 msgid "Sequential characters"
 msgstr "Peräkkäisiä merkkejä"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Aseta ensin FIDO2-suojausavaimelle PIN-koodi."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Aseta suojausavaimen PIN-koodi"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Aseta suojausavaimen PIN-koodi (kokeellinen FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Määritä uusi laitteistoavain (kokeellinen)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr ""
-"FIDO2-suojausavaimen PIN-koodin asettamista tuetaan tässä versiossa vain "
-"Linuxissa."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3809,11 +3618,6 @@ msgstr "Varaston synkronointi pysähtyi odottamatta."
 msgid "Store synced."
 msgstr "Varasto synkronoitiin."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Tallennettu FIDO2-PIN-koodi ei ole kelvollista UTF-8-tekstiä: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3827,14 +3631,6 @@ msgstr "Vaihda taustaosaksi Host palauttaaksesi varaston Git-tietovarastosta."
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Vaihda taustaosaksi Host käyttääksesi pass-tuontia."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr ""
-"Vaihda Integroituun taustaosaan käyttääksesi kokeellisia FIDO2-suojattuja "
-"yksityisiä avaimia."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3872,31 +3668,6 @@ msgstr "Synkronoidaan varastoja"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Tekstimuokkain"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Kyseinen FIDO2-suojausavain ei tue hmac-secret-laajennusta."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "FIDO2-suojausavaimen on tuettava PIN-suojausta."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Kyseistä FIDO2-suojattua avainta ei voitu viedä."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Kyseisen FIDO2-suojatun avaimen tiedot ovat virheellisiä."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Kyseinen FIDO2-suojattu avain on virheellinen."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3994,18 +3765,6 @@ msgstr "CXP-pyyntö ei sisällä tunnistettua HPKE-tilaa."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP-pyyntö ei tarjoa tuettua deflate-arkistomuotoa."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2-suojausavaimen PIN-koodi sisältää tukemattoman NUL-tavun."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2-suojausavaimen PIN-koodi on väärä."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "FIDO2-suojausavain ei palauttanut tunnistetiedon tunnistetta."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4112,10 +3871,6 @@ msgid "The private-key inventory worker stopped unexpectedly."
 msgstr ""
 "Yksityisten avainten luetteloa kokoava taustaprosessi pysähtyi odottamatta."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Suojausavaimen PIN-koodit eivät täsmää."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr ""
@@ -4181,10 +3936,6 @@ msgid ""
 msgstr ""
 "Näitä asetuksia käytetään salasanan luomiseen ja uudelleenluontiin "
 "salasanaeditorissa."
-
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Tällä FIDO2-suojausavaimella ei voi avata merkintöjäsi."
 
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
@@ -4253,14 +4004,6 @@ msgstr "Tällä avaimella ei voi avata merkintöjäsi."
 msgid "This private key is password protected."
 msgstr "Tämä yksityinen avain on suojattu salasanalla."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Tämä yksityinen avain vaatii FIDO2-suojausavaimen."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Tämä yksityinen avain vaatii toisen lukituksen avaustavan."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Tämä yksityinen avain vaatii laitteistoavaimen."
@@ -4296,16 +4039,6 @@ msgstr "Työkalut"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Merkkejä yhteensä"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Kosketa FIDO2-suojausavainta ja yritä uudelleen."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Kosketa avainta, jos se vilkkuu."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4405,7 +4138,7 @@ msgstr ""
 "poistamista."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4435,26 +4168,6 @@ msgstr "Nimetön yksityinen avain"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Nimetön älykortti"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Irrota muut suojausavaimet ja yritä uudelleen."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Tukematon FIDO2-salasanamerkinnän muoto {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Tukematon FIDO2-salasanamerkinnän suojaus '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Tukematon FIDO2-yksityisavaimen muoto {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Tukematon FIDO2-yksityisavaimen suojaus '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5205,10 +4918,6 @@ msgstr "{fingerprint} – Laitteistoavain"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} – Salasanasuojattu"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} – Suojausavaimella suojattu"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} – Suojaustunnus"
@@ -5216,10 +4925,6 @@ msgstr "{fingerprint} – Suojaustunnus"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} – Suojaustunnus ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5273,10 +4978,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

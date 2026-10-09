@@ -10,15 +10,12 @@ const OPENPGP_V4_FINGERPRINT_LEN: usize = 20;
 pub enum ManagedRipassoPrivateKeyProtection {
     Password,
     HardwareOpenPgpCard,
-    #[cfg(feature = "fido")]
-    Fido2HmacSecret,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PrivateKeyUnlockKind {
     Password,
     HardwareOpenPgpCard,
-    Fido2SecurityKey,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -49,7 +46,6 @@ pub enum PrivateKeyUnlockRequest {
     Password(SecretString),
     HardwarePin(SecretString),
     HardwareExternal,
-    Fido2(Option<SecretString>),
 }
 
 impl PartialEq for PrivateKeyUnlockRequest {
@@ -62,11 +58,6 @@ impl PartialEq for PrivateKeyUnlockRequest {
                 left.expose_secret() == right.expose_secret()
             }
             (Self::HardwareExternal, Self::HardwareExternal) => true,
-            (Self::Fido2(left), Self::Fido2(right)) => match (left, right) {
-                (Some(left), Some(right)) => left.expose_secret() == right.expose_secret(),
-                (None, None) => true,
-                _ => false,
-            },
             _ => false,
         }
     }
@@ -99,8 +90,6 @@ impl From<ManagedRipassoPrivateKeyProtection> for PrivateKeyUnlockKind {
         match value {
             ManagedRipassoPrivateKeyProtection::Password => Self::Password,
             ManagedRipassoPrivateKeyProtection::HardwareOpenPgpCard => Self::HardwareOpenPgpCard,
-            #[cfg(feature = "fido")]
-            ManagedRipassoPrivateKeyProtection::Fido2HmacSecret => Self::Fido2SecurityKey,
         }
     }
 }
@@ -194,20 +183,6 @@ pub(crate) fn parse_hardware_public_key_bytes(
         &cert,
         ManagedRipassoPrivateKeyProtection::HardwareOpenPgpCard,
         Some(hardware),
-    );
-    Ok((cert, key))
-}
-
-#[cfg(feature = "fido")]
-pub(crate) fn parse_fido2_public_key_bytes(
-    bytes: &[u8],
-) -> Result<(Cert, ManagedRipassoPrivateKey), PrivateKeyError> {
-    let cert = Cert::from_bytes(bytes).map_err(|err| PrivateKeyError::other(err.to_string()))?;
-    let cert = cert.strip_secret_key_material();
-    let key = managed_private_key_from_cert(
-        &cert,
-        ManagedRipassoPrivateKeyProtection::Fido2HmacSecret,
-        None,
     );
     Ok((cert, key))
 }

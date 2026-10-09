@@ -252,10 +252,6 @@ msgstr "누락된 템플릿 필드를 추가했어요."
 msgid "Adding hardware key"
 msgstr "하드웨어 키 추가 중"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "USB 보안 키 접근 권한 허용(실험적 FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "이 기기의 앱에 접근할 수 있도록 허용"
@@ -457,11 +453,6 @@ msgstr "로컬 파일을 선택하세요."
 msgid "Choose a local folder."
 msgstr "로컬 폴더를 선택하세요."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "개인 키 파일이나 실험적인 FIDO2 보호 개인 키 파일을 선택하세요."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -620,38 +611,18 @@ msgstr "커밋 시각"
 msgid "Committer"
 msgstr "커미터"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "새 보안 키 PIN 확인"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "암호 확인"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "새 보안 키 PIN을 다시 입력하세요."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "먼저 하드웨어 키를 연결하세요."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "계속하기 전에 FIDO2 보안 키 하나만 연결하세요."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "추가하기 전에 하드웨어 키 하나만 연결하세요."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "FIDO2 보안 키를 연결하고 다시 시도하세요."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "먼저 FIDO2 보안 키를 연결하세요."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -661,18 +632,9 @@ msgstr "하드웨어 키를 연결하고 다시 시도하세요."
 msgid "Connect the hardware key first."
 msgstr "먼저 하드웨어 키를 연결하세요."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "일치하는 FIDO2 보안 키를 연결하세요."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "가져오기 전에 일치하는 하드웨어 키를 연결하세요."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "컨텍스트"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -695,10 +657,6 @@ msgstr "ASCII 형식 개인 키 복사"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "ASCII 형식 공개 키 복사"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "실험적 FIDO2 보호 개인 키 복사"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -787,10 +745,6 @@ msgstr "하드웨어 키에 공개 키 인증서를 만들지 못했어요."
 msgid "Couldn't create the store."
 msgstr "저장소를 만들지 못했어요."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "FIDO2로 암호화된 데이터를 복호화하지 못했어요."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -817,7 +771,6 @@ msgstr "하드웨어 복호화 키를 생성하지 못했어요"
 msgid "Couldn't generate the hardware signing key"
 msgstr "하드웨어 서명 키를 생성하지 못했어요"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -843,10 +796,6 @@ msgstr "암호를 가져오지 못했어요."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "키를 가져오지 못했어요."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "FIDO2 보안 키를 초기화하지 못했어요."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1043,10 +992,6 @@ msgstr ""
 "Git 서명에 사용할 개인 키 {fingerprint_for_failure}의 잠금을 해제하지 못했어"
 "요. 서명 없이 계속해요."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "FIDO2 보안 키의 잠금을 해제하지 못했어요."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1072,10 +1017,6 @@ msgstr "하드웨어 키 관리자 PIN을 확인하지 못했어요"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "요청한 하드웨어 키 PIN을 확인하지 못했어요"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "새 FIDO2 보호 키를 만들어요."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1270,12 +1211,6 @@ msgstr "개인 키에 사용할 전자메일 주소를 입력하세요."
 msgid "Enter an email address."
 msgstr "전자메일 주소를 입력하세요."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "FIDO2 보안 키 PIN을 입력하세요."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1299,18 +1234,10 @@ msgstr "키 암호를 입력하세요."
 msgid "Enter the new hardware key PIN."
 msgstr "새 하드웨어 키 PIN을 입력하세요."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "새 보안 키 PIN을 입력하세요."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "개인 키 암호를 입력하세요."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "보안 키 PIN을 입력하세요."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1319,16 +1246,6 @@ msgstr "Esc"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "암호 편집기에 정리 동작 표시"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"실험적인 FIDO2 보호 개인 키를 사용하려면 Keycord에 USB 장치 접근 권한이 있어"
-"야 연결된 보안 키로 개인 키의 잠금을 해제할 수 있어요. 권한을 허용한 뒤 "
-"Keycord를 다시 시작하세요."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1388,26 +1305,6 @@ msgstr "암호 {count}개를 내보냈어요."
 msgid "Exported {count} passwords."
 msgstr "암호 {count}개를 내보냈어요."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2 개인 키 매니페스트"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "이 Keycord 빌드에서는 FIDO2 개인 키 지원이 꺼져 있어요."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 보안 키"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "이 Keycord 빌드에서는 FIDO2 지원이 꺼져 있어요."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 텍스트 인벨로프"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "접근이 제한된 Linux 업데이트 준비 디렉터리를 할당하지 못했어요."
@@ -1458,10 +1355,6 @@ msgstr "ASCII 형식 서명을 디코딩하지 못했어요"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "복호화한 UTF-8 데이터를 디코딩하지 못했어요"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "충분한 HKDF 출력을 도출하지 못했어요."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1774,11 +1667,6 @@ msgstr "GNOME 검색 공급자 문제를 고쳤어요."
 msgid "General"
 msgstr "일반"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "FIDO2 보호 키 생성(실험적)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "개인 키를 생성하거나 가져오세요."
@@ -1793,10 +1681,6 @@ msgstr "암호 생성"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "개인 키 생성"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "FIDO2 보호 키 생성 중(실험적)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1842,17 +1726,6 @@ msgstr "홈으로 이동"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "허용"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "USB 보안 키 접근 권한 허용(실험적 FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"먼저 실험적인 FIDO2 보호 개인 키에 필요한 USB 보안 키 접근 권한을 허용하세요."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2126,18 +1999,6 @@ msgstr ""
 msgid "Integrated"
 msgstr "통합"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "올바르지 않은 FIDO2 바인딩 핑거프린트예요: '{value}'"
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "FIDO2 장치 경로가 올바르지 않아요: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "FIDO2 암호화 데이터가 올바르지 않아요."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2225,7 +2086,6 @@ msgstr "선택한 개인 키가 모두 필요한 동안에는 이 키의 선택�
 msgid "Key file removed."
 msgstr "키 파일을 제거했어요."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "키를 생성했어요."
@@ -2248,10 +2108,6 @@ msgstr "키 암호"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Keycord FIDO2 보호 개인 키"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2607,10 +2463,6 @@ msgstr "새 하드웨어 키 PIN"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "새 항목"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "새 보안 키 PIN"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3117,13 +2969,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "원문"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"클립보드에서 ASCII 형식 개인 키나 실험적인 FIDO2 보호 개인 키를 읽어요."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "암호 저장소 Git 커밋 {oid}의 변경된 경로 읽기"
@@ -3215,12 +3060,6 @@ msgstr "감사 대상 커밋의 수신자"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "새 저장소에 권장"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "FIDO2 보안 키를 다시 연결한 뒤 시도하세요."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3554,10 +3393,6 @@ msgstr "값 검색"
 msgid "Search weak passwords"
 msgstr "취약한 암호 검색"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "보안 키 PIN"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3579,30 +3414,11 @@ msgstr "이 저장소의 암호를 열 수 있는 개인 키를 선택하세요.
 msgid "Sequential characters"
 msgstr "연속된 문자"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "먼저 FIDO2 보안 키에 PIN을 설정하세요."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "보안 키 PIN 설정"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "보안 키 PIN 설정(실험적 FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "새 하드웨어 키 설정(실험적)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "이 빌드에서 FIDO2 보안 키 PIN 설정은 Linux에서만 지원해요."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3714,11 +3530,6 @@ msgstr "저장소 동기화가 예기치 않게 중단됐어요."
 msgid "Store synced."
 msgstr "저장소를 동기화했어요."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "저장된 FIDO2 PIN이 올바른 UTF-8이 아니에요: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3732,12 +3543,6 @@ msgstr "Git 저장소에서 복원하려면 백엔드를 호스트로 바꾸세�
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "pass import를 사용하려면 백엔드를 호스트로 바꾸세요."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr "실험적인 FIDO2 보호 개인 키를 사용하려면 통합 백엔드로 바꾸세요."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3775,31 +3580,6 @@ msgstr "저장소 동기화 중"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "텍스트 편집기"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "이 FIDO2 보안 키는 hmac-secret 확장을 지원하지 않아요."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "이 FIDO2 보안 키가 PIN 보호를 지원해야 해요."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "이 FIDO2 보호 키를 내보낼 수 없어요."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "이 FIDO2 보호 키 데이터가 올바르지 않아요."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "이 FIDO2 보호 키가 올바르지 않아요."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3890,18 +3670,6 @@ msgstr "CXP 요청에 인식할 수 있는 HPKE 모드가 없어요."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP 요청에서 지원되는 deflate 압축 형식을 제공하지 않아요."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2 보안 키 PIN에 지원하지 않는 NUL 바이트가 들어 있어요."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2 보안 키 PIN이 올바르지 않아요."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "FIDO2 보안 키에서 자격 증명 식별자를 반환하지 않았어요."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4001,10 +3769,6 @@ msgstr "개인 키 암호가 올바르지 않아요."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "개인 키 목록을 확인하던 백그라운드 작업이 예기치 않게 중단됐어요."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "보안 키 PIN이 서로 일치하지 않아요."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "선택한 파일은 지원되는 로컬 CXP 패스키 요청이 아니에요. {error}"
@@ -4065,10 +3829,6 @@ msgid ""
 "These settings are used when you generate or regenerate a password from the "
 "editor."
 msgstr "편집기에서 암호를 새로 생성하거나 다시 생성할 때 이 설정을 사용해요."
-
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "이 FIDO2 보안 키로 항목을 열 수 없어요."
 
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
@@ -4136,14 +3896,6 @@ msgstr "이 키로 항목을 열 수 없어요."
 msgid "This private key is password protected."
 msgstr "이 개인 키는 암호로 보호되어 있어요."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "이 개인 키에는 FIDO2 보안 키가 필요해요."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "이 개인 키에는 다른 잠금 해제 방법이 필요해요."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "이 개인 키에는 하드웨어 키가 필요해요."
@@ -4177,16 +3929,6 @@ msgstr "도구"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "전체 문자 수"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "FIDO2 보안 키를 터치하고 다시 시도하세요."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "키가 깜박이면 터치하세요."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4282,7 +4024,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "이 키의 선택을 해제하기 전에 선택된 다른 개인 키의 잠금을 해제하세요."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4312,26 +4054,6 @@ msgstr "이름 없는 개인 키"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "이름 없는 스마트카드"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "다른 보안 키를 분리한 뒤 다시 시도하세요."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "지원하지 않는 FIDO2 암호 항목 형식이에요: {}"
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "지원하지 않는 FIDO2 암호 항목 보호 방식이에요: '{}'"
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "지원하지 않는 FIDO2 개인 키 형식이에요: {}"
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "지원하지 않는 FIDO2 개인 키 보호 방식이에요: '{}'"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5077,10 +4799,6 @@ msgstr "{fingerprint} - 하드웨어 키"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - 암호로 보호됨"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - 보안 키로 보호됨"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - 보안 토큰"
@@ -5088,10 +4806,6 @@ msgstr "{fingerprint} - 보안 토큰"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - 보안 토큰({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5145,10 +4859,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{}({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

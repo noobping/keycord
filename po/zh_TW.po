@@ -235,10 +235,6 @@ msgstr "已新增範本中缺少的欄位。"
 msgid "Adding hardware key"
 msgstr "正在新增硬體金鑰"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "允許存取 USB 安全金鑰（實驗性 FIDO2）"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "允許存取此裝置上的應用程式"
@@ -436,10 +432,6 @@ msgstr "請選擇本機檔案。"
 msgid "Choose a local folder."
 msgstr "請選擇本機資料夾。"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "請選擇私密金鑰檔案，或受 FIDO2 保護的實驗性私密金鑰檔案。"
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -570,38 +562,18 @@ msgstr "提交時間"
 msgid "Committer"
 msgstr "提交者"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "確認新安全金鑰 PIN"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "確認密碼"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "請再次輸入新安全金鑰 PIN。"
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "請先連線硬體金鑰。"
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "繼續前，請只連線一把 FIDO2 安全金鑰。"
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "新增前，請只連線一把硬體金鑰。"
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "請連線 FIDO2 安全金鑰後再試一次。"
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "請先連線 FIDO2 安全金鑰。"
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -611,18 +583,9 @@ msgstr "請連線硬體金鑰後再試一次。"
 msgid "Connect the hardware key first."
 msgstr "請先連線硬體金鑰。"
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "請連線相符的 FIDO2 安全金鑰。"
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "匯入前請連線相符的硬體金鑰。"
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Context"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -645,10 +608,6 @@ msgstr "複製 ASCII 封裝格式的私密金鑰"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "複製 ASCII 封裝格式的公開金鑰"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "複製受 FIDO2 保護的實驗性私密金鑰"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -737,10 +696,6 @@ msgstr "無法在硬體金鑰上建立公開金鑰憑證。"
 msgid "Couldn't create the store."
 msgstr "無法建立密碼儲存庫。"
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "無法解密由 FIDO2 加密的資料。"
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -767,7 +722,6 @@ msgstr "無法產生硬體解密金鑰"
 msgid "Couldn't generate the hardware signing key"
 msgstr "無法產生硬體簽署金鑰"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -793,10 +747,6 @@ msgstr "無法匯入密碼。"
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "無法匯入金鑰。"
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "無法初始設定 FIDO2 安全金鑰。"
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -987,10 +937,6 @@ msgstr "無法同步密碼儲存庫。"
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "無法解鎖用來簽署 Git 的私密金鑰 {fingerprint_for_failure}。將繼續執行，但不簽署。"
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "無法解鎖 FIDO2 安全金鑰。"
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1016,10 +962,6 @@ msgstr "無法驗證硬體金鑰的管理員 PIN"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "無法驗證所請求的硬體金鑰 PIN"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "建立受 FIDO2 保護的新金鑰。"
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1206,12 +1148,6 @@ msgstr "請輸入私密金鑰的電子郵件地址。"
 msgid "Enter an email address."
 msgstr "請輸入電子郵件地址。"
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "請輸入 FIDO2 安全金鑰 PIN。"
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1235,18 +1171,10 @@ msgstr "請輸入金鑰密碼。"
 msgid "Enter the new hardware key PIN."
 msgstr "請輸入硬體金鑰的新 PIN。"
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "請輸入安全金鑰的新 PIN。"
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "請輸入私密金鑰密碼。"
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "請輸入安全金鑰 PIN。"
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1255,10 +1183,6 @@ msgstr "Esc"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "以清理動作擴充密碼編輯器"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "受 FIDO2 保護的實驗性私密金鑰需要 USB 裝置存取權，Keycord 才能使用已連線的安全金鑰來解鎖這些私密金鑰。允許存取後，請重新啟動 Keycord。"
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1308,26 +1232,6 @@ msgstr "已匯出 {count} 個密碼。"
 msgid "Exported {count} passwords."
 msgstr "已匯出 {count} 個密碼。"
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2 私密金鑰資訊清單"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "此版本的 Keycord 已停用 FIDO2 私密金鑰支援。"
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 安全金鑰"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "此版本的 Keycord 已停用 FIDO2 支援。"
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 文字封套"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "無法建立專用的 Linux 更新暫存目錄。"
@@ -1375,10 +1279,6 @@ msgstr "無法解碼 ASCII 封裝格式的簽章"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "無法解碼已解密的 UTF-8 資料"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "無法衍生出足夠長度的 HKDF 輸出。"
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1682,11 +1582,6 @@ msgstr "修正 GNOME 搜尋提供者。"
 msgid "General"
 msgstr "一般"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "產生受 FIDO2 保護的金鑰（實驗性）"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "請產生或匯入私密金鑰。"
@@ -1701,10 +1596,6 @@ msgstr "產生密碼"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "產生私密金鑰"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "正在產生受 FIDO2 保護的金鑰（實驗性）"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1750,14 +1641,6 @@ msgstr "回到首頁"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "授予"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "授予 USB 安全金鑰存取權（實驗性 FIDO2）"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "要使用受 FIDO2 保護的實驗性私密金鑰，請先授予 USB 安全金鑰存取權。"
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2021,18 +1904,6 @@ msgstr "安裝更新會關閉 Keycord，未儲存的變更將會遺失。"
 msgid "Integrated"
 msgstr "整合"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "FIDO2 繫結指紋「{value}」無效。"
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "FIDO2 裝置路徑無效：{error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "FIDO2 加密資料無效。"
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2115,7 +1986,6 @@ msgstr "所有已選取的私密金鑰都設為必要時，請讓此金鑰保持
 msgid "Key file removed."
 msgstr "已移除金鑰檔案。"
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "已產生金鑰。"
@@ -2138,10 +2008,6 @@ msgstr "金鑰密碼"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "受 FIDO2 保護的 Keycord 私密金鑰"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2455,10 +2321,6 @@ msgstr "新硬體金鑰 PIN"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "新項目"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "新安全金鑰 PIN"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2940,10 +2802,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "原始文字"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "從剪貼簿讀取 ASCII 封裝格式的私密金鑰，或受 FIDO2 保護的實驗性私密金鑰。"
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "讀取密碼儲存庫 Git 提交 {oid} 中變更的路徑"
@@ -3031,12 +2889,6 @@ msgstr "已稽核提交中的收件者"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "建議用於新密碼儲存庫"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "請重新連線 FIDO2 安全金鑰後再試一次。"
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3350,10 +3202,6 @@ msgstr "搜尋值"
 msgid "Search weak passwords"
 msgstr "搜尋弱密碼"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "安全金鑰 PIN"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3375,29 +3223,11 @@ msgstr "選擇能解鎖此密碼儲存庫中密碼的私密金鑰。"
 msgid "Sequential characters"
 msgstr "連續字元"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "請先為 FIDO2 安全金鑰設定 PIN。"
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "設定安全金鑰 PIN"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "設定安全金鑰 PIN（實驗性 FIDO2）"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "設定新硬體金鑰（實驗性）"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "此版本僅支援在 Linux 上設定 FIDO2 安全金鑰 PIN。"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3509,11 +3339,6 @@ msgstr "密碼儲存庫同步意外停止。"
 msgid "Store synced."
 msgstr "密碼儲存庫已同步。"
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "已儲存的 FIDO2 PIN 不是有效的 UTF-8：{error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3527,10 +3352,6 @@ msgstr "若要從 Git 版本庫還原密碼儲存庫，請將後端切換至「�
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "若要使用 pass import，請將後端切換至「主機」。"
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "要使用受 FIDO2 保護的實驗性私密金鑰，請切換到「整合」後端。"
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3564,31 +3385,6 @@ msgstr "正在同步密碼儲存庫"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "文字編輯器"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "此 FIDO2 安全金鑰不支援 hmac-secret 擴充功能。"
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "此 FIDO2 安全金鑰必須支援 PIN 保護。"
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "無法匯出這個受 FIDO2 保護的金鑰。"
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "這個受 FIDO2 保護的金鑰包含無效資料。"
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "這個受 FIDO2 保護的金鑰無效。"
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3675,18 +3471,6 @@ msgstr "CXP 請求中沒有可辨識的 HPKE 模式。"
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP 請求未提供受支援的 deflate 封存格式。"
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2 安全金鑰 PIN 包含不受支援的 NUL 位元組。"
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2 安全金鑰 PIN 不正確。"
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "FIDO2 安全金鑰未傳回憑證識別碼。"
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3786,10 +3570,6 @@ msgstr "私密金鑰密碼不正確。"
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "私密金鑰清單背景工作意外停止。"
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "兩次輸入的安全金鑰 PIN 不一致。"
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "所選檔案不是受支援的本機 CXP 密碼金鑰請求。{error}"
@@ -3842,10 +3622,6 @@ msgstr "建立新密碼項目時，這些內容會加在密碼資料列之後。
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "在編輯器中產生或重新產生密碼時會使用這些設定。"
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "此 FIDO2 安全金鑰無法開啟項目。"
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "此分支沒有可供稽核的提交。"
@@ -3894,14 +3670,6 @@ msgstr "此金鑰無法開啟項目。"
 msgid "This private key is password protected."
 msgstr "此私密金鑰受密碼保護。"
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "此私密金鑰需要 FIDO2 安全金鑰。"
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "此私密金鑰需要使用其他解鎖方式。"
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "此私密金鑰需要硬體金鑰。"
@@ -3934,16 +3702,6 @@ msgstr "工具"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "字元總數"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "請觸碰 FIDO2 安全金鑰後再試一次。"
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "若金鑰閃爍，請觸碰金鑰。"
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4036,7 +3794,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "取消選取此金鑰前，請先解鎖另一把已選取的私密金鑰。"
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4066,26 +3824,6 @@ msgstr "未命名的私密金鑰"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "未命名的智慧卡"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "請拔除其他安全金鑰後再試一次。"
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "不支援 FIDO2 密碼項目格式 {}。"
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "不支援 FIDO2 密碼項目保護方式「{}」。"
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "不支援 FIDO2 私密金鑰格式 {}。"
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "不支援 FIDO2 私密金鑰保護方式「{}」。"
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4818,10 +4556,6 @@ msgstr "{fingerprint} - 硬體金鑰"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - 受密碼保護"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - 受安全金鑰保護"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - 安全權杖"
@@ -4829,10 +4563,6 @@ msgstr "{fingerprint} - 安全權杖"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - 安全權杖（{detail}）"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4886,10 +4616,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

@@ -56,22 +56,8 @@ option(
 )
 
 option(
-  'fidokey',
-  type: 'boolean',
-  value: false,
-  description: 'Enable experimental FIDO2-protected OpenPGP private key support.',
-)
-
-option(
   'passkey',
   type: 'boolean',
   value: true,
   description: 'Enable passkey request handling and storage in pass files.',
-)
-
-option(
-  'fidopin',
-  type: 'boolean',
-  value: false,
-  description: 'Enable experimental Linux-only first-time FIDO2 security-key PIN setup support.',
 )

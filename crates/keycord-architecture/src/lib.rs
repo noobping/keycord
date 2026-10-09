@@ -186,24 +186,6 @@ impl Checker {
     }
 
     fn check_forbidden_edges(&mut self, path: &str, crate_name: &str, manifest: &Manifest) {
-        let all_dependencies = manifest
-            .dependency_assignments()
-            .map(|assignment| dependency_name(&assignment.key).to_string())
-            .collect::<BTreeSet<_>>();
-
-        let opposite = match crate_name {
-            "keycord-fido" => Some("keycord-passkey"),
-            "keycord-passkey" => Some("keycord-fido"),
-            _ => None,
-        };
-        if let Some(forbidden) = opposite {
-            if all_dependencies.contains(forbidden) {
-                self.violations.push(format!(
-                    "{path}: `{crate_name}` must not depend on `{forbidden}`; FIDO and Passkey are separate subjects"
-                ));
-            }
-        }
-
         if crate_name == "keycord-lifecycle" {
             for assignment in manifest.normal_dependency_assignments() {
                 if dependency_name(&assignment.key) == "keycord-passkey" {
@@ -645,8 +627,6 @@ impl Checker {
         self.check_no_root_cross_crate_facades(root);
         self.check_window_widget_bundles(root);
         self.check_root_owner_ui_construction(root);
-        self.check_fido_ui_ownership(root);
-        self.check_fido_service_lifecycle_ownership(root);
         self.check_runtime_capability_ownership(root);
         self.check_installed_branding_asset_ownership(root);
         self.check_stores_key_management_ownership(root);
@@ -733,155 +713,6 @@ impl Checker {
                         line_number_at(&masked, offset)
                     ));
                 }
-            }
-        }
-    }
-
-    fn check_fido_ui_ownership(&mut self, root: &Path) {
-        self.check_fido_root_widget_composition(root);
-
-        let api_policy_path = root.join(POLICY_DIR).join("keys-fido-ui-api.txt");
-        let forbidden_keys_policy_path = root
-            .join(POLICY_DIR)
-            .join("keys-forbidden-fido-ui-ownership.txt");
-        let forbidden_root_policy_path = root
-            .join(POLICY_DIR)
-            .join("root-forbidden-fido-presentation.txt");
-        let Some(expected_api) = self.policy_set(&api_policy_path) else {
-            return;
-        };
-        let Some(forbidden_keys_markers) = self.policy_set(&forbidden_keys_policy_path) else {
-            return;
-        };
-        let Some(forbidden_root_markers) = self.policy_set(&forbidden_root_policy_path) else {
-            return;
-        };
-
-        let keys_ui = root.join("crates/keycord-keys/src/ui");
-        let mut actual_api = BTreeSet::new();
-        let mut files = Vec::new();
-        collect_production_rust(&keys_ui, &mut files, &mut self.violations);
-        for path in files {
-            let Some(source) = self.read(&path) else {
-                continue;
-            };
-            let relative = relative_path(root, &path);
-            let (items, invalid_references) = subject_ui_api_items(&source, "keycord_fido");
-            actual_api.extend(items);
-            for (line, reference) in invalid_references {
-                self.violations.push(format!(
-                    "{relative}:{line}: Keys UI must consume reviewed `keycord_fido::ui` APIs, not `{reference}`"
-                ));
-            }
-            self.check_forbidden_production_markers(
-                &relative,
-                &source,
-                &forbidden_keys_markers,
-                "FIDO generation presentation belongs to FIDO; Keys may retain only its OpenPGP adapter",
-            );
-        }
-        compare_policy_inventory(
-            &mut self.violations,
-            "crates/keycord-keys/src/ui",
-            "reviewed FIDO UI API",
-            &actual_api,
-            &expected_api,
-            "Keys may consume only the explicit FIDO-owned presentation contract",
-        );
-
-        let root_source = root.join("src");
-        let mut root_files = Vec::new();
-        collect_production_rust(&root_source, &mut root_files, &mut self.violations);
-        for path in root_files {
-            let Some(source) = self.read(&path) else {
-                continue;
-            };
-            self.check_forbidden_production_markers(
-                &relative_path(root, &path),
-                &source,
-                &forbidden_root_markers,
-                "FIDO presentation belongs to the FIDO subject",
-            );
-        }
-    }
-
-    fn check_fido_root_widget_composition(&mut self, root: &Path) {
-        let path = root.join("src/window/build/widgets.rs");
-        let Some(source) = self.read(&path) else {
-            return;
-        };
-        let relative = relative_path(root, &path);
-        for marker in [
-            "use keycord_fido::ui::FidoWindowWidgets;",
-            "pub(in crate::window) fido: FidoWindowWidgets,",
-            "fido: FidoWindowWidgets::load(builder)?,",
-        ] {
-            if !item_has_immediate_cfg_feature(&source, marker, "fidokey") {
-                self.violations.push(format!(
-                    "{relative}: `{marker}` must exist immediately below `#[cfg(feature = \"fidokey\")]`; FIDO is a conditional owner bundle"
-                ));
-            }
-        }
-    }
-
-    fn check_fido_service_lifecycle_ownership(&mut self, root: &Path) {
-        let policy_path = root
-            .join(POLICY_DIR)
-            .join("keys-forbidden-fido-service-lifecycle.txt");
-        let Some(forbidden) = self.policy_set(&policy_path) else {
-            return;
-        };
-        let adapter_root = root.join("crates/keycord-keys/src/fido2");
-        let files = match recursive_files(&adapter_root) {
-            Ok(files) => files,
-            Err(error) => {
-                self.io_violation(&adapter_root, error);
-                return;
-            }
-        };
-        for path in files
-            .into_iter()
-            .filter(|path| path.extension().and_then(|extension| extension.to_str()) == Some("rs"))
-        {
-            let Some(source) = self.read(&path) else {
-                continue;
-            };
-            let relative = relative_path(root, &path);
-            for marker in &forbidden {
-                for (offset, _) in source.match_indices(marker) {
-                    self.violations.push(format!(
-                        "{relative}:{}: FIDO service lifecycle marker `{marker}` belongs to FIDO; Keys must use the shared FIDO service adapter",
-                        line_number_at(&source, offset)
-                    ));
-                }
-            }
-        }
-    }
-
-    fn check_forbidden_production_markers(
-        &mut self,
-        relative: &str,
-        source: &str,
-        forbidden: &BTreeSet<String>,
-        ownership_hint: &str,
-    ) {
-        let masked = production_rust_code_mask(source);
-        let literals = production_rust_string_literals(source);
-        for marker in forbidden {
-            for (offset, _) in masked.match_indices(marker) {
-                self.violations.push(format!(
-                    "{relative}:{}: forbidden owner marker `{marker}`; {ownership_hint}",
-                    line_number_at(&masked, offset)
-                ));
-            }
-            for literal in literals
-                .iter()
-                .filter(|literal| literal.value.contains(marker))
-            {
-                self.violations.push(format!(
-                    "{relative}:{}: forbidden owner text `{marker}`; {ownership_hint}",
-                    line_number_at(source, literal.start)
-                ));
             }
         }
     }
@@ -1068,7 +899,7 @@ impl Checker {
         let expected = named_inventory(&policy);
         let mut actual: BTreeMap<String, (String, String)> = BTreeMap::new();
 
-        for owner in ["fido", "keys", "stores"] {
+        for owner in ["keys", "stores"] {
             let data_dir = root.join(format!("crates/keycord-{owner}/data"));
             let files = match recursive_files(&data_dir) {
                 Ok(files) => files,
@@ -1912,20 +1743,6 @@ fn subject_ui_api_items(
     (items, invalid)
 }
 
-fn item_has_immediate_cfg_feature(source: &str, marker: &str, feature: &str) -> bool {
-    let expected_cfg = format!("#[cfg(feature = \"{feature}\")]");
-    let mut previous_nonempty = None;
-    for line in source.lines() {
-        if line.contains(marker) && previous_nonempty == Some(expected_cfg.as_str()) {
-            return true;
-        }
-        if !line.trim().is_empty() {
-            previous_nonempty = Some(line.trim());
-        }
-    }
-    false
-}
-
 fn rust_struct_fields(source: &str, name: &str) -> Option<BTreeMap<String, String>> {
     let masked = rust_code_mask(source);
     let marker = format!("struct {name}");
@@ -2644,7 +2461,7 @@ default = [
 ]
 
 [target.'cfg(target_os = "linux")'.dependencies]
-keycord-fido = { workspace = true, default-features = false }
+keycord-keys = { workspace = true, default-features = false }
 "#,
         );
 
@@ -2657,7 +2474,7 @@ keycord-fido = { workspace = true, default-features = false }
                 .normal_dependency_assignments()
                 .map(|assignment| dependency_name(&assignment.key))
                 .collect::<Vec<_>>(),
-            vec!["keycord-fido"]
+            vec!["keycord-keys"]
         );
     }
 
@@ -2679,14 +2496,6 @@ keycord-passkey.workspace = true
     #[test]
     fn forbidden_subject_edges_are_reported() {
         let mut checker = Checker::default();
-        let fido = Manifest::parse(
-            r#"
-[dependencies]
-keycord-passkey.workspace = true
-"#,
-        );
-        checker.check_forbidden_edges("fido/Cargo.toml", "keycord-fido", &fido);
-
         let lifecycle = Manifest::parse(
             r#"
 [dependencies]
@@ -2695,9 +2504,8 @@ keycord-passkey.workspace = true
         );
         checker.check_forbidden_edges("lifecycle/Cargo.toml", "keycord-lifecycle", &lifecycle);
 
-        assert_eq!(checker.violations.len(), 2);
-        assert!(checker.violations[0].contains("separate subjects"));
-        assert!(checker.violations[1].contains("composition root"));
+        assert_eq!(checker.violations.len(), 1);
+        assert!(checker.violations[0].contains("composition root"));
     }
 
     #[test]
@@ -2770,7 +2578,7 @@ impl TomlParseLimits {
 }
 
 pub const PREFERENCE_FILE_TOML_LIMITS: TomlParseLimits = TomlParseLimits::new(64);
-pub type FidoEnvelopeLimits = TomlParseLimits;
+pub type ExampleLimits = TomlParseLimits;
 
 #[cfg(test)]
 mod tests {
@@ -2783,7 +2591,7 @@ mod tests {
             BTreeSet::from([
                 "const PREFERENCE_FILE_TOML_LIMITS".to_string(),
                 "struct TomlParseLimits".to_string(),
-                "type FidoEnvelopeLimits".to_string(),
+                "type ExampleLimits".to_string(),
             ])
         );
     }
@@ -2797,7 +2605,6 @@ mod tests {
         assert!(policy.contains("PASSWORD_STORE_"));
         assert!(policy.contains("PREFERENCE_FILE_TOML_LIMITS"));
         assert!(policy.contains("MANAGED_KEY_MANIFEST_TOML_LIMITS"));
-        assert!(policy.contains("FIDO2_TEXT_ENVELOPE_TOML_LIMITS"));
     }
 
     #[test]
@@ -2866,92 +2673,6 @@ mod tests {
         assert!(invalid.iter().any(|(_, reference)| {
             reference == "keycord_keys::ui::recipient_list::private_helper"
         }));
-    }
-
-    #[test]
-    fn keys_ui_is_limited_to_reviewed_fido_presentation_items() {
-        let source = r#"
-use keycord_fido::ui::{
-    FidoWindowWidgets,
-    FidoKeyGenerationUiPorts as GenerationPorts,
-};
-use keycord_fido::FidoService;
-use keycord_fido::ui::private::start_key_generation;
-"#;
-        let (items, invalid) = subject_ui_api_items(source, "keycord_fido");
-
-        assert_eq!(
-            items,
-            BTreeSet::from([
-                "FidoKeyGenerationUiPorts".to_string(),
-                "FidoWindowWidgets".to_string(),
-            ])
-        );
-        assert_eq!(invalid.len(), 2);
-        assert!(invalid
-            .iter()
-            .any(|(_, reference)| reference == "keycord_fido::FidoService"));
-        assert!(invalid.iter().any(|(_, reference)| {
-            reference == "keycord_fido::ui::private::start_key_generation"
-        }));
-    }
-
-    #[test]
-    fn fido_bundle_composition_is_feature_gated() {
-        let source = r#"
-#[cfg(feature = "fidokey")]
-use keycord_fido::ui::FidoWindowWidgets;
-
-struct Ungated {
-    fido: FidoWindowWidgets,
-}
-"#;
-        assert!(item_has_immediate_cfg_feature(
-            source,
-            "use keycord_fido::ui::FidoWindowWidgets;",
-            "fidokey"
-        ));
-        assert!(!item_has_immediate_cfg_feature(
-            source,
-            "fido: FidoWindowWidgets,",
-            "fidokey"
-        ));
-    }
-
-    #[test]
-    fn fido_ownership_policies_lock_ui_and_service_lifecycle() {
-        let recipient_owners =
-            named_inventory(include_str!("../policy/recipient-ui-id-owners.txt"));
-        assert_eq!(
-            recipient_owners
-                .get("store_recipients_generate_fido2_key_row")
-                .map(String::as_str),
-            Some("fido")
-        );
-
-        let root_bundles =
-            named_inventory(include_str!("../policy/root-window-widget-bundles.txt"));
-        assert_eq!(
-            root_bundles.get("fido").map(String::as_str),
-            Some("FidoWindowWidgets")
-        );
-
-        let lifecycle = policy_lines(include_str!(
-            "../policy/keys-forbidden-fido-service-lifecycle.txt"
-        ));
-        for marker in [
-            "OnceLock",
-            "RwLock",
-            "FidoService::native",
-            "FidoService::new",
-            "set_shared_native_transport_for_tests",
-            "reset_shared_native_transport_for_tests",
-        ] {
-            assert!(
-                lifecycle.contains(marker),
-                "missing lifecycle marker {marker}"
-            );
-        }
     }
 
     #[test]

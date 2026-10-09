@@ -235,10 +235,6 @@ msgstr "விடுபட்ட வார்ப்புருப் புல�
 msgid "Adding hardware key"
 msgstr "வன்பொருள் விசை சேர்க்கப்படுகிறது"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "USB பாதுகாப்பு விசை அணுகலை அனுமதி (சோதனைநிலை FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "இந்தச் சாதனத்தில் உள்ள செயலிகளுக்கு அணுகலை அனுமதி"
@@ -436,10 +432,6 @@ msgstr "உள்ளூர் கோப்பைத் தேர்ந்தெ�
 msgid "Choose a local folder."
 msgstr "உள்ளூர் கோப்புறையைத் தேர்ந்தெடுக்கவும்."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "தனிப்பட்ட விசைக் கோப்பு அல்லது சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைக் கோப்பைத் தேர்ந்தெடுக்கவும்."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -570,38 +562,18 @@ msgstr "commit செய்த நேரம்"
 msgid "Committer"
 msgstr "commit செய்தவர்"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "புதிய பாதுகாப்பு விசை PIN-ஐ உறுதிப்படுத்தவும்"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "கடவுச்சொல்லை உறுதிப்படுத்தவும்"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "புதிய பாதுகாப்பு விசை PIN-ஐ உறுதிப்படுத்தவும்."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "முதலில் வன்பொருள் விசையை இணைக்கவும்."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "தொடர்வதற்கு முன் ஒரே ஒரு FIDO2 பாதுகாப்பு விசையை மட்டும் இணைக்கவும்."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "வன்பொருள் விசையைச் சேர்ப்பதற்கு முன் ஒரே ஒரு விசையை மட்டும் இணைக்கவும்."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "FIDO2 பாதுகாப்பு விசையை இணைத்துவிட்டு மீண்டும் முயலவும்."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "முதலில் FIDO2 பாதுகாப்பு விசையை இணைக்கவும்."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -611,18 +583,9 @@ msgstr "வன்பொருள் விசையை இணைத்துவ�
 msgid "Connect the hardware key first."
 msgstr "முதலில் வன்பொருள் விசையை இணைக்கவும்."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "பொருந்தும் FIDO2 பாதுகாப்பு விசையை இணைக்கவும்."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "பொருந்தும் வன்பொருள் விசையை இறக்குமதி செய்வதற்கு முன் இணைக்கவும்."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "சூழல்"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -645,10 +608,6 @@ msgstr "கவசமிட்ட தனிப்பட்ட விசையை 
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "கவசமிட்ட பொது விசையை நகலெடு"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசையை நகலெடு"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -737,10 +696,6 @@ msgstr "வன்பொருள் விசையில் பொது வி
 msgid "Couldn't create the store."
 msgstr "சேமிப்பகத்தை உருவாக்க முடியவில்லை."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "FIDO2 மூலம் மறையாக்கப்பட்ட தரவை மறைவிலக்க முடியவில்லை."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -767,7 +722,6 @@ msgstr "வன்பொருள் மறைவிலக்க விசைய�
 msgid "Couldn't generate the hardware signing key"
 msgstr "வன்பொருள் கையொப்ப விசையை உருவாக்க முடியவில்லை"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -793,10 +747,6 @@ msgstr "கடவுச்சொற்களை இறக்குமதி ச�
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "விசையை இறக்குமதி செய்ய முடியவில்லை."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "FIDO2 பாதுகாப்பு விசையைத் தொடக்கநிலைப்படுத்த முடியவில்லை."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -987,10 +937,6 @@ msgstr "சேமிப்பகங்களை ஒத்திசைக்க �
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "Git கையொப்பத்திற்கான {fingerprint_for_failure} தனிப்பட்ட விசையின் பூட்டைத் திறக்க முடியவில்லை. கையொப்பமின்றித் தொடர்கிறது."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "FIDO2 பாதுகாப்பு விசையின் பூட்டைத் திறக்க முடியவில்லை."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1016,10 +962,6 @@ msgstr "வன்பொருள் விசையின் நிர்வா�
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "கோரப்பட்ட வன்பொருள் விசை PIN-ஐச் சரிபார்க்க முடியவில்லை"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "புதிய FIDO2 பாதுகாப்புள்ள விசையை உருவாக்கவும்."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1206,12 +1148,6 @@ msgstr "தனிப்பட்ட விசைக்கான மின்ன�
 msgid "Enter an email address."
 msgstr "மின்னஞ்சல் முகவரியை உள்ளிடவும்."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "FIDO2 பாதுகாப்பு விசையின் PIN-ஐ உள்ளிடவும்."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1235,18 +1171,10 @@ msgstr "விசைக் கடவுச்சொல்லை உள்ளி�
 msgid "Enter the new hardware key PIN."
 msgstr "புதிய வன்பொருள் விசை PIN-ஐ உள்ளிடவும்."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "புதிய பாதுகாப்பு விசை PIN-ஐ உள்ளிடவும்."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "தனிப்பட்ட விசைக் கடவுச்சொல்லை உள்ளிடவும்."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "பாதுகாப்பு விசையின் PIN-ஐ உள்ளிடவும்."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1255,10 +1183,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "தூய்மைப்படுத்தும் செயல்களுடன் கடவுச்சொல் திருத்தியை விரிவாக்கு"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "பாதுகாக்கப்பட்ட தனிப்பட்ட விசைகளின் பூட்டை இணைக்கப்பட்ட பாதுகாப்பு விசையால் Keycord திறப்பதற்கு முன், சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைகளுக்கு USB சாதன அணுகல் தேவை. அணுகலை வழங்கிய பிறகு Keycord-ஐ மீண்டும் தொடங்கவும்."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1308,26 +1232,6 @@ msgstr "{count} கடவுச்சொல் ஏற்றுமதி செ�
 msgid "Exported {count} passwords."
 msgstr "{count} கடவுச்சொற்கள் ஏற்றுமதி செய்யப்பட்டன."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2 தனிப்பட்ட விசை manifest"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Keycord-இன் இந்த build-இல் FIDO2 தனிப்பட்ட விசை ஆதரவு முடக்கப்பட்டுள்ளது."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 பாதுகாப்பு விசை"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Keycord-இன் இந்த build-இல் FIDO2 ஆதரவு முடக்கப்பட்டுள்ளது."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 உரை உறை"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "தனிப்பட்ட Linux புதுப்பிப்பு staging கோப்பகத்தை ஒதுக்க முடியவில்லை."
@@ -1375,10 +1279,6 @@ msgstr "கவசமிட்ட கையொப்பத்தைக் கு�
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "மறைவிலக்கப்பட்ட UTF-8 தரவைக் குறிவிலக்க முடியவில்லை"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "போதுமான HKDF வெளியீட்டைப் பெறுவிக்க முடியவில்லை."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1682,11 +1582,6 @@ msgstr "GNOME தேடல் வழங்குநர் சரிசெய்�
 msgid "General"
 msgstr "பொது"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "FIDO2 பாதுகாப்புள்ள விசையை உருவாக்கு (சோதனைநிலை)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "தனிப்பட்ட விசையை உருவாக்கவும் அல்லது இறக்குமதி செய்யவும்."
@@ -1701,10 +1596,6 @@ msgstr "கடவுச்சொல்லை உருவாக்கு"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "தனிப்பட்ட விசையை உருவாக்கு"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "FIDO2 பாதுகாப்புள்ள விசை உருவாக்கப்படுகிறது (சோதனைநிலை)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1750,14 +1641,6 @@ msgstr "முகப்புக்குச் செல்"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "அனுமதி"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "USB பாதுகாப்பு விசை அணுகலை வழங்கு (சோதனைநிலை FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைகளுக்கு முதலில் USB பாதுகாப்பு விசை அணுகலை வழங்கவும்."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2021,18 +1904,6 @@ msgstr "புதுப்பிப்பை நிறுவும்போத�
 msgid "Integrated"
 msgstr "Integrated"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "செல்லாத FIDO2 பிணைப்புக் கைரேகை '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "செல்லாத FIDO2 சாதனப் பாதை: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "செல்லாத FIDO2 மறையாக்கத் தரவு."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2115,7 +1986,6 @@ msgstr "தேர்ந்தெடுத்த எல்லாத் தனி�
 msgid "Key file removed."
 msgstr "விசைக் கோப்பு அகற்றப்பட்டது."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "விசை உருவாக்கப்பட்டது."
@@ -2138,10 +2008,6 @@ msgstr "விசைக் கடவுச்சொல்"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Keycord FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசை"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2455,10 +2321,6 @@ msgstr "புதிய வன்பொருள் விசை PIN"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "புதிய உருப்படி"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "புதிய பாதுகாப்பு விசை PIN"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2940,10 +2802,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "மூல உரை"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "இடைநிலைப் பலகையிலிருந்து கவசமிட்ட தனிப்பட்ட விசை அல்லது சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசையைப் படிக்கவும்."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "கடவுச்சொல் சேமிப்பக Git commit {oid}-இன் மாற்றப்பட்ட பாதைகளைப் படி"
@@ -3031,12 +2889,6 @@ msgstr "தணிக்கை செய்யப்பட்ட commit-இன்
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "புதிய சேமிப்பகங்களுக்குப் பரிந்துரைக்கப்படுகிறது"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "FIDO2 பாதுகாப்பு விசையை மீண்டும் இணைத்துவிட்டு முயலவும்."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3350,10 +3202,6 @@ msgstr "மதிப்புகளைத் தேடு"
 msgid "Search weak passwords"
 msgstr "பலவீனமான கடவுச்சொற்களைத் தேடு"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "பாதுகாப்பு விசை PIN"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3375,29 +3223,11 @@ msgstr "இந்தச் சேமிப்பகத்திலுள்ள �
 msgid "Sequential characters"
 msgstr "தொடர்வரிசை எழுத்துகள்"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "முதலில் FIDO2 பாதுகாப்பு விசையில் PIN ஒன்றை அமைக்கவும்."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "பாதுகாப்பு விசை PIN-ஐ அமை"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "பாதுகாப்பு விசை PIN-ஐ அமை (சோதனைநிலை FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "புதிய வன்பொருள் விசையை அமை (சோதனைநிலை)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "இந்த build-இல் FIDO2 பாதுகாப்பு விசை PIN-ஐ அமைப்பது Linux-இல் மட்டுமே ஆதரிக்கப்படுகிறது."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3509,11 +3339,6 @@ msgstr "சேமிப்பக ஒத்திசைவு எதிர்ப�
 msgid "Store synced."
 msgstr "சேமிப்பகம் ஒத்திசைக்கப்பட்டது."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "சேமிக்கப்பட்ட FIDO2 PIN செல்லுபடியான UTF-8 அல்ல: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3527,10 +3352,6 @@ msgstr "Git களஞ்சியத்திலிருந்து சேம�
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "pass import கருவியைப் பயன்படுத்தப் பின்தளத்தை Host-க்கு மாற்றவும்."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "சோதனைநிலை FIDO2 பாதுகாப்புள்ள தனிப்பட்ட விசைகளைப் பயன்படுத்த Integrated பின்தளத்திற்கு மாறவும்."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3564,31 +3385,6 @@ msgstr "சேமிப்பகங்கள் ஒத்திசைக்க�
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "உரைத் திருத்தி"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "அந்த FIDO2 பாதுகாப்பு விசை hmac-secret நீட்சியை ஆதரிக்கவில்லை."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "அந்த FIDO2 பாதுகாப்பு விசை PIN பாதுகாப்பை ஆதரிக்க வேண்டும்."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "அந்த FIDO2 பாதுகாப்புள்ள விசையை ஏற்றுமதி செய்ய முடியவில்லை."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "அந்த FIDO2 பாதுகாப்புள்ள விசைத் தரவு செல்லாது."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "அந்த FIDO2 பாதுகாப்புள்ள விசை செல்லாது."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3675,18 +3471,6 @@ msgstr "CXP கோரிக்கையில் அறியப்பட்ட 
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP கோரிக்கை ஆதரிக்கப்படும் deflate காப்பக வடிவத்தை வழங்கவில்லை."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2 பாதுகாப்பு விசை PIN-இல் ஆதரிக்கப்படாத NUL byte உள்ளது."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2 பாதுகாப்பு விசை PIN தவறானது."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "FIDO2 பாதுகாப்பு விசை நற்சான்று அடையாளங்காட்டியைத் தரவில்லை."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3786,10 +3570,6 @@ msgstr "தனிப்பட்ட விசைக் கடவுச்சொ�
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "தனிப்பட்ட விசைப் பட்டியல் பணிச் செயல்முறை எதிர்பாராமல் நின்றுவிட்டது."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "பாதுகாப்பு விசை PIN-கள் பொருந்தவில்லை."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "தேர்ந்தெடுத்த கோப்பு ஆதரிக்கப்படும் உள்ளூர் CXP கடவுச்சாவிக் கோரிக்கை அல்ல. {error}"
@@ -3842,10 +3622,6 @@ msgstr "புதிய கடவுச்சொல் பதிவை உரு
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "திருத்தியிலிருந்து கடவுச்சொல்லை உருவாக்கும்போதோ மீண்டும் உருவாக்கும்போதோ இந்த அமைப்புகள் பயன்படுத்தப்படும்."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "இந்த FIDO2 பாதுகாப்பு விசையால் உங்கள் உருப்படிகளைத் திறக்க முடியாது."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "இந்த branch-இல் தணிக்கை செய்யக்கூடிய commit எதுவும் இல்லை."
@@ -3894,14 +3670,6 @@ msgstr "இந்த விசையால் உங்கள் உருப்
 msgid "This private key is password protected."
 msgstr "இந்தத் தனிப்பட்ட விசை கடவுச்சொல்லால் பாதுகாக்கப்பட்டுள்ளது."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "இந்தத் தனிப்பட்ட விசைக்கு FIDO2 பாதுகாப்பு விசை தேவை."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "இந்தத் தனிப்பட்ட விசைக்கு வேறொரு பூட்டுத் திறப்பு முறை தேவை."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "இந்தத் தனிப்பட்ட விசைக்கு வன்பொருள் விசை தேவை."
@@ -3934,16 +3702,6 @@ msgstr "கருவிகள்"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "மொத்த எழுத்துகள்"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "FIDO2 பாதுகாப்பு விசையைத் தொட்டுவிட்டு மீண்டும் முயலவும்."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "உங்கள் விசை ஒளிர்ந்தால் அதைத் தொடவும்."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4036,7 +3794,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "இந்த விசையைத் தேர்விலிருந்து நீக்கும் முன் தேர்ந்தெடுத்த மற்றொரு தனிப்பட்ட விசையின் பூட்டைத் திறக்கவும்."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4066,26 +3824,6 @@ msgstr "பெயரிடப்படாத தனிப்பட்ட வி�
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "பெயரிடப்படாத smartcard"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "மற்ற பாதுகாப்பு விசைகளைத் துண்டித்துவிட்டு மீண்டும் முயலவும்."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "ஆதரிக்கப்படாத FIDO2 கடவுச்சொல் பதிவு வடிவம் {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "ஆதரிக்கப்படாத FIDO2 கடவுச்சொல் பதிவுப் பாதுகாப்பு '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "ஆதரிக்கப்படாத FIDO2 தனிப்பட்ட விசை வடிவம் {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "ஆதரிக்கப்படாத FIDO2 தனிப்பட்ட விசைப் பாதுகாப்பு '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4818,10 +4556,6 @@ msgstr "{fingerprint} - வன்பொருள் விசை"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - கடவுச்சொல்லால் பாதுகாக்கப்பட்டது"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - பாதுகாப்பு விசையால் பாதுகாக்கப்பட்டது"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - பாதுகாப்பு டோக்கன்"
@@ -4829,10 +4563,6 @@ msgstr "{fingerprint} - பாதுகாப்பு டோக்கன்"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - பாதுகாப்பு டோக்கன் ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4886,10 +4616,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

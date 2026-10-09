@@ -235,10 +235,6 @@ msgstr "Idinagdag ang mga nawawalang field ng template."
 msgid "Adding hardware key"
 msgstr "Idinadagdag ang hardware key"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Payagan ang access sa USB security key (Eksperimental na FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Payagan ang access sa mga app sa device na ito"
@@ -436,10 +432,6 @@ msgstr "Pumili ng lokal na file."
 msgid "Choose a local folder."
 msgstr "Pumili ng lokal na folder."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "Pumili ng private key file o pang-eksperimentong private key file na protektado ng FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -570,38 +562,18 @@ msgstr "Na-commit"
 msgid "Committer"
 msgstr "Nag-commit"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Kumpirmahin ang bagong PIN ng security key"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Kumpirmahin ang password"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Kumpirmahin ang bagong PIN ng security key."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Magkonekta muna ng hardware key."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Isang FIDO2 security key lang ang ikonekta bago magpatuloy."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Isang hardware key lang ang ikonekta bago ito idagdag."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Ikonekta ang FIDO2 security key at subukan ulit."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Ikonekta muna ang FIDO2 security key."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -611,18 +583,9 @@ msgstr "Ikonekta ang hardware key at subukan ulit."
 msgid "Connect the hardware key first."
 msgstr "Ikonekta muna ang hardware key."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Ikonekta ang katugmang FIDO2 security key."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Ikonekta ang katugmang hardware key bago ito i-import."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Konteksto"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -645,10 +608,6 @@ msgstr "Kopyahin ang armored private key"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Kopyahin ang armored public key"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Kopyahin ang pang-eksperimentong private key na protektado ng FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -737,10 +696,6 @@ msgstr "Hindi magawa ang public key certificate sa hardware key."
 msgid "Couldn't create the store."
 msgstr "Hindi magawa ang store."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Hindi ma-decrypt ang data na naka-encrypt gamit ang FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -767,7 +722,6 @@ msgstr "Hindi magawa ang hardware decryption key"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Hindi magawa ang hardware signing key"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -793,10 +747,6 @@ msgstr "Hindi ma-import ang mga password."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Hindi ma-import ang key."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Hindi ma-initialize ang FIDO2 security key."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -987,10 +937,6 @@ msgstr "Hindi ma-sync ang mga store."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "Hindi ma-unlock ang private key {fingerprint_for_failure} para sa Git signing. Magpapatuloy nang walang signature."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Hindi ma-unlock ang FIDO2 security key."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1016,10 +962,6 @@ msgstr "Hindi ma-verify ang admin PIN ng hardware key"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Hindi ma-verify ang hinihinging PIN ng hardware key"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Gumawa ng bagong key na protektado ng FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1206,12 +1148,6 @@ msgstr "Maglagay ng email address para sa private key."
 msgid "Enter an email address."
 msgstr "Maglagay ng email address."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Ilagay ang PIN ng FIDO2 security key."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1235,18 +1171,10 @@ msgstr "Ilagay ang password ng key."
 msgid "Enter the new hardware key PIN."
 msgstr "Ilagay ang bagong PIN ng hardware key."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Ilagay ang bagong PIN ng security key."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Ilagay ang password ng private key."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Ilagay ang PIN ng security key."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1255,10 +1183,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Palawakin ang password editor gamit ang mga cleanup action"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "Kailangan muna ng access sa USB device ang mga pang-eksperimentong private key na protektado ng FIDO2 bago magamit ng Keycord ang nakakonektang security key sa pag-unlock ng mga protektadong private key. I-restart ang Keycord matapos payagan ang access."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1308,26 +1232,6 @@ msgstr "Nakapag-export ng {count} password."
 msgid "Exported {count} passwords."
 msgstr "Nakapag-export ng {count} password."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Manifest ng FIDO2 private key"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Naka-disable ang suporta sa FIDO2 private key sa build na ito ng Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 security key"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Naka-disable ang suporta sa FIDO2 sa build na ito ng Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 text envelope"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Hindi makapaglaan ng pribadong staging directory para sa Linux update."
@@ -1375,10 +1279,6 @@ msgstr "Hindi ma-decode ang armored signature"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Hindi ma-decode ang na-decrypt na UTF-8 data"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Hindi makakuha ng sapat na HKDF output."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1682,11 +1582,6 @@ msgstr "Inayos ang GNOME search provider."
 msgid "General"
 msgstr "Pangkalahatan"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Gumawa ng key na protektado ng FIDO2 (Eksperimental)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Gumawa o mag-import ng private key."
@@ -1701,10 +1596,6 @@ msgstr "Gumawa ng password"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Gumawa ng private key"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Ginagawa ang key na protektado ng FIDO2 (Eksperimental)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1750,14 +1641,6 @@ msgstr "Pumunta sa home"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Payagan"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Payagan ang access sa USB security key (Eksperimental na FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "Payagan muna ang access sa USB security key para sa mga pang-eksperimentong private key na protektado ng FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2021,18 +1904,6 @@ msgstr "Magsasara ang Keycord kapag in-install ang update. Mawawala ang mga pagb
 msgid "Integrated"
 msgstr "Integrated"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Hindi valid ang FIDO2 binding fingerprint na '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Hindi valid ang FIDO2 device path: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Hindi valid ang data na naka-encrypt gamit ang FIDO2."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2115,7 +1986,6 @@ msgstr "Panatilihing napili ang key na ito habang kailangan ang lahat ng napilin
 msgid "Key file removed."
 msgstr "Naalis ang key file."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Nagawa na ang key."
@@ -2138,10 +2008,6 @@ msgstr "Password ng key"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Private key ng Keycord na protektado ng FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2455,10 +2321,6 @@ msgstr "Bagong PIN ng hardware key"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Bagong item"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Bagong PIN ng security key"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2940,10 +2802,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Raw na text"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "Magbasa mula sa clipboard ng armored private key o pang-eksperimentong private key na protektado ng FIDO2."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Basahin ang mga binagong path para sa Git commit {oid} ng password store"
@@ -3031,12 +2889,6 @@ msgstr "Mga recipient mula sa na-audit na commit"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Inirerekomenda para sa mga bagong store"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Ikonektang muli ang FIDO2 security key at subukan ulit."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3350,10 +3202,6 @@ msgstr "Maghanap sa mga value"
 msgid "Search weak passwords"
 msgstr "Maghanap ng mahihinang password"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN ng security key"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3375,29 +3223,11 @@ msgstr "Piliin ang mga private key na makakapag-unlock ng mga password sa store 
 msgid "Sequential characters"
 msgstr "Magkakasunod na mga character"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Magtakda muna ng PIN sa FIDO2 security key."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Magtakda ng PIN ng security key"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Magtakda ng PIN ng security key (Eksperimental na FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Mag-set up ng bagong hardware key (Eksperimental)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "Sa Linux lang suportado sa build na ito ang pagtatakda ng PIN ng FIDO2 security key."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3509,11 +3339,6 @@ msgstr "Hindi inaasahang huminto ang pag-sync ng store."
 msgid "Store synced."
 msgstr "Naka-sync na ang store."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Hindi valid na UTF-8 ang naka-store na FIDO2 PIN: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3527,10 +3352,6 @@ msgstr "Ilipat sa Host ang Backend para mag-restore ng store mula sa Git reposit
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Ilipat sa Host ang Backend para magamit ang pass import."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "Lumipat sa Integrated backend para magamit ang mga pang-eksperimentong private key na protektado ng FIDO2."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3564,31 +3385,6 @@ msgstr "Sine-sync ang mga store"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Text Editor"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Hindi sinusuportahan ng FIDO2 security key na iyon ang hmac-secret extension."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Kailangang suportahan ng FIDO2 security key na iyon ang PIN protection."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Hindi ma-export ang key na iyon na protektado ng FIDO2."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Hindi valid ang data ng key na iyon na protektado ng FIDO2."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Hindi valid ang key na iyon na protektado ng FIDO2."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3675,18 +3471,6 @@ msgstr "Walang kinikilalang HPKE mode ang CXP request."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Hindi iniaalok ng CXP request ang suportadong deflate archive format."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "May hindi suportadong NUL byte ang PIN ng FIDO2 security key."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "Mali ang PIN ng FIDO2 security key."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Walang ibinalik na credential identifier ang FIDO2 security key."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3786,10 +3570,6 @@ msgstr "Mali ang password ng private key."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Hindi inaasahang huminto ang private-key inventory worker."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Hindi magkatugma ang mga PIN ng security key."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "Hindi suportadong lokal na CXP passkey request ang napiling file. {error}"
@@ -3842,10 +3622,6 @@ msgstr "Idinadagdag ang mga linyang ito pagkatapos ng linya ng password kapag gu
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "Ginagamit ang mga setting na ito kapag gumagawa ka o muling gumagawa ng password mula sa editor."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Hindi mabubuksan ng FIDO2 security key na ito ang iyong mga item."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Walang commit sa branch na ito na maaaring i-audit."
@@ -3894,14 +3670,6 @@ msgstr "Hindi mabubuksan ng key na ito ang iyong mga item."
 msgid "This private key is password protected."
 msgstr "Protektado ng password ang private key na ito."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Kailangan ng private key na ito ang FIDO2 security key."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Ibang paraan ng pag-unlock ang kailangan ng private key na ito."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Kailangan ng private key na ito ang hardware key."
@@ -3934,16 +3702,6 @@ msgstr "Mga Tool"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Kabuuang bilang ng character"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Pindutin ang FIDO2 security key at subukan ulit."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Pindutin ang iyong key kung kumikislap ito."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4036,7 +3794,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Mag-unlock ng isa pang napiling private key bago i-clear ang isang ito."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4066,26 +3824,6 @@ msgstr "Walang pangalang private key"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Walang pangalang smartcard"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "I-unplug ang iba pang security key, saka subukan ulit."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Hindi suportadong format {} ng FIDO2 password entry."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Hindi suportadong proteksyon '{}' ng FIDO2 password entry."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Hindi suportadong format {} ng FIDO2 private key."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Hindi suportadong proteksyon '{}' ng FIDO2 private key."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4818,10 +4556,6 @@ msgstr "{fingerprint} - Hardware key"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - Protektado ng password"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - Protektado ng security key"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Security token"
@@ -4829,10 +4563,6 @@ msgstr "{fingerprint} - Security token"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Security token ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4886,10 +4616,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

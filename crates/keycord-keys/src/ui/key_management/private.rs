@@ -1,20 +1,16 @@
-//! Password-protected and FIDO-protected private-key UI workflows.
+//! Password-protected private-key UI workflows.
 
 use super::form::{
     connect_generation_autofill_rows, connect_private_apply_visibility, validate_name_and_email,
 };
 use super::KeyManagementUiState;
 use crate::ui::{present_private_key_password_dialog, PrivateKeyDialogHandle};
-#[cfg(feature = "fido-ui")]
-use crate::{generate_fido2_private_key, set_fido2_security_key_pin};
 use crate::{
     generate_ripasso_private_key, import_ripasso_private_key_bytes,
     ripasso_private_key_requires_passphrase, ManagedRipassoPrivateKey, PrivateKeyError,
 };
 use adw::prelude::*;
 use adw::Toast;
-#[cfg(feature = "fido-ui")]
-use keycord_fido::ui::{FidoKeyGenerationError, FidoKeyGenerationUiPorts};
 use keycord_runtime::i18n::gettext;
 use keycord_runtime::log_error;
 use keycord_shell::background::spawn_result_task_with_finalizer;
@@ -24,8 +20,6 @@ use keycord_shell::ui::{
 };
 use secrecy::{ExposeSecret, SecretString};
 use std::rc::Rc;
-#[cfg(feature = "fido-ui")]
-use std::sync::Arc;
 
 #[derive(Clone, Debug)]
 struct PrivateKeyGenerationRequest {
@@ -116,13 +110,6 @@ fn start_private_key_generation(
                 .add_toast(Toast::new(&gettext("Couldn't generate the key.")));
         },
     );
-}
-
-#[cfg(feature = "fido-ui")]
-fn fido_key_generation_error(error: PrivateKeyError) -> FidoKeyGenerationError {
-    let kind = error.fido_error_kind();
-    let user_message = error.import_message();
-    FidoKeyGenerationError::new(kind, error.to_string(), user_message)
 }
 
 fn clear_private_key_generation_form(state: &KeyManagementUiState) {
@@ -316,32 +303,6 @@ pub(super) fn connect_controls(state: &KeyManagementUiState) {
     connect_row_action(&row, move || {
         show_private_key_generation_page(&state_for_generation);
     });
-
-    #[cfg(feature = "fido-ui")]
-    {
-        let state_for_allowed = state.clone();
-        let state_for_generated = state.clone();
-        state.fido.connect_generation_workflow(
-            &state.window,
-            &state.overlay,
-            FidoKeyGenerationUiPorts {
-                actions_allowed: Rc::new(move || state_for_allowed.standard_actions_allowed()),
-                generate: Arc::new(|pin| {
-                    generate_fido2_private_key(pin.as_ref().map(|pin| pin.expose_secret()))
-                        .map(|_| ())
-                        .map_err(fido_key_generation_error)
-                }),
-                set_pin_and_generate: Arc::new(|pin| {
-                    set_fido2_security_key_pin(pin.expose_secret())
-                        .map_err(fido_key_generation_error)?;
-                    generate_fido2_private_key(Some(pin.expose_secret()))
-                        .map(|_| ())
-                        .map_err(fido_key_generation_error)
-                }),
-                on_generated: Rc::new(move || state_for_generated.notify_key_changed()),
-            },
-        );
-    }
 
     let clipboard_row = state.widgets.import_clipboard_row.clone();
     let state_for_clipboard = state.clone();

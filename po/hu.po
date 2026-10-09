@@ -235,10 +235,6 @@ msgstr "Bekerültek a hiányzó sablonmezők."
 msgid "Adding hardware key"
 msgstr "Hardverkulcs hozzáadása"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Hozzáférés engedélyezése az USB-s biztonsági kulcsokhoz (kísérleti FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Hozzáférés engedélyezése az eszköz alkalmazásaihoz"
@@ -436,10 +432,6 @@ msgstr "Válasszon egy helyi fájlt."
 msgid "Choose a local folder."
 msgstr "Válasszon egy helyi mappát."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "Válasszon személyeskulcs-fájlt vagy kísérleti, FIDO2 által védett személyeskulcs-fájlt."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -570,38 +562,18 @@ msgstr "Véglegesítve"
 msgid "Committer"
 msgstr "Véglegesítő"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "A biztonsági kulcs új PIN-kódjának megerősítése"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Jelszó megerősítése"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Erősítse meg a biztonsági kulcs új PIN-kódját."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Előbb csatlakoztasson egy hardverkulcsot."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "A folytatás előtt csak egy FIDO2 biztonsági kulcs legyen csatlakoztatva."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "A hozzáadás előtt csak egy hardverkulcs legyen csatlakoztatva."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Csatlakoztassa a FIDO2 biztonsági kulcsot, majd próbálja újra."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Előbb csatlakoztassa a FIDO2 biztonsági kulcsot."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -611,18 +583,9 @@ msgstr "Csatlakoztassa a hardverkulcsot, majd próbálja újra."
 msgid "Connect the hardware key first."
 msgstr "Előbb csatlakoztassa a hardverkulcsot."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Csatlakoztassa a megfelelő FIDO2 biztonsági kulcsot."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Importálás előtt csatlakoztassa a megfelelő hardverkulcsot."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Context"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -645,10 +608,6 @@ msgstr "ASCII-páncélozott személyes kulcs másolása"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "ASCII-páncélozott nyilvános kulcs másolása"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Kísérleti, FIDO2 által védett személyes kulcs másolása"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -737,10 +696,6 @@ msgstr "Nem sikerült létrehozni a nyilvános kulcs tanúsítványát a hardver
 msgid "Couldn't create the store."
 msgstr "Nem sikerült létrehozni a jelszótárolót."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Nem sikerült visszafejteni a FIDO2-vel titkosított adatokat."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -767,7 +722,6 @@ msgstr "Nem sikerült előállítani a hardveres visszafejtési kulcsot"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Nem sikerült előállítani a hardveres aláírókulcsot"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -793,10 +747,6 @@ msgstr "Nem sikerült importálni a jelszavakat."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Nem sikerült importálni a kulcsot."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Nem sikerült előkészíteni a FIDO2 biztonsági kulcsot."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -987,10 +937,6 @@ msgstr "Nem sikerült szinkronizálni a jelszótárolókat."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "A(z) {fingerprint_for_failure} ujjlenyomatú személyes kulcs nem oldható fel a Git-aláíráshoz. A művelet aláírás nélkül folytatódik."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Nem sikerült feloldani a FIDO2 biztonsági kulcsot."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1016,10 +962,6 @@ msgstr "Nem sikerült ellenőrizni a hardverkulcs rendszergazdai PIN-kódját"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Nem sikerült ellenőrizni a hardverkulcs kért PIN-kódját"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Új, FIDO2 által védett kulcs létrehozása."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1206,12 +1148,6 @@ msgstr "Adjon meg egy e-mail-címet a személyes kulcshoz."
 msgid "Enter an email address."
 msgstr "Adjon meg egy e-mail-címet."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Adja meg a FIDO2 biztonsági kulcs PIN-kódját."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1235,18 +1171,10 @@ msgstr "Adja meg a kulcs jelszavát."
 msgid "Enter the new hardware key PIN."
 msgstr "Adja meg a hardverkulcs új PIN-kódját."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Adja meg a biztonsági kulcs új PIN-kódját."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Adja meg a személyes kulcs jelszavát."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Adja meg a biztonsági kulcs PIN-kódját."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1255,10 +1183,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "A jelszószerkesztő kibontása tisztítási műveletekkel"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "A kísérleti, FIDO2 által védett személyes kulcsok használatához a Keycordnak USB-eszközhozzáférésre van szüksége, hogy a csatlakoztatott biztonsági kulccsal feloldhassa őket. A hozzáférés megadása után indítsa újra a Keycordot."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1308,26 +1232,6 @@ msgstr "{count} jelszó exportálva."
 msgid "Exported {count} passwords."
 msgstr "{count} jelszó exportálva."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2 személyeskulcs-jegyzék"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "A FIDO2 személyes kulcsok támogatása le van tiltva a Keycord ezen összeállításában."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 biztonsági kulcs"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "A FIDO2 támogatása le van tiltva a Keycord ezen összeállításában."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 szöveges boríték"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Nem sikerült elkülönített átmeneti könyvtárat lefoglalni a Linux-frissítéshez."
@@ -1375,10 +1279,6 @@ msgstr "Nem sikerült dekódolni az ASCII-páncélozott aláírást"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Nem sikerült dekódolni a visszafejtett UTF-8-adatokat"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Nem sikerült elegendő HKDF-kimenetet származtatni."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1682,11 +1582,6 @@ msgstr "Javítottuk a GNOME keresőszolgáltatóját."
 msgid "General"
 msgstr "Általános"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "FIDO2 által védett kulcs előállítása (kísérleti)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Személyes kulcs előállítása vagy importálása."
@@ -1701,10 +1596,6 @@ msgstr "Jelszó előállítása"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Személyes kulcs előállítása"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "FIDO2 által védett kulcs előállítása (kísérleti)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1750,14 +1641,6 @@ msgstr "Ugrás a kezdőlapra"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Engedélyezés"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "USB-s biztonságikulcs-hozzáférés engedélyezése (kísérleti FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "Előbb engedélyezze az USB-s biztonságikulcs-hozzáférést a kísérleti, FIDO2 által védett személyes kulcsokhoz."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2021,18 +1904,6 @@ msgstr "A frissítés telepítése bezárja a Keycordot. A nem mentett módosít
 msgid "Integrated"
 msgstr "Integrált"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Érvénytelen FIDO2-társítási ujjlenyomat: '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Érvénytelen FIDO2-eszközútvonal: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Érvénytelen FIDO2-titkosított adat."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2115,7 +1986,6 @@ msgstr "Tartsa kijelölve ezt a kulcsot, amíg minden kijelölt személyes kulcs
 msgid "Key file removed."
 msgstr "Kulcsfájl eltávolítva."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Kulcs előállítva."
@@ -2138,10 +2008,6 @@ msgstr "Kulcs jelszava"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "A Keycord FIDO2 által védett személyes kulcsa"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2455,10 +2321,6 @@ msgstr "Hardverkulcs új PIN-kódja"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Új elem"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Biztonsági kulcs új PIN-kódja"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2940,10 +2802,6 @@ msgstr "RP-azonosító"
 msgid "Raw text"
 msgstr "Nyers szöveg"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "ASCII-páncélozott személyes kulcs vagy kísérleti, FIDO2 által védett személyes kulcs beolvasása a vágólapról."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "A jelszótároló {oid} Git-véglegesítésében módosult útvonalak beolvasása"
@@ -3031,12 +2889,6 @@ msgstr "A vizsgált véglegesítés címzettjei"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Új jelszótárolókhoz ajánlott"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Csatlakoztassa újra a FIDO2 biztonsági kulcsot, majd próbálja újra."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3350,10 +3202,6 @@ msgstr "Értékek keresése"
 msgid "Search weak passwords"
 msgstr "Gyenge jelszavak keresése"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "Biztonsági kulcs PIN-kódja"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3375,29 +3223,11 @@ msgstr "Válassza ki azokat a személyes kulcsokat, amelyek feloldhatják a jels
 msgid "Sequential characters"
 msgstr "Egymást követő karakterek"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Előbb állítson be PIN-kódot a FIDO2 biztonsági kulcson."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "A biztonsági kulcs PIN-kódjának beállítása"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "A biztonsági kulcs PIN-kódjának beállítása (kísérleti FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Új hardverkulcs beállítása (kísérleti)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "Ebben az összeállításban csak Linuxon állítható be PIN-kód a FIDO2 biztonsági kulcson."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3509,11 +3339,6 @@ msgstr "A jelszótároló szinkronizálása váratlanul leállt."
 msgid "Store synced."
 msgstr "Jelszótároló szinkronizálva."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "A tárolt FIDO2 PIN-kód nem érvényes UTF-8: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3527,10 +3352,6 @@ msgstr "Git-tárolóból történő visszaállításhoz válassza a „Host” l
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "A pass import használatához válassza a „Host” lehetőséget a „Háttérprogram” beállításban."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "A kísérleti, FIDO2 által védett személyes kulcsok használatához váltson az Integrált háttérprogramra."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3564,31 +3385,6 @@ msgstr "Jelszótárolók szinkronizálása"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Szövegszerkesztő"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Ez a FIDO2 biztonsági kulcs nem támogatja a hmac-secret kiterjesztést."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Ennek a FIDO2 biztonsági kulcsnak támogatnia kell a PIN-védelmet."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Ez a FIDO2 által védett kulcs nem exportálható."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "A FIDO2 által védett kulcs adatai érvénytelenek."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Ez a FIDO2 által védett kulcs érvénytelen."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3675,18 +3471,6 @@ msgstr "A CXP-kérés nem tartalmaz ismert HPKE-módot."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "A CXP-kérés nem ajánlja fel a támogatott deflate archívumformátumot."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "A FIDO2 biztonsági kulcs PIN-kódja nem támogatott NUL bájtot tartalmaz."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "A FIDO2 biztonsági kulcs PIN-kódja hibás."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "A FIDO2 biztonsági kulcs nem adta vissza a hitelesítő adat azonosítóját."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3786,10 +3570,6 @@ msgstr "A személyes kulcs jelszava hibás."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "A személyeskulcs-leltározó háttérfolyamat váratlanul leállt."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "A biztonsági kulcs PIN-kódjai nem egyeznek."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "A kijelölt fájl nem egy támogatott helyi CXP azonosítókulcs-kérés. {error}"
@@ -3842,10 +3622,6 @@ msgstr "Új jelszóbejegyzés létrehozásakor ezek a sorok kerülnek a jelszós
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "A szerkesztő ezeket a beállításokat használja új jelszó készítésekor vagy egy meglévő újragenerálásakor."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Ez a FIDO2 biztonsági kulcs nem tudja megnyitni az elemeit."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Ezen az ágon nincs vizsgálható véglegesítés."
@@ -3894,14 +3670,6 @@ msgstr "Ez a kulcs nem tudja megnyitni az elemeit."
 msgid "This private key is password protected."
 msgstr "Ez a személyes kulcs jelszóval védett."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Ehhez a személyes kulcshoz FIDO2 biztonsági kulcs szükséges."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Ehhez a személyes kulcshoz más feloldási mód szükséges."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Ehhez a személyes kulcshoz hardverkulcs szükséges."
@@ -3934,16 +3702,6 @@ msgstr "Eszközök"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Karakterek száma"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Érintse meg a FIDO2 biztonsági kulcsot, majd próbálja újra."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Érintse meg a kulcsát, ha villog."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4036,7 +3794,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Mielőtt megszünteti ennek a kulcsnak a kijelölését, oldjon fel egy másik kijelölt személyes kulcsot."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4066,26 +3824,6 @@ msgstr "Névtelen személyes kulcs"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Névtelen okoskártya"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Húzza ki a többi biztonsági kulcsot, majd próbálja újra."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Nem támogatott FIDO2 jelszóbejegyzés-formátum: {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Nem támogatott FIDO2 jelszóbejegyzés-védelem: '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Nem támogatott FIDO2 személyeskulcs-formátum: {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Nem támogatott FIDO2 személyeskulcs-védelem: '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4818,10 +4556,6 @@ msgstr "{fingerprint} – Hardverkulcs"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} – Jelszóval védett"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} – Biztonsági kulccsal védett"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} – Biztonsági token"
@@ -4829,10 +4563,6 @@ msgstr "{fingerprint} – Biztonsági token"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} – Biztonsági token ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4886,10 +4616,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

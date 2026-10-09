@@ -71,8 +71,6 @@ fn build_key_management_state(widgets: &WindowWidgets) -> KeyManagementUiState {
         navigation: widgets.shell.navigation.clone(),
         overlay: widgets.shell.overlay.clone(),
         widgets: widgets.keys.clone(),
-        #[cfg(feature = "fidokey")]
-        fido: widgets.fido.clone(),
         ports: key_management_ui_ports(),
     })
 }

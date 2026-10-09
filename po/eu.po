@@ -237,10 +237,6 @@ msgstr "Txantiloian falta ziren eremuak gehitu dira."
 msgid "Adding hardware key"
 msgstr "Hardware-gakoa gehitzen"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Baimendu USB segurtasun-giltzarako sarbidea (FIDO2 esperimentala)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Baimendu gailu honetako aplikazioetarako sarbidea"
@@ -438,10 +434,6 @@ msgstr "Aukeratu fitxategi lokal bat."
 msgid "Choose a local folder."
 msgstr "Aukeratu karpeta lokal bat."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "Aukeratu gako pribatuaren fitxategi bat edo FIDO2 bidez babestutako gako pribatu esperimentalaren fitxategi bat."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -572,38 +564,18 @@ msgstr "Commit-data"
 msgid "Committer"
 msgstr "Commit-egilea"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Berretsi segurtasun-giltzaren PIN berria"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Berretsi pasahitza"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Berretsi segurtasun-giltzaren PIN berria."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Konektatu hardware-gako bat lehenik."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Jarraitu aurretik, utzi FIDO2 segurtasun-giltza bakar bat konektatuta."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Gakoa gehitu aurretik, utzi hardware-gako bakar bat konektatuta."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Konektatu FIDO2 segurtasun-giltza eta saiatu berriro."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Konektatu FIDO2 segurtasun-giltza lehenik."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -613,18 +585,9 @@ msgstr "Konektatu hardware-gakoa eta saiatu berriro."
 msgid "Connect the hardware key first."
 msgstr "Konektatu hardware-gakoa lehenik."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Konektatu bat datorren FIDO2 segurtasun-giltza."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Konektatu bat datorren hardware-gakoa hura inportatu aurretik."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Testuingurua"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -647,10 +610,6 @@ msgstr "Kopiatu ASCIIz blindatutako gako pribatua"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Kopiatu ASCIIz blindatutako gako publikoa"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Kopiatu FIDO2 bidez babestutako gako pribatu esperimentala"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -739,10 +698,6 @@ msgstr "Ezin izan da gako publikoaren ziurtagiria sortu hardware-gakoan."
 msgid "Couldn't create the store."
 msgstr "Ezin izan da biltegia sortu."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Ezin izan dira FIDO2 bidez zifratutako datuak deszifratu."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -769,7 +724,6 @@ msgstr "Ezin izan da hardwarearen deszifratze-gakoa sortu"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Ezin izan da hardwarearen sinatze-gakoa sortu"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -795,10 +749,6 @@ msgstr "Ezin izan dira pasahitzak inportatu."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Ezin izan da gakoa inportatu."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Ezin izan da FIDO2 segurtasun-giltza hasieratu."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -989,10 +939,6 @@ msgstr "Ezin izan dira biltegiak sinkronizatu."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "Ezin izan da {fingerprint_for_failure} gako pribatua desblokeatu Git sinadurarako. Sinadurarik gabe jarraituko da."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Ezin izan da FIDO2 segurtasun-giltza desblokeatu."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1018,10 +964,6 @@ msgstr "Ezin izan da hardware-gakoaren administrazio-PINa egiaztatu"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Ezin izan da eskatutako hardware-gakoaren PINa egiaztatu"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Sortu FIDO2 bidez babestutako gako berri bat."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1208,12 +1150,6 @@ msgstr "Sartu gako pribatuaren helbide elektronikoa."
 msgid "Enter an email address."
 msgstr "Sartu helbide elektroniko bat."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Sartu FIDO2 segurtasun-giltzaren PINa."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1237,18 +1173,10 @@ msgstr "Sartu gakoaren pasahitza."
 msgid "Enter the new hardware key PIN."
 msgstr "Sartu hardware-gakoaren PIN berria."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Sartu segurtasun-giltzaren PIN berria."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Sartu gako pribatuaren pasahitza."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Sartu segurtasun-giltzaren PINa."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1257,10 +1185,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Zabaldu pasahitz-editorea garbiketa-ekintzak erabiltzeko"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "FIDO2 bidez babestutako gako pribatu esperimentalek USB gailurako sarbidea behar dute Keycord-ek konektatutako segurtasun-giltza bat erabili ahal izan dezan babestutako gako pribatuak desblokeatzeko. Berrabiarazi Keycord sarbidea eman ondoren."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1310,26 +1234,6 @@ msgstr "{count} pasahitz esportatu da."
 msgid "Exported {count} passwords."
 msgstr "{count} pasahitz esportatu dira."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2 gako pribatuaren manifestua"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "FIDO2 gako pribatuen euskarria desgaituta dago Keycord-en konpilazio honetan."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 segurtasun-giltza"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "FIDO2 euskarria desgaituta dago Keycord-en konpilazio honetan."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 testu-bilgarria"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Ezin izan da Linux eguneratzea prestatzeko direktorio pribatu bat esleitu."
@@ -1377,10 +1281,6 @@ msgstr "Ezin izan da ASCIIz blindatutako sinadura deskodetu"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Ezin izan dira deszifratutako UTF-8 datuak deskodetu"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Ezin izan da behar adina HKDF irteera eratorri."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1684,11 +1584,6 @@ msgstr "GNOMEren bilaketa-hornitzailea zuzendu da."
 msgid "General"
 msgstr "Orokorra"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Sortu FIDO2 bidez babestutako gakoa (esperimentala)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Sortu edo inportatu gako pribatu bat."
@@ -1703,10 +1598,6 @@ msgstr "Sortu pasahitza"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Sortu gako pribatua"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "FIDO2 bidez babestutako gakoa sortzen (esperimentala)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1752,14 +1643,6 @@ msgstr "Joan hasierara"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Eman"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Eman USB segurtasun-giltzarako sarbidea (FIDO2 esperimentala)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "Lehenik, eman USB segurtasun-giltzarako sarbidea FIDO2 bidez babestutako gako pribatu esperimentaletarako."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2023,18 +1906,6 @@ msgstr "Eguneratzea instalatzeak Keycord itxiko du. Gorde gabeko aldaketak galdu
 msgid "Integrated"
 msgstr "Integrated"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "FIDO2 loturaren '{value}' hatz-marka baliogabea da."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "FIDO2 gailuaren bidea baliogabea da: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "FIDO2 bidez zifratutako datuak baliogabeak dira."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2117,7 +1988,6 @@ msgstr "Mantendu gako hau hautatuta hautatutako gako pribatu guztiak beharrezkoa
 msgid "Key file removed."
 msgstr "Gako-fitxategia kendu da."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Gakoa sortu da."
@@ -2140,10 +2010,6 @@ msgstr "Gakoaren pasahitza"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Keycord-en FIDO2 bidez babestutako gako pribatua"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2457,10 +2323,6 @@ msgstr "Hardware-gakoaren PIN berria"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Elementu berria"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Segurtasun-giltzaren PIN berria"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2942,10 +2804,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Testu gordina"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "Irakurri arbeletik ASCIIz blindatutako gako pribatu bat edo FIDO2 bidez babestutako gako pribatu esperimental bat."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Irakurri pasahitz-biltegiaren {oid} Git commit-ean aldatutako bideak"
@@ -3033,12 +2891,6 @@ msgstr "Auditatu den commit-aren hartzaileak"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Biltegi berrietarako gomendatua"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Konektatu berriro FIDO2 segurtasun-giltza eta saiatu berriro."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3352,10 +3204,6 @@ msgstr "Bilatu balioak"
 msgid "Search weak passwords"
 msgstr "Bilatu pasahitz ahulak"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "Segurtasun-giltzaren PINa"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3377,29 +3225,11 @@ msgstr "Hautatu biltegi honetako pasahitzak desblokeatu ditzaketen gako pribatua
 msgid "Sequential characters"
 msgstr "Karaktere sekuentzialak"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Ezarri PIN bat FIDO2 segurtasun-giltzan lehenik."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Ezarri segurtasun-giltzaren PINa"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Ezarri segurtasun-giltzaren PINa (FIDO2 esperimentala)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Konfiguratu hardware-gako berria (esperimentala)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "Konpilazio honetan, FIDO2 segurtasun-giltzaren PINa Linuxen soilik ezar daiteke."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3511,11 +3341,6 @@ msgstr "Biltegiaren sinkronizazioa ustekabean gelditu da."
 msgid "Store synced."
 msgstr "Biltegia sinkronizatu da."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Gordetako FIDO2 PINa ez da baliozko UTF-8: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3529,10 +3354,6 @@ msgstr "Aldatu Host motorrera biltegi bat Git biltegi batetik leheneratzeko."
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Aldatu Host motorrera pass import erabiltzeko."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "Aldatu Integrated motorrera FIDO2 bidez babestutako gako pribatu esperimentalak erabiltzeko."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3566,31 +3387,6 @@ msgstr "Biltegiak sinkronizatzen"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Testu-editorea"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "FIDO2 segurtasun-giltza horrek ez du onartzen hmac-secret hedapena."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "FIDO2 segurtasun-giltza horrek PIN bidezko babesa onartu behar du."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Ezin izan da FIDO2 bidez babestutako gako hori esportatu."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "FIDO2 bidez babestutako gako horren datuak baliogabeak dira."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "FIDO2 bidez babestutako gako hori baliogabea da."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3677,18 +3473,6 @@ msgstr "CXP eskaerak ez dauka HPKE modu ezagunik."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP eskaerak ez du eskaintzen onartutako deflate artxibo-formatua."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2 segurtasun-giltzaren PINak onartu gabeko NUL byte bat dauka."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2 segurtasun-giltzaren PINa ez da zuzena."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "FIDO2 segurtasun-giltzak ez du kredentzial-identifikatzailerik itzuli."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3788,10 +3572,6 @@ msgstr "Gako pribatuaren pasahitza ez da zuzena."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Gako pribatuen inbentarioa prestatzen ari zen prozesua ustekabean gelditu da."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Segurtasun-giltzaren PINak ez datoz bat."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "Hautatutako fitxategia ez da onartutako CXP sarbide-gakoaren eskaera lokal bat. {error}"
@@ -3844,10 +3624,6 @@ msgstr "Lerro hauek pasahitz-lerroaren ondoren gehitzen dira pasahitz-sarrera be
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "Ezarpen hauek pasahitza editoretik sortu edo birsortzean erabiltzen dira."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "FIDO2 segurtasun-giltza honek ezin ditu zure elementuak ireki."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Adar honek ez du auditatzeko commit erabilgarririk."
@@ -3896,14 +3672,6 @@ msgstr "Gako honek ezin ditu zure elementuak ireki."
 msgid "This private key is password protected."
 msgstr "Gako pribatu hau pasahitzez babestuta dago."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Gako pribatu honek FIDO2 segurtasun-giltza bat behar du."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Gako pribatu honek desblokeatzeko beste metodo bat behar du."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Gako pribatu honek hardware-gako bat behar du."
@@ -3936,16 +3704,6 @@ msgstr "Tresnak"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Karaktereak guztira"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Ukitu FIDO2 segurtasun-giltza eta saiatu berriro."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Ukitu gakoa keinu egiten badu."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4038,7 +3796,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Desblokeatu hautatutako beste gako pribatu bat honen hautapena kendu aurretik."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4068,26 +3826,6 @@ msgstr "Izenik gabeko gako pribatua"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Izenik gabeko txartel adimenduna"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Deskonektatu gainerako segurtasun-giltzak eta saiatu berriro."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Ez da onartzen FIDO2 pasahitz-sarreren {} formatua."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Ez da onartzen FIDO2 pasahitz-sarreren '{}' babesa."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Ez da onartzen FIDO2 gako pribatuen {} formatua."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Ez da onartzen FIDO2 gako pribatuen '{}' babesa."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4820,10 +4558,6 @@ msgstr "{fingerprint} - Hardware-gakoa"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - Pasahitzez babestua"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - Segurtasun-giltzaz babestua"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Segurtasun-tokena"
@@ -4831,10 +4565,6 @@ msgstr "{fingerprint} - Segurtasun-tokena"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Segurtasun-tokena ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4888,10 +4618,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

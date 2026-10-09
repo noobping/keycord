@@ -24,7 +24,7 @@ The check enforces:
   allowed to consume by `policy/window-action-owners.txt`;
 - root composition does not recreate pure `keycord-*` re-export facades or a flat registry of
   subject-owned builder widgets;
-- Runtime does not regain compile-time probes for Docs, Git, FIDO, Keys, Stores, or Lifecycle;
+- Runtime does not regain compile-time probes for Docs, Git, Keys, Stores, or Lifecycle;
 - retired root compatibility paths and root `support`/`tools` catchalls are not
   recreated; and
 - substantial production Rust files and function bodies are not exact copies.

@@ -1,7 +1,7 @@
 //! OpenPGP key management for Keycord.
 //!
 //! This crate owns managed OpenPGP certificates, private-key protection,
-//! smartcard/FIDO adapters, cache lifetime, and the established key files on
+//! smartcard adapters, cache lifetime, and the established key files on
 //! disk. Password entries, stores, and Git are consumers through the public
 //! key-ring and readiness APIs; they are not dependencies of this subject.
 
@@ -9,7 +9,6 @@ mod cache;
 mod capabilities;
 mod cert;
 mod error;
-mod fido2;
 mod hardware;
 mod host_gpg;
 mod store;
@@ -54,8 +53,7 @@ pub use cert::{
     ManagedRipassoHardwareKey, ManagedRipassoPrivateKey, ManagedRipassoPrivateKeyProtection,
     PrivateKeyUnlockKind, PrivateKeyUnlockRequest,
 };
-pub use error::{private_key_user_action_message, PrivateKeyError, PrivateKeyReadinessError};
-pub use fido2::set_fido2_security_key_pin;
+pub use error::{PrivateKeyError, PrivateKeyReadinessError};
 pub use hardware::{
     decrypt_with_hardware_session, sign_with_hardware_session, DiscoveredHardwareToken,
     HardwareSessionPolicy, HardwareTransport, HardwareTransportError,
@@ -74,16 +72,15 @@ pub use store::{
     armored_managed_key_material, armored_ripasso_private_key, armored_ripasso_public_key,
     available_private_key_fingerprints, build_ripasso_crypto_from_key_ring,
     discover_ripasso_hardware_keys, ensure_ripasso_private_key_is_ready,
-    generate_fido2_private_key, generate_ripasso_hardware_key, generate_ripasso_private_key,
-    import_ripasso_hardware_key_bytes, import_ripasso_private_key_bytes,
-    import_ripasso_private_key_with_secret, incompatible_private_key_error,
-    is_ripasso_private_key_unlocked, list_connected_smartcard_keys, list_ripasso_private_keys,
-    load_available_standard_key_ring, load_ripasso_key_ring, locked_private_key_error,
-    missing_private_key_error, prepare_managed_private_key_storage_for_startup,
-    remove_ripasso_private_key, ripasso_keys_dir, ripasso_private_key_requires_passphrase,
-    ripasso_private_key_requires_session_unlock, ripasso_private_key_title,
-    selected_ripasso_own_fingerprint, unlock_ripasso_private_key_for_session,
-    ManagedKeyStorageStartup,
+    generate_ripasso_hardware_key, generate_ripasso_private_key, import_ripasso_hardware_key_bytes,
+    import_ripasso_private_key_bytes, import_ripasso_private_key_with_secret,
+    incompatible_private_key_error, is_ripasso_private_key_unlocked, list_connected_smartcard_keys,
+    list_ripasso_private_keys, load_available_standard_key_ring, load_ripasso_key_ring,
+    locked_private_key_error, missing_private_key_error,
+    prepare_managed_private_key_storage_for_startup, remove_ripasso_private_key, ripasso_keys_dir,
+    ripasso_private_key_requires_passphrase, ripasso_private_key_requires_session_unlock,
+    ripasso_private_key_title, selected_ripasso_own_fingerprint,
+    unlock_ripasso_private_key_for_session, ManagedKeyStorageStartup,
 };
 pub use sync::{
     preflight_host_to_app_private_key_sync, sync_private_keys_with_host, HostPrivateKeySyncPort,

@@ -235,10 +235,6 @@ msgstr "Ouzhpennet eo bet ar maeziennoù a vanke er patrom."
 msgid "Adding hardware key"
 msgstr "Oc'h ouzhpennañ un alc'hwez periantel"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Aotren haeziñ an alc'hwez diogelroez USB (FIDO2 arnodel)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Aotren haeziñ an arloadoù war an trevnad-mañ"
@@ -436,10 +432,6 @@ msgstr "Dibabit ur restr lec'hel."
 msgid "Choose a local folder."
 msgstr "Dibabit un teuliad lec'hel."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "Dibabit ur restr alc'hwez prevez pe ur restr alc'hwez prevez arnodel gwarezet gant FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -570,38 +562,18 @@ msgstr "Deiziad ar commit"
 msgid "Committer"
 msgstr "Krouer ar commit"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Kadarnaat PIN nevez an alc'hwez diogelroez"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Kadarnaat ar ger-tremen"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Kadarnait PIN nevez an alc'hwez diogelroez."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Kennaskit un alc'hwez periantel da gentañ."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Kennaskit un alc'hwez diogelroez FIDO2 hepken a-raok kenderc'hel."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Kennaskit un alc'hwez periantel hepken a-raok e ouzhpennañ."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Kennaskit an alc'hwez diogelroez FIDO2 ha klaskit en-dro."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Kennaskit an alc'hwez diogelroez FIDO2 da gentañ."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -611,18 +583,9 @@ msgstr "Kennaskit an alc'hwez periantel ha klaskit en-dro."
 msgid "Connect the hardware key first."
 msgstr "Kennaskit an alc'hwez periantel da gentañ."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Kennaskit an alc'hwez diogelroez FIDO2 a glot."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Kennaskit an alc'hwez periantel a glot a-raok enporzhiañ anezhañ."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Kendestenn"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -645,10 +608,6 @@ msgstr "Eilañ an alc'hwez prevez e stumm ASCII"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Eilañ an alc'hwez foran e stumm ASCII"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Eilañ an alc'hwez prevez arnodel gwarezet gant FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -737,10 +696,6 @@ msgstr "N'haller ket krouiñ testeni an alc'hwez foran war an alc'hwez periantel
 msgid "Couldn't create the store."
 msgstr "N'haller ket krouiñ ar c'havlec'h."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "N'haller ket ezrinegañ ar roadennoù enrineget gant FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -767,7 +722,6 @@ msgstr "N'haller ket krouiñ an alc'hwez ezrinegañ periantel"
 msgid "Couldn't generate the hardware signing key"
 msgstr "N'haller ket krouiñ an alc'hwez sinañ periantel"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -793,10 +747,6 @@ msgstr "N'haller ket enporzhiañ ar gerioù-tremen."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "N'haller ket enporzhiañ an alc'hwez."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "N'haller ket deraouekaat an alc'hwez diogelroez FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -987,10 +937,6 @@ msgstr "N'haller ket sinkronaat ar c'havlec'hioù."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "N'haller ket dibrennañ an alc'hwez prevez {fingerprint_for_failure} evit sinañ gant Git. Kenderc'hel hep sinadur."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "N'haller ket dibrennañ an alc'hwez diogelroez FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1016,10 +962,6 @@ msgstr "N'haller ket gwiriañ PIN merañ an alc'hwez periantel"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "N'haller ket gwiriañ PIN goulennet an alc'hwez periantel"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Krouit un alc'hwez nevez gwarezet gant FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1206,12 +1148,6 @@ msgstr "Bizskrivit ur chomlec'h postel evit an alc'hwez prevez."
 msgid "Enter an email address."
 msgstr "Bizskrivit ur chomlec'h postel."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Bizskrivit PIN an alc'hwez diogelroez FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1235,18 +1171,10 @@ msgstr "Bizskrivit ger-tremen an alc'hwez."
 msgid "Enter the new hardware key PIN."
 msgstr "Bizskrivit PIN nevez an alc'hwez periantel."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Bizskrivit PIN nevez an alc'hwez diogelroez."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Bizskrivit ger-tremen an alc'hwez prevez."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Bizskrivit PIN an alc'hwez diogelroez."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1255,10 +1183,6 @@ msgstr "Achap"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Dispakañ embanner ar ger-tremen gant ar gweredoù naetaat"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "Ret eo kaout haeziñ ouzh an trevnadoù USB a-raok ma c'hallo Keycord implijout un alc'hwez diogelroez kennasket da zibrennañ alc'hwezioù prevez arnodel gwarezet gant FIDO2. Adloc'hit Keycord goude bezañ roet an aotre."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1308,26 +1232,6 @@ msgstr "Ezporzhiet ez eus bet {count} ger-tremen."
 msgid "Exported {count} passwords."
 msgstr "Ezporzhiet ez eus bet {count} ger-tremen."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Manifesto an alc'hwez prevez FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Diweredekaet eo ar skor alc'hwezioù prevez FIDO2 er savadur-mañ eus Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Alc'hwez diogelroez FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Diweredekaet eo ar skor FIDO2 er savadur-mañ eus Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Golo testenn FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "N'haller ket derannañ ur c'havlec'hiad prevez evit prientiñ an hizivadenn Linux."
@@ -1375,10 +1279,6 @@ msgstr "N'haller ket ezvonegañ ar sinadur e stumm ASCII"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "N'haller ket ezvonegañ ar roadennoù UTF-8 ezrineget"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "N'haller ket deverañ ezvont HKDF a-walc'h."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1682,11 +1582,6 @@ msgstr "Reizhet eo bet pourchaser enklask GNOME."
 msgid "General"
 msgstr "Hollek"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Krouiñ un alc'hwez gwarezet gant FIDO2 (Arnodel)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Krouit pe enporzhit un alc'hwez prevez."
@@ -1701,10 +1596,6 @@ msgstr "Krouiñ ur ger-tremen"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Krouiñ un alc'hwez prevez"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "O krouiñ un alc'hwez gwarezet gant FIDO2 (Arnodel)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1750,14 +1641,6 @@ msgstr "Mont d'an degemer"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Aotren"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Aotren haeziñ an alc'hwez diogelroez USB (FIDO2 arnodel)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "Aotrenit da gentañ haeziñ an alc'hwez diogelroez USB evit an alc'hwezioù prevez arnodel gwarezet gant FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2021,18 +1904,6 @@ msgstr "Serret e vo Keycord pa vo staliet an hizivadenn. Kollet e vo ar c'hemmo�
 msgid "Integrated"
 msgstr "Enframmet"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "N'eo ket talvoudek ar roudoù biz liammañ FIDO2 '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "N'eo ket talvoudek hent an trevnad FIDO2: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "N'eo ket talvoudek ar roadennoù enrineget gant FIDO2."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2115,7 +1986,6 @@ msgstr "Dalc'hit an alc'hwez-mañ diuzet keit ha ma vo ret an holl alc'hwezioù 
 msgid "Key file removed."
 msgstr "Dilamet eo bet ar restr alc'hwez."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Krouet eo bet an alc'hwez."
@@ -2138,10 +2008,6 @@ msgstr "Ger-tremen an alc'hwez"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Alc'hwez prevez Keycord gwarezet gant FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2455,10 +2321,6 @@ msgstr "PIN nevez an alc'hwez periantel"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Elfenn nevez"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "PIN nevez an alc'hwez diogelroez"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2940,10 +2802,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Testenn griz"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "Lennit diwar ar golver un alc'hwez prevez e stumm ASCII pe un alc'hwez prevez arnodel gwarezet gant FIDO2."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Lenn hentoù kemmet commit Git {oid} eus kavlec'h ar gerioù-tremen"
@@ -3031,12 +2889,6 @@ msgstr "Degemererien ar commit bet gwiriet"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Erbedet evit ar c'havlec'hioù nevez"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Adkennaskit an alc'hwez diogelroez FIDO2 ha klaskit en-dro."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3350,10 +3202,6 @@ msgstr "Klask gwerzhioù"
 msgid "Search weak passwords"
 msgstr "Klask gerioù-tremen bresk"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN an alc'hwez diogelroez"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3375,29 +3223,11 @@ msgstr "Diuzit an alc'hwezioù prevez a c'hall dibrennañ ar gerioù-tremen er c
 msgid "Sequential characters"
 msgstr "Arouezennoù lerc'h-ouzh-lerc'h"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Lakit ur PIN war an alc'hwez diogelroez FIDO2 da gentañ."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Lakaat PIN an alc'hwez diogelroez"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Lakaat PIN an alc'hwez diogelroez (FIDO2 arnodel)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Kefluniañ un alc'hwez periantel nevez (Arnodel)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "War Linux hepken eo skoret lakaat PIN un alc'hwez diogelroez FIDO2 er savadur-mañ."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3509,11 +3339,6 @@ msgstr "Harzet eo bet sinkronaat ar c'havlec'h en un doare dic'hortoz."
 msgid "Store synced."
 msgstr "Sinkronet eo bet ar c'havlec'h."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "N'eo ket ar PIN FIDO2 enrollet testenn UTF-8 talvoudek: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3527,10 +3352,6 @@ msgstr "Lakit Backend war Ostiz evit assav ur c'havlec'h diwar ur mirlec'h Git."
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Lakit Backend war Ostiz evit implijout pass import."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "Tremenit d'ar backend Enframmet evit implijout alc'hwezioù prevez arnodel gwarezet gant FIDO2."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3564,31 +3385,6 @@ msgstr "O sinkronaat ar c'havlec'hioù"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Embanner testenn"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Ne skor ket an alc'hwez diogelroez FIDO2-se an askouezh hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Ret eo d'an alc'hwez diogelroez FIDO2-se skorañ ar gwarez dre PIN."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "N'haller ket ezporzhiañ an alc'hwez-se gwarezet gant FIDO2."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "N'eo ket talvoudek roadennoù an alc'hwez-se gwarezet gant FIDO2."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "N'eo ket talvoudek an alc'hwez-se gwarezet gant FIDO2."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3675,18 +3471,6 @@ msgstr "N'endalc'h ket ar goulenn CXP ur mod HPKE anavezet."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Ne ginnig ket ar goulenn CXP ar stumm diell deflate skoret."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "Enderc'hel a ra PIN an alc'hwez diogelroez FIDO2 un okted NUL anskoret."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "Direizh eo PIN an alc'hwez diogelroez FIDO2."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "N'en deus ket an alc'hwez diogelroez FIDO2 roet naoudi un titour dilesa."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3786,10 +3570,6 @@ msgstr "Direizh eo ger-tremen an alc'hwez prevez."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Harzet eo bet an argerzh renabl an alc'hwezioù prevez en un doare dic'hortoz."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Ne glot ket PIN-où an alc'hwez diogelroez."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "N'eo ket ar restr diuzet ur goulenn passkey CXP lec'hel skoret. {error}"
@@ -3842,10 +3622,6 @@ msgstr "Ouzhpennet e vez al linennoù-mañ goude linenn ar ger-tremen pa grouit 
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "Implijet e vez an arventennoù-mañ pa grouit pe adkrouit ur ger-tremen en embanner."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Ne c'hall ket an alc'hwez diogelroez FIDO2-mañ digeriñ hoc'h elfennoù."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "N'eus commit ebet hegerz da arc'hwilañ er skourr-mañ."
@@ -3894,14 +3670,6 @@ msgstr "Ne c'hall ket an alc'hwez-mañ digeriñ hoc'h elfennoù."
 msgid "This private key is password protected."
 msgstr "Gwarezet eo an alc'hwez prevez-mañ gant ur ger-tremen."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Ezhomm en deus an alc'hwez prevez-mañ eus un alc'hwez diogelroez FIDO2."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Ret eo implijout un doare dibrennañ all evit an alc'hwez prevez-mañ."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Ezhomm en deus an alc'hwez prevez-mañ eus un alc'hwez periantel."
@@ -3934,16 +3702,6 @@ msgstr "Ostilhoù"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Niver hollek a arouezennoù"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Stokit ouzh an alc'hwez diogelroez FIDO2 ha klaskit en-dro."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Stokit ouzh hoc'h alc'hwez ma lugern."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4036,7 +3794,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Dibrennit un alc'hwez prevez diuzet all a-raok diziuzañ hemañ."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4066,26 +3824,6 @@ msgstr "Alc'hwez prevez dianv"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Kartenn grug dianv"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Digennaskit an alc'hwezioù diogelroez all, ha klaskit en-dro."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Stumm enankad ger-tremen FIDO2 anskoret {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Gwarez enankad ger-tremen FIDO2 anskoret '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Stumm alc'hwez prevez FIDO2 anskoret {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Gwarez alc'hwez prevez FIDO2 anskoret '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4818,10 +4556,6 @@ msgstr "{fingerprint} - Alc'hwez periantel"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - Gwarezet gant ur ger-tremen"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - Gwarezet gant un alc'hwez diogelroez"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Jedouer diogelroez"
@@ -4829,10 +4563,6 @@ msgstr "{fingerprint} - Jedouer diogelroez"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Jedouer diogelroez ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4886,10 +4616,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

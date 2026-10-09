@@ -245,10 +245,6 @@ msgstr "נוספו שדות תבנית חסרים."
 msgid "Adding hardware key"
 msgstr "הוספת המפתח הפיזי"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "מתן גישה למפתח אבטחה בחיבור USB (תמיכת FIDO2 ניסיונית)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "מתן גישה ליישומים במכשיר הזה"
@@ -448,11 +444,6 @@ msgstr "בחירת קובץ מקומי."
 msgid "Choose a local folder."
 msgstr "בחירת תיקייה מקומית."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "יש לבחור קובץ מפתח פרטי או קובץ מפתח פרטי ניסיוני המוגן ב־FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -597,38 +588,18 @@ msgstr "בוצע קומיט"
 msgid "Committer"
 msgstr "מבצע הקומיט"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "אימות קוד ה־PIN החדש של מפתח האבטחה"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "אימות הסיסמה"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "יש לאמת את קוד ה־PIN החדש של מפתח האבטחה."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "תחילה יש לחבר מפתח פיזי."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "לפני ההמשך יש לחבר מפתח אבטחה אחד בלבד מסוג FIDO2."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "לפני הוספתו יש לחבר מפתח פיזי אחד בלבד."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "יש לחבר את מפתח האבטחה מסוג FIDO2 ולנסות שוב."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "תחילה יש לחבר את מפתח האבטחה מסוג FIDO2."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -638,18 +609,9 @@ msgstr "יש לחבר את המפתח הפיזי ולנסות שוב."
 msgid "Connect the hardware key first."
 msgstr "תחילה יש לחבר את המפתח הפיזי."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "יש לחבר את מפתח האבטחה התואם מסוג FIDO2."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "לפני הייבוא יש לחבר את המפתח הפיזי התואם."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "הקשר"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -672,10 +634,6 @@ msgstr "העתקת המפתח הפרטי בתצורת ASCII Armor"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "העתקת המפתח הציבורי בתצורת ASCII Armor"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "העתקת המפתח הפרטי הניסיוני המוגן ב־FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -764,10 +722,6 @@ msgstr "לא ניתן ליצור במפתח הפיזי את האישור למפ�
 msgid "Couldn't create the store."
 msgstr "לא ניתן ליצור את המאגר."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "לא ניתן לפענח את הנתונים שהוצפנו באמצעות FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -794,7 +748,6 @@ msgstr "לא ניתן ליצור את מפתח הפענוח שבמפתח הפי�
 msgid "Couldn't generate the hardware signing key"
 msgstr "לא ניתן ליצור את מפתח החתימה שבמפתח הפיזי"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -820,10 +773,6 @@ msgstr "לא ניתן לייבא את הסיסמאות."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "לא ניתן לייבא את המפתח."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "לא ניתן לאתחל את מפתח האבטחה מסוג FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1018,10 +967,6 @@ msgid ""
 "Continuing without a signature."
 msgstr "לא ניתן לפתוח את המפתח הפרטי {fingerprint_for_failure} לצורך חתימת Git. הפעולה תימשך ללא חתימה."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "לא ניתן לפתוח את מפתח האבטחה מסוג FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1047,10 +992,6 @@ msgstr "לא ניתן לאמת את קוד ה־PIN הניהולי של המפת�
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "לא ניתן לאמת את קוד ה־PIN המבוקש של המפתח הפיזי"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "יצירת מפתח חדש המוגן ב־FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1242,12 +1183,6 @@ msgstr "יש להזין כתובת דוא״ל למפתח הפרטי."
 msgid "Enter an email address."
 msgstr "יש להזין כתובת דוא״ל."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "יש להזין את קוד ה־PIN של מפתח האבטחה מסוג FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1271,18 +1206,10 @@ msgstr "יש להזין את סיסמת המפתח."
 msgid "Enter the new hardware key PIN."
 msgstr "יש להזין את קוד ה־PIN החדש של המפתח הפיזי."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "יש להזין את קוד ה־PIN החדש של מפתח האבטחה."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "יש להזין את סיסמת המפתח הפרטי."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "יש להזין את קוד ה־PIN של מפתח האבטחה."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1291,13 +1218,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "הרחבת עורך הסיסמאות עם פעולות ניקוי"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr "מפתחות פרטיים ניסיוניים המוגנים ב־FIDO2 זקוקים לגישה להתקן USB כדי ש־Keycord יוכל להשתמש במפתח אבטחה מחובר לפתיחת המפתחות הפרטיים המוגנים. לאחר מתן הגישה יש להפעיל את Keycord מחדש."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1352,26 +1272,6 @@ msgstr "מספר הסיסמאות שיוצאו: {count}."
 msgid "Exported {count} passwords."
 msgstr "מספר הסיסמאות שיוצאו: {count}."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "מניפסט של מפתח פרטי FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "התמיכה במפתחות פרטיים מסוג FIDO2 מושבתת בגרסה זו של Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "מפתח אבטחה מסוג FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "התמיכה ב־FIDO2 מושבתת בגרסה זו של Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "מעטפת טקסט של FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "הקצאת תיקיית הכנה פרטית לעדכון Linux נכשלה."
@@ -1419,10 +1319,6 @@ msgstr "פענוח החתימה בתצורת ASCII Armor נכשל"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "פענוח נתוני UTF-8 לאחר הסרת ההצפנה נכשל"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "לא ניתן להפיק מספיק פלט HKDF."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1729,11 +1625,6 @@ msgstr "תוקן ספק החיפוש של GNOME."
 msgid "General"
 msgstr "כללי"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "יצירת מפתח המוגן ב־FIDO2 (ניסיוני)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "יצירה או ייבוא של מפתח פרטי."
@@ -1748,10 +1639,6 @@ msgstr "יצירת סיסמה"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "יצירת מפתח פרטי"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "יצירת מפתח המוגן ב־FIDO2 (ניסיוני)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1797,16 +1684,6 @@ msgstr "מעבר לדף הבית"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "מתן גישה"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "מתן גישה למפתח אבטחה בחיבור USB (תמיכת FIDO2 ניסיונית)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr "תחילה יש לתת גישה למפתח אבטחה בחיבור USB למפתחות פרטיים ניסיוניים המוגנים ב־FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2075,18 +1952,6 @@ msgstr "התקנת העדכון תסגור את Keycord. שינויים שלא �
 msgid "Integrated"
 msgstr "משולב"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "טביעת האצבע של קישור FIDO2 ‏'{value}' אינה תקינה."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "נתיב התקן FIDO2 אינו תקין: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "הנתונים המוצפנים של FIDO2 אינם תקינים."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2171,7 +2036,6 @@ msgstr "יש להשאיר את המפתח הזה מסומן כל עוד כל ה�
 msgid "Key file removed."
 msgstr "קובץ המפתח הוסר."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "המפתח נוצר."
@@ -2194,10 +2058,6 @@ msgstr "סיסמת המפתח"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "מפתח פרטי של Keycord המוגן ב־FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2533,10 +2393,6 @@ msgstr "קוד PIN חדש למפתח הפיזי"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "פריט חדש"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "קוד PIN חדש למפתח האבטחה"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3031,12 +2887,6 @@ msgstr "מזהה RP"
 msgid "Raw text"
 msgstr "טקסט גולמי"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr "קריאת מפתח פרטי בתצורת ASCII Armor או מפתח פרטי ניסיוני המוגן ב־FIDO2 מלוח הגזירים."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "קריאת הנתיבים שהשתנו בקומיט {oid} של מאגר הסיסמאות ב־Git"
@@ -3126,12 +2976,6 @@ msgstr "נמענים מהקומיט שנבדק"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "מומלץ למאגרים חדשים"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "יש לחבר מחדש את מפתח האבטחה מסוג FIDO2 ולנסות שוב."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3454,10 +3298,6 @@ msgstr "חיפוש בערכים"
 msgid "Search weak passwords"
 msgstr "חיפוש סיסמאות חלשות"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "קוד PIN למפתח האבטחה"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3479,30 +3319,11 @@ msgstr "יש לבחור את המפתחות הפרטיים שיכולים לפת
 msgid "Sequential characters"
 msgstr "תווים עוקבים"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "תחילה יש להגדיר קוד PIN במפתח האבטחה מסוג FIDO2."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "הגדרת קוד PIN למפתח האבטחה"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "הגדרת קוד PIN למפתח האבטחה (תמיכת FIDO2 ניסיונית)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "הגדרת מפתח פיזי חדש (ניסיוני)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "בגרסה זו ניתן להגדיר קוד PIN למפתח אבטחה מסוג FIDO2 רק ב־Linux."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3614,11 +3435,6 @@ msgstr "סנכרון המאגר נעצר באופן בלתי צפוי."
 msgid "Store synced."
 msgstr "המאגר סונכרן."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "קוד ה־PIN של FIDO2 שנשמר אינו UTF-8 תקין: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3632,12 +3448,6 @@ msgstr "כדי לשחזר מאגר מתוך מאגר Git יש להעביר את 
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "כדי להשתמש ב־pass import יש להעביר את המנגנון ל„מארח”."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr "כדי להשתמש במפתחות פרטיים ניסיוניים המוגנים ב־FIDO2 יש לעבור למנגנון המשולב."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3673,31 +3483,6 @@ msgstr "סנכרון המאגרים"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "עורך טקסט"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "מפתח האבטחה הזה מסוג FIDO2 אינו תומך בהרחבה hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "מפתח האבטחה הזה מסוג FIDO2 חייב לתמוך בהגנת PIN."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "לא ניתן לייצא את המפתח הזה המוגן ב־FIDO2."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "נתוני המפתח הזה המוגן ב־FIDO2 אינם תקינים."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "המפתח הזה המוגן ב־FIDO2 אינו תקין."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3786,18 +3571,6 @@ msgstr "בקשת CXP אינה מכילה מצב HPKE מוכר."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "בקשת CXP אינה מציעה את פורמט הארכיון הנתמך מסוג deflate."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "קוד ה־PIN של מפתח האבטחה מסוג FIDO2 מכיל בית NUL שאינו נתמך."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "קוד ה־PIN של מפתח האבטחה מסוג FIDO2 שגוי."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "מפתח האבטחה מסוג FIDO2 לא החזיר מזהה פרטי הזדהות."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3897,10 +3670,6 @@ msgstr "סיסמת המפתח הפרטי שגויה."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "תהליך ניהול מלאי המפתחות הפרטיים נעצר באופן בלתי צפוי."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "קודי ה־PIN של מפתח האבטחה אינם תואמים."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "הקובץ שנבחר אינו בקשת CXP מקומית נתמכת למפתח גישה. {error}"
@@ -3959,10 +3728,6 @@ msgid ""
 "editor."
 msgstr "ההגדרות האלה משמשות בעת יצירה או יצירה מחדש של סיסמה מתוך העורך."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "מפתח האבטחה הזה מסוג FIDO2 אינו יכול לפתוח את הפריטים שלך."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "בענף הזה אין קומיטים שניתן לבדוק."
@@ -4020,14 +3785,6 @@ msgstr "המפתח הזה אינו יכול לפתוח את הפריטים של�
 msgid "This private key is password protected."
 msgstr "המפתח הפרטי הזה מוגן בסיסמה."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "המפתח הפרטי הזה זקוק למפתח אבטחה מסוג FIDO2."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "המפתח הפרטי הזה דורש שיטת פתיחה אחרת."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "המפתח הפרטי הזה זקוק למפתח פיזי."
@@ -4061,16 +3818,6 @@ msgstr "כלים"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "סך כל התווים"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "יש לגעת במפתח האבטחה מסוג FIDO2 ולנסות שוב."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "אם המפתח מהבהב, יש לגעת בו."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4165,7 +3912,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "לפני ביטול הבחירה במפתח הזה יש לפתוח מפתח פרטי נבחר נוסף."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4195,26 +3942,6 @@ msgstr "מפתח פרטי ללא שם"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "כרטיס חכם ללא שם"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "יש לנתק את מפתחות האבטחה האחרים ולנסות שוב."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "תבנית רשומת סיסמה מסוג FIDO2 אינה נתמכת: {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "הגנת רשומת סיסמה מסוג FIDO2 אינה נתמכת: '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "תבנית מפתח פרטי מסוג FIDO2 אינה נתמכת: {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "הגנת מפתח פרטי מסוג FIDO2 אינה נתמכת: '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4952,10 +4679,6 @@ msgstr "{fingerprint} - מפתח פיזי"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - מוגן בסיסמה"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - מוגן במפתח אבטחה"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - אסימון אבטחה"
@@ -4963,10 +4686,6 @@ msgstr "{fingerprint} - אסימון אבטחה"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - אסימון אבטחה ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5013,10 +4732,6 @@ msgid ""
 "{}\n"
 "{version}"
 msgstr "{}\n{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

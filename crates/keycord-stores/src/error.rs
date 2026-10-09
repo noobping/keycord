@@ -1,8 +1,7 @@
 use thiserror::Error;
 
 use keycord_keys::{
-    private_key_user_action_message, INCOMPATIBLE_PRIVATE_KEY_ERROR, LOCKED_PRIVATE_KEY_ERROR,
-    MISSING_PRIVATE_KEY_ERROR,
+    INCOMPATIBLE_PRIVATE_KEY_ERROR, LOCKED_PRIVATE_KEY_ERROR, MISSING_PRIVATE_KEY_ERROR,
 };
 
 pub const INVALID_STORE_PATH_ERROR: &str = "The selected password store path is not a folder.";
@@ -36,7 +35,7 @@ impl StoreRecipientsError {
             Self::MissingPrivateKey(_) => "Add a private key in Preferences.",
             Self::LockedPrivateKey(_) => "Unlock the key in Preferences.",
             Self::IncompatiblePrivateKey(_) => "This key can't open your items.",
-            Self::Other(message) => private_key_user_action_message(message).unwrap_or(fallback),
+            Self::Other(_) => fallback,
         }
     }
 }

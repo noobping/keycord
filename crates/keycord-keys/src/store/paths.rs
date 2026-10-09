@@ -16,13 +16,6 @@ pub(super) fn ripasso_keys_v2_dir() -> Result<PathBuf, String> {
     Ok(data_dir.join(APP_DATA_COMPONENT).join("keys-v2"))
 }
 
-#[cfg(feature = "fido")]
-pub(super) fn ripasso_fido_keys_dir() -> Result<PathBuf, String> {
-    let data_dir = dirs_next::data_local_dir()
-        .ok_or_else(|| "Could not determine the data folder.".to_string())?;
-    Ok(data_dir.join(APP_DATA_COMPONENT).join("keys-fido"))
-}
-
 pub(super) fn hardware_manifest_path(dir: &Path) -> PathBuf {
     dir.join("manifest.toml")
 }

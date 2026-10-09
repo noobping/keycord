@@ -260,10 +260,6 @@ msgstr "Додано відсутні поля шаблону."
 msgid "Adding hardware key"
 msgstr "Додавання апаратного ключа"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Дозволити доступ до USB-ключів безпеки (експериментальний FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Дозволити доступ до програм на цьому пристрої"
@@ -468,13 +464,6 @@ msgstr "Виберіть локальний файл."
 msgid "Choose a local folder."
 msgstr "Виберіть локальну теку."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr ""
-"Виберіть файл закритого ключа або експериментального закритого ключа, "
-"захищеного FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -634,38 +623,18 @@ msgstr "Дата коміту"
 msgid "Committer"
 msgstr "Автор коміту"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Підтвердьте новий PIN-код ключа безпеки"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Підтвердьте пароль"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Підтвердьте новий PIN-код ключа безпеки."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Спочатку під’єднайте апаратний ключ."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Перш ніж продовжити, залиште під’єднаним лише один ключ безпеки FIDO2."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Перш ніж додати апаратний ключ, залиште під’єднаним лише його."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Під’єднайте ключ безпеки FIDO2 і повторіть спробу."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Спочатку під’єднайте ключ безпеки FIDO2."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -675,18 +644,9 @@ msgstr "Під’єднайте апаратний ключ і повторіт�
 msgid "Connect the hardware key first."
 msgstr "Спочатку під’єднайте апаратний ключ."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Під’єднайте відповідний ключ безпеки FIDO2."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Перед імпортуванням під’єднайте відповідний апаратний ключ."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Контекст"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -709,10 +669,6 @@ msgstr "Копіювати закритий ключ у текстовому ф�
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Копіювати відкритий ключ у текстовому форматі"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Копіювати експериментальний закритий ключ, захищений FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -801,10 +757,6 @@ msgstr "Не вдалося створити сертифікат відкрит
 msgid "Couldn't create the store."
 msgstr "Не вдалося створити сховище."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Не вдалося розшифрувати дані, зашифровані FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -831,7 +783,6 @@ msgstr "Не вдалося створити апаратний ключ роз�
 msgid "Couldn't generate the hardware signing key"
 msgstr "Не вдалося створити апаратний ключ підписування"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -857,10 +808,6 @@ msgstr "Не вдалося імпортувати паролі."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Не вдалося імпортувати ключ."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Не вдалося ініціалізувати ключ безпеки FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1059,10 +1006,6 @@ msgstr ""
 "Не вдалося розблокувати закритий ключ {fingerprint_for_failure} для "
 "підписування Git. Продовжуємо без підпису."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Не вдалося розблокувати ключ безпеки FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1088,10 +1031,6 @@ msgstr "Не вдалося перевірити PIN-код адміністра
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Не вдалося перевірити введений PIN-код апаратного ключа"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Створити новий ключ, захищений FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1289,12 +1228,6 @@ msgstr "Введіть адресу електронної пошти для з�
 msgid "Enter an email address."
 msgstr "Введіть адресу електронної пошти."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Введіть PIN-код ключа безпеки FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1318,18 +1251,10 @@ msgstr "Введіть пароль ключа."
 msgid "Enter the new hardware key PIN."
 msgstr "Введіть новий PIN-код апаратного ключа."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Введіть новий PIN-код ключа безпеки."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Введіть пароль закритого ключа."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Введіть PIN-код ключа безпеки."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1338,16 +1263,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "До редактора паролів додано дії очищення"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"Для експериментальних закритих ключів, захищених FIDO2, слід надати доступ "
-"до USB-пристроїв, щоб Keycord міг розблоковувати їх під’єднаним ключем "
-"безпеки. Після надання доступу перезапустіть Keycord."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1408,26 +1323,6 @@ msgstr "Експортовано паролів: {count}."
 msgid "Exported {count} passwords."
 msgstr "Експортовано паролів: {count}."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Маніфест закритого ключа FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "У цій збірці Keycord підтримку закритих ключів FIDO2 вимкнено."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Ключ безпеки FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "У цій збірці Keycord підтримку FIDO2 вимкнено."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Текстовий конверт FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Не вдалося створити приватний проміжний каталог для оновлення Linux."
@@ -1477,10 +1372,6 @@ msgstr "Не вдалося декодувати підпис у текстов�
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Не вдалося декодувати розшифровані дані UTF-8"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Не вдалося отримати достатньо вихідних даних HKDF."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1808,11 +1699,6 @@ msgstr "Виправлено засіб пошуку GNOME."
 msgid "General"
 msgstr "Загальне"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Створити ключ, захищений FIDO2 (експериментально)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Створіть або імпортуйте закритий ключ."
@@ -1827,10 +1713,6 @@ msgstr "Створити пароль"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Створити закритий ключ"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Створення ключа, захищеного FIDO2 (експериментально)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1876,18 +1758,6 @@ msgstr "На головну"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Надати"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Надати доступ до USB-ключів безпеки (експериментальний FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"Спочатку надайте доступ до USB-ключів безпеки для експериментальних закритих "
-"ключів, захищених FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2169,18 +2039,6 @@ msgstr ""
 msgid "Integrated"
 msgstr "Інтегрований"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Некоректний відбиток прив’язки FIDO2 «{value}»."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Некоректний шлях до пристрою FIDO2: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Некоректні зашифровані дані FIDO2."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2272,7 +2130,6 @@ msgstr ""
 msgid "Key file removed."
 msgstr "Файл ключа вилучено."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Ключ створено."
@@ -2295,10 +2152,6 @@ msgstr "Пароль ключа"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Закритий ключ Keycord, захищений FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2668,10 +2521,6 @@ msgstr "Новий PIN-код апаратного ключа"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Новий елемент"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Новий PIN-код ключа безпеки"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3184,14 +3033,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Необроблений текст"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"Прочитати з буфера обміну закритий ключ у текстовому форматі або "
-"експериментальний закритий ключ, захищений FIDO2."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Прочитати змінені шляхи коміту Git сховища паролів {oid}"
@@ -3283,12 +3124,6 @@ msgstr "Отримувачі з перевіреного коміту"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Рекомендовано для нових сховищ"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Перепід’єднайте ключ безпеки FIDO2 й повторіть спробу."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3628,10 +3463,6 @@ msgstr "Шукати значення"
 msgid "Search weak passwords"
 msgstr "Шукати слабкі паролі"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN-код ключа безпеки"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3654,30 +3485,11 @@ msgstr ""
 msgid "Sequential characters"
 msgstr "Послідовні символи"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Спочатку задайте PIN-код ключа безпеки FIDO2."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Задати PIN-код ключа безпеки"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Задати PIN-код ключа безпеки (експериментальний FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Налаштувати новий апаратний ключ (експериментально)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "У цій збірці PIN-код ключа безпеки FIDO2 можна задати лише в Linux."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3789,11 +3601,6 @@ msgstr "Синхронізація сховища несподівано зуп�
 msgid "Store synced."
 msgstr "Сховище синхронізовано."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Збережений PIN-код FIDO2 не є коректним текстом UTF-8: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3807,14 +3614,6 @@ msgstr "Щоб відновити сховище з репозиторію Git, 
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Щоб скористатися pass import, змініть механізм на «Host»."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr ""
-"Щоб використовувати експериментальні закриті ключі, захищені FIDO2, "
-"перейдіть на інтегрований механізм."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3852,31 +3651,6 @@ msgstr "Синхронізація сховищ"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Текстовий редактор"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Цей ключ безпеки FIDO2 не підтримує розширення hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Цей ключ безпеки FIDO2 має підтримувати захист PIN-кодом."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Не вдалося експортувати цей ключ, захищений FIDO2."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Дані цього ключа, захищеного FIDO2, некоректні."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Цей ключ, захищений FIDO2, некоректний."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3968,18 +3742,6 @@ msgstr "Запит CXP не містить відомого режиму HPKE."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Запит CXP не пропонує підтримуваного формату архіву deflate."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "PIN-код ключа безпеки FIDO2 містить непідтримуваний байт NUL."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "PIN-код ключа безпеки FIDO2 неправильний."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Ключ безпеки FIDO2 не повернув ідентифікатора облікових даних."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4082,10 +3844,6 @@ msgstr "Пароль закритого ключа неправильний."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Фоновий процес обліку закритих ключів несподівано зупинився."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "PIN-коди ключа безпеки не збігаються."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr ""
@@ -4154,10 +3912,6 @@ msgstr ""
 "Ці параметри використовуються, коли ви створюєте або повторно створюєте "
 "пароль у редакторі."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Цим ключем безпеки FIDO2 неможливо відкрити ваші елементи."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "У цій гілці немає комітів, доступних для аудиту."
@@ -4225,14 +3979,6 @@ msgstr "Цим ключем неможливо відкрити ваші еле�
 msgid "This private key is password protected."
 msgstr "Цей закритий ключ захищено паролем."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Для цього закритого ключа потрібен ключ безпеки FIDO2."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Для цього закритого ключа потрібен інший спосіб розблокування."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Для цього закритого ключа потрібен апаратний ключ."
@@ -4267,16 +4013,6 @@ msgstr "Інструменти"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Загальна кількість символів"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Торкніться ключа безпеки FIDO2 й повторіть спробу."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Торкніться ключа, якщо він блимає."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4375,7 +4111,7 @@ msgstr ""
 "ключ."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4405,26 +4141,6 @@ msgstr "Закритий ключ без назви"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Смарткартка без назви"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Від’єднайте інші ключі безпеки й повторіть спробу."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Непідтримуваний формат запису пароля FIDO2 {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Непідтримуваний захист запису пароля FIDO2 «{}»."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Непідтримуваний формат закритого ключа FIDO2 {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Непідтримуваний захист закритого ключа FIDO2 «{}»."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5174,10 +4890,6 @@ msgstr "{fingerprint} — апаратний ключ"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} — захищено паролем"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} — захищено ключем безпеки"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} — токен безпеки"
@@ -5185,10 +4897,6 @@ msgstr "{fingerprint} — токен безпеки"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} — токен безпеки ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5242,10 +4950,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

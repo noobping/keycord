@@ -269,10 +269,6 @@ msgstr "Προστέθηκαν τα πεδία προτύπου που έλει�
 msgid "Adding hardware key"
 msgstr "Προσθήκη κλειδιού υλικού"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Να επιτρέπεται η πρόσβαση σε κλειδιά ασφαλείας USB (Πειραματικό FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Να επιτρέπεται η πρόσβαση σε εφαρμογές αυτής της συσκευής"
@@ -482,13 +478,6 @@ msgstr "Επιλέξτε ένα τοπικό αρχείο."
 msgid "Choose a local folder."
 msgstr "Επιλέξτε έναν τοπικό φάκελο."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr ""
-"Επιλέξτε αρχείο ιδιωτικού κλειδιού ή πειραματικό αρχείο ιδιωτικού κλειδιού "
-"με προστασία FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -650,38 +639,18 @@ msgstr "Υποβλήθηκε"
 msgid "Committer"
 msgstr "Υποβάλλων"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Επιβεβαίωση νέου PIN κλειδιού ασφαλείας"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Επιβεβαίωση κωδικού πρόσβασης"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Επιβεβαιώστε το νέο PIN του κλειδιού ασφαλείας."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Συνδέστε πρώτα ένα κλειδί υλικού."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Πριν συνεχίσετε, συνδέστε μόνο ένα κλειδί ασφαλείας FIDO2."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Πριν το προσθέσετε, συνδέστε μόνο ένα κλειδί υλικού."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Συνδέστε το κλειδί ασφαλείας FIDO2 και δοκιμάστε ξανά."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Συνδέστε πρώτα το κλειδί ασφαλείας FIDO2."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -691,18 +660,9 @@ msgstr "Συνδέστε το κλειδί υλικού και δοκιμάστ�
 msgid "Connect the hardware key first."
 msgstr "Συνδέστε πρώτα το κλειδί υλικού."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Συνδέστε το αντίστοιχο κλειδί ασφαλείας FIDO2."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Συνδέστε το αντίστοιχο κλειδί υλικού πριν από την εισαγωγή του."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Περιβάλλον"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -725,10 +685,6 @@ msgstr "Αντιγραφή θωρακισμένου ιδιωτικού κλει�
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Αντιγραφή θωρακισμένου δημόσιου κλειδιού"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Αντιγραφή πειραματικού ιδιωτικού κλειδιού με προστασία FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -820,12 +776,6 @@ msgstr ""
 msgid "Couldn't create the store."
 msgstr "Δεν ήταν δυνατή η δημιουργία της αποθήκης."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr ""
-"Δεν ήταν δυνατή η αποκρυπτογράφηση των δεδομένων που είναι κρυπτογραφημένα "
-"με FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -852,7 +802,6 @@ msgstr "Δεν ήταν δυνατή η δημιουργία του κλειδι
 msgid "Couldn't generate the hardware signing key"
 msgstr "Δεν ήταν δυνατή η δημιουργία του κλειδιού υπογραφής υλικού"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -878,10 +827,6 @@ msgstr "Δεν ήταν δυνατή η εισαγωγή των κωδικών �
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Δεν ήταν δυνατή η εισαγωγή του κλειδιού."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Δεν ήταν δυνατή η αρχικοποίηση του κλειδιού ασφαλείας FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1086,10 +1031,6 @@ msgstr ""
 "{fingerprint_for_failure} για την υπογραφή Git. Η συνέχεια θα γίνει χωρίς "
 "υπογραφή."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Δεν ήταν δυνατό το ξεκλείδωμα του κλειδιού ασφαλείας FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1115,10 +1056,6 @@ msgstr "Δεν ήταν δυνατή η επαλήθευση του PIN διαχ
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Δεν ήταν δυνατή η επαλήθευση του ζητούμενου PIN του κλειδιού υλικού"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Δημιουργήστε ένα νέο κλειδί με προστασία FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1322,12 +1259,6 @@ msgstr "Εισαγάγετε ηλεκτρονική διεύθυνση για τ
 msgid "Enter an email address."
 msgstr "Εισαγάγετε ηλεκτρονική διεύθυνση."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Εισαγάγετε το PIN του κλειδιού ασφαλείας FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1351,18 +1282,10 @@ msgstr "Εισαγάγετε τον κωδικό πρόσβασης του κλ�
 msgid "Enter the new hardware key PIN."
 msgstr "Εισαγάγετε το νέο PIN του κλειδιού υλικού."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Εισαγάγετε το νέο PIN του κλειδιού ασφαλείας."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Εισαγάγετε τον κωδικό πρόσβασης του ιδιωτικού κλειδιού."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Εισαγάγετε το PIN του κλειδιού ασφαλείας."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1371,17 +1294,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Ανάπτυξη του επεξεργαστή κωδικών πρόσβασης με ενέργειες εκκαθάρισης"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"Τα πειραματικά ιδιωτικά κλειδιά με προστασία FIDO2 χρειάζονται πρόσβαση σε "
-"συσκευές USB, ώστε το Keycord να μπορεί να χρησιμοποιεί ένα συνδεδεμένο "
-"κλειδί ασφαλείας για το ξεκλείδωμά τους. Επανεκκινήστε το Keycord αφού "
-"παραχωρήσετε την πρόσβαση."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1443,29 +1355,6 @@ msgstr "Εξάχθηκε {count} κωδικός πρόσβασης."
 msgid "Exported {count} passwords."
 msgstr "Εξάχθηκαν {count} κωδικοί πρόσβασης."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Δήλωση ιδιωτικού κλειδιού FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr ""
-"Η υποστήριξη ιδιωτικών κλειδιών FIDO2 είναι απενεργοποιημένη σε αυτή την "
-"έκδοση του Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Κλειδί ασφαλείας FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr ""
-"Η υποστήριξη FIDO2 είναι απενεργοποιημένη σε αυτή την έκδοση του Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Περίβλημα κειμένου FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr ""
@@ -1521,10 +1410,6 @@ msgstr "Απέτυχε η αποκωδικοποίηση της θωρακισμ
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Απέτυχε η αποκωδικοποίηση των αποκρυπτογραφημένων δεδομένων UTF-8"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Απέτυχε η παραγωγή επαρκών δεδομένων εξόδου HKDF."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1867,11 +1752,6 @@ msgstr "Διορθώθηκε η υπηρεσία αναζήτησης του GNO
 msgid "General"
 msgstr "Γενικά"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Δημιουργία κλειδιού με προστασία FIDO2 (Πειραματικό)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Δημιουργήστε ή εισαγάγετε ένα ιδιωτικό κλειδί."
@@ -1886,10 +1766,6 @@ msgstr "Δημιουργία κωδικού πρόσβασης"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Δημιουργία ιδιωτικού κλειδιού"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Δημιουργία κλειδιού με προστασία FIDO2 (Πειραματικό)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1935,18 +1811,6 @@ msgstr "Μετάβαση στην αρχική σελίδα"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Παραχώρηση"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Παραχώρηση πρόσβασης σε κλειδιά ασφαλείας USB (Πειραματικό FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"Παραχωρήστε πρώτα πρόσβαση σε κλειδιά ασφαλείας USB για τα πειραματικά "
-"ιδιωτικά κλειδιά με προστασία FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2238,18 +2102,6 @@ msgstr ""
 msgid "Integrated"
 msgstr "Integrated"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Μη έγκυρο αποτύπωμα σύνδεσης FIDO2 '{value}'."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Μη έγκυρη διαδρομή συσκευής FIDO2: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Μη έγκυρα κρυπτογραφημένα δεδομένα FIDO2."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2345,7 +2197,6 @@ msgstr ""
 msgid "Key file removed."
 msgstr "Το αρχείο κλειδιού αφαιρέθηκε."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Το κλειδί δημιουργήθηκε."
@@ -2368,10 +2219,6 @@ msgstr "Κωδικός πρόσβασης κλειδιού"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Ιδιωτικό κλειδί Keycord με προστασία FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2761,10 +2608,6 @@ msgstr "Νέο PIN κλειδιού υλικού"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Νέο στοιχείο"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Νέο PIN κλειδιού ασφαλείας"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3288,14 +3131,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Ακατέργαστο κείμενο"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"Ανάγνωση θωρακισμένου ιδιωτικού κλειδιού ή πειραματικού ιδιωτικού κλειδιού "
-"με προστασία FIDO2 από το πρόχειρο."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr ""
@@ -3398,12 +3233,6 @@ msgstr "Παραλήπτες από την ελεγχόμενη υποβολή"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Συνιστάται για νέες αποθήκες"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Επανασυνδέστε το κλειδί ασφαλείας FIDO2 και δοκιμάστε ξανά."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3758,10 +3587,6 @@ msgstr "Αναζήτηση τιμών"
 msgid "Search weak passwords"
 msgstr "Αναζήτηση αδύναμων κωδικών πρόσβασης"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN κλειδιού ασφαλείας"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3785,32 +3610,11 @@ msgstr ""
 msgid "Sequential characters"
 msgstr "Διαδοχικοί χαρακτήρες"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Ορίστε πρώτα PIN στο κλειδί ασφαλείας FIDO2."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Ορισμός PIN κλειδιού ασφαλείας"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Ορισμός PIN κλειδιού ασφαλείας (Πειραματικό FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Ρύθμιση νέου κλειδιού υλικού (Πειραματικό)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr ""
-"Ο ορισμός PIN κλειδιού ασφαλείας FIDO2 υποστηρίζεται μόνο σε Linux σε αυτή "
-"την έκδοση."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3922,11 +3726,6 @@ msgstr "Ο συγχρονισμός της αποθήκης σταμάτησε �
 msgid "Store synced."
 msgstr "Η αποθήκη συγχρονίστηκε."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Το αποθηκευμένο PIN FIDO2 δεν είναι έγκυρο UTF-8: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3943,14 +3742,6 @@ msgstr ""
 msgid "Switch Backend to Host to use pass import."
 msgstr ""
 "Αλλάξτε το σύστημα υποστήριξης σε Host για να χρησιμοποιήσετε το pass import."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr ""
-"Αλλάξτε στο σύστημα υποστήριξης Integrated για να χρησιμοποιήσετε "
-"πειραματικά ιδιωτικά κλειδιά με προστασία FIDO2."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3989,32 +3780,6 @@ msgstr "Συγχρονισμός αποθηκών"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Επεξεργαστής κειμένου"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr ""
-"Αυτό το κλειδί ασφαλείας FIDO2 δεν υποστηρίζει την επέκταση hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Αυτό το κλειδί ασφαλείας FIDO2 πρέπει να υποστηρίζει προστασία με PIN."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Δεν ήταν δυνατή η εξαγωγή αυτού του κλειδιού με προστασία FIDO2."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Τα δεδομένα αυτού του κλειδιού με προστασία FIDO2 δεν είναι έγκυρα."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Αυτό το κλειδί με προστασία FIDO2 δεν είναι έγκυρο."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -4115,19 +3880,6 @@ msgid "The CXP request does not offer the supported deflate archive format."
 msgstr ""
 "Το αίτημα CXP δεν προσφέρει την υποστηριζόμενη μορφή συμπιεσμένου αρχείου "
 "deflate."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr ""
-"Το PIN του κλειδιού ασφαλείας FIDO2 περιέχει μη υποστηριζόμενο byte NUL."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "Το PIN του κλειδιού ασφαλείας FIDO2 είναι λανθασμένο."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Το κλειδί ασφαλείας FIDO2 δεν επέστρεψε αναγνωριστικό διαπιστευτηρίου."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4239,10 +3991,6 @@ msgstr "Ο κωδικός πρόσβασης του ιδιωτικού κλει�
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Η διεργασία απογραφής ιδιωτικών κλειδιών σταμάτησε απροσδόκητα."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Τα δύο PIN του κλειδιού ασφαλείας δεν ταιριάζουν."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr ""
@@ -4313,10 +4061,6 @@ msgstr ""
 "Αυτές οι ρυθμίσεις χρησιμοποιούνται όταν δημιουργείτε ή αναδημιουργείτε έναν "
 "κωδικό πρόσβασης από τον επεξεργαστή."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Αυτό το κλειδί ασφαλείας FIDO2 δεν μπορεί να ανοίξει τα στοιχεία σας."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Αυτός ο κλάδος δεν διαθέτει υποβολές για έλεγχο."
@@ -4385,14 +4129,6 @@ msgstr "Αυτό το κλειδί δεν μπορεί να ανοίξει τα 
 msgid "This private key is password protected."
 msgstr "Αυτό το ιδιωτικό κλειδί προστατεύεται με κωδικό πρόσβασης."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Αυτό το ιδιωτικό κλειδί απαιτεί κλειδί ασφαλείας FIDO2."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Αυτό το ιδιωτικό κλειδί απαιτεί διαφορετική μέθοδο ξεκλειδώματος."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Αυτό το ιδιωτικό κλειδί απαιτεί κλειδί υλικού."
@@ -4428,16 +4164,6 @@ msgstr "Εργαλεία"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Σύνολο χαρακτήρων"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Αγγίξτε το κλειδί ασφαλείας FIDO2 και δοκιμάστε ξανά."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Αγγίξτε το κλειδί σας αν αναβοσβήνει."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4535,7 +4261,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Ξεκλειδώστε άλλο επιλεγμένο ιδιωτικό κλειδί πριν αποεπιλέξετε αυτό."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4565,26 +4291,6 @@ msgstr "Ανώνυμο ιδιωτικό κλειδί"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Ανώνυμη έξυπνη κάρτα"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Αποσυνδέστε τα άλλα κλειδιά ασφαλείας και δοκιμάστε ξανά."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Μη υποστηριζόμενη μορφή καταχώρισης κωδικού πρόσβασης FIDO2 {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Μη υποστηριζόμενη προστασία καταχώρισης κωδικού πρόσβασης FIDO2 '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Μη υποστηριζόμενη μορφή ιδιωτικού κλειδιού FIDO2 {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Μη υποστηριζόμενη προστασία ιδιωτικού κλειδιού FIDO2 '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5345,10 +5051,6 @@ msgstr "{fingerprint} - Κλειδί υλικού"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - Με προστασία κωδικού πρόσβασης"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - Με προστασία κλειδιού ασφαλείας"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Διακριτικό ασφαλείας"
@@ -5356,10 +5058,6 @@ msgstr "{fingerprint} - Διακριτικό ασφαλείας"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Διακριτικό ασφαλείας ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5413,10 +5111,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

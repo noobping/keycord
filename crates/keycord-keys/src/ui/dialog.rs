@@ -42,7 +42,6 @@ fn private_key_unlock_row_title(kind: PrivateKeyUnlockKind) -> &'static str {
     match kind {
         PrivateKeyUnlockKind::Password => "Key password",
         PrivateKeyUnlockKind::HardwareOpenPgpCard => "Hardware key PIN",
-        PrivateKeyUnlockKind::Fido2SecurityKey => unreachable!("FIDO UI is dispatched first"),
     }
 }
 
@@ -57,7 +56,6 @@ fn private_key_unlock_dialog_error_message(
     match kind {
         PrivateKeyUnlockKind::Password => Some("Enter the key password."),
         PrivateKeyUnlockKind::HardwareOpenPgpCard => Some("Enter the hardware key PIN."),
-        PrivateKeyUnlockKind::Fido2SecurityKey => unreachable!("FIDO UI is dispatched first"),
     }
 }
 
@@ -176,25 +174,6 @@ pub fn present_private_key_unlock_dialog_with_close_handler<F, G>(
     F: Fn(PrivateKeyUnlockRequest) + 'static,
     G: Fn() + 'static,
 {
-    if matches!(kind, PrivateKeyUnlockKind::Fido2SecurityKey) {
-        #[cfg(feature = "fido-ui")]
-        {
-            keycord_fido::ui::present_pin_entry_dialog(
-                window,
-                title,
-                subtitle,
-                move |pin| on_submit(PrivateKeyUnlockRequest::Fido2(Some(pin))),
-                on_close,
-            );
-            return;
-        }
-        #[cfg(not(feature = "fido-ui"))]
-        {
-            on_close();
-            return;
-        }
-    }
-
     let on_submit = Rc::new(on_submit);
     let password_row = PasswordEntryRow::new();
     password_row.set_title(&gettext(private_key_unlock_row_title(kind)));
@@ -270,7 +249,6 @@ pub fn present_private_key_unlock_dialog_with_close_handler<F, G>(
             PrivateKeyUnlockKind::HardwareOpenPgpCard => {
                 PrivateKeyUnlockRequest::HardwarePin(input)
             }
-            PrivateKeyUnlockKind::Fido2SecurityKey => unreachable!("FIDO UI is dispatched first"),
         };
         on_submit_for_apply(request);
     });

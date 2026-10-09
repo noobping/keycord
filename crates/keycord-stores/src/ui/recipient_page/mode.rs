@@ -13,12 +13,11 @@ pub(super) fn current_selection_mode(
 pub(super) fn sync_store_recipients_mode_controls(
     state: &StoreRecipientsPageState,
     selection_mode: StoreRecipientsSelectionMode,
-    uses_integrated_backend: bool,
 ) {
     let show_standard_rows = selection_mode.allows_standard_recipients();
     state
         .key_management
-        .sync_recipient_action_visibility(show_standard_rows, uses_integrated_backend);
+        .sync_recipient_action_visibility(show_standard_rows);
 }
 
 fn toast_blocked_action(state: &StoreRecipientsPageState, message: Option<&'static str>) -> bool {

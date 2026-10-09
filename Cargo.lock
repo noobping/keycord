@@ -142,8 +142,6 @@ dependencies = [
  "cexpr",
  "clang-sys",
  "itertools 0.13.0",
- "log",
- "prettyplease",
  "proc-macro2",
  "quote",
  "regex",
@@ -846,21 +844,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e6853b52649d4ac5c0bd02320cddc5ba956bdb407c4b75a2c6b75bf51500f8c"
 dependencies = [
  "simd-adler32",
-]
-
-[[package]]
-name = "fido2-rs"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec2020dce2badb6a71e814707a38df0ccbe03d6644483b5dbaef5e99f4fcfb6f"
-dependencies = [
- "bitflags 2.13.1",
- "foreign-types",
- "libc",
- "libfido2-sys",
- "openssl",
- "thiserror 2.0.20",
- "zeroize",
 ]
 
 [[package]]
@@ -1897,7 +1880,6 @@ dependencies = [
  "dirs-next",
  "keycord-docs",
  "keycord-entries",
- "keycord-fido",
  "keycord-git",
  "keycord-keys",
  "keycord-lifecycle",
@@ -1948,27 +1930,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "keycord-fido"
-version = "0.9.13"
-dependencies = [
- "base64 0.23.1",
- "fido2-rs",
- "hmac 0.13.0",
- "keycord-runtime",
- "keycord-shell",
- "libadwaita",
- "libfido2-sys",
- "openssl",
- "rand 0.10.2",
- "secrecy",
- "serde",
- "sha2 0.11.0",
- "thiserror 2.0.20",
- "toml 1.1.4+spec-1.1.0",
- "zeroize",
-]
-
-[[package]]
 name = "keycord-git"
 version = "0.9.13"
 dependencies = [
@@ -1988,7 +1949,6 @@ dependencies = [
  "anyhow",
  "card-backend-pcsc",
  "dirs-next",
- "keycord-fido",
  "keycord-preferences",
  "keycord-runtime",
  "keycord-shell",
@@ -2201,22 +2161,6 @@ name = "libc"
 version = "0.2.189"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2"
-
-[[package]]
-name = "libfido2-sys"
-version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c06f689efa98c9256934c671255adb58678c382f1ef14296ecb22d5de56902f"
-dependencies = [
- "anyhow",
- "bindgen",
- "cfg-if",
- "libz-sys",
- "openssl-sys",
- "pkg-config",
- "regex",
- "vcpkg",
-]
 
 [[package]]
 name = "libgit2-sys"
@@ -2796,16 +2740,6 @@ name = "precomputed-hash"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "925383efa346730478fb4838dbe9137d2a47675ad789c546d150a6e1dd4ab31c"
-
-[[package]]
-name = "prettyplease"
-version = "0.2.37"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "479ca8adacdd7ce8f1fb39ce9ecccbfe93a3f1344b3d0d97f20bc0196208f62b"
-dependencies = [
- "proc-macro2",
- "syn 2.0.119",
-]
 
 [[package]]
 name = "proc-macro-crate"

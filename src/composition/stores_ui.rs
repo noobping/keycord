@@ -137,10 +137,6 @@ pub fn key_management_ui_ports() -> KeyManagementUiPorts {
         sync_optional_smartcard_access: Rc::new(
             crate::composition::host_access::append_optional_smartcard_access_group_row,
         ),
-        #[cfg(feature = "fidokey")]
-        sync_optional_fido_access: Rc::new(
-            crate::composition::host_access::append_optional_fido2_access_group_row,
-        ),
     }
 }
 

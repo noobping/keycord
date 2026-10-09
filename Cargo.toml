@@ -14,7 +14,6 @@ members = [
     "crates/keycord-architecture",
     "crates/keycord-docs",
     "crates/keycord-entries",
-    "crates/keycord-fido",
     "crates/keycord-git",
     "crates/keycord-keys",
     "crates/keycord-lifecycle",
@@ -39,7 +38,6 @@ repository = "https://github.com/noobping/keycord"
 [workspace.dependencies]
 keycord-docs = { path = "crates/keycord-docs", default-features = false }
 keycord-entries = { path = "crates/keycord-entries", default-features = false }
-keycord-fido = { path = "crates/keycord-fido", default-features = false }
 keycord-git = { path = "crates/keycord-git", default-features = false }
 keycord-keys = { path = "crates/keycord-keys", default-features = false }
 keycord-lifecycle = { path = "crates/keycord-lifecycle", default-features = false }
@@ -58,27 +56,16 @@ audit = [
 ]
 default = []
 docs = ["keycord-docs/docs"]
-fidokey = [
-    "dep:keycord-fido",
-    "keycord-fido/native-transport",
-    "keycord-fido/ui",
-    "keycord-keys/fido-ui",
-]
-fidopin = [
-    "fidokey",
-    "keycord-fido/pin-setup",
-    "keycord-keys/fidopin",
-]
 flatpak = [
     "docs",
     "audit",
     "smartcard",
+    "passkey",
     "logging",
     "keycord-preferences/flatpak",
     "keycord-git/flatpak",
     "keycord-lifecycle/flatpak",
     "keycord-keys/flatpak",
-    "keycord-fido?/flatpak",
     "keycord-runtime/flatpak",
 ]
 hardwarekey = ["smartcard", "keycord-keys/hardwarekey"]
@@ -92,6 +79,7 @@ setup = [
     "docs",
     "audit",
     "smartcard",
+    "passkey",
     "logging",
     "keycord-lifecycle/setup",
 ]
@@ -100,7 +88,6 @@ smartcard = ["keycord-keys/smartcard"]
 [dependencies]
 keycord-docs = { workspace = true, default-features = false, features = ["ui"] }
 keycord-entries = { workspace = true, features = ["ui"] }
-keycord-fido = { workspace = true, optional = true, default-features = false }
 keycord-git = { workspace = true, features = ["ui"] }
 keycord-lifecycle = { workspace = true, features = ["ui"] }
 keycord-keys = { workspace = true, features = ["ui"] }
@@ -117,7 +104,6 @@ dirs-next = "2.0.0"
 keycord-lifecycle = { workspace = true, features = ["build-support"] }
 
 [dev-dependencies]
-keycord-fido = { workspace = true, features = ["test-support"] }
 keycord-keys = { workspace = true, features = ["test-support"] }
 ripasso = "0.8.0"
 secrecy = "0.10.3"

@@ -1,11 +1,9 @@
-//! Connects optional host, smartcard, and FIDO permission UI to application settings.
+//! Connects optional host and smartcard permission UI to application settings.
 
 use adw::prelude::*;
 
 #[cfg(feature = "flatpak")]
 use adw::{ActionRow, PreferencesGroup, ToastOverlay};
-#[cfg(all(feature = "flatpak", feature = "fidokey"))]
-use keycord_fido::has_usb_permission;
 #[cfg(feature = "flatpak")]
 use keycord_keys::has_smartcard_permission;
 #[cfg(feature = "flatpak")]
@@ -137,36 +135,6 @@ pub fn append_optional_smartcard_access_group_row(
     keycord_keys::ui::sync_hardware_key_access(hardware_rows, enabled);
 }
 
-#[cfg(all(feature = "flatpak", feature = "fidokey"))]
-pub fn append_optional_fido2_access_group_row(
-    group: &PreferencesGroup,
-    overlay: &ToastOverlay,
-    fido2_rows: &[&ActionRow],
-    enabled: bool,
-) {
-    let preferences = Preferences::new();
-    let ports = keycord_fido::ui::UsbAccessPorts {
-        app_id: APP_ID.to_string(),
-        usb_access_granted: has_usb_permission(),
-        host_command_access: has_host_permission(),
-        notice_hidden: preferences.is_notice_hidden(keycord_fido::ui::USB_ACCESS_NOTICE_ID),
-        persist_hidden_notice: Rc::new(persist_hidden_notice),
-        run_permission_command: Arc::new(run_fido2_permission_command),
-        copy_text: Rc::new(copy_permission_command),
-    };
-    keycord_fido::ui::sync_generation_access(group, overlay, fido2_rows, enabled, Some(&ports));
-}
-
-#[cfg(all(not(feature = "flatpak"), feature = "fidokey"))]
-pub fn append_optional_fido2_access_group_row(
-    group: &adw::PreferencesGroup,
-    overlay: &adw::ToastOverlay,
-    fido2_rows: &[&adw::ActionRow],
-    enabled: bool,
-) {
-    keycord_fido::ui::sync_generation_access(group, overlay, fido2_rows, enabled, None);
-}
-
 #[cfg(feature = "flatpak")]
 fn persist_hidden_notice(notice_id: &str) -> Result<(), String> {
     Preferences::new()
@@ -198,10 +166,4 @@ fn run_flatpak_permission_command(args: &[&str], context: &str) -> Result<(), St
 fn run_flatpak_permission_command_owned(args: &[String], context: &str) -> Result<(), String> {
     let args = args.iter().map(String::as_str).collect::<Vec<_>>();
     run_flatpak_permission_command(&args, context)
-}
-
-#[cfg(all(feature = "flatpak", feature = "fidokey"))]
-fn run_fido2_permission_command() -> Result<(), String> {
-    let args = keycord_fido::ui::flatpak_usb_override_args(APP_ID);
-    run_flatpak_permission_command_owned(&args, keycord_fido::ui::USB_PERMISSION_CONTEXT)
 }

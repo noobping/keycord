@@ -74,10 +74,6 @@ const WINDOW_UI_FRAGMENTS: &[(&str, &str)] = &[
         "crates/keycord-keys/data/window-recipient-actions.fragment.ui",
     ),
     (
-        "fido-generation-row",
-        "crates/keycord-fido/data/window-generation-row.fragment.ui",
-    ),
-    (
         "git-store-page",
         "crates/keycord-git/data/window-store-page.fragment.ui",
     ),
@@ -447,7 +443,7 @@ mod tests {
     }
 
     #[test]
-    fn composed_window_inventory_matches_the_pre_split_template() {
+    fn composed_window_inventory_matches_supported_controls() {
         let composed = read_composed_window_ui(&application_root()).unwrap();
         let ids = quoted_values_after(&composed, "id=\"");
         let mut actions = element_text_values_after(&composed, "<property name=\"action-name\">");
@@ -457,15 +453,15 @@ mod tests {
         ));
         let translatable = translatable_text_values(&composed);
 
-        // Captured from the single Shell-owned template immediately before it was split.
-        assert_eq!((ids.len(), fnv1a(&ids)), (221, 310_705_445_291_682_508));
+        // Reviewed inventory of supported controls, actions, and translatable copy.
+        assert_eq!((ids.len(), fnv1a(&ids)), (220, 212_039_243_632_822_698));
         assert_eq!(
             (actions.len(), fnv1a(&actions)),
             (22, 11_318_150_571_725_618_109)
         );
         assert_eq!(
             (translatable.len(), fnv1a(&translatable)),
-            (213, 135_236_841_047_613_721)
+            (211, 11_326_204_532_163_749_368)
         );
     }
 }

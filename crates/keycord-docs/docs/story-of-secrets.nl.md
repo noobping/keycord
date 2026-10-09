@@ -94,22 +94,7 @@ Bij schrijven schakelt de [geïntegreerde cryptocontext](../../keycord-entries/s
 
 Bij lezen draait dezelfde module dat proces voor elke ontvanger in omgekeerde volgorde terug. Als ook maar een vereiste sleutel ontbreekt, incompatibel is of nog vergrendeld is, gaat het geheim niet open.
 
-## Verhaal 5: Experimentele met FIDO2 beveiligde privésleutel
-
-De flow voor met FIDO2 beveiligde privésleutels begint in de [controller voor privésleutelbeheer](../../keycord-keys/src/ui/key_management/private.rs) van Keys. Apparaattransport, binding en enveloplogica zitten in de aparte [FIDO-crate](../../keycord-fido/src), Keys past die service aan via zijn [FIDO-integratie](../../keycord-keys/src/fido2) en de beveiligde privésleutelbytes worden opgeslagen via de [opslag voor beheerde sleutels](../../keycord-keys/src/store/storage.rs).
-
-Wanneer de gebruiker een experimentele met FIDO2 beveiligde privésleutel genereert:
-
-1. registreert Keycord een `hmac-secret`-credential tegen de Keycord RP ID
-2. maakt het een `FidoBindingDescriptor` met de sleutelvingerafdruk, weergavelabel en credential-id
-3. slaat het die descriptor in het privésleutelmanifest op naast het beveiligde sleutelmateriaal
-4. versleutelt het de beveiligingslaag van de privésleutel met het FIDO2 direct required-layer-formaat
-
-Die descriptor is metadata voor privésleutels. Het is geen opslagontvanger, hij wordt niet naar `.gpg-id` geschreven en Keycord schrijft geen FIDO2-sidecarbestand meer.
-
-Ontgrendelen blijft sessiegebaseerd. De [ontgrendel-UI](../../keycord-keys/src/ui/unlock.rs) van Keys kan om een FIDO2-PIN vragen, waarna de [ontgrendellogica voor beheerde sleutels](../../keycord-keys/src/store/unlock.rs) de FIDO-service vraagt het apparaat te valideren. De [FIDO-cache](../../keycord-fido/src/cache.rs) bewaart de PIN voor de sessie, terwijl de [Keys-cache](../../keycord-keys/src/cache.rs) het ontgrendelde OpenPGP-certificaat bewaart. Eenmaal ontgrendeld doet die beheerde sleutel mee in de normale ontvangerflow hierboven.
-
-## Verhaal 6: Een geheim wordt geopend
+## Verhaal 5: Een geheim wordt geopend
 
 Het openen van een wachtwoordinvoer begint in de [controller voor de wachtwoordpagina](../../keycord-entries/src/ui/page/mod.rs) van Entries. De pagina toont een laadstatus en roept daarna `read_password_entry_with_progress` aan.
 
@@ -124,7 +109,7 @@ Als het item opent, gaat het pass-bestand in platte tekst terug naar de gestruct
 
 Als de sleutel vergrendeld is, geeft Keycord een getypeerde fout door vanuit de [fouttypen van Entries](../../keycord-entries/src/error.rs), zodat de UI de ontbrekende ontgrendelstap kan vragen in plaats van alleen te falen.
 
-## Verhaal 7: Het wachtwoord kopiëren
+## Verhaal 6: Het wachtwoord kopiëren
 
 De kopieerknop op elke wachtwoordrij wordt gekoppeld in de [UI voor lijstrijen](../../keycord-entries/src/ui/list/row.rs) van Entries. Die roept de [klembordcontroller](../../keycord-entries/src/clipboard.rs) van Entries aan.
 
@@ -136,4 +121,4 @@ Vanaf daar is het verhaal kort:
 
 Het belangrijke detail is dat kopiëren nog steeds een ontsleuteloperatie is. Het wachtwoord wordt nergens anders in de app als kant-en-klare platte tekst voor kopiëren gecachet. Keycord gaat opnieuw door hetzelfde leespad, neemt de eerste regel en geeft die tekst aan het klembord.
 
-Als de Host-backend actief is, neemt de [klembordcontroller](../../keycord-entries/src/clipboard.rs) een andere poort die wordt geleverd door de [Entries-compositie-adapter](../../../src/composition/entries_ui.rs) in de root, die vervolgens `pass -c` aanroept. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels, experimentele gelaagde versleuteling en experimenteel FIDO2-gedrag leeft.
+Als de Host-backend actief is, neemt de [klembordcontroller](../../keycord-entries/src/clipboard.rs) een andere poort die wordt geleverd door de [Entries-compositie-adapter](../../../src/composition/entries_ui.rs) in de root, die vervolgens `pass -c` aanroept. De rest van deze handleiding volgt het geïntegreerde pad, omdat daar het beheer van opslagsleutels en experimentele gelaagde versleuteling plaatsvinden.

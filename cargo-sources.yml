@@ -970,16 +970,6 @@
   dest-filename: .cargo-checksum.json
 - type: archive
   archive-type: tar-gzip
-  url: https://static.crates.io/crates/fido2-rs/fido2-rs-0.5.0.crate
-  sha256: ec2020dce2badb6a71e814707a38df0ccbe03d6644483b5dbaef5e99f4fcfb6f
-  dest: cargo/vendor/fido2-rs-0.5.0
-- type: inline
-  contents: '{"package": "ec2020dce2badb6a71e814707a38df0ccbe03d6644483b5dbaef5e99f4fcfb6f",
-    "files": {}}'
-  dest: cargo/vendor/fido2-rs-0.5.0
-  dest-filename: .cargo-checksum.json
-- type: archive
-  archive-type: tar-gzip
   url: https://static.crates.io/crates/field-offset/field-offset-0.3.6.crate
   sha256: 38e2275cc4e4fc009b0669731a1e5ab7ebf11f469eaede2bab9309a5b4d6057f
   dest: cargo/vendor/field-offset-0.3.6
@@ -1980,16 +1970,6 @@
   dest-filename: .cargo-checksum.json
 - type: archive
   archive-type: tar-gzip
-  url: https://static.crates.io/crates/libfido2-sys/libfido2-sys-0.5.1.crate
-  sha256: 6c06f689efa98c9256934c671255adb58678c382f1ef14296ecb22d5de56902f
-  dest: cargo/vendor/libfido2-sys-0.5.1
-- type: inline
-  contents: '{"package": "6c06f689efa98c9256934c671255adb58678c382f1ef14296ecb22d5de56902f",
-    "files": {}}'
-  dest: cargo/vendor/libfido2-sys-0.5.1
-  dest-filename: .cargo-checksum.json
-- type: archive
-  archive-type: tar-gzip
   url: https://static.crates.io/crates/libgit2-sys/libgit2-sys-0.18.7+1.9.6.crate
   sha256: 23c7391e4b9f4ffab1a624223cc1d7385ff9a678f490768add717de7ea2f4d89
   dest: cargo/vendor/libgit2-sys-0.18.7+1.9.6
@@ -2597,16 +2577,6 @@
   contents: '{"package": "925383efa346730478fb4838dbe9137d2a47675ad789c546d150a6e1dd4ab31c",
     "files": {}}'
   dest: cargo/vendor/precomputed-hash-0.1.1
-  dest-filename: .cargo-checksum.json
-- type: archive
-  archive-type: tar-gzip
-  url: https://static.crates.io/crates/prettyplease/prettyplease-0.2.37.crate
-  sha256: 479ca8adacdd7ce8f1fb39ce9ecccbfe93a3f1344b3d0d97f20bc0196208f62b
-  dest: cargo/vendor/prettyplease-0.2.37
-- type: inline
-  contents: '{"package": "479ca8adacdd7ce8f1fb39ce9ecccbfe93a3f1344b3d0d97f20bc0196208f62b",
-    "files": {}}'
-  dest: cargo/vendor/prettyplease-0.2.37
   dest-filename: .cargo-checksum.json
 - type: archive
   archive-type: tar-gzip

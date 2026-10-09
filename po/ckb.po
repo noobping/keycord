@@ -237,10 +237,6 @@ msgstr "خانە نەبووەکانی داڕێژە زیاد کران."
 msgid "Adding hardware key"
 msgstr "کلیلی ڕەقەواڵە زیاد دەکرێت"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "ڕێگەدان بە دەستگەیشتنی کلیلی پاراستنی USB (FIDO2ـی تاقیکاری)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "ڕێگەدان بە دەستگەیشتن بە بەرنامەکانی ئەم ئامێرە"
@@ -438,10 +434,6 @@ msgstr "پەڕگەیەکی ناوخۆیی هەڵبژێرە."
 msgid "Choose a local folder."
 msgstr "بوخچەیەکی ناوخۆیی هەڵبژێرە."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "پەڕگەی کلیلی تایبەت یان پەڕگەی کلیلی تایبەتی تاقیکاری کە بە FIDO2 پارێزراوە هەڵبژێرە."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -572,38 +564,18 @@ msgstr "کۆمیت کرا"
 msgid "Committer"
 msgstr "کۆمیتکەر"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "دووپاتکردنەوەی PINـی نوێی کلیلی پاراستن"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "دووپاتکردنەوەی تێپەڕەوشە"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "PINـی نوێی کلیلی پاراستن دووپات بکەرەوە."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "سەرەتا کلیلی ڕەقەواڵەیەک پەیوەست بکە."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "پێش بەردەوامبوون تەنها یەک کلیلی پاراستنی FIDO2 پەیوەست بکە."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "پێش زیادکردن تەنها یەک کلیلی ڕەقەواڵە پەیوەست بکە."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "کلیلی پاراستنی FIDO2 پەیوەست بکە و دووبارە هەوڵ بدە."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "سەرەتا کلیلی پاراستنی FIDO2 پەیوەست بکە."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -613,18 +585,9 @@ msgstr "کلیلی ڕەقەواڵە پەیوەست بکە و دووبارە هە
 msgid "Connect the hardware key first."
 msgstr "سەرەتا کلیلی ڕەقەواڵە پەیوەست بکە."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "کلیلی پاراستنی FIDO2ـی هاوتا پەیوەست بکە."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "پێش هێنانی، کلیلی ڕەقەواڵەی هاوتا پەیوەست بکە."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "چوارچێوە"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -647,10 +610,6 @@ msgstr "لەبەرگرتنەوەی کلیلی تایبەتی پۆشراو"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "لەبەرگرتنەوەی کلیلی گشتیی پۆشراو"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "لەبەرگرتنەوەی کلیلی تایبەتی تاقیکاریی پارێزراو بە FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -739,10 +698,6 @@ msgstr "نەتوانرا بڕوانامەی کلیلی گشتی لەسەر کل�
 msgid "Couldn't create the store."
 msgstr "نەتوانرا کۆگاکە دروست بکرێت."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "نەتوانرا کۆدی زانیارییە کۆدکراوەکانی FIDO2 بکرێتەوە."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -769,7 +724,6 @@ msgstr "نەتوانرا کلیلی کردنەوەی کۆدی ڕەقەواڵە �
 msgid "Couldn't generate the hardware signing key"
 msgstr "نەتوانرا کلیلی واژۆکردنی ڕەقەواڵە دروست بکرێت"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -795,10 +749,6 @@ msgstr "نەتوانرا تێپەڕەوشەکان بهێنرێن."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "نەتوانرا کلیلەکە بهێنرێت."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "نەتوانرا کلیلی پاراستنی FIDO2 دەستپێ بکرێت."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -989,10 +939,6 @@ msgstr "نەتوانرا کۆگاکان هاوکات بکرێن."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "نەتوانرا کلیلی تایبەتی {fingerprint_for_failure} بۆ واژۆکردنی Git بکرێتەوە. بەبێ واژۆ بەردەوام دەبێت."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "نەتوانرا کلیلی پاراستنی FIDO2 بکرێتەوە."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1018,10 +964,6 @@ msgstr "نەتوانرا PINـی بەڕێوەبەری کلیلی ڕەقەواڵ�
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "نەتوانرا PINـی داواکراوی کلیلی ڕەقەواڵە بسەلمێنرێت"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "کلیلێکی نوێی پارێزراو بە FIDO2 دروست بکە."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1208,12 +1150,6 @@ msgstr "ناونیشانی ئیمەیڵ بۆ کلیلی تایبەت بنووس�
 msgid "Enter an email address."
 msgstr "ناونیشانی ئیمەیڵ بنووسە."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "PINـی کلیلی پاراستنی FIDO2 بنووسە."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1237,18 +1173,10 @@ msgstr "تێپەڕەوشەی کلیلەکە بنووسە."
 msgid "Enter the new hardware key PIN."
 msgstr "PINـی نوێی کلیلی ڕەقەواڵە بنووسە."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "PINـی نوێی کلیلی پاراستن بنووسە."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "تێپەڕەوشەی کلیلی تایبەت بنووسە."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "PINـی کلیلی پاراستن بنووسە."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1257,10 +1185,6 @@ msgstr "دەربازبوون"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "فراوانکردنی دەستکاریکەری تێپەڕەوشە بە کردارەکانی پاککردنەوە"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "کلیلە تایبەتە تاقیکارییە پارێزراوەکانی FIDO2 پێویستیان بە دەستگەیشتن بە ئامێری USB هەیە، پێش ئەوەی Keycord بتوانێت بە کلیلی پاراستنی پەیوەستکراو کلیلە تایبەتە پارێزراوەکان بکاتەوە. دوای ڕێگەدان بە دەستگەیشتن، Keycord دووبارە دەست پێ بکەرەوە."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1310,26 +1234,6 @@ msgstr "{count} تێپەڕەوشە هەناردە کرا."
 msgid "Exported {count} passwords."
 msgstr "{count} تێپەڕەوشە هەناردە کران."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "مانیفێستی کلیلی تایبەتی FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "پشتگیریی کلیلی تایبەتی FIDO2 لەم وەشانی Keycordـدا ناچالاکە."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "کلیلی پاراستنی FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "پشتگیریی FIDO2 لەم وەشانی Keycordـدا ناچالاکە."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "پاکەتی دەقی FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "دابینکردنی بوخچەی تایبەتیی ئامادەکاریی نوێکاریی Linux سەرکەوتوو نەبوو."
@@ -1377,10 +1281,6 @@ msgstr "کردنەوەی کۆدی واژۆی پۆشراو سەرکەوتوو ن�
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "خوێندنەوەی زانیاریی UTF-8 کە کۆدەکەی کراوەتەوە سەرکەوتوو نەبوو"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "بەدەستهێنانی دەرچووی پێویستی HKDF سەرکەوتوو نەبوو."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1684,11 +1584,6 @@ msgstr "دابینکەری گەڕانی GNOME چاک کرایەوە."
 msgid "General"
 msgstr "گشتی"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "دروستکردنی کلیلی پارێزراو بە FIDO2 (تاقیکاری)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "کلیلێکی تایبەت دروست بکە یان بهێنە."
@@ -1703,10 +1598,6 @@ msgstr "دروستکردنی تێپەڕەوشە"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "دروستکردنی کلیلی تایبەت"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "کلیلی پارێزراو بە FIDO2 دروست دەکرێت (تاقیکاری)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1752,14 +1643,6 @@ msgstr "بڕۆ بۆ سەرەتا"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "ڕێگەدان"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "ڕێگەدان بە دەستگەیشتنی کلیلی پاراستنی USB (FIDO2ـی تاقیکاری)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "سەرەتا ڕێگە بە دەستگەیشتنی کلیلی پاراستنی USB بدە بۆ کلیلە تایبەتە تاقیکارییە پارێزراوەکانی FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2023,18 +1906,6 @@ msgstr "دامەزراندنی نوێکارییەکە Keycord دادەخات. گ
 msgid "Integrated"
 msgstr "ناوخۆیی"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "جێپەنجەی بەستنی FIDO2ـی «{value}» نادروستە."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "ڕێڕەوی ئامێری FIDO2 نادروستە: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "زانیارییە کۆدکراوەکانی FIDO2 نادروستن."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2117,7 +1988,6 @@ msgstr "تا هەموو کلیلە تایبەتە هەڵبژێردراوەکان
 msgid "Key file removed."
 msgstr "پەڕگەی کلیل لابرا."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "کلیل دروست کرا."
@@ -2140,10 +2010,6 @@ msgstr "تێپەڕەوشەی کلیل"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "کلیلی تایبەتی Keycord کە بە FIDO2 پارێزراوە"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2457,10 +2323,6 @@ msgstr "PINـی نوێی کلیلی ڕەقەواڵە"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "بڕگەی نوێ"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "PINـی نوێی کلیلی پاراستن"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2942,10 +2804,6 @@ msgstr "ناسنامەی RP"
 msgid "Raw text"
 msgstr "دەقی سادە"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "کلیلێکی تایبەتی پۆشراو یان کلیلێکی تایبەتی تاقیکاری کە بە FIDO2 پارێزراوە لە کلیپبۆرد بخوێنەوە."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "ڕێڕەوە گۆڕاوەکانی کۆمیتی {oid}ـی Gitـی کۆگای تێپەڕەوشە بخوێنەوە"
@@ -3033,12 +2891,6 @@ msgstr "وەرگرەکانی کۆمیتە پشکنراوەکە"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "بۆ کۆگای نوێ پێشنیار دەکرێت"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "کلیلی پاراستنی FIDO2 دووبارە پەیوەست بکە و هەوڵ بدەرەوە."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3352,10 +3204,6 @@ msgstr "لە بەهاکان بگەڕێ"
 msgid "Search weak passwords"
 msgstr "بۆ تێپەڕەوشە لاوازەکان بگەڕێ"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PINـی کلیلی پاراستن"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3377,29 +3225,11 @@ msgstr "ئەو کلیلە تایبەتانە هەڵبژێرە کە دەتوان�
 msgid "Sequential characters"
 msgstr "پیتە یەکلەپاشیەکەکان"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "سەرەتا PINـێک بۆ کلیلی پاراستنی FIDO2 دابنێ."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "PINـی کلیلی پاراستن دابنێ"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "PINـی کلیلی پاراستن دابنێ (FIDO2ـی تاقیکاری)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "کلیلی ڕەقەواڵەی نوێ ڕێک بخە (تاقیکاری)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "دانانی PIN بۆ کلیلی پاراستنی FIDO2 لەم وەشانە تەنها لە Linux پشتگیری دەکرێت."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3511,11 +3341,6 @@ msgstr "هاوکاتکردنی کۆگا بە شێوەیەکی چاوەڕوانن
 msgid "Store synced."
 msgstr "کۆگا هاوکات کرا."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "PINـی FIDO2ـی پاشەکەوتکراو UTF-8ـی دروست نییە: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3529,10 +3354,6 @@ msgstr "بەکئەند بگۆڕە بۆ خانەخوێ تا کۆگایەک لە �
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "بەکئەند بگۆڕە بۆ خانەخوێ تا هێنانی pass بەکاربهێنیت."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "بگۆڕە بۆ بەکئەندی ناوخۆیی تا کلیلە تایبەتە تاقیکارییە پارێزراوەکان بە FIDO2 بەکاربهێنیت."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3566,31 +3387,6 @@ msgstr "کۆگاکان هاوکات دەکرێن"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "دەستکاریکەری دەق"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "ئەو کلیلی پاراستنی FIDO2ـە پشتگیری پێوەکراوی hmac-secret ناکات."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "ئەو کلیلی پاراستنی FIDO2ـە دەبێت پشتگیری پاراستن بە PIN بکات."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "ئەو کلیلەی بە FIDO2 پارێزراوە نەتوانرا هەناردە بکرێت."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "زانیاریی ئەو کلیلەی بە FIDO2 پارێزراوە دروست نییە."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "ئەو کلیلەی بە FIDO2 پارێزراوە دروست نییە."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3677,18 +3473,6 @@ msgstr "داواکاریی CXP هیچ دۆخێکی ناسراوی HPKE لەخۆ�
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "داواکاریی CXP شێوازی پشتگیریکراوی ئەرشیفی deflate پێشکەش ناکات."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "PINـی کلیلی پاراستنی FIDO2 بایتێکی NULـی پشتگیرینەکراوی تێدایە."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "PINـی کلیلی پاراستنی FIDO2 هەڵەیە."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "کلیلی پاراستنی FIDO2 ناسنامەی ناسێنەری نەگەڕاندەوە."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3788,10 +3572,6 @@ msgstr "تێپەڕەوشەی کلیلی تایبەت هەڵەیە."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "پرۆسەی لیستکردنی کلیلە تایبەتەکان بە شێوەیەکی چاوەڕواننەکراو وەستا."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "PINـەکانی کلیلی پاراستن لەگەڵ یەک ناگونجێن."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "پەڕگەی هەڵبژێردراو داواکارییەکی ناوخۆیی پشتگیریکراوی کلیلی تێپەڕی CXP نییە. {error}"
@@ -3844,10 +3624,6 @@ msgstr "کاتێک تۆمارێکی نوێی تێپەڕەوشە دروست دە�
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "ئەم ڕێکخستنانە کاتێک بە دەستکاریکەر تێپەڕەوشە دروست دەکەیت یان لەنوێوە دروستی دەکەیت بەکاردێن."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "ئەم کلیلی پاراستنی FIDO2ـە ناتوانێت بڕگەکانت بکاتەوە."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "ئەم لقە هیچ کۆمیتێکی بەردەستی بۆ پشکنین نییە."
@@ -3896,14 +3672,6 @@ msgstr "ئەم کلیلە ناتوانێت بڕگەکانت بکاتەوە."
 msgid "This private key is password protected."
 msgstr "ئەم کلیلی تایبەتە بە تێپەڕەوشە پارێزراوە."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "ئەم کلیلی تایبەتە پێویستی بە کلیلی پاراستنی FIDO2 هەیە."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "ئەم کلیلی تایبەتە پێویستی بە ڕێگایەکی دیکەی کردنەوە هەیە."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "ئەم کلیلی تایبەتە پێویستی بە کلیلی ڕەقەواڵە هەیە."
@@ -3936,16 +3704,6 @@ msgstr "ئامرازەکان"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "کۆی پیتەکان"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "دەست لە کلیلی پاراستنی FIDO2 بدە و هەوڵ بدەرەوە."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "ئەگەر کلیلەکەت ترووسکایەوە دەستی لێ بدە."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4038,7 +3796,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "پێش پاککردنەوەی ئەمە کلیلێکی تایبەتی هەڵبژێردراوی دیکە بکەرەوە."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4068,26 +3826,6 @@ msgstr "کلیلی تایبەتی بێ ناو"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "کارتی زیرەکی بێ ناو"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "کلیلەکانی دیکەی پاراستن دەر بهێنە، پاشان هەوڵ بدەرەوە."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "شێوازی پشتگیرینەکراوی تۆماری تێپەڕەوشەی FIDO2: {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "پاراستنی پشتگیرینەکراوی تۆماری تێپەڕەوشەی FIDO2: '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "شێوازی پشتگیرینەکراوی کلیلی تایبەتی FIDO2: {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "پاراستنی پشتگیرینەکراوی کلیلی تایبەتی FIDO2: '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4820,10 +4558,6 @@ msgstr "{fingerprint} - کلیلی ڕەقەواڵە"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - پارێزراو بە تێپەڕەوشە"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - پارێزراو بە کلیلی پاراستن"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - تۆکنی پاراستن"
@@ -4831,10 +4565,6 @@ msgstr "{fingerprint} - تۆکنی پاراستن"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - تۆکنی پاراستن ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4888,10 +4618,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

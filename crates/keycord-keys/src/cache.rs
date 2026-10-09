@@ -150,25 +150,16 @@ pub(crate) fn cache_unlocked_hardware_private_key(
     Ok(())
 }
 
-#[cfg(feature = "fido")]
-pub(crate) fn clear_cached_fido2_pin(fingerprint: &str) -> Result<(), String> {
-    super::fido2::remove_cached_fido2_secrets(fingerprint)
-}
-
 pub(crate) fn remove_cached_unlocked_ripasso_private_key(fingerprint: &str) -> Result<(), String> {
     let fingerprint = normalized_fingerprint(fingerprint)?;
     unlocked_ripasso_private_keys().remove(&fingerprint);
     unlocked_hardware_private_keys().remove(&fingerprint);
-    #[cfg(feature = "fido")]
-    super::fido2::remove_cached_fido2_secrets(&fingerprint)?;
     Ok(())
 }
 
 pub fn clear_integrated_runtime_secret_state() {
     unlocked_ripasso_private_keys().clear();
     unlocked_hardware_private_keys().clear();
-    #[cfg(feature = "fido")]
-    super::fido2::clear_cached_fido2_secrets();
 }
 
 #[cfg(any(test, feature = "test-support"))]

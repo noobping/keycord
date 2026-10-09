@@ -255,10 +255,6 @@ msgstr "Đã thêm các trường mẫu còn thiếu."
 msgid "Adding hardware key"
 msgstr "Đang thêm khoá phần cứng"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Cho phép truy cập khoá bảo mật USB (FIDO2 thử nghiệm)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Cho phép truy cập ứng dụng trên thiết bị này"
@@ -460,12 +456,6 @@ msgstr "Chọn tệp cục bộ."
 msgid "Choose a local folder."
 msgstr "Chọn thư mục cục bộ."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr ""
-"Chọn tệp khoá riêng hoặc tệp khoá riêng thử nghiệm được bảo vệ bằng FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -624,38 +614,18 @@ msgstr "Ngày commit"
 msgid "Committer"
 msgstr "Người commit"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Xác nhận mã PIN mới của khoá bảo mật"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Xác nhận mật khẩu"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Xác nhận mã PIN mới của khoá bảo mật."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Trước tiên, hãy kết nối khoá phần cứng."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Chỉ kết nối một khoá bảo mật FIDO2 trước khi tiếp tục."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Chỉ kết nối một khoá phần cứng trước khi thêm."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Kết nối khoá bảo mật FIDO2 rồi thử lại."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Trước tiên, hãy kết nối khoá bảo mật FIDO2."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -665,18 +635,9 @@ msgstr "Kết nối khoá phần cứng rồi thử lại."
 msgid "Connect the hardware key first."
 msgstr "Trước tiên, hãy kết nối khoá phần cứng."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Kết nối đúng khoá bảo mật FIDO2."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Kết nối đúng khoá phần cứng trước khi nhập."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Ngữ cảnh"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -699,10 +660,6 @@ msgstr "Sao chép khoá riêng dạng ASCII Armor"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Sao chép khoá công khai dạng ASCII Armor"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Sao chép khoá riêng thử nghiệm được bảo vệ bằng FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -791,10 +748,6 @@ msgstr "Không thể tạo chứng thư khoá công khai cho khoá phần cứng
 msgid "Couldn't create the store."
 msgstr "Không thể tạo kho."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Không thể giải mã dữ liệu được mã hoá bằng FIDO2."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -821,7 +774,6 @@ msgstr "Không thể tạo khoá giải mã trên khoá phần cứng"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Không thể tạo khoá ký trên khoá phần cứng"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -847,10 +799,6 @@ msgstr "Không thể nhập mật khẩu."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Không thể nhập khoá."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Không thể khởi tạo khoá bảo mật FIDO2."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1047,10 +995,6 @@ msgstr ""
 "Không mở được khoá riêng {fingerprint_for_failure} để ký Git. Tiếp tục mà "
 "không ký."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Không mở được khoá bảo mật FIDO2."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1076,10 +1020,6 @@ msgstr "Không thể xác minh mã PIN quản trị khoá phần cứng"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Không thể xác minh mã PIN khoá phần cứng được yêu cầu"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Tạo một khoá mới được bảo vệ bằng FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1277,12 +1217,6 @@ msgstr "Nhập địa chỉ email cho khoá riêng."
 msgid "Enter an email address."
 msgstr "Nhập địa chỉ email."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Nhập mã PIN của khoá bảo mật FIDO2."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1306,18 +1240,10 @@ msgstr "Nhập mật khẩu của khoá."
 msgid "Enter the new hardware key PIN."
 msgstr "Nhập mã PIN mới của khoá phần cứng."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Nhập mã PIN mới của khoá bảo mật."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Nhập mật khẩu của khoá riêng."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Nhập mã PIN của khoá bảo mật."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1326,16 +1252,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Mở rộng trình sửa mật khẩu để hiện các thao tác dọn dẹp"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"Khoá riêng thử nghiệm được bảo vệ bằng FIDO2 cần quyền truy cập thiết bị USB "
-"để Keycord dùng khoá bảo mật đang kết nối mở khoá. Hãy khởi động lại Keycord "
-"sau khi cấp quyền."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1396,26 +1312,6 @@ msgstr "Đã xuất {count} mật khẩu."
 msgid "Exported {count} passwords."
 msgstr "Đã xuất {count} mật khẩu."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Tệp kê khai khoá riêng FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Hỗ trợ khoá riêng FIDO2 bị tắt trong bản dựng Keycord này."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Khoá bảo mật FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Hỗ trợ FIDO2 bị tắt trong bản dựng Keycord này."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Vỏ bọc văn bản FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Không thể cấp phát thư mục staging riêng cho bản cập nhật Linux."
@@ -1463,10 +1359,6 @@ msgstr "Không thể giải mã chữ ký dạng ASCII Armor"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Không thể đọc dữ liệu UTF-8 sau khi giải mã"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Không thể suy xuất đủ dữ liệu đầu ra HKDF."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1778,11 +1670,6 @@ msgstr "Đã sửa trình cung cấp tìm kiếm GNOME."
 msgid "General"
 msgstr "Chung"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Tạo khoá được bảo vệ bằng FIDO2 (thử nghiệm)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Tạo hoặc nhập khoá riêng."
@@ -1797,10 +1684,6 @@ msgstr "Tạo mật khẩu"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Tạo khoá riêng"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Đang tạo khoá được bảo vệ bằng FIDO2 (thử nghiệm)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1846,18 +1729,6 @@ msgstr "Về trang chính"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Cấp quyền"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Cấp quyền truy cập khoá bảo mật USB (FIDO2 thử nghiệm)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"Trước tiên, hãy cấp quyền truy cập khoá bảo mật USB cho khoá riêng thử "
-"nghiệm được bảo vệ bằng FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2131,18 +2002,6 @@ msgstr ""
 msgid "Integrated"
 msgstr "Tích hợp"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Dấu vân tay liên kết FIDO2 '{value}' không hợp lệ."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Đường dẫn thiết bị FIDO2 không hợp lệ: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Dữ liệu mã hoá FIDO2 không hợp lệ."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2232,7 +2091,6 @@ msgstr ""
 msgid "Key file removed."
 msgstr "Đã xoá tệp khoá."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Đã tạo khoá."
@@ -2255,10 +2113,6 @@ msgstr "Mật khẩu khoá"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Khoá riêng Keycord được bảo vệ bằng FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2625,10 +2479,6 @@ msgstr "Mã PIN mới của khoá phần cứng"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Mục mới"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Mã PIN mới của khoá bảo mật"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3137,14 +2987,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Văn bản thô"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"Đọc khoá riêng dạng ASCII Armor hoặc khoá riêng thử nghiệm được bảo vệ bằng "
-"FIDO2 từ bảng nhớ tạm."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Đọc đường dẫn đã thay đổi của commit Git {oid} trong kho mật khẩu"
@@ -3237,12 +3079,6 @@ msgstr "Người nhận từ commit đã kiểm tra"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Khuyên dùng cho kho mới"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Kết nối lại khoá bảo mật FIDO2 rồi thử lại."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3578,10 +3414,6 @@ msgstr "Tìm giá trị"
 msgid "Search weak passwords"
 msgstr "Tìm mật khẩu yếu"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "Mã PIN khoá bảo mật"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3603,30 +3435,11 @@ msgstr "Chọn các khoá riêng có thể mở khoá mật khẩu trong kho nà
 msgid "Sequential characters"
 msgstr "Các ký tự liên tiếp"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Trước tiên, hãy đặt mã PIN cho khoá bảo mật FIDO2."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Đặt mã PIN khoá bảo mật"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Đặt mã PIN khoá bảo mật (FIDO2 thử nghiệm)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Thiết lập khoá phần cứng mới (thử nghiệm)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "Bản dựng này chỉ hỗ trợ đặt mã PIN khoá bảo mật FIDO2 trên Linux."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3738,11 +3551,6 @@ msgstr "Quá trình đồng bộ kho đã dừng đột ngột."
 msgid "Store synced."
 msgstr "Đã đồng bộ kho."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Mã PIN FIDO2 đã lưu không phải UTF-8 hợp lệ: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3756,14 +3564,6 @@ msgstr "Chuyển phương thức xử lý sang Hệ thống để khôi phục k
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Chuyển phương thức xử lý sang Hệ thống để dùng pass import."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr ""
-"Chuyển sang phương thức xử lý Tích hợp để dùng khoá riêng thử nghiệm được "
-"bảo vệ bằng FIDO2."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3801,31 +3601,6 @@ msgstr "Đang đồng bộ các kho"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Trình soạn thảo văn bản"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Khoá bảo mật FIDO2 đó không hỗ trợ phần mở rộng hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Khoá bảo mật FIDO2 đó phải hỗ trợ bảo vệ bằng mã PIN."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Không thể xuất khoá được bảo vệ bằng FIDO2 đó."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Dữ liệu khoá được bảo vệ bằng FIDO2 đó không hợp lệ."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Khoá được bảo vệ bằng FIDO2 đó không hợp lệ."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3916,18 +3691,6 @@ msgstr "Yêu cầu CXP không chứa chế độ HPKE được nhận dạng."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Yêu cầu CXP không cung cấp định dạng gói nén deflate được hỗ trợ."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "Mã PIN khoá bảo mật FIDO2 chứa byte NUL không được hỗ trợ."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "Mã PIN khoá bảo mật FIDO2 không đúng."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Khoá bảo mật FIDO2 không trả về mã định danh thông tin xác thực."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4028,10 +3791,6 @@ msgstr "Mật khẩu khoá riêng không đúng."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Tiến trình kiểm kê khoá riêng đã dừng đột ngột."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Hai mã PIN khoá bảo mật không khớp."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr ""
@@ -4098,10 +3857,6 @@ msgstr ""
 "Các thiết lập này được dùng khi bạn tạo hoặc tạo lại mật khẩu từ trình soạn "
 "thảo."
 
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Khoá bảo mật FIDO2 này không thể mở các mục của bạn."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Nhánh này không có commit nào để kiểm tra."
@@ -4167,14 +3922,6 @@ msgstr "Khoá này không thể mở các mục của bạn."
 msgid "This private key is password protected."
 msgstr "Khoá riêng này được bảo vệ bằng mật khẩu."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Khoá riêng này cần khoá bảo mật FIDO2."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Khoá riêng này cần một cách mở khoá khác."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Khoá riêng này cần khoá phần cứng."
@@ -4208,16 +3955,6 @@ msgstr "Công cụ"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Tổng số ký tự"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Chạm vào khoá bảo mật FIDO2 rồi thử lại."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Chạm vào khoá nếu đèn nhấp nháy."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4314,7 +4051,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Mở khoá một khoá riêng khác đã chọn trước khi bỏ chọn khoá này."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4344,26 +4081,6 @@ msgstr "Khoá riêng không tên"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Thẻ thông minh không tên"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Rút các khoá bảo mật khác rồi thử lại."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Định dạng mục mật khẩu FIDO2 {} không được hỗ trợ."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Cơ chế bảo vệ mục mật khẩu FIDO2 '{}' không được hỗ trợ."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Định dạng khoá riêng FIDO2 {} không được hỗ trợ."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Cơ chế bảo vệ khoá riêng FIDO2 '{}' không được hỗ trợ."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5108,10 +4825,6 @@ msgstr "{fingerprint} - Khoá phần cứng"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - Được bảo vệ bằng mật khẩu"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - Được bảo vệ bằng khoá bảo mật"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - Token bảo mật"
@@ -5119,10 +4832,6 @@ msgstr "{fingerprint} - Token bảo mật"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - Token bảo mật ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5176,10 +4885,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

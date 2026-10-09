@@ -1,10 +1,8 @@
 # BUILDER-ID OWNER
-# Keys owns OpenPGP inventory/actions, FIDO owns its generation row, and Stores owns
-# recipient scope, loading, save, and options.
+# Keys owns key-management controls; Stores owns recipient scope, loading, save, and options.
 store_recipients_add_group keys
 store_recipients_add_hardware_key_row keys
 store_recipients_create_group keys
-store_recipients_generate_fido2_key_row fido
 store_recipients_generate_key_row keys
 store_recipients_host_gpg_warning_group keys
 store_recipients_host_gpg_warning_row keys

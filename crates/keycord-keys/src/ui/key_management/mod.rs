@@ -54,8 +54,6 @@ pub struct KeyManagementUiPorts {
     pub sync_private_keys_to_host: SyncPrivateKeys,
     pub refresh_key_consumers: RefreshKeyConsumers,
     pub sync_optional_smartcard_access: SyncOptionalKeyAccess,
-    #[cfg(feature = "fido-ui")]
-    pub sync_optional_fido_access: SyncOptionalKeyAccess,
 }
 
 /// Store-recipient policy and completion callbacks consumed by Keys.
@@ -76,8 +74,6 @@ pub struct KeyManagementUiParts {
     pub navigation: NavigationView,
     pub overlay: ToastOverlay,
     pub widgets: KeyWindowWidgets,
-    #[cfg(feature = "fido-ui")]
-    pub fido: keycord_fido::ui::FidoWindowWidgets,
     pub ports: KeyManagementUiPorts,
 }
 
@@ -87,8 +83,6 @@ pub struct KeyManagementUiState {
     pub(crate) navigation: NavigationView,
     pub(crate) overlay: ToastOverlay,
     pub(crate) widgets: KeyWindowWidgets,
-    #[cfg(feature = "fido-ui")]
-    pub(crate) fido: keycord_fido::ui::FidoWindowWidgets,
     pub(crate) ports: KeyManagementUiPorts,
     pub(crate) hardware_generation_token: Rc<RefCell<Option<DiscoveredHardwareToken>>>,
     pub(crate) private_generation_in_flight: Rc<Cell<bool>>,
@@ -131,8 +125,8 @@ impl RecipientActionPresentation {
         self.setup_hardware_key || self.connect_hardware_key
     }
 
-    const fn add_group_visible(self, fido_generation_visible: bool) -> bool {
-        fido_generation_visible || self.hardware_rows_visible() || self.import_private_key
+    const fn add_group_visible(self) -> bool {
+        self.hardware_rows_visible() || self.import_private_key
     }
 }
 
@@ -143,8 +137,6 @@ impl KeyManagementUiState {
             navigation: parts.navigation,
             overlay: parts.overlay,
             widgets: parts.widgets,
-            #[cfg(feature = "fido-ui")]
-            fido: parts.fido,
             ports: parts.ports,
             hardware_generation_token: Rc::new(RefCell::new(None)),
             private_generation_in_flight: Rc::new(Cell::new(false)),
@@ -172,11 +164,7 @@ impl KeyManagementUiState {
     }
 
     /// Apply store selection policy while Keys retains capability and access UI.
-    pub fn sync_recipient_action_visibility(
-        &self,
-        standard_actions_enabled: bool,
-        uses_integrated_backend: bool,
-    ) {
+    pub fn sync_recipient_action_visibility(&self, standard_actions_enabled: bool) {
         let presentation = RecipientActionPresentation::new(
             standard_actions_enabled,
             hardware_key_available(),
@@ -185,12 +173,6 @@ impl KeyManagementUiState {
         self.widgets
             .generate_private_key_row
             .set_visible(presentation.generate_private_key);
-        #[cfg(feature = "fido-ui")]
-        let fido_generation_visible = self
-            .fido
-            .sync_generation_visibility(standard_actions_enabled);
-        #[cfg(not(feature = "fido-ui"))]
-        let fido_generation_visible = false;
         self.widgets
             .import_clipboard_row
             .set_visible(presentation.import_private_key);
@@ -218,23 +200,13 @@ impl KeyManagementUiState {
             &hardware_rows,
             presentation.hardware_rows_visible(),
         );
-        #[cfg(feature = "fido-ui")]
-        (self.ports.sync_optional_fido_access)(
-            &self.widgets.recipient_add_group,
-            &self.overlay,
-            &[self.fido.generation_row()],
-            uses_integrated_backend && fido_generation_visible,
-        );
-
-        #[cfg(not(feature = "fido-ui"))]
-        let _ = uses_integrated_backend;
 
         self.widgets
             .recipient_create_group
             .set_visible(presentation.create_group_visible());
         self.widgets
             .recipient_add_group
-            .set_visible(presentation.add_group_visible(fido_generation_visible));
+            .set_visible(presentation.add_group_visible());
     }
 
     pub fn handle_generation_subpage_back(&self) -> bool {
@@ -279,12 +251,6 @@ impl KeyManagementUiState {
             self.widgets.import_clipboard_row.clone().upcast(),
             self.widgets.import_file_row.clone().upcast(),
         ];
-        #[cfg(feature = "fido-ui")]
-        let add_key_widgets = {
-            let mut widgets = self.fido.recipient_search_widgets();
-            widgets.extend(add_key_widgets);
-            widgets
-        };
 
         [
             SearchablePreferencesGroup::with_widgets(
@@ -375,7 +341,7 @@ mod tests {
         let presentation = RecipientActionPresentation::new(true, false, false);
 
         assert!(presentation.create_group_visible());
-        assert!(presentation.add_group_visible(false));
+        assert!(presentation.add_group_visible());
         assert!(presentation.generate_private_key);
         assert!(presentation.import_private_key);
     }
@@ -385,7 +351,7 @@ mod tests {
         let presentation = RecipientActionPresentation::new(true, true, true);
 
         assert!(presentation.create_group_visible());
-        assert!(presentation.add_group_visible(true));
+        assert!(presentation.add_group_visible());
         assert!(presentation.hardware_rows_visible());
     }
 
@@ -394,7 +360,7 @@ mod tests {
         let presentation = RecipientActionPresentation::new(false, true, true);
 
         assert!(!presentation.create_group_visible());
-        assert!(!presentation.add_group_visible(false));
+        assert!(!presentation.add_group_visible());
         assert!(!presentation.hardware_rows_visible());
     }
 }

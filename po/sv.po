@@ -260,10 +260,6 @@ msgstr "Saknade mallfält har lagts till."
 msgid "Adding hardware key"
 msgstr "Lägger till hårdvarunyckel"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Tillåt åtkomst till USB-säkerhetsnycklar (experimentell FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Tillåt åtkomst till program på den här enheten"
@@ -467,13 +463,6 @@ msgstr "Välj en lokal fil."
 msgid "Choose a local folder."
 msgstr "Välj en lokal mapp."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr ""
-"Välj en fil med en privat nyckel eller en experimentell FIDO2-skyddad privat "
-"nyckel."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -635,38 +624,18 @@ msgstr "Incheckad"
 msgid "Committer"
 msgstr "Incheckare"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Bekräfta den nya PIN-koden för säkerhetsnyckeln"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Bekräfta lösenord"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Bekräfta säkerhetsnyckelns nya PIN-kod."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Anslut först en hårdvarunyckel."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Anslut endast en FIDO2-säkerhetsnyckel innan du fortsätter."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Anslut endast en hårdvarunyckel innan du lägger till den."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Anslut FIDO2-säkerhetsnyckeln och försök igen."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Anslut först FIDO2-säkerhetsnyckeln."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -676,18 +645,9 @@ msgstr "Anslut hårdvarunyckeln och försök igen."
 msgid "Connect the hardware key first."
 msgstr "Anslut först hårdvarunyckeln."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Anslut den matchande FIDO2-säkerhetsnyckeln."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Anslut den matchande hårdvarunyckeln innan du importerar den."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Sammanhang"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -710,10 +670,6 @@ msgstr "Kopiera ASCII-bepansrad privat nyckel"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Kopiera ASCII-bepansrad offentlig nyckel"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Kopiera experimentell FIDO2-skyddad privat nyckel"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -804,10 +760,6 @@ msgstr ""
 msgid "Couldn't create the store."
 msgstr "Det gick inte att skapa lösenordsarkivet."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Det gick inte att dekryptera FIDO2-krypterade data."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -834,7 +786,6 @@ msgstr "Det gick inte att skapa hårdvarunyckeln för dekryptering"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Det gick inte att skapa hårdvarunyckeln för signering"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -860,10 +811,6 @@ msgstr "Det gick inte att importera lösenorden."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Det gick inte att importera nyckeln."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Det gick inte att initiera FIDO2-säkerhetsnyckeln."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1066,10 +1013,6 @@ msgstr ""
 "Det gick inte att låsa upp den privata nyckeln {fingerprint_for_failure} för "
 "Git-signering. Fortsätter utan signatur."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Det gick inte att låsa upp FIDO2-säkerhetsnyckeln."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1095,10 +1038,6 @@ msgstr "Det gick inte att verifiera hårdvarunyckelns administratörs-PIN"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Det gick inte att verifiera den begärda PIN-koden för hårdvarunyckeln"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Skapa en ny FIDO2-skyddad nyckel."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1299,12 +1238,6 @@ msgstr "Ange en e-postadress för den privata nyckeln."
 msgid "Enter an email address."
 msgstr "Ange en e-postadress."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Ange FIDO2-säkerhetsnyckelns PIN-kod."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1328,18 +1261,10 @@ msgstr "Ange nyckelns lösenord."
 msgid "Enter the new hardware key PIN."
 msgstr "Ange hårdvarunyckelns nya PIN-kod."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Ange säkerhetsnyckelns nya PIN-kod."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Ange lösenordet för den privata nyckeln."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Ange säkerhetsnyckelns PIN-kod."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1348,16 +1273,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Utöka lösenordsredigeraren med rensningsåtgärder"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"Experimentella FIDO2-skyddade privata nycklar kräver åtkomst till USB-"
-"enheter innan Keycord kan använda en ansluten säkerhetsnyckel för att låsa "
-"upp skyddade privata nycklar. Starta om Keycord när du har beviljat åtkomst."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1418,27 +1333,6 @@ msgstr "{count} lösenord har exporterats."
 msgid "Exported {count} passwords."
 msgstr "{count} lösenord har exporterats."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Manifest för privat FIDO2-nyckel"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr ""
-"Stöd för privata FIDO2-nycklar är inaktiverat i den här versionen av Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2-säkerhetsnyckel"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "FIDO2-stöd är inaktiverat i den här versionen av Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2-textkuvert"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr ""
@@ -1495,10 +1389,6 @@ msgstr "Det gick inte att avkoda den ASCII-bepansrade signaturen"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Det gick inte att avkoda dekrypterade UTF-8-data"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Det gick inte att härleda tillräckligt mycket HKDF-utdata."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1834,11 +1724,6 @@ msgstr "GNOME-sökleverantören har korrigerats."
 msgid "General"
 msgstr "Allmänt"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Skapa FIDO2-skyddad nyckel (experimentellt)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Skapa eller importera en privat nyckel."
@@ -1853,10 +1738,6 @@ msgstr "Skapa lösenord"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Skapa privat nyckel"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Skapar FIDO2-skyddad nyckel (experimentellt)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1902,18 +1783,6 @@ msgstr "Gå till startsidan"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Bevilja"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Bevilja åtkomst till USB-säkerhetsnycklar (experimentell FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"Bevilja först åtkomst till USB-säkerhetsnycklar för experimentella FIDO2-"
-"skyddade privata nycklar."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2199,18 +2068,6 @@ msgstr ""
 msgid "Integrated"
 msgstr "Integrerad"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Ogiltigt fingeravtryck för FIDO2-bindning: ”{value}”."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Ogiltig sökväg till FIDO2-enhet: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Ogiltiga FIDO2-krypterade data."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2301,7 +2158,6 @@ msgstr ""
 msgid "Key file removed."
 msgstr "Nyckelfilen har tagits bort."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Nyckeln har skapats."
@@ -2324,10 +2180,6 @@ msgstr "Nyckellösenord"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "FIDO2-skyddad privat nyckel för Keycord"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2705,10 +2557,6 @@ msgstr "Ny PIN-kod för hårdvarunyckeln"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Ny post"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "Ny PIN-kod för säkerhetsnyckeln"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3223,14 +3071,6 @@ msgstr "RP-ID"
 msgid "Raw text"
 msgstr "Råtext"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"Läs en ASCII-bepansrad privat nyckel eller en experimentell FIDO2-skyddad "
-"privat nyckel från urklipp."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Läs ändrade sökvägar för Git-incheckningen {oid} i lösenordsarkivet"
@@ -3323,12 +3163,6 @@ msgstr "Mottagare från den granskade incheckningen"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Rekommenderas för nya arkiv"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Anslut FIDO2-säkerhetsnyckeln på nytt och försök igen."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3675,10 +3509,6 @@ msgstr "Sök bland värden"
 msgid "Search weak passwords"
 msgstr "Sök bland svaga lösenord"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "Säkerhetsnyckelns PIN-kod"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3700,32 +3530,11 @@ msgstr "Välj de privata nycklar som kan låsa upp lösenord i det här arkivet.
 msgid "Sequential characters"
 msgstr "Tecken i följd"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Ange först en PIN-kod för FIDO2-säkerhetsnyckeln."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Ange PIN-kod för säkerhetsnyckel"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Ange PIN-kod för säkerhetsnyckel (experimentell FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Konfigurera ny hårdvarunyckel (experimentellt)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr ""
-"I den här versionen går det bara att ange en PIN-kod för FIDO2-"
-"säkerhetsnycklar på Linux."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3837,11 +3646,6 @@ msgstr "Synkroniseringen av arkivet avbröts oväntat."
 msgid "Store synced."
 msgstr "Arkivet har synkroniserats."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Den sparade FIDO2-PIN-koden är inte giltig UTF-8: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3857,14 +3661,6 @@ msgstr ""
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Byt bakände till Värd för att använda pass import."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr ""
-"Byt till den integrerade bakänden för att använda experimentella FIDO2-"
-"skyddade privata nycklar."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3902,31 +3698,6 @@ msgstr "Synkroniserar arkiv"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Textredigerare"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Den här FIDO2-säkerhetsnyckeln stöder inte tillägget hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Den här FIDO2-säkerhetsnyckeln måste ha stöd för PIN-skydd."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Den FIDO2-skyddade nyckeln kunde inte exporteras."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Data för den FIDO2-skyddade nyckeln är ogiltiga."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Den FIDO2-skyddade nyckeln är ogiltig."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -4020,20 +3791,6 @@ msgstr "CXP-begäran innehåller inget känt HPKE-läge."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP-begäran erbjuder inte det deflate-arkivformat som stöds."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2-säkerhetsnyckelns PIN-kod innehåller en NUL-byte som inte stöds."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2-säkerhetsnyckelns PIN-kod är felaktig."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr ""
-"FIDO2-säkerhetsnyckeln returnerade ingen identifierare för "
-"inloggningsuppgiften."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -4137,10 +3894,6 @@ msgstr "Lösenordet för den privata nyckeln är felaktigt."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Arbetstråden som inventerar privata nycklar avbröts oväntat."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Säkerhetsnyckelns PIN-koder stämmer inte överens."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr ""
@@ -4208,10 +3961,6 @@ msgid ""
 msgstr ""
 "Dessa inställningar används när du skapar ett nytt lösenord eller ersätter "
 "det befintliga i redigeraren."
-
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Den här FIDO2-säkerhetsnyckeln kan inte öppna dina poster."
 
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
@@ -4281,14 +4030,6 @@ msgstr "Den här nyckeln kan inte öppna dina poster."
 msgid "This private key is password protected."
 msgstr "Den här privata nyckeln är lösenordsskyddad."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Den här privata nyckeln kräver en FIDO2-säkerhetsnyckel."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Den här privata nyckeln kräver en annan upplåsningsmetod."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Den här privata nyckeln kräver en hårdvarunyckel."
@@ -4324,16 +4065,6 @@ msgstr "Verktyg"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Totalt antal tecken"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Rör vid FIDO2-säkerhetsnyckeln och försök igen."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Rör vid nyckeln om den blinkar."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4430,7 +4161,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Lås upp en annan markerad privat nyckel innan du avmarkerar den här."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4460,26 +4191,6 @@ msgstr "Namnlös privat nyckel"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Namnlöst smartkort"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Koppla från de andra säkerhetsnycklarna och försök igen."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Formatet {} för FIDO2-lösenordsposter stöds inte."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Skyddet ”{}” för FIDO2-lösenordsposter stöds inte."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Formatet {} för privata FIDO2-nycklar stöds inte."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Skyddet ”{}” för privata FIDO2-nycklar stöds inte."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5228,10 +4939,6 @@ msgstr "{fingerprint} – Hårdvarunyckel"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} – Lösenordsskyddad"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} – Skyddad med säkerhetsnyckel"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} – Säkerhetstoken"
@@ -5239,10 +4946,6 @@ msgstr "{fingerprint} – Säkerhetstoken"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} – Säkerhetstoken ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5296,10 +4999,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

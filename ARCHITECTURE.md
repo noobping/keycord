@@ -11,7 +11,6 @@ belong to the crate for that subject.
 | `keycord-shell` | generic GTK helpers, application-level actions, navigation primitives, themes, file pickers, QR rendering, shell assets, and in-app product chrome |
 | `keycord-ui-fragments` | dependency-free build-time validation and deterministic composition of declarative UI fragments |
 | `keycord-preferences` | settings persistence, settings/search UI, stable settings IDs, and the GSettings schema |
-| `keycord-fido` | FIDO security-token transport, PIN setup, protected-key envelopes, token caches, and FIDO-specific UI |
 | `keycord-passkey` | passkey credential records and CXF/CXP import, export, request, and UI workflows |
 | `keycord-keys` | OpenPGP key material, managed-key storage, protection/unlock flows, smartcards, key caches, and key-management UI |
 | `keycord-stores` | password-store roots, paths, recipients, repository-independent store operations, management, and recipient UI |
@@ -43,8 +42,8 @@ aggregate of those bundles. It may order routes and connect explicit callbacks, 
 redeclare subject builder IDs or reproduce subject controllers.
 
 Compile-time availability and platform permission probes live with the capability they describe:
-Docs reports documentation availability, Git reports audit availability, FIDO and Keys report
-their device/key capabilities, and Lifecycle reports setup availability. Runtime exposes only
+Docs reports documentation availability, Git reports audit availability, Keys reports
+its device/key capabilities, and Lifecycle reports setup availability. Runtime exposes only
 cross-cutting process/environment capabilities.
 
 ## Boundary rules
@@ -68,8 +67,6 @@ and retired detailed owner-UI construction in root composition. Runtime checks c
 feature/capability and bounded-TOML public inventories plus forbidden subject identifiers. The
 Stores/Keys seam is guarded by an exact reviewed Keys recipient-controller API, forbidden direct
 key-management identifiers, a retired export-module check, and exact ownership of every shared
-recipient builder ID. The FIDO/Keys seam likewise fixes the reviewed FIDO UI API, keeps the FIDO
-row/widget/workflow and shared service lifecycle with FIDO, and permits Keys only its OpenPGP
-adapter; the conditional root bundle is checked explicitly. Root compatibility facades, retired
+recipient builder ID. Root compatibility facades, retired
 root catchalls, and substantial exact Rust duplicates are also rejected. The Architecture CI
 workflow runs its formatter, tests, strict Clippy profile, and repository validation.

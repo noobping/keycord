@@ -94,22 +94,7 @@ On write, the Entries-owned [integrated crypto context](../../keycord-entries/sr
 
 On read, the same module reverses the process one recipient at a time. If even one required key is missing, incompatible, or still locked, the secret does not open.
 
-## Story 5: Experimental FIDO2-Protected Private Key
-
-The FIDO2-protected private-key flow starts from the Keys-owned [private-key management controller](../../keycord-keys/src/ui/key_management/private.rs). Device transport, binding, and envelope logic live in the separate [FIDO crate](../../keycord-fido/src), Keys adapts that service through its [FIDO integration](../../keycord-keys/src/fido2), and the protected private-key bytes are stored through [managed-key storage](../../keycord-keys/src/store/storage.rs).
-
-When the user generates an experimental FIDO2-protected private key:
-
-1. Keycord enrolls an `hmac-secret` credential against the Keycord RP ID.
-2. It creates a `FidoBindingDescriptor` with the key fingerprint, display label, and credential id.
-3. It stores that descriptor in the private-key manifest beside the protected key material.
-4. It encrypts the private-key protection layer with the FIDO2 direct required-layer format.
-
-That descriptor is private-key metadata. It is not a store recipient, it is not written to `.gpg-id`, and Keycord no longer writes a FIDO2 sidecar file.
-
-Unlocking is still session-based. The Keys-owned [unlock UI](../../keycord-keys/src/ui/unlock.rs) can ask for a FIDO2 PIN, then [managed-key unlock logic](../../keycord-keys/src/store/unlock.rs) asks the FIDO service to validate the device. The [FIDO cache](../../keycord-fido/src/cache.rs) retains the PIN for the session, while the [Keys cache](../../keycord-keys/src/cache.rs) retains the unlocked OpenPGP certificate. Once unlocked, that managed key participates in the normal recipient flow described above.
-
-## Story 6: A Secret Is Opened
+## Story 5: A Secret Is Opened
 
 Opening a password entry starts in the Entries-owned [password-page controller](../../keycord-entries/src/ui/page/mod.rs). The page shows a loading state and then calls `read_password_entry_with_progress`.
 
@@ -124,7 +109,7 @@ If the entry opens, the plaintext pass file goes back into the structured editor
 
 If the key is locked, Keycord surfaces a typed error from [Entries error types](../../keycord-entries/src/error.rs), and the UI can prompt for the missing unlock step instead of just failing.
 
-## Story 7: Copying the Password
+## Story 6: Copying the Password
 
 The copy button on each password row is wired in the Entries-owned [list-row UI](../../keycord-entries/src/ui/list/row.rs). It calls the Entries-owned [clipboard controller](../../keycord-entries/src/clipboard.rs).
 
@@ -136,4 +121,4 @@ From there the story is short:
 
 The important detail is that copy is still a decrypt operation. The password is not cached as ready-to-copy plaintext somewhere else in the app. Keycord re-enters the same read path, takes the first line, and hands that text to the clipboard.
 
-If the Host backend is active, the [clipboard controller](../../keycord-entries/src/clipboard.rs) takes a different port supplied by the root [Entries composition adapter](../../../src/composition/entries_ui.rs), which shells out to `pass -c` instead. The rest of this guide follows the integrated path because that is where store-key management, experimental layered encryption, and experimental FIDO2 behavior live.
+If the Host backend is active, the [clipboard controller](../../keycord-entries/src/clipboard.rs) takes a different port supplied by the root [Entries composition adapter](../../../src/composition/entries_ui.rs), which shells out to `pass -c` instead. The rest of this guide follows the integrated path because that is where store-key management and experimental layered encryption live.

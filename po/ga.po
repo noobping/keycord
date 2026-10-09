@@ -236,10 +236,6 @@ msgstr "Cuireadh na réimsí teimpléid a bhí ar iarraidh leis."
 msgid "Adding hardware key"
 msgstr "Eochair chrua-earraí á cur leis"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "Ceadaigh rochtain ar eochair shlándála USB (FIDO2 turgnamhach)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "Ceadaigh rochtain ar fheidhmchláir ar an ngléas seo"
@@ -440,10 +436,6 @@ msgstr "Roghnaigh comhad áitiúil."
 msgid "Choose a local folder."
 msgstr "Roghnaigh fillteán áitiúil."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid "Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "Roghnaigh comhad ina bhfuil eochair phríobháideach nó eochair phríobháideach thurgnamhach atá cosanta le FIDO2."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -576,39 +568,18 @@ msgstr "Dáta tiomnaithe"
 msgid "Committer"
 msgstr "Tiomnóir"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "Deimhnigh PIN nua na heochrach slándála"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "Deimhnigh an pasfhocal"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "Deimhnigh PIN nua na heochrach slándála."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "Ceangail eochair chrua-earraí ar dtús."
 
-#: crates/keycord-fido/src/native.rs:279
-#: crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "Ná fág ach eochair shlándála FIDO2 amháin ceangailte sula leanann tú ar aghaidh."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "Ná fág ach eochair chrua-earraí amháin ceangailte sula gcuireann tú leis í."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "Ceangail an eochair shlándála FIDO2 agus bain triail eile as."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "Ceangail an eochair shlándála FIDO2 ar dtús."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -618,19 +589,9 @@ msgstr "Ceangail an eochair chrua-earraí agus bain triail eile as."
 msgid "Connect the hardware key first."
 msgstr "Ceangail an eochair chrua-earraí ar dtús."
 
-#: crates/keycord-fido/src/error.rs:31
-#: crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "Ceangail an eochair shlándála FIDO2 chomhfhreagrach."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "Ceangail an eochair chrua-earraí chomhfhreagrach sula n-iompórtálann tú í."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "Comhthéacs"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -653,10 +614,6 @@ msgstr "Cóipeáil an eochair phríobháideach armúrtha"
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "Cóipeáil an eochair phoiblí armúrtha"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "Cóipeáil an eochair phríobháideach thurgnamhach atá cosanta le FIDO2"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -745,11 +702,6 @@ msgstr "Níorbh fhéidir an deimhniú eochrach poiblí a chruthú ar an eochair 
 msgid "Couldn't create the store."
 msgstr "Níorbh fhéidir an stóras a chruthú."
 
-#: crates/keycord-fido/src/crypto.rs:115
-#: crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "Níorbh fhéidir na sonraí criptithe le FIDO2 a dhíchriptiú."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -776,8 +728,6 @@ msgstr "Níorbh fhéidir eochair dhíchriptithe na gcrua-earraí a ghiniúint"
 msgid "Couldn't generate the hardware signing key"
 msgstr "Níorbh fhéidir eochair shínithe na gcrua-earraí a ghiniúint"
 
-#: crates/keycord-fido/src/ui.rs:202
-#: crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -804,10 +754,6 @@ msgstr "Níorbh fhéidir na pasfhocail a iompórtáil."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "Níorbh fhéidir an eochair a iompórtáil."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "Níorbh fhéidir an eochair shlándála FIDO2 a thúsú."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -998,11 +944,6 @@ msgstr "Níorbh fhéidir na stórais a shioncrónú."
 msgid "Couldn't unlock private key {fingerprint_for_failure} for Git signing. Continuing without a signature."
 msgstr "Níorbh fhéidir eochair phríobháideach {fingerprint_for_failure} a dhíghlasáil le haghaidh síniú Git. Leanfar ar aghaidh gan síniú."
 
-#: crates/keycord-keys/src/error.rs:206
-#: crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "Níorbh fhéidir an eochair shlándála FIDO2 a dhíghlasáil."
-
 #: crates/keycord-keys/src/error.rs:194
 #: crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230
@@ -1031,10 +972,6 @@ msgstr "Níorbh fhéidir PIN riaracháin na heochrach crua-earraí a fhíorú"
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "Níorbh fhéidir PIN iarrtha na heochrach crua-earraí a fhíorú"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "Cruthaigh eochair nua atá cosanta le FIDO2."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1221,13 +1158,6 @@ msgstr "Cuir seoladh ríomhphoist na heochrach príobháidí isteach."
 msgid "Enter an email address."
 msgstr "Cuir seoladh ríomhphoist isteach."
 
-#: crates/keycord-fido/src/error.rs:23
-#: crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "Cuir PIN na heochrach slándála FIDO2 isteach."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1251,18 +1181,10 @@ msgstr "Cuir pasfhocal na heochrach isteach."
 msgid "Enter the new hardware key PIN."
 msgstr "Cuir PIN nua na heochrach crua-earraí isteach."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "Cuir PIN nua na heochrach slándála isteach."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "Cuir an pasfhocal don eochair phríobháideach isteach."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "Cuir PIN na heochrach slándála isteach."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1271,10 +1193,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "Leathnaigh eagarthóir an phasfhocail chun gníomhartha glantacháin a thaispeáint"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid "Experimental FIDO2-protected private keys need USB device access before Keycord can use a connected security key to unlock protected private keys. Restart Keycord after granting access."
-msgstr "Teastaíonn rochtain ar ghléas USB ó eochracha príobháideacha turgnamhacha atá cosanta le FIDO2 sular féidir le Keycord eochair shlándála cheangailte a úsáid chun iad a dhíghlasáil. Atosaigh Keycord tar éis duit an rochtain a cheadú."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid "Experimental hardware-key workflows need PC/SC access to use connected OpenPGP smartcards or YubiKeys, then restart Keycord. Password-protected keys remain available without this."
@@ -1324,26 +1242,6 @@ msgstr "Pasfhocail easpórtáilte: {count}."
 msgid "Exported {count} passwords."
 msgstr "Pasfhocail easpórtáilte: {count}."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "Manifest eochrach príobháidí FIDO2"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "Tá tacaíocht d'eochracha príobháideacha FIDO2 díchumasaithe sa leagan seo de Keycord."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "Eochair shlándála FIDO2"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "Tá tacaíocht FIDO2 díchumasaithe sa leagan seo de Keycord."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "Clúdach téacs FIDO2"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "Níorbh fhéidir eolaire príobháideach réamhullmhúcháin a leithdháileadh do nuashonrú Linux."
@@ -1391,10 +1289,6 @@ msgstr "Theip ar dhíchódú an tsínithe armúrtha"
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "Theip ar dhíchódú na sonraí UTF-8 díchriptithe"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "Níorbh fhéidir go leor aschur HKDF a dhíorthú."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1699,11 +1593,6 @@ msgstr "Ceartaíodh soláthraí cuardaigh GNOME."
 msgid "General"
 msgstr "Ginearálta"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "Gin eochair atá cosanta le FIDO2 (Turgnamhach)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "Gin nó iompórtáil eochair phríobháideach."
@@ -1718,10 +1607,6 @@ msgstr "Gin pasfhocal"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "Gin eochair phríobháideach"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "Eochair atá cosanta le FIDO2 á giniúint (Turgnamhach)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1767,14 +1652,6 @@ msgstr "Téigh chuig an leathanach baile"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "Ceadaigh"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "Ceadaigh rochtain ar eochair shlándála USB (FIDO2 turgnamhach)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid "Grant USB security key access for experimental FIDO2-protected private keys first."
-msgstr "Ceadaigh rochtain ar eochair shlándála USB ar dtús le haghaidh eochracha príobháideacha turgnamhacha atá cosanta le FIDO2."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2038,18 +1915,6 @@ msgstr "Dúnfar Keycord nuair a shuiteálfar an nuashonrú. Caillfear aon athrui
 msgid "Integrated"
 msgstr "Integrated"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "Tá méarlorg ceangail FIDO2 '{value}' neamhbhailí."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "Conair neamhbhailí ghléis FIDO2: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "Tá na sonraí criptithe FIDO2 neamhbhailí."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2135,7 +2000,6 @@ msgstr "Coinnigh an eochair seo roghnaithe fad atá gach eochair phríobháideac
 msgid "Key file removed."
 msgstr "Baineadh comhad na heochrach."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "Gineadh an eochair."
@@ -2159,10 +2023,6 @@ msgstr "Pasfhocal na heochrach"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Eochair phríobháideach Keycord atá cosanta le FIDO2"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2476,10 +2336,6 @@ msgstr "PIN nua na heochrach crua-earraí"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "Mír nua"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "PIN nua na heochrach slándála"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -2964,10 +2820,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "Téacs amh"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid "Read an armored private key or experimental FIDO2-protected private key from the clipboard."
-msgstr "Léigh eochair phríobháideach armúrtha nó eochair phríobháideach thurgnamhach atá cosanta le FIDO2 ón ngearrthaisce."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "Léigh conairí athraithe do thiomantas Git {oid} an stórais pasfhocal"
@@ -3055,14 +2907,6 @@ msgstr "Faighteoirí ón tiomantas a ndearnadh iniúchadh air"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "Molta do stórais nua"
-
-#: crates/keycord-fido/src/error.rs:35
-#: crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14
-#: crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "Athcheangail an eochair shlándála FIDO2 agus bain triail eile as."
 
 #: crates/keycord-keys/src/error.rs:199
 #: crates/keycord-keys/src/error.rs:238
@@ -3377,10 +3221,6 @@ msgstr "Cuardaigh luachanna"
 msgid "Search weak passwords"
 msgstr "Cuardaigh pasfhocail laga"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "PIN na heochrach slándála"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3402,33 +3242,11 @@ msgstr "Roghnaigh na heochracha príobháideacha ar féidir leo pasfhocail sa st
 msgid "Sequential characters"
 msgstr "Carachtair sheicheamhacha"
 
-#: crates/keycord-fido/src/error.rs:21
-#: crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203
-#: crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "Socraigh PIN ar an eochair shlándála FIDO2 ar dtús."
-
-#: crates/keycord-fido/src/ui.rs:533
-#: crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "Socraigh PIN na heochrach slándála"
-
-#: crates/keycord-fido/src/ui.rs:214
-#: crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "Socraigh PIN na heochrach slándála (FIDO2 turgnamhach)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "Cumraigh eochair chrua-earraí nua (Turgnamhach)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid "Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "Ní thacaítear le PIN eochrach slándála FIDO2 a shocrú ach ar Linux sa leagan seo."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3540,11 +3358,6 @@ msgstr "Stop sioncrónú an stórais gan choinne."
 msgid "Store synced."
 msgstr "Sioncrónaíodh an stóras."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "Ní UTF-8 bailí é an PIN FIDO2 stóráilte: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3558,10 +3371,6 @@ msgstr "Athraigh an t-inneall go Host chun stóras a athchóiriú ó stóras Git
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "Athraigh an t-inneall go Host chun pass import a úsáid."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid "Switch to the Integrated backend to use experimental FIDO2-protected private keys."
-msgstr "Athraigh go dtí an t-inneall Integrated chun eochracha príobháideacha turgnamhacha atá cosanta le FIDO2 a úsáid."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3595,34 +3404,6 @@ msgstr "Stórais á sioncrónú"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "Eagarthóir Téacs"
-
-#: crates/keycord-fido/src/error.rs:37
-#: crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "Ní thacaíonn an eochair shlándála FIDO2 sin leis an eisínteacht hmac-secret."
-
-#: crates/keycord-fido/src/error.rs:27
-#: crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10
-#: crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "Ní mór don eochair shlándála FIDO2 sin tacú le cosaint PIN."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "Níorbh fhéidir an eochair sin atá cosanta le FIDO2 a easpórtáil."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "Tá sonraí na heochrach sin atá cosanta le FIDO2 neamhbhailí."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "Tá an eochair sin atá cosanta le FIDO2 neamhbhailí."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3709,19 +3490,6 @@ msgstr "Níl mód aitheanta HPKE san iarratas CXP."
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "Ní thairgeann an t-iarratas CXP an fhormáid chartlainne deflate a dtacaítear léi."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "Tá beart NUL gan tacaíocht i PIN na heochrach slándála FIDO2."
-
-#: crates/keycord-fido/src/error.rs:25
-#: crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "Tá PIN na heochrach slándála FIDO2 mícheart."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "Níor thug an eochair shlándála FIDO2 aitheantóir dintiúir ar ais."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3821,10 +3589,6 @@ msgstr "Tá pasfhocal na heochrach príobháidí mícheart."
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "Stop an próiseas cúlra a dhéanann fardal de na heochracha príobháideacha gan choinne."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "Ní mheaitseálann PINanna na heochrach slándála."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "Ní iarratas áitiúil CXP paseochrach a dtacaítear leis é an comhad roghnaithe. {error}"
@@ -3878,11 +3642,6 @@ msgstr "Cuirtear na línte seo i ndiaidh líne an phasfhocail nuair a chruthaío
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr "Úsáidtear na socruithe seo nuair a ghineann tú pasfhocal, nó nuair a ghineann tú arís é, ón eagarthóir."
 
-#: crates/keycord-keys/src/error.rs:210
-#: crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "Ní féidir leis an eochair shlándála FIDO2 seo do chuid míreanna a oscailt."
-
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr "Níl aon tiomantas ar fáil sa bhrainse seo lena iniúchadh."
@@ -3934,14 +3693,6 @@ msgstr "Ní féidir leis an eochair seo do chuid míreanna a oscailt."
 msgid "This private key is password protected."
 msgstr "Tá an eochair phríobháideach seo cosanta ag pasfhocal."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "Teastaíonn eochair shlándála FIDO2 ón eochair phríobháideach seo."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "Teastaíonn modh díghlasála eile ón eochair phríobháideach seo."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "Teastaíonn eochair chrua-earraí ón eochair phríobháideach seo."
@@ -3974,18 +3725,6 @@ msgstr "Uirlisí"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "Carachtair san iomlán"
-
-#: crates/keycord-fido/src/error.rs:33
-#: crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12
-#: crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "Déan teagmháil leis an eochair shlándála FIDO2 agus bain triail eile as."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "Déan teagmháil le d'eochair má tá sí ag caochadh."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4078,7 +3817,6 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "Díghlasáil eochair phríobháideach roghnaithe eile sula nglanann tú roghnú na heochrach seo."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527
 #: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
@@ -4111,26 +3849,6 @@ msgstr "Eochair phríobháideach gan ainm"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "Cárta cliste gan ainm"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "Dícheangail na heochracha slándála eile, ansin bain triail eile as."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "Ní thacaítear le formáid {} iontrála pasfhocail FIDO2."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "Ní thacaítear le cosaint '{}' iontrála pasfhocail FIDO2."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "Ní thacaítear le formáid {} d'eochair phríobháideach FIDO2."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "Ní thacaítear le cosaint '{}' eochrach príobháidí FIDO2."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -4866,10 +4584,6 @@ msgstr "{fingerprint} — Eochair chrua-earraí"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} — Cosanta ag pasfhocal"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} — Cosanta ag eochair shlándála"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} — Ceadchomhartha slándála"
@@ -4877,10 +4591,6 @@ msgstr "{fingerprint} — Ceadchomhartha slándála"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} — Ceadchomhartha slándála ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -4923,10 +4633,6 @@ msgstr "{summary}\nearráid: {error}"
 msgid ""
 "{}\n{version}"
 msgstr "{}\n{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

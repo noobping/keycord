@@ -1,6 +1,5 @@
 //! Canonical password-entry operation errors and progress values.
 
-use keycord_keys::private_key_user_action_message;
 use thiserror::Error;
 
 #[derive(Clone, Debug, PartialEq, Eq, Error)]
@@ -92,10 +91,7 @@ impl PasswordEntryWriteError {
             Self::MissingPrivateKey(_) => "Add a private key in Preferences.",
             Self::LockedPrivateKey(_) => "Unlock the key in Preferences.",
             Self::IncompatiblePrivateKey(_) => "This key can't open your items.",
-            Self::Other(message) => {
-                private_key_user_action_message(message).unwrap_or("Couldn't save changes.")
-            }
-            Self::EntryNotFound(_) => "Couldn't save changes.",
+            Self::Other(_) | Self::EntryNotFound(_) => "Couldn't save changes.",
         }
     }
 
@@ -147,11 +143,8 @@ mod tests {
             "That item no longer exists."
         );
         assert_eq!(
-            PasswordEntryWriteError::Other(
-                "Touch the FIDO2 security key and try again.".to_string()
-            )
-            .save_toast_message(),
-            "Touch the FIDO2 security key and try again."
+            PasswordEntryWriteError::Other("write failed".to_string()).save_toast_message(),
+            "Couldn't save changes."
         );
     }
 }

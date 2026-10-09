@@ -252,10 +252,6 @@ msgstr "අස්ථානගත අච්චු ක්ෂේත්‍ර එක
 msgid "Adding hardware key"
 msgstr "දෘඪාංග යතුර එක් කරමින්"
 
-#: crates/keycord-fido/src/ui.rs:35
-msgid "Allow USB security key access (Experimental FIDO2)"
-msgstr "USB ආරක්ෂක යතුරු ප්‍රවේශයට ඉඩ දෙන්න (පරීක්ෂණාත්මක FIDO2)"
-
 #: src/composition/host_access.rs:63
 msgid "Allow access to apps on this device"
 msgstr "මෙම උපාංගයේ යෙදුම් වෙත ප්‍රවේශයට ඉඩ දෙන්න"
@@ -455,11 +451,6 @@ msgstr "දේශීය ගොනුවක් තෝරන්න."
 msgid "Choose a local folder."
 msgstr "දේශීය ෆෝල්ඩරයක් තෝරන්න."
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:88
-msgid ""
-"Choose a private key file or experimental FIDO2-protected private key file."
-msgstr "පෞද්ගලික යතුරු ගොනුවක් හෝ පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරු ගොනුවක් තෝරන්න."
-
 #: crates/keycord-entries/src/ui/list/row.rs:538
 #: crates/keycord-stores/src/ui/management/import.rs:349
 msgid "Choose a store."
@@ -618,38 +609,18 @@ msgstr "Commit කළේ"
 msgid "Committer"
 msgstr "Commit කළ අය"
 
-#: crates/keycord-fido/src/ui.rs:414
-msgid "Confirm new security key PIN"
-msgstr "ආරක්ෂක යතුරේ නව PIN එක තහවුරු කරන්න"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:37
 msgid "Confirm password"
 msgstr "මුරපදය තහවුරු කරන්න"
-
-#: crates/keycord-fido/src/ui.rs:304
-msgid "Confirm the new security key PIN."
-msgstr "ආරක්ෂක යතුරේ නව PIN එක තහවුරු කරන්න."
 
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:143
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:69
 msgid "Connect a hardware key first."
 msgstr "පළමුව දෘඪාංග යතුරක් සම්බන්ධ කරන්න."
 
-#: crates/keycord-fido/src/native.rs:279 crates/keycord-fido/src/native.rs:454
-msgid "Connect only one FIDO2 security key before continuing."
-msgstr "ඉදිරියට යාමට පෙර එක් FIDO2 ආරක්ෂක යතුරක් පමණක් සම්බන්ධ කරන්න."
-
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:75
 msgid "Connect only one hardware key before adding it."
 msgstr "එක් කිරීමට පෙර එක් දෘඪාංග යතුරක් පමණක් සම්බන්ධ කරන්න."
-
-#: crates/keycord-keys/src/error.rs:201
-msgid "Connect the FIDO2 security key and try again."
-msgstr "FIDO2 ආරක්ෂක යතුර සම්බන්ධ කර නැවත උත්සාහ කරන්න."
-
-#: crates/keycord-keys/src/error.rs:240
-msgid "Connect the FIDO2 security key first."
-msgstr "පළමුව FIDO2 ආරක්ෂක යතුර සම්බන්ධ කරන්න."
 
 #: crates/keycord-keys/src/error.rs:188
 msgid "Connect the hardware key and try again."
@@ -659,18 +630,9 @@ msgstr "දෘඪාංග යතුර සම්බන්ධ කර නැව�
 msgid "Connect the hardware key first."
 msgstr "පළමුව දෘඪාංග යතුර සම්බන්ධ කරන්න."
 
-#: crates/keycord-fido/src/error.rs:31 crates/keycord-fido/src/transport.rs:33
-#: crates/keycord-keys/src/error.rs:16
-msgid "Connect the matching FIDO2 security key."
-msgstr "ගැළපෙන FIDO2 ආරක්ෂක යතුර සම්බන්ධ කරන්න."
-
 #: crates/keycord-keys/src/store/storage.rs:835
 msgid "Connect the matching hardware key before importing it."
 msgstr "ආයාත කිරීමට පෙර ගැළපෙන දෘඪාංග යතුර සම්බන්ධ කරන්න."
-
-#: crates/keycord-fido/src/capabilities.rs:36
-msgid "Context"
-msgstr "සන්දර්භය"
 
 #: crates/keycord-entries/src/clipboard.rs:137
 #: crates/keycord-entries/src/ui/page/mod.rs:782
@@ -693,10 +655,6 @@ msgstr "armor කළ පෞද්ගලික යතුර පිටපත් �
 #: crates/keycord-keys/src/ui/managed_key.rs:21
 msgid "Copy armored public key"
 msgstr "armor කළ පොදු යතුර පිටපත් කරන්න"
-
-#: crates/keycord-keys/src/ui/managed_key.rs:24
-msgid "Copy experimental FIDO2-protected private key"
-msgstr "පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුර පිටපත් කරන්න"
 
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:700
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:758
@@ -785,10 +743,6 @@ msgstr "දෘඪාංග යතුර මත පොදු යතුරු ස�
 msgid "Couldn't create the store."
 msgstr "ගබඩාව සෑදිය නොහැකි විය."
 
-#: crates/keycord-fido/src/crypto.rs:115 crates/keycord-fido/src/crypto.rs:118
-msgid "Couldn't decrypt the FIDO2-encrypted data."
-msgstr "FIDO2 මඟින් සංකේතනය කළ දත්ත විකේතනය කළ නොහැකි විය."
-
 #: crates/keycord-entries/src/error.rs:106
 #: crates/keycord-entries/src/ui/list/row.rs:607
 msgid "Couldn't delete the item."
@@ -815,7 +769,6 @@ msgstr "දෘඪාංග විකේතන යතුර ජනනය කළ �
 msgid "Couldn't generate the hardware signing key"
 msgstr "දෘඪාංග අත්සන් යතුර ජනනය කළ නොහැකි විය"
 
-#: crates/keycord-fido/src/ui.rs:202 crates/keycord-fido/src/ui.rs:228
 #: crates/keycord-keys/src/ui/key_management/private.rs:116
 #: crates/keycord-keys/src/ui/key_management/private.rs:82
 msgid "Couldn't generate the key."
@@ -841,10 +794,6 @@ msgstr "මුරපද ආයාත කළ නොහැකි විය."
 #: crates/keycord-keys/src/ui/key_management/private.rs:240
 msgid "Couldn't import the key."
 msgstr "යතුර ආයාත කළ නොහැකි විය."
-
-#: crates/keycord-fido/src/native.rs:236
-msgid "Couldn't initialize the FIDO2 security key."
-msgstr "FIDO2 ආරක්ෂක යතුර ආරම්භ කළ නොහැකි විය."
 
 #: crates/keycord-git/src/ui/store_page.rs:391
 #: crates/keycord-git/src/ui/store_page.rs:667
@@ -1041,10 +990,6 @@ msgstr ""
 "Git අත්සන් කිරීම සඳහා {fingerprint_for_failure} පෞද්ගලික යතුර අගුළු හැරිය නොහැකි විය. "
 "අත්සනක් නොමැතිව ඉදිරියට යයි."
 
-#: crates/keycord-keys/src/error.rs:206 crates/keycord-keys/src/error.rs:245
-msgid "Couldn't unlock the FIDO2 security key."
-msgstr "FIDO2 ආරක්ෂක යතුර අගුළු හැරිය නොහැකි විය."
-
 #: crates/keycord-keys/src/error.rs:194 crates/keycord-keys/src/error.rs:196
 #: crates/keycord-keys/src/error.rs:230 crates/keycord-keys/src/error.rs:233
 msgid "Couldn't unlock the hardware key."
@@ -1070,10 +1015,6 @@ msgstr "දෘඪාංග යතුරේ පරිපාලක PIN එක ස�
 #: crates/keycord-keys/src/hardware/linux.rs:358
 msgid "Couldn't verify the requested hardware key PIN"
 msgstr "ඉල්ලූ දෘඪාංග යතුරේ PIN එක සත්‍යාපනය කළ නොහැකි විය"
-
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:5
-msgid "Create a new FIDO2-protected key."
-msgstr "නව FIDO2-ආරක්ෂිත යතුරක් සාදන්න."
 
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:36
 msgid "Create a new OpenPGP key on a blank connected smartcard or YubiKey."
@@ -1270,12 +1211,6 @@ msgstr "පෞද්ගලික යතුර සඳහා ඊමේල් ල�
 msgid "Enter an email address."
 msgstr "ඊමේල් ලිපිනයක් ඇතුළත් කරන්න."
 
-#: crates/keycord-fido/src/error.rs:23 crates/keycord-fido/src/transport.rs:28
-#: crates/keycord-keys/src/error.rs:6
-#: crates/keycord-keys/src/store/unlock.rs:258
-msgid "Enter the FIDO2 security key PIN."
-msgstr "FIDO2 ආරක්ෂක යතුරේ PIN එක ඇතුළත් කරන්න."
-
 #: crates/keycord-keys/src/hardware/linux.rs:478
 #: crates/keycord-keys/src/store/storage.rs:953
 #: crates/keycord-keys/src/store/unlock.rs:237
@@ -1299,18 +1234,10 @@ msgstr "යතුරේ මුරපදය ඇතුළත් කරන්න."
 msgid "Enter the new hardware key PIN."
 msgstr "දෘඪාංග යතුරේ නව PIN එක ඇතුළත් කරන්න."
 
-#: crates/keycord-fido/src/ui.rs:301
-msgid "Enter the new security key PIN."
-msgstr "ආරක්ෂක යතුරේ නව PIN එක ඇතුළත් කරන්න."
-
 #: crates/keycord-keys/src/cert.rs:251
 #: crates/keycord-keys/src/store/storage.rs:1037
 msgid "Enter the private key password."
 msgstr "පෞද්ගලික යතුරේ මුරපදය ඇතුළත් කරන්න."
-
-#: crates/keycord-fido/src/ui.rs:296
-msgid "Enter the security key PIN."
-msgstr "ආරක්ෂක යතුරේ PIN එක ඇතුළත් කරන්න."
 
 #: crates/keycord-shell/src/window_widgets.rs:132
 msgid "Escape"
@@ -1319,16 +1246,6 @@ msgstr "Escape"
 #: crates/keycord-lifecycle/data/metainfo.xml:167
 msgid "Expand the password editor with cleanup actions"
 msgstr "පිරිසිදු කිරීමේ ක්‍රියා සමඟ මුරපද සංස්කාරකය පුළුල් කරන්න"
-
-#: crates/keycord-fido/src/ui.rs:37
-msgid ""
-"Experimental FIDO2-protected private keys need USB device access before "
-"Keycord can use a connected security key to unlock protected private keys. "
-"Restart Keycord after granting access."
-msgstr ""
-"ආරක්ෂිත පෞද්ගලික යතුරු අගුළු හැරීමට සම්බන්ධිත ආරක්ෂක යතුරක් භාවිත කිරීමට පෙර, පරීක්ෂණාත්මක FIDO2-"
-"ආරක්ෂිත පෞද්ගලික යතුරු සඳහා USB උපාංග ප්‍රවේශය අවශ්‍ය වේ. ප්‍රවේශය ලබා දීමෙන් පසු Keycord "
-"නැවත ආරම්භ කරන්න."
 
 #: crates/keycord-keys/src/ui/smartcard_access.rs:30
 msgid ""
@@ -1388,26 +1305,6 @@ msgstr "මුරපද {count}ක් අපනයනය කරන ලදි."
 msgid "Exported {count} passwords."
 msgstr "මුරපද {count}ක් අපනයනය කරන ලදි."
 
-#: crates/keycord-fido/src/manifest.rs:38
-msgid "FIDO2 private key manifest"
-msgstr "FIDO2 පෞද්ගලික යතුරු manifest ගොනුව"
-
-#: crates/keycord-keys/src/store/mod.rs:11
-msgid "FIDO2 private-key support is disabled in this build of Keycord."
-msgstr "මෙම Keycord ගොඩනැගීමේ FIDO2 පෞද්ගලික යතුරු සහාය අක්‍රීය කර ඇත."
-
-#: crates/keycord-fido/src/service.rs:339
-msgid "FIDO2 security key"
-msgstr "FIDO2 ආරක්ෂක යතුර"
-
-#: crates/keycord-keys/src/fido2/disabled.rs:3
-msgid "FIDO2 support is disabled in this build of Keycord."
-msgstr "මෙම Keycord ගොඩනැගීමේ FIDO2 සහාය අක්‍රීය කර ඇත."
-
-#: crates/keycord-fido/src/envelope.rs:104
-msgid "FIDO2 text envelope"
-msgstr "FIDO2 පෙළ ආවරණය"
-
 #: crates/keycord-lifecycle/src/updater/linux.rs:227
 msgid "Failed to allocate a private Linux update staging directory."
 msgstr "පෞද්ගලික Linux යාවත්කාලීන staging නාමාවලියක් වෙන් කිරීම අසාර්ථක විය."
@@ -1455,10 +1352,6 @@ msgstr "armor කළ අත්සන විකේතනය කිරීම අ�
 #: crates/keycord-keys/src/hardware/crypto.rs:304
 msgid "Failed to decode decrypted UTF-8 data"
 msgstr "විකේතනය කළ UTF-8 දත්ත decode කිරීම අසාර්ථක විය"
-
-#: crates/keycord-fido/src/crypto.rs:56
-msgid "Failed to derive enough HKDF output."
-msgstr "ප්‍රමාණවත් HKDF ප්‍රතිදානයක් ව්‍යුත්පන්න කිරීම අසාර්ථක විය."
 
 #: crates/keycord-passkey/src/credential.rs:441
 msgid "Failed to encode passkey key material: {err}"
@@ -1767,11 +1660,6 @@ msgstr "GNOME සෙවුම් සැපයුම්කරු නිවැර�
 msgid "General"
 msgstr "සාමාන්‍ය"
 
-#: crates/keycord-fido/data/window-generation-row.fragment.ui:4
-#: crates/keycord-fido/src/ui.rs:238
-msgid "Generate FIDO2-protected key (Experimental)"
-msgstr "FIDO2-ආරක්ෂිත යතුරක් ජනනය කරන්න (පරීක්ෂණාත්මක)"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:838
 msgid "Generate or import a private key."
 msgstr "පෞද්ගලික යතුරක් ජනනය කරන්න හෝ ආයාත කරන්න."
@@ -1786,10 +1674,6 @@ msgstr "මුරපදයක් ජනනය කරන්න"
 #: crates/keycord-keys/src/ui/widgets.rs:124
 msgid "Generate private key"
 msgstr "පෞද්ගලික යතුරක් ජනනය කරන්න"
-
-#: crates/keycord-fido/src/ui.rs:172
-msgid "Generating FIDO2-protected key (Experimental)"
-msgstr "FIDO2-ආරක්ෂිත යතුර ජනනය කරමින් (පරීක්ෂණාත්මක)"
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:49
 msgid "Generating key"
@@ -1835,17 +1719,6 @@ msgstr "මුල් පිටුවට යන්න"
 #: crates/keycord-shell/src/optional_permission.rs:88
 msgid "Grant"
 msgstr "ලබා දෙන්න"
-
-#: crates/keycord-fido/src/ui.rs:29
-msgid "Grant USB security key access (Experimental FIDO2)"
-msgstr "USB ආරක්ෂක යතුරු ප්‍රවේශය ලබා දෙන්න (පරීක්ෂණාත්මක FIDO2)"
-
-#: crates/keycord-fido/src/ui.rs:34
-msgid ""
-"Grant USB security key access for experimental FIDO2-protected private keys "
-"first."
-msgstr ""
-"පළමුව පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරු සඳහා USB ආරක්ෂක යතුරු ප්‍රවේශය ලබා දෙන්න."
 
 #: src/composition/host_access.rs:48
 msgid "Grant host access"
@@ -2116,18 +1989,6 @@ msgstr "යාවත්කාලීනය ස්ථාපනය කරන වි
 msgid "Integrated"
 msgstr "Integrated"
 
-#: crates/keycord-fido/src/cache.rs:191
-msgid "Invalid FIDO2 binding fingerprint '{value}'."
-msgstr "FIDO2 බැඳුම් ඇඟිලි සලකුණ '{value}' වලංගු නොවේ."
-
-#: crates/keycord-fido/src/native.rs:223
-msgid "Invalid FIDO2 device path: {error}"
-msgstr "වලංගු නොවන FIDO2 උපාංග මාර්ගයකි: {error}"
-
-#: crates/keycord-fido/src/crypto.rs:99
-msgid "Invalid FIDO2 encrypted data."
-msgstr "FIDO2 සංකේතිත දත්ත වලංගු නොවේ."
-
 #: crates/keycord-entries/src/integrated.rs:814
 #: crates/keycord-entries/src/integrated.rs:816
 #: crates/keycord-entries/src/integrated.rs:831
@@ -2214,7 +2075,6 @@ msgstr "තෝරාගත් පෞද්ගලික යතුරු සිය
 msgid "Key file removed."
 msgstr "යතුරු ගොනුව ඉවත් කරන ලදි."
 
-#: crates/keycord-fido/src/ui.rs:151
 #: crates/keycord-keys/src/ui/key_management/private.rs:91
 msgid "Key generated."
 msgstr "යතුර ජනනය කරන ලදි."
@@ -2237,10 +2097,6 @@ msgstr "යතුරු මුරපදය"
 #: crates/keycord-shell/src/navigation.rs:9
 msgid "Keycord"
 msgstr "Keycord"
-
-#: crates/keycord-fido/src/service.rs:105
-msgid "Keycord FIDO2-protected private key"
-msgstr "Keycord FIDO2-ආරක්ෂිත පෞද්ගලික යතුර"
 
 #: crates/keycord-git/src/ui/audit.rs:1114
 msgid "Keycord OpenPGP"
@@ -2594,10 +2450,6 @@ msgstr "දෘඪාංග යතුරේ නව PIN එක"
 #: crates/keycord-entries/src/ui/page/mod.rs:414
 msgid "New item"
 msgstr "නව අයිතමය"
-
-#: crates/keycord-fido/src/ui.rs:410
-msgid "New security key PIN"
-msgstr "ආරක්ෂක යතුරේ නව PIN එක"
 
 #: crates/keycord-git/src/ui/store_page.rs:236
 msgid "No Git repository yet. Add a remote to initialize one."
@@ -3104,13 +2956,6 @@ msgstr "RP ID"
 msgid "Raw text"
 msgstr "අමු පෙළ"
 
-#: crates/keycord-keys/data/window-recipient-actions.fragment.ui:75
-msgid ""
-"Read an armored private key or experimental FIDO2-protected private key from "
-"the clipboard."
-msgstr ""
-"පසුරු පුවරුවෙන් armor කළ පෞද්ගලික යතුරක් හෝ පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරක් කියවන්න."
-
 #: crates/keycord-git/src/audit.rs:517
 msgid "Read changed paths for password store Git commit {oid}"
 msgstr "මුරපද ගබඩාවේ Git commit {oid} සඳහා වෙනස් කළ මාර්ග කියවන්න"
@@ -3201,12 +3046,6 @@ msgstr "විගණනය කළ commit එකේ ලබන්නන්"
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:10
 msgid "Recommended for new stores"
 msgstr "නව ගබඩා සඳහා නිර්දේශිතයි"
-
-#: crates/keycord-fido/src/error.rs:35 crates/keycord-fido/src/transport.rs:35
-#: crates/keycord-keys/src/error.rs:14 crates/keycord-keys/src/error.rs:214
-#: crates/keycord-keys/src/error.rs:253
-msgid "Reconnect the FIDO2 security key and try again."
-msgstr "FIDO2 ආරක්ෂක යතුර නැවත සම්බන්ධ කර උත්සාහ කරන්න."
 
 #: crates/keycord-keys/src/error.rs:199 crates/keycord-keys/src/error.rs:238
 msgid "Reconnect the hardware key and try again."
@@ -3537,10 +3376,6 @@ msgstr "අගයන් සොයන්න"
 msgid "Search weak passwords"
 msgstr "දුර්වල මුරපද සොයන්න"
 
-#: crates/keycord-fido/src/ui.rs:337
-msgid "Security key PIN"
-msgstr "ආරක්ෂක යතුරේ PIN එක"
-
 #: crates/keycord-stores/src/ui/management/clone.rs:111
 #: crates/keycord-stores/src/ui/management/import.rs:300
 #: crates/keycord-stores/src/ui/management/import.rs:318
@@ -3562,30 +3397,11 @@ msgstr "මෙම ගබඩාවේ මුරපද අගුළු හැර�
 msgid "Sequential characters"
 msgstr "අනුපිළිවෙළට යෙදුණු අක්ෂර"
 
-#: crates/keycord-fido/src/error.rs:21 crates/keycord-fido/src/transport.rs:27
-#: crates/keycord-keys/src/error.rs:203 crates/keycord-keys/src/error.rs:242
-#: crates/keycord-keys/src/error.rs:8
-msgid "Set a PIN on the FIDO2 security key first."
-msgstr "පළමුව FIDO2 ආරක්ෂක යතුරට PIN එකක් සකසන්න."
-
-#: crates/keycord-fido/src/ui.rs:533 crates/keycord-keys/src/ui/unlock.rs:77
-msgid "Set security key PIN"
-msgstr "ආරක්ෂක යතුරේ PIN එක සකසන්න"
-
-#: crates/keycord-fido/src/ui.rs:214 crates/keycord-fido/src/ui.rs:250
-msgid "Set security key PIN (Experimental FIDO2)"
-msgstr "ආරක්ෂක යතුරේ PIN එක සකසන්න (පරීක්ෂණාත්මක FIDO2)"
-
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:71
 #: crates/keycord-keys/data/window-recipient-actions.fragment.ui:35
 #: crates/keycord-keys/src/ui/widgets.rs:132
 msgid "Set up new hardware key (Experimental)"
 msgstr "නව දෘඪාංග යතුරක් පිහිටුවන්න (පරීක්ෂණාත්මක)"
-
-#: crates/keycord-fido/src/error.rs:29
-msgid ""
-"Setting a FIDO2 security key PIN is only supported on Linux in this build."
-msgstr "මෙම ගොඩනැගීමේ FIDO2 ආරක්ෂක යතුරේ PIN එකක් සැකසීමට සහාය දක්වන්නේ Linux හි පමණි."
 
 #: crates/keycord-keys/data/window-generation-pages.fragment.ui:117
 msgid "Setting up hardware key (Experimental)"
@@ -3697,11 +3513,6 @@ msgstr "ගබඩා සමමුහුර්තකරණය අනපේක්�
 msgid "Store synced."
 msgstr "ගබඩාව සමමුහුර්ත කරන ලදි."
 
-#: crates/keycord-fido/src/service.rs:181
-#: crates/keycord-fido/src/service.rs:272
-msgid "Stored FIDO2 PIN is not valid UTF-8: {error}"
-msgstr "ගබඩා කළ FIDO2 PIN එක වලංගු UTF-8 නොවේ: {error}"
-
 #: crates/keycord-entries/data/window-header-list.fragment.ui:47
 #: crates/keycord-git/data/window-header-audit-filter.fragment.ui:25
 #: crates/keycord-stores/data/shortcuts-section.fragment.ui:3
@@ -3715,12 +3526,6 @@ msgstr "Git නිධියකින් ගබඩාවක් ප්‍රති
 #: crates/keycord-stores/src/management.rs:106
 msgid "Switch Backend to Host to use pass import."
 msgstr "pass import භාවිත කිරීමට පසුබිම Host වෙත මාරු කරන්න."
-
-#: crates/keycord-fido/src/ui.rs:32
-msgid ""
-"Switch to the Integrated backend to use experimental FIDO2-protected private "
-"keys."
-msgstr "පරීක්ෂණාත්මක FIDO2-ආරක්ෂිත පෞද්ගලික යතුරු භාවිත කිරීමට Integrated පසුබිමට මාරු වන්න."
 
 #: crates/keycord-entries/data/window-pages.fragment.ui:269
 #: crates/keycord-preferences/data/window-page.fragment.ui:321
@@ -3758,31 +3563,6 @@ msgstr "ගබඩා සමමුහුර්ත කරමින්"
 #: crates/keycord-entries/data/window-pages.fragment.ui:63
 msgid "Text Editor"
 msgstr "පෙළ සංස්කාරකය"
-
-#: crates/keycord-fido/src/error.rs:37 crates/keycord-fido/src/transport.rs:38
-#: crates/keycord-keys/src/error.rs:20
-msgid "That FIDO2 security key does not support the hmac-secret extension."
-msgstr "එම FIDO2 ආරක්ෂක යතුර hmac-secret දිගුවට සහාය නොදක්වයි."
-
-#: crates/keycord-fido/src/error.rs:27 crates/keycord-fido/src/transport.rs:31
-#: crates/keycord-keys/src/error.rs:10 crates/keycord-keys/src/error.rs:209
-#: crates/keycord-keys/src/error.rs:248
-msgid "That FIDO2 security key must support PIN protection."
-msgstr "එම FIDO2 ආරක්ෂක යතුර PIN ආරක්ෂාවට සහාය දැක්විය යුතුය."
-
-#: crates/keycord-keys/src/store/storage.rs:1089
-msgid "That FIDO2-protected key could not be exported."
-msgstr "එම FIDO2-ආරක්ෂිත යතුර අපනයනය කළ නොහැකි විය."
-
-#: crates/keycord-fido/src/service.rs:155
-msgid "That FIDO2-protected key data is invalid."
-msgstr "එම FIDO2-ආරක්ෂිත යතුරු දත්ත වලංගු නොවේ."
-
-#: crates/keycord-keys/src/store/manifest.rs:104
-#: crates/keycord-keys/src/store/storage.rs:160
-#: crates/keycord-keys/src/store/unlock.rs:295
-msgid "That FIDO2-protected key is invalid."
-msgstr "එම FIDO2-ආරක්ෂිත යතුර වලංගු නොවේ."
 
 #: crates/keycord-keys/src/cert.rs:178
 msgid "That OpenPGP key file does not include a private key."
@@ -3873,18 +3653,6 @@ msgstr "CXP ඉල්ලීමේ හඳුනාගත හැකි HPKE ප්
 #: crates/keycord-passkey/src/request.rs:98
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr "CXP ඉල්ලීම සහාය දක්වන deflate සංරක්ෂිත ආකෘතිය ඉදිරිපත් නොකරයි."
-
-#: crates/keycord-fido/src/native.rs:228
-msgid "The FIDO2 security key PIN contains an unsupported NUL byte."
-msgstr "FIDO2 ආරක්ෂක යතුරේ PIN එකෙහි සහාය නොදක්වන NUL බයිටයක් අඩංගු වේ."
-
-#: crates/keycord-fido/src/error.rs:25 crates/keycord-fido/src/transport.rs:29
-msgid "The FIDO2 security key PIN is incorrect."
-msgstr "FIDO2 ආරක්ෂක යතුරේ PIN එක වැරදියි."
-
-#: crates/keycord-fido/src/native.rs:361
-msgid "The FIDO2 security key did not return a credential identifier."
-msgstr "FIDO2 ආරක්ෂක යතුර අක්තපත්‍ර හැඳුනුමක් ආපසු ලබා දුන්නේ නැත."
 
 #: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
@@ -3984,10 +3752,6 @@ msgstr "පෞද්ගලික යතුරේ මුරපදය වැරද
 msgid "The private-key inventory worker stopped unexpectedly."
 msgstr "පෞද්ගලික යතුරු ලේඛනගත කිරීමේ කාර්ය ක්‍රියාවලිය අනපේක්ෂිත ලෙස නතර විය."
 
-#: crates/keycord-fido/src/ui.rs:307
-msgid "The security key PINs do not match."
-msgstr "ආරක්ෂක යතුරේ PIN දෙක නොගැළපේ."
-
 #: crates/keycord-passkey/src/ui.rs:133
 msgid "The selected file is not a supported local CXP passkey request. {error}"
 msgstr "තෝරාගත් ගොනුව සහාය දක්වන දේශීය CXP මුරයතුරු ඉල්ලීමක් නොවේ. {error}"
@@ -4048,10 +3812,6 @@ msgid ""
 "These settings are used when you generate or regenerate a password from the "
 "editor."
 msgstr "සංස්කාරකයෙන් මුරපදයක් ජනනය කරන හෝ නැවත ජනනය කරන විට මෙම සැකසුම් භාවිත වේ."
-
-#: crates/keycord-keys/src/error.rs:210 crates/keycord-keys/src/error.rs:249
-msgid "This FIDO2 security key can't open your items."
-msgstr "මෙම FIDO2 ආරක්ෂක යතුරට ඔබගේ අයිතම විවෘත කළ නොහැක."
 
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
@@ -4117,14 +3877,6 @@ msgstr "මෙම යතුරට ඔබගේ අයිතම විවෘත �
 msgid "This private key is password protected."
 msgstr "මෙම පෞද්ගලික යතුර මුරපදයකින් ආරක්ෂා කර ඇත."
 
-#: crates/keycord-keys/src/store/unlock.rs:267
-msgid "This private key requires a FIDO2 security key."
-msgstr "මෙම පෞද්ගලික යතුරට FIDO2 ආරක්ෂක යතුරක් අවශ්‍ය වේ."
-
-#: crates/keycord-keys/src/store/unlock.rs:288
-msgid "This private key requires a different unlock method."
-msgstr "මෙම පෞද්ගලික යතුරට වෙනත් අගුළුහැරීමේ ක්‍රමයක් අවශ්‍ය වේ."
-
 #: crates/keycord-keys/src/store/unlock.rs:244
 msgid "This private key requires a hardware key."
 msgstr "මෙම පෞද්ගලික යතුරට දෘඪාංග යතුරක් අවශ්‍ය වේ."
@@ -4158,16 +3910,6 @@ msgstr "මෙවලම්"
 #: crates/keycord-preferences/data/window-page.fragment.ui:226
 msgid "Total characters"
 msgstr "මුළු අක්ෂර ගණන"
-
-#: crates/keycord-fido/src/error.rs:33 crates/keycord-fido/src/transport.rs:34
-#: crates/keycord-keys/src/error.rs:12 crates/keycord-keys/src/error.rs:212
-#: crates/keycord-keys/src/error.rs:251
-msgid "Touch the FIDO2 security key and try again."
-msgstr "FIDO2 ආරක්ෂක යතුර ස්පර්ශ කර නැවත උත්සාහ කරන්න."
-
-#: crates/keycord-fido/src/ui.rs:38
-msgid "Touch your key if it blinks."
-msgstr "යතුර දැල්වෙන්නේ නම් එය ස්පර්ශ කරන්න."
 
 #: crates/keycord-shell/src/application.rs:319
 msgid "Translate"
@@ -4264,7 +4006,7 @@ msgid "Unlock another selected private key before clearing this one."
 msgstr "මෙය ඉවත් කිරීමට පෙර තවත් තෝරාගත් පෞද්ගලික යතුරක් අගුළු හරින්න."
 
 #: crates/keycord-entries/src/ui/page/mod.rs:89
-#: crates/keycord-fido/src/ui.rs:527 crates/keycord-git/src/ui/signing.rs:286
+#: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:250
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:389
@@ -4294,26 +4036,6 @@ msgstr "නමක් නොමැති පෞද්ගලික යතුර"
 #: crates/keycord-keys/src/cert.rs:93
 msgid "Unnamed smartcard"
 msgstr "නමක් නොමැති ස්මාර්ට් කාඩ්පත"
-
-#: crates/keycord-keys/src/error.rs:260
-msgid "Unplug the other security keys, then try again."
-msgstr "අනෙක් ආරක්ෂක යතුරු විසන්ධි කර නැවත උත්සාහ කරන්න."
-
-#: crates/keycord-fido/src/envelope.rs:73
-msgid "Unsupported FIDO2 password-entry format {}."
-msgstr "මෙම FIDO2 මුරපද ඇතුළත් කිරීමේ ආකෘතියට සහාය නොදක්වයි: {}."
-
-#: crates/keycord-fido/src/envelope.rs:79
-msgid "Unsupported FIDO2 password-entry protection '{}'."
-msgstr "මෙම FIDO2 මුරපද ඇතුළත් කිරීමේ ආරක්ෂණයට සහාය නොදක්වයි: '{}'."
-
-#: crates/keycord-fido/src/manifest.rs:53
-msgid "Unsupported FIDO2 private key format {}."
-msgstr "සහාය නොදක්වන FIDO2 පෞද්ගලික යතුරු ආකෘතියකි: {}."
-
-#: crates/keycord-fido/src/manifest.rs:59
-msgid "Unsupported FIDO2 private key protection '{}'."
-msgstr "සහාය නොදක්වන FIDO2 පෞද්ගලික යතුරු ආරක්ෂණයකි: '{}'."
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:53
 msgid "Unsupported Linux update architecture: {}"
@@ -5055,10 +4777,6 @@ msgstr "{fingerprint} - දෘඪාංග යතුර"
 msgid "{fingerprint} - Password protected"
 msgstr "{fingerprint} - මුරපදයෙන් ආරක්ෂිතයි"
 
-#: crates/keycord-keys/src/ui/managed_key.rs:12
-msgid "{fingerprint} - Security key protected"
-msgstr "{fingerprint} - ආරක්ෂක යතුරෙන් ආරක්ෂිතයි"
-
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:725
 msgid "{fingerprint} - Security token"
 msgstr "{fingerprint} - ආරක්ෂක ටෝකනය"
@@ -5066,10 +4784,6 @@ msgstr "{fingerprint} - ආරක්ෂක ටෝකනය"
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:727
 msgid "{fingerprint} - Security token ({detail})"
 msgstr "{fingerprint} - ආරක්ෂක ටෝකනය ({detail})"
-
-#: crates/keycord-fido/src/service.rs:335
-msgid "{manufacturer} {product}"
-msgstr "{manufacturer} {product}"
 
 #: crates/keycord-keys/src/store/storage.rs:1042
 #: crates/keycord-keys/src/store/storage.rs:958
@@ -5123,10 +4837,6 @@ msgid ""
 msgstr ""
 "{}\n"
 "{version}"
-
-#: crates/keycord-keys/src/store/storage.rs:1001
-msgid "{} ({short_id})"
-msgstr "{} ({short_id})"
 
 #: crates/keycord-lifecycle/src/updater/common.rs:1174
 msgid "{} of {} ({percentage:.0}%)"

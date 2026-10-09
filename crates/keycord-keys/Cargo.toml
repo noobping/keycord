@@ -12,19 +12,15 @@ publish = false
 [features]
 default = []
 audit = []
-fido = ["dep:keycord-fido", "keycord-fido/native-transport"]
-fido-ui = ["fido", "ui", "keycord-fido/ui"]
-fidopin = ["fido", "keycord-fido/pin-setup"]
 flatpak = []
 hardwarekey = ["smartcard"]
 smartcard = ["dep:card-backend-pcsc", "dep:openpgp-card"]
-test-support = ["keycord-fido?/test-support"]
+test-support = []
 ui = ["dep:adw", "dep:keycord-shell", "keycord-preferences/ui"]
 
 [dependencies]
 anyhow = "1.0"
 dirs-next = "2.0.0"
-keycord-fido = { workspace = true, optional = true, default-features = false }
 keycord-preferences.workspace = true
 keycord-runtime.workspace = true
 keycord-shell = { workspace = true, optional = true }

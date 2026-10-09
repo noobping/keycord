@@ -6,9 +6,6 @@ mod unlock;
 use crate::{INCOMPATIBLE_PRIVATE_KEY_ERROR, LOCKED_PRIVATE_KEY_ERROR, MISSING_PRIVATE_KEY_ERROR};
 
 const PRIVATE_KEY_NOT_STORED_ERROR: &str = "That private key is not stored in the app.";
-#[cfg(not(feature = "fido"))]
-const FIDO2_PRIVATE_KEY_FEATURE_DISABLED_ERROR: &str =
-    "FIDO2 private-key support is disabled in this build of Keycord.";
 
 pub fn missing_private_key_error() -> String {
     MISSING_PRIVATE_KEY_ERROR.to_string()
@@ -32,10 +29,10 @@ pub use storage::store_ripasso_hardware_key_bytes;
 pub use storage::store_ripasso_private_key_bytes;
 pub use storage::{
     armored_ripasso_private_key, armored_ripasso_public_key, discover_ripasso_hardware_keys,
-    generate_fido2_private_key, generate_ripasso_hardware_key, generate_ripasso_private_key,
-    import_ripasso_hardware_key_bytes, import_ripasso_private_key_bytes,
-    import_ripasso_private_key_with_secret, list_connected_smartcard_keys,
-    list_ripasso_private_keys, remove_ripasso_private_key, ripasso_private_key_title,
+    generate_ripasso_hardware_key, generate_ripasso_private_key, import_ripasso_hardware_key_bytes,
+    import_ripasso_private_key_bytes, import_ripasso_private_key_with_secret,
+    list_connected_smartcard_keys, list_ripasso_private_keys, remove_ripasso_private_key,
+    ripasso_private_key_title,
 };
 
 pub fn armored_managed_key_material(
@@ -47,10 +44,6 @@ pub fn armored_managed_key_material(
         }
         crate::ManagedRipassoPrivateKeyProtection::HardwareOpenPgpCard => {
             armored_ripasso_public_key(&key.fingerprint)
-        }
-        #[cfg(feature = "fido")]
-        crate::ManagedRipassoPrivateKeyProtection::Fido2HmacSecret => {
-            armored_ripasso_private_key(&key.fingerprint)
         }
     }
 }
