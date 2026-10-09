@@ -47,9 +47,7 @@ pub(crate) fn show_notification_once(app: &Application) {
     }
 
     let title = gettext("Help translate Keycord");
-    let body = gettext(
-        "Translate Keycord into a new language or help improve an existing translation on Weblate.",
-    );
+    let body = gettext("Help improve Keycord translations on Weblate.");
     let button = gettext("Open Weblate");
     let notification = Notification::new(&title);
     notification.set_body(Some(&body));
