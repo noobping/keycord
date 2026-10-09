@@ -70,6 +70,32 @@ pub fn validate_passkey_path(contents: &str, label: &str) -> Result<(), String> 
     Ok(())
 }
 
+/// Text-only consumers must never receive native binary passkeys.
+pub fn entry_text(bytes: &[u8]) -> Result<String, crate::PasswordEntryError> {
+    #[cfg(feature = "passless")]
+    if keycord_passkey::inspect_passless(bytes).is_some() {
+        return Err(crate::PasswordEntryError::other(
+            "This entry contains a passkey, not a password.",
+        ));
+    }
+    std::str::from_utf8(bytes)
+        .map(str::to_string)
+        .map_err(|_| crate::PasswordEntryError::other("The entry is not UTF-8 text."))
+}
+
+pub fn validate_entry_bytes_path(bytes: &[u8], label: &str) -> Result<(), String> {
+    #[cfg(feature = "passless")]
+    if let Some(credential) = keycord_passkey::inspect_passless(bytes) {
+        return credential?.validate_label(label);
+    }
+    #[cfg(feature = "passkey")]
+    if let Ok(text) = std::str::from_utf8(bytes) {
+        validate_passkey_path(text, label)?;
+    }
+    let _ = (bytes, label);
+    Ok(())
+}
+
 pub fn canonical_search_field_key(key: &str) -> Option<String> {
     let key = key.trim();
     if key.is_empty() {
@@ -269,4 +295,13 @@ mod tests {
             vec![field("passkey", "ordinary value")]
         );
     }
+}
+
+/// Native binary credentials have no password fields to export.
+pub fn export_entry_text(bytes: &[u8]) -> Result<Option<String>, crate::PasswordEntryError> {
+    #[cfg(feature = "passless")]
+    if keycord_passkey::inspect_passless(bytes).is_some() {
+        return Ok(None);
+    }
+    entry_text(bytes).map(Some)
 }

@@ -1,7 +1,7 @@
 //! GTK dialogs for opened passkey credentials and export requests.
 
-use crate::credential::PasskeyCredential;
 use crate::request::{read_opened_passkey_file, OpenedPasskeyFile, PasskeyExportRequestFile};
+use crate::{ImportedCredential, PasskeyFormat};
 use adw::gio::prelude::FileExt;
 use adw::prelude::*;
 use adw::{AlertDialog, ApplicationWindow, ResponseAppearance};
@@ -12,7 +12,7 @@ use std::rc::Rc;
 #[derive(Clone, Debug)]
 pub enum OpenPasskeyRequest {
     Valid(PasskeyExportRequestFile),
-    Import(PasskeyCredential),
+    Import(ImportedCredential),
     Invalid(String),
 }
 
@@ -89,13 +89,13 @@ pub fn command_line_request(args: &[OsString]) -> Option<OpenPasskeyRequest> {
 #[derive(Clone)]
 pub struct PasskeyDialogCallbacks {
     translate: Rc<dyn Fn(&str) -> String>,
-    import: Rc<dyn Fn(PasskeyCredential) -> Result<(), String>>,
+    import: Rc<dyn Fn(ImportedCredential, PasskeyFormat) -> Result<(), String>>,
 }
 
 impl PasskeyDialogCallbacks {
     pub fn new(
         translate: impl Fn(&str) -> String + 'static,
-        import: impl Fn(PasskeyCredential) -> Result<(), String> + 'static,
+        import: impl Fn(ImportedCredential, PasskeyFormat) -> Result<(), String> + 'static,
     ) -> Self {
         Self {
             translate: Rc::new(translate),
@@ -131,7 +131,7 @@ pub fn present_open_passkey_request(
             let heading = callbacks.text("Couldn't open passkey request");
             let body = callbacks
                 .text("The selected file is not a supported local CXP passkey request. {error}")
-                .replace("{error}", &error);
+                .replace("{error}", &callbacks.text(&error));
             (heading, body)
         }
         OpenPasskeyRequest::Import(_) => unreachable!(),
@@ -146,7 +146,7 @@ pub fn present_open_passkey_request(
 
 fn present_passkey_import(
     window: &ApplicationWindow,
-    credential: PasskeyCredential,
+    credential: ImportedCredential,
     callbacks: PasskeyDialogCallbacks,
 ) {
     let body = callbacks
@@ -167,10 +167,28 @@ fn present_passkey_import(
     dialog.set_default_response(Some("cancel"));
     dialog.set_response_appearance("import", ResponseAppearance::Suggested);
 
+    #[cfg(all(feature = "passkey", feature = "passless"))]
+    let format_choice = adw::ComboRow::builder()
+        .title(callbacks.text("Storage format"))
+        .model(&adw::gtk::StringList::new(&[
+            "Android Password Store",
+            "Passless",
+        ]))
+        .selected(0)
+        .build();
+    #[cfg(all(feature = "passkey", feature = "passless"))]
+    dialog.set_extra_child(Some(&format_choice));
     let window_for_import = window.clone();
     let callbacks_for_import = callbacks.clone();
     dialog.connect_response(Some("import"), move |_, _| {
-        if let Err(error) = (callbacks_for_import.import)(credential.clone()) {
+        let format = PasskeyFormat::default();
+        #[cfg(all(feature = "passkey", feature = "passless"))]
+        let format = if format_choice.selected() == 1 {
+            PasskeyFormat::Passless
+        } else {
+            format
+        };
+        if let Err(error) = (callbacks_for_import.import)(credential.clone(), format) {
             present_import_error(&window_for_import, &error, &callbacks_for_import);
         }
     });
@@ -184,7 +202,7 @@ fn present_import_error(
 ) {
     let body = callbacks
         .text("Keycord couldn't prepare the passkey item. {error}")
-        .replace("{error}", error);
+        .replace("{error}", &callbacks.text(error));
     let dialog = AlertDialog::builder()
         .heading(callbacks.text("Couldn't import passkey"))
         .body(body)

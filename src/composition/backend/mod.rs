@@ -2,7 +2,7 @@ mod command;
 mod host;
 mod integrated;
 #[cfg(test)]
-mod test_support;
+pub(crate) mod test_support;
 
 #[cfg(feature = "audit")]
 use sequoia_openpgp::Cert;
@@ -62,6 +62,8 @@ macro_rules! dispatch_backend_call {
 }
 
 dispatch_backend_call! {
+    fn read_entry_bytes(store_root: &str, label: &str) -> Result<Vec<u8>, PasswordEntryError>;
+    fn save_entry_bytes(store_root: &str, label: &str, contents: &[u8], overwrite: bool) -> Result<(), PasswordEntryWriteError>;
     fn read_password_entry(store_root: &str, label: &str) -> Result<String, PasswordEntryError>;
     fn read_password_line(store_root: &str, label: &str) -> Result<String, PasswordEntryError>;
     fn save_password_entry(
@@ -109,18 +111,6 @@ pub fn save_store_recipients_for_relative_dir(
     )
 }
 
-pub fn read_password_entry_with_progress(
-    store_root: &str,
-    label: &str,
-    report_progress: &mut dyn FnMut(PasswordEntryReadProgress),
-) -> Result<String, PasswordEntryError> {
-    if Preferences::new().uses_integrated_backend() {
-        integrated::read_password_entry_with_progress(store_root, label, report_progress)
-    } else {
-        host::read_password_entry_with_progress(store_root, label)
-    }
-}
-
 pub fn password_entry_is_readable(store_root: &str, label: &str) -> bool {
     dispatch_backend(
         || integrated::password_entry_is_readable(store_root, label),
@@ -166,5 +156,17 @@ pub(crate) fn prepare_startup() -> Result<StartupPreparation, String> {
         keycord_keys::prepare_managed_private_key_storage_for_startup()
     } else {
         Ok(StartupPreparation::Ready)
+    }
+}
+
+pub fn read_entry_bytes_with_progress(
+    store_root: &str,
+    label: &str,
+    progress: &mut dyn FnMut(PasswordEntryReadProgress),
+) -> Result<Vec<u8>, PasswordEntryError> {
+    if Preferences::new().uses_integrated_backend() {
+        integrated::read_entry_bytes_with_progress(store_root, label, progress)
+    } else {
+        host::read_entry_bytes(store_root, label)
     }
 }

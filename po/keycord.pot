@@ -27,7 +27,7 @@ msgstr ""
 msgid "A newer Windows release is available."
 msgstr ""
 
-#: crates/keycord-keys/src/lib.rs:35
+#: crates/keycord-keys/src/lib.rs:36
 msgid "A private key for this item is locked. Unlock it in Preferences."
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 
 #: crates/keycord-entries/src/error.rs:38
 #: crates/keycord-entries/src/error.rs:91
-#: crates/keycord-entries/src/undo.rs:62
+#: crates/keycord-entries/src/undo.rs:83
 #: crates/keycord-stores/src/error.rs:35
 msgid "Add a private key in Preferences."
 msgstr ""
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Add a remote to initialize a Git repository first."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:415
+#: crates/keycord-entries/src/ui/page/mod.rs:459
 msgid "Add a store folder first."
 msgstr ""
 
@@ -156,7 +156,7 @@ msgstr ""
 msgid "Add or remove this build from the local app menu."
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:548
+#: crates/keycord-entries/src/integrated.rs:588
 msgid "Add password for {label}"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Added hybrid sorting mode"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:509
+#: crates/keycord-entries/src/ui/page/mod.rs:559
 msgid "Added missing template fields."
 msgstr ""
 
@@ -243,24 +243,16 @@ msgstr ""
 
 #: crates/keycord-entries/src/error.rs:100
 #: crates/keycord-entries/src/error.rs:90
-#: crates/keycord-entries/src/undo.rs:54
+#: crates/keycord-entries/src/undo.rs:75
 msgid "An item with that name already exists."
 msgstr ""
 
-#: crates/keycord-passkey/src/cxf.rs:29
-msgid "Android Password Store cannot represent these FIDO2 extensions."
-msgstr ""
-
-#: crates/keycord-passkey/src/cxf.rs:49
-msgid "Android Password Store requires RSA-2048 with exponent 65537."
+#: crates/keycord-passkey/src/ui.rs:174
+msgid "Android Password Store"
 msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:90
 msgid "Android Password Store requires a 32-byte credential ID."
-msgstr ""
-
-#: crates/keycord-passkey/src/cxf.rs:37
-msgid "Android Password Store supports only the P-256 EC curve."
 msgstr ""
 
 #: crates/keycord-entries/data/shortcuts-sections.fragment.ui:42
@@ -325,7 +317,7 @@ msgstr ""
 msgid "Branches"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:846
+#: crates/keycord-entries/src/ui/page/mod.rs:899
 #: crates/keycord-lifecycle/data/keycord.desktop.in:5
 #: crates/keycord-lifecycle/data/metainfo.xml:6
 #: crates/keycord-lifecycle/src/desktop.rs:2
@@ -356,7 +348,7 @@ msgstr ""
 msgid "CXP response mode {0:?} is not supported for an opened request file."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:62
+#: crates/keycord-entries/src/ui/page/mod.rs:64
 msgid "Can't open this item."
 msgstr ""
 
@@ -365,8 +357,8 @@ msgid "Can't undo that change."
 msgstr ""
 
 #: crates/keycord-entries/src/ui/undo.rs:146
-#: crates/keycord-entries/src/undo.rs:52
-#: crates/keycord-entries/src/undo.rs:79
+#: crates/keycord-entries/src/undo.rs:100
+#: crates/keycord-entries/src/undo.rs:73
 msgid "Can't undo the last change."
 msgstr ""
 
@@ -420,7 +412,7 @@ msgstr ""
 msgid "Checking pass import availability."
 msgstr ""
 
-#: crates/keycord-passkey/src/cxf.rs:22
+#: crates/keycord-passkey/src/cxf.rs:23
 msgid "Choose a JSON object containing exactly one passkey credential."
 msgstr ""
 
@@ -521,7 +513,7 @@ msgstr ""
 
 #: crates/keycord-lifecycle/src/updater/linux.rs:275
 #: crates/keycord-passkey/src/ui.rs:141
-#: crates/keycord-passkey/src/ui.rs:192
+#: crates/keycord-passkey/src/ui.rs:210
 msgid "Close"
 msgstr ""
 
@@ -602,14 +594,14 @@ msgstr ""
 msgid "Connect the hardware key first."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:667
+#: crates/keycord-keys/src/store/storage.rs:666
 msgid "Connect the matching hardware key before importing it."
 msgstr ""
 
 #: crates/keycord-entries/src/clipboard.rs:137
-#: crates/keycord-entries/src/ui/page/mod.rs:789
-#: crates/keycord-entries/src/ui/page/mod.rs:799
-#: crates/keycord-entries/src/ui/page/mod.rs:809
+#: crates/keycord-entries/src/ui/page/mod.rs:842
+#: crates/keycord-entries/src/ui/page/mod.rs:852
+#: crates/keycord-entries/src/ui/page/mod.rs:862
 #: crates/keycord-shell/src/optional_permission.rs:147
 #: src/window/tool_hub/menu.rs:66
 msgid "Copied."
@@ -644,7 +636,7 @@ msgstr ""
 msgid "Copy password"
 msgstr ""
 
-#: src/composition/entries_ui.rs:113
+#: src/composition/entries_ui.rs:129
 msgid "Copy password to clipboard"
 msgstr ""
 
@@ -672,10 +664,6 @@ msgstr ""
 #: crates/keycord-keys/src/store/paths.rs:15
 #: crates/keycord-keys/src/store/paths.rs:9
 msgid "Could not determine the data folder."
-msgstr ""
-
-#: crates/keycord-keys/src/store/storage.rs:379
-msgid "Could not determine the home folder."
 msgstr ""
 
 #: crates/keycord-git/src/ui/actions/enabled.rs:89
@@ -727,7 +715,8 @@ msgstr ""
 msgid "Couldn't download the update."
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:156
+#: crates/keycord-passkey/src/credential.rs:133
+#: crates/keycord-passkey/src/passless.rs:223
 msgid "Couldn't encode the passkey record."
 msgstr ""
 
@@ -757,7 +746,7 @@ msgstr ""
 msgid "Couldn't grant permission."
 msgstr ""
 
-#: crates/keycord-passkey/src/ui.rs:189
+#: crates/keycord-passkey/src/ui.rs:207
 msgid "Couldn't import passkey"
 msgstr ""
 
@@ -766,9 +755,9 @@ msgstr ""
 msgid "Couldn't import passwords."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:607
-#: crates/keycord-entries/src/ui/page/mod.rs:625
-#: crates/keycord-entries/src/ui/page/mod.rs:635
+#: crates/keycord-entries/src/ui/page/mod.rs:657
+#: crates/keycord-entries/src/ui/page/mod.rs:675
+#: crates/keycord-entries/src/ui/page/mod.rs:685
 #: crates/keycord-keys/src/error.rs:132
 #: crates/keycord-keys/src/ui/key_management/private.rs:227
 msgid "Couldn't import the key."
@@ -796,7 +785,7 @@ msgstr ""
 msgid "Couldn't install the update."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:557
+#: crates/keycord-entries/src/ui/page/mod.rs:607
 #: crates/keycord-keys/src/ui/key_management/key_sync.rs:16
 msgid "Couldn't keep private keys synced. Sync was turned off."
 msgstr ""
@@ -1035,7 +1024,7 @@ msgstr ""
 msgid "Delete host GPG private key"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:377
+#: crates/keycord-entries/src/host.rs:437
 msgid "Delete password entry"
 msgstr ""
 
@@ -1108,16 +1097,16 @@ msgstr ""
 msgid "Enter a key password."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:762
+#: crates/keycord-keys/src/store/storage.rs:761
 msgid "Enter a name for the hardware key."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:834
+#: crates/keycord-keys/src/store/storage.rs:833
 msgid "Enter a name for the private key."
 msgstr ""
 
 #: crates/keycord-entries/src/ui/list/row.rs:679
-#: crates/keycord-entries/src/ui/page/mod.rs:410
+#: crates/keycord-entries/src/ui/page/mod.rs:454
 #: crates/keycord-keys/src/ui/key_management/form.rs:17
 msgid "Enter a name."
 msgstr ""
@@ -1142,7 +1131,7 @@ msgstr ""
 msgid "Enter a valid email address."
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:147
+#: crates/keycord-passkey/src/common.rs:23
 msgid "Enter a valid passkey RP ID."
 msgstr ""
 
@@ -1155,11 +1144,11 @@ msgstr ""
 msgid "Enter an OTP secret."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:768
+#: crates/keycord-keys/src/store/storage.rs:767
 msgid "Enter an email address for the hardware key."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:840
+#: crates/keycord-keys/src/store/storage.rs:839
 msgid "Enter an email address for the private key."
 msgstr ""
 
@@ -1168,13 +1157,13 @@ msgid "Enter an email address."
 msgstr ""
 
 #: crates/keycord-keys/src/hardware/linux.rs:478
-#: crates/keycord-keys/src/store/storage.rs:785
+#: crates/keycord-keys/src/store/storage.rs:784
 #: crates/keycord-keys/src/store/unlock.rs:196
 #: crates/keycord-keys/src/ui/dialog.rs:58
 msgid "Enter the hardware key PIN."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:775
+#: crates/keycord-keys/src/store/storage.rs:774
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:40
 msgid "Enter the hardware key admin PIN."
 msgstr ""
@@ -1185,13 +1174,13 @@ msgid "Enter the key password."
 msgstr ""
 
 #: crates/keycord-keys/src/hardware/linux.rs:476
-#: crates/keycord-keys/src/store/storage.rs:783
+#: crates/keycord-keys/src/store/storage.rs:782
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:43
 msgid "Enter the new hardware key PIN."
 msgstr ""
 
 #: crates/keycord-keys/src/cert.rs:226
-#: crates/keycord-keys/src/store/storage.rs:847
+#: crates/keycord-keys/src/store/storage.rs:846
 msgid "Enter the private key password."
 msgstr ""
 
@@ -1291,12 +1280,8 @@ msgstr ""
 msgid "Failed to create the Windows save-file picker: {err}"
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:602
+#: crates/keycord-keys/src/hardware/crypto.rs:601
 msgid "Failed to decode armored signature"
-msgstr ""
-
-#: crates/keycord-keys/src/hardware/crypto.rs:304
-msgid "Failed to decode decrypted UTF-8 data"
 msgstr ""
 
 #: crates/keycord-shell/src/ui.rs:29
@@ -1327,7 +1312,7 @@ msgstr ""
 msgid "Failed to make the downloaded update executable: {error}"
 msgstr ""
 
-#: crates/keycord-runtime/src/command.rs:386
+#: crates/keycord-runtime/src/command.rs:395
 msgid "Failed to open stdin for command"
 msgstr ""
 
@@ -1347,11 +1332,11 @@ msgstr ""
 msgid "Failed to read Windows save-file picker options: {err}"
 msgstr ""
 
-#: crates/keycord-runtime/src/command.rs:403
+#: crates/keycord-runtime/src/command.rs:412
 msgid "Failed to read command stderr: {error}"
 msgstr ""
 
-#: crates/keycord-runtime/src/command.rs:401
+#: crates/keycord-runtime/src/command.rs:410
 msgid "Failed to read command stdout: {error}"
 msgstr ""
 
@@ -1399,7 +1384,7 @@ msgstr ""
 msgid "Failed to resolve the update helper executable: {error}"
 msgstr ""
 
-#: crates/keycord-runtime/src/command.rs:352
+#: crates/keycord-runtime/src/command.rs:361
 msgid "Failed to run command: {error}"
 msgstr ""
 
@@ -1408,8 +1393,8 @@ msgstr ""
 msgid "Failed to run git command: {err}"
 msgstr ""
 
-#: src/composition/backend/command.rs:60
-#: src/composition/backend/command.rs:74
+#: src/composition/backend/command.rs:78
+#: src/composition/backend/command.rs:92
 msgid "Failed to run host program '{program}': {err}"
 msgstr ""
 
@@ -1487,7 +1472,7 @@ msgstr ""
 msgid "Failed to start the permission command: {error}"
 msgstr ""
 
-#: crates/keycord-runtime/src/command.rs:396
+#: crates/keycord-runtime/src/command.rs:405
 msgid "Failed to wait for command: {error}"
 msgstr ""
 
@@ -1731,7 +1716,7 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: crates/keycord-keys/src/lib.rs:33
+#: crates/keycord-keys/src/lib.rs:34
 msgid "Import a private key in Preferences before using the password store."
 msgstr ""
 
@@ -1791,7 +1776,7 @@ msgstr ""
 msgid "Importer"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:612
+#: crates/keycord-entries/src/ui/page/mod.rs:662
 #: crates/keycord-keys/src/ui/key_management/private.rs:207
 msgid "Importing key"
 msgstr ""
@@ -1896,14 +1881,18 @@ msgstr ""
 msgid "Integrated"
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:175
+#: crates/keycord-passkey/src/credential.rs:152
 msgid "Invalid Android Password Store CBOR record."
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:824
-#: crates/keycord-entries/src/integrated.rs:826
-#: crates/keycord-entries/src/integrated.rs:841
-#: crates/keycord-entries/src/integrated.rs:847
+#: crates/keycord-passkey/src/passless.rs:182
+msgid "Invalid Passless CBOR record."
+msgstr ""
+
+#: crates/keycord-entries/src/integrated.rs:863
+#: crates/keycord-entries/src/integrated.rs:865
+#: crates/keycord-entries/src/integrated.rs:880
+#: crates/keycord-entries/src/integrated.rs:886
 msgid "Invalid all-keys encrypted password entry."
 msgstr ""
 
@@ -1921,11 +1910,11 @@ msgstr ""
 msgid "Invalid host Git signature metadata."
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:171
+#: crates/keycord-passkey/src/credential.rs:148
 msgid "Invalid passkey Base64URL encoding."
 msgstr ""
 
-#: crates/keycord-passkey/src/cxf.rs:18
+#: crates/keycord-passkey/src/cxf.rs:19
 msgid "Invalid passkey JSON."
 msgstr ""
 
@@ -1966,7 +1955,8 @@ msgstr ""
 msgid "Keep folders in the list, but sort search results by pass file name."
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:247
+#: crates/keycord-passkey/src/credential.rs:211
+#: crates/keycord-passkey/src/passless.rs:172
 msgid "Keep the passkey's credential ID as its filename and its RP ID as the parent folder."
 msgstr ""
 
@@ -1982,7 +1972,7 @@ msgstr ""
 msgid "Key generated."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:585
+#: crates/keycord-entries/src/ui/page/mod.rs:635
 #: crates/keycord-keys/src/ui/key_management/private.rs:188
 msgid "Key imported."
 msgstr ""
@@ -2014,7 +2004,7 @@ msgstr ""
 msgid "Keycord couldn't finish installing the downloaded Linux update."
 msgstr ""
 
-#: crates/keycord-passkey/src/ui.rs:186
+#: crates/keycord-passkey/src/ui.rs:204
 msgid "Keycord couldn't prepare the passkey item. {error}"
 msgstr ""
 
@@ -2208,11 +2198,11 @@ msgstr ""
 msgid "Managed hardware-key setup is disabled in this build of Keycord."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:93
+#: crates/keycord-keys/src/store/storage.rs:94
 msgid "Managed private-key data '{}' does not match requested fingerprint '{}'."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:198
+#: crates/keycord-keys/src/store/storage.rs:199
 msgid "Managed private-key {artifact_kind} '{}' does not match canonical path '{}'."
 msgstr ""
 
@@ -2247,11 +2237,11 @@ msgstr ""
 msgid "Minimum count, 0 disables"
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:420
+#: crates/keycord-keys/src/store/storage.rs:419
 msgid "Missing OpenPGP certificate for stored hardware key."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:400
+#: crates/keycord-keys/src/store/storage.rs:399
 msgid "Missing OpenPGP certificate for stored private key."
 msgstr ""
 
@@ -2311,7 +2301,7 @@ msgid "New hardware key PIN"
 msgstr ""
 
 #: crates/keycord-entries/src/ui/new_item.rs:74
-#: crates/keycord-entries/src/ui/page/mod.rs:423
+#: crates/keycord-entries/src/ui/page/mod.rs:467
 msgid "New item"
 msgstr ""
 
@@ -2421,9 +2411,9 @@ msgstr ""
 msgid "No recipients set"
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:293
-#: crates/keycord-entries/src/integrated.rs:320
-#: crates/keycord-entries/src/integrated.rs:860
+#: crates/keycord-entries/src/integrated.rs:292
+#: crates/keycord-entries/src/integrated.rs:319
+#: crates/keycord-entries/src/integrated.rs:899
 #: crates/keycord-stores/src/integrated_recipients.rs:269
 #: crates/keycord-stores/src/paths.rs:74
 msgid "No recipients were found for this password entry."
@@ -2494,6 +2484,10 @@ msgstr ""
 msgid "Only regular files on the local filesystem are accepted."
 msgstr ""
 
+#: crates/keycord-passkey/src/cxf.rs:38
+msgid "Only the P-256 EC curve is supported."
+msgstr ""
+
 #: crates/keycord-git/data/shortcuts-navigation-item.fragment.ui:3
 msgid "Open Git tools"
 msgstr ""
@@ -2523,7 +2517,7 @@ msgstr ""
 msgid "Open a store first."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:171
+#: crates/keycord-entries/src/ui/page/mod.rs:173
 msgid "Open an item first."
 msgstr ""
 
@@ -2617,11 +2611,11 @@ msgstr ""
 msgid "Open tools"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:88
+#: crates/keycord-entries/src/ui/page/mod.rs:90
 msgid "Opening"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:344
+#: crates/keycord-entries/src/ui/page/mod.rs:368
 msgid "Opening item"
 msgstr ""
 
@@ -2649,6 +2643,19 @@ msgstr ""
 msgid "Passkey export request opened"
 msgstr ""
 
+#: crates/keycord-passkey/src/cxf.rs:81
+msgid "Passkey imports require a 32-byte credential ID."
+msgstr ""
+
+#: crates/keycord-entries/src/ui/page/bytes.rs:59
+#: crates/keycord-passkey/src/ui.rs:175
+msgid "Passless"
+msgstr ""
+
+#: crates/keycord-entries/src/ui/page/mod.rs:178
+msgid "Passless contents are read-only."
+msgstr ""
+
 #: crates/keycord-entries/data/window-pages.fragment.ui:96
 msgid "Password"
 msgstr ""
@@ -2670,11 +2677,11 @@ msgstr ""
 msgid "Password actions"
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:690
+#: crates/keycord-entries/src/integrated.rs:729
 msgid "Password entry '{label}' was not found."
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:629
+#: crates/keycord-entries/src/integrated.rs:668
 msgid "Password entry '{old_label}' was not found."
 msgstr ""
 
@@ -2784,9 +2791,13 @@ msgstr ""
 msgid "QR code"
 msgstr ""
 
+#: crates/keycord-passkey/src/cxf.rs:51
+msgid "RSA imports require RSA-2048 with exponent 65537."
+msgstr ""
+
 #: crates/keycord-entries/data/window-pages.fragment.ui:452
-#: crates/keycord-entries/src/ui/page/mod.rs:445
-#: crates/keycord-entries/src/ui/page/mod.rs:871
+#: crates/keycord-entries/src/ui/page/mod.rs:492
+#: crates/keycord-entries/src/ui/page/mod.rs:924
 msgid "Raw text"
 msgstr ""
 
@@ -2810,11 +2821,11 @@ msgstr ""
 msgid "Read pass version"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:264
+#: crates/keycord-entries/src/host.rs:311
 msgid "Read password entry"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:286
+#: crates/keycord-entries/src/host.rs:333
 msgid "Read password entry for clipboard copy"
 msgstr ""
 
@@ -2868,6 +2879,10 @@ msgstr ""
 
 #: crates/keycord-git/src/ui/audit.rs:1271
 msgid "Recipient source"
+msgstr ""
+
+#: crates/keycord-keys/src/entry_crypto.rs:55
+msgid "Recipient with key id {} not found"
 msgstr ""
 
 #: crates/keycord-stores/data/window-pages.fragment.ui:174
@@ -2959,7 +2974,7 @@ msgstr ""
 msgid "Remove key file"
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:707
+#: crates/keycord-entries/src/integrated.rs:746
 msgid "Remove password for {label}"
 msgstr ""
 
@@ -2975,7 +2990,7 @@ msgstr ""
 msgid "Remove remote"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:702
+#: crates/keycord-entries/src/ui/page/mod.rs:752
 msgid "Removed empty fields."
 msgstr ""
 
@@ -2988,11 +3003,11 @@ msgstr ""
 msgid "Rename pass file"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:354
+#: crates/keycord-entries/src/host.rs:414
 msgid "Rename password entry"
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:669
+#: crates/keycord-entries/src/integrated.rs:708
 msgid "Rename password from {old_label} to {new_label}"
 msgstr ""
 
@@ -3102,7 +3117,7 @@ msgstr ""
 msgid "Retry authorization with recipient files from the commit history when the current branch recipients cannot authorize the signer."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:735
+#: crates/keycord-entries/src/ui/page/mod.rs:785
 msgid "Reverted."
 msgstr ""
 
@@ -3117,19 +3132,19 @@ msgstr ""
 msgid "Save current page or sync from home"
 msgstr ""
 
-#: src/window/build/mod.rs:228
+#: src/window/build/mod.rs:229
 msgid "Save or discard your current changes before importing a passkey."
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:319
+#: crates/keycord-entries/src/host.rs:377
 msgid "Save password entry"
 msgstr ""
 
-#: src/composition/backend/host.rs:92
+#: src/composition/backend/host.rs:104
 msgid "Save password store recipients"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:279
+#: crates/keycord-entries/src/ui/page/mod.rs:301
 msgid "Saved."
 msgstr ""
 
@@ -3295,8 +3310,12 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:99
+#: crates/keycord-entries/src/ui/page/mod.rs:101
 msgid "Step {current}/{total}: touch your key if it blinks."
+msgstr ""
+
+#: crates/keycord-passkey/src/ui.rs:172
+msgid "Storage format"
 msgstr ""
 
 #: crates/keycord-entries/src/ui/new_item.rs:44
@@ -3391,12 +3410,12 @@ msgstr ""
 msgid "That file does not contain a private key."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:628
+#: crates/keycord-keys/src/store/storage.rs:627
 #: crates/keycord-keys/src/store/unlock.rs:250
 msgid "That hardware key cannot decrypt password store entries."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:889
+#: crates/keycord-keys/src/store/storage.rs:888
 msgid "That hardware-backed key does not have an exportable private key."
 msgstr ""
 
@@ -3409,12 +3428,13 @@ msgstr ""
 msgid "That item no longer exists."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:871
+#: crates/keycord-keys/src/store/storage.rs:870
 msgid "That key does not have an exportable public key."
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:552
-#: crates/keycord-entries/src/integrated.rs:640
+#: crates/keycord-entries/src/host.rs:243
+#: crates/keycord-entries/src/integrated.rs:592
+#: crates/keycord-entries/src/integrated.rs:679
 msgid "That password entry already exists."
 msgstr ""
 
@@ -3431,15 +3451,15 @@ msgstr ""
 msgid "That private key is not stored in the app."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:604
+#: crates/keycord-keys/src/store/storage.rs:603
 msgid "That private key must be password protected before you can import it."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:641
+#: crates/keycord-keys/src/store/storage.rs:640
 msgid "That public key does not match the hardware decryption key."
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:655
+#: crates/keycord-keys/src/store/storage.rs:654
 msgid "That public key does not match the hardware signing key."
 msgstr ""
 
@@ -3463,17 +3483,21 @@ msgstr ""
 msgid "The CXP request does not offer the supported deflate archive format."
 msgstr ""
 
-#: crates/keycord-keys/src/lib.rs:37
+#: crates/keycord-passkey/src/passless.rs:153
+msgid "The Passless record contains invalid metadata."
+msgstr ""
+
+#: crates/keycord-keys/src/lib.rs:38
 msgid "The available private keys cannot decrypt this item."
 msgstr ""
 
 #: crates/keycord-keys/src/hardware/linux.rs:247
-#: crates/keycord-keys/src/store/storage.rs:685
+#: crates/keycord-keys/src/store/storage.rs:684
 msgid "The connected hardware key does not match the stored decryption key."
 msgstr ""
 
 #: crates/keycord-keys/src/hardware/linux.rs:237
-#: crates/keycord-keys/src/store/storage.rs:676
+#: crates/keycord-keys/src/store/storage.rs:675
 msgid "The connected hardware key does not match the stored signing key."
 msgstr ""
 
@@ -3483,6 +3507,13 @@ msgstr ""
 
 #: crates/keycord-entries/src/ui/tools/mod.rs:47
 msgid "The current list doesn't have any searchable pass fields."
+msgstr ""
+
+#: crates/keycord-entries/src/file/parse.rs:83
+#: crates/keycord-entries/src/ui/page/bytes.rs:31
+#: crates/keycord-entries/src/ui/page/mod.rs:441
+#: crates/keycord-keys/src/hardware/linux.rs:511
+msgid "The entry is not UTF-8 text."
 msgstr ""
 
 #: crates/keycord-passkey/src/request.rs:78
@@ -3518,6 +3549,7 @@ msgid "The installer is ready to run."
 msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:107
+#: crates/keycord-passkey/src/passless.rs:139
 msgid "The passkey contains an invalid P-256 private scalar."
 msgstr ""
 
@@ -3526,27 +3558,30 @@ msgid "The passkey contains invalid RSA-2048 key material."
 msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:97
+#: crates/keycord-passkey/src/passless.rs:115
 msgid "The passkey contains invalid account or creation metadata."
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:130
+#: crates/keycord-passkey/src/common.rs:6
 msgid "The passkey contains invalid private key material."
 msgstr ""
 
-#: crates/keycord-passkey/src/cxf.rs:15
+#: crates/keycord-passkey/src/cxf.rs:16
 msgid "The passkey import is too large."
 msgstr ""
 
-#: crates/keycord-passkey/src/cxf.rs:91
+#: crates/keycord-passkey/src/cxf.rs:96
 msgid "The passkey is missing {}."
 msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:118
+#: crates/keycord-passkey/src/passless.rs:129
 msgid "The passkey private key has an invalid length."
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:159
-#: crates/keycord-passkey/src/credential.rs:166
+#: crates/keycord-passkey/src/credential.rs:136
+#: crates/keycord-passkey/src/credential.rs:143
+#: crates/keycord-passkey/src/passless.rs:178
 msgid "The passkey record is too large."
 msgstr ""
 
@@ -3567,14 +3602,15 @@ msgid "The passkey request source is not a regular local file: {path:?}"
 msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:94
+#: crates/keycord-passkey/src/cxf.rs:84
 msgid "The passkey user handle must contain 1 to 64 bytes."
 msgstr ""
 
-#: crates/keycord-passkey/src/cxf.rs:97
+#: crates/keycord-passkey/src/cxf.rs:102
 msgid "The passkey {key} must use unpadded Base64URL."
 msgstr ""
 
-#: src/window/build/mod.rs:226
+#: src/window/build/mod.rs:227
 msgid "The password editor is not available."
 msgstr ""
 
@@ -3603,19 +3639,19 @@ msgstr ""
 msgid "The selected store path is not a folder."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:368
+#: crates/keycord-keys/src/hardware/crypto.rs:367
 msgid "The stored public key has no signing subkey."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:349
+#: crates/keycord-keys/src/hardware/crypto.rs:348
 msgid "The stored public key has no transport-encryption subkey."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:336
+#: crates/keycord-keys/src/hardware/crypto.rs:335
 msgid "The stored public key is missing the hardware decryption key."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:356
+#: crates/keycord-keys/src/hardware/crypto.rs:355
 msgid "The stored public key is missing the hardware signing key."
 msgstr ""
 
@@ -3639,11 +3675,21 @@ msgstr ""
 msgid "These settings are used when you generate or regenerate a password from the editor."
 msgstr ""
 
+#: crates/keycord-passkey/src/passless.rs:123
+msgid "This Passless key provider is not supported."
+msgstr ""
+
+#: crates/keycord-entries/src/host.rs:36
+#: crates/keycord-entries/src/undo.rs:137
+msgid "This backend cannot write binary entries."
+msgstr ""
+
 #: crates/keycord-git/src/ui/audit.rs:64
 msgid "This branch doesn't have any commits available to audit."
 msgstr ""
 
 #: crates/keycord-entries/src/file/parse.rs:57
+#: crates/keycord-entries/src/file/parse.rs:78
 msgid "This entry contains a passkey, not a password."
 msgstr ""
 
@@ -3668,17 +3714,21 @@ msgstr ""
 msgid "This hardware key has no OpenPGP key yet. Use Set up new hardware key (Experimental) instead."
 msgstr ""
 
+#: crates/keycord-passkey/src/cxf.rs:30
+msgid "This import does not support FIDO2 extensions."
+msgstr ""
+
 #: crates/keycord-entries/src/ui/list/row.rs:50
 msgid "This item can't be opened with the private keys currently available in the app. File actions are still available, but copy and move-to-store are disabled until a compatible private key is available."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:662
+#: crates/keycord-entries/src/ui/page/mod.rs:712
 msgid "This item does not contain an armored private key."
 msgstr ""
 
 #: crates/keycord-entries/src/error.rs:39
 #: crates/keycord-entries/src/error.rs:93
-#: crates/keycord-entries/src/undo.rs:76
+#: crates/keycord-entries/src/undo.rs:97
 #: crates/keycord-keys/src/error.rs:113
 #: crates/keycord-keys/src/error.rs:91
 #: crates/keycord-stores/src/error.rs:37
@@ -3686,8 +3736,16 @@ msgid "This key can't open your items."
 msgstr ""
 
 #: crates/keycord-passkey/src/credential.rs:121
-#: crates/keycord-passkey/src/cxf.rs:56
 msgid "This passkey algorithm is not supported by Android Password Store."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:58
+#: crates/keycord-passkey/src/passless.rs:126
+msgid "This passkey algorithm is not supported by Passless."
+msgstr ""
+
+#: crates/keycord-passkey/src/cxf.rs:59
+msgid "This passkey algorithm is not supported."
 msgstr ""
 
 #: crates/keycord-keys/src/cert.rs:265
@@ -3790,15 +3848,16 @@ msgstr ""
 msgid "Undone."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:421
+#: crates/keycord-keys/src/hardware/crypto.rs:420
 msgid "Unexpected Cv25519 ciphertext shape"
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:435
+#: crates/keycord-keys/src/hardware/crypto.rs:434
 msgid "Unexpected NistP256 ciphertext shape"
 msgstr ""
 
-#: crates/keycord-passkey/src/credential.rs:177
+#: crates/keycord-passkey/src/credential.rs:154
+#: crates/keycord-passkey/src/passless.rs:184
 msgid "Unexpected data after the passkey record."
 msgstr ""
 
@@ -3806,7 +3865,7 @@ msgstr ""
 msgid "Unexpected git cat-file object type '{object_type}'."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:327
+#: crates/keycord-keys/src/hardware/crypto.rs:326
 msgid "Unexpected number of matching public subkeys: {count}"
 msgstr ""
 
@@ -3822,23 +3881,23 @@ msgstr ""
 msgid "Unlock another selected private key before clearing this one."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:89
+#: crates/keycord-entries/src/ui/page/mod.rs:91
 #: crates/keycord-git/src/ui/signing.rs:286
 #: crates/keycord-keys/src/ui/key_management/private.rs:237
 #: crates/keycord-keys/src/ui/key_management/recipient_list.rs:557
 #: crates/keycord-keys/src/ui/unlock.rs:188
 #: crates/keycord-keys/src/ui/unlock.rs:51
-#: src/composition/entries_ui.rs:407
+#: src/composition/entries_ui.rs:426
 msgid "Unlock key"
 msgstr ""
 
 #: crates/keycord-entries/src/error.rs:92
-#: crates/keycord-entries/src/undo.rs:69
+#: crates/keycord-entries/src/undo.rs:90
 #: crates/keycord-stores/src/error.rs:36
 msgid "Unlock the key in Preferences."
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:109
+#: crates/keycord-entries/src/ui/page/mod.rs:111
 #: crates/keycord-keys/src/ui/unlock.rs:59
 msgid "Unlock your key to continue."
 msgstr ""
@@ -3859,7 +3918,7 @@ msgstr ""
 msgid "Unsupported Linux update architecture: {}"
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:449
+#: crates/keycord-keys/src/hardware/crypto.rs:448
 msgid "Unsupported combination of ciphertext {:?} and public key {:?}"
 msgstr ""
 
@@ -3871,11 +3930,12 @@ msgstr ""
 msgid "Unsupported hardware key protection '{}'."
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:534
+#: crates/keycord-keys/src/hardware/crypto.rs:533
 msgid "Unsupported hash algorithm for RSA: {hash_algo:?}"
 msgstr ""
 
 #: crates/keycord-entries/src/file/row_ui.rs:49
+#: crates/keycord-entries/src/ui/page/bytes.rs:56
 msgid "Unsupported or damaged passkey"
 msgstr ""
 
@@ -3883,7 +3943,7 @@ msgstr ""
 msgid "Unsupported repository URL for updates: {repository}"
 msgstr ""
 
-#: crates/keycord-keys/src/hardware/crypto.rs:579
+#: crates/keycord-keys/src/hardware/crypto.rs:578
 msgid "Unsupported signing algorithm: {:?}"
 msgstr ""
 
@@ -3903,7 +3963,7 @@ msgstr ""
 msgid "Update download path has no parent directory."
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:546
+#: crates/keycord-entries/src/integrated.rs:586
 msgid "Update password for {label}"
 msgstr ""
 
@@ -4043,7 +4103,7 @@ msgstr ""
 msgid "Very low character variety"
 msgstr ""
 
-#: crates/keycord-entries/src/ui/page/mod.rs:90
+#: crates/keycord-entries/src/ui/page/mod.rs:92
 #: crates/keycord-git/data/window-busy-page.fragment.ui:7
 #: crates/keycord-keys/src/ui/key_management/hardware.rs:120
 #: crates/keycord-keys/src/ui/key_management/private.rs:209
@@ -4151,7 +4211,7 @@ msgstr ""
 msgid "clear empty fields before save"
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:465
+#: crates/keycord-keys/src/store/storage.rs:464
 msgid "collecting available private-key fingerprints"
 msgstr ""
 
@@ -4187,7 +4247,7 @@ msgstr ""
 msgid "download release asset"
 msgstr ""
 
-#: crates/keycord-entries/src/integrated.rs:808
+#: crates/keycord-entries/src/integrated.rs:847
 msgid "empty password file"
 msgstr ""
 
@@ -4304,7 +4364,7 @@ msgstr ""
 msgid "hpke.key.{member} must use unpadded base64url"
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:432
+#: crates/keycord-keys/src/store/storage.rs:431
 msgid "loading the available key ring"
 msgstr ""
 
@@ -4320,6 +4380,14 @@ msgstr ""
 msgid "new item template"
 msgstr ""
 
+#: crates/keycord-keys/src/entry_crypto.rs:28
+msgid "no key for user found"
+msgstr ""
+
+#: crates/keycord-keys/src/entry_crypto.rs:133
+msgid "no pkesks managed to decrypt the ciphertext"
+msgstr ""
+
 #: crates/keycord-lifecycle/data/metainfo.xml:220
 msgid "otp"
 msgstr ""
@@ -4328,8 +4396,8 @@ msgstr ""
 msgid "pass"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:269
-#: crates/keycord-entries/src/host.rs:291
+#: crates/keycord-entries/src/host.rs:316
+#: crates/keycord-entries/src/host.rs:338
 msgid "pass failed"
 msgstr ""
 
@@ -4350,15 +4418,15 @@ msgstr ""
 msgid "pass init failed"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:326
+#: crates/keycord-entries/src/host.rs:384
 msgid "pass insert failed"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:360
+#: crates/keycord-entries/src/host.rs:420
 msgid "pass mv failed"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:383
+#: crates/keycord-entries/src/host.rs:443
 msgid "pass rm failed"
 msgstr ""
 
@@ -4527,7 +4595,7 @@ msgstr ""
 msgid "{count} unique values"
 msgstr ""
 
-#: crates/keycord-entries/src/host.rs:53
+#: crates/keycord-entries/src/host.rs:65
 #: crates/keycord-stores/src/host.rs:41
 msgid "{fallback_prefix}: {}"
 msgstr ""
@@ -4582,8 +4650,8 @@ msgstr ""
 msgid "{fingerprint} - Security token ({detail})"
 msgstr ""
 
-#: crates/keycord-keys/src/store/storage.rs:790
-#: crates/keycord-keys/src/store/storage.rs:852
+#: crates/keycord-keys/src/store/storage.rs:789
+#: crates/keycord-keys/src/store/storage.rs:851
 msgid "{name} <{email}>"
 msgstr ""
 

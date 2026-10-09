@@ -18,12 +18,12 @@ pub type ReadEntryWithProgress = Arc<
             String,
             String,
             mpsc::Sender<PasswordEntryReadProgress>,
-        ) -> Result<String, PasswordEntryError>
+        ) -> Result<Vec<u8>, PasswordEntryError>
         + Send
         + Sync,
 >;
 pub type SaveEntry =
-    Arc<dyn Fn(String, String, String, bool) -> Result<(), PasswordEntryWriteError> + Send + Sync>;
+    Arc<dyn Fn(String, String, Vec<u8>, bool) -> Result<(), PasswordEntryWriteError> + Send + Sync>;
 pub type RenameEntry =
     Arc<dyn Fn(String, String, String) -> Result<(), PasswordEntryWriteError> + Send + Sync>;
 

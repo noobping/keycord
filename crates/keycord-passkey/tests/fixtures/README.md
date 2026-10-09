@@ -1,4 +1,4 @@
-# Android Password Store interoperability fixtures
+# Passkey interoperability fixtures
 
 These are synthetic credentials, never real accounts. All private keys in this
 directory are public test data and must never be used for an account.
@@ -33,3 +33,14 @@ The harness downloads pinned JVM test tools into a temporary cache. It uses
 Kotlin 2.2.0, kotlinx.serialization 1.9.0 and Bouncy Castle 1.81 to compile the
 unmodified source; these are test-only dependencies, not Android build changes.
 `--generate` deliberately regenerates the Keycord fixtures before verification.
+
+The `passless-*.cbor` files contain synthetic keys serialized by the **unchanged**
+Passless storage module at `4e420e081c115122ac16bb13824984dc78ba6513`, with the
+locked `soft-fido2` 0.17.0 API. They cover ES256, Ed25519 (-8 and -19), optional
+user names, backup state, counters, and credential extensions. No real credentials
+are included. Run `python3 crates/keycord-passkey/tests/passless-interop/run.py`
+from a development environment to validate Keycord imports against the original
+decoder and software signer. The harness verifies signatures independently with
+OpenSSL; add `--generate` only to regenerate the synthetic fixtures. Upstream
+source is checksum-pinned and compiled in a temporary directory, without changes.
+The reference dependencies belong solely to this harness, not Keycord's runtime.

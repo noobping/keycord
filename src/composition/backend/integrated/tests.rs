@@ -142,7 +142,7 @@ struct MockHardwareTransport {
     generation_result: Mutex<Option<MockHardwareGenerationResult>>,
     #[cfg(feature = "hardwarekey")]
     generation_requests: Mutex<Vec<keycord_keys::testing::HardwareKeyGenerationRequest>>,
-    decrypt_response: Mutex<Option<String>>,
+    decrypt_response: Mutex<Option<Vec<u8>>>,
     sign_response: Mutex<Option<String>>,
 }
 
@@ -172,7 +172,7 @@ impl MockHardwareTransport {
         self.decrypt_response
             .get_mut()
             .expect("decrypt mutex poisoned")
-            .replace(plaintext.to_string());
+            .replace(plaintext.as_bytes().to_vec());
         self
     }
 }
@@ -211,9 +211,18 @@ impl HardwareTransport for MockHardwareTransport {
 
     fn decrypt_ciphertext(
         &self,
+        session: &HardwareSessionPolicy,
+        ciphertext: &[u8],
+    ) -> Result<String, HardwareTransportError> {
+        String::from_utf8(self.decrypt_bytes(session, ciphertext)?)
+            .map_err(|error| HardwareTransportError::Other(error.to_string()))
+    }
+
+    fn decrypt_bytes(
+        &self,
         _session: &HardwareSessionPolicy,
         _ciphertext: &[u8],
-    ) -> Result<String, HardwareTransportError> {
+    ) -> Result<Vec<u8>, HardwareTransportError> {
         self.decrypt_response
             .lock()
             .expect("decrypt mutex poisoned")
@@ -635,7 +644,7 @@ fn connected_smartcards_can_unlock_read_rewrite_and_save_recipients_without_impo
         .decrypt_response
         .lock()
         .expect("decrypt mutex poisoned")
-        .replace("updated\nusername: bob".to_string());
+        .replace(b"updated\nusername: bob".to_vec());
     save_password_entry(&store_root, "team/service", "updated\nusername: bob", true)
         .expect("rewrite direct smartcard entry");
     assert_eq!(
@@ -649,6 +658,24 @@ fn connected_smartcards_can_unlock_read_rewrite_and_save_recipients_without_impo
         StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
     )
     .expect("save recipients with direct smartcard");
+
+    #[cfg(feature = "passless")]
+    {
+        let native =
+            include_bytes!("../../../../crates/keycord-passkey/tests/fixtures/passless-es256.cbor");
+        let label = format!("fido2/example.com/{}", "42".repeat(32));
+        transport
+            .decrypt_response
+            .lock()
+            .unwrap()
+            .replace(native.to_vec());
+        super::save_entry_bytes(&store_root, &label, native, false).unwrap();
+        assert_eq!(
+            super::read_entry_bytes(&store_root, &label).unwrap(),
+            native
+        );
+        assert!(super::read_password_line(&store_root, &label).is_err());
+    }
 }
 
 #[test]
@@ -1106,8 +1133,8 @@ fn all_keys_mode_uses_a_nonstandard_layered_entry_format() {
         .decrypt_entry(&store.join("team/service.gpg"))
         .expect("decrypt only the first layer");
 
-    assert!(outer_layer.starts_with("keycord-require-all-private-keys-v1\n"));
-    assert_ne!(outer_layer, "supersecret\nusername: alice");
+    assert!(outer_layer.starts_with(b"keycord-require-all-private-keys-v1\n"));
+    assert_ne!(outer_layer, b"supersecret\nusername: alice");
 }
 
 #[test]
@@ -2097,4 +2124,79 @@ fn integrated_android_passkeys_preserve_ciphertext_workflows_and_guard_password_
     save_password_entry(&store_root, &moved, &edited, true).unwrap();
     assert_eq!(read_password_entry(&store_root, &moved).unwrap(), edited);
     assert!(save_password_entry(&store_root, "example.com/wrong-id", &contents, false).is_err());
+}
+
+#[cfg(feature = "passless")]
+#[test]
+fn integrated_passless_bytes_survive_moves_undo_and_recipient_changes() {
+    use crate::composition::entries_ui::{
+        delete_entry_with_optional_undo, execute_undo_action, move_entry_to_store,
+    };
+    use keycord_entries::model::PassEntry;
+    let env = SystemBackendTestEnv::new();
+    let first = import_ripasso_private_key_bytes(
+        &protected_cert_bytes("Passless One <one@example.com>"),
+        Some("hunter2"),
+    )
+    .unwrap();
+    let second = import_ripasso_private_key_bytes(
+        &protected_cert_bytes("Passless Two <two@example.com>"),
+        Some("hunter2"),
+    )
+    .unwrap();
+    let store = env.store_root().to_string_lossy().to_string();
+    let target = env
+        .store_root()
+        .join("../other-passless-store")
+        .to_string_lossy()
+        .to_string();
+    for path in [&store, &target] {
+        save_store_recipients(
+            path,
+            &[first.fingerprint.clone()],
+            StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
+        )
+        .unwrap();
+    }
+    let label = format!("fido2/example.com/{}", "42".repeat(32));
+    let original =
+        include_bytes!("../../../../crates/keycord-passkey/tests/fixtures/passless-es256.cbor");
+    // Add an unknown field without changing the native credential. It must survive every operation.
+    let mut bytes = original.to_vec();
+    assert_eq!(bytes[0], 0xac); // 12-field map from the unchanged Passless serializer.
+    bytes[0] += 1;
+    bytes.extend_from_slice(b"\x66future\x44\x00\xff\x0a\x00");
+    super::save_entry_bytes(&store, &label, &bytes, false).unwrap();
+    assert_eq!(super::read_entry_bytes(&store, &label).unwrap(), bytes);
+    assert!(read_password_entry(&store, &label).is_err());
+    assert!(super::read_password_line(&store, &label).is_err());
+    assert!(matches!(
+        super::save_entry_bytes(&store, &label, &bytes, false),
+        Err(PasswordEntryWriteError::EntryAlreadyExists(_))
+    ));
+    assert!(rename_password_entry(&store, &label, "example.com/wrong").is_err());
+    let moved_label = format!("custom/{label}");
+    rename_password_entry(&store, &label, &moved_label).unwrap();
+    let entry = PassEntry::from_label(store.clone(), &moved_label);
+    let moved = move_entry_to_store(&entry, &target).unwrap();
+    assert_eq!(
+        super::read_entry_bytes(&target, &moved_label).unwrap(),
+        bytes
+    );
+    let undo = delete_entry_with_optional_undo(&moved).unwrap().unwrap();
+    execute_undo_action(&undo).unwrap();
+    assert_eq!(
+        super::read_entry_bytes(&target, &moved_label).unwrap(),
+        bytes
+    );
+    save_store_recipients(
+        &target,
+        &[first.fingerprint, second.fingerprint],
+        StoreRecipientsPrivateKeyRequirement::AllManagedKeys,
+    )
+    .unwrap();
+    assert_eq!(
+        super::read_entry_bytes(&target, &moved_label).unwrap(),
+        bytes
+    );
 }

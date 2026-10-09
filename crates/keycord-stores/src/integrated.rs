@@ -31,7 +31,7 @@ pub enum StoreEntryReadError {
 pub trait StoreRecipientCrypto {
     fn encrypt_contents_with_existing(
         &self,
-        contents: &str,
+        contents: &[u8],
         existing_ciphertext: Option<&[u8]>,
     ) -> Result<Vec<u8>, String>;
 
@@ -48,7 +48,7 @@ pub trait IntegratedStorePorts {
         &self,
         store_root: &str,
         label: &str,
-    ) -> Result<String, StoreEntryReadError>;
+    ) -> Result<Vec<u8>, StoreEntryReadError>;
 
     fn load_crypto(&self, recipients_contents: &str) -> Result<Self::Crypto, String>;
 
@@ -87,7 +87,7 @@ fn decrypted_store_entries<P: IntegratedStorePorts + ?Sized>(
     store_dir: &Path,
     store_root: &str,
     scoped_recipients_path: &Path,
-) -> Result<Vec<(PathBuf, String)>, String> {
+) -> Result<Vec<(PathBuf, zeroize::Zeroizing<Vec<u8>>)>, String> {
     let mut decrypted = Vec::new();
     for entry_path in
         collect_root_scoped_entry_paths(store_dir, store_root, scoped_recipients_path)?
@@ -96,7 +96,7 @@ fn decrypted_store_entries<P: IntegratedStorePorts + ?Sized>(
         let secret = ports
             .read_password_entry(store_root, &label)
             .map_err(|err| err.to_string())?;
-        decrypted.push((entry_path, secret));
+        decrypted.push((entry_path, zeroize::Zeroizing::new(secret)));
     }
     Ok(decrypted)
 }
@@ -261,13 +261,13 @@ mod tests {
     impl StoreRecipientCrypto for TestCrypto {
         fn encrypt_contents_with_existing(
             &self,
-            contents: &str,
+            contents: &[u8],
             _existing_ciphertext: Option<&[u8]>,
         ) -> Result<Vec<u8>, String> {
-            if contents == "fail" {
+            if contents == b"fail" {
                 Err("test encryption failure".to_string())
             } else {
-                Ok(format!("encrypted:{contents}").into_bytes())
+                Ok([b"encrypted:".as_slice(), contents].concat())
             }
         }
 
@@ -291,11 +291,11 @@ mod tests {
             &self,
             _store_root: &str,
             label: &str,
-        ) -> Result<String, StoreEntryReadError> {
+        ) -> Result<Vec<u8>, StoreEntryReadError> {
             self.reads.borrow_mut().push(label.to_string());
             self.entries
                 .get(label)
-                .cloned()
+                .map(|value| value.as_bytes().to_vec())
                 .ok_or_else(|| StoreEntryReadError::Other("missing test entry".to_string()))
         }
 

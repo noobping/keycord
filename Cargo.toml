@@ -61,6 +61,7 @@ flatpak = [
     "audit",
     "smartcard",
     "passkey",
+    "passless",
     "logging",
     "keycord-preferences/flatpak",
     "keycord-git/flatpak",
@@ -75,11 +76,17 @@ passkey = [
     "keycord-passkey/passkey",
     "keycord-passkey/ui",
 ]
+passless = [
+    "keycord-entries/passless",
+    "keycord-passkey/passless",
+    "keycord-passkey/ui",
+]
 setup = [
     "docs",
     "audit",
     "smartcard",
     "passkey",
+    "passless",
     "logging",
     "keycord-lifecycle/setup",
 ]

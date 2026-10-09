@@ -5,7 +5,7 @@ use crate::{PasswordEntryError, PasswordEntryWriteError};
 
 const UNAVAILABLE_UNDO_MESSAGE: &str = "Can't undo that change.";
 
-#[derive(Clone, Debug, PartialEq, Eq)]
+#[derive(Clone, PartialEq, Eq)]
 pub enum UndoAction {
     Unavailable {
         message: String,
@@ -13,7 +13,7 @@ pub enum UndoAction {
     RestoreSavedEntry {
         previous_store: String,
         previous_label: String,
-        previous_contents: Option<String>,
+        previous_contents: Option<Vec<u8>>,
         current_store: String,
         current_label: String,
     },
@@ -30,8 +30,29 @@ pub enum UndoAction {
     RestoreDeletedEntry {
         store: String,
         label: String,
-        contents: String,
+        contents: Vec<u8>,
     },
+}
+
+impl Drop for UndoAction {
+    fn drop(&mut self) {
+        use zeroize::Zeroize;
+        match self {
+            Self::RestoreSavedEntry {
+                previous_contents, ..
+            } => previous_contents.zeroize(),
+            Self::RestoreDeletedEntry { contents, .. } => contents.zeroize(),
+            _ => {}
+        }
+    }
+}
+
+impl std::fmt::Debug for UndoAction {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("UndoAction")
+            .field("contents", &"[redacted]")
+            .finish_non_exhaustive()
+    }
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -97,6 +118,26 @@ pub trait EntryOperationPort: Send + Sync {
         overwrite: bool,
     ) -> Result<(), PasswordEntryWriteError>;
 
+    fn read_entry_bytes(
+        &self,
+        store_root: &str,
+        label: &str,
+    ) -> Result<Vec<u8>, PasswordEntryError> {
+        self.read_password_entry(store_root, label)
+            .map(String::into_bytes)
+    }
+    fn save_entry_bytes(
+        &self,
+        store_root: &str,
+        label: &str,
+        contents: &[u8],
+        overwrite: bool,
+    ) -> Result<(), PasswordEntryWriteError> {
+        let text = std::str::from_utf8(contents).map_err(|_| {
+            PasswordEntryWriteError::other("This backend cannot write binary entries.")
+        })?;
+        self.save_password_entry(store_root, label, text, overwrite)
+    }
     fn rename_password_entry(
         &self,
         store_root: &str,
@@ -127,13 +168,13 @@ impl<'a> EntryUndoBackend<'a> {
     ) -> Result<Option<UndoAction>, UndoError> {
         match self
             .operations
-            .read_password_entry(&entry.store_path, &entry.label())
+            .read_entry_bytes(&entry.store_path, &entry.label())
         {
             Ok(contents) => {
                 self.operations
                     .delete_password_entry(&entry.store_path, &entry.label())
                     .map_err(UndoError::Delete)?;
-                Ok(Some(restore_deleted_entry_action(entry, contents)))
+                Ok(Some(restore_deleted_entry_action_bytes(entry, contents)))
             }
             Err(err) if can_delete_without_undo_after_read_error(&err) => {
                 self.operations
@@ -190,7 +231,7 @@ impl<'a> EntryUndoBackend<'a> {
                 contents,
             } => self
                 .operations
-                .save_password_entry(store, label, contents, false)
+                .save_entry_bytes(store, label, contents, false)
                 .map_err(UndoError::Write),
         }
     }
@@ -199,7 +240,7 @@ impl<'a> EntryUndoBackend<'a> {
         self,
         previous_store: &str,
         previous_label: &str,
-        previous_contents: Option<&str>,
+        previous_contents: Option<&[u8]>,
         current_store: &str,
         current_label: &str,
     ) -> Result<(), UndoError> {
@@ -213,12 +254,12 @@ impl<'a> EntryUndoBackend<'a> {
         if previous_store == current_store && previous_label == current_label {
             return self
                 .operations
-                .save_password_entry(current_store, current_label, previous_contents, true)
+                .save_entry_bytes(current_store, current_label, previous_contents, true)
                 .map_err(UndoError::Write);
         }
 
         self.operations
-            .save_password_entry(previous_store, previous_label, previous_contents, false)
+            .save_entry_bytes(previous_store, previous_label, previous_contents, false)
             .map_err(UndoError::Write)?;
 
         if let Err(delete_error) = self
@@ -245,12 +286,13 @@ impl<'a> EntryUndoBackend<'a> {
         target_store: &str,
         label: &str,
     ) -> Result<(), UndoError> {
-        let contents = self
-            .operations
-            .read_password_entry(source_store, label)
-            .map_err(UndoError::Read)?;
+        let contents = zeroize::Zeroizing::new(
+            self.operations
+                .read_entry_bytes(source_store, label)
+                .map_err(UndoError::Read)?,
+        );
         self.operations
-            .save_password_entry(target_store, label, &contents, false)
+            .save_entry_bytes(target_store, label, &contents, false)
             .map_err(UndoError::Write)?;
 
         if let Err(delete_error) = self.operations.delete_password_entry(source_store, label) {
@@ -284,6 +326,9 @@ pub fn unavailable_undo_message(action: &UndoAction) -> Option<&str> {
 }
 
 pub fn restore_deleted_entry_action(entry: &PassEntry, contents: String) -> UndoAction {
+    restore_deleted_entry_action_bytes(entry, contents.into_bytes())
+}
+pub fn restore_deleted_entry_action_bytes(entry: &PassEntry, contents: Vec<u8>) -> UndoAction {
     UndoAction::RestoreDeletedEntry {
         store: entry.store_path.clone(),
         label: entry.label(),
@@ -298,10 +343,26 @@ pub fn restore_saved_entry_action(
     current_store: &str,
     current_label: &str,
 ) -> UndoAction {
+    restore_saved_entry_action_bytes(
+        previous_store,
+        previous_label,
+        previous_contents.map(str::as_bytes),
+        current_store,
+        current_label,
+    )
+}
+
+pub fn restore_saved_entry_action_bytes(
+    previous_store: &str,
+    previous_label: &str,
+    previous_contents: Option<&[u8]>,
+    current_store: &str,
+    current_label: &str,
+) -> UndoAction {
     UndoAction::RestoreSavedEntry {
         previous_store: previous_store.to_string(),
         previous_label: previous_label.to_string(),
-        previous_contents: previous_contents.map(str::to_string),
+        previous_contents: previous_contents.map(<[u8]>::to_vec),
         current_store: current_store.to_string(),
         current_label: current_label.to_string(),
     }

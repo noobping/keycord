@@ -12,6 +12,7 @@ publish = false
 [features]
 default = []
 passkey = ["dep:keycord-passkey", "keycord-passkey/passkey"]
+passless = ["dep:keycord-passkey", "keycord-passkey/passless"]
 ui = [
     "dep:adw",
     "dep:keycord-shell",

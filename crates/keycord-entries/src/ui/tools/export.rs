@@ -1,6 +1,6 @@
 use super::{EntryToolsState, FieldValueRequest};
 use crate::model::CollectItemsOptions;
-use crate::tools::{export_passwords_to_csv_with, unique_store_roots, EXPORT_FILE_NAME};
+use crate::tools::{export_passwords_to_csv_filtered_with, unique_store_roots, EXPORT_FILE_NAME};
 use adw::prelude::*;
 use adw::{AlertDialog, ResponseAppearance, Toast};
 use keycord_runtime::i18n::gettext;
@@ -79,7 +79,7 @@ impl EntryToolsState {
     fn write_password_export(&self, path: String, requests: Vec<FieldValueRequest>) {
         let state_for_result = self.clone();
         let state_for_disconnect = self.clone();
-        let read_entry = self.ports.backend.read_entry.clone();
+        let read_entry = self.ports.backend.read_export_entry.clone();
         spawn_result_task(
             move || export_passwords_to_csv(&path, requests, &read_entry),
             move |result| state_for_result.finish_password_export(result),
@@ -123,10 +123,10 @@ impl EntryToolsState {
 fn export_passwords_to_csv(
     path: &str,
     requests: Vec<FieldValueRequest>,
-    read_entry: &super::ReadToolEntry,
+    read_entry: &super::ports::ReadExportEntry,
 ) -> Result<usize, String> {
     let store_labels = shortened_store_label_map(&unique_store_roots(&requests));
-    export_passwords_to_csv_with(
+    export_passwords_to_csv_filtered_with(
         requests,
         |root| shortened_store_label_for_path(root, &store_labels),
         |request| {

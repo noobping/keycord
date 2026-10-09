@@ -32,10 +32,11 @@ const HARDWAREKEY_FEATURE_DISABLED_ERROR: &str =
     "Managed hardware-key setup is disabled in this build of Keycord.";
 use crate::has_smartcard_permission;
 use crate::PrivateKeyError;
+use crate::RipassoCrypto;
 use keycord_preferences::Preferences;
 use keycord_runtime::diagnostics::log_error;
 use keycord_runtime::secure_fs::{ensure_private_dir, write_private_file};
-use ripasso::crypto::{slice_to_20_bytes, Sequoia};
+use ripasso::crypto::slice_to_20_bytes;
 #[cfg(feature = "hardwarekey")]
 use secrecy::ExposeSecret;
 use secrecy::SecretString;
@@ -373,11 +374,9 @@ pub(crate) fn find_connected_smartcard_key(
 pub fn build_ripasso_crypto_from_key_ring(
     fingerprint: &str,
     key_ring: HashMap<[u8; 20], Arc<Cert>>,
-) -> Result<Sequoia, String> {
+) -> Result<RipassoCrypto, String> {
     let user_key_id = fingerprint_from_string(fingerprint)?;
-    let home =
-        dirs_next::home_dir().ok_or_else(|| "Could not determine the home folder.".to_string())?;
-    Ok(Sequoia::from_values(user_key_id, key_ring, &home))
+    Ok(RipassoCrypto::new(user_key_id, key_ring))
 }
 
 pub(crate) fn load_stored_ripasso_key_ring() -> Result<HashMap<[u8; 20], Arc<Cert>>, String> {

@@ -17,7 +17,7 @@ use adw::gio::{resources_register_include, ApplicationFlags};
 use adw::gtk::{gdk::Display, glib::ExitCode};
 use adw::{Application, ApplicationWindow};
 use keycord_entries::model::OpenPassFile;
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 use keycord_passkey::ui::OpenPasskeyRequest;
 use keycord_runtime::capabilities::handle_unsupported_host_command_invocation;
 use keycord_runtime::hardening::apply_process_hardening;
@@ -35,7 +35,7 @@ use std::ffi::OsString;
 const APP_ID: &str = env!("APP_ID");
 const RESOURCE_ID: &str = env!("RESOURCE_ID");
 const ISSUE_URL: &str = concat!(env!("CARGO_PKG_REPOSITORY"), "/issues");
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 const OPEN_PASSKEY_REQUEST_KEY: &str = "open-passkey-request";
 struct MainWindowCommand {
     query: Option<String>,
@@ -43,7 +43,7 @@ struct MainWindowCommand {
 }
 
 struct AfterWindowPresent {
-    #[cfg(feature = "passkey")]
+    #[cfg(any(feature = "passkey", feature = "passless"))]
     passkey_request: Option<OpenPasskeyRequest>,
 }
 
@@ -124,7 +124,7 @@ fn handle_display_ready(_display: &Display) {
 }
 
 fn handle_open_files(_app: &Application, _files: &[adw::gio::File], _hint: &str) {
-    #[cfg(feature = "passkey")]
+    #[cfg(any(feature = "passkey", feature = "passless"))]
     set_cloned_data(
         _app,
         OPEN_PASSKEY_REQUEST_KEY,
@@ -141,7 +141,7 @@ fn take_activation_request(
             pass_file: take_data(app, "open-pass-file"),
         },
         after_present: AfterWindowPresent {
-            #[cfg(feature = "passkey")]
+            #[cfg(any(feature = "passkey", feature = "passless"))]
             passkey_request: take_data(app, OPEN_PASSKEY_REQUEST_KEY),
         },
     }
@@ -164,7 +164,7 @@ fn new_window_presented(app: &Application, window: &ApplicationWindow) {
 }
 
 fn after_window_presented(_window: &ApplicationWindow, _pending: AfterWindowPresent) {
-    #[cfg(feature = "passkey")]
+    #[cfg(any(feature = "passkey", feature = "passless"))]
     if let Some(passkey_request) = _pending.passkey_request {
         composition::passkey_dialog::present_open_passkey_request(_window, passkey_request);
     }
@@ -176,7 +176,7 @@ fn dispatch_command_line_args(app: &Application, args: &[OsString]) {
         return;
     }
 
-    #[cfg(feature = "passkey")]
+    #[cfg(any(feature = "passkey", feature = "passless"))]
     if let Some(passkey_request) = keycord_passkey::ui::command_line_request(args) {
         set_cloned_data(app, OPEN_PASSKEY_REQUEST_KEY, passkey_request);
         return;

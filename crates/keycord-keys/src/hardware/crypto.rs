@@ -298,10 +298,9 @@ pub(super) fn decrypt_with_card_transaction(
     cert: &Cert,
     fingerprint: Option<&str>,
     ciphertext: &[u8],
-) -> Result<String> {
+) -> Result<Vec<u8>> {
     let decryptor = CardDecryptor::new(tx, cert, decryption_public_key(cert, fingerprint)?, &|| {});
-    let plaintext = decrypt_message(decryptor, ciphertext.to_vec(), &StandardPolicy::new())?;
-    String::from_utf8(plaintext).context("Failed to decode decrypted UTF-8 data")
+    decrypt_message(decryptor, ciphertext.to_vec(), &StandardPolicy::new())
 }
 
 pub(super) fn sign_with_card_transaction(

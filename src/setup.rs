@@ -11,7 +11,7 @@ pub(crate) fn install_config() -> keycord_lifecycle::setup::InstallConfig {
         resource_id: env!("RESOURCE_ID"),
         search_provider_bus_name: env!("SEARCH_PROVIDER_BUS_NAME"),
         search_provider_object_path: env!("SEARCH_PROVIDER_OBJECT_PATH"),
-        passkey_mime: cfg!(feature = "passkey").then_some(
+        passkey_mime: cfg!(any(feature = "passkey", feature = "passless")).then_some(
             keycord_lifecycle::desktop::PasskeyMimeConfig {
                 mime_types: keycord_passkey::PASSKEY_MIME_TYPES,
                 package: keycord_passkey::PASSKEY_MIME_PACKAGE,

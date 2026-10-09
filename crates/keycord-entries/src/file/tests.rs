@@ -254,3 +254,27 @@ fn disabled_feature_treats_android_records_as_ordinary_passwords() {
     assert_eq!(parsed.len(), 1);
     assert_eq!(clean_pass_file_contents(&contents), contents);
 }
+
+#[cfg(feature = "passless")]
+#[test]
+fn native_passless_is_excluded_from_text_password_and_export_workflows() {
+    let imported = keycord_passkey::parse_cxf_passkey_json(include_str!(
+        "../../../keycord-passkey/tests/fixtures/es256.cxf.json"
+    ))
+    .unwrap();
+    let entry = imported
+        .prepare(keycord_passkey::PasskeyFormat::Passless)
+        .unwrap();
+    assert!(super::entry_text(&entry.contents).is_err());
+    assert!(super::export_entry_text(&entry.contents).unwrap().is_none());
+    assert!(super::validate_entry_bytes_path(&entry.contents, &entry.label).is_ok());
+    assert!(super::validate_entry_bytes_path(&entry.contents, "wrong/name").is_err());
+    let mut malformed = entry.contents.to_vec();
+    malformed.push(0);
+    assert!(super::entry_text(&malformed).is_err());
+    assert!(super::export_entry_text(&malformed).unwrap().is_none());
+    assert_eq!(
+        super::entry_text(b"password\nnotes").unwrap(),
+        "password\nnotes"
+    );
+}

@@ -507,6 +507,14 @@ impl HardwareTransport for RealHardwareTransport {
         session: &HardwareSessionPolicy,
         ciphertext: &[u8],
     ) -> Result<String, HardwareTransportError> {
+        String::from_utf8(self.decrypt_bytes(session, ciphertext)?)
+            .map_err(|_| HardwareTransportError::Other("The entry is not UTF-8 text.".into()))
+    }
+    fn decrypt_bytes(
+        &self,
+        session: &HardwareSessionPolicy,
+        ciphertext: &[u8],
+    ) -> Result<Vec<u8>, HardwareTransportError> {
         let mut card = Self::open_card(&session.ident)?;
         let mut tx = card.transaction().map_err(card_error)?;
         Self::verify_binding(&mut tx, session)?;

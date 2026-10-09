@@ -11,7 +11,7 @@ pub mod keys_sync;
 pub mod keys_unlock;
 pub mod localization;
 pub mod navigation;
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 pub mod passkey_dialog;
 pub mod preferences_ui;
 pub mod stores_ui;

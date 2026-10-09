@@ -23,12 +23,15 @@ pub struct EntryToolPreferencesPorts {
 }
 
 pub type CollectToolEntries = Arc<dyn Fn(CollectItemsOptions) -> Vec<EntryRequest> + Send + Sync>;
+pub type ReadExportEntry =
+    Arc<dyn Fn(String, String) -> Result<Option<String>, String> + Send + Sync>;
 pub type ReadToolEntry = Arc<dyn Fn(String, String) -> Result<String, String> + Send + Sync>;
 
 #[derive(Clone)]
 pub struct EntryToolBackendPorts {
     pub collect_entries: CollectToolEntries,
     pub read_entry: ReadToolEntry,
+    pub read_export_entry: ReadExportEntry,
     pub read_password_line: ReadToolEntry,
 }
 

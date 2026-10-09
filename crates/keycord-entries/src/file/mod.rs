@@ -19,8 +19,9 @@ pub use self::compose::{
 };
 pub use self::parse::structured_username_value;
 pub use self::parse::{
-    canonical_search_field_key, pass_file_has_otp, pass_file_has_passkey, password_line,
-    searchable_pass_fields, SearchablePassField,
+    canonical_search_field_key, entry_text, export_entry_text, pass_file_has_otp,
+    pass_file_has_passkey, password_line, searchable_pass_fields, validate_entry_bytes_path,
+    SearchablePassField,
 };
 pub use self::parse::{parse_structured_pass_lines, structured_otp_line};
 #[cfg(feature = "ui")]

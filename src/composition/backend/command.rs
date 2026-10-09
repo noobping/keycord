@@ -47,6 +47,24 @@ pub(super) fn run_store_command_with_input(
     )
 }
 
+pub(super) fn run_store_command_with_bytes(
+    store_root: &str,
+    action: &str,
+    input: &[u8],
+    log_options: CommandLogOptions,
+    configure: impl FnOnce(&mut Command),
+) -> Result<Output, String> {
+    require_host_command_features()?;
+    let mut cmd = store_command(store_root);
+    configure(&mut cmd);
+    keycord_runtime::run_command_with_bytes(
+        &mut cmd,
+        action,
+        input,
+        password_store_command_log_options(log_options),
+    )
+}
+
 #[cfg(target_os = "linux")]
 pub(super) fn run_host_program_output(
     program: &str,

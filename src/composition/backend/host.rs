@@ -47,6 +47,18 @@ impl HostEntryCommandPort for RootHostEntryCommandPort {
     ) -> Result<Output, String> {
         run_store_command_with_input(store_root, action, input, log_options, |cmd| configure(cmd))
     }
+    fn run_store_command_with_bytes(
+        &self,
+        store_root: &str,
+        action: &str,
+        input: &[u8],
+        options: CommandLogOptions,
+        configure: &mut dyn FnMut(&mut Command),
+    ) -> Result<Output, String> {
+        super::command::run_store_command_with_bytes(store_root, action, input, options, |cmd| {
+            configure(cmd)
+        })
+    }
 }
 
 fn host_entry_backend() -> HostEntryBackend<'static> {
@@ -105,13 +117,6 @@ impl HostStorePorts for RootHostStorePorts {
 }
 
 pub(super) fn read_password_entry(
-    store_root: &str,
-    label: &str,
-) -> Result<String, PasswordEntryError> {
-    host_entry_backend().read_password_entry(store_root, label)
-}
-
-pub(super) fn read_password_entry_with_progress(
     store_root: &str,
     label: &str,
 ) -> Result<String, PasswordEntryError> {
@@ -222,6 +227,49 @@ mod tests {
     use keycord_git::has_git_repository;
     use keycord_preferences::Preferences;
     use sequoia_openpgp::serialize::SerializeInto;
+
+    #[cfg(feature = "passless")]
+    #[test]
+    fn host_pass_and_gpg_preserve_native_binary_credentials() {
+        let env = SystemBackendTestEnv::new();
+        let key =
+            SystemBackendTestEnv::generate_secret_key("Native test <native@example.com>").unwrap();
+        SystemBackendTestEnv::import_public_key(&key.cert.as_tsk().to_vec().unwrap()).unwrap();
+        SystemBackendTestEnv::trust_public_key(&key.fingerprint_hex).unwrap();
+        let store = env.store_root().to_string_lossy().to_string();
+        save_store_recipients(
+            &store,
+            &StoreRecipients::new(vec![key.fingerprint_hex]),
+            StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
+        )
+        .unwrap();
+        let label = format!("fido2/example.com/{}", "42".repeat(32));
+        let native =
+            include_bytes!("../../../crates/keycord-passkey/tests/fixtures/passless-es256.cbor");
+        super::save_entry_bytes(&store, &label, native, false).unwrap();
+        assert_eq!(super::read_entry_bytes(&store, &label).unwrap(), native);
+        assert!(super::read_password_line(&store, &label).is_err());
+        let other =
+            include_bytes!("../../../crates/keycord-passkey/tests/fixtures/passless-ed25519.cbor");
+        assert!(super::save_entry_bytes(&store, &label, other, false).is_err());
+        assert_eq!(super::read_entry_bytes(&store, &label).unwrap(), native);
+        let moved = format!("custom/{label}");
+        super::rename_password_entry(&store, &label, &moved).unwrap();
+        assert_eq!(super::read_entry_bytes(&store, &moved).unwrap(), native);
+        let recipient =
+            SystemBackendTestEnv::generate_secret_key("Replacement test <replacement@example.com>")
+                .unwrap();
+        SystemBackendTestEnv::import_public_key(&recipient.cert.as_tsk().to_vec().unwrap())
+            .unwrap();
+        SystemBackendTestEnv::trust_public_key(&recipient.fingerprint_hex).unwrap();
+        save_store_recipients(
+            &store,
+            &StoreRecipients::new(vec![recipient.fingerprint_hex]),
+            StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
+        )
+        .unwrap();
+        assert_eq!(super::read_entry_bytes(&store, &moved).unwrap(), native);
+    }
 
     #[test]
     fn host_backend_encrypts_entries_for_all_store_recipients() {
@@ -363,4 +411,19 @@ mod tests {
             ""
         );
     }
+}
+
+pub(super) fn read_entry_bytes(
+    store_root: &str,
+    label: &str,
+) -> Result<Vec<u8>, PasswordEntryError> {
+    host_entry_backend().read_entry_bytes(store_root, label)
+}
+pub(super) fn save_entry_bytes(
+    store_root: &str,
+    label: &str,
+    contents: &[u8],
+    overwrite: bool,
+) -> Result<(), PasswordEntryWriteError> {
+    host_entry_backend().save_entry_bytes(store_root, label, contents, overwrite)
 }

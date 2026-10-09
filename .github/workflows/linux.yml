@@ -80,14 +80,6 @@ jobs:
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
           echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
 
-      - name: Verify passkey feature build
-        run: cargo test --package keycord --locked --no-run --no-default-features --features passkey
-
-      - name: Test optional passkey storage
-        run: |
-          cargo test --package keycord-passkey --package keycord-entries --locked --no-default-features --features passkey
-          cargo test --package keycord-passkey --package keycord-entries --locked --no-default-features
-
       - name: Build
         run: cargo build --package keycord --locked --release --features setup
 

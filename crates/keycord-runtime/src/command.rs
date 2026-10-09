@@ -298,11 +298,11 @@ fn run_command_output_inner(
 
 fn spawn_input_writer(
     mut stdin: impl Write + Send + 'static,
-    input: String,
+    input: zeroize::Zeroizing<Vec<u8>>,
 ) -> thread::JoinHandle<Result<(), String>> {
     spawn_worker_or_panic("command-stdin-writer", move || {
         stdin
-            .write_all(input.as_bytes())
+            .write_all(&input)
             .map_err(|error| format!("Failed to write command input: {error}"))
     })
 }
@@ -336,6 +336,15 @@ pub fn run_command_with_input(
     command: &mut Command,
     context: &str,
     input: &str,
+    options: CommandLogOptions,
+) -> Result<Output, String> {
+    run_command_with_bytes(command, context, input.as_bytes(), options)
+}
+
+pub fn run_command_with_bytes(
+    command: &mut Command,
+    context: &str,
+    input: &[u8],
     options: CommandLogOptions,
 ) -> Result<Output, String> {
     command.stdin(Stdio::piped());
@@ -385,7 +394,7 @@ pub fn run_command_with_input(
         log_error(format!("{context}\n$ {command_text}\nfailed to open stdin"));
         return Err("Failed to open stdin for command".to_string());
     };
-    let input_writer = spawn_input_writer(stdin, input.to_string());
+    let input_writer = spawn_input_writer(stdin, zeroize::Zeroizing::new(input.to_vec()));
 
     let status = match child.wait() {
         Ok(status) => status,
@@ -533,5 +542,22 @@ mod tests {
         let (_, _, text) = log_snapshot();
         assert!(text.contains("https://redacted@example.test/private/repo.git"));
         assert!(!text.contains("user:secret@example.test"));
+    }
+}
+
+#[cfg(all(test, unix))]
+mod binary_tests {
+    #[test]
+    fn binary_stdin_and_stdout_preserve_nuls_invalid_utf8_and_newlines() {
+        let bytes = [0xa7, 0, 0xff, b'\n', b'\r', 0];
+        let output = super::run_command_with_bytes(
+            &mut std::process::Command::new("cat"),
+            "binary roundtrip",
+            &bytes,
+            super::CommandLogOptions::SENSITIVE,
+        )
+        .unwrap();
+        assert!(output.status.success());
+        assert_eq!(output.stdout, bytes);
     }
 }

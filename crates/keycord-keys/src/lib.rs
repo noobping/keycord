@@ -8,6 +8,7 @@
 mod cache;
 mod capabilities;
 mod cert;
+mod entry_crypto;
 mod error;
 mod hardware;
 mod host_gpg;
@@ -55,8 +56,8 @@ pub use cert::{
 };
 pub use error::{PrivateKeyError, PrivateKeyReadinessError};
 pub use hardware::{
-    decrypt_with_hardware_session, sign_with_hardware_session, DiscoveredHardwareToken,
-    HardwareSessionPolicy, HardwareTransport, HardwareTransportError,
+    decrypt_bytes_with_hardware_session, decrypt_with_hardware_session, sign_with_hardware_session,
+    DiscoveredHardwareToken, HardwareSessionPolicy, HardwareTransport, HardwareTransportError,
 };
 pub use host_gpg::{
     HostGpgBackend, HostGpgCommand, HostGpgCommandOutput, HostGpgCommandPort,
@@ -88,7 +89,7 @@ pub use sync::{
 };
 
 /// Crypto context constructed from Keys-owned managed key material for entry encryption.
-pub type RipassoCrypto = ripasso::crypto::Sequoia;
+pub use entry_crypto::RipassoCrypto;
 
 #[cfg(any(test, feature = "test-support"))]
 pub mod testing {

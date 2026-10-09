@@ -6,8 +6,8 @@ use keycord_passkey::ui::{OpenPasskeyRequest, PasskeyDialogCallbacks};
 pub fn present_open_passkey_request(window: &ApplicationWindow, opened: OpenPasskeyRequest) {
     let window_for_import = window.clone();
     let callbacks =
-        PasskeyDialogCallbacks::new(keycord_runtime::i18n::gettext, move |credential| {
-            crate::window::begin_passkey_import(&window_for_import, &credential)
+        PasskeyDialogCallbacks::new(keycord_runtime::i18n::gettext, move |credential, format| {
+            crate::window::begin_passkey_import(&window_for_import, &credential, format)
         });
     keycord_passkey::ui::present_open_passkey_request(window, opened, callbacks);
 }

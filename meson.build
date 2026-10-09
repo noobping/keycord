@@ -19,6 +19,7 @@ docs = get_option('docs')
 logging = get_option('logging')
 audit = get_option('audit')
 passkey = get_option('passkey')
+passless = get_option('passless')
 smartcard = get_option('smartcard')
 hardwarekey = get_option('hardwarekey')
 project_binary = 'keycord'
@@ -31,6 +32,7 @@ foreach feature_name, enabled : {
   'logging': logging,
   'audit': audit,
   'passkey': passkey,
+  'passless': passless,
   'smartcard': smartcard,
   'hardwarekey': hardwarekey,
 }
@@ -42,6 +44,8 @@ foreach feature_name, enabled : {
     endif
   endif
 endforeach
+credential_features = effective_cargo_features.replace(',', ' ').split()
+credential_support = 'passkey' in credential_features or 'passless' in credential_features
 
 if cargo_variant == 'release' or cargo_variant == 'translation'
   cargo_command = 'cargo build --package keycord --locked --release'
@@ -150,7 +154,7 @@ lifecycle_metadata.set('OBJECT_PATH', '/io/github/noobping/keycord/SearchProvide
 lifecycle_metadata.set('DISPLAY_NAME', 'Keycord')
 lifecycle_metadata.set('COMMENT', 'Browse and edit password stores')
 lifecycle_metadata.set('EXECUTABLE', project_binary)
-if passkey
+if credential_support
   lifecycle_metadata.set('OPEN_ARGUMENT', ' %f')
   lifecycle_metadata.set('MIME_TYPES', 'MimeType=application/vnd.keycord.passkey-request+json;application/vnd.keycord.passkey+json;')
 else
@@ -220,7 +224,7 @@ install_data(
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps'),
 )
 
-if passkey
+if credential_support
   install_data(
     'crates/keycord-passkey/data/io.github.noobping.keycord-passkey.xml',
     install_dir: join_paths(get_option('datadir'), 'mime', 'packages'),
@@ -262,5 +266,5 @@ metainfo_file = i18n.merge_file(
 
 gnome.post_install(
   glib_compile_schemas: true,
-  update_mime_database: passkey,
+  update_mime_database: credential_support,
 )

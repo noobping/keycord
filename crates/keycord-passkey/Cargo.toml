@@ -21,7 +21,17 @@ passkey = [
     "dep:thiserror",
     "dep:zeroize",
 ]
-ui = ["passkey", "dep:adw"]
+passless = [
+    "dep:base64",
+    "dep:ciborium",
+    "dep:libc",
+    "dep:openssl",
+    "dep:serde",
+    "dep:serde_json",
+    "dep:thiserror",
+    "dep:zeroize",
+]
+ui = ["dep:adw"]
 
 [dependencies]
 adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
@@ -39,3 +49,7 @@ libc = { version = "0.2", optional = true }
 [[example]]
 name = "android_interop"
 required-features = ["passkey"]
+
+[[example]]
+name = "passless_interop"
+required-features = ["passless"]

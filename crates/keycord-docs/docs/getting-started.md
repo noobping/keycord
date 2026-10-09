@@ -195,8 +195,42 @@ a 32-byte credential ID and a supported private key; RSA imports require exponen
 credential does not register it with a website. CXP export requests can still be
 inspected, but Keycord does not generate response archives.
 
-With passkey support enabled, passkey key material is excluded from password
-copying, password QR codes, CSV exports, and password analysis. Without the
-`passkey` feature, entries receive ordinary password-file handling: Keycord does
-not recognize passkeys. The former `passkey:` JSON storage format is no longer
-supported, and no automatic conversion is provided.
+Recognized passkey material is excluded from password copying, QR codes, CSV
+exports, search fields, and password analysis. The former `passkey:` JSON format
+is unsupported.
+
+## Passless and build choices
+
+The two Cargo features are independent:
+
+- `--no-default-features --features passkey`: Android Password Store only.
+- `--no-default-features --features passless`: Passless only.
+- `--no-default-features --features passkey,passless`: both formats.
+- `--no-default-features`: no credential recognition or credential-exchange workflow.
+
+`setup` and `flatpak` do not select a credential format; add the desired feature
+explicitly. Existing packaged builds select `passkey`. Meson also offers separate
+`passkey` (existing default: enabled) and `passless` (default: disabled) options;
+use `-Dpasskey=false -Dpassless=true` for Passless only.
+
+Passless stores raw binary CBOR, unlike Android's encoded first line. Keycord keeps
+each entry in its original format and never creates synchronized copies or converts
+existing entries. With both features enabled, CXF import offers a format choice,
+defaulting to Android. With one feature, import uses that format automatically.
+
+New Passless imports use `fido2/<rp-id>/<credential-id>.gpg`. Only P-256 and Ed25519
+software keys can be imported for Passless; RSA is rejected. Existing Ed25519
+algorithm identifiers `-8` and `-19` are supported. Imports retain the 32-byte ID
+restriction and reject nonempty extensions. Missing Passless metadata defaults to
+counter zero, current creation time, discoverable, and backup state `notEligible`.
+
+Passless entries show account and website details. Their content is read-only;
+notes, extra fields, OTP and raw editing are unavailable. Moving, valid renaming,
+deleting and undo preserve the native bytes, including extension and backup data.
+
+Passless performs desktop authentication. Configure its pass backend for the same
+store and credential directory, with access to the matching OpenPGP key. Keycord's
+integrated keyring is separate from the host GPG keyring. Use ordinary OpenPGP
+recipient encryption for interoperability; Keycord's “require all keys” layering
+is not understood by other apps. Neither app's browser integration is added to
+Keycord by enabling these storage features.

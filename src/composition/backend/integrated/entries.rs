@@ -15,7 +15,7 @@ use keycord_entries::integrated::{
 };
 use keycord_keys::{
     borrow_unlocked_hardware_private_key, build_ripasso_crypto_from_key_ring,
-    decrypt_with_hardware_session, fingerprint_from_string, load_available_standard_key_ring,
+    decrypt_bytes_with_hardware_session, fingerprint_from_string, load_available_standard_key_ring,
     load_ripasso_key_ring,
 };
 use keycord_keys::{PrivateKeyReadinessError, RipassoCrypto};
@@ -48,11 +48,11 @@ impl IntegratedEntryKeyPort for RootIntegratedEntryKeyPort {
         &self,
         fingerprint: &str,
         ciphertext: &[u8],
-    ) -> Result<Option<String>, String> {
+    ) -> Result<Option<Vec<u8>>, String> {
         let Some(session) = borrow_unlocked_hardware_private_key(fingerprint)? else {
             return Ok(None);
         };
-        decrypt_with_hardware_session(&session, ciphertext)
+        decrypt_bytes_with_hardware_session(&session, ciphertext)
             .map(Some)
             .map_err(|err| err.to_string())
     }
@@ -225,14 +225,6 @@ pub fn read_password_entry(store_root: &str, label: &str) -> Result<String, Pass
     integrated_entry_backend().read_password_entry(store_root, label)
 }
 
-pub fn read_password_entry_with_progress(
-    store_root: &str,
-    label: &str,
-    report_progress: &mut dyn FnMut(PasswordEntryReadProgress),
-) -> Result<String, PasswordEntryError> {
-    integrated_entry_backend().read_password_entry_with_progress(store_root, label, report_progress)
-}
-
 pub fn read_password_line(store_root: &str, label: &str) -> Result<String, PasswordEntryError> {
     integrated_entry_backend().read_password_line(store_root, label)
 }
@@ -278,3 +270,22 @@ pub fn required_private_key_fingerprints_for_entry(
 }
 
 pub(super) type RootIntegratedCryptoContext = IntegratedCryptoContext<'static>;
+
+pub fn read_entry_bytes(store_root: &str, label: &str) -> Result<Vec<u8>, PasswordEntryError> {
+    integrated_entry_backend().read_entry_bytes(store_root, label)
+}
+pub fn read_entry_bytes_with_progress(
+    store_root: &str,
+    label: &str,
+    progress: &mut dyn FnMut(PasswordEntryReadProgress),
+) -> Result<Vec<u8>, PasswordEntryError> {
+    integrated_entry_backend().read_entry_bytes_with_progress(store_root, label, progress)
+}
+pub fn save_entry_bytes(
+    store_root: &str,
+    label: &str,
+    contents: &[u8],
+    overwrite: bool,
+) -> Result<(), PasswordEntryWriteError> {
+    integrated_entry_backend().save_entry_bytes(store_root, label, contents, overwrite)
+}

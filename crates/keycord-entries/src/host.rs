@@ -24,6 +24,18 @@ pub trait HostEntryCommandPort: Send + Sync {
         log_options: CommandLogOptions,
         configure: &mut dyn FnMut(&mut Command),
     ) -> Result<Output, String>;
+    fn run_store_command_with_bytes(
+        &self,
+        store_root: &str,
+        action: &str,
+        input: &[u8],
+        log_options: CommandLogOptions,
+        configure: &mut dyn FnMut(&mut Command),
+    ) -> Result<Output, String> {
+        let text = std::str::from_utf8(input)
+            .map_err(|_| "This backend cannot write binary entries.".to_string())?;
+        self.run_store_command_with_input(store_root, action, text, log_options, configure)
+    }
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -218,6 +230,23 @@ fn configure_pass_remove_command(cmd: &mut Command, label: &str) {
     append_pass_entry_args(cmd, [label]);
 }
 
+// `pass` may return success when an overwrite prompt is declined. Check before
+// sending secret stdin so a new import cannot be reported as saved over another item.
+fn reject_existing_destination(
+    store_root: &str,
+    label: &str,
+) -> Result<(), PasswordEntryWriteError> {
+    let path = keycord_stores::paths::desired_entry_file_path(store_root, label)
+        .map_err(PasswordEntryWriteError::other)?;
+    match std::fs::symlink_metadata(path) {
+        Ok(_) => Err(PasswordEntryWriteError::already_exists(
+            "That password entry already exists.",
+        )),
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => Ok(()),
+        Err(error) => Err(PasswordEntryWriteError::other(error.to_string())),
+    }
+}
+
 fn validate_entry_label_for_read(label: &str) -> Result<(), PasswordEntryError> {
     validated_entry_label_path(label)
         .map(|_| ())
@@ -247,12 +276,30 @@ impl<'a> HostEntryBackend<'a> {
         self.read_password_entry_with_progress(store_root, label, &mut |_| {})
     }
 
+    pub fn read_entry_bytes(
+        &self,
+        store_root: &str,
+        label: &str,
+    ) -> Result<Vec<u8>, PasswordEntryError> {
+        self.read_entry_bytes_with_progress(store_root, label, &mut |_| {})
+    }
     pub fn read_password_entry_with_progress(
         &self,
         store_root: &str,
         label: &str,
-        report_progress: &mut dyn FnMut(PasswordEntryReadProgress),
+        progress: &mut dyn FnMut(PasswordEntryReadProgress),
     ) -> Result<String, PasswordEntryError> {
+        let bytes = zeroize::Zeroizing::new(
+            self.read_entry_bytes_with_progress(store_root, label, progress)?,
+        );
+        crate::file::entry_text(&bytes)
+    }
+    pub fn read_entry_bytes_with_progress(
+        &self,
+        store_root: &str,
+        label: &str,
+        report_progress: &mut dyn FnMut(PasswordEntryReadProgress),
+    ) -> Result<Vec<u8>, PasswordEntryError> {
         validate_entry_label_for_read(label)?;
         let _ = report_progress;
 
@@ -268,7 +315,7 @@ impl<'a> HostEntryBackend<'a> {
             .map_err(PasswordEntryError::other)?;
         let output = ensure_host_command_success(HostStoreAction::ReadEntry, output, "pass failed")
             .map_err(password_entry_error_from_host_failure)?;
-        Ok(String::from_utf8_lossy(&output.stdout).to_string())
+        Ok(output.stdout)
     }
 
     pub fn read_password_line(
@@ -290,7 +337,7 @@ impl<'a> HostEntryBackend<'a> {
             .map_err(PasswordEntryError::other)?;
         let output = ensure_host_command_success(HostStoreAction::ReadLine, output, "pass failed")
             .map_err(password_entry_error_from_host_failure)?;
-        crate::file::password_line(&String::from_utf8_lossy(&output.stdout))
+        crate::file::password_line(&crate::file::entry_text(&output.stdout)?)
     }
 
     pub const fn password_entry_is_readable(&self, _store_root: &str, _label: &str) -> bool {
@@ -304,9 +351,20 @@ impl<'a> HostEntryBackend<'a> {
         contents: &str,
         overwrite: bool,
     ) -> Result<(), PasswordEntryWriteError> {
+        self.save_entry_bytes(store_root, label, contents.as_bytes(), overwrite)
+    }
+    pub fn save_entry_bytes(
+        &self,
+        store_root: &str,
+        label: &str,
+        contents: &[u8],
+        overwrite: bool,
+    ) -> Result<(), PasswordEntryWriteError> {
         validate_entry_label_for_write(label)?;
-        #[cfg(feature = "passkey")]
-        crate::file::validate_passkey_path(contents, label)
+        if !overwrite {
+            reject_existing_destination(store_root, label)?;
+        }
+        crate::file::validate_entry_bytes_path(contents, label)
             .map_err(PasswordEntryWriteError::other)?;
 
         let mut configure = |cmd: &mut Command| {
@@ -314,7 +372,7 @@ impl<'a> HostEntryBackend<'a> {
         };
         let output = self
             .commands
-            .run_store_command_with_input(
+            .run_store_command_with_bytes(
                 store_root,
                 "Save password entry",
                 contents,
@@ -336,11 +394,13 @@ impl<'a> HostEntryBackend<'a> {
     ) -> Result<(), PasswordEntryWriteError> {
         validate_entry_label_for_write(old_label)?;
         validate_entry_label_for_write(new_label)?;
-        #[cfg(feature = "passkey")]
+        if old_label != new_label {
+            reject_existing_destination(store_root, new_label)?;
+        }
+        #[cfg(any(feature = "passkey", feature = "passless"))]
         if keycord_passkey::is_passkey_entry_label(old_label) {
-            let contents =
-                zeroize::Zeroizing::new(self.read_password_entry(store_root, old_label)?);
-            crate::file::validate_passkey_path(&contents, new_label)
+            let contents = zeroize::Zeroizing::new(self.read_entry_bytes(store_root, old_label)?);
+            crate::file::validate_entry_bytes_path(&contents, new_label)
                 .map_err(PasswordEntryWriteError::other)?;
         }
 
@@ -644,5 +704,77 @@ mod tests {
             }
             other => panic!("unexpected host read error: {other:?}"),
         }
+    }
+}
+
+#[cfg(all(test, feature = "passless", unix))]
+mod native_tests {
+    use super::*;
+    use std::{os::unix::process::ExitStatusExt, sync::Mutex};
+    struct BinaryHost(Mutex<Vec<u8>>);
+    impl HostEntryCommandPort for BinaryHost {
+        fn run_store_command_output(
+            &self,
+            _: &str,
+            _: &str,
+            _: CommandLogOptions,
+            _: &mut dyn FnMut(&mut Command),
+        ) -> Result<Output, String> {
+            Ok(Output {
+                status: std::process::ExitStatus::from_raw(0),
+                stdout: self.0.lock().unwrap().clone(),
+                stderr: vec![],
+            })
+        }
+        fn run_store_command_with_input(
+            &self,
+            _: &str,
+            _: &str,
+            _: &str,
+            _: CommandLogOptions,
+            _: &mut dyn FnMut(&mut Command),
+        ) -> Result<Output, String> {
+            panic!("Binary entry must not use a text port")
+        }
+        fn run_store_command_with_bytes(
+            &self,
+            _: &str,
+            _: &str,
+            input: &[u8],
+            _: CommandLogOptions,
+            _: &mut dyn FnMut(&mut Command),
+        ) -> Result<Output, String> {
+            *self.0.lock().unwrap() = input.to_vec();
+            Ok(Output {
+                status: std::process::ExitStatus::from_raw(0),
+                stdout: vec![],
+                stderr: vec![],
+            })
+        }
+    }
+    #[test]
+    fn native_records_use_binary_host_io_and_never_reach_password_actions() {
+        let original =
+            include_bytes!("../../keycord-passkey/tests/fixtures/passless-ed25519-19.cbor");
+        let host = BinaryHost(Mutex::new(original.to_vec()));
+        let backend = HostEntryBackend::new(&host);
+        let label = format!("fido2/example.com/{}", "42".repeat(32));
+        assert_eq!(
+            backend.read_entry_bytes("unused", &label).unwrap(),
+            original
+        );
+        assert!(backend.read_password_entry("unused", &label).is_err());
+        assert!(backend.read_password_line("unused", &label).is_err());
+        assert!(backend
+            .rename_password_entry("unused", &label, "example.com/wrong")
+            .is_err());
+        backend
+            .save_entry_bytes("unused", &label, original, false)
+            .unwrap();
+        assert_eq!(&*host.0.lock().unwrap(), original);
+        let mut broken = original.to_vec();
+        broken.push(0);
+        *host.0.lock().unwrap() = broken;
+        assert!(backend.read_password_line("unused", &label).is_err());
     }
 }

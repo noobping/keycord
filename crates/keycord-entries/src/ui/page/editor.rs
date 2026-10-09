@@ -35,6 +35,8 @@ pub(super) fn sync_editor_contents(
     contents: &str,
     pass_file: Option<&OpenPassFile>,
 ) {
+    #[cfg(feature = "passless")]
+    state.native_passless.set(false);
     let (password, structured_lines) = parse_structured_pass_lines(contents);
     state.entry.set_text(&password);
     let contains_passkey = pass_file_has_passkey(contents);
@@ -50,6 +52,7 @@ pub(super) fn sync_editor_contents(
         &state.dynamic_rows,
         &structured_lines,
     );
+    super::state::show_password_editor_fields(state);
     sync_username_row_from_parsed_lines(&state.username, pass_file, &structured_lines);
     state.raw.set_visible(!contains_passkey);
     state.entry.set_visible(!contains_passkey);

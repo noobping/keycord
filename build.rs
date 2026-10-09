@@ -21,10 +21,12 @@ fn main() {
         display_name: "Keycord",
         debug: cfg!(debug_assertions),
         flatpak: cfg!(feature = "flatpak"),
-        passkey_mime: cfg!(feature = "passkey").then_some(PasskeyMimeConfig {
-            mime_types: passkey_mime::PASSKEY_MIME_TYPES,
-            package: passkey_mime::PASSKEY_MIME_PACKAGE,
-        }),
+        passkey_mime: cfg!(any(feature = "passkey", feature = "passless")).then_some(
+            PasskeyMimeConfig {
+                mime_types: passkey_mime::PASSKEY_MIME_TYPES,
+                package: passkey_mime::PASSKEY_MIME_PACKAGE,
+            },
+        ),
         setup: cfg!(feature = "setup"),
         target_os: target_os.as_deref(),
         target_env: target_env.as_deref(),

@@ -59,5 +59,12 @@ option(
   'passkey',
   type: 'boolean',
   value: true,
-  description: 'Enable passkey request handling and storage in pass files.',
+  description: 'Enable Android Password Store passkeys and credential exchange.',
+)
+
+option(
+  'passless',
+  type: 'boolean',
+  value: false,
+  description: 'Enable native Passless credentials and credential exchange independently of Android passkeys.',
 )

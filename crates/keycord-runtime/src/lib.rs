@@ -11,7 +11,7 @@ pub mod validation;
 pub mod worker;
 
 pub use command::{
-    output_failure_message, run_command_output, run_command_status, run_command_with_input,
-    CommandLogOptions,
+    output_failure_message, run_command_output, run_command_status, run_command_with_bytes,
+    run_command_with_input, CommandLogOptions,
 };
 pub use diagnostics::{log_error, log_info, log_snapshot};

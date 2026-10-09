@@ -2,7 +2,7 @@ use std::path::Path;
 
 use keycord_stores::integrated::{self as store_core, IntegratedStorePorts, StoreEntryReadError};
 
-use super::entries::{integrated_entry_backend, read_password_entry, RootIntegratedCryptoContext};
+use super::entries::{integrated_entry_backend, read_entry_bytes, RootIntegratedCryptoContext};
 use super::git::{maybe_commit_git_paths, password_entry_git_path};
 use crate::composition::backend::{
     PasswordEntryError, StoreRecipients, StoreRecipientsError, StoreRecipientsPrivateKeyRequirement,
@@ -18,8 +18,8 @@ impl IntegratedStorePorts for RootIntegratedStorePorts {
         &self,
         store_root: &str,
         label: &str,
-    ) -> Result<String, StoreEntryReadError> {
-        read_password_entry(store_root, label).map_err(|err| match err {
+    ) -> Result<Vec<u8>, StoreEntryReadError> {
+        read_entry_bytes(store_root, label).map_err(|err| match err {
             PasswordEntryError::LockedPrivateKey(message) => StoreEntryReadError::Locked(message),
             other => StoreEntryReadError::Other(other.to_string()),
         })

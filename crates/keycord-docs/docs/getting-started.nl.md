@@ -172,3 +172,48 @@ keycord 'reg:(?i)^work/.+github$'
 - [Zoekgids](search.md)
 - [Werkstromen](workflows.md)
 - [Machtigingen en backends](permissions-and-backends.md)
+
+## Passkeys voor Android en Passless
+
+De twee Cargo-features zijn onafhankelijk:
+
+- `--no-default-features --features passkey`: alleen Android Password Store.
+- `--no-default-features --features passless`: alleen Passless.
+- `--no-default-features --features passkey,passless`: beide formaten.
+- `--no-default-features`: geen passkeyherkenning of credential-uitwisseling.
+
+`setup` en `flatpak` kiezen geen formaat; voeg de gewenste feature expliciet toe.
+Bestaande pakketbuilds kiezen `passkey`. Meson heeft afzonderlijke opties:
+`passkey` staat standaard aan en `passless` uit. Gebruik
+`-Dpasskey=false -Dpassless=true` voor alleen Passless.
+
+Android gebruikt Base64URL-gecodeerde CBOR op de eerste ontsleutelde regel.
+Keycord ondersteunt ES256, Ed25519 en RSA-2048 RS256. Aanvullende velden, OTP en
+notities blijven bewerkbaar zonder het oorspronkelijke passkeymateriaal te wijzigen.
+Nieuwe imports komen onder `passkeys/<rp-id>/<credential-id>.gpg`.
+
+Passless gebruikt binaire CBOR. Keycord bewaart die bytes exact, inclusief teller,
+aanmaaktijd, backupstatus en extensies. De account- en websitegegevens zijn zichtbaar;
+inhoud, notities, extra velden, OTP en ruwe tekst zijn niet bewerkbaar. Verplaatsen,
+geldig hernoemen, verwijderen en ongedaan maken blijven beschikbaar. Behoud de
+credential-ID als bestandsnaam en de website-ID als bovenliggende map.
+
+Open een CXF-bestand om een credential te importeren. Met beide features kies je
+het formaat, standaard Android; met één feature gebruikt Keycord dat formaat direct.
+Imports bevatten één credential met een ID van 32 bytes en geen niet-lege extensies.
+Passless-import ondersteunt P-256 en Ed25519, geen RSA. Nieuwe Passless-imports komen
+onder `fido2/<rp-id>/<credential-id>.gpg`, met teller `0`, de huidige aanmaaktijd,
+`discoverable: true` en backupstatus `notEligible`. Bestaande Ed25519-algoritmecodes
+`-8` en `-19` worden ondersteund.
+
+Herkend passkeymateriaal verschijnt niet in wachtwoordkopieën, QR-codes, CSV-export,
+zoekvelden of sterkteanalyse. Keycord converteert bestaande bestanden niet en maakt
+geen dubbele credentials. Het oude `passkey:`-JSON-formaat blijft niet ondersteund.
+CXP-verzoeken kunnen worden bekeken; Keycord maakt geen antwoordarchieven.
+
+Passless verzorgt desktopauthenticatie. Configureer dezelfde store en passende
+credentialmap, met toegang tot de benodigde OpenPGP-sleutel. Keycords geïntegreerde
+sleutelbos staat los van de GPG-sleutelbos op de host. Gebruik gewone
+OpenPGP-ontvangersencryptie; Keycords optie om alle sleutels te vereisen gebruikt een
+formaat dat andere apps niet begrijpen. Deze features voegen geen browserintegratie
+aan Keycord toe.

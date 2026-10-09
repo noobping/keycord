@@ -1,6 +1,6 @@
 //! Bounded local CXF/CXP file handling.
 
-use crate::{import_cxf_passkey_json, PasskeyCredential};
+use crate::{parse_cxf_passkey_json, ImportedCredential};
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
 use serde::Deserialize;
 use serde_json::{Map, Value};
@@ -35,7 +35,7 @@ pub struct PasskeyExportRequestFile {
 #[derive(Clone, Debug, PartialEq)]
 pub enum OpenedPasskeyFile {
     ExportRequest(PasskeyExportRequestFile),
-    Credential(PasskeyCredential),
+    Credential(ImportedCredential),
 }
 
 #[derive(Clone, Debug, Deserialize, PartialEq)]
@@ -142,7 +142,7 @@ pub fn read_opened_passkey_file(
         Err(PasskeyRequestError::NotPasskeyRequest) => {
             let input =
                 std::str::from_utf8(&bytes).map_err(|_| PasskeyRequestError::NotPasskeyRequest)?;
-            match import_cxf_passkey_json(input) {
+            match parse_cxf_passkey_json(input) {
                 Ok(credential) => Ok(OpenedPasskeyFile::Credential(credential)),
                 Err(error) if contains_cxf_passkey_type(&bytes) => {
                     Err(PasskeyRequestError::Malformed(error))
@@ -800,7 +800,7 @@ mod tests {
     fn reads_standard_cxf_passkey_files_for_import() {
         let path = unique_temp_path();
         let input = include_str!("../tests/fixtures/es256.cxf.json");
-        let credential = crate::import_cxf_passkey_json(input).expect("import fixture");
+        let credential = crate::parse_cxf_passkey_json(input).expect("import fixture");
         fs::write(&path, input).expect("write CXF fixture");
 
         let opened = read_opened_passkey_file(&path).expect("open CXF passkey");

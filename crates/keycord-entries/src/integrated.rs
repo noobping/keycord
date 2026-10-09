@@ -11,7 +11,6 @@ use keycord_keys::{
 use keycord_runtime::{log_error, secure_fs::write_atomic_file};
 use keycord_stores::integrated::StoreRecipientCrypto;
 use keycord_stores::StoreRecipientsPrivateKeyRequirement;
-use ripasso::crypto::Crypto;
 use ripasso::pass::{Comment, KeyRingStatus, OwnerTrustLevel, Recipient};
 use std::fmt::Write as _;
 use std::fs;
@@ -42,7 +41,7 @@ pub trait IntegratedEntryKeyPort: Send + Sync {
         &self,
         fingerprint: &str,
         ciphertext: &[u8],
-    ) -> Result<Option<String>, String>;
+    ) -> Result<Option<Vec<u8>>, String>;
 
     fn fingerprint_from_string(&self, fingerprint: &str) -> Result<[u8; 20], String>;
 }
@@ -226,7 +225,7 @@ impl<'a> IntegratedCryptoContext<'a> {
         &self.fingerprint
     }
 
-    pub fn decrypt_entry(&self, entry_path: &Path) -> Result<String, String> {
+    pub fn decrypt_entry(&self, entry_path: &Path) -> Result<Vec<u8>, String> {
         let ciphertext = read_entry_ciphertext(entry_path)?;
         match self.private_key_requirement {
             StoreRecipientsPrivateKeyRequirement::AnyManagedKey => self
@@ -241,7 +240,7 @@ impl<'a> IntegratedCryptoContext<'a> {
 
     pub fn encrypt_contents_with_existing(
         &self,
-        contents: &str,
+        contents: &[u8],
         _existing_ciphertext: Option<&[u8]>,
     ) -> Result<Vec<u8>, String> {
         match self.private_key_requirement {
@@ -261,7 +260,7 @@ impl<'a> IntegratedCryptoContext<'a> {
         fingerprint: &str,
         crypto: &RipassoCrypto,
         ciphertext: &[u8],
-    ) -> Result<String, String> {
+    ) -> Result<Vec<u8>, String> {
         if let Some(secret) = self
             .ports
             .keys
@@ -271,7 +270,7 @@ impl<'a> IntegratedCryptoContext<'a> {
         }
 
         crypto
-            .decrypt_string(ciphertext)
+            .decrypt_bytes(ciphertext)
             .map_err(|err| err.to_string())
     }
 
@@ -279,13 +278,13 @@ impl<'a> IntegratedCryptoContext<'a> {
         &self,
         ciphertext: &[u8],
         required_recipients: &[RequiredPrivateKeyRecipient],
-    ) -> Result<String, String> {
+    ) -> Result<Vec<u8>, String> {
         let mut current = ciphertext.to_vec();
 
         for (index, recipient) in required_recipients.iter().enumerate() {
             let decrypted = self.decrypt_required_private_key_layer(recipient, &current)?;
             if index + 1 == required_recipients.len() {
-                return String::from_utf8(decrypted).map_err(|err| err.to_string());
+                return Ok(decrypted);
             }
             current = unwrap_required_private_key_layer(&decrypted)?;
         }
@@ -306,14 +305,14 @@ impl<'a> IntegratedCryptoContext<'a> {
                     &context.crypto,
                     ciphertext,
                 )?;
-                Ok(decrypted.into_bytes())
+                Ok(decrypted)
             }
         }
     }
 
     fn encrypt_password_entry_requiring_all_private_keys(
         &self,
-        contents: &str,
+        contents: &[u8],
         required_recipients: &[RequiredPrivateKeyRecipient],
     ) -> Result<Vec<u8>, String> {
         let Some((last_recipient, outer_recipients)) = required_recipients.split_last() else {
@@ -321,7 +320,7 @@ impl<'a> IntegratedCryptoContext<'a> {
         };
 
         let mut current =
-            self.encrypt_for_required_private_key_recipient(last_recipient, contents.as_bytes())?;
+            self.encrypt_for_required_private_key_recipient(last_recipient, contents)?;
         for recipient in outer_recipients.iter().rev() {
             let wrapped = wrap_required_private_key_layer(&current);
             current =
@@ -338,7 +337,6 @@ impl<'a> IntegratedCryptoContext<'a> {
         match recipient {
             RequiredPrivateKeyRecipient::Standard { fingerprint } => {
                 let context = Self::load_for_fingerprint(self.ports, fingerprint)?;
-                let text = String::from_utf8(payload.to_vec()).map_err(|err| err.to_string())?;
                 let recipient = Recipient {
                     name: fingerprint.clone(),
                     comment: Comment {
@@ -351,7 +349,7 @@ impl<'a> IntegratedCryptoContext<'a> {
                     trust_level: OwnerTrustLevel::Ultimate,
                     not_usable: false,
                 };
-                encrypt_password_entry_with_crypto(&context.crypto, &[recipient], &text)
+                encrypt_password_entry_with_crypto(&context.crypto, &[recipient], payload)
             }
         }
     }
@@ -360,7 +358,7 @@ impl<'a> IntegratedCryptoContext<'a> {
 impl StoreRecipientCrypto for IntegratedCryptoContext<'_> {
     fn encrypt_contents_with_existing(
         &self,
-        contents: &str,
+        contents: &[u8],
         existing_ciphertext: Option<&[u8]>,
     ) -> Result<Vec<u8>, String> {
         Self::encrypt_contents_with_existing(self, contents, existing_ciphertext)
@@ -426,12 +424,30 @@ impl<'a> IntegratedEntryBackend<'a> {
         self.read_password_entry_with_progress(store_root, label, &mut |_| {})
     }
 
+    pub fn read_entry_bytes(
+        self,
+        store_root: &str,
+        label: &str,
+    ) -> Result<Vec<u8>, PasswordEntryError> {
+        self.read_entry_bytes_with_progress(store_root, label, &mut |_| {})
+    }
     pub fn read_password_entry_with_progress(
         self,
         store_root: &str,
         label: &str,
-        report_progress: &mut dyn FnMut(PasswordEntryReadProgress),
+        progress: &mut dyn FnMut(PasswordEntryReadProgress),
     ) -> Result<String, PasswordEntryError> {
+        let bytes = zeroize::Zeroizing::new(
+            self.read_entry_bytes_with_progress(store_root, label, progress)?,
+        );
+        crate::file::entry_text(&bytes)
+    }
+    pub fn read_entry_bytes_with_progress(
+        self,
+        store_root: &str,
+        label: &str,
+        report_progress: &mut dyn FnMut(PasswordEntryReadProgress),
+    ) -> Result<Vec<u8>, PasswordEntryError> {
         let entry_path = self
             .ports
             .stores
@@ -521,16 +537,40 @@ impl<'a> IntegratedEntryBackend<'a> {
         self.save_password_entry_with_progress(store_root, label, contents, overwrite, &mut |_| {})
     }
 
+    pub fn save_entry_bytes(
+        self,
+        store_root: &str,
+        label: &str,
+        contents: &[u8],
+        overwrite: bool,
+    ) -> Result<(), PasswordEntryWriteError> {
+        self.save_entry_bytes_with_progress(store_root, label, contents, overwrite, &mut |_| {})
+    }
     pub fn save_password_entry_with_progress(
         self,
         store_root: &str,
         label: &str,
         contents: &str,
         overwrite: bool,
+        progress: &mut dyn FnMut(PasswordEntryWriteProgress),
+    ) -> Result<(), PasswordEntryWriteError> {
+        self.save_entry_bytes_with_progress(
+            store_root,
+            label,
+            contents.as_bytes(),
+            overwrite,
+            progress,
+        )
+    }
+    pub fn save_entry_bytes_with_progress(
+        self,
+        store_root: &str,
+        label: &str,
+        contents: &[u8],
+        overwrite: bool,
         report_progress: &mut dyn FnMut(PasswordEntryWriteProgress),
     ) -> Result<(), PasswordEntryWriteError> {
-        #[cfg(feature = "passkey")]
-        crate::file::validate_passkey_path(contents, label)
+        crate::file::validate_entry_bytes_path(contents, label)
             .map_err(PasswordEntryWriteError::other)?;
         let existing_entry_path = self
             .ports
@@ -611,11 +651,10 @@ impl<'a> IntegratedEntryBackend<'a> {
         old_label: &str,
         new_label: &str,
     ) -> Result<(), PasswordEntryWriteError> {
-        #[cfg(feature = "passkey")]
+        #[cfg(any(feature = "passkey", feature = "passless"))]
         if keycord_passkey::is_passkey_entry_label(old_label) {
-            let contents =
-                zeroize::Zeroizing::new(self.read_password_entry(store_root, old_label)?);
-            crate::file::validate_passkey_path(&contents, new_label)
+            let contents = zeroize::Zeroizing::new(self.read_entry_bytes(store_root, old_label)?);
+            crate::file::validate_entry_bytes_path(&contents, new_label)
                 .map_err(PasswordEntryWriteError::other)?;
         }
         let commit_fingerprint = self.commit_identity_fingerprint_for_label(store_root, old_label);
@@ -762,7 +801,7 @@ impl<'a> IntegratedEntryBackend<'a> {
         self,
         fingerprint: &str,
         entry_path: &Path,
-    ) -> Result<String, String> {
+    ) -> Result<Vec<u8>, String> {
         let ciphertext = read_entry_ciphertext(entry_path)?;
         self.ports
             .keys
@@ -854,13 +893,13 @@ fn decode_hex(value: &str) -> Result<Vec<u8>, String> {
 fn encrypt_password_entry_with_crypto(
     crypto: &RipassoCrypto,
     recipients: &[Recipient],
-    contents: &str,
+    contents: &[u8],
 ) -> Result<Vec<u8>, String> {
     if recipients.is_empty() {
         return Err("No recipients were found for this password entry.".to_string());
     }
     crypto
-        .encrypt_string(contents, recipients)
+        .encrypt_bytes(contents, recipients)
         .map_err(|err| err.to_string())
 }
 

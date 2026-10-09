@@ -100,16 +100,34 @@ impl CsvExportRow {
 
 pub fn export_passwords_to_csv_with(
     requests: Vec<EntryRequest>,
-    mut store_label: impl FnMut(&str) -> String,
+    store_label: impl FnMut(&str) -> String,
     mut read_entry: impl FnMut(&EntryRequest) -> Result<String, String>,
+    write_export: impl FnMut(&[u8]) -> Result<(), String>,
+) -> Result<usize, String> {
+    export_passwords_to_csv_filtered_with(
+        requests,
+        store_label,
+        |entry| read_entry(entry).map(Some),
+        write_export,
+    )
+}
+
+pub fn export_passwords_to_csv_filtered_with(
+    requests: Vec<EntryRequest>,
+    mut store_label: impl FnMut(&str) -> String,
+    mut read_entry: impl FnMut(&EntryRequest) -> Result<Option<String>, String>,
     mut write_export: impl FnMut(&[u8]) -> Result<(), String>,
 ) -> Result<usize, String> {
     let mut csv = Zeroizing::new(String::new());
     append_csv_record(&mut csv, CSV_HEADER);
 
-    let count = requests.len();
+    let mut count = 0;
     for request in requests {
-        let contents = Zeroizing::new(read_entry(&request)?);
+        let Some(contents) = read_entry(&request)? else {
+            continue;
+        };
+        let contents = Zeroizing::new(contents);
+        count += 1;
         let mut row = CsvExportRow::from_contents(store_label(&request.root), &request, &contents);
         append_csv_record(&mut csv, row.fields());
         row.zeroize();
@@ -246,6 +264,43 @@ mod tests {
         assert!(String::from_utf8(written)
             .expect("utf8")
             .starts_with("\"store\",\"store_path\",\"entry\""));
+    }
+
+    #[cfg(feature = "passless")]
+    #[test]
+    fn native_credentials_are_skipped_without_interrupting_password_export() {
+        let requests = ["native", "password", "damaged"]
+            .into_iter()
+            .map(|label| EntryRequest {
+                root: "/stores/main".into(),
+                label: label.into(),
+            })
+            .collect();
+        let native = include_bytes!("../../../keycord-passkey/tests/fixtures/passless-es256.cbor");
+        let mut written = Vec::new();
+        let count = super::export_passwords_to_csv_filtered_with(
+            requests,
+            |_| "main".into(),
+            |request| {
+                crate::file::export_entry_text(match request.label.as_str() {
+                    "native" => native,
+                    "damaged" => b"\xa1\x6bprivate_key\xff",
+                    _ => b"secret\nusername: alice",
+                })
+                .map_err(|error| error.to_string())
+            },
+            |bytes| {
+                written.extend_from_slice(bytes);
+                Ok(())
+            },
+        )
+        .unwrap();
+        assert_eq!(count, 1);
+        let csv = String::from_utf8(written).unwrap();
+        assert!(csv.contains("\"password\",\"secret\",\"alice\""));
+        assert!(!csv.contains("native"));
+        assert!(!csv.contains("damaged"));
+        assert!(!csv.contains("private_key"));
     }
 
     #[test]

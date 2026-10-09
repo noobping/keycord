@@ -99,7 +99,7 @@ struct PasswordRowState {
 
 impl PasswordRowState {
     fn password_actions_available(&self) -> bool {
-        #[cfg(feature = "passkey")]
+        #[cfg(any(feature = "passkey", feature = "passless"))]
         if keycord_passkey::is_passkey_entry_label(&self.item.borrow().label()) {
             return false;
         }

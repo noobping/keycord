@@ -119,6 +119,14 @@ pub trait HardwareTransport: Send + Sync {
         session: &HardwareSessionPolicy,
         ciphertext: &[u8],
     ) -> Result<String, HardwareTransportError>;
+    fn decrypt_bytes(
+        &self,
+        session: &HardwareSessionPolicy,
+        ciphertext: &[u8],
+    ) -> Result<Vec<u8>, HardwareTransportError> {
+        self.decrypt_ciphertext(session, ciphertext)
+            .map(String::into_bytes)
+    }
     fn sign_cleartext(
         &self,
         session: &HardwareSessionPolicy,
@@ -173,6 +181,13 @@ pub(crate) fn generate_hardware_key_material(
     request: &HardwareKeyGenerationRequest,
 ) -> Result<(DiscoveredHardwareToken, Vec<u8>), HardwareTransportError> {
     with_hardware_transport_read(|transport| transport.generate_key_material(request))
+}
+
+pub fn decrypt_bytes_with_hardware_session(
+    session: &HardwareSessionPolicy,
+    ciphertext: &[u8],
+) -> Result<Vec<u8>, HardwareTransportError> {
+    with_hardware_transport_read(|transport| transport.decrypt_bytes(session, ciphertext))
 }
 
 pub fn decrypt_with_hardware_session(

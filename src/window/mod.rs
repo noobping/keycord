@@ -3,7 +3,7 @@ mod controls;
 pub mod navigation;
 mod tool_hub;
 
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 pub use self::build::begin_passkey_import;
 pub use self::build::create_main_window;
 pub use self::build::dispatch_main_window_command;

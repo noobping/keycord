@@ -24,13 +24,13 @@ use adw::{prelude::*, Application, ApplicationWindow};
 use keycord_entries::model::OpenPassFile;
 use keycord_entries::otp::PasswordOtpState;
 use keycord_entries::ui::list::{apply_password_list_startup_query, PasswordListVisibilityState};
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 use keycord_entries::ui::page::password_page_would_discard_work;
 use keycord_entries::ui::page::{open_password_entry_page, password_page_has_unsaved_changes};
 use keycord_entries::ui::session::initialize_window_session;
 use keycord_keys::PrivateKeySyncDirection;
-#[cfg(feature = "passkey")]
-use keycord_passkey::{build_passkey_storage_entry, PasskeyCredential};
+#[cfg(any(feature = "passkey", feature = "passless"))]
+use keycord_passkey::{ImportedCredential, PasskeyFormat};
 use keycord_preferences::Preferences;
 use keycord_runtime::capabilities::log_runtime_capabilities_once;
 use keycord_runtime::log_error;
@@ -217,22 +217,95 @@ pub fn dispatch_main_window_command(
     apply_password_list_startup_query(Some(query), &state.search_entry, &state.list);
 }
 
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 pub fn begin_passkey_import(
     window: &ApplicationWindow,
-    credential: &PasskeyCredential,
+    credential: &ImportedCredential,
+    format: PasskeyFormat,
 ) -> Result<(), String> {
     let state = cloned_data::<_, MainWindowCommandState>(window, MAIN_WINDOW_COMMAND_STATE_KEY)
         .ok_or_else(|| "The password editor is not available.".to_string())?;
     if password_page_would_discard_work(&state.password_page) {
         return Err("Save or discard your current changes before importing a passkey.".to_string());
     }
-    let entry = build_passkey_storage_entry(credential)?;
-    keycord_entries::ui::page::begin_new_password_entry_with_contents(
+    let entry = credential.prepare(format)?;
+    keycord_entries::ui::page::begin_new_entry_with_bytes(
         &state.password_page,
         &entry.label,
         None,
         &entry.contents,
     )
     .map_err(str::to_string)
+}
+
+#[cfg(all(test, feature = "passless"))]
+mod native_ui_tests {
+    use super::*;
+    use keycord_entries::ui::page::{
+        begin_new_entry_with_bytes, begin_new_password_entry_with_contents,
+        save_current_password_entry, show_raw_pass_file_page,
+    };
+    use std::sync::{Arc, Mutex};
+
+    #[test]
+    #[ignore = "Requires a display; run under xvfb-run with --ignored --test-threads=1"]
+    fn native_passless_editor_preserves_bytes_and_hides_password_controls() {
+        let env = crate::composition::backend::test_support::SystemBackendTestEnv::new();
+        adw::init().unwrap();
+        adw::gio::resources_register_include!("compiled.gresource").unwrap();
+        let builder = Builder::from_string(UI_SRC);
+        let widgets = WindowWidgets::load(&builder).unwrap();
+        initialize_window_session(&widgets.shell.window);
+        let otp = PasswordOtpState::new(&widgets.entries.otp_entry, &widgets.shell.overlay);
+        let mut page = password_page_state(&widgets, &otp);
+        page.ports.preferences.uses_integrated_backend = Rc::new(|| false);
+        let saved = Arc::new(Mutex::new(Vec::new()));
+        let captured = saved.clone();
+        page.ports.backend.save_entry = Arc::new(move |_, _, bytes, overwrite| {
+            assert!(!overwrite, "New imports must reject filename collisions");
+            captured.lock().unwrap().push(bytes);
+            Ok(())
+        });
+        let input =
+            include_bytes!("../../../crates/keycord-passkey/tests/fixtures/passless-es256.cbor");
+        let label = format!("fido2/example.com/{}", "42".repeat(32));
+        let store = env.store_root().to_string_lossy().to_string();
+        begin_new_entry_with_bytes(&page, &label, Some(store.clone()), input).unwrap();
+        for button in [
+            &page.raw,
+            &page.clean_button,
+            &page.template_button,
+            &page.otp_add_button,
+        ] {
+            assert!(!button.get_visible());
+        }
+        assert!(!page.entry.get_visible());
+        assert!(!page.username.get_visible());
+        assert!(!page.field_add_row.get_visible());
+        assert!(!page.otp.row.get_visible());
+        let buffer = page.text.buffer();
+        assert!(buffer
+            .text(&buffer.start_iter(), &buffer.end_iter(), false)
+            .is_empty());
+        let visible_page = page.nav.visible_page();
+        show_raw_pass_file_page(&page);
+        assert_eq!(page.nav.visible_page(), visible_page);
+        assert!(page.editor_save_button.get_visible());
+        save_current_password_entry(&page);
+        assert_eq!(saved.lock().unwrap().as_slice(), &[input.to_vec()]);
+        assert!(!page.editor_save_button.get_visible());
+        assert!(!page.save.get_visible());
+        save_current_password_entry(&page);
+        assert_eq!(
+            saved.lock().unwrap().len(),
+            1,
+            "Existing binary record cannot be rewritten by editor"
+        );
+        begin_new_password_entry_with_contents(&page, "ordinary", Some(store), "a password\nnotes")
+            .unwrap();
+        assert!(page.entry.get_visible());
+        assert!(page.raw.get_visible());
+        assert!(page.field_add_row.get_visible());
+        assert!(page.save.get_visible());
+    }
 }

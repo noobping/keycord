@@ -1,3 +1,5 @@
+mod bytes;
+use bytes::{current_editor_bytes, native_passless, sync_editor_bytes};
 mod editor;
 mod linux;
 mod ports;
@@ -19,7 +21,7 @@ use crate::ui::opened::{
     refresh_opened_pass_file_from_contents, set_opened_pass_file,
 };
 use crate::ui::undo::push_undo_action;
-use crate::undo::restore_saved_entry_action;
+use crate::undo::restore_saved_entry_action_bytes;
 use crate::validation::validate_pass_file_email_fields;
 use crate::{PasswordEntryError, PasswordEntryReadProgress, PasswordEntryWriteError};
 use adw::prelude::*;
@@ -118,10 +120,10 @@ enum PasswordPageDisplay {
 
 struct PasswordSaveContext {
     pass_file: OpenPassFile,
-    contents: String,
+    contents: Vec<u8>,
     previous_store: String,
     previous_label: String,
-    previous_contents: String,
+    previous_contents: Vec<u8>,
     previous_entry_exists: bool,
     target_label: Option<String>,
 }
@@ -169,6 +171,22 @@ fn prepared_password_save_contents(
 fn prepare_password_save_context(state: &PasswordPageState) -> Result<PasswordSaveContext, String> {
     let pass_file =
         get_opened_pass_file(&state.nav).ok_or_else(|| "Open an item first.".to_string())?;
+    if native_passless(state) {
+        let contents = current_editor_bytes(state);
+        crate::file::validate_entry_bytes_path(&contents, &pass_file.label())?;
+        if state.saved_entry_exists.get() {
+            return Err("Passless contents are read-only.".into());
+        }
+        return Ok(PasswordSaveContext {
+            previous_store: pass_file.store_path().to_string(),
+            previous_label: pass_file.label(),
+            previous_contents: state.saved_contents.borrow().to_vec(),
+            previous_entry_exists: false,
+            pass_file,
+            contents,
+            target_label: None,
+        });
+    }
     let editor_contents = current_editor_contents(state);
 
     let otp_url = state
@@ -207,10 +225,10 @@ fn prepare_password_save_context(state: &PasswordPageState) -> Result<PasswordSa
     Ok(PasswordSaveContext {
         previous_store: pass_file.store_path().to_string(),
         previous_label: pass_file.label(),
-        previous_contents: state.saved_contents.borrow().clone(),
+        previous_contents: state.saved_contents.borrow().to_vec(),
         previous_entry_exists: state.saved_entry_exists.get(),
         pass_file,
-        contents,
+        contents: contents.into_bytes(),
         target_label,
     })
 }
@@ -250,12 +268,16 @@ fn finish_password_save(
     let updated_pass_file = refresh_opened_pass_file_from_contents(
         &state.nav,
         active_pass_file,
-        &save_context.contents,
+        std::str::from_utf8(&save_context.contents).unwrap_or_default(),
     )
     .or_else(|| Some(active_pass_file.clone()));
     show_password_editor_fields(state);
-    sync_editor_contents(state, &save_context.contents, updated_pass_file.as_ref());
+    sync_editor_bytes(state, &save_context.contents, updated_pass_file.as_ref());
     sync_saved_password_state(state, &save_context.contents, true);
+    if native_passless(state) {
+        state.editor_save_button.set_visible(false);
+        state.save.set_visible(false);
+    }
     let current_label = updated_pass_file
         .as_ref()
         .map_or_else(|| save_context.previous_label.clone(), OpenPassFile::label);
@@ -265,12 +287,12 @@ fn finish_password_save(
     {
         push_undo_action(
             &state.nav,
-            restore_saved_entry_action(
+            restore_saved_entry_action_bytes(
                 &save_context.previous_store,
                 &save_context.previous_label,
                 save_context
                     .previous_entry_exists
-                    .then_some(save_context.previous_contents.as_str()),
+                    .then_some(save_context.previous_contents.as_slice()),
                 save_context.pass_file.store_path(),
                 &current_label,
             ),
@@ -333,7 +355,9 @@ pub fn open_password_entry_page(
     let read_entry_with_progress = state.ports.backend.read_entry_with_progress.clone();
     spawn_progress_result_task(
         move |progress_tx| {
-            read_entry_with_progress(store_for_thread, label_for_thread, progress_tx)
+            let bytes = read_entry_with_progress(store_for_thread, label_for_thread, progress_tx)?;
+            bytes::validate_editor_bytes(&bytes)?;
+            Ok(bytes)
         },
         move |progress| {
             if !is_opened_pass_file(&state_for_progress.nav, &opened_pass_file_for_progress) {
@@ -355,11 +379,11 @@ pub fn open_password_entry_page(
                     let updated_pass_file = refresh_opened_pass_file_from_contents(
                         &state_for_result.nav,
                         &opened_pass_file_for_result,
-                        &output,
+                        std::str::from_utf8(&output).unwrap_or_default(),
                     );
                     show_password_editor_fields(&state_for_result);
-                    sync_editor_contents(&state_for_result, &output, updated_pass_file.as_ref());
                     sync_saved_password_state(&state_for_result, &output, true);
+                    sync_editor_bytes(&state_for_result, &output, updated_pass_file.as_ref());
                     focus_password_row(&state_for_result);
                 }
                 Err(err) => {
@@ -398,6 +422,26 @@ pub fn begin_new_password_entry(
     Ok(())
 }
 
+/// Starts a reviewed import without converting native binary content to text.
+#[cfg(any(feature = "passkey", feature = "passless"))]
+pub fn begin_new_entry_with_bytes(
+    state: &PasswordPageState,
+    path: &str,
+    store_root: Option<String>,
+    contents: &[u8],
+) -> Result<(), &'static str> {
+    #[cfg(feature = "passless")]
+    if keycord_passkey::inspect_passless(contents).is_some() {
+        begin_new_password_entry_with_contents(state, path, store_root, "")?;
+        sync_saved_password_state(state, contents, false);
+        let opened = get_opened_pass_file(&state.nav);
+        sync_editor_bytes(state, contents, opened.as_ref());
+        return Ok(());
+    }
+    let text = std::str::from_utf8(contents).map_err(|_| "The entry is not UTF-8 text.")?;
+    begin_new_password_entry_with_contents(state, path, store_root, text)
+}
+
 pub fn begin_new_password_entry_with_contents(
     state: &PasswordPageState,
     path: &str,
@@ -426,12 +470,15 @@ pub fn begin_new_password_entry_with_contents(
     push_navigation_page_if_needed(&state.nav, &state.page);
 
     sync_editor_contents(state, contents, prepared_pass_file.as_ref());
-    sync_saved_password_state(state, contents, false);
+    sync_saved_password_state(state, contents.as_bytes(), false);
     focus_password_row(state);
     Ok(())
 }
 
 pub fn show_raw_pass_file_page(state: &PasswordPageState) {
+    if native_passless(state) {
+        return;
+    }
     let contents = structured_editor_contents(state);
     if pass_file_has_passkey(&contents) {
         return;
@@ -475,6 +522,9 @@ pub fn add_pass_field_from_input(state: &PasswordPageState) {
 }
 
 pub fn refresh_apply_template_button(state: &PasswordPageState) {
+    if native_passless(state) {
+        return;
+    }
     let contents = current_editor_contents(state);
     sync_apply_template_button(state, &contents);
     sync_import_private_key_button(state, &contents);
@@ -703,10 +753,10 @@ pub fn clean_pass_file(state: &PasswordPageState) {
 }
 
 pub fn password_page_has_unsaved_changes(state: &PasswordPageState) -> bool {
-    current_editor_contents(state) != *state.saved_contents.borrow()
+    current_editor_bytes(state).as_slice() != state.saved_contents.borrow().as_slice()
 }
 
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 pub fn password_page_would_discard_work(state: &PasswordPageState) -> bool {
     password_work_would_be_discarded(
         password_page_has_unsaved_changes(state),
@@ -715,7 +765,7 @@ pub fn password_page_would_discard_work(state: &PasswordPageState) -> bool {
     )
 }
 
-#[cfg(feature = "passkey")]
+#[cfg(any(feature = "passkey", feature = "passless"))]
 const fn password_work_would_be_discarded(
     contents_changed: bool,
     saved_entry_exists: bool,
@@ -731,12 +781,12 @@ pub fn revert_unsaved_password_changes(state: &PasswordPageState) -> bool {
 
     let saved_contents = state.saved_contents.borrow().clone();
     let pass_file = get_opened_pass_file(&state.nav);
-    sync_editor_contents(state, &saved_contents, pass_file.as_ref());
+    sync_editor_bytes(state, &saved_contents, pass_file.as_ref());
     state.overlay.add_toast(Toast::new(&gettext("Reverted.")));
     true
 }
 
-#[cfg(all(test, feature = "passkey"))]
+#[cfg(all(test, any(feature = "passkey", feature = "passless")))]
 mod replacement_tests {
     use super::password_work_would_be_discarded;
 
@@ -776,6 +826,9 @@ pub fn toggle_password_options(state: &PasswordPageState) {
 }
 
 pub fn copy_current_password(state: &PasswordPageState) {
+    if native_passless(state) {
+        return;
+    }
     let editing_structured = visible_navigation_page_is(&state.nav, &state.page);
     let editing_raw = visible_navigation_page_is(&state.nav, &state.raw_page);
     if (!editing_structured || !state.entry.is_visible()) && !editing_raw {
@@ -828,7 +881,7 @@ fn save_current_password_entry_impl(state: &PasswordPageState, allow_git_unlock_
         save_context.pass_file.store_path().to_string(),
         save_context.pass_file.label(),
         save_context.contents.clone(),
-        true,
+        save_context.previous_entry_exists,
     );
     handle_password_save_result(state, &save_context, result);
 }

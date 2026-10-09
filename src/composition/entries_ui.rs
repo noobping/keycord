@@ -47,6 +47,22 @@ impl EntryOperationPort for RootEntryOperationPort {
         crate::composition::backend::save_password_entry(store_root, label, contents, overwrite)
     }
 
+    fn read_entry_bytes(
+        &self,
+        store_root: &str,
+        label: &str,
+    ) -> Result<Vec<u8>, PasswordEntryError> {
+        crate::composition::backend::read_entry_bytes(store_root, label)
+    }
+    fn save_entry_bytes(
+        &self,
+        store_root: &str,
+        label: &str,
+        contents: &[u8],
+        overwrite: bool,
+    ) -> Result<(), PasswordEntryWriteError> {
+        crate::composition::backend::save_entry_bytes(store_root, label, contents, overwrite)
+    }
     fn rename_password_entry(
         &self,
         store_root: &str,
@@ -285,6 +301,11 @@ pub fn entry_tool_ports(refresh_tool_hub: Rc<dyn Fn()>) -> EntryToolUiPorts {
                 crate::composition::backend::read_password_entry(&store, &label)
                     .map_err(|err| err.to_string())
             }),
+            read_export_entry: Arc::new(|store, label| {
+                let bytes = crate::composition::backend::read_entry_bytes(&store, &label)
+                    .map_err(|err| err.to_string())?;
+                keycord_entries::file::export_entry_text(&bytes).map_err(|err| err.to_string())
+            }),
             read_password_line: Arc::new(|store, label| {
                 crate::composition::backend::read_password_line(&store, &label)
                     .map_err(|err| err.to_string())
@@ -361,16 +382,14 @@ pub fn entry_page_ports() -> EntryPageUiPorts {
                 let mut report_progress = move |progress| {
                     let _ = progress_tx.send(progress);
                 };
-                crate::composition::backend::read_password_entry_with_progress(
+                crate::composition::backend::read_entry_bytes_with_progress(
                     &store,
                     &label,
                     &mut report_progress,
                 )
             }),
             save_entry: Arc::new(|store, label, contents, overwrite| {
-                crate::composition::backend::save_password_entry(
-                    &store, &label, &contents, overwrite,
-                )
+                crate::composition::backend::save_entry_bytes(&store, &label, &contents, overwrite)
             }),
             rename_entry: Arc::new(|store, old_label, new_label| {
                 crate::composition::backend::rename_password_entry(&store, &old_label, &new_label)

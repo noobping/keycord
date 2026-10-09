@@ -48,7 +48,9 @@ pub struct PasswordPageState {
     pub dynamic_rows: Rc<RefCell<Vec<DynamicFieldRow>>>,
     pub text: TextView,
     pub overlay: ToastOverlay,
-    pub saved_contents: Rc<RefCell<String>>,
+    pub saved_contents: Rc<RefCell<zeroize::Zeroizing<Vec<u8>>>>,
+    #[cfg(feature = "passless")]
+    pub native_passless: Rc<Cell<bool>>,
     pub saved_entry_exists: Rc<Cell<bool>>,
     pub ports: EntryPageUiPorts,
 }
@@ -100,7 +102,9 @@ impl PasswordPageState {
             dynamic_rows: Rc::new(RefCell::new(Vec::new())),
             text: widgets.text_view.clone(),
             overlay: overlay.clone(),
-            saved_contents: Rc::new(RefCell::new(String::new())),
+            saved_contents: Rc::new(RefCell::new(zeroize::Zeroizing::new(Vec::new()))),
+            #[cfg(feature = "passless")]
+            native_passless: Rc::new(Cell::new(false)),
             saved_entry_exists: Rc::new(Cell::new(false)),
             ports,
         }
@@ -183,6 +187,11 @@ pub(super) fn show_password_loading_state(state: &PasswordPageState, title: &str
 
 pub(super) fn show_password_editor_fields(state: &PasswordPageState) {
     state.status.set_visible(false);
+    if super::bytes::native_passless(state) {
+        super::bytes::sync_native_controls(state);
+        return;
+    }
+    state.save.set_visible(true);
     let passkey = state
         .structured_templates
         .borrow()
@@ -207,7 +216,9 @@ pub(super) fn reset_password_editor(state: &PasswordPageState) {
     state.structured_templates.borrow_mut().clear();
     state.dynamic_rows.borrow_mut().clear();
     state.text.buffer().set_text("");
-    state.saved_contents.borrow_mut().clear();
+    *state.saved_contents.borrow_mut() = zeroize::Zeroizing::new(Vec::new());
+    #[cfg(feature = "passless")]
+    state.native_passless.set(false);
     state.saved_entry_exists.set(false);
 }
 
@@ -218,9 +229,9 @@ fn hide_password_generator_settings(state: &PasswordPageState) {
 
 pub(super) fn sync_saved_password_state(
     state: &PasswordPageState,
-    contents: &str,
+    contents: &[u8],
     entry_exists: bool,
 ) {
-    *state.saved_contents.borrow_mut() = contents.to_string();
+    *state.saved_contents.borrow_mut() = zeroize::Zeroizing::new(contents.to_vec());
     state.saved_entry_exists.set(entry_exists);
 }
