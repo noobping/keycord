@@ -2153,7 +2153,7 @@ fn integrated_passless_bytes_survive_moves_undo_and_recipient_changes() {
     for path in [&store, &target] {
         save_store_recipients(
             path,
-            &[first.fingerprint.clone()],
+            std::slice::from_ref(&first.fingerprint),
             StoreRecipientsPrivateKeyRequirement::AnyManagedKey,
         )
         .unwrap();

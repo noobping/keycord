@@ -36,24 +36,14 @@ impl fmt::Debug for ImportedCredential {
             .finish_non_exhaustive()
     }
 }
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
 pub enum PasskeyFormat {
     #[cfg(feature = "passkey")]
+    #[default]
     Android,
     #[cfg(feature = "passless")]
+    #[cfg_attr(not(feature = "passkey"), default)]
     Passless,
-}
-impl Default for PasskeyFormat {
-    fn default() -> Self {
-        #[cfg(feature = "passkey")]
-        {
-            Self::Android
-        }
-        #[cfg(not(feature = "passkey"))]
-        {
-            Self::Passless
-        }
-    }
 }
 pub struct PreparedPasskey {
     pub label: String,

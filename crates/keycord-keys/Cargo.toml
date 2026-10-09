@@ -24,14 +24,14 @@ dirs-next = "2.0.0"
 keycord-preferences.workspace = true
 keycord-runtime.workspace = true
 keycord-shell = { workspace = true, optional = true }
-rand = "0.10.2"
+rand = "0.10.3"
 ripasso = "0.8.0"
 secrecy = "0.10.3"
 sequoia-openpgp = "2.4.1"
 serde = { version = "1.0.229", features = ["derive"] }
 thiserror = "2.0"
-toml = "1.1.4"
-zeroize = { version = "1.9.0", features = ["alloc"] }
+toml = "1.1.8"
+zeroize = { version = "1.9.1", features = ["alloc"] }
 adw = { version = "0.9.2", package = "libadwaita", features = ["gtk_v4_18", "v1_8"], optional = true }
 
 [target.'cfg(target_os = "linux")'.dependencies]

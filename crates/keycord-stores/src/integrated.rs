@@ -82,12 +82,14 @@ fn collect_root_scoped_entry_paths(
     Ok(scoped_paths)
 }
 
+type DecryptedStoreEntry = (PathBuf, zeroize::Zeroizing<Vec<u8>>);
+
 fn decrypted_store_entries<P: IntegratedStorePorts + ?Sized>(
     ports: &P,
     store_dir: &Path,
     store_root: &str,
     scoped_recipients_path: &Path,
-) -> Result<Vec<(PathBuf, zeroize::Zeroizing<Vec<u8>>)>, String> {
+) -> Result<Vec<DecryptedStoreEntry>, String> {
     let mut decrypted = Vec::new();
     for entry_path in
         collect_root_scoped_entry_paths(store_dir, store_root, scoped_recipients_path)?

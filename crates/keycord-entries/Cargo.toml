@@ -29,11 +29,11 @@ keycord-preferences.workspace = true
 keycord-runtime.workspace = true
 keycord-shell = { workspace = true, optional = true }
 keycord-stores.workspace = true
-rand = "0.10.2"
+rand = "0.10.3"
 regex = "1.13.1"
 ripasso = "0.8.0"
 secrecy = "0.10.3"
 thiserror = "2.0"
 totp-rs = { version = "6.0.0", features = ["otpauth"], optional = true }
 url = { version = "2.5.8", optional = true }
-zeroize = { version = "1.9.0", features = ["alloc"] }
+zeroize = { version = "1.9.1", features = ["alloc"] }

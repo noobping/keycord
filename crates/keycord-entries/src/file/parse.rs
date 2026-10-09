@@ -222,6 +222,15 @@ fn trim_leading_spacing(value: &str) -> String {
         .to_string()
 }
 
+/// Native binary credentials have no password fields to export.
+pub fn export_entry_text(bytes: &[u8]) -> Result<Option<String>, crate::PasswordEntryError> {
+    #[cfg(feature = "passless")]
+    if keycord_passkey::inspect_passless(bytes).is_some() {
+        return Ok(None);
+    }
+    entry_text(bytes).map(Some)
+}
+
 #[cfg(test)]
 mod tests {
     use super::{pass_file_has_otp, searchable_pass_fields, SearchablePassField};
@@ -295,13 +304,4 @@ mod tests {
             vec![field("passkey", "ordinary value")]
         );
     }
-}
-
-/// Native binary credentials have no password fields to export.
-pub fn export_entry_text(bytes: &[u8]) -> Result<Option<String>, crate::PasswordEntryError> {
-    #[cfg(feature = "passless")]
-    if keycord_passkey::inspect_passless(bytes).is_some() {
-        return Ok(None);
-    }
-    entry_text(bytes).map(Some)
 }
