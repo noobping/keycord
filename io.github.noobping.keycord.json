@@ -99,10 +99,27 @@
       ]
     },
     {
+      "name": "nettle",
+      "buildsystem": "autotools",
+      "config-opts": [
+        "--libdir=/app/lib",
+        "--disable-static",
+        "--disable-documentation"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://ftp.gnu.org/gnu/nettle/nettle-3.10.2.tar.gz",
+          "sha256": "fe9ff51cb1f2abb5e65a6b8c10a92da0ab5ab6eaf26e7fc2b675c45f1fb519b5"
+        }
+      ]
+    },
+    {
       "name": "keycord",
       "buildsystem": "meson",
       "build-options": {
         "env": {
+          "AWS_LC_SYS_CMAKE_BUILDER": "1",
           "CARGO_NET_OFFLINE": "true"
         }
       },
