@@ -1,23 +1,23 @@
 {
   "id": "io.github.noobping.keycord",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "50",
+  "runtime-version": "51",
   "sdk": "org.gnome.Sdk",
   "command": "keycord",
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.rust-stable",
-    "org.freedesktop.Sdk.Extension.llvm20"
+    "org.freedesktop.Sdk.Extension.llvm22"
   ],
   "build-options": {
-    "prepend-path": "/app/bin:/usr/lib/sdk/llvm20/bin",
-    "prepend-ld-library-path": "/app/lib:/usr/lib/sdk/llvm20/lib",
+    "prepend-path": "/app/bin:/usr/lib/sdk/llvm22/bin",
+    "prepend-ld-library-path": "/app/lib:/usr/lib/sdk/llvm22/lib",
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "append-ld-library-path": "/usr/lib/sdk/rust-stable/lib",
     "env": {
-      "CLANG_PATH": "/usr/lib/sdk/llvm20/bin/clang",
+      "CLANG_PATH": "/usr/lib/sdk/llvm22/bin/clang",
       "CARGO_HOME": "/run/build/keycord/cargo",
-      "LIBCLANG_PATH": "/usr/lib/sdk/llvm20/lib",
-      "BINDGEN_EXTRA_CLANG_ARGS": "-resource-dir=/usr/lib/sdk/llvm20/lib/clang/20"
+      "LIBCLANG_PATH": "/usr/lib/sdk/llvm22/lib",
+      "BINDGEN_EXTRA_CLANG_ARGS": "-resource-dir=/usr/lib/sdk/llvm22/lib/clang/22"
     }
   },
   "finish-args": [
@@ -40,8 +40,8 @@
         {
           "type": "git",
           "url": "https://github.com/capnproto/capnproto.git",
-          "tag": "v1.3.0",
-          "commit": "7dbb95989721016f8b590245ec7528c6ff03d1fe"
+          "tag": "v1.5.0",
+          "commit": "373e61ec89e2359f1c362e9b2eadc552f4779306"
         },
         {
           "type": "shell",
@@ -63,8 +63,8 @@
         {
           "type": "git",
           "url": "https://github.com/LudovicRousseau/PCSC.git",
-          "tag": "2.3.3",
-          "commit": "3ef55e02979de6834015b380c1d21671eeb4e9f5"
+          "tag": "2.5.2",
+          "commit": "6cadd8152f3cfdb79131a65843d9b85f01f0ae51"
         }
       ]
     },
@@ -87,8 +87,8 @@
         {
           "type": "git",
           "url": "https://github.com/git/git.git",
-          "tag": "v2.49.1",
-          "commit": "aadf8ae518afd80b73d49eff8aff475161aa5157"
+          "tag": "v2.56.0",
+          "commit": "a018953688f1b10bddf91bff8747068f5f4746a4"
         },
         {
           "type": "shell",
