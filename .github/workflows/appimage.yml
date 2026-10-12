@@ -1,0 +1,117 @@
+name: AppImage
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "src/**"
+      - "crates/**"
+      - "po/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "build.rs"
+      - "meson*"
+      - "build-aux/appimage/**"
+      - ".github/workflows/appimage.yml"
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: appimage-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-26.04
+            arch: x86_64
+          - os: ubuntu-26.04-arm
+            arch: aarch64
+    runs-on: ${{ matrix.os }}
+    env:
+      CARGO_TERM_COLOR: always
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake clang libclang-dev capnproto \
+            gettext libadwaita-1-dev libgtk-4-dev libgpg-error-dev libgpgme-dev \
+            libcapnp-dev libpcsclite-dev libssl-dev nettle-dev pkg-config \
+            meson ninja-build python3 curl ca-certificates git \
+            libgdk-pixbuf2.0-bin libdconf1 dconf-gsettings-backend librsvg2-common \
+            desktop-file-utils squashfs-tools zsync file shared-mime-info
+          rustup update stable --no-self-update
+          rustup default stable
+      - name: Version
+        shell: bash
+        run: |
+          version=$(python3 -c 'import tomllib; print(tomllib.load(open("Cargo.toml", "rb"))["workspace"]["package"]["version"])')
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then
+            [[ "$GITHUB_REF_NAME" == "v$version" ]] || { echo 'Tag must match workspace version' >&2; exit 1; }
+            echo "APPIMAGE_VERSION=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+          else
+            echo "APPIMAGE_VERSION=v$version-test.${GITHUB_SHA::7}" >> "$GITHUB_ENV"
+          fi
+      - name: Build AppImage
+        run: ./build-aux/appimage/build.sh
+      - name: Check runtime and metadata
+        run: |
+          image="keycord-$APPIMAGE_VERSION-${{ matrix.arch }}.AppImage"
+          file "$image"
+          if readelf -l "$image" | grep -q INTERP; then
+            echo 'AppImage runtime unexpectedly requires a host ELF interpreter' >&2
+            exit 1
+          fi
+          desktop-file-validate AppDir/*.desktop
+      - name: Upload test AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: keycord-AppImage-${{ matrix.arch }}
+          path: |
+            *.AppImage
+            *.AppImage.sha256
+            *.AppImage.zsync
+          if-no-files-found: error
+      - name: Test on clean Ubuntu 22.04 and 24.04
+        timeout-minutes: 8
+        shell: bash
+        run: |
+          for distro in 22.04 24.04; do
+            docker build -t "keycord-smoke:$distro" - <<EOF
+          FROM ubuntu:$distro
+          RUN apt-get update && apt-get install -y --no-install-recommends \
+            xvfb xauth x11-utils dbus-daemon fonts-dejavu-core \
+            && rm -rf /var/lib/apt/lists/*
+          EOF
+            docker run --rm --network none -v "$PWD:/project:ro" "keycord-smoke:$distro" \
+              timeout 180s xvfb-run -a dbus-run-session -- bash /project/build-aux/appimage/smoke-test.sh \
+              "/project/keycord-$APPIMAGE_VERSION-${{ matrix.arch }}.AppImage"
+          done
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-26.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: keycord-AppImage-*
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: |
+            *.AppImage
+            *.AppImage.sha256
+            *.AppImage.zsync
+          overwrite_files: false

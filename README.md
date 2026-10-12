@@ -36,6 +36,33 @@ You can translate Keycord using [weblate](https://hosted.weblate.org/projects/ke
 
 ## Development
 
+### AppImage
+
+The AppImage workflow builds x86-64 and ARM64 packages on Ubuntu 26.04.
+Pull requests and manual runs provide test artifacts; matching `v*` version
+tags attach AppImages, SHA-256 checksums and zsync files to the GitHub release
+after both architectures pass. Existing native Linux builds remain available.
+
+To build locally, install the dependencies in `.github/workflows/appimage.yml`
+and run `./build-aux/appimage/build.sh` from a clean checkout.
+
+The bundle includes GTK/libadwaita, linked libraries, Git, translations, icons,
+settings schemas and MIME data. It enables docs, audit, smartcard, passkey,
+passless and logging features. The standalone self-installer/updater is disabled
+because it cannot install or replace a mounted AppImage correctly. GNOME search
+provider registration is not installed by the portable package.
+
+The integrated backend runs inside the bundle. Optional host backends still use
+your system's `pass`, GnuPG, pinentry and extensions; SSH remotes use your system's
+SSH client/agent, and smartcards need the host PC/SC service. These commands keep
+their host libraries and configuration. The launcher defaults to the Cairo
+renderer and respects an explicit `GSK_RENDERER`.
+
+CI checks a real window and bundled Git operations on clean Ubuntu 22.04 and
+24.04 containers, using isolated settings and no network. Password-store
+operations and hardware integrations should also be checked on a desktop before
+publishing a release.
+
 The root package is the application composition layer; implementation is split into subject crates. See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and dependency rules.
 
 Package names differ by distribution. This project was tested with Fedora packages:

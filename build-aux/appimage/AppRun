@@ -1,0 +1,45 @@
+#!/bin/sh
+set -eu
+bundle=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+libs="$bundle/usr/lib"
+case "$(uname -m)" in
+  x86_64) loader="$libs/ld-linux-x86-64.so.2" ;;
+  aarch64) loader="$libs/ld-linux-aarch64.so.1" ;;
+  *) echo 'Unsupported architecture' >&2; exit 1 ;;
+esac
+
+export PATH="$bundle/usr/bin:$PATH"
+export XDG_DATA_DIRS="$bundle/usr/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+export GSETTINGS_SCHEMA_DIR="$bundle/usr/share/glib-2.0/schemas"
+export KEYCORD_LOCALEDIR="$bundle/usr/share/locale"
+export GIO_MODULE_DIR="$libs/gio/modules"
+export GDK_PIXBUF_MODULEDIR="$libs/gdk-pixbuf-loaders"
+export FONTCONFIG_PATH="$bundle/etc/fonts"
+export SSL_CERT_FILE="${SSL_CERT_FILE:-$bundle/etc/ssl/certs/ca-certificates.crt}"
+export GSK_RENDERER="${GSK_RENDERER:-cairo}"
+
+# Keycord's legacy APPDIR command handling exports bundled glibc to host
+# commands. Use explicit resource paths above, keeping host pass/GPG/SSH on
+# their own runtime. Git has its own bundled-loader wrappers.
+unset APPDIR LD_LIBRARY_PATH
+cache=$(mktemp -d "${TMPDIR:-/tmp}/keycord-pixbuf.XXXXXXXX")
+app_pid=
+cleanup() {
+  if [ -n "$app_pid" ]; then
+    kill "$app_pid" 2>/dev/null || true
+    wait "$app_pid" 2>/dev/null || true
+  fi
+  rm -rf "$cache"
+}
+trap cleanup EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
+export GDK_PIXBUF_MODULE_FILE="$cache/loaders.cache"
+"$loader" --library-path "$libs" "$bundle/usr/bin/gdk-pixbuf-query-loaders" \
+  "$GDK_PIXBUF_MODULEDIR"/*.so > "$GDK_PIXBUF_MODULE_FILE"
+"$loader" --library-path "$libs" "$bundle/usr/bin/keycord" "$@" &
+app_pid=$!
+status=0
+wait "$app_pid" || status=$?
+app_pid=
+exit "$status"
